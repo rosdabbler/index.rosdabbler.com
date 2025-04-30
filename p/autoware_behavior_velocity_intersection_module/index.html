@@ -1,0 +1,4704 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: autoware_behavior_velocity_intersection_module</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/autoware_behavior_velocity_intersection_module/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">autoware_behavior_velocity_intersection_module</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/autoware_behavior_velocity_intersection_module">autoware_behavior_velocity_intersection_module</a> <small>package from <a style="text-decoration:none" href="/r/autoware_universe/github-autowarefoundation-autoware_universe">autoware_universe</a> repo</small>
+        </h3>
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_adapi_specs">
+
+autoware_adapi_specs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_agnocast_wrapper">
+
+autoware_agnocast_wrapper
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_auto_common">
+
+autoware_auto_common
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_component_interface_specs_universe">
+
+autoware_component_interface_specs_universe
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_component_interface_tools">
+
+autoware_component_interface_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_component_interface_utils">
+
+autoware_component_interface_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_cuda_dependency_meta">
+
+autoware_cuda_dependency_meta
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_fake_test_node">
+
+autoware_fake_test_node
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_glog_component">
+
+autoware_glog_component
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_goal_distance_calculator">
+
+autoware_goal_distance_calculator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_grid_map_utils">
+
+autoware_grid_map_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_path_distance_calculator">
+
+autoware_path_distance_calculator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_polar_grid">
+
+autoware_polar_grid
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_time_utils">
+
+autoware_time_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_recognition_marker_publisher">
+
+autoware_traffic_light_recognition_marker_publisher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_utils">
+
+autoware_traffic_light_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_universe_utils">
+
+autoware_universe_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_api_utils">
+
+tier4_api_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_autonomous_emergency_braking">
+
+autoware_autonomous_emergency_braking
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_collision_detector">
+
+autoware_collision_detector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_control_performance_analysis">
+
+autoware_control_performance_analysis
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_control_validator">
+
+autoware_control_validator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_external_cmd_selector">
+
+autoware_external_cmd_selector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_joy_controller">
+
+autoware_joy_controller
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lane_departure_checker">
+
+autoware_lane_departure_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_mpc_lateral_controller">
+
+autoware_mpc_lateral_controller
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_obstacle_collision_checker">
+
+autoware_obstacle_collision_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_operation_mode_transition_manager">
+
+autoware_operation_mode_transition_manager
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pid_longitudinal_controller">
+
+autoware_pid_longitudinal_controller
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_predicted_path_checker">
+
+autoware_predicted_path_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pure_pursuit">
+
+autoware_pure_pursuit
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_shift_decider">
+
+autoware_shift_decider
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_smart_mpc_trajectory_follower">
+
+autoware_smart_mpc_trajectory_follower
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_trajectory_follower_base">
+
+autoware_trajectory_follower_base
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_trajectory_follower_node">
+
+autoware_trajectory_follower_node
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_vehicle_cmd_gate">
+
+autoware_vehicle_cmd_gate
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_control_evaluator">
+
+autoware_control_evaluator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_kinematic_evaluator">
+
+autoware_kinematic_evaluator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_localization_evaluator">
+
+autoware_localization_evaluator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_perception_online_evaluator">
+
+autoware_perception_online_evaluator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_planning_evaluator">
+
+autoware_planning_evaluator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_scenario_simulator_v2_adapter">
+
+autoware_scenario_simulator_v2_adapter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_autoware_api_launch">
+
+tier4_autoware_api_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_control_launch">
+
+tier4_control_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_localization_launch">
+
+tier4_localization_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_map_launch">
+
+tier4_map_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_perception_launch">
+
+tier4_perception_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_planning_launch">
+
+tier4_planning_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_sensing_launch">
+
+tier4_sensing_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_simulator_launch">
+
+tier4_simulator_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_system_launch">
+
+tier4_system_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_vehicle_launch">
+
+tier4_vehicle_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_geo_pose_projector">
+
+autoware_geo_pose_projector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_gyro_odometer">
+
+autoware_gyro_odometer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_ar_tag_based_localizer">
+
+autoware_ar_tag_based_localizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_landmark_manager">
+
+autoware_landmark_manager
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lidar_marker_localizer">
+
+autoware_lidar_marker_localizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_localization_error_monitor">
+
+autoware_localization_error_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_ndt_scan_matcher">
+
+autoware_ndt_scan_matcher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pose2twist">
+
+autoware_pose2twist
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pose_covariance_modifier">
+
+autoware_pose_covariance_modifier
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pose_estimator_arbiter">
+
+autoware_pose_estimator_arbiter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pose_initializer">
+
+autoware_pose_initializer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pose_instability_detector">
+
+autoware_pose_instability_detector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/yabloc_common">
+
+yabloc_common
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/yabloc_image_processing">
+
+yabloc_image_processing
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/yabloc_monitor">
+
+yabloc_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/yabloc_particle_filter">
+
+yabloc_particle_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/yabloc_pose_initializer">
+
+yabloc_pose_initializer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lanelet2_map_visualizer">
+
+autoware_lanelet2_map_visualizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_map_height_fitter">
+
+autoware_map_height_fitter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_map_tf_generator">
+
+autoware_map_tf_generator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_bevfusion">
+
+autoware_bevfusion
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_bytetrack">
+
+autoware_bytetrack
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_cluster_merger">
+
+autoware_cluster_merger
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_compare_map_segmentation">
+
+autoware_compare_map_segmentation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_crosswalk_traffic_light_estimator">
+
+autoware_crosswalk_traffic_light_estimator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_detected_object_feature_remover">
+
+autoware_detected_object_feature_remover
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_detected_object_validation">
+
+autoware_detected_object_validation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_detection_by_tracker">
+
+autoware_detection_by_tracker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_elevation_map_loader">
+
+autoware_elevation_map_loader
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_euclidean_cluster">
+
+autoware_euclidean_cluster
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_ground_segmentation">
+
+autoware_ground_segmentation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_image_projection_based_fusion">
+
+autoware_image_projection_based_fusion
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lidar_apollo_instance_segmentation">
+
+autoware_lidar_apollo_instance_segmentation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lidar_centerpoint">
+
+autoware_lidar_centerpoint
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lidar_transfusion">
+
+autoware_lidar_transfusion
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_map_based_prediction">
+
+autoware_map_based_prediction
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_multi_object_tracker">
+
+autoware_multi_object_tracker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_object_merger">
+
+autoware_object_merger
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_object_range_splitter">
+
+autoware_object_range_splitter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_object_velocity_splitter">
+
+autoware_object_velocity_splitter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_occupancy_grid_map_outlier_filter">
+
+autoware_occupancy_grid_map_outlier_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_probabilistic_occupancy_grid_map">
+
+autoware_probabilistic_occupancy_grid_map
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_crossing_objects_noise_filter">
+
+autoware_radar_crossing_objects_noise_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_fusion_to_detected_object">
+
+autoware_radar_fusion_to_detected_object
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_object_clustering">
+
+autoware_radar_object_clustering
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_object_tracker">
+
+autoware_radar_object_tracker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_tracks_msgs_converter">
+
+autoware_radar_tracks_msgs_converter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_raindrop_cluster_filter">
+
+autoware_raindrop_cluster_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_shape_estimation">
+
+autoware_shape_estimation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_simple_object_merger">
+
+autoware_simple_object_merger
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_tensorrt_classifier">
+
+autoware_tensorrt_classifier
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_tensorrt_common">
+
+autoware_tensorrt_common
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_tensorrt_plugins">
+
+autoware_tensorrt_plugins
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_tensorrt_yolox">
+
+autoware_tensorrt_yolox
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_tracking_object_merger">
+
+autoware_tracking_object_merger
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_arbiter">
+
+autoware_traffic_light_arbiter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_category_merger">
+
+autoware_traffic_light_category_merger
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_classifier">
+
+autoware_traffic_light_classifier
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_fine_detector">
+
+autoware_traffic_light_fine_detector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_map_based_detector">
+
+autoware_traffic_light_map_based_detector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_multi_camera_fusion">
+
+autoware_traffic_light_multi_camera_fusion
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_occlusion_predictor">
+
+autoware_traffic_light_occlusion_predictor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_selector">
+
+autoware_traffic_light_selector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_visualization">
+
+autoware_traffic_light_visualization
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/perception_utils">
+
+perception_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_costmap_generator">
+
+autoware_costmap_generator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_external_velocity_limit_selector">
+
+autoware_external_velocity_limit_selector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_freespace_planner">
+
+autoware_freespace_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_freespace_planning_algorithms">
+
+autoware_freespace_planning_algorithms
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_mission_planner_universe">
+
+autoware_mission_planner_universe
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_obstacle_cruise_planner">
+
+autoware_obstacle_cruise_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_obstacle_stop_planner">
+
+autoware_obstacle_stop_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_path_optimizer">
+
+autoware_path_optimizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_path_smoother">
+
+autoware_path_smoother
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_planning_validator">
+
+autoware_planning_validator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_remaining_distance_time_calculator">
+
+autoware_remaining_distance_time_calculator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_rtc_interface">
+
+autoware_rtc_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_scenario_selector">
+
+autoware_scenario_selector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_surround_obstacle_checker">
+
+autoware_surround_obstacle_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_avoidance_by_lane_change_module">
+
+autoware_behavior_path_avoidance_by_lane_change_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_dynamic_obstacle_avoidance_module">
+
+autoware_behavior_path_dynamic_obstacle_avoidance_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_external_request_lane_change_module">
+
+autoware_behavior_path_external_request_lane_change_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_goal_planner_module">
+
+autoware_behavior_path_goal_planner_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_lane_change_module">
+
+autoware_behavior_path_lane_change_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_planner">
+
+autoware_behavior_path_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_planner_common">
+
+autoware_behavior_path_planner_common
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_sampling_planner_module">
+
+autoware_behavior_path_sampling_planner_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_side_shift_module">
+
+autoware_behavior_path_side_shift_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_start_planner_module">
+
+autoware_behavior_path_start_planner_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_static_obstacle_avoidance_module">
+
+autoware_behavior_path_static_obstacle_avoidance_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_blind_spot_module">
+
+autoware_behavior_velocity_blind_spot_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_crosswalk_module">
+
+autoware_behavior_velocity_crosswalk_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_detection_area_module">
+
+autoware_behavior_velocity_detection_area_module
+</a>
+            
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+autoware_behavior_velocity_intersection_module
+</span>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_no_drivable_lane_module">
+
+autoware_behavior_velocity_no_drivable_lane_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_no_stopping_area_module">
+
+autoware_behavior_velocity_no_stopping_area_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_occlusion_spot_module">
+
+autoware_behavior_velocity_occlusion_spot_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_rtc_interface">
+
+autoware_behavior_velocity_rtc_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_run_out_module">
+
+autoware_behavior_velocity_run_out_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_speed_bump_module">
+
+autoware_behavior_velocity_speed_bump_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_template_module">
+
+autoware_behavior_velocity_template_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_traffic_light_module">
+
+autoware_behavior_velocity_traffic_light_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_virtual_traffic_light_module">
+
+autoware_behavior_velocity_virtual_traffic_light_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_walkway_module">
+
+autoware_behavior_velocity_walkway_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_dynamic_obstacle_stop_module">
+
+autoware_motion_velocity_dynamic_obstacle_stop_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_obstacle_cruise_module">
+
+autoware_motion_velocity_obstacle_cruise_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_obstacle_slow_down_module">
+
+autoware_motion_velocity_obstacle_slow_down_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_obstacle_velocity_limiter_module">
+
+autoware_motion_velocity_obstacle_velocity_limiter_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_out_of_lane_module">
+
+autoware_motion_velocity_out_of_lane_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_run_out_module">
+
+autoware_motion_velocity_run_out_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_bezier_sampler">
+
+autoware_bezier_sampler
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_frenet_planner">
+
+autoware_frenet_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_path_sampler">
+
+autoware_path_sampler
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_sampler_common">
+
+autoware_sampler_common
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_cuda_pointcloud_preprocessor">
+
+autoware_cuda_pointcloud_preprocessor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_cuda_utils">
+
+autoware_cuda_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_image_diagnostics">
+
+autoware_image_diagnostics
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_image_transport_decompressor">
+
+autoware_image_transport_decompressor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_imu_corrector">
+
+autoware_imu_corrector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pcl_extensions">
+
+autoware_pcl_extensions
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pointcloud_preprocessor">
+
+autoware_pointcloud_preprocessor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_objects_adapter">
+
+autoware_radar_objects_adapter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_scan_to_pointcloud2">
+
+autoware_radar_scan_to_pointcloud2
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_static_pointcloud_filter">
+
+autoware_radar_static_pointcloud_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_threshold_filter">
+
+autoware_radar_threshold_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_tracks_noise_filter">
+
+autoware_radar_tracks_noise_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_livox_tag_filter">
+
+autoware_livox_tag_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_carla_interface">
+
+autoware_carla_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_dummy_perception_publisher">
+
+autoware_dummy_perception_publisher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_fault_injection">
+
+autoware_fault_injection
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_learning_based_vehicle_model">
+
+autoware_learning_based_vehicle_model
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_simple_planning_simulator">
+
+autoware_simple_planning_simulator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_vehicle_door_simulator">
+
+autoware_vehicle_door_simulator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_dummy_object_rviz_plugin">
+
+tier4_dummy_object_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_bluetooth_monitor">
+
+autoware_bluetooth_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_component_monitor">
+
+autoware_component_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_component_state_monitor">
+
+autoware_component_state_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_default_adapi">
+
+autoware_default_adapi
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_adapi_adaptors">
+
+autoware_adapi_adaptors
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_adapi_visualizers">
+
+autoware_adapi_visualizers
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_automatic_pose_initializer">
+
+autoware_automatic_pose_initializer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_diagnostic_graph_aggregator">
+
+autoware_diagnostic_graph_aggregator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_diagnostic_graph_utils">
+
+autoware_diagnostic_graph_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_dummy_diag_publisher">
+
+autoware_dummy_diag_publisher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_dummy_infrastructure">
+
+autoware_dummy_infrastructure
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_duplicated_node_checker">
+
+autoware_duplicated_node_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_hazard_status_converter">
+
+autoware_hazard_status_converter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_mrm_comfortable_stop_operator">
+
+autoware_mrm_comfortable_stop_operator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_mrm_emergency_stop_operator">
+
+autoware_mrm_emergency_stop_operator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_mrm_handler">
+
+autoware_mrm_handler
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_processing_time_checker">
+
+autoware_processing_time_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_system_diagnostic_monitor">
+
+autoware_system_diagnostic_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_system_monitor">
+
+autoware_system_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_topic_relay_controller">
+
+autoware_topic_relay_controller
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_topic_state_monitor">
+
+autoware_topic_state_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_velodyne_monitor">
+
+autoware_velodyne_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/reaction_analyzer">
+
+reaction_analyzer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_accel_brake_map_calibrator">
+
+autoware_accel_brake_map_calibrator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_external_cmd_converter">
+
+autoware_external_cmd_converter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_raw_vehicle_cmd_converter">
+
+autoware_raw_vehicle_cmd_converter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_steer_offset_estimator">
+
+autoware_steer_offset_estimator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_bag_time_manager_rviz_plugin">
+
+autoware_bag_time_manager_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_mission_details_overlay_rviz_plugin">
+
+autoware_mission_details_overlay_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_overlay_rviz_plugin">
+
+autoware_overlay_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_string_stamped_rviz_plugin">
+
+autoware_string_stamped_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_perception_rviz_plugin">
+
+autoware_perception_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_adapi_rviz_plugin">
+
+tier4_adapi_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_camera_view_rviz_plugin">
+
+tier4_camera_view_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_datetime_rviz_plugin">
+
+tier4_datetime_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_localization_rviz_plugin">
+
+tier4_localization_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_planning_factor_rviz_plugin">
+
+tier4_planning_factor_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_planning_rviz_plugin">
+
+tier4_planning_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_state_rviz_plugin">
+
+tier4_state_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_system_rviz_plugin">
+
+tier4_system_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_traffic_light_rviz_plugin">
+
+tier4_traffic_light_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_vehicle_rviz_plugin">
+
+tier4_vehicle_rviz_plugin
+</a>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/autoware_behavior_velocity_intersection_module"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/autowarefoundation/autoware_universe/tree/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-default">0</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">29</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>0.44.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>Apache License 2.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-default">
+                  
+                    AMENT_CMAKE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/autowarefoundation/autoware_universe.git">https://github.com/autowarefoundation/autoware_universe.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-05-02
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <span class="label label-default">planner</span> <span class="label label-default">ros</span> <span class="label label-default">calibration</span> <span class="label label-default">self-driving-car</span> <span class="label label-default">autonomous-driving</span> <span class="label label-default">autonomous-vehicles</span> <span class="label label-default">ros2</span> <span class="label label-default">3d-map</span> <span class="label label-default">autoware</span> 
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/autoware_universe/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/autoware_universe/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/autoware_universe/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            The autoware_behavior_velocity_intersection_module package
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional links.</em>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Mamoru Sobue</li>
+                
+                  <li>Takayuki Murooka</li>
+                
+                  <li>Tomoya Kimura</li>
+                
+                  <li>Shumpei Wakabayashi</li>
+                
+                  <li>Kyoichi Sugahara</li>
+                
+                  <li>Yukinari Hisaki</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Mamoru Sobue</li>
+                
+              </ul>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/autowarefoundation/autoware_universe/tree/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/README.md" title="Open in git repository">planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/README.md</a></div>
+              <div class="panel-body">
+                    <div class="rendered-markdown">
+<h1 id="intersection">Intersection</h1>
+
+<h2 id="role">Role</h2>
+
+<p>The intersection module is responsible for safely passing urban intersections by:</p>
+
+<ol>
+  <li>checking collisions with upcoming vehicles</li>
+  <li>recognizing the occluded area in the intersection</li>
+  <li>reacting to each color/shape of associated traffic lights</li>
+</ol>
+
+<p>This module is designed to be agnostic to left-hand/right-hand traffic rules and work for crossroads, T-shape junctions, etc. Roundabout is not formally supported in this module.</p>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/./docs/intersection-topology.drawio.svg" alt="topology"></p>
+
+<h2 id="activation-condition">Activation condition</h2>
+
+<p>This module is activated when the path contains the lanes with turn_direction tag. More precisely, if the lane_ids of the path contain the ids of those lanes, corresponding instances of intersection module are activated on each lane respectively.</p>
+
+<h2 id="requirementslimitations">Requirements/Limitations</h2>
+
+<ul>
+  <li>The HDMap needs to have the information of turn_direction tag (which should be one of straight, left, right) for all the lanes in intersections and right_of_way tag for specific lanes (refer to <a href="https://github.com/autowarefoundation/autoware_universe/tree/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/#how-towhy-set-rightofway-tag">RightOfWay</a> section for more details). See <a href="https://github.com/autowarefoundation/autoware_lanelet2_extension/blob/main/autoware_lanelet2_extension/docs/lanelet2_format_extension.md">autoware_lanelet2_extension document</a> for more detail.</li>
+  <li>WIP(perception requirements/limitations)</li>
+  <li>WIP(sensor visibility requirements/limitations)</li>
+</ul>
+
+<h2 id="attention-area">Attention area</h2>
+
+<p>The attention area in the intersection is defined as the set of lanes that are conflicting with ego path and their preceding lanes up to <code class="language-plaintext highlighter-rouge">common.attention_area_length</code> meters. By default RightOfWay tag is not set, so the attention area covers all the conflicting lanes and its preceding lanes as shown in the first row. RightOfWay tag is used to rule out the lanes that each lane has priority given the traffic light relation and turn_direction priority. In the second row, purple lanes are set as the yield_lane of the ego_lane in the RightOfWay tag.</p>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/./docs/intersection-attention.drawio.svg" alt="attention_area"></p>
+
+<p>intersection_area, which is supposed to be defined on the HDMap, is an area converting the entire intersection.</p>
+
+<h3 id="in-phaseanti-phase-signal-group">In-phase/Anti-phase signal group</h3>
+
+<p>The terms “in-phase signal group” and “anti-phase signal group” are introduced to distinguish the lanes by the timing of traffic light regulation as shown in below figure.</p>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/./docs/signal-phase-group.drawio.svg" alt="phase signal group"></p>
+
+<p>The set of intersection lanes whose color is in sync with lane L1 is called the in-phase signal group of L1, and the set of remaining lanes is called the anti-phase signal group.</p>
+
+<h3 id="how-towhy-set-rightofway-tag">How-to/Why set RightOfWay tag</h3>
+
+<p>Ideally RightOfWay tag is unnecessary if ego has perfect knowledge of all traffic signal information because:</p>
+
+<ul>
+  <li>it can distinguish which conflicting lanes should be checked because they are GREEN currently and possible collision occur with the vehicles on those lanes</li>
+  <li>it can distinguish which conflicting lanes can be ignored because they are RED currently and there is no chance of collision with the vehicles on those lanes unless they violate the traffic rule</li>
+</ul>
+
+<p>That allows ego to generate the attention area dynamically using the real time traffic signal information. However this ideal condition rarely holds unless the traffic signal information is provided through the infrastructure. Also there maybe be very complicated/bad intersection maps where multiple lanes overlap in a complex manner.</p>
+
+<ul>
+  <li>If there is an perfect access to entire traffic light signal, then you can set <code class="language-plaintext highlighter-rouge">common.use_map_right_of_way</code> to false and there is no need to set RightOfWay tag on the map. The intersection module will generate the attention area by checking traffic signal and corresponding conflicting lanes. This feature is not implemented yet.</li>
+  <li>If traffic signal information is not perfect, then set <code class="language-plaintext highlighter-rouge">common.use_map_right_of_way</code> to true. If you do not want to detect vehicles on the anti-phase signal group lanes, set them as yield_lane for ego lane.</li>
+  <li>Even if there are no traffic lights if the intersection lanes are overlapped in a ugly manner, you may need to set RightOfWay tag. For example if adjacent intersection lanes of the same in-phase group are not sharing the boundary line and overlapped a little bit, you may need to set RightOfWay to each other for them in order to avoid unnecessary stop for vehicle on such unrelated lane.</li>
+</ul>
+
+<p>To help the intersection module care only a set of limited lanes, RightOfWay tag needs to be properly set.</p>
+
+<p>Following table shows an <strong>example</strong> of how to set yield_lanes to each lane in a intersection w/o traffic lights. Since it is not apparent how to uniquely determine signal phase group for a set of intersection lanes in geometric/topological manner, yield_lane needs to be set manually. Straight lanes with traffic lights are exceptionally handled to detect no lanes because commonly it has priority over all the other lanes, so no RightOfWay setting is required.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>turn direction of right_of_way</th>
+      <th>yield_lane(with traffic light)</th>
+      <th>yield_lane(without traffic light)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>straight</td>
+      <td>not need to set yield_lane(this case is special)</td>
+      <td>left/right conflicting lanes of in-phase group</td>
+    </tr>
+    <tr>
+      <td>left(Left hand traffic)</td>
+      <td>all conflicting lanes of the anti-phase group and right conflicting lanes of in-phase group</td>
+      <td>right conflicting lanes of in-phase group</td>
+    </tr>
+    <tr>
+      <td>right(Left hand traffic)</td>
+      <td>all conflicting lanes of the anti-phase group</td>
+      <td>no yield_lane</td>
+    </tr>
+    <tr>
+      <td>left(Right hand traffic)</td>
+      <td>all conflicting lanes of the anti-phase group</td>
+      <td>no yield_lane</td>
+    </tr>
+    <tr>
+      <td>right(Right hand traffic)</td>
+      <td>all conflicting lanes of the anti-phase group and right conflicting lanes of in-phase group</td>
+      <td>left conflicting lanes of in-phase group</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>This setting gives the following <code class="language-plaintext highlighter-rouge">attention_area</code> configurations.</p>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/./docs/intersection-attention-straight.drawio.svg" alt="attention_area_straight">
+<img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/./docs/intersection-attention-ll-rr.drawio.svg" alt="attention_area_ll_rr">
+<img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/./docs/intersection-attention-lr-rl.drawio.svg" alt="attention_area_lr_rl"></p>
+
+<p>For complex/bad intersection map like the one illustrated below, additional RightOfWay setting maybe necessary.</p>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/./docs/ugly-intersection.drawio.svg" alt="bad-map"></p>
+
+<p>The bad points are:</p>
+
+<ol>
+  <li>ego lane is overlapped with adjacent lane of the in-phase group. In this case you need to set this lane as yield_lane additionally because otherwise attention area is generated for its preceding lanes as well, which may cause unwanted stop.</li>
+  <li>ego lane is overlapped with unrelated lane. In this case the lane is right-turn only and there is no chance of collision in theory. But you need to set this lane as yield_lane additionally for the same reason as (1).</li>
+</ol>
+
+<h2 id="possible-stop-lines">Possible stop lines</h2>
+
+<p>Following figure illustrates important positions used in the intersection module. Note that each solid line represents ego front line position and the corresponding dot represents the actual inserted stop point position for the vehicle frame, namely the center of the rear wheel.</p>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/./docs/intersection-stoplines.drawio.svg" alt="data structure"></p>
+
+<p>To precisely calculate stop positions, the path is interpolated at the certain interval of <code class="language-plaintext highlighter-rouge">common.path_interpolation_ds</code>.</p>
+
+<ul>
+  <li>closest_idx denotes the path point index which is closest to ego position.</li>
+  <li>first_attention_stopline denotes the first path point where ego footprint intersects with the attention_area.</li>
+  <li>If a stopline is associated with the intersection lane on the map, that line is used as default_stopline for collision detection. Otherwise the point which is <code class="language-plaintext highlighter-rouge">common.default_stopline_margin</code> meters behind first_attention_stopline is defined as default_stopline instead.</li>
+  <li>occlusion_peeking_stopline is a bit ahead of first_attention_stopline as described later.</li>
+  <li>occlusion_wo_tl_pass_judge_line is the first position where ego footprint intersects with the centerline of the first attention_area lane.</li>
+</ul>
+
+<h2 id="target-objects">Target objects</h2>
+
+<p>For <a href="https://github.com/autowarefoundation/autoware_universe/tree/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/#stuck-vehicle-detection">stuck vehicle detection</a> and <a href="https://github.com/autowarefoundation/autoware_universe/tree/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/#collision-detection">collision detection</a>, this module checks <strong>car</strong>, <strong>bus</strong>, <strong>truck</strong>, <strong>trailer</strong>, <strong>motor cycle</strong>, and <strong>bicycle</strong> type objects.</p>
+
+<p>Objects that satisfy all of the following conditions are considered as target objects (possible collision objects):</p>
+
+<ul>
+  <li>The center of the object is <strong>within a certain distance</strong> from the attention lane (threshold = <code class="language-plaintext highlighter-rouge">common.attention_area_margin</code>) .
+    <ul>
+      <li>(Optional condition) The center of the object is in the <strong>intersection area</strong>.
+        <ul>
+          <li>To deal with objects that is in the area not covered by the lanelets in the intersection.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>The posture of object is <strong>the same direction as the attention lane</strong> (threshold = <code class="language-plaintext highlighter-rouge">common.attention_area_angle_threshold</code>).</li>
+  <li>Not being <strong>in the adjacent lanes of ego</strong>.</li>
+</ul>
+
+<h2 id="overview-of-decision-process">Overview of decision process</h2>
+
+<p>There are several behaviors depending on the scene.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>behavior</th>
+      <th>scene</th>
+      <th>action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Safe</td>
+      <td>Ego detected no occlusion and collision</td>
+      <td>Ego passes the intersection</td>
+    </tr>
+    <tr>
+      <td>StuckStop</td>
+      <td>The exit of the intersection is blocked by traffic jam</td>
+      <td>Ego stops before the intersection or the boundary of attention area</td>
+    </tr>
+    <tr>
+      <td>YieldStuck</td>
+      <td>Another vehicle stops to yield ego</td>
+      <td>Ego stops before the intersection or the boundary of attention area</td>
+    </tr>
+    <tr>
+      <td>NonOccludedCollisionStop</td>
+      <td>Ego detects no occlusion but detects collision</td>
+      <td>Ego stops at default_stopline</td>
+    </tr>
+    <tr>
+      <td>FirstWaitBeforeOcclusion</td>
+      <td>Ego detected occlusion when entering the intersection</td>
+      <td>Ego stops at default_stopline at first</td>
+    </tr>
+    <tr>
+      <td>PeekingTowardOcclusion</td>
+      <td>Ego detected occlusion and but no collision within the FOV (after FirstWaitBeforeOcclusion)</td>
+      <td>Ego approaches the boundary of the attention area slowly</td>
+    </tr>
+    <tr>
+      <td>OccludedCollisionStop</td>
+      <td>Ego detected both occlusion and collision (after FirstWaitBeforeOcclusion)</td>
+      <td>Ego stops immediately</td>
+    </tr>
+    <tr>
+      <td>FullyPrioritized</td>
+      <td>Ego is fully prioritized by the RED/Arrow signal</td>
+      <td>Ego only cares vehicles still running inside the intersection. Occlusion is ignored</td>
+    </tr>
+    <tr>
+      <td>OverPassJudgeLine</td>
+      <td>Ego is already inside the attention area and/or cannot stop before the boundary of attention area</td>
+      <td>Ego does not detect collision/occlusion anymore and passes the intersection</td>
+    </tr>
+  </tbody>
+</table>
+
+<pre><code class="language-plantuml">@startuml
+
+state begin &lt;&lt;choice&gt;&gt;
+[*] --&gt; begin
+begin --&gt; OverPassJudgeLine: IF over_pass_judge
+
+state "Before pass judge line" as NotOverPassJudgeLine {
+state check_stuck &lt;&lt;choice&gt;&gt;
+begin --&gt; check_stuck: ELSE
+
+check_stuck --&gt; StuckStop: IF stuck vehicle detected
+
+state check_yield_stuck &lt;&lt;choice&gt;&gt;
+check_stuck --&gt; check_yield_stuck: ELSE
+check_yield_stuck --&gt; YieldStuck: IF yield stuck vehicle detected
+
+state check_tl_priority &lt;&lt;choice&gt;&gt;
+check_yield_stuck --&gt; check_tl_priority: ELSE
+
+state check_occlusion &lt;&lt;choice&gt;&gt;
+check_tl_priority --&gt; check_occlusion: IF not prioritized
+
+state Safe
+State "Prioritized by traffic light" as Prioritized {
+state check_collision_prioritized &lt;&lt;choice&gt;&gt;
+check_tl_priority --&gt; check_collision_prioritized: IF prioritized
+State FullyPrioritized
+check_collision_prioritized --&gt; FullyPrioritized: IF collision detected
+check_collision_prioritized --&gt; Safe: ELSE
+}
+
+check_occlusion --&gt; Occlusion: IF occlusion is detected
+
+State "Occlusion is not detected" as NoOcclusion {
+state check_collision &lt;&lt;choice&gt;&gt;
+check_occlusion --&gt; check_collision: ELSE
+State NonOccludedCollisionStop
+check_collision --&gt; Safe: ELSE
+check_collision --&gt; NonOccludedCollisionStop: IF collision detected
+}
+
+State "Occlusion is detected" as Occlusion {
+state FirstWaitBeforeOcclusion
+FirstWaitBeforeOcclusion --&gt; Peeking: after termporal stop
+state Peeking {
+State PeekingTowardOcclusion
+State OccludedCollisionStop
+PeekingTowardOcclusion --&gt; OccludedCollisionStop : IF collision detected
+OccludedCollisionStop --&gt; PeekingTowardOcclusion: IF not collision detected
+}
+}
+
+}
+
+@enduml
+
+</code></pre>
+
+<h2 id="stuck-vehicle-detection">Stuck Vehicle Detection</h2>
+
+<p>If there is any object on the path inside the intersection and at the exit of the intersection (up to <code class="language-plaintext highlighter-rouge">stuck_vehicle.stuck_vehicle_detect_dist</code>) lane and its velocity is less than the threshold (<code class="language-plaintext highlighter-rouge">stuck_vehicle.stuck_vehicle_velocity_threshold</code>), the object is regarded as a stuck vehicle. If stuck vehicles exist, this module inserts a stopline a certain distance (=<code class="language-plaintext highlighter-rouge">default_stopline_margin</code>) before the overlapped region with other lanes. The stuck vehicle detection area is generated based on the planned path, so the stuck vehicle stopline is not inserted if the upstream module generated an avoidance path.</p>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/./docs/stuck-vehicle.drawio.svg" alt="stuck_vehicle_detection"></p>
+
+<h2 id="yield-stuck-vehicle-detection">Yield stuck vehicle detection</h2>
+
+<p>If there is any stopped object on the attention lanelet between the intersection point with ego path and the position which is <code class="language-plaintext highlighter-rouge">yield_stuck.distance_threshold</code> before that position, the object is regarded as yielding to ego vehicle. In this case ego is given the right-of-way by the yielding object but this module inserts stopline to prevent entry into the intersection. This scene happens when the object is yielding against ego or the object is waiting before the crosswalk around the exit of the intersection.</p>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/./docs/yield-stuck.drawio.svg" alt="yield_stuck_detection"></p>
+
+<h2 id="collision-detection">Collision detection</h2>
+
+<p>The following process is performed for the targets objects to determine whether ego can pass the intersection safely. If it is judged that ego cannot pass the intersection with enough margin, this module inserts a stopline on the path.</p>
+
+<ol>
+  <li>predict the time $t$ when the object intersects with ego path for the first time from the predicted path time step. Only the predicted whose confidence is greater than <code class="language-plaintext highlighter-rouge">collision_detection.min_predicted_path_confidence</code> is used.</li>
+  <li>detect collision between the predicted path and ego’s predicted path in the following process
+    <ol>
+      <li>calculate the collision interval of [$t$ - <code class="language-plaintext highlighter-rouge">collision_detection.collision_start_margin_time</code>, $t$ + <code class="language-plaintext highlighter-rouge">collision_detection.collision_end_margin_time</code>]</li>
+      <li>calculate the passing area of ego during the collision interval from the array of (time, distance) obtained by smoothed velocity profile</li>
+      <li>check if ego passing area and object predicted path interval collides</li>
+    </ol>
+  </li>
+  <li>if collision is detected, the module inserts a stopline</li>
+  <li>if ego is over the <a href="https://github.com/autowarefoundation/autoware_universe/tree/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/#pass-judge-line">pass_judge_line</a>, collision checking is skipped to avoid sudden braking and/or unnecessary stop in the middle of the intersection</li>
+</ol>
+
+<p>The parameters <code class="language-plaintext highlighter-rouge">collision_detection.collision_start_margin_time</code> and <code class="language-plaintext highlighter-rouge">collision_detection.collision_end_margin_time</code> can be interpreted as follows:</p>
+
+<ul>
+  <li>If ego was to pass the intersection earlier than the target object, collision would be detected if the time difference between the two was less than <code class="language-plaintext highlighter-rouge">collision_detection.collision_start_margin_time</code>.</li>
+  <li>If ego was to pass the intersection later than the target object, collision would be detected if the time difference between the two was less than <code class="language-plaintext highlighter-rouge">collision_detection.collision_end_margin_time</code>.</li>
+</ul>
+
+<p>If collision is detected, the state transits to “STOP” immediately. On the other hand, the state does not transit to “GO” unless safe judgement continues for a certain period <code class="language-plaintext highlighter-rouge">collision_detection.collision_detection_hold_time</code> to prevent the chattering of decisions.</p>
+
+<p>Currently, the intersection module uses <code class="language-plaintext highlighter-rouge">motion_velocity_smoother</code> feature to precisely calculate ego velocity profile along the intersection lane under longitudinal/lateral constraints. If the flag <code class="language-plaintext highlighter-rouge">collision_detection.velocity_profile.use_upstream</code> is true, the target velocity profile of the original path is used. Otherwise the target velocity is set to <code class="language-plaintext highlighter-rouge">collision.velocity_profile.default_velocity</code>. In the trajectory smoothing process the target velocity at/before ego trajectory points are set to ego current velocity. The smoothed trajectory is then converted to an array of (time, distance) which indicates the arrival time to each trajectory point on the path from current ego position. You can visualize this array by adding the lane id to <code class="language-plaintext highlighter-rouge">debug.ttc</code> and running</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 run behavior_velocity_intersection_module ttc.py <span class="nt">--lane_id</span> &lt;lane_id&gt;
+
+</code></pre></div></div>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/./docs/ttc.gif" alt="ego ttc profile"></p>
+
+<h3 id="about-use_upstream_velocity-flag">about use_upstream_velocity flag</h3>
+
+<p>There are some use cases where ego should check collision before entering the intersection considering the temporal stop by walkway/crosswalk module around the exit of the intersection, because their stop position can be inside the intersection and it could bother upcoming vehicles. By setting the flag <code class="language-plaintext highlighter-rouge">collision_detection.velocity_profile.use_upstream</code> to true and running the walkway/crosswalk module prior to this module, ego velocity profile is calculated considering their velocity and stop positions.</p>
+
+<p>As illustrated in below figure if upstream module inserted a stopline, ego position profile will remain there for the infinite time, thus it leads to the judgement that ego cannot exit the intersection during the interval [$t$ - <code class="language-plaintext highlighter-rouge">collision_detection.collision_start_margin_time</code>, $t$ + <code class="language-plaintext highlighter-rouge">collision_detection.collision_end_margin_time</code>]. In this way this feature considers possible collision for the infinite time if stoplines exist ahead of ego position (practically the prediction horizon is limited so the collision check horizon is bounded).
+<img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/./docs/upstream-velocity.drawio.svg" alt="upstream_velocity"></p>
+
+<h2 id="occlusion-detection">Occlusion detection</h2>
+
+<p>If the flag <code class="language-plaintext highlighter-rouge">occlusion.enable</code> is true this module checks if there is sufficient field of view (FOV) on the attention area up to <code class="language-plaintext highlighter-rouge">occlusion.occlusion_attention_area_length</code>. If FOV is not clear enough ego first makes a brief stop at default_stopline for <code class="language-plaintext highlighter-rouge">occlusion.temporal_stop_time_before_peeking</code>, and then slowly creeps toward occlusion_peeking_stopline. If <code class="language-plaintext highlighter-rouge">occlusion.creep_during_peeking.enable</code> is true <code class="language-plaintext highlighter-rouge">occlusion.creep_during_peeking.creep_velocity</code> is inserted up to occlusion_peeking_stopline. Otherwise only stop line is inserted.</p>
+
+<p>During the creeping if collision is detected this module inserts a stop line in front of ego immediately, and if the FOV gets sufficiently clear the intersection_occlusion wall will disappear. If occlusion is cleared and no collision is detected ego will pass the intersection.</p>
+
+<p>The occlusion is detected as the common area of occlusion attention area(which is partially the same as the normal attention area) and the unknown cells of the occupancy grid map. The occupancy grid map is denoised using morphology with the window size of <code class="language-plaintext highlighter-rouge">occlusion.denoise_kernel</code>. The occlusion attention area lanes are discretized to line strings and they are used to generate a grid whose each cell represents the distance from ego path along the lane as shown below.</p>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/./docs/occlusion_grid.drawio.svg" alt="occlusion_detection"></p>
+
+<p>If the nearest occlusion cell value is below the threshold <code class="language-plaintext highlighter-rouge">occlusion.occlusion_required_clearance_distance</code>, it means that the FOV of ego is not clear. It is expected that the occlusion gets cleared as the vehicle approaches the occlusion peeking stop line.</p>
+
+<h3 id="occlusion-source-estimation-at-intersection-with-traffic-light">Occlusion source estimation at intersection with traffic light</h3>
+
+<p>At intersection with traffic light, the whereabout of occlusion is estimated by checking if there are any objects between ego and the nearest occlusion cell. While the occlusion is estimated to be caused by some object (DYNAMICALLY occluded), intersection_wall appears at all times. If no objects are found between ego and the nearest occlusion cell (STATICALLY occluded), after ego stopped for the duration of <code class="language-plaintext highlighter-rouge">occlusion.static_occlusion_with_traffic_light_timeout</code> plus <code class="language-plaintext highlighter-rouge">occlusion.occlusion_detection_hold_time</code>, occlusion is intentionally ignored to avoid stuck.</p>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/./docs/occlusion-with-tl.drawio.svg" alt="occlusion_detection"></p>
+
+<p>The remaining time is visualized on the intersection_occlusion virtual wall.</p>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/./docs/static-occlusion-timeout.png" alt="static-occlusion-timeout"></p>
+
+<h3 id="occlusion-handling-at-intersection-without-traffic-light">Occlusion handling at intersection without traffic light</h3>
+
+<p>At intersection without traffic light, if occlusion is detected, ego makes a brief stop at default_stopline and first_attention_stopline respectively. After stopping at the first_attention_area_stopline this module inserts <code class="language-plaintext highlighter-rouge">occlusion.absence_traffic_light.creep_velocity</code> velocity between ego and occlusion_wo_tl_pass_judge_line while occlusion is not cleared. If collision is detected, ego immediately stops. Once the occlusion is cleared or ego has passed occlusion_wo_tl_pass_judge_line this module does not detect collision and occlusion because ego footprint is already inside the intersection.</p>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/./docs/occlusion-without-tl.drawio.svg" alt="occlusion_detection"></p>
+
+<p>While ego is creeping, yellow intersection_wall appears in front ego.</p>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/./docs/occlusion-wo-tl-creeping.png" alt="occlusion-wo-tl-creeping"></p>
+
+<h2 id="traffic-signal-specific-behavior">Traffic signal specific behavior</h2>
+
+<h3 id="collision-detection-1">Collision detection</h3>
+
+<p>TTC parameter varies depending on the traffic light color/shape as follows.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>traffic light color</th>
+      <th>ttc(start)</th>
+      <th>ttc(end)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GREEN</td>
+      <td><code class="language-plaintext highlighter-rouge">collision_detection.not_prioritized.collision_start_margin</code></td>
+      <td><code class="language-plaintext highlighter-rouge">collision_detection.not_prioritized.collision_end_margin</code></td>
+    </tr>
+    <tr>
+      <td>AMBER</td>
+      <td><code class="language-plaintext highlighter-rouge">collision_detection.partially_prioritized.collision_start_end_margin</code></td>
+      <td><code class="language-plaintext highlighter-rouge">collision_detection.partially_prioritized.collision_start_end_margin</code></td>
+    </tr>
+    <tr>
+      <td>RED / Arrow</td>
+      <td><code class="language-plaintext highlighter-rouge">collision_detection.fully_prioritized.collision_start_end_margin</code></td>
+      <td><code class="language-plaintext highlighter-rouge">collision_detection.fully_prioritized.collision_start_end_margin</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="yield-on-green">yield on GREEN</h3>
+
+<p>If the traffic light color changed to GREEN and ego approached the entry of the intersection lane within the distance <code class="language-plaintext highlighter-rouge">collision_detection.yield_on_green_traffic_light.distance_to_assigned_lanelet_start</code> and there is any object whose distance to its stopline is less than <code class="language-plaintext highlighter-rouge">collision_detection.yield_on_green_traffic_light.object_dist_to_stopline</code>, this module commands to stop for the duration of <code class="language-plaintext highlighter-rouge">collision_detection.yield_on_green_traffic_light.duration</code> at default_stopline.</p>
+
+<h3 id="skip-on-amber">skip on AMBER</h3>
+
+<p>If the traffic light color is AMBER but the object is expected to stop before its stopline under the deceleration of <code class="language-plaintext highlighter-rouge">collision_detection.ignore_on_amber_traffic_light.object_expected_deceleration</code>, collision checking is skipped.</p>
+
+<h3 id="skip-on-red">skip on RED</h3>
+
+<p>If the traffic light color is RED or Arrow signal is turned on, the attention lanes which are not conflicting with ego lane are not used for detection. And even if the object stops with a certain overshoot from its stopline, but its expected stop position under the deceleration of <code class="language-plaintext highlighter-rouge">collision_detection.ignore_on_amber_traffic_light.object_expected_deceleration</code> is more than the distance <code class="language-plaintext highlighter-rouge">collision_detection.ignore_on_red_traffic_light.object_margin_to_path</code> from collision point, the object is ignored.</p>
+
+<h3 id="occlusion-detection-1">Occlusion detection</h3>
+
+<p>When the traffic light color/shape is RED/Arrow, occlusion detection is skipped.</p>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/./docs/traffic-light-specific-behavior.drawio.svg" alt="traffic-light-specific-behavior"></p>
+
+<h2 id="pass-judge-line">Pass Judge Line</h2>
+
+<p>Generally it is not tolerable for vehicles that have lower traffic priority to stop in the middle of the unprotected area in intersections, and they need to stop at the stop line beforehand if there will be any risk of collision, which introduces two requirements:</p>
+
+<ol>
+  <li>The vehicle must start braking before the boundary of the unprotected area at least by the braking distance if it is supposed to stop</li>
+  <li>The vehicle must recognize upcoming vehicles and check safety beforehand with enough braking distance margin if it is supposed to go
+    <ol>
+      <li>And the SAFE decision must be absolutely certain and remain to be valid for the future horizon so that the safety condition will be always satisfied while ego is driving inside the unprotected area.</li>
+    </ol>
+  </li>
+  <li>(TODO): Since it is almost impossible to make perfectly safe decision beforehand given the limited detection range/velocity tracking performance, intersection module should plan risk-evasive acceleration velocity profile AND/OR relax lateral acceleration limit while ego is driving inside the unprotected area, if the safety decision is “betrayed” later due to the following reasons:
+    <ol>
+      <li>The situation <em>turned out to be dangerous</em> later, mainly because velocity tracking was underestimated or the object accelerated beyond TTC margin</li>
+      <li>The situation <em>turned dangerous</em> later, mainly because the object is suddenly detected out of nowhere</li>
+    </ol>
+  </li>
+</ol>
+
+<p>The position which is before the boundary of unprotected area by the braking distance which is obtained by</p>
+
+\[\dfrac{v_{\mathrm{ego}}^{2}}{2a_{\mathrm{max}}} + v_{\mathrm{ego}} * t_{\mathrm{delay}}\]
+
+<p>is called pass_judge_line, and safety decision must be made before ego passes this position because ego does not stop anymore.</p>
+
+<p>1st_pass_judge_line is before the first upcoming lane, and at intersections with multiple upcoming lanes, 2nd_pass_judge_line is defined as the position which is before the centerline of the first attention lane by the braking distance. 1st/2nd_pass_judge_line are illustrated in the following figure.</p>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/./docs/pass-judge-line.drawio.svg" alt="pass-judge-line"></p>
+
+<p>Intersection module will command to GO if</p>
+
+<ul>
+  <li>ego is over default_stopline(or <code class="language-plaintext highlighter-rouge">common.enable_pass_judge_before_default_stopline</code> is true) AND</li>
+  <li>ego is over 1st_pass judge line AND</li>
+  <li>ego judged SAFE previously AND</li>
+  <li>(ego is over 2nd_pass_judge_line OR ego is between 1st and 2nd pass_judge_line but most probable collision is expected to happen in the 1st attention lane)</li>
+</ul>
+
+<p>because it is expected to stop or continue stop decision if</p>
+
+<ol>
+  <li>ego is before default_stopline &amp;&amp; <code class="language-plaintext highlighter-rouge">common.enable_pass_judge_before_default_stopline</code> is false OR
+    <ol>
+      <li>reason: default_stopline is defined on the map and should be respected</li>
+    </ol>
+  </li>
+  <li>ego is before 1st_pass_judge_line OR
+    <ol>
+      <li>reason: it has enough braking distance margin</li>
+    </ol>
+  </li>
+  <li>ego judged UNSAFE previously
+    <ol>
+      <li>reason: ego is now trying to stop and should continue stop decision if collision is detected in later calculation</li>
+    </ol>
+  </li>
+  <li>(ego is between 1st and 2nd pass_judge_line and the most probable collision is expected to happen in the 2nd attention lane)</li>
+</ol>
+
+<p>For the 3rd condition, it is possible that ego stops with some overshoot to the unprotected area while it is trying to stop for collision detection, because ego should keep stop decision while UNSAFE decision is made even if it passed 1st_pass_judge_line during deceleration.</p>
+
+<p>For the 4th condition, at intersections with 2nd attention lane, even if ego is over the 1st pass_judge_line, still intersection module commands to stop if the most probable collision is expected to happen in the 2nd attention lane.</p>
+
+<p>Also if <code class="language-plaintext highlighter-rouge">occlusion.enable</code> is true, the position of 1st_pass_judge line changes to occlusion_peeking_stopline if ego passed the original 1st_pass_judge_line position while ego is peeking. Otherwise ego could inadvertently judge that it passed 1st_pass_judge during peeking and then abort peeking.</p>
+
+<h2 id="data-structure">Data Structure</h2>
+
+<p>Each data structure is defined in <code class="language-plaintext highlighter-rouge">util_type.hpp</code>.</p>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/./docs/data-structure.drawio.svg" alt="data-structure"></p>
+
+<h3 id="intersectionlanelets"><code class="language-plaintext highlighter-rouge">IntersectionLanelets</code></h3>
+
+<pre><code class="language-plantuml">@startuml
+entity IntersectionLanelets {
+ * conflicting lanes/area
+ --
+ * first conflicting area
+ The conflicting lane area which the path intersects first
+ --
+ * attention lanes/area
+ --
+ * first attention lane area
+ The attention lane area which the path intersects first
+ --
+ * occlusion attention lanes/area
+ Part of attention lanes/area for occlusion detection
+ --
+ * is_priortized: bool
+ If ego has priority in current traffic light context
+}
+@enduml
+
+</code></pre>
+
+<h3 id="intersectionstoplines"><code class="language-plaintext highlighter-rouge">IntersectionStopLines</code></h3>
+
+<p>Each stop lines are generated from interpolated path points to obtain precise positions.</p>
+
+<pre><code class="language-plantuml">@startuml
+entity IntersectionStopLines {
+  * closest_idx: size_t
+  closest path point index for ego
+  --
+  * stuck_stopline: size_t
+  stop line index on stuck vehicle detection
+  --
+  * default_stopline: size_t
+  If defined on the map, its index on the path. Otherwise generated before first_attention_stopline
+  --
+  * first_attention_stopline
+  The index of the first path point which is inside the attention area
+  --
+  * occlusion_peeking_stopline
+  The index of the path point for the peeking limit position
+  --
+  * pass_judge_line
+  The index of the path point which is before first_attention_stopline/occlusion_peeking_stopline by braking distance
+}
+@enduml
+
+</code></pre>
+
+<h3 id="targetobject"><code class="language-plaintext highlighter-rouge">TargetObject</code></h3>
+
+<p><code class="language-plaintext highlighter-rouge">TargetObject</code> holds the object, its belonging lane and corresponding stopline information.</p>
+
+<pre><code class="language-plantuml">@startuml
+entity TargetObject {
+  * object: PredictedObject
+  detected object
+  --
+  * attention_lanelet: ConstLanelet
+  belonging lanelet instance
+  --
+  * stopline: ConstLineString3d
+  reachable stopline of attention_lanelet
+}
+@enduml
+
+</code></pre>
+
+<h2 id="module-parameters">Module Parameters</h2>
+
+<h3 id="common">common</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.attention_area_length</code></td>
+      <td>double</td>
+      <td>[m] range for object detection</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.attention_area_margin</code></td>
+      <td>double</td>
+      <td>[m] margin for expanding attention area width</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.attention_area_angle_threshold</code></td>
+      <td>double</td>
+      <td>[rad] threshold of angle difference between the detected object and lane</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.use_intersection_area</code></td>
+      <td>bool</td>
+      <td>[-] flag to use intersection_area for collision detection</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.default_stopline_margin</code></td>
+      <td>double</td>
+      <td>[m] margin before_stop_line</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.stopline_overshoot_margin</code></td>
+      <td>double</td>
+      <td>[m] margin for the overshoot from stopline</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.max_accel</code></td>
+      <td>double</td>
+      <td>[m/ss] max acceleration for stop</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.max_jerk</code></td>
+      <td>double</td>
+      <td>[m/sss] max jerk for stop</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.delay_response_time</code></td>
+      <td>double</td>
+      <td>[s] action delay before stop</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.enable_pass_judge_before_default_stopline</code></td>
+      <td>bool</td>
+      <td>[-] flag not to stop before default_stopline even if ego is over pass_judge_line</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="stuck_vehicleyield_stuck">stuck_vehicle/yield_stuck</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">stuck_vehicle.turn_direction</code></td>
+      <td>-</td>
+      <td>[-] turn_direction specifier for stuck vehicle detection</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">stuck_vehicle.stuck_vehicle_detect_dist</code></td>
+      <td>double</td>
+      <td>[m] length toward from the exit of intersection for stuck vehicle detection</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">stuck_vehicle.stuck_vehicle_velocity_threshold</code></td>
+      <td>double</td>
+      <td>[m/s] velocity threshold for stuck vehicle detection</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">yield_stuck.distance_threshold</code></td>
+      <td>double</td>
+      <td>[m/s] distance threshold of yield stuck vehicle from ego path along the lane</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="collision_detection">collision_detection</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.consider_wrong_direction_vehicle</code></td>
+      <td>bool</td>
+      <td>[-] flag to detect objects in the wrong direction</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.collision_detection_hold_time</code></td>
+      <td>double</td>
+      <td>[s] hold time of collision detection</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.min_predicted_path_confidence</code></td>
+      <td>double</td>
+      <td>[-] minimum confidence value of predicted path to use for collision detection</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.keep_detection_velocity_threshold</code></td>
+      <td>double</td>
+      <td>[s] ego velocity threshold for continuing collision detection before pass judge line</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.velocity_profile.use_upstream</code></td>
+      <td>bool</td>
+      <td>[-] flag to use velocity profile planned by upstream modules</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.velocity_profile.minimum_upstream_velocity</code></td>
+      <td>double</td>
+      <td>[m/s] minimum velocity of upstream velocity profile to avoid zero division</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.velocity_profile.default_velocity</code></td>
+      <td>double</td>
+      <td>[m/s] constant velocity profile when use_upstream is false</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.velocity_profile.minimum_default_velocity</code></td>
+      <td>double</td>
+      <td>[m/s] minimum velocity of default velocity profile to avoid zero division</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.yield_on_green_traffic_light</code></td>
+      <td>-</td>
+      <td>[-] <a href="https://github.com/autowarefoundation/autoware_universe/tree/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/#yield-on-green">description</a>
+</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.ignore_amber_traffic_light</code></td>
+      <td>-</td>
+      <td>[-] <a href="https://github.com/autowarefoundation/autoware_universe/tree/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/#skip-on-amber">description</a>
+</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.ignore_on_red_traffic_light</code></td>
+      <td>-</td>
+      <td>[-] <a href="https://github.com/autowarefoundation/autoware_universe/tree/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/#skip-on-red">description</a>
+</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="occlusion">occlusion</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.enable</code></td>
+      <td>bool</td>
+      <td>[-] flag to calculate occlusion detection</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.occlusion_attention_area_length</code></td>
+      <td>double</td>
+      <td>[m] the length of attention are for occlusion detection</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.free_space_max</code></td>
+      <td>int</td>
+      <td>[-] maximum value of occupancy grid cell to treat at occluded</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.occupied_min</code></td>
+      <td>int</td>
+      <td>[-] minimum value of occupancy grid cell to treat at occluded</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.denoise_kernel</code></td>
+      <td>double</td>
+      <td>[m] morphology window size for preprocessing raw occupancy grid</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.attention_lane_crop_curvature_threshold</code></td>
+      <td>double</td>
+      <td>[m] curvature threshold for trimming curved part of the lane</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.attention_lane_crop_curvature_ds</code></td>
+      <td>double</td>
+      <td>[m] discretization interval of centerline for lane curvature calculation</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.creep_during_peeking.enable</code></td>
+      <td>bool</td>
+      <td>[-] flag to insert <code class="language-plaintext highlighter-rouge">creep_velocity</code> while peeking to intersection occlusion stopline</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.creep_during_peeking.creep_velocity</code></td>
+      <td>double</td>
+      <td>[m/s] the command velocity while peeking to intersection occlusion stopline</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.peeking_offset</code></td>
+      <td>double</td>
+      <td>[m] the offset of the front of the vehicle into the attention area for peeking to occlusion</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.occlusion_required_clearance_distance</code></td>
+      <td>double</td>
+      <td>[m] threshold for the distance to nearest occlusion cell from ego path</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.possible_object_bbox</code></td>
+      <td>[double]</td>
+      <td>[m] minimum bounding box size for checking if occlusion polygon is small enough</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.ignore_parked_vehicle_speed_threshold</code></td>
+      <td>double</td>
+      <td>[m/s] velocity threshold for checking parked vehicle</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.occlusion_detection_hold_time</code></td>
+      <td>double</td>
+      <td>[s] hold time of occlusion detection</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.temporal_stop_time_before_peeking</code></td>
+      <td>double</td>
+      <td>[s] temporal stop duration at default_stopline before starting peeking</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.temporal_stop_before_attention_area</code></td>
+      <td>bool</td>
+      <td>[-] flag to temporarily stop at first_attention_stopline before peeking into attention_area</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.creep_velocity_without_traffic_light</code></td>
+      <td>double</td>
+      <td>[m/s] creep velocity to occlusion_wo_tl_pass_judge_line</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.static_occlusion_with_traffic_light_timeout</code></td>
+      <td>double</td>
+      <td>[s] the timeout duration for ignoring static occlusion at intersection with traffic light</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="trouble-shooting">Trouble shooting</h2>
+
+<h3 id="intersection-module-stops-against-unrelated-vehicles">Intersection module stops against unrelated vehicles</h3>
+
+<p>In this case, first visualize <code class="language-plaintext highlighter-rouge">/planning/scenario_planning/lane_driving/behavior_planning/behavior_velocity_planner/debug/intersection</code> topic and check the <code class="language-plaintext highlighter-rouge">attention_area</code> polygon. Intersection module performs collision checking for vehicles running on this polygon, so if it extends to unintended lanes, it needs to have <a href="https://github.com/autowarefoundation/autoware_universe/tree/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/#how-towhy-set-rightofway-tag">RightOfWay tag</a>.</p>
+
+<p>By lowering <code class="language-plaintext highlighter-rouge">common.attention_area_length</code> you can check which lanes are conflicting with the intersection lane. Then set part of the conflicting lanes as the yield_lane.</p>
+
+<h3 id="the-stop-line-of-intersection-is-chattering">The stop line of intersection is chattering</h3>
+
+<p>The parameter <code class="language-plaintext highlighter-rouge">collision_detection.collision_detection_hold_time</code> suppresses the chattering by keeping UNSAFE decision for this duration until SAFE decision is finally made. The role of this parameter is to account for unstable detection/tracking of objects. By increasing this value you can suppress the chattering. However it could elongate the stopping duration excessively.</p>
+
+<p>If the chattering arises from the acceleration/deceleration of target vehicles, increase <code class="language-plaintext highlighter-rouge">collision_detection.collision_detection.collision_end_margin_time</code> and/or <code class="language-plaintext highlighter-rouge">collision_detection.collision_detection.collision_end_margin_time</code>.</p>
+
+<h3 id="the-stop-line-is-released-too-fastslow">The stop line is released too fast/slow</h3>
+
+<p>If the intersection wall appears too fast, or ego tends to stop too conservatively for upcoming vehicles, lower the parameter <code class="language-plaintext highlighter-rouge">collision_detection.collision_detection.collision_start_margin_time</code>. If it lasts too long after the target vehicle passed, then lower the parameter <code class="language-plaintext highlighter-rouge">collision_detection.collision_detection.collision_end_margin_time</code>.</p>
+
+<h3 id="ego-suddenly-stops-at-intersection-with-traffic-light">Ego suddenly stops at intersection with traffic light</h3>
+
+<p>If the traffic light color changed from AMBER/RED to UNKNOWN, the intersection module works in the GREEN color mode. So collision and occlusion are likely to be detected again.</p>
+
+<h3 id="occlusion-is-detected-overly">Occlusion is detected overly</h3>
+
+<p>You can check which areas are detected as occlusion by visualizing <code class="language-plaintext highlighter-rouge">/planning/scenario_planning/lane_driving/behavior_planning/behavior_velocity_planner/debug/intersection/occlusion_polygons</code>.</p>
+
+<p>If you do not want to detect / do want to ignore occlusion far from ego or lower the computational cost of occlusion detection, <code class="language-plaintext highlighter-rouge">occlusion.occlusion_attention_area_length</code> should be set to lower value.</p>
+
+<p>If you want to care the occlusion nearby ego more cautiously, set <code class="language-plaintext highlighter-rouge">occlusion.occlusion_required_clearance_distance</code> to a larger value. Then ego will approach the occlusion_peeking_stopline more closely to assure more clear FOV.</p>
+
+<p><code class="language-plaintext highlighter-rouge">occlusion.possible_object_bbox</code> is used for checking if detected occlusion area is small enough that no vehicles larger than this size can exist inside. By decreasing this size ego will ignore small occluded area.</p>
+
+<h4 id="occupancy-grid-map-tuning">occupancy grid map tuning</h4>
+
+<p>Refer to the document of <a href="https://autowarefoundation.github.io/autoware_universe/main/perception/autoware_probabilistic_occupancy_grid_map/">autoware_probabilistic_occupancy_grid_map</a> for details. If occlusion tends to be detected at apparently free space, increase <code class="language-plaintext highlighter-rouge">occlusion.free_space_max</code> to ignore them.</p>
+
+<h4 id="in-simple_planning_simulator">in simple_planning_simulator</h4>
+
+<p>intersection_occlusion feature is <strong>not recommended</strong> for use in planning_simulator because the laserscan_based_occupancy_grid_map generates unnatural UNKNOWN cells in 2D manner:</p>
+
+<ul>
+  <li>all the cells behind pedestrians are UNKNOWN</li>
+  <li>no ground point clouds are generated</li>
+</ul>
+
+<p>Also many users do not set traffic light information frequently although it is very critical for intersection_occlusion (and in real traffic environment too).</p>
+
+<p>For these reasons, <code class="language-plaintext highlighter-rouge">occlusion.enable</code> is false by default.</p>
+
+<h4 id="on-real-vehicle--in-end-to-end-simulator">on real vehicle / in end-to-end simulator</h4>
+
+<p>On real vehicle or in end-to-end simulator like <a href="https://tier4.github.io/AWSIM/">AWSIM</a> the following pointcloud_based_occupancy_grid_map configuration is highly recommended:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">scan_origin_frame</span><span class="pi">:</span> <span class="s2">"</span><span class="s">velodyne_top"</span>
+
+<span class="na">grid_map_type</span><span class="pi">:</span> <span class="s2">"</span><span class="s">OccupancyGridMapProjectiveBlindSpot"</span>
+<span class="na">OccupancyGridMapProjectiveBlindSpot</span><span class="pi">:</span>
+  <span class="na">projection_dz_threshold</span><span class="pi">:</span> <span class="m">0.01</span> <span class="c1"># [m] for avoiding null division</span>
+  <span class="na">obstacle_separation_threshold</span><span class="pi">:</span> <span class="m">1.0</span> <span class="c1"># [m] fill the interval between obstacles with unknown for this length</span>
+
+</code></pre></div></div>
+
+<p>You should set the top lidar link as the <code class="language-plaintext highlighter-rouge">scan_origin_frame</code>. In the example it is <code class="language-plaintext highlighter-rouge">velodyne_top</code>. The method <code class="language-plaintext highlighter-rouge">OccupancyGridMapProjectiveBlindSpot</code> estimates the FOV by running projective ray-tracing from <code class="language-plaintext highlighter-rouge">scan_origin</code> to obstacle or up to the ground and filling the cells on the “shadow” of the object as UNKNOWN.</p>
+
+<h2 id="flowchart">Flowchart</h2>
+
+<p>WIP</p>
+
+<pre><code class="language-plantuml">@startuml
+title modifyPathVelocity
+start
+
+:get object polygon;
+
+partition get_objective_polygon {
+
+:get "right-of-way" lanelets from ego lanelet;
+
+:get previous and following ego lanelet from routing graph;
+
+:get all conflicting lanelets with ego lane;
+
+:exclude yield and ego lanelets from conflicting lanelets;
+
+:update conflicting and objective polygon;
+}
+
+:get external Input;
+
+:generate stop line;
+
+if (not generate stop line) then (yes)
+  stop
+else (no)
+endif
+
+if (stop line index or pass judge index is same lane as ego?) then (yes)
+  stop
+else (no)
+endif
+
+if (not found closest index?) then (yes)
+  stop
+else (no)
+endif
+
+if (state is GO and over pass judge line and no external stop) then (yes)
+  stop
+else (no)
+endif
+
+if (has collision or is stuck vehicle in intersection?) then (yes)
+  :set is_entry_prohibited true;
+  :set state from external input;
+else (no)
+endif
+
+:set state with margin time;
+
+if (current state is same as previous state) then (yes)
+  :reset timer;
+else if (state is GO-&gt;STOP) then (yes)
+  :set state as STOP;
+  :reset timer;
+else if (state is STOP -&gt; GO) then (yes)
+  if (start time is not set) then (yes)
+    :set start time;
+  else(no)
+   :calculate duration;
+   if(duration is more than margin time)then (yes)
+    :set state GO;
+    :reset timer;
+   endif
+  endif
+endif
+
+if (state is STOP?) then (yes)
+  :set velocity;
+  if (stop required?) then (yes)
+    :publish stop reason and stop factor;
+  endif
+else(no)
+endif
+stop
+
+@enduml
+
+</code></pre>
+
+<h2 id="merge-from-private">Merge From Private</h2>
+
+<h3 id="role-1">Role</h3>
+
+<p>When an ego enters a public road from a private road (e.g. a parking lot), it needs to face and stop before entering the public road to make sure it is safe.</p>
+
+<p>This module is activated when there is an intersection at the private area from which the vehicle enters the public road. The stop line is generated both when the goal is in the intersection lane and when the path goes beyond the intersection lane. The basic behavior is the same as the intersection module, but ego must stop once at the stop line.</p>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/docs/merge_from_private.png" alt="merge-from-private"></p>
+
+<h3 id="activation-timing">Activation Timing</h3>
+
+<p>This module is activated when the following conditions are met:</p>
+
+<ul>
+  <li>ego-lane has a <code class="language-plaintext highlighter-rouge">private</code> tag</li>
+  <li>ego-lane has a conflict with other no-private lanelets</li>
+</ul>
+
+<h3 id="module-parameters-1">Module Parameters</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">merge_from_private_road/stop_duration_sec</code></td>
+      <td>double</td>
+      <td>[m] time margin to change state</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="known-issue">Known Issue</h3>
+
+<p>If ego go over the stop line for a certain distance, then it will not transit from STOP.</p>
+
+<h2 id="test-maps">Test Maps</h2>
+
+<p>The intersections lanelet map consist of a variety of intersections including:</p>
+
+<ul>
+  <li>4-way crossing with traffic light</li>
+  <li>4-way crossing without traffic light</li>
+  <li>T-shape crossing without traffic light</li>
+  <li>intersection with a loop</li>
+  <li>complicated intersection</li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module/./docs/intersection_test_map.png" alt="intersection_test"></p>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="changelog-for-package-autoware_behavior_velocity_intersection_module">Changelog for package autoware_behavior_velocity_intersection_module</h1>
+
+<h2 id="0440-2025-04-18">0.44.0 (2025-04-18)</h2>
+
+<h2 id="0430-2025-03-21">0.43.0 (2025-03-21)</h2>
+
+<ul>
+  <li>Merge remote-tracking branch 'origin/main' into
+chore/bump-version-0.43</li>
+  <li>chore: rename from [autoware.universe]{.title-ref} to
+[autoware_universe]{.title-ref}
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10306">#10306</a>)</li>
+  <li>fix(behavior_velocity_planner): planning factor integration
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10292">#10292</a>)
+    <ul>
+      <li>fix: blind_spot</li>
+      <li>fix: crosswalk</li>
+      <li>fix: detection_area</li>
+      <li>fix: intersection</li>
+      <li>fix: no_drivable_lane</li>
+      <li>fix: no_stopping_area</li>
+      <li>fix: run_out</li>
+      <li>fix: stop_line</li>
+      <li>fix: traffic_light</li>
+      <li>fix: virtual_traffic_light</li>
+    </ul>
+
+    <p>* fix: walk_way ---------</p>
+  </li>
+  <li>feat: apply splitting of autoware_utils_geometry
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10270">#10270</a>)
+    <ul>
+      <li>fix build error</li>
+    </ul>
+
+    <p>* merge namespace ---------</p>
+  </li>
+  <li>feat(Autoware_planning_factor_interface): replace tier4_msgs
+with autoware_internal_msgs
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10204">#10204</a>)</li>
+  <li>Contributors: Hayato Mizushima, Satoshi OTA, Takagi, Isamu, Yutaka
+Kondo, 心刚</li>
+</ul>
+
+<h2 id="0420-2025-03-03">0.42.0 (2025-03-03)</h2>
+
+<ul>
+  <li>Merge remote-tracking branch 'origin/main' into
+tmp/bot/bump_version_base</li>
+  <li>feat(autoware_utils): replace autoware_universe_utils with
+autoware_utils
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10191">#10191</a>)</li>
+  <li>feat(autoware_objects_of_interest_marker_interface): replace
+autoware_universe_utils with autoware_utils
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10174">#10174</a>)</li>
+  <li>feat: remove dependency on autoware_universe_utils from
+autoware_interpolation and autoware_motion_utils
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10092">#10092</a>)
+Co-authored-by: pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</li>
+  <li>fix: add missing includes to autoware_universe_utils
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10091">#10091</a>)</li>
+  <li>feat!: replace tier4_planning_msgs/PathWithLaneId with
+autoware_internal_planning_msgs/PathWithLaneId
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10023">#10023</a>)</li>
+  <li>feat(planning_test_manager): abstract message-specific functions
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9882">#9882</a>)
+    <ul>
+      <li>abstract message-specific functions</li>
+      <li>include necessary header</li>
+      <li>adapt velocity_smoother to new test manager</li>
+      <li>adapt behavior_velocity_planner to new test manager</li>
+      <li>adapt path_optimizer to new test manager</li>
+      <li>fix output subscription</li>
+      <li>adapt behavior_path_planner to new test manager</li>
+      <li>adapt scenario_selector to new test manager</li>
+      <li>adapt freespace_planner to new test manager</li>
+      <li>adapt planning_validator to new test manager</li>
+      <li>adapt obstacle_stop_planner to new test manager</li>
+      <li>adapt obstacle_cruise_planner to new test manager</li>
+      <li>disable test for freespace_planner</li>
+      <li>adapt behavior_velocity_crosswalk_module to new test manager</li>
+      <li>adapt behavior_path_lane_change_module to new test manager</li>
+      <li>adapt behavior_path_avoidance_by_lane_change_module to new
+test manager</li>
+      <li>adapt behavior_path_dynamic_obstacle_avoidance_module to
+new test manager</li>
+      <li>adapt behavior_path_external_request_lane_change_module to
+new test manager</li>
+      <li>adapt behavior_path_side_shift_module to new test manager</li>
+      <li>adapt behavior_path_static_obstacle_avoidance_module to new
+test manager</li>
+      <li>adapt path_smoother to new test manager</li>
+      <li>adapt behavior_velocity_blind_spot_module to new test
+manager</li>
+      <li>adapt behavior_velocity_detection_area_module to new test
+manager</li>
+      <li>adapt behavior_velocity_intersection_module to new test
+manager</li>
+      <li>adapt behavior_velocity_no_stopping_area_module to new test
+manager</li>
+      <li>adapt behavior_velocity_run_out_module to new test manager</li>
+      <li>adapt behavior_velocity_stop_line_module to new test manager</li>
+      <li>adapt behavior_velocity_traffic_light_module to new test
+manager</li>
+      <li>adapt behavior_velocity_virtual_traffic_light_module to new
+test manager</li>
+      <li>adapt behavior_velocity_walkway_module to new test manager</li>
+      <li>adapt motion_velocity_planner_node_universe to new test
+manager</li>
+      <li>include necessary headers</li>
+    </ul>
+
+    <p>* Odometries -&gt; Odometry ---------Co-authored-by: Takayuki
+Murooka &lt;&lt;takayuki5168@gmail.com&gt;&gt;</p>
+  </li>
+  <li>Contributors: Fumiya Watanabe, Mitsuhiro Sakamoto, Ryohsuke
+Mitsudome, 心刚</li>
+</ul>
+
+<h2 id="0412-2025-02-19">0.41.2 (2025-02-19)</h2>
+
+<ul>
+  <li>chore: bump version to 0.41.1
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10088">#10088</a>)</li>
+  <li>Contributors: Ryohsuke Mitsudome</li>
+</ul>
+
+<h2 id="0411-2025-02-10">0.41.1 (2025-02-10)</h2>
+
+<h2 id="0410-2025-01-29">0.41.0 (2025-01-29)</h2>
+
+<ul>
+  <li>Merge remote-tracking branch 'origin/main' into
+tmp/bot/bump_version_base</li>
+  <li>feat(intersection): add wall marker for too late detect objects
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10006">#10006</a>)</li>
+  <li>chore(planning): move package directory for planning factor
+interface
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9948">#9948</a>)
+    <ul>
+      <li>chore: add new package for planning factor interface</li>
+      <li>chore(surround_obstacle_checker): update include file</li>
+      <li>chore(obstacle_stop_planner): update include file</li>
+      <li>chore(obstacle_cruise_planner): update include file</li>
+      <li>chore(motion_velocity_planner): update include file</li>
+      <li>chore(bpp): update include file</li>
+      <li>chore(bvp-common): update include file</li>
+      <li>chore(blind_spot): update include file</li>
+      <li>chore(crosswalk): update include file</li>
+      <li>chore(detection_area): update include file</li>
+      <li>chore(intersection): update include file</li>
+      <li>chore(no_drivable_area): update include file</li>
+      <li>chore(no_stopping_area): update include file</li>
+      <li>chore(occlusion_spot): update include file</li>
+      <li>chore(run_out): update include file</li>
+      <li>chore(speed_bump): update include file</li>
+      <li>chore(stop_line): update include file</li>
+      <li>chore(template_module): update include file</li>
+      <li>chore(traffic_light): update include file</li>
+      <li>chore(vtl): update include file</li>
+      <li>chore(walkway): update include file</li>
+    </ul>
+
+    <p>* chore(motion_utils): remove factor interface ---------</p>
+  </li>
+  <li>feat(behavior_velocity_planner)!: remove velocity_factor
+completely
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9943">#9943</a>)
+    <ul>
+      <li>feat(behavior_velocity_planner)!: remove velocity_factor
+completely</li>
+    </ul>
+
+    <p>* minimize diff ---------</p>
+  </li>
+  <li>feat(planning_factor)!: remove velocity_factor, steering_factor
+and introduce planning_factor
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9927">#9927</a>)
+Co-authored-by: Satoshi OTA
+&lt;&lt;44889564+satoshi-ota@users.noreply.github.com&gt;&gt; Co-authored-by:
+Ryohsuke Mitsudome
+&lt;&lt;43976834+mitsudome-r@users.noreply.github.com&gt;&gt; Co-authored-by:
+satoshi-ota &lt;&lt;satoshi.ota928@gmail.com&gt;&gt;</li>
+  <li>feat(behavior_velocity_modules): add node test
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9790">#9790</a>)
+    <ul>
+      <li>feat(behavior_velocity_crosswalk): add node test</li>
+      <li>fix</li>
+      <li>feat(behavior_velocity_xxx_module): add node test</li>
+      <li>fix</li>
+      <li>fix</li>
+      <li>fix</li>
+      <li>fix</li>
+    </ul>
+
+    <p>* change directory tests -&gt; test ---------</p>
+  </li>
+  <li>fix(autoware_behavior_velocity_intersection_module): fix
+bugprone-branch-clone
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9702">#9702</a>)
+fix: bugprone-error</li>
+  <li>refactor(behavior_velocity_planner_common): add
+behavior_velocity_rtc_interface and move RTC-related
+implementation
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9799">#9799</a>)
+    <ul>
+      <li>split into planer_common and rtc_interface</li>
+    </ul>
+
+    <p>* Update
+planning/behavior_velocity_planner/autoware_behavior_velocity_planner_common/include/autoware/behavior_velocity_planner_common/scene_module_interface.hpp
+Co-authored-by: Mamoru Sobue &lt;&lt;mamoru.sobue@tier4.jp&gt;&gt;
+* Update
+planning/behavior_velocity_planner/autoware_behavior_velocity_rtc_interface/include/autoware/behavior_velocity_rtc_interface/scene_module_interface_with_rtc.hpp
+Co-authored-by: Mamoru Sobue &lt;&lt;mamoru.sobue@tier4.jp&gt;&gt;
+* fix
+——</p>
+
+    <p>Co-authored-by: Mamoru Sobue &lt;&lt;mamoru.sobue@tier4.jp&gt;&gt;</p>
+  </li>
+  <li>feat(behavior_velocity_planner): use XXXStamped in
+autoware_internal_debug_msgs
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9744">#9744</a>)
+    <ul>
+      <li>feat(behavior_velocity_planner): use XXXStamped in
+autoware_internal_debug_msgs</li>
+    </ul>
+
+    <h2 id="-fix">* fix</h2>
+  </li>
+  <li>feat(behavior_velocity_planner): remove unnecessary
+tier4_api_msgs
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9692">#9692</a>)</li>
+  <li>Contributors: Fumiya Watanabe, Mamoru Sobue, Satoshi OTA, Takayuki
+Murooka, kobayu858</li>
+</ul>
+
+<h2 id="0400-2024-12-12">0.40.0 (2024-12-12)</h2>
+
+<ul>
+  <li>Merge branch 'main' into release-0.40.0</li>
+  <li>Revert "chore(package.xml): bump version to 0.39.0
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9587">#9587</a>)"
+This reverts commit c9f0f2688c57b0f657f5c1f28f036a970682e7f5.</li>
+  <li>fix: fix ticket links in CHANGELOG.rst
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9588">#9588</a>)</li>
+  <li>chore(package.xml): bump version to 0.39.0
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9587">#9587</a>)
+    <ul>
+      <li>chore(package.xml): bump version to 0.39.0</li>
+      <li>fix: fix ticket links in CHANGELOG.rst</li>
+    </ul>
+
+    <p>* fix: remove unnecessary diff ---------Co-authored-by:
+Yutaka Kondo &lt;&lt;yutaka.kondo@youtalk.jp&gt;&gt;</p>
+  </li>
+  <li>fix: fix ticket links in CHANGELOG.rst
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9588">#9588</a>)</li>
+  <li>fix(cpplint): include what you use - planning
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9570">#9570</a>)</li>
+  <li>feat(behavior_velocity_planner)!: remove stop_reason
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9452">#9452</a>)</li>
+  <li>refactor: correct spelling
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9528">#9528</a>)</li>
+  <li>0.39.0</li>
+  <li>update changelog</li>
+  <li>Merge commit '6a1ddbd08bd' into release-0.39.0</li>
+  <li>fix: fix ticket links to point to
+<a href="https://github.com/autowarefoundation/autoware_universe">https://github.com/autowarefoundation/autoware_universe</a>
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9304">#9304</a>)</li>
+  <li>fix(autoware_behavior_velocity_intersection_module): fix
+clang-diagnostic-unused-parameter
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9409">#9409</a>)
+fix: clang-diagnostic-unused-parameter</li>
+  <li>fix(autoware_behavior_velocity_intersection_module): fix
+clang-diagnostic-unused-lambda-capture
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9407">#9407</a>)
+fix: clang-diagnostic-unused-parameter</li>
+  <li>chore(autoware_behavior_velocity_intersection_module): include
+opencv as system
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9330">#9330</a>)</li>
+  <li>fix: fix ticket links to point to
+<a href="https://github.com/autowarefoundation/autoware_universe">https://github.com/autowarefoundation/autoware_universe</a>
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9304">#9304</a>)</li>
+  <li>chore(package.xml): bump version to 0.38.0
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9266">#9266</a>)
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9284">#9284</a>)
+    <ul>
+      <li>unify package.xml version to 0.37.0</li>
+      <li>remove system_monitor/CHANGELOG.rst</li>
+      <li>add changelog</li>
+    </ul>
+
+    <h2 id="-0380">* 0.38.0</h2>
+  </li>
+  <li>fix(bvp): remove expired module safely
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9212">#9212</a>)
+    <ul>
+      <li>fix(bvp): remove expired module safely</li>
+      <li>fix: remove module id set</li>
+      <li>fix: use itr to erase expired module</li>
+    </ul>
+
+    <p>* fix: remove unused function ---------</p>
+  </li>
+  <li>Contributors: Esteve Fernandez, Fumiya Watanabe, M. Fatih Cırıt,
+Mamoru Sobue, Ryohsuke Mitsudome, Satoshi OTA, Yukinari Hisaki,
+Yutaka Kondo, kobayu858</li>
+</ul>
+
+<h2 id="0390-2024-11-25">0.39.0 (2024-11-25)</h2>
+
+<ul>
+  <li>Merge commit '6a1ddbd08bd' into release-0.39.0</li>
+  <li>fix: fix ticket links to point to
+<a href="https://github.com/autowarefoundation/autoware_universe">https://github.com/autowarefoundation/autoware_universe</a>
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9304">#9304</a>)</li>
+  <li>fix: fix ticket links to point to
+<a href="https://github.com/autowarefoundation/autoware_universe">https://github.com/autowarefoundation/autoware_universe</a>
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9304">#9304</a>)</li>
+  <li>chore(package.xml): bump version to 0.38.0
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9266">#9266</a>)
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9284">#9284</a>)
+    <ul>
+      <li>unify package.xml version to 0.37.0</li>
+      <li>remove system_monitor/CHANGELOG.rst</li>
+      <li>add changelog</li>
+    </ul>
+
+    <h2 id="-0380-1">* 0.38.0</h2>
+  </li>
+  <li>fix(bvp): remove expired module safely
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9212">#9212</a>)
+    <ul>
+      <li>fix(bvp): remove expired module safely</li>
+      <li>fix: remove module id set</li>
+      <li>fix: use itr to erase expired module</li>
+    </ul>
+
+    <p>* fix: remove unused function ---------</p>
+  </li>
+  <li>Contributors: Esteve Fernandez, Satoshi OTA, Yutaka Kondo</li>
+</ul>
+
+<h2 id="0380-2024-11-08">0.38.0 (2024-11-08)</h2>
+
+<ul>
+  <li>unify package.xml version to 0.37.0</li>
+  <li>chore(intersection): print RTC status in diagnostic debug message
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9007">#9007</a>)
+debug(intersection): print RTC status in diagnostic message</li>
+  <li>fix(behavior_path_planner, behavior_velocity_planner): fix to
+not read invalid ID
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9103">#9103</a>)
+    <ul>
+      <li>fix(behavior_path_planner, behavior_velocity_planner): fix
+to not read invalid ID</li>
+      <li>style(pre-commit): autofix</li>
+      <li>fix typo</li>
+    </ul>
+
+    <p>* fix(behavior_path_planner, behavior_velocity_planner): fix
+typo and indentation ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>fix(intersection): handle pass judge after red/arrow-signal to
+ignore NPCs after the signal changed to green again
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9119">#9119</a>)</li>
+  <li>fix(intersection): set RTC enable
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9040">#9040</a>)
+set rtc enable</li>
+  <li>fix(interpolation): fix bug of interpolation
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8969">#8969</a>)
+fix bug of interpolation</li>
+  <li>refactor(autoware_interpolation): prefix package and namespace with
+autoware
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8088">#8088</a>)
+Co-authored-by: kosuke55 &lt;&lt;kosuke.tnp@gmail.com&gt;&gt;</li>
+  <li>fix(intersection): fix typo
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8911">#8911</a>)
+    <ul>
+      <li>fix(intersection): fix typo</li>
+      <li>fix(intersection): fix typo</li>
+    </ul>
+
+    <p>* style(pre-commit): autofix ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>fix(bvp): fix rtc state update logic
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8884">#8884</a>)
+    <ul>
+      <li>fix(bvp): fix rtc state update logic</li>
+    </ul>
+
+    <p>* fix(intersection): fix unexpected rtc state initialization
+---------</p>
+  </li>
+  <li>fix(autoware_behavior_velocity_intersection_module): fix
+unusedFunction
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8666">#8666</a>)
+    <ul>
+      <li>fix:unusedFunction</li>
+    </ul>
+
+    <p>* fix:unusedFunction ---------</p>
+  </li>
+  <li>fix(autoware_behavior_velocity_intersection_module): fix
+unreadVariable
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8836">#8836</a>)
+fix:unreadVariable</li>
+  <li>fix(autoware_behavior_velocity_intersection_module): fix
+virtualCallInConstructor
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8835">#8835</a>)
+fix:virtualCallInConstructor</li>
+  <li>fix(behavior_velocity_planner): align the parameters with launcher
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8791">#8791</a>)
+parameters in behavior_velocity_planner aligned</li>
+  <li>fix(intersection): additional fix for 8520
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8561">#8561</a>)</li>
+  <li>feat(intersection): fix topological sort for complicated
+intersection
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8520">#8520</a>)
+    <ul>
+      <li>for enclave occlusion detection lanelet</li>
+      <li>some refactorings and modify doxygen</li>
+    </ul>
+
+    <h2 id="-fix-ci">* fix ci</h2>
+
+    <p>Co-authored-by: Y.Hisaki &lt;&lt;yhisaki31@gmail.com&gt;&gt;</p>
+  </li>
+  <li>fix(behavior_velocity_planner): fix cppcheck warnings of
+virtualCallInConstructor
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8376">#8376</a>)
+Co-authored-by: Ryuta Kambe &lt;&lt;ryuta.kambe@tier4.jp&gt;&gt;</li>
+  <li>feat(intersection): add test map for intersection
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8455">#8455</a>)</li>
+  <li>fix(autoware_smart_mpc_trajectory_follower): fix
+unusedStructMember
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8393">#8393</a>)
+    <ul>
+      <li>fix:unusedStructMember</li>
+      <li>fix:unusedStructMember</li>
+    </ul>
+
+    <p>* fix:clang format ---------</p>
+  </li>
+  <li>fix(autoware_behavior_velocity_intersection_module): fix
+functionConst
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8283">#8283</a>)
+fix:functionConst</li>
+  <li>fix(autoware_behavior_velocity_intersection_module): fix
+funcArgNamesDifferent
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8023">#8023</a>)
+    <ul>
+      <li>fix:funcArgNamesDifferent</li>
+      <li>fix:funcArgNamesDifferent</li>
+      <li>refactor:clang format</li>
+    </ul>
+
+    <p>* fix:funcArgNamesDifferent ---------</p>
+  </li>
+  <li>refactor(probabilistic_occupancy_grid_map,
+occupancy_grid_map_outlier_filter): add autoware_ prefix to
+package name
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8183">#8183</a>)
+    <ul>
+      <li>chore: fix package name probabilistic occupancy grid map</li>
+      <li>fix: solve launch error</li>
+      <li>chore: update occupancy_grid_map_outlier_filter</li>
+      <li>style(pre-commit): autofix</li>
+      <li>refactor: update package name to
+autoware_probabilistic_occupancy_grid_map on a test</li>
+    </ul>
+
+    <p>* refactor: rename folder of occupancy_grid_map_outlier_filter
+---------Co-authored-by: pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;
+Co-authored-by: Taekjin LEE &lt;&lt;taekjin.lee@tier4.jp&gt;&gt;</p>
+  </li>
+  <li>fix(autoware_behavior_velocity_intersection_module): fix
+shadowVariable
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7976">#7976</a>)</li>
+  <li>fix(autoware_behavior_velocity_intersection_module): fix
+shadowFunction
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7835">#7835</a>)
+    <ul>
+      <li>fix(autoware_behavior_velocity_intersection_module): fix
+shadowFunction</li>
+    </ul>
+
+    <p>* style(pre-commit): autofix ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>feat: add [autoware_]{.title-ref} prefix to
+[lanelet2_extension]{.title-ref}
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7640">#7640</a>)</li>
+  <li>refactor(behavior_velocity_intersection): apply clang-tidy check
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7552">#7552</a>)
+intersection</li>
+  <li>refactor(universe_utils/motion_utils)!: add autoware namespace
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7594">#7594</a>)</li>
+  <li>refactor(motion_utils)!: add autoware prefix and include dir
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7539">#7539</a>)
+refactor(motion_utils): add autoware prefix and include dir</li>
+  <li>feat(autoware_universe_utils)!: rename from tier4_autoware_utils
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7538">#7538</a>)
+Co-authored-by: kosuke55 &lt;&lt;kosuke.tnp@gmail.com&gt;&gt;</li>
+  <li>chore(behavior_velocity_planner): move packages
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7526">#7526</a>)</li>
+  <li>Contributors: Esteve Fernandez, Fumiya Watanabe, Go Sakayori, Kosuke
+Takeuchi, Mamoru Sobue, Ryuta Kambe, Satoshi OTA, T-Kimura-MM,
+Takayuki Murooka, Yoshi Ri, Yukinari Hisaki, Yutaka Kondo, Zhe Shen,
+kobayu858, taisa1</li>
+</ul>
+
+<h2 id="0260-2024-04-03">0.26.0 (2024-04-03)</h2>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/autoware_behavior_velocity_intersection_module/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_auto#github">ament_cmake_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_cmake#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_cmake#github">autoware_cmake  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_ros#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_ros#github">ament_cmake_ros  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_lint_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_lint_auto#github">ament_lint_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_lint_common#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_lint_common#github">autoware_lint_common  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_behavior_velocity_planner#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_behavior_velocity_planner#github">autoware_behavior_velocity_planner  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_behavior_velocity_planner_common#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_behavior_velocity_planner_common#github">autoware_behavior_velocity_planner_common  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_behavior_velocity_rtc_interface#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_behavior_velocity_rtc_interface#github">autoware_behavior_velocity_rtc_interface  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_internal_debug_msgs#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_internal_debug_msgs#github">autoware_internal_debug_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_internal_planning_msgs#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_internal_planning_msgs#github">autoware_internal_planning_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_interpolation#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_interpolation#github">autoware_interpolation  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_lanelet2_extension#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_lanelet2_extension#github">autoware_lanelet2_extension  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_motion_utils#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_motion_utils#github">autoware_motion_utils  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_perception_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_perception_msgs#github">autoware_perception_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_planning_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_planning_msgs#github">autoware_planning_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_route_handler#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_route_handler#github">autoware_route_handler  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_rtc_interface#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_rtc_interface#github">autoware_rtc_interface  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_test_utils#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_test_utils#github">autoware_test_utils  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_vehicle_info_utils#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_vehicle_info_utils#github">autoware_vehicle_info_utils  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/geometry_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/geometry_msgs#github">geometry_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/magic_enum#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/magic_enum#github">magic_enum  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/nav_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/nav_msgs#github">nav_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/pluginlib#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/pluginlib#github">pluginlib  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclcpp#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclcpp#github">rclcpp  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2_geometry_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2_geometry_msgs#github">tf2_geometry_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tier4_planning_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tier4_planning_msgs#github">tier4_planning_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/visualization_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/visualization_msgs#github">visualization_msgs  </a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th>Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                      <tr>
+                        <td><a href="/d/fmt">fmt</a></td>
+                      </tr>
+                    
+                  
+                    
+                      <tr>
+                        <td><a href="/d/libopencv-dev">libopencv-dev</a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No known dependants.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No launch files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No message files found.</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No plugins found.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>autoware_behavior_velocity_intersection_module</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/autoware_behavior_velocity_intersection_module+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/autowarefoundation/autoware_universe.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/autoware_behavior_velocity_intersection_module"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/autowarefoundation/autoware_universe/tree/main/planning/behavior_velocity_planner/autoware_behavior_velocity_intersection_module"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/autoware_behavior_velocity_intersection_module?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/autoware_behavior_velocity_intersection_module?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=autoware_behavior_velocity_intersection_module&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "autoware_behavior_velocity_intersection_module"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

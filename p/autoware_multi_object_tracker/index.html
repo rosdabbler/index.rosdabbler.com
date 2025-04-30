@@ -1,0 +1,3944 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: autoware_multi_object_tracker</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/autoware_multi_object_tracker/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">autoware_multi_object_tracker</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/autoware_multi_object_tracker">autoware_multi_object_tracker</a> <small>package from <a style="text-decoration:none" href="/r/autoware_universe/github-autowarefoundation-autoware_universe">autoware_universe</a> repo</small>
+        </h3>
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_adapi_specs">
+
+autoware_adapi_specs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_agnocast_wrapper">
+
+autoware_agnocast_wrapper
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_auto_common">
+
+autoware_auto_common
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_component_interface_specs_universe">
+
+autoware_component_interface_specs_universe
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_component_interface_tools">
+
+autoware_component_interface_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_component_interface_utils">
+
+autoware_component_interface_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_cuda_dependency_meta">
+
+autoware_cuda_dependency_meta
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_fake_test_node">
+
+autoware_fake_test_node
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_glog_component">
+
+autoware_glog_component
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_goal_distance_calculator">
+
+autoware_goal_distance_calculator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_grid_map_utils">
+
+autoware_grid_map_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_path_distance_calculator">
+
+autoware_path_distance_calculator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_polar_grid">
+
+autoware_polar_grid
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_time_utils">
+
+autoware_time_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_recognition_marker_publisher">
+
+autoware_traffic_light_recognition_marker_publisher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_utils">
+
+autoware_traffic_light_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_universe_utils">
+
+autoware_universe_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_api_utils">
+
+tier4_api_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_autonomous_emergency_braking">
+
+autoware_autonomous_emergency_braking
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_collision_detector">
+
+autoware_collision_detector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_control_performance_analysis">
+
+autoware_control_performance_analysis
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_control_validator">
+
+autoware_control_validator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_external_cmd_selector">
+
+autoware_external_cmd_selector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_joy_controller">
+
+autoware_joy_controller
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lane_departure_checker">
+
+autoware_lane_departure_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_mpc_lateral_controller">
+
+autoware_mpc_lateral_controller
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_obstacle_collision_checker">
+
+autoware_obstacle_collision_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_operation_mode_transition_manager">
+
+autoware_operation_mode_transition_manager
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pid_longitudinal_controller">
+
+autoware_pid_longitudinal_controller
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_predicted_path_checker">
+
+autoware_predicted_path_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pure_pursuit">
+
+autoware_pure_pursuit
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_shift_decider">
+
+autoware_shift_decider
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_smart_mpc_trajectory_follower">
+
+autoware_smart_mpc_trajectory_follower
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_trajectory_follower_base">
+
+autoware_trajectory_follower_base
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_trajectory_follower_node">
+
+autoware_trajectory_follower_node
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_vehicle_cmd_gate">
+
+autoware_vehicle_cmd_gate
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_control_evaluator">
+
+autoware_control_evaluator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_kinematic_evaluator">
+
+autoware_kinematic_evaluator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_localization_evaluator">
+
+autoware_localization_evaluator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_perception_online_evaluator">
+
+autoware_perception_online_evaluator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_planning_evaluator">
+
+autoware_planning_evaluator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_scenario_simulator_v2_adapter">
+
+autoware_scenario_simulator_v2_adapter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_autoware_api_launch">
+
+tier4_autoware_api_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_control_launch">
+
+tier4_control_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_localization_launch">
+
+tier4_localization_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_map_launch">
+
+tier4_map_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_perception_launch">
+
+tier4_perception_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_planning_launch">
+
+tier4_planning_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_sensing_launch">
+
+tier4_sensing_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_simulator_launch">
+
+tier4_simulator_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_system_launch">
+
+tier4_system_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_vehicle_launch">
+
+tier4_vehicle_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_geo_pose_projector">
+
+autoware_geo_pose_projector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_gyro_odometer">
+
+autoware_gyro_odometer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_ar_tag_based_localizer">
+
+autoware_ar_tag_based_localizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_landmark_manager">
+
+autoware_landmark_manager
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lidar_marker_localizer">
+
+autoware_lidar_marker_localizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_localization_error_monitor">
+
+autoware_localization_error_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_ndt_scan_matcher">
+
+autoware_ndt_scan_matcher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pose2twist">
+
+autoware_pose2twist
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pose_covariance_modifier">
+
+autoware_pose_covariance_modifier
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pose_estimator_arbiter">
+
+autoware_pose_estimator_arbiter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pose_initializer">
+
+autoware_pose_initializer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pose_instability_detector">
+
+autoware_pose_instability_detector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/yabloc_common">
+
+yabloc_common
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/yabloc_image_processing">
+
+yabloc_image_processing
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/yabloc_monitor">
+
+yabloc_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/yabloc_particle_filter">
+
+yabloc_particle_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/yabloc_pose_initializer">
+
+yabloc_pose_initializer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lanelet2_map_visualizer">
+
+autoware_lanelet2_map_visualizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_map_height_fitter">
+
+autoware_map_height_fitter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_map_tf_generator">
+
+autoware_map_tf_generator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_bevfusion">
+
+autoware_bevfusion
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_bytetrack">
+
+autoware_bytetrack
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_cluster_merger">
+
+autoware_cluster_merger
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_compare_map_segmentation">
+
+autoware_compare_map_segmentation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_crosswalk_traffic_light_estimator">
+
+autoware_crosswalk_traffic_light_estimator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_detected_object_feature_remover">
+
+autoware_detected_object_feature_remover
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_detected_object_validation">
+
+autoware_detected_object_validation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_detection_by_tracker">
+
+autoware_detection_by_tracker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_elevation_map_loader">
+
+autoware_elevation_map_loader
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_euclidean_cluster">
+
+autoware_euclidean_cluster
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_ground_segmentation">
+
+autoware_ground_segmentation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_image_projection_based_fusion">
+
+autoware_image_projection_based_fusion
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lidar_apollo_instance_segmentation">
+
+autoware_lidar_apollo_instance_segmentation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lidar_centerpoint">
+
+autoware_lidar_centerpoint
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lidar_transfusion">
+
+autoware_lidar_transfusion
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_map_based_prediction">
+
+autoware_map_based_prediction
+</a>
+            
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+autoware_multi_object_tracker
+</span>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_object_merger">
+
+autoware_object_merger
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_object_range_splitter">
+
+autoware_object_range_splitter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_object_velocity_splitter">
+
+autoware_object_velocity_splitter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_occupancy_grid_map_outlier_filter">
+
+autoware_occupancy_grid_map_outlier_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_probabilistic_occupancy_grid_map">
+
+autoware_probabilistic_occupancy_grid_map
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_crossing_objects_noise_filter">
+
+autoware_radar_crossing_objects_noise_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_fusion_to_detected_object">
+
+autoware_radar_fusion_to_detected_object
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_object_clustering">
+
+autoware_radar_object_clustering
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_object_tracker">
+
+autoware_radar_object_tracker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_tracks_msgs_converter">
+
+autoware_radar_tracks_msgs_converter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_raindrop_cluster_filter">
+
+autoware_raindrop_cluster_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_shape_estimation">
+
+autoware_shape_estimation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_simple_object_merger">
+
+autoware_simple_object_merger
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_tensorrt_classifier">
+
+autoware_tensorrt_classifier
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_tensorrt_common">
+
+autoware_tensorrt_common
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_tensorrt_plugins">
+
+autoware_tensorrt_plugins
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_tensorrt_yolox">
+
+autoware_tensorrt_yolox
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_tracking_object_merger">
+
+autoware_tracking_object_merger
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_arbiter">
+
+autoware_traffic_light_arbiter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_category_merger">
+
+autoware_traffic_light_category_merger
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_classifier">
+
+autoware_traffic_light_classifier
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_fine_detector">
+
+autoware_traffic_light_fine_detector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_map_based_detector">
+
+autoware_traffic_light_map_based_detector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_multi_camera_fusion">
+
+autoware_traffic_light_multi_camera_fusion
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_occlusion_predictor">
+
+autoware_traffic_light_occlusion_predictor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_selector">
+
+autoware_traffic_light_selector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_visualization">
+
+autoware_traffic_light_visualization
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/perception_utils">
+
+perception_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_costmap_generator">
+
+autoware_costmap_generator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_external_velocity_limit_selector">
+
+autoware_external_velocity_limit_selector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_freespace_planner">
+
+autoware_freespace_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_freespace_planning_algorithms">
+
+autoware_freespace_planning_algorithms
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_mission_planner_universe">
+
+autoware_mission_planner_universe
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_obstacle_cruise_planner">
+
+autoware_obstacle_cruise_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_obstacle_stop_planner">
+
+autoware_obstacle_stop_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_path_optimizer">
+
+autoware_path_optimizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_path_smoother">
+
+autoware_path_smoother
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_planning_validator">
+
+autoware_planning_validator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_remaining_distance_time_calculator">
+
+autoware_remaining_distance_time_calculator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_rtc_interface">
+
+autoware_rtc_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_scenario_selector">
+
+autoware_scenario_selector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_surround_obstacle_checker">
+
+autoware_surround_obstacle_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_avoidance_by_lane_change_module">
+
+autoware_behavior_path_avoidance_by_lane_change_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_dynamic_obstacle_avoidance_module">
+
+autoware_behavior_path_dynamic_obstacle_avoidance_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_external_request_lane_change_module">
+
+autoware_behavior_path_external_request_lane_change_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_goal_planner_module">
+
+autoware_behavior_path_goal_planner_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_lane_change_module">
+
+autoware_behavior_path_lane_change_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_planner">
+
+autoware_behavior_path_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_planner_common">
+
+autoware_behavior_path_planner_common
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_sampling_planner_module">
+
+autoware_behavior_path_sampling_planner_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_side_shift_module">
+
+autoware_behavior_path_side_shift_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_start_planner_module">
+
+autoware_behavior_path_start_planner_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_static_obstacle_avoidance_module">
+
+autoware_behavior_path_static_obstacle_avoidance_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_blind_spot_module">
+
+autoware_behavior_velocity_blind_spot_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_crosswalk_module">
+
+autoware_behavior_velocity_crosswalk_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_detection_area_module">
+
+autoware_behavior_velocity_detection_area_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_intersection_module">
+
+autoware_behavior_velocity_intersection_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_no_drivable_lane_module">
+
+autoware_behavior_velocity_no_drivable_lane_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_no_stopping_area_module">
+
+autoware_behavior_velocity_no_stopping_area_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_occlusion_spot_module">
+
+autoware_behavior_velocity_occlusion_spot_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_rtc_interface">
+
+autoware_behavior_velocity_rtc_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_run_out_module">
+
+autoware_behavior_velocity_run_out_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_speed_bump_module">
+
+autoware_behavior_velocity_speed_bump_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_template_module">
+
+autoware_behavior_velocity_template_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_traffic_light_module">
+
+autoware_behavior_velocity_traffic_light_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_virtual_traffic_light_module">
+
+autoware_behavior_velocity_virtual_traffic_light_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_walkway_module">
+
+autoware_behavior_velocity_walkway_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_dynamic_obstacle_stop_module">
+
+autoware_motion_velocity_dynamic_obstacle_stop_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_obstacle_cruise_module">
+
+autoware_motion_velocity_obstacle_cruise_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_obstacle_slow_down_module">
+
+autoware_motion_velocity_obstacle_slow_down_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_obstacle_velocity_limiter_module">
+
+autoware_motion_velocity_obstacle_velocity_limiter_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_out_of_lane_module">
+
+autoware_motion_velocity_out_of_lane_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_run_out_module">
+
+autoware_motion_velocity_run_out_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_bezier_sampler">
+
+autoware_bezier_sampler
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_frenet_planner">
+
+autoware_frenet_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_path_sampler">
+
+autoware_path_sampler
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_sampler_common">
+
+autoware_sampler_common
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_cuda_pointcloud_preprocessor">
+
+autoware_cuda_pointcloud_preprocessor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_cuda_utils">
+
+autoware_cuda_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_image_diagnostics">
+
+autoware_image_diagnostics
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_image_transport_decompressor">
+
+autoware_image_transport_decompressor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_imu_corrector">
+
+autoware_imu_corrector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pcl_extensions">
+
+autoware_pcl_extensions
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pointcloud_preprocessor">
+
+autoware_pointcloud_preprocessor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_objects_adapter">
+
+autoware_radar_objects_adapter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_scan_to_pointcloud2">
+
+autoware_radar_scan_to_pointcloud2
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_static_pointcloud_filter">
+
+autoware_radar_static_pointcloud_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_threshold_filter">
+
+autoware_radar_threshold_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_tracks_noise_filter">
+
+autoware_radar_tracks_noise_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_livox_tag_filter">
+
+autoware_livox_tag_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_carla_interface">
+
+autoware_carla_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_dummy_perception_publisher">
+
+autoware_dummy_perception_publisher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_fault_injection">
+
+autoware_fault_injection
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_learning_based_vehicle_model">
+
+autoware_learning_based_vehicle_model
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_simple_planning_simulator">
+
+autoware_simple_planning_simulator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_vehicle_door_simulator">
+
+autoware_vehicle_door_simulator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_dummy_object_rviz_plugin">
+
+tier4_dummy_object_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_bluetooth_monitor">
+
+autoware_bluetooth_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_component_monitor">
+
+autoware_component_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_component_state_monitor">
+
+autoware_component_state_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_default_adapi">
+
+autoware_default_adapi
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_adapi_adaptors">
+
+autoware_adapi_adaptors
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_adapi_visualizers">
+
+autoware_adapi_visualizers
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_automatic_pose_initializer">
+
+autoware_automatic_pose_initializer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_diagnostic_graph_aggregator">
+
+autoware_diagnostic_graph_aggregator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_diagnostic_graph_utils">
+
+autoware_diagnostic_graph_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_dummy_diag_publisher">
+
+autoware_dummy_diag_publisher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_dummy_infrastructure">
+
+autoware_dummy_infrastructure
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_duplicated_node_checker">
+
+autoware_duplicated_node_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_hazard_status_converter">
+
+autoware_hazard_status_converter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_mrm_comfortable_stop_operator">
+
+autoware_mrm_comfortable_stop_operator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_mrm_emergency_stop_operator">
+
+autoware_mrm_emergency_stop_operator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_mrm_handler">
+
+autoware_mrm_handler
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_processing_time_checker">
+
+autoware_processing_time_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_system_diagnostic_monitor">
+
+autoware_system_diagnostic_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_system_monitor">
+
+autoware_system_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_topic_relay_controller">
+
+autoware_topic_relay_controller
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_topic_state_monitor">
+
+autoware_topic_state_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_velodyne_monitor">
+
+autoware_velodyne_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/reaction_analyzer">
+
+reaction_analyzer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_accel_brake_map_calibrator">
+
+autoware_accel_brake_map_calibrator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_external_cmd_converter">
+
+autoware_external_cmd_converter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_raw_vehicle_cmd_converter">
+
+autoware_raw_vehicle_cmd_converter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_steer_offset_estimator">
+
+autoware_steer_offset_estimator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_bag_time_manager_rviz_plugin">
+
+autoware_bag_time_manager_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_mission_details_overlay_rviz_plugin">
+
+autoware_mission_details_overlay_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_overlay_rviz_plugin">
+
+autoware_overlay_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_string_stamped_rviz_plugin">
+
+autoware_string_stamped_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_perception_rviz_plugin">
+
+autoware_perception_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_adapi_rviz_plugin">
+
+tier4_adapi_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_camera_view_rviz_plugin">
+
+tier4_camera_view_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_datetime_rviz_plugin">
+
+tier4_datetime_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_localization_rviz_plugin">
+
+tier4_localization_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_planning_factor_rviz_plugin">
+
+tier4_planning_factor_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_planning_rviz_plugin">
+
+tier4_planning_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_state_rviz_plugin">
+
+tier4_state_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_system_rviz_plugin">
+
+tier4_system_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_traffic_light_rviz_plugin">
+
+tier4_traffic_light_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_vehicle_rviz_plugin">
+
+tier4_vehicle_rviz_plugin
+</a>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/autoware_multi_object_tracker"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/autowarefoundation/autoware_universe/tree/main/perception/autoware_multi_object_tracker"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-primary">1</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">19</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>0.44.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>Apache License 2.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-default">
+                  
+                    AMENT_CMAKE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/autowarefoundation/autoware_universe.git">https://github.com/autowarefoundation/autoware_universe.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-05-02
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <span class="label label-default">planner</span> <span class="label label-default">ros</span> <span class="label label-default">calibration</span> <span class="label label-default">self-driving-car</span> <span class="label label-default">autonomous-driving</span> <span class="label label-default">autonomous-vehicles</span> <span class="label label-default">ros2</span> <span class="label label-default">3d-map</span> <span class="label label-default">autoware</span> 
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/autoware_universe/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/autoware_universe/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/autoware_universe/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            The ROS 2 autoware_multi_object_tracker package
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional links.</em>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Yukihiro Saito</li>
+                
+                  <li>Yoshi Ri</li>
+                
+                  <li>Taekjin Lee</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional authors.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/autowarefoundation/autoware_universe/tree/main/perception/autoware_multi_object_tracker/README.md" title="Open in git repository">perception/autoware_multi_object_tracker/README.md</a></div>
+              <div class="panel-body">
+                    <div class="rendered-markdown">
+<h1 id="multi_object_tracker">multi_object_tracker</h1>
+
+<h2 id="purpose">Purpose</h2>
+
+<p>The results of the detection are processed by a time series. The main purpose is to give ID and estimate velocity.</p>
+
+<h2 id="inner-workings--algorithms">Inner-workings / Algorithms</h2>
+
+<p>This multi object tracker consists of data association and EKF.</p>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/perception/autoware_multi_object_tracker/image/multi_object_tracker_overview.svg" alt="multi_object_tracker_overview"></p>
+
+<h3 id="data-association">Data association</h3>
+
+<p>The data association performs maximum score matching, called min cost max flow problem.
+In this package, mussp[1] is used as solver.
+In addition, when associating observations to tracers, data association have gates such as the area of the object from the BEV, Mahalanobis distance, and maximum distance, depending on the class label.</p>
+
+<h3 id="ekf-tracker">EKF Tracker</h3>
+
+<p>Models for pedestrians, bicycles (motorcycles), cars and unknown are available.
+The pedestrian or bicycle tracker is running at the same time as the respective EKF model in order to enable the transition between pedestrian and bicycle tracking.
+For big vehicles such as trucks and buses, we have separate models for passenger cars and large vehicles because they are difficult to distinguish from passenger cars and are not stable. Therefore, separate models are prepared for passenger cars and big vehicles, and these models are run at the same time as the respective EKF models to ensure stability.</p>
+
+<!-- Write how this package works. Flowcharts and figures are great. Add sub-sections as you like.
+
+Example:
+  ### Flowcharts
+
+  ...(PlantUML or something)
+
+  ### State Transitions
+
+  ...(PlantUML or something)
+
+  ### How to filter target obstacles
+
+  ...
+
+  ### How to optimize trajectory
+
+  ...
+-->
+
+<h2 id="inputs--outputs">Inputs / Outputs</h2>
+
+<h3 id="input">Input</h3>
+
+<p>Multiple inputs are pre-defined in the input channel parameters (described below) and the inputs can be configured</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">selected_input_channels</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std::vector&lt;std::string&gt;</code></td>
+      <td>array of channel names</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>default value: <code class="language-plaintext highlighter-rouge">selected_input_channels:="['detected_objects']"</code>, merged DetectedObject message</li>
+  <li>multi-input example: <code class="language-plaintext highlighter-rouge">selected_input_channels:="['lidar_centerpoint','camera_lidar_fusion','detection_by_tracker','radar_far']"</code>
+</li>
+</ul>
+
+<h3 id="output">Output</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/output</code></td>
+      <td><code class="language-plaintext highlighter-rouge">autoware_perception_msgs::msg::TrackedObjects</code></td>
+      <td>tracked objects</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="parameters">Parameters</h2>
+
+<h3 id="input-channel-parameters">Input Channel parameters</h3>
+
+<p>{{ json_to_markdown(“perception/autoware_multi_object_tracker/schema/input_channels.schema.json”) }}</p>
+
+<h3 id="core-parameters">Core Parameters</h3>
+
+<ul>
+  <li>Node</li>
+</ul>
+
+<p>{{ json_to_markdown(“perception/autoware_multi_object_tracker/schema/multi_object_tracker_node.schema.json”) }}</p>
+
+<ul>
+  <li>Association</li>
+</ul>
+
+<p>{{ json_to_markdown(“perception/autoware_multi_object_tracker/schema/data_association_matrix.schema.json”) }}</p>
+
+<h4 id="simulation-parameters">Simulation parameters</h4>
+
+<p>{{ json_to_markdown(“perception/autoware_multi_object_tracker/schema/simulation_tracker.schema.json”) }}</p>
+
+<h2 id="assumptions--known-limits">Assumptions / Known limits</h2>
+
+<p>See the <a href="https://github.com/autowarefoundation/autoware_universe/tree/main/perception/autoware_multi_object_tracker/models.md">model explanations</a>.</p>
+
+<h2 id="optional-error-detection-and-handling">(Optional) Error detection and handling</h2>
+
+<!-- Write how to detect errors and how to recover from them.
+
+Example:
+  This package can handle up to 20 obstacles. If more obstacles found, this node will give up and raise diagnostic errors.
+-->
+
+<h2 id="optional-performance-characterization">(Optional) Performance characterization</h2>
+
+<h3 id="evaluation-of-mussp">Evaluation of muSSP</h3>
+
+<p>According to our evaluation, muSSP is faster than normal <a href="https://github.com/autowarefoundation/autoware_universe/tree/main/perception/autoware_multi_object_tracker/src/data_association/successive_shortest_path">SSP</a> when the matrix size is more than 100.</p>
+
+<p>Execution time for varying matrix size at 95% sparsity. In real data, the sparsity was often around 95%.
+<img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/perception/autoware_multi_object_tracker/image/mussp_evaluation1.png" alt="mussp_evaluation1"></p>
+
+<p>Execution time for varying the sparsity with matrix size 100.
+<img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/perception/autoware_multi_object_tracker/image/mussp_evaluation2.png" alt="mussp_evaluation2"></p>
+
+<h2 id="optional-referencesexternal-links">(Optional) References/External links</h2>
+
+<p>This package makes use of external code.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>License</th>
+      <th>Original Repository</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/autowarefoundation/autoware_universe/tree/main/perception/autoware_multi_object_tracker/src/data_association/mu_successive_shortest_path">muSSP</a></td>
+      <td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache-2.0</a></td>
+      <td><a href="https://github.com/yu-lab-vt/muSSP">https://github.com/yu-lab-vt/muSSP</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>[1] C. Wang, Y. Wang, Y. Wang, C.-t. Wu, and G. Yu, “muSSP: Efficient
+Min-cost Flow Algorithm for Multi-object Tracking,” NeurIPS, 2019</p>
+
+<h2 id="optional-future-extensions--unimplemented-parts">(Optional) Future extensions / Unimplemented parts</h2>
+
+<!-- Write future extensions of this package.
+
+Example:
+  Currently, this package can't handle the chattering obstacles well. We plan to add some probabilistic filters in the perception layer to improve it.
+  Also, there are some parameters that should be global(e.g. vehicle size, max steering, etc.). These will be refactored and defined as global parameters so that we can share the same parameters between different nodes.
+-->
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="changelog-for-package-autoware_multi_object_tracker">Changelog for package autoware_multi_object_tracker</h1>
+
+<h2 id="0440-2025-04-18">0.44.0 (2025-04-18)</h2>
+
+<ul>
+  <li>Merge remote-tracking branch 'origin/main' into humble</li>
+  <li>feat(multi object tracker): tracker overlap threshold
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10456">#10456</a>)
+    <ul>
+      <li>preparation</li>
+      <li>feat(autoware_multi_object_tracker): enhance matrix
+initialization and add debug logging for tracker removal</li>
+      <li>refactor(autoware_multi_object_tracker): replace vector
+matrices with Eigen matrices in AssociatorConfig</li>
+      <li>feat(autoware_multi_object_tracker): integrate max distance
+matrix for tracker removal logic</li>
+      <li>refactor(autoware_multi_object_tracker): remove debug logging
+for tracker removal process</li>
+      <li>style(pre-commit): autofix</li>
+      <li>refactor(autoware_multi_object_tracker): remove unused string
+include in association.cpp</li>
+      <li>refactor(autoware_multi_object_tracker): remove commented
+debug logging in association.cpp</li>
+      <li>refactor(autoware_multi_object_tracker): remove
+distance_threshold parameter and update related configurations</li>
+    </ul>
+
+    <p>* refactor(multi_object_tracker_node): change Eigen::Map to use
+const for matrix initialization ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>fix(multi_object_tracker): add required headers
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10461">#10461</a>)</li>
+  <li>fix(autoware_multi_object_tracker): fix bicycle renovation vector
+dimension
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10449">#10449</a>)
+fix a bug in updateStatePoseVel</li>
+  <li>feat(autoware_multi_object_tracker): implement time keeper
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10431">#10431</a>)
+    <ul>
+      <li>feat(multi_object_tracker): integrate ScopedTimeTrack for
+detailed processing time tracking</li>
+    </ul>
+
+    <p>* feat(multi_object_tracker): add parameter for detailed
+processing time publishing ---------</p>
+  </li>
+  <li>feat(autoware_multi_object_tracker): vehicle's ego frame as a
+parameter
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10428">#10428</a>)</li>
+  <li>feat(multi_object_tracker): add diagnostics warning when
+extrapolation time exceeds limit with latency guarantee enabled
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10301">#10301</a>)
+    <ul>
+      <li>feat(multi_object_tracker): add diagnostics warning when
+extrapolation time exceeds limit with latency guarantee enabled</li>
+      <li>feat(multi_object_tracker): handled the case
+last_updated_time_ initialized as 0</li>
+    </ul>
+
+    <p>* feat(multi_object_tracker): refactored to give better structure
+diagnostic force updated when published</p>
+    <ul>
+      <li>style(pre-commit): autofix</li>
+      <li>feat(multi_object_tracker): add published tracker count check</li>
+      <li>style(pre-commit): autofix</li>
+      <li>feat(multi_object_tracker): fix checkAllTiming complexity</li>
+      <li>style(pre-commit): autofix</li>
+      <li>feat(multi_object_tracker): check consecutive warning duration</li>
+      <li>style(pre-commit): autofix</li>
+      <li>feat(multi_object_tracker): diag messages updated</li>
+      <li>feat(multi_object_tracker): diag messages updated</li>
+      <li>style(pre-commit): autofix</li>
+      <li>style(pre-commit): autofix</li>
+    </ul>
+
+    <p>* feat(multi_object_tracker): messages fix
+---------Co-authored-by: lei.gu &lt;&lt;lei.gu@tier4.jp&gt;&gt;
+Co-authored-by: pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>feat(autoware_multi_object_tracker): update overlapped tracker
+removing process in multi obj tracker
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10347">#10347</a>)
+Update overlapped tracker removing process Co-authored-by: Taekjin
+LEE &lt;&lt;taekjin.lee@tier4.jp&gt;&gt;</li>
+  <li>feat(autoware_multi_object_tracker): selective update per channel
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10277">#10277</a>)
+    <ul>
+      <li>refactor(bicycle_motion_model): implement exponential decay
+for slip angle in state prediction</li>
+    </ul>
+
+    <p>* Revert "refactor(multi_object_tracker): simplify input channel
+configuration by removing trust flags and consolidating parameters"
+This reverts commit c5155ef2e978b411955ace35f412bbf76c96f354.</p>
+    <ul>
+      <li>refactor(multi_object_tracker): update measure function
+signatures to include InputChannel parameter</li>
+      <li>refactor(multi_object_tracker): add updateStatePoseVel method
+to BicycleMotionModel and update measurement logic in
+VehicleTracker</li>
+      <li>refactor(multi_object_tracker): update measureWithPose method
+to include InputChannel parameter and adjust related logic</li>
+      <li>refactor(multi_object_tracker): remove BicycleTracker and
+update references to use VehicleTracker</li>
+      <li>refactor(bicycle_tracker): add tracking_offset to adjust
+object position based on motion model</li>
+      <li>refactor(multi_object_tracker): remove BicycleTracker and
+replace with VehicleTracker in relevant classes</li>
+      <li>refactor(input_channels): disable trust flags for extension and
+orientation in radar configurations</li>
+      <li>refactor(input_channels): restructure flags for input channel
+properties</li>
+    </ul>
+
+    <p>* refactor(input_channels): remove 'flags' from required
+properties in schema ---------</p>
+  </li>
+  <li>Contributors: Amadeusz Szymko, Ryohsuke Mitsudome, TadaKazuto,
+Taekjin LEE, Takagi, Isamu, lei.gu</li>
+</ul>
+
+<h2 id="0430-2025-03-21">0.43.0 (2025-03-21)</h2>
+
+<ul>
+  <li>Merge remote-tracking branch 'origin/main' into
+chore/bump-version-0.43</li>
+  <li>chore: rename from [autoware.universe]{.title-ref} to
+[autoware_universe]{.title-ref}
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10306">#10306</a>)</li>
+  <li>fix(autoware_multi_object_tracker): unknown object orientation
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10286">#10286</a>)
+    <ul>
+      <li>fix(unknown_tracker): update object pose orientation and
+streamline uncertainty modeling in input manager</li>
+    </ul>
+
+    <p>* fix(object_model): correct bounding box calculation by
+initializing limits and including min_z ---------</p>
+  </li>
+  <li>refactor(multi_object_tracker): internal message driven process
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10203">#10203</a>)
+* refactor(multi_object_tracker): streamline input channel
+configuration handling feat(multi_object_tracker): introduce
+InputChannel struct for input channel configuration
+refactor(multi_object_tracker): improve marker handling and
+initialization in TrackerObjectDebugger
+feat(multi_object_tracker): enhance InputChannel with trust flags
+for object properties refactor(multi_object_tracker): remove
+unused channel_size parameter from tracker constructors
+feat(multi_object_tracker): update InputChannel flags to trust
+object extension and classification fix(multi_object_tracker):
+replace channel.index with channel_index for consistency
+feat(multi_object_tracker): update TrackerObjectDebugger and
+TrackerProcessor to accept channels_config parameter
+refactor(multi_object_tracker): remove redundant existence
+probability initialization from tracker constructors
+feat(multi_object_tracker): integrate data association into
+TrackerProcessor and add associate method
+feat(multi_object_tracker): enhance updateWithMeasurement to
+include channel_info for improved classification handling
+refactor(multi_object_tracker): replace object_id with uuid in
+DynamicObject and related classes fix(multi_object_tracker):
+update UUID handling in Tracker to use uuid_msg for consistency
+refactor(multi_object_tracker): simplify pose and covariance
+handling in tracker classes refactor(multi_object_tracker):
+replace pose_with_covariance with separate pose and covariance
+attributes in DynamicObject refactor: remove z state from tracker.
+it will uses object state refactor(multi_object_tracker):
+streamline object handling in trackers and remove unnecessary shape
+processing refactor(multi_object_tracker): remove z position
+handling from trackers and update object kinematics structure
+refactor(multi_object_tracker): remove BoundingBox structure from
+trackers and implement object extension limits
+refactor(multi_object_tracker): remove unnecessary blank lines in
+tracker getTrackedObject methods refactor(multi_object_tracker):
+simplify input channel configuration by removing trust flags and
+consolidating parameters
+    <ul>
+      <li>refactor(multi_object_tracker): use const reference in loop
+and simplify tracker update logic</li>
+      <li>refactor(multi_object_tracker): update shape handling and
+streamline object tracking logic</li>
+      <li>refactor(multi_object_tracker): update shape handling to use
+geometry_msgs::msg::Point for anchor vectors</li>
+      <li>style(pre-commit): autofix</li>
+    </ul>
+
+    <p>* refactor(multi_object_tracker): modify
+getNearestCornerOrSurface function signature and update related
+logic refactor(multi_object_tracker): remove self_transform
+parameter from measure and update methods
+refactor(multi_object_tracker): update calcAnchorPointOffset
+function signature and streamline object handling
+refactor(multi_object_tracker): set shape type to BOUNDING_BOX
+for object trackers ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>Contributors: Hayato Mizushima, Taekjin LEE, Yutaka Kondo</li>
+</ul>
+
+<h2 id="0420-2025-03-03">0.42.0 (2025-03-03)</h2>
+
+<ul>
+  <li>Merge remote-tracking branch 'origin/main' into
+tmp/bot/bump_version_base</li>
+  <li>feat(autoware_utils): replace autoware_universe_utils with
+autoware_utils
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10191">#10191</a>)</li>
+  <li>Contributors: Fumiya Watanabe, 心刚</li>
+</ul>
+
+<h2 id="0412-2025-02-19">0.41.2 (2025-02-19)</h2>
+
+<ul>
+  <li>chore: bump version to 0.41.1
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10088">#10088</a>)</li>
+  <li>Contributors: Ryohsuke Mitsudome</li>
+</ul>
+
+<h2 id="0411-2025-02-10">0.41.1 (2025-02-10)</h2>
+
+<h2 id="0410-2025-01-29">0.41.0 (2025-01-29)</h2>
+
+<ul>
+  <li>Merge remote-tracking branch 'origin/main' into
+tmp/bot/bump_version_base</li>
+  <li>feat(multi_object_tracker): integrate odometry and transform
+processes
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9912">#9912</a>)
+    <ul>
+      <li>feat: Add odometry processor to multi-object tracker</li>
+      <li>refactor: Refactor Odometry class for improved code organization
+and readability</li>
+      <li>feat: Refactor Odometry class for improved code organization and
+readability</li>
+    </ul>
+
+    <p>* refactor: Transform objects to world coordinate in Odometry class
+refactor: Transform objects to world coordinate in Odometry class
+refactor: Update Odometry class to get transform from tf with source
+frame ID feat: Update Odometry class to get transform from tf with
+source frame ID fix: move necessare tr2 header
+* Revert "refactor: Transform objects to world coordinate in
+Odometry class" This reverts commit
+efca28a40105f80deb09d57b55cb6f9d83ffda2c.</p>
+    <ul>
+      <li>refactor: Remove unnecessary tf2 headers from tracker models</li>
+      <li>fix: move transform obtainer to odometry class</li>
+      <li>refactor: Update Odometry class to get transform from tf with
+source frame ID</li>
+      <li>refactor: Transform objects to world coordinate in Odometry
+class</li>
+      <li>refactor: remove transformObjects from shapes</li>
+      <li>refactor: Update Odometry class to use 'updateFromTf' instead
+of 'setOdometryFromTf'</li>
+      <li>refactor: Update Odometry class to use 'updateFromTf' instead
+of 'setOdometryFromTf'</li>
+      <li>refactor: Update InputManager to include Odometry in constructor</li>
+      <li>refactor: Move odometry.cpp to lib folder</li>
+      <li>move object transform to input stream</li>
+      <li>refactor: Add enable_odometry_uncertainty parameter to
+Odometry constructor</li>
+      <li>refactor: Update Odometry class to return optional Odometry from
+getOdometryFromTf</li>
+      <li>refactor: Update Odometry class to use tf_cache_ for storing
+and retrieving transforms</li>
+      <li>refactor: Update Odometry class to use tf_cache_ for storing
+and retrieving transforms</li>
+      <li>refactor: bring odometry covariance modeler into odometry class</li>
+      <li>refactor: Remove redundant code for updating tf cache in
+Odometry::updateTfCache</li>
+    </ul>
+
+    <p>* refactor: Update runProcess parameter name to detected_objects
+---------</p>
+  </li>
+  <li>feat: tier4_debug_msgs to autoware_internal_debug_msgs in files
+perc…
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9879">#9879</a>)
+feat: tier4_debug_msgs to autoware_internal_debug_msgs in files
+perception/autoware_multi_object_tracker</li>
+  <li>chore(autoware_multi_object_tracker): fix autoware univserse
+documentation page
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9772">#9772</a>)
+    <ul>
+      <li>feat: Add descriptions for confidence thresholds in
+multi_object_tracker_node schema</li>
+    </ul>
+
+    <p>* feat: Update multi_object_tracker_node schema with confidence
+threshold descriptions ---------</p>
+  </li>
+  <li>refactor(autoware_multi_object_tracker): define a new internal
+object class
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9706">#9706</a>)
+    <ul>
+      <li>feat: Add dynamic_object.hpp to object_model directory</li>
+      <li>chore: Update autoware_perception_msgs include statements in
+association.hpp and dynamic_object.hpp</li>
+      <li>fix: replace object message type to the DynamicObject type</li>
+      <li>chore: Update autoware_perception_msgs include statements in
+association.hpp and dynamic_object.hpp</li>
+      <li>chore: add channel index to the DynamicObjects</li>
+    </ul>
+
+    <p>* Revert "chore: add channel index to the DynamicObjects" This
+reverts commit c7e73f08a8d17b5b085dd330dbf187aabbec6879.</p>
+    <ul>
+      <li>fix: replace trackedobject in the process</li>
+      <li>fix: Replace transformObjects with shapes::transformObjects for
+object transformation</li>
+      <li>chore: add channel index to the DynamicObjects</li>
+      <li>feat: separate shape related functions</li>
+      <li>chore: clean up utils.hpp</li>
+      <li>chore: Update function signatures to use DynamicObjectList
+instead of DynamicObjects</li>
+      <li>chore: Add channel index to DynamicObject and DynamicObjectList</li>
+      <li>chore: Refactor processor and debugger classes to remove
+channel_index parameter</li>
+      <li>chore: Refactor multiple_vehicle_tracker.cpp and debugger.cpp</li>
+      <li>Refactor object tracker classes to remove self_transform
+parameter</li>
+      <li>Refactor object tracker classes to use shapes namespace for
+shape-related functions</li>
+      <li>Refactor object tracker classes to use types.hpp for object
+model types</li>
+      <li>Refactor object tracker classes to remove unused utils.hpp</li>
+      <li>Refactor object tracker classes to use types.hpp for object
+model types</li>
+      <li>chore: rename to types.cpp</li>
+      <li>rename getDynamicObject to toDynamicObject</li>
+    </ul>
+
+    <p>* Update
+perception/autoware_multi_object_tracker/lib/object_model/shapes.cpp
+Co-authored-by: Yukihiro Saito &lt;&lt;yukky.saito@gmail.com&gt;&gt;
+---------Co-authored-by: Yukihiro Saito
+&lt;&lt;yukky.saito@gmail.com&gt;&gt;</p>
+  </li>
+  <li>fix(autoware_multi_object_tracker): fix bugprone-errors
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9651">#9651</a>)
+fix: bugprone-errors</li>
+  <li>refactor(autoware_multi_object_tracker): add configurable tracker
+parameters
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9621">#9621</a>)
+    <ul>
+      <li>refactor(autoware_multi_object_tracker): add configurable
+tracker parameters</li>
+      <li>style(pre-commit): autofix</li>
+      <li>refactor(autoware_multi_object_tracker): remove default
+values from parameter declarations</li>
+      <li>refactor(autoware_multi_object_tracker): update schema file</li>
+      <li>style(pre-commit): autofix</li>
+      <li>Update
+perception/autoware_multi_object_tracker/src/processor/processor.cpp</li>
+    </ul>
+
+    <p>* Update
+perception/autoware_multi_object_tracker/src/processor/processor.cpp
+---------Co-authored-by: pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;
+Co-authored-by: Taekjin LEE &lt;&lt;technolojin@gmail.com&gt;&gt;</p>
+  </li>
+  <li>Contributors: Fumiya Watanabe, Taekjin LEE, Vishal Chauhan, jakor97,
+kobayu858</li>
+</ul>
+
+<h2 id="0400-2024-12-12">0.40.0 (2024-12-12)</h2>
+
+<ul>
+  <li>Merge branch 'main' into release-0.40.0</li>
+  <li>Revert "chore(package.xml): bump version to 0.39.0
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9587">#9587</a>)"
+This reverts commit c9f0f2688c57b0f657f5c1f28f036a970682e7f5.</li>
+  <li>fix: fix ticket links in CHANGELOG.rst
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9588">#9588</a>)</li>
+  <li>chore(package.xml): bump version to 0.39.0
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9587">#9587</a>)
+    <ul>
+      <li>chore(package.xml): bump version to 0.39.0</li>
+      <li>fix: fix ticket links in CHANGELOG.rst</li>
+    </ul>
+
+    <p>* fix: remove unnecessary diff ---------Co-authored-by:
+Yutaka Kondo &lt;&lt;yutaka.kondo@youtalk.jp&gt;&gt;</p>
+  </li>
+  <li>fix: fix ticket links in CHANGELOG.rst
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9588">#9588</a>)</li>
+  <li>fix(autoware_multi_object_tracker): measure latency with latest
+detection update time
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9533">#9533</a>)
+    <ul>
+      <li>fix: measure latency with latest detection update time</li>
+    </ul>
+
+    <p>* fix: remove duplicated current_time ---------</p>
+  </li>
+  <li>fix(cpplint): include what you use - perception
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9569">#9569</a>)</li>
+  <li>ci(pre-commit): autoupdate
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8949">#8949</a>)
+Co-authored-by: M. Fatih Cırıt &lt;&lt;mfc@autoware.org&gt;&gt;</li>
+  <li>fix(autoware_multi_object_tracker): fix
+clang-diagnostic-unused-private-field
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9491">#9491</a>)</li>
+  <li>0.39.0</li>
+  <li>update changelog</li>
+  <li>fix: fix ticket links to point to
+<a href="https://github.com/autowarefoundation/autoware_universe">https://github.com/autowarefoundation/autoware_universe</a>
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9304">#9304</a>)</li>
+  <li>feat(autoware_multi_object_tracker): new function to add odometry
+uncertainty
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9139">#9139</a>)
+    <ul>
+      <li>feat: add Odometry uncertainty to object tracking</li>
+    </ul>
+
+    <p>* feat: Add odometry heading uncertainty to object pose covariance
+feat: Rotate object pose covariance matrix to account for yaw
+uncertainty Rotate the object pose covariance matrix in the
+uncertainty_processor.cpp file to account for the yaw uncertainty.
+This ensures that the covariance matrix accurately represents the
+position uncertainty of the object. Refactor the code to rotate the
+covariance matrix using Eigen's Rotation2D class. The yaw
+uncertainty is added to the y-y element of the rotated covariance
+matrix. Finally, update the object_pose_cov array with the updated
+covariance values. Closes
+<a href="https://github.com/autowarefoundation/autoware_universe/issues/123">#123</a>
+* feat: Add odometry motion uncertainty to object pose covariance
+refactoring</p>
+    <ul>
+      <li>feat: Update ego twist uncertainty to the object velocity
+uncertainty</li>
+      <li>feat: update object twist covariance by odometry yaw rate
+uncertainty</li>
+      <li>feat: move uncertainty modeling to input side</li>
+      <li>feat: add option to select odometry uncertainty</li>
+      <li>refactor: rename consider_odometry_uncertainty to
+enable_odometry_uncertainty</li>
+    </ul>
+
+    <p>* fix: transform to world first, add odometry covariance later
+style(pre-commit): autofix
+* feat: Add odometry heading uncertainty to object pose covariance
+---------</p>
+  </li>
+  <li>fix: fix ticket links to point to
+<a href="https://github.com/autowarefoundation/autoware_universe">https://github.com/autowarefoundation/autoware_universe</a>
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9304">#9304</a>)</li>
+  <li>chore(package.xml): bump version to 0.38.0
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9266">#9266</a>)
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9284">#9284</a>)
+    <ul>
+      <li>unify package.xml version to 0.37.0</li>
+      <li>remove system_monitor/CHANGELOG.rst</li>
+      <li>add changelog</li>
+    </ul>
+
+    <h2 id="-0380">* 0.38.0</h2>
+  </li>
+  <li>Contributors: Esteve Fernandez, Fumiya Watanabe, M. Fatih Cırıt,
+Ryohsuke Mitsudome, Taekjin LEE, Yutaka Kondo,
+awf-autoware-bot[bot], kobayu858</li>
+</ul>
+
+<h2 id="0390-2024-11-25">0.39.0 (2024-11-25)</h2>
+
+<ul>
+  <li>fix: fix ticket links to point to
+<a href="https://github.com/autowarefoundation/autoware_universe">https://github.com/autowarefoundation/autoware_universe</a>
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9304">#9304</a>)</li>
+  <li>fix: fix ticket links to point to
+<a href="https://github.com/autowarefoundation/autoware_universe">https://github.com/autowarefoundation/autoware_universe</a>
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9304">#9304</a>)</li>
+  <li>chore(package.xml): bump version to 0.38.0
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9266">#9266</a>)
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9284">#9284</a>)
+    <ul>
+      <li>unify package.xml version to 0.37.0</li>
+      <li>remove system_monitor/CHANGELOG.rst</li>
+      <li>add changelog</li>
+    </ul>
+
+    <h2 id="-0380-1">* 0.38.0</h2>
+  </li>
+  <li>Contributors: Esteve Fernandez, Yutaka Kondo</li>
+</ul>
+
+<h2 id="0380-2024-11-08">0.38.0 (2024-11-08)</h2>
+
+<ul>
+  <li>unify package.xml version to 0.37.0</li>
+  <li>refactor(object_recognition_utils): add autoware prefix to
+object_recognition_utils
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8946">#8946</a>)</li>
+  <li>
+    <p>feat(autoware_multi_object_tracker): Set maximum reverse velocity
+to bicycle and crtv motion models
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9019">#9019</a>)
+* feat: Add maximum reverse velocity to bicycle and CTRV motion
+models revert the tracker orientation when the velocity exceed the
+maximum reverse velocity refactor: Update motion model parameters
+for bicycle and CTRV motion models
+* refactor: check the max_reverse_vel configuration is correct
+max_reverse_vel is expected to be negative
+* refactor: remove config checker in the initializer
+---------</p>
+  </li>
+  <li>refactor(autoware_multi_object_tracker): separate detected object
+covariance modeling
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9001">#9001</a>)
+    <ul>
+      <li>refactor: update object model includes in tracker models</li>
+    </ul>
+
+    <p>* feat: add uncertainty processor for object tracking feat:
+refactor uncertainty processing for object tracking feat: impl obj
+class model feat: Update object model measurement covariances
+Refactor the object model measurement covariances in the
+[object_model.hpp]{.title-ref} file. Update the velocity long and
+velocity lat measurement covariances for different object model
+types. refactor: Model object uncertainty in
+multi_object_tracker_node.cpp feat: Update object model
+measurement covariances in object_model.hpp feat: Update
+uncertainty processing for object tracking fix: remove uncertainty
+modelling in trackers refactor: Remove unused function
+isLargeVehicleLabel The function isLargeVehicleLabel in utils.hpp is
+no longer used and can be safely removed. Revert "refactor: Remove
+unused function isLargeVehicleLabel" This reverts commit
+23e3eff511b21ef8ceeacb7db47c74f747009a32. feat: Normalize
+uncertainty in object tracking This commit adds a new function
+[normalizeUncertainty]{.title-ref} to the
+[uncertainty_processor.hpp]{.title-ref} and
+[uncertainty_processor.cpp]{.title-ref} files. The function
+normalizes the position and twist covariance matrices of detected
+objects to ensure minimum values for distance, radius, and velocity.
+This helps improve the accuracy and reliability of object tracking.</p>
+    <ul>
+      <li>refactor: update motion model parameters for object tracking</li>
+      <li>refactor: update yaw rate limit in object model</li>
+    </ul>
+
+    <p>* Revert "refactor: update yaw rate limit in object model" This
+reverts commit 6e8b201582cb65673678029dc3a781f2b7126f81.
+* refactor: update object model measurement covariances Refactor
+the object model measurement covariances in the
+[object_model.hpp]{.title-ref} file. Update the velocity long and
+velocity lat measurement covariances for different object model
+types.</p>
+    <ul>
+      <li>refactor: update motion model parameters comments</li>
+      <li>refactor: remove comment</li>
+      <li>style(pre-commit): autofix</li>
+    </ul>
+
+    <p>* feat: Update copyright notice in uncertainty_processor.hpp
+Update the copyright notice in the uncertainty_processor.hpp file
+to reflect the correct company name.
+* refactor: update runProcess function parameters in
+multi_object_tracker_node.hpp ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>fix(autoware_multi_object_tracker): update yaw with range-limited
+innovation
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8976">#8976</a>)
+fix: update yaw with range-limited innovation</li>
+  <li>feat(autoware_multi_object_tracker): reduce trigger latency
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8657">#8657</a>)
+    <ul>
+      <li>feat: timer-based trigger with phase compensation</li>
+      <li>chore: update comments, name of variable</li>
+      <li>chore: declare min and max publish interval ratios</li>
+    </ul>
+
+    <p>* style(pre-commit): autofix ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>fix(autoware_multi_object_tracker): output from screen to both
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8407">#8407</a>)</li>
+  <li>fix(autoware_multi_object_tracker): fix unusedFunction
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8573">#8573</a>)
+fix:unusedFunction</li>
+  <li>chore(autoware_multi_object_tracker): fix typo in
+input_channels.schema.json
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8515">#8515</a>)
+* fix(schema): fix typo in input_channels.schema.json Fixed a typo
+in the "lidar_pointpainting" key in the
+input_channels.schema.json file.
+    <ul>
+      <li>fix: fix typo in lidar_pointpainting key</li>
+    </ul>
+
+    <p>* chore: fix typo of lidar_pointpainitng channel
+---------Co-authored-by: Shintaro Tomie
+&lt;&lt;58775300+Shin-kyoto@users.noreply.github.com&gt;&gt;</p>
+  </li>
+  <li>refactor(kalman_filter): prefix package and namespace with autoware
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7787">#7787</a>)
+    <ul>
+      <li>refactor(kalman_filter): prefix package and namespace with
+autoware</li>
+      <li>move headers to include/autoware/</li>
+    </ul>
+
+    <p>* style(pre-commit): autofix ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>docs(autoware_multi_object_tracker): update input_channels
+schema with default values
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8473">#8473</a>)
+chore(perception): update input_channels schema with default values</li>
+  <li>fix(autoware_multi_object_tracker): enable trigger publish when
+delay_compensation is false
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8484">#8484</a>)
+fix: enable trigger publish when delay_compensation is false</li>
+  <li>fix(autoware_multi_object_tracker): fix functionConst
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8424">#8424</a>)
+fix:functionConst</li>
+  <li>docs(autoware_multi_object_tracker): add default values on the
+schema json
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8179">#8179</a>)
+    <ul>
+      <li>Refractored the parameters, build the schema file, updated the
+readme file.</li>
+    </ul>
+
+    <p>* style(pre-commit): autofix ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>fix(autoware_multi_object_tracker): fix functionConst
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8290">#8290</a>)
+    <ul>
+      <li>fix:functionConst</li>
+      <li>fix:functionConst</li>
+    </ul>
+
+    <p>* fix:clang format ---------</p>
+  </li>
+  <li>fix(autoware_multi_object_tracker): revert latency reduction
+logic and bring back to timer trigger
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8277">#8277</a>)
+    <ul>
+      <li>fix: revert latency reduction logic and bring back to timer
+trigger</li>
+      <li>style(pre-commit): autofix</li>
+    </ul>
+
+    <p>* chore: remove unused variables ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>fix(autoware_multi_object_tracker): fix uninitMemberVar
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8335">#8335</a>)
+fix:uninitMemberVar</li>
+  <li>fix(autoware_multi_object_tracker): fix passedByValue
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8231">#8231</a>)
+fix:passedByValue</li>
+  <li>fix(multi_object_tracker, object_merger, radar_object_tracker,
+tracking_object_merger): fix knownConditionTrueFalse warnings
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8137">#8137</a>)
+    <ul>
+      <li>fix: cppcheck knownConditionTrueFalse</li>
+      <li>fix</li>
+    </ul>
+
+    <h2 id="-fix">* fix</h2>
+  </li>
+  <li>fix(autoware_multi_object_tracker): missing parameter schema path
+fix
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8120">#8120</a>)
+fix: missing parameter schema path fix</li>
+  <li>fix(multi_object_tracker): fix funcArgNamesDifferent
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8079">#8079</a>)
+fix:funcArgNamesDifferent</li>
+  <li>refactor(multi_object_tracker): bring parameter schema to new
+package folder
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8105">#8105</a>)
+refactor: bring parameter schema to new package folder</li>
+  <li>refactor(multi_object_tracker)!: add package name prefix of
+autoware_
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8083">#8083</a>)
+    <ul>
+      <li>refactor: rename multi_object_tracker package to
+autoware_multi_object_tracker</li>
+    </ul>
+
+    <p>* style(pre-commit): autofix ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>Contributors: Boyang, Esteve Fernandez, Ryuta Kambe, Taekjin LEE,
+Yutaka Kondo, kminoda, kobayu858</li>
+</ul>
+
+<h2 id="0260-2024-04-03">0.26.0 (2024-04-03)</h2>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/autoware_multi_object_tracker/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_auto#github">ament_cmake_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_cmake#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_cmake#github">autoware_cmake  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/eigen3_cmake_module#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/eigen3_cmake_module#github">eigen3_cmake_module  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_lint_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_lint_auto#github">ament_lint_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_lint_common#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_lint_common#github">autoware_lint_common  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_kalman_filter#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_kalman_filter#github">autoware_kalman_filter  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_object_recognition_utils#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_object_recognition_utils#github">autoware_object_recognition_utils  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_perception_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_perception_msgs#github">autoware_perception_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_utils#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_utils#github">autoware_utils  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/diagnostic_updater#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/diagnostic_updater#github">diagnostic_updater  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center"></td>
+                        <td>glog</td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/mussp#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/mussp#github">mussp  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/nav_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/nav_msgs#github">nav_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclcpp#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclcpp#github">rclcpp  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclcpp_components#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclcpp_components#github">rclcpp_components  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2#github">tf2  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2_ros#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2_ros#github">tf2_ros  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/unique_identifier_msgs#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/unique_identifier_msgs#github">unique_identifier_msgs  </a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th>Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                      <tr>
+                        <td><a href="/d/eigen">eigen</a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th>Name</th>
+                  <th class="text-center">Deps</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/tier4_perception_launch#github">tier4_perception_launch</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/tier4_perception_launch#github-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <ul>
+            
+              <li><a href="https://github.com/autowarefoundation/autoware_universe/tree/main/perception/autoware_multi_object_tracker/launch/multi_object_tracker.launch.xml" target="_blank">launch/multi_object_tracker.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>selected_input_channels</strong> <em>&#91;default: ['detected_objects']&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>output</strong> <em>&#91;default: objects&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>tracker_setting_path</strong> <em>&#91;default: $(find-pkg-share autoware_multi_object_tracker)/config/multi_object_tracker_node.param.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>data_association_matrix_path</strong> <em>&#91;default: $(find-pkg-share autoware_multi_object_tracker)/config/data_association_matrix.param.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input_channels_path</strong> <em>&#91;default: $(find-pkg-share autoware_multi_object_tracker)/config/input_channels.param.yaml&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No message files found.</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No plugins found.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>autoware_multi_object_tracker</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/autoware_multi_object_tracker+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/autowarefoundation/autoware_universe.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/autoware_multi_object_tracker"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/autowarefoundation/autoware_universe/tree/main/perception/autoware_multi_object_tracker"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/autoware_multi_object_tracker?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/autoware_multi_object_tracker?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=autoware_multi_object_tracker&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "autoware_multi_object_tracker"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

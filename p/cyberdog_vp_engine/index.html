@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: cyberdog_vp_engine</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/cyberdog_vp_engine/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">cyberdog_vp_engine</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/cyberdog_vp_engine">cyberdog_vp_engine</a> <small>package from <a style="text-decoration:none" href="/r/interaction/github-miroboticslab-interaction">interaction</a> repo</small>
+        </h3>
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/connector">
+
+connector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/cyberdog_action">
+
+cyberdog_action
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/cyberdog_ai_sports">
+
+cyberdog_ai_sports
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/cyberdog_audio">
+
+cyberdog_audio
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/cyberdog_bluetooth_network">
+
+cyberdog_bluetooth_network
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/cyberdog_face">
+
+cyberdog_face
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/cyberdog_interactive">
+
+cyberdog_interactive
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/cyberdog_vp">
+
+cyberdog_vp
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/cyberdog_vp_abilityset">
+
+cyberdog_vp_abilityset
+</a>
+            
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+cyberdog_vp_engine
+</span>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/cyberdog_vp_terminal">
+
+cyberdog_vp_terminal
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/image_transmission">
+
+image_transmission
+</a>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/cyberdog_vp_engine"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/miroboticslab/interaction/tree/rolling/cyberdog_vp/cyberdog_vp_engine"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-default">0</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">11</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>0.2.1</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>Apache License, Version 2.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-default">
+                  
+                    AMENT_CMAKE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/miroboticslab/interaction.git">https://github.com/miroboticslab/interaction.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">rolling</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2024-09-11
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <em>No category tags.</em>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/interaction/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/interaction/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/interaction/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            cyberdog visual programming engine
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional links.</em>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>ShangZihan</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional authors.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/miroboticslab/interaction/tree/rolling/cyberdog_vp/cyberdog_vp_engine/README.md" title="Open in git repository">cyberdog_vp/cyberdog_vp_engine/README.md</a></div>
+              <div class="panel-body">
+                    <div class="rendered-markdown">
+<h1 id="cyberdog-visual-programming-engine">cyberdog visual programming engine</h1>
+<h2 id="许可证license">许可证（License）</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Copyright (c) 2023 Beijing Xiaomi Mobile Software Co., Ltd. All rights reserved.
+
+Licensed under the Apache License, Version 2.0 (the 'License');
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an 'AS IS' BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+</code></pre></div></div>
+<h2 id="概述">概述</h2>
+<p>当前项目为 cyberdog 可视化编程项目，用于提供 cyberdog 引擎。</p>
+
+<h2 id="模块架构">模块架构</h2>
+
+<center>
+
+![](../cyberdog_vp/doc/doxygen/image/cn_cyberdog_vp_7.svg)
+
+</center>
+
+<p>如上图所示，可视化编程引擎模块架构：</p>
+<ol>
+  <li>核心功能：
+    <ul>
+      <li>解析及响应前端消息；</li>
+      <li>请求及处理后端消息；</li>
+      <li>构造及注册模块或任务；</li>
+      <li>控制任务运行。</li>
+    </ul>
+  </li>
+  <li>任务操作及模块操作参见任务及模块状态流转。</li>
+</ol>
+
+<h4 id="机器人端-模块操作及状态流转设计">机器人端-模块操作及状态流转设计</h4>
+
+<center>
+
+![](../cyberdog_vp/doc/doxygen/image/cn_cyberdog_vp_7_1.png)
+
+</center>
+
+<p>如上表所示，三种模块状态分别在三种模块操作下的流转关系尽收眼底，现对三种模块操作及三种模块状态进行说明如下：</p>
+<ul>
+  <li>三种模块操作
+    <ol>
+      <li>保存任务：构建当前id的模块，若模块id已存在则覆盖，并审核任务语法是否合规，反馈操作结果。</li>
+      <li>查询任务：查询当前id对应的模块，反馈操作结果。</li>
+      <li>删除任务：审核当前id对应的模块是否可以删除，若可以则删除当前id对应的模块，反馈操作结果。</li>
+    </ol>
+  </li>
+  <li>三种模块状态
+    <ol>
+      <li>空状态：该状态是指没有当前模块的任何状态，本质为当前模块不存在，也就是说任何未记录的模块的状态均为空状态。</li>
+      <li>错误状态：该状态是指当前模块不符合语法规则，也就是说当前模块无法运行只能再次编辑。</li>
+      <li>正常状态：该状态是指当前模块符合语法规则，也就是说当前模块可以调用。</li>
+    </ol>
+  </li>
+</ul>
+
+<h4 id="机器人端-任务操作及状态流转设计">机器人端-任务操作及状态流转设计</h4>
+
+<center>
+
+![](../cyberdog_vp/doc/doxygen/image/cn_cyberdog_vp_7_2.png)
+
+</center>
+
+<p>如上表所示，七种任务状态分别在八种任务操作下的流转关系尽收眼底，现对八种任务操作及七种任务状态进行说明如下：</p>
+<ul>
+  <li>八种任务操作
+    <ol>
+      <li>保存任务：构建当前id的任务，若任务id已存在则覆盖，并审核任务语法是否合规，反馈操作结果。</li>
+      <li>运行任务：运行当前id对应的任务，若任务id对应的任务不存在或语法状态错误则不执行，反馈操作结果。</li>
+      <li>查询任务：查询当前id对应的任务，反馈操作结果。</li>
+      <li>删除任务：删除当前id对应的任务，反馈操作结果。</li>
+      <li>暂停任务：暂停当前id对应的任务，反馈操作结果。</li>
+      <li>继续任务：继续当前id对应的任务，反馈操作结果。</li>
+      <li>终止任务：终止当前id对应的任务，反馈操作结果。</li>
+      <li>调试任务：以当前调试id为基础，保存、审核及运行当前帧携带的逻辑，反馈操作结果。</li>
+    </ol>
+  </li>
+  <li>七种任务状态
+    <ol>
+      <li>空状态：该状态是指没有当前任务的任何状态，本质为当前任务不存在，也就是说任何未记录的任务的状态均为空状态。</li>
+      <li>错误状态：该状态是指当前任务不符合语法规则，本质为当前任务不合规，也就是说当前任务无法运行只能再次编辑。</li>
+      <li>等待运行状态：该状态是指当前任务可以运行但尚未加入任务注册表中，本质为当前任务语法规则，也就是说当前任务处于等待用户确认运行状态。</li>
+      <li>运行等待状态：该状态是指当前任务已加入任务注册表中，但尚未满足运行条件，本质为当前任务语法规则，且正在等待运行条件满足后即刻运行的状态。</li>
+      <li>运行状态：该状态是指当前任务已满足执行条件，正在执行内部逻辑的状态。</li>
+      <li>暂停状态：该状态是指当前任务处于暂停执行的状态，此时任务进程任在，可以是断点暂停或用户手动暂停正在执行的任务。</li>
+      <li>终止状态：该状态是指当前任务被终止执行，此时不存在任务进程，可以是正常执行结束或被迫终止任务。</li>
+    </ol>
+  </li>
+  <li>注意：当前的任务状态是基于任务内编程逻辑考虑，不做任务执行约束条件考虑（由调用方考虑）：</li>
+  <li>当某条任务内编程逻辑审核通过，该任务状态即为等待运行（wait_run）状态，若该任务执行约束条件为定时单次执行时，需要调用方根据定时约束判断当前任务的约束时间是否已过期，当未过期时再开启任务。当然，也可以不用管，直接下发开启请求，但是会被视为非法请求，操作会失败，对用户操作体验不友好。</li>
+</ul>
+
+<h4 id="机器人端-状态机各模式下操作约束设计">机器人端-状态机各模式下操作约束设计</h4>
+
+<center>
+
+![](../cyberdog_vp/doc/doxygen/image/cn_cyberdog_vp_7_3.png)
+
+</center>
+
+<p>如上表所示，十种机器人模式下用户对任务或模块的八种操作，用户对AI能力的一种操作以及任务自行触发的两种操作约束条件尽收眼底，各模式下的约束指标主要考虑如下：</p>
+<ol>
+  <li>Uninitialized、SetUp、TearDown三种模式下，机器人各功能模块均处于无法正常工作的状态，故而限制所有操作；</li>
+  <li>SekfCheck、OTA以及Error模式下，机器人各功能模块均处于封闭状态，故而限制所有可能导致图形化编程新增进程的操作，只允许现有进程自动停止（stop）或用户手动暂停（suspend）或终止（shutdown）现有进程，允许查询（inquiry）是想为用户提供展示任务、模块及AI信息，为用户的暂停（suspend）或终止提供基础，同时也支持二次编辑任务或模块的功能，提升用户和机器人互动过程中的异步体验（不会因自检阻塞用户编程），该思想同样适用于Active、DeActive、Protected、LowPower、OTA以及Error模式；</li>
+  <li>Active模式下，机器人各功能模块均处于能够正常工作的阶段，故而开放所有操作；</li>
+  <li>Protected模式下，机器人大部分功能模块均处于能够正常工作的阶段，故而开放所有操作，该模式下受限功能如下：
+    <ul>
+      <li>运动模块：除站立、趴下外的所有结果指令；</li>
+      <li>LED模块：BMS会抢占LED设备。</li>
+    </ul>
+  </li>
+  <li>DeActive以及LowPower模式下，机器人各功能模块均处于休眠状态，查询（inquiry）、停止（stop）及暂停（suspend）或终止（shutdown）约束考虑和SekfCheck模式一样，对于保存（save）和删除（delete）操作的考虑和查询一样，也是想为用户提供展示任务、模块及AI信息，为用户的暂停（suspend）或终止提供基础，同时也支持二次编辑任务或模块的功能，提升用户和机器人互动过程中的异步体验（不会因自检阻塞用户编程）。</li>
+</ol>
+
+<details>
+  <summary><font color="red" size="4"> 注意 </font></summary>
+  <pre><blockcode>🟥 低电量模式：
+    🔵 进入：
+        🔺电量低于20%，自动进入；
+    🟠 退出：
+        🔺电量大于等于20%，自动退出；
+🟩 低功耗模式
+    🔵 进入：
+        🔺电量小于5%时自动进入低功耗；
+        🔺趴下超过30s，进入低功耗；
+        🔺唤醒退出低功耗模式后，若30s内未进行运动控制，则再次进入低功耗模式；
+    🟠 退出：
+        🔺语音唤醒：“铁蛋、铁蛋”；
+        🔺app端点击退出低功耗；
+        🔺双击狗头退出低功耗；</blockcode></pre>
+</details>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <em>No CHANGELOG found.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/cyberdog_vp_engine/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake#github">ament_cmake  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_lint_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_lint_auto#github">ament_lint_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_lint_common#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_lint_common#github">ament_lint_common  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclcpp#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclcpp#github">rclcpp  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/sensor_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/sensor_msgs#github">sensor_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rapidjson#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rapidjson#github">rapidjson  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/protocol#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/protocol#github">protocol  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/params#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/params#github">params  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center"></td>
+                        <td>cyberdog_system</td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center"></td>
+                        <td>cyberdog_common</td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center"></td>
+                        <td>cyberdog_machine</td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No direct system dependencies.</em>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th>Name</th>
+                  <th class="text-center">Deps</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/cyberdog_vp#github">cyberdog_vp</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/cyberdog_vp#github-deps" class="endoftree">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No launch files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No message files found.</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No plugins found.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>cyberdog_vp_engine</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/cyberdog_vp_engine+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/miroboticslab/interaction.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/cyberdog_vp_engine"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/miroboticslab/interaction/tree/rolling/cyberdog_vp/cyberdog_vp_engine"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/cyberdog_vp_engine?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/cyberdog_vp_engine?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=cyberdog_vp_engine&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "cyberdog_vp_engine"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

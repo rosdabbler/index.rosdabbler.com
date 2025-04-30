@@ -1,0 +1,2415 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: common_sensor_launch</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/common_sensor_launch/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">common_sensor_launch</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/common_sensor_launch">common_sensor_launch</a> <small>package from <a style="text-decoration:none" href="/r/autoware_launch/github-autowarefoundation-autoware_launch">autoware_launch</a> repo</small>
+        </h3>
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_launch">
+
+autoware_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/awsim_labs_sensor_kit_description">
+
+awsim_labs_sensor_kit_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/awsim_labs_sensor_kit_launch">
+
+awsim_labs_sensor_kit_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/common_awsim_labs_sensor_launch">
+
+common_awsim_labs_sensor_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/awsim_sensor_kit_description">
+
+awsim_sensor_kit_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/awsim_sensor_kit_launch">
+
+awsim_sensor_kit_launch
+</a>
+            
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+common_sensor_launch
+</span>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/sample_sensor_kit_description">
+
+sample_sensor_kit_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/sample_sensor_kit_launch">
+
+sample_sensor_kit_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/single_lidar_common_launch">
+
+single_lidar_common_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/single_lidar_sensor_kit_description">
+
+single_lidar_sensor_kit_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/single_lidar_sensor_kit_launch">
+
+single_lidar_sensor_kit_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/awsim_labs_vehicle_description">
+
+awsim_labs_vehicle_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/awsim_labs_vehicle_launch">
+
+awsim_labs_vehicle_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/sample_vehicle_description">
+
+sample_vehicle_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/sample_vehicle_launch">
+
+sample_vehicle_launch
+</a>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/common_sensor_launch"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/autowarefoundation/autoware_launch/tree/main/sensor_kit/sample_sensor_kit_launch/common_sensor_launch"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-primary">4</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">5</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>0.44.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>Apache License 2.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-default">
+                  
+                    AMENT_CMAKE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/autowarefoundation/autoware_launch.git">https://github.com/autowarefoundation/autoware_launch.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-05-03
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <span class="label label-default">ros</span> <span class="label label-default">ros2</span> <span class="label label-default">autoware</span> 
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/autoware_launch/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/autoware_launch/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/autoware_launch/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            The common_sensor_launch package
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional links.</em>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Ryohsuke Mitsudome</li>
+                
+                  <li>Yukihiro Saito</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional authors.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="panel panel-default">
+            <div class="panel-heading"><span class="glyphicon glyphicon-file"></span> README </div>
+            <div class="panel-body">
+            <em>No README found.</em>
+             <em><a href="/r/autoware_launch/github-autowarefoundation-autoware_launch/#github">See repository README.</a></em>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="changelog-for-package-common_sensor_launch">Changelog for package common_sensor_launch</h1>
+
+<h2 id="0440-2025-04-18">0.44.0 (2025-04-18)</h2>
+
+<ul>
+  <li>chore: set all versions to 0.43.0
+(<a href="https://github.com/autowarefoundation/autoware_launch/issues/1384">#1384</a>)</li>
+  <li>feat(*_launch): move here
+(<a href="https://github.com/autowarefoundation/autoware_launch/issues/1369">#1369</a>)</li>
+  <li>Contributors: Mete Fatih Cırıt</li>
+</ul>
+
+<h2 id="0430-2025-02-12">0.43.0 (2025-02-12)</h2>
+
+<h2 id="0410-2025-02-12">0.41.0 (2025-02-12)</h2>
+
+<ul>
+  <li>fix: add [udp_only]{.title-ref}
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/109">#109</a>)
+Added udp_only</li>
+  <li>feat(common_sensor_launch): rename velodyne_monitor to
+autoware_velodyne_monitor
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/119">#119</a>)</li>
+  <li>Contributors: Ryohsuke Mitsudome, SakodaShintaro</li>
+</ul>
+
+<h2 id="0400-2025-01-17">0.40.0 (2025-01-17)</h2>
+
+<ul>
+  <li>Merge branch 'main' into release-0.40.0</li>
+  <li>fix(nebula_node_container.launch.py): autoware_glog_component
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/112">#112</a>)
+Fixed autoware_glog_component</li>
+  <li>refactor(glog_component): prefix package and namespace with
+autoware
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/110">#110</a>)</li>
+  <li>Contributors: Esteve Fernandez, Ryohsuke Mitsudome, SakodaShintaro</li>
+</ul>
+
+<h2 id="0390-2024-12-09">0.39.0 (2024-12-09)</h2>
+
+<ul>
+  <li>chore(common_sensor_launch): add distortion corrector parameter
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/105">#105</a>)
+chore: add parameter</li>
+  <li>chore(nebula_node_container): make launchers work with Nebula
+v0.2.0
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/106">#106</a>)</li>
+  <li>feat(common_sensor_launch): ring outlier filter load from param
+file
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/103">#103</a>)
+    <ul>
+      <li>feat: ring outlier filter load from param file</li>
+      <li>fix: fix variable name</li>
+    </ul>
+
+    <p>* chore: fix description ---------</p>
+  </li>
+  <li>feat: add robosense Bpearl and Helios Lidar launch files for users
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/102">#102</a>)</li>
+  <li>refactor!: pointcloud_preprocessor prefix package and namespace
+with autoware
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/95">#95</a>)
+    <ul>
+      <li>refactor!: pointcloud_preprocessor prefix package and namespace
+with autoware</li>
+    </ul>
+
+    <p>* style(pre-commit): autofix ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>chore: remapped topics for the point type migration
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/94">#94</a>)
+chore: remapped topics to match the temporary fix for the sensing
+point migration</li>
+  <li>feat(pointcloud_preprocessor):
+load_distortion_parameter_from_yaml
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/93">#93</a>)
+    <ul>
+      <li>feat: load distortion parameter from yaml</li>
+      <li>chore: fix spell error</li>
+      <li>feat: modify the nebula_node_container based on tier4 internal
+common_sensor_launch</li>
+    </ul>
+
+    <p>* chore: use ParameterFile to load param ---------</p>
+  </li>
+  <li>fix(nebula node container): fix if condition for ring outlier filter
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/92">#92</a>)
+fix nebula node container</li>
+  <li>feat(common_sensor_launch, pointcloud_preprocessor): change
+pointcloud interface to synchronized pointclouds
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/91">#91</a>)
+    <ul>
+      <li>feat: edn</li>
+      <li>fix: suppress spell-check</li>
+      <li>style(pre-commit): autofix</li>
+    </ul>
+
+    <p>* feat: interface change in sensing lidar pointcloud. use
+synchronized pointcloud as sensor interface
+---------Co-authored-by: pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>feat: change pointcloud preprocess output from base_link to
+sensor_frame
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/90">#90</a>)
+    <ul>
+      <li>feat: edn</li>
+      <li>fix: suppress spell-check</li>
+    </ul>
+
+    <p>* style(pre-commit): autofix ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>chore(nebula_node_container): enhance logging
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/86">#86</a>)</li>
+  <li>feat: always separate lidar preprocessing from pointcloud_container
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/85">#85</a>)
+    <ul>
+      <li>feat!: replace use_pointcloud_container</li>
+      <li>style(pre-commit): autofix</li>
+      <li>fix: now works</li>
+      <li>revert: revert unnecessary change</li>
+      <li>include_concat_node_in_pointcloud_container to
+use_pointcloud_container</li>
+      <li>style(pre-commit): autofix</li>
+    </ul>
+
+    <p>* fix arg name ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>refactor: rename lidar topic
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/82">#82</a>)
+rename lidar topic Co-authored-by: yamato-ando &lt;Yamato ANDO&gt;</li>
+  <li>fix(nebula launch): remove loading of parameters from default config
+file
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/74">#74</a>)
+    <ul>
+      <li>fix(nebula launch): remove loading of parameters from default
+configuration file</li>
+      <li>chore(nebula launch): remove orphaned directory variable</li>
+    </ul>
+
+    <p>* chore(nebula launch): remove unused import ---------</p>
+  </li>
+  <li>refactor(nebula launch): consistent naming for sensor_ip parameter
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/72">#72</a>)</li>
+  <li>fix(nebula launch): rotation_speed type
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/71">#71</a>)
+fix rotation_speed type</li>
+  <li>fix(common_sensor_launch): add nebula to package.xml
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/65">#65</a>)</li>
+  <li>feat: change from velodyne_vls to nebula driver
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/64">#64</a>)
+    <ul>
+      <li>feat: change from velodyne_vls to nebula driver</li>
+    </ul>
+
+    <p>* style(pre-commit): autofix ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>chore: update maintainer
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/60">#60</a>)</li>
+  <li>feat(sample_sensor_kit_launch): pass container to velodyne nodes
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/48">#48</a>)
+    <ul>
+      <li>feat(sample_sensor_kit_launch): pass container to velodyne
+nodes</li>
+      <li>feat(sample_sensor_kit_launch): align true/false</li>
+    </ul>
+  </li>
+  <li>feat(common_sensor_launch): change interpolate to
+distortion_corrector
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/41">#41</a>)
+    <ul>
+      <li>feat(common_sensor_launch): change interpolate to
+distortion_corrector</li>
+      <li>Fix input topic</li>
+    </ul>
+  </li>
+  <li>feat: load global parameter
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/31">#31</a>)</li>
+  <li>ci(pre-commit): update pre-commit-hooks-ros
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/16">#16</a>)
+    <ul>
+      <li>ci(pre-commit): update pre-commit-hooks-ros</li>
+      <li>ci(pre-commit): autofix</li>
+      <li>Update .pre-commit-config.yaml</li>
+    </ul>
+
+    <p>* Update .pre-commit-config.yaml Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>chore: clean up files
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/6">#6</a>)</li>
+  <li>feat: add packages
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/3">#3</a>)
+    <ul>
+      <li>release v0.4.0</li>
+      <li>Feature/phased timestamped velodyne
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/53">#53</a>)</li>
+      <li>Replace with new velodyne driver, cutting scan based on azimuth</li>
+      <li>Fix launch/dependences</li>
+      <li>Fix version name for tier4/velodyne_vls</li>
+      <li>Add velodyne_driver dependency</li>
+      <li>Nodelet tlr
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/56">#56</a>)</li>
+      <li>temporary commit tlr_nodelet</li>
+      <li>compressed to compressed</li>
+      <li>Update traffic_light.launch</li>
+      <li>fix bug</li>
+      <li>change image_transport to relay</li>
+      <li>fix bug</li>
+      <li>fix bug</li>
+      <li>decompress as rgb8</li>
+    </ul>
+
+    <p>* fix bug Co-authored-by: Yukihiro Saito
+&lt;&lt;yukky.saito@gmail.com&gt;&gt;</p>
+    <ul>
+      <li>use env for livox id
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/58">#58</a>)</li>
+      <li>Feature/optimize scan phase
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/59">#59</a>)</li>
+      <li>Rename parameter name, sensor_phase -&gt; scan_phase</li>
+      <li>Modify aip_xx1 scan_phase for better perception</li>
+      <li>Rename parameter name, sensor_phase -&gt; scan_phase</li>
+      <li>Logging simulator
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/65">#65</a>)</li>
+      <li>Add logging_simulator.launch</li>
+      <li>Don't load env when launch driver is false</li>
+      <li>removed ROS1 package</li>
+    </ul>
+
+    <p>* Revert "removed ROS1 package" This reverts commit
+3122355145ddfc9cb7e7485e85d509d53f6836f0.</p>
+    <ul>
+      <li>add COLCON_IGNORE file to all ROS1 packages</li>
+      <li>rename <em>.launch files to</em>.launch.xml</li>
+      <li>Port sensing_launch
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/14">#14</a>)</li>
+      <li>[sensing_launch] Initial port without actually launching</li>
+      <li>[sensing_launch] default -&gt; value, namespace, first nodelet
+porting</li>
+      <li>[sensing_launch] use usb_cam, eval -&gt; var</li>
+      <li>[sensing_launch] Fix syntax errors in
+pointcloud_preprocessor.launch.py</li>
+      <li>[pointcloud-preprocessor] fix ground-filter component name</li>
+    </ul>
+
+    <p>* [pointcloud-preprocessor] Polish
+aip_s1/pointcloud_preprocessor.launch.py Only one error at runtime
+remains when testing on dev laptop due to pointclouds that need to
+be available for concatenation</p>
+    <ul>
+      <li>[sensing_launch] ublox_gps refer to config file properly</li>
+      <li>(wip) velodyne_node_container before opaque</li>
+      <li>[sensing_launch] Port aip-s1 as far as possible</li>
+      <li>[sensing_launch] remove unused
+pointcloud_preprocessor_nodes.py</li>
+      <li>[sensing_launch] Manage to add ComposableNode conditionally</li>
+      <li>[sensing_launch] Update camera for s1, x1</li>
+    </ul>
+
+    <p>* [sensing_launch] Copy aip_s1/ content to aip_customized,
+aip_x1, aip_x2 because they were identical before the porting</p>
+    <ul>
+      <li>[sensing_launch] Port livox</li>
+      <li>[sensing_launch] Port aip_xx1</li>
+      <li>[sensing_launch] Port aip_xx2</li>
+      <li>[sensing_launch] Remove superfluous passthrough filter,
+min_z, max_z</li>
+      <li>[sensing_launch] Incorporate changes from vehicle testing</li>
+      <li>[sensing_launch] Declare launch argument for base_frame</li>
+      <li>[sensing_launch] Missing fixes to launch/velodyne*</li>
+      <li>[sensing_launch] Update copied configs</li>
+      <li>Added linters
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/32">#32</a>)</li>
+      <li>Ros2 v0.8.0 sensing launch
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/57">#57</a>)</li>
+      <li>restore file name</li>
+      <li>Update livox_horizon.launch
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/89">#89</a>)</li>
+      <li>fix pass through filter launch
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/90">#90</a>)</li>
+      <li>fix pass through filter launch</li>
+      <li>change if statement style</li>
+      <li>update aip_x1 sensing launch
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/100">#100</a>)</li>
+      <li>fix livox launch arg
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/108">#108</a>)</li>
+      <li>add usb_cam depend
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/118">#118</a>)</li>
+      <li>update aip_x1 camera.launch
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/119">#119</a>)</li>
+      <li>update imu.launch
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/120">#120</a>)</li>
+      <li>fix veodyne setting in aip_x1/lidar.launch
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/125">#125</a>)</li>
+      <li>Add velodyne_monitor to velodyne_*.launch
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/101">#101</a>)</li>
+      <li>Uupdate aip_x1 lidar.launch
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/143">#143</a>)</li>
+      <li>Format gnss.launch
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/145">#145</a>)</li>
+      <li>Add use_gnss arg to aip_x1 gnss.launch
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/146">#146</a>)</li>
+      <li>support individual params
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/137">#137</a>)</li>
+      <li>support individual params</li>
+      <li>remove kvaser_hardware_id.txt</li>
+      <li>Launch velodyne_monitor only when launch_driver is true
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/163">#163</a>)</li>
+      <li>[sensing_launch] ros2 porting: use container for livox point
+preprocessor</li>
+      <li>[sensing_launch] ros2-porting: fix vehicle_info params</li>
+    </ul>
+
+    <p>* Revert "restore file name" This reverts commit
+37d7ac4f6a2a617b003b4e2a5ac96c48b332ade0.</p>
+    <ul>
+      <li>[sensing_launch] ros2-porting: fix vehicle_info for livox
+preprocessor launch</li>
+      <li>[sensing_launch] ros2-porting: fix vehicle_info for
+api_** points_preprocessor.launch.py</li>
+      <li>fix launch</li>
+      <li>fix livox launch</li>
+      <li>added suffix ".xml" to "velodyne_monitor.launch" in the
+launch files</li>
+      <li>added use_sim_time with AW_ROS2_USE_SIM_TIME envvar for
+the parameters in the *.launch.py
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/61">#61</a>)</li>
+      <li>added use_sim_time with AW_ROS2_USE_SIM_TIME envvar for
+the parameters</li>
+      <li>changed to use EnvironmentVariable function for use_sim_time
+parameter</li>
+      <li>changed indent</li>
+    </ul>
+
+    <p>* removed an empty line Co-authored-by: hosokawa
+&lt;&lt;hosokawa@sng-3f-ros2-eval.l.sng.tier4.jp&gt;&gt;
+* fixed typo on the arg bd_code_param_path lines
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/63">#63</a>)
+Co-authored-by: hosokawa
+&lt;&lt;hosokawa@sng-3f-ros2-eval.l.sng.tier4.jp&gt;&gt;</p>
+    <ul>
+      <li>[sensing_launch]: Fix indentation in gnss launch</li>
+      <li>[sensing_launch]: Add missing dependency in package.xml</li>
+      <li>[sensing_launch]: Fix velodyne launch</li>
+      <li>[sensing_launch]: Fix livox launch</li>
+      <li>[sensing_launch]: Add arg for vehicle parameter file in lidar
+launch</li>
+      <li>[sensing_launch]: Cleanup</li>
+      <li>Add new line</li>
+      <li>[sensing_launch]: Add default config for xx1</li>
+    </ul>
+
+    <p>* [sensing_launch]: Fix indentation Co-authored-by: Yukihiro
+Saito &lt;&lt;yukky.saito@gmail.com&gt;&gt; Co-authored-by: Taichi Higashide
+&lt;&lt;taichi.higashide@tier4.jp&gt;&gt; Co-authored-by: Kenji Miyake
+&lt;&lt;31987104+kenji-miyake@users.noreply.github.com&gt;&gt; Co-authored-by:
+hiroyuki obinata &lt;&lt;58019445+obi-t4@users.noreply.github.com&gt;&gt;
+Co-authored-by: hosokawa
+&lt;&lt;hosokawa@sng-3f-ros2-eval.l.sng.tier4.jp&gt;&gt; Co-authored-by:
+HOSOKAWA Ikuto &lt;&lt;hosokawa.ikuto@gmail.com&gt;&gt; Co-authored-by: wep21
+&lt;&lt;border_goldenmarket@yahoo.co.jp&gt;&gt; Co-authored-by: Autoware
+&lt;&lt;autoware@tier4.jp&gt;&gt;</p>
+    <ul>
+      <li>Rename ROS-related .yaml to .param.yaml
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/65">#65</a>)</li>
+      <li>Rename ROS-related .yaml to .param.yaml</li>
+      <li>Add missing '--'</li>
+      <li>Rename vehicle_info.yaml to vehicle_info.param.yaml</li>
+      <li>Fix livox param name</li>
+      <li>Sync with Ros2 v0.8.0 beta
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/71">#71</a>)</li>
+      <li>update sensing launch to support aip_x1
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/69">#69</a>)</li>
+      <li>fix logging_simulator_bug
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/68">#68</a>)</li>
+    </ul>
+
+    <p>* fix aip_x1 param
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/70">#70</a>)
+Co-authored-by: Taichi Higashide &lt;&lt;taichi.higashide@tier4.jp&gt;&gt;</p>
+    <ul>
+      <li>Fix aip_xx1's pointcloud_preprocessor.launch.py
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/72">#72</a>)</li>
+      <li>fix velodyne launch
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/73">#73</a>)</li>
+      <li>fix velodyne launch</li>
+      <li>fix bug</li>
+      <li>add scan_phase arg</li>
+      <li>fix bug
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/85">#85</a>)</li>
+    </ul>
+
+    <p>* Use sensor data qos for pointcloud
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/82">#82</a>)
+Co-authored-by: Autoware &lt;&lt;autoware@tier4.jp&gt;&gt;</p>
+    <ul>
+      <li>Remove unused remappings
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/88">#88</a>)</li>
+      <li>Livox composable node
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/87">#87</a>)</li>
+      <li>Fix default value of use_concat_filter and use_radius_search
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/90">#90</a>)</li>
+      <li>Fix default value of use_concat_filter and use_radius_search</li>
+      <li>Fix lint</li>
+      <li>[aip_x1]: Fix imu topic name
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/94">#94</a>)</li>
+      <li>Fix various typos in launch files
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/97">#97</a>)</li>
+      <li>Move individual params to a separate package
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/100">#100</a>)</li>
+      <li>Remove individual params
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/101">#101</a>)</li>
+      <li>add use_sim-time option
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/99">#99</a>)</li>
+      <li>Format launch files
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/178">#178</a>)</li>
+    </ul>
+
+    <p>* Fix bug of pointcloud_preprocessor.py
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/179">#179</a>)
+Co-authored-by: autoware &lt;&lt;autoware@example.com&gt;&gt;</p>
+    <ul>
+      <li>Replace doc by description
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/182">#182</a>)</li>
+      <li>Ros2 lsim test
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/186">#186</a>)</li>
+      <li>Add group to launch file for var scope</li>
+      <li>Remove pointcloud relay for localization</li>
+      <li>Add use_sim_time</li>
+    </ul>
+
+    <p>* Remove pointcloud relay for localization Co-authored-by: Takagi,
+Isamu &lt;&lt;isamu.takagi@tier4.jp&gt;&gt;</p>
+    <ul>
+      <li>Add multithread and intra process option
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/187">#187</a>)</li>
+      <li>Add multithread and intra process option</li>
+      <li>Fix velodyne node container executable</li>
+      <li>Add option into aip_xx2</li>
+      <li>Add option into aip_x2</li>
+      <li>Add option into aip_x1</li>
+      <li>Add option into aip_s1</li>
+      <li>Add option into aip_customized</li>
+      <li>Add option into lidar.launch.xml</li>
+      <li>Fix invalid attribute in gnss launch
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/191">#191</a>)</li>
+      <li>Fix parameter for scan phase
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/193">#193</a>)</li>
+      <li>add septentrio_gnss_driver launcher and switch(septentrio
+&lt;-&gt; ublox)
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/196">#196</a>)</li>
+      <li>add septentrio_gnss_driver launcher and switch(septentrio
+&lt;-&gt; ublox)</li>
+      <li>rm arg(gnss_receiver) escalation and modify
+septentrio_gnss_driver_node option</li>
+      <li>change gnss_receiver default septentrio to ublox</li>
+      <li>remap all septentrio_gnss_driver topic names</li>
+      <li>replace septentrio gnss driver launch type 'node' to
+'include'</li>
+      <li>Use set_parameter for use_sim_time
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/198">#198</a>)</li>
+      <li>Use set_parameter for use_sim_time</li>
+      <li>Add default parameter for scenario simulator</li>
+      <li>Format launch files
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/228">#228</a>)</li>
+      <li>Format launch files</li>
+      <li>Format launch.py</li>
+      <li>Fix lint</li>
+      <li>Fix aip_xx1 camera launch
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/242">#242</a>)</li>
+      <li>Fix gnss topic name
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/243">#243</a>)</li>
+      <li>Enable intra process and mt
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/204">#204</a>)</li>
+      <li>add imu_corrector
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/296">#296</a>)</li>
+      <li>add description for sensing_launch
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/336">#336</a>)</li>
+      <li>add description</li>
+      <li>fix sentence</li>
+      <li>add README.md and svg files
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/328">#328</a>)</li>
+      <li>add md and svg</li>
+      <li>fix typo</li>
+      <li>fix typo</li>
+      <li>fix word</li>
+      <li>fix typo</li>
+      <li>add lack of things</li>
+      <li>Update README</li>
+      <li>fix depending packages</li>
+      <li>fix word</li>
+      <li>Fix camera launch invalid type string
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/344">#344</a>)</li>
+      <li>add view width direction to velodyne_node_container.launch.py
+etc...
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/366">#366</a>)</li>
+      <li>add arg of view_width and view_direction</li>
+      <li>delete initial value</li>
+    </ul>
+
+    <p>* add args and params Co-authored-by: autoware-iv-sync-ci[bot]
+&lt;87871706+autoware-iv-sync-ci[bot]\@users.noreply.github.com&gt;</p>
+    <ul>
+      <li>Fix pre-commit
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/407">#407</a>)</li>
+      <li>Fix pre-commit errors</li>
+      <li>Fix package.xml</li>
+      <li>Fix pre-commit target
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/436">#436</a>)</li>
+      <li>Use scan ground filter for xx1
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/313">#313</a>)</li>
+      <li>Enable time series outlier filter
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/314">#314</a>)</li>
+      <li>Fix param name in scan ground filter
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/357">#357</a>)</li>
+      <li>Remove aip xx2 model from sensing launch
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/446">#446</a>)</li>
+      <li>Add respawn for ublox
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/449">#449</a>)</li>
+      <li>delete aip_customized</li>
+      <li>move to aip_launcher</li>
+      <li>delete namespace
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/5">#5</a>)</li>
+      <li>fix revert dirname + delete unused arg
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/7">#7</a>)</li>
+      <li>revert dirname</li>
+      <li>delete sensor_model</li>
+      <li>delete aip_s1
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/8">#8</a>)</li>
+      <li>Add pre-commit
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/10">#10</a>)</li>
+      <li>Add pre-commit</li>
+      <li>Fix for pre-commit</li>
+      <li>Update version</li>
+      <li>Fix target</li>
+      <li>update README
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/9">#9</a>)</li>
+      <li>update README temporary</li>
+      <li>Update</li>
+      <li>updateg</li>
+      <li>delete line number</li>
+      <li>re delete line number</li>
+      <li>fix for pre commit</li>
+      <li>fix for pre-commit</li>
+      <li>fix for pre commit</li>
+      <li>update README</li>
+      <li>update README</li>
+      <li>update README</li>
+      <li>Update README</li>
+      <li>update readme</li>
+      <li>use back quote</li>
+      <li>Sync with xx1 develop/ros2
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/14">#14</a>)</li>
+      <li>Fix velodyne launcher
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/15">#15</a>)</li>
+      <li>Fix lidar launcher
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/16">#16</a>)</li>
+      <li>Rollback XX1's pointcloud_preprocessor to main
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/18">#18</a>)</li>
+      <li>Update aip_x1 launch files
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/25">#25</a>)</li>
+      <li>Copy velodyne_node_container.launch.py to aip_x1_launch</li>
+      <li>Disable driving recorder
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/19">#19</a>)</li>
+    </ul>
+
+    <p>* add use_driving_recorder param Co-authored-by: taichiH
+&lt;&lt;azumade.30@gmail.com&gt;&gt;</p>
+    <ul>
+      <li>X1: Change scan_phase 0 to 180 deg</li>
+      <li>X1: Add topic state monitor</li>
+      <li>Add Livox tag filter</li>
+      <li>Add Livox min_range_filter</li>
+      <li>change livox_horizon.launch to support livox_tag_filter
+composable node
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/62">#62</a>)</li>
+      <li>remove unnecessary crop filter for aip_x1
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/63">#63</a>)</li>
+      <li>remove sensing-lidar-pointcloud relay</li>
+      <li>add livox concatenate</li>
+      <li>disable use_intra_process for vector_map_filter</li>
+      <li>change use_intra_process to true</li>
+      <li>[sac ground filter] change height threshold 0.12 -&gt; 0.18</li>
+    </ul>
+
+    <p>* Update launch for multi topic livox mode
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/68">#68</a>)
+Co-authored-by: Hiroaki ISHIKAWA &lt;&lt;hiroaki.ishikawa@tier4.jp&gt;&gt;
+Co-authored-by: taichiH &lt;&lt;azumade.30@gmail.com&gt;&gt;</p>
+    <ul>
+      <li>add westering sun extraction filter
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/76">#76</a>)</li>
+      <li>fix bug
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/92">#92</a>)</li>
+      <li>Fix concat timeout
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/91">#91</a>)</li>
+      <li>add new livox driver launch file
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/94">#94</a>)</li>
+      <li>fix frame_id
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/95">#95</a>)</li>
+      <li>Feature/compare elevation map
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/100">#100</a>)</li>
+      <li>Change livox crop range 14m-&gt;18m</li>
+      <li>Use executable for new_lidar_driver_launch
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/120">#120</a>)</li>
+      <li>Change ransac height thresh
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/110">#110</a>)
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/115">#115</a>)</li>
+      <li>Add livox to diag name of topic_state_monitor
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/162">#162</a>)</li>
+      <li>Change elevation value method and height thresh
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/163">#163</a>)</li>
+    </ul>
+
+    <p>* change ground filter hight threshold
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/174">#174</a>)
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/176">#176</a>)
+Co-authored-by: Taichi Higashide &lt;&lt;taichi.higashide@tier4.jp&gt;&gt;</p>
+    <ul>
+      <li>Copy velodyne_VLP16.launch.xml to aip_x1_launch</li>
+    </ul>
+
+    <p>* Change velodyne_node_container.launch.py reference in
+velodyne_VLP16.launch.xml Co-authored-by: Hiroki OTA
+&lt;&lt;hiroki.ota@tier4.jp&gt;&gt; Co-authored-by: taichiH
+&lt;&lt;azumade.30@gmail.com&gt;&gt; Co-authored-by: Taichi Higashide
+&lt;&lt;taichi.higashide@tier4.jp&gt;&gt; Co-authored-by: tomoya.kimura
+&lt;&lt;tomoya.kimura@tier4.jp&gt;&gt; Co-authored-by: Kosuke Takeuchi
+&lt;&lt;kosuke.tnp@gmail.com&gt;&gt; Co-authored-by: Hiroaki ISHIKAWA
+&lt;&lt;hiroaki.ishikawa@tier4.jp&gt;&gt; Co-authored-by: Takeshi Miura
+&lt;&lt;57553950+1222-takeshi@users.noreply.github.com&gt;&gt; Co-authored-by:
+autoware-iv-sync-ci[bot]
+&lt;87871706+autoware-iv-sync-ci[bot]\@users.noreply.github.com&gt;</p>
+    <ul>
+      <li>Add parameter file for diagnostic_aggregator to use in each
+product
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/13">#13</a>)</li>
+      <li>add xx1 parameter</li>
+      <li>add x1 parameter</li>
+      <li>add x2 parameter</li>
+      <li>delete autoware_error_monitor</li>
+      <li>add sensor_kit.param for diagnostic_agg</li>
+      <li>update extra senser diag</li>
+      <li>Remove IMU from X2</li>
+    </ul>
+
+    <p>* Move to config directory Co-authored-by: Kenji Miyake
+&lt;&lt;kenji.miyake@tier4.jp&gt;&gt;
+* Revert "Rollback XX1's pointcloud_preprocessor to main
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/18">#18</a>)"
+This reverts commit 4f9d0e8384526d0638a18856c16500cf8933690b.</p>
+    <ul>
+      <li>Change formatter to black
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/38">#38</a>)</li>
+      <li>Update pre-commit settings</li>
+      <li>Apply Black</li>
+      <li>Replace ament_lint_common with autoware_lint_common</li>
+      <li>Update build_depends.repos</li>
+      <li>Fix build_depends</li>
+      <li>Remove lidar_ros_driver from package.xml
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/39">#39</a>)</li>
+      <li>remove unused pointcloud preprocessor components
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/2">#2</a>)</li>
+      <li>feature/use common pointcloud container
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/8">#8</a>)</li>
+      <li>add arg</li>
+      <li>improve readability</li>
+      <li>fix/remove passthrough filter
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/9">#9</a>)</li>
+      <li>release v0.4.0</li>
+      <li>Add vls description
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/3">#3</a>)</li>
+      <li>remove ROS1 packages</li>
+    </ul>
+
+    <p>* Revert "remove ROS1 packages" This reverts commit
+7c1e0d930473170ada063f45c961dc40abd0357b.</p>
+    <ul>
+      <li>add colcon_ignore</li>
+      <li>port to ROS2</li>
+      <li>add xacro namespace for VLP-16/128 tags</li>
+      <li>fix xacro:color value</li>
+      <li>Ros2 v0.8.0 update
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/7">#7</a>)</li>
+      <li>[ROS2] pandar_description
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/9">#9</a>)</li>
+      <li>Feature/add pandar
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/7">#7</a>)</li>
+      <li>add decription for Hesai LiDAR</li>
+      <li>fix direction</li>
+      <li>update for ros2</li>
+      <li>fix config_dir
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/11">#11</a>)</li>
+      <li>delete descriptions except for current reference</li>
+      <li>fix suffix to name
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/2">#2</a>)</li>
+      <li>delete aip_s1
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/3">#3</a>)</li>
+      <li>Modify sensor config
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/4">#4</a>)</li>
+      <li>Update x1 sensor config files</li>
+      <li>Update xx1 sensor config files</li>
+      <li>Update x2 sensor config files</li>
+      <li>Run pre-commit</li>
+      <li>Add prettier-xacro to pre-commit
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/6">#6</a>)</li>
+      <li>Run pre-commit</li>
+      <li>Update README.md</li>
+      <li>Fix for pre-commit</li>
+      <li>Cosmetic change</li>
+      <li>Add _link</li>
+    </ul>
+
+    <p>* Fix missing link Co-authored-by: Kenji Miyake
+&lt;&lt;31987104+kenji-miyake@users.noreply.github.com&gt;&gt; Co-authored-by:
+Kenji Miyake &lt;&lt;kenji.miyake@tier4.jp&gt;&gt;</p>
+    <ul>
+      <li>Fix tlr camera link name for xx1
+(<a href="https://github.com/autowarefoundation/sample_sensor_kit_launch/issues/9">#9</a>)</li>
+      <li>update README.md</li>
+      <li>fix build depends</li>
+      <li>fix files</li>
+      <li>apply pre-commit</li>
+      <li>fix package.xml</li>
+    </ul>
+
+    <p>* remove README for now Co-authored-by: mitsudome-r
+&lt;&lt;ryohsuke.mitsudome@tier4.jp&gt;&gt; Co-authored-by: Akihito Ohsato
+&lt;&lt;aohsato@gmail.com&gt;&gt; Co-authored-by: Daisuke Nishimatsu
+&lt;&lt;42202095+wep21@users.noreply.github.com&gt;&gt; Co-authored-by:
+Yukihiro Saito &lt;&lt;yukky.saito@gmail.com&gt;&gt; Co-authored-by: Frederik
+Beaujean &lt;&lt;72439809+fred-apex-ai@users.noreply.github.com&gt;&gt;
+Co-authored-by: Esteve Fernandez &lt;&lt;esteve@apache.org&gt;&gt;
+Co-authored-by: Takamasa Horibe &lt;&lt;horibe.takamasa@gmail.com&gt;&gt;
+Co-authored-by: Taichi Higashide &lt;&lt;taichi.higashide@tier4.jp&gt;&gt;
+Co-authored-by: hiroyuki obinata
+&lt;&lt;58019445+obi-t4@users.noreply.github.com&gt;&gt; Co-authored-by:
+hosokawa &lt;&lt;hosokawa@sng-3f-ros2-eval.l.sng.tier4.jp&gt;&gt;
+Co-authored-by: HOSOKAWA Ikuto &lt;&lt;hosokawa.ikuto@gmail.com&gt;&gt;
+Co-authored-by: wep21 &lt;&lt;border_goldenmarket@yahoo.co.jp&gt;&gt;
+Co-authored-by: Autoware &lt;&lt;autoware@tier4.jp&gt;&gt; Co-authored-by:
+Kazuki Miyahara &lt;&lt;kmiya@outlook.com&gt;&gt; Co-authored-by: tkimura4
+&lt;&lt;tomoya.kimura@tier4.jp&gt;&gt; Co-authored-by: autoware
+&lt;&lt;autoware@example.com&gt;&gt; Co-authored-by: Takagi, Isamu
+&lt;&lt;isamu.takagi@tier4.jp&gt;&gt; Co-authored-by: hiro-ya-iv
+&lt;&lt;30652835+hiro-ya-iv@users.noreply.github.com&gt;&gt; Co-authored-by:
+YamatoAndo &lt;&lt;yamato.ando@gmail.com&gt;&gt; Co-authored-by: Hiroki OTA
+&lt;&lt;hiroki.ota@tier4.jp&gt;&gt; Co-authored-by: Kosuke Takeuchi
+&lt;&lt;kosuke.tnp@gmail.com&gt;&gt; Co-authored-by:
+autoware-iv-sync-ci[bot]
+&lt;87871706+autoware-iv-sync-ci[bot]\@users.noreply.github.com&gt;
+Co-authored-by: taichiH &lt;&lt;azumade.30@gmail.com&gt;&gt; Co-authored-by:
+Hiroaki ISHIKAWA &lt;&lt;hiroaki.ishikawa@tier4.jp&gt;&gt; Co-authored-by:
+Takeshi Miura &lt;&lt;57553950+1222-takeshi@users.noreply.github.com&gt;&gt;
+Co-authored-by: Keisuke Shima
+&lt;&lt;19993104+KeisukeShima@users.noreply.github.com&gt;&gt; Co-authored-by:
+Satoshi OTA &lt;&lt;44889564+satoshi-ota@users.noreply.github.com&gt;&gt;
+Co-authored-by: Shinnosuke Hirakawa
+&lt;&lt;8327162+0x126@users.noreply.github.com&gt;&gt;</p>
+  </li>
+  <li>Contributors: Amadeusz Szymko, David Wong, Ismet Atabay, Kaan Çolak,
+Kenji Miyake, Kenzo Lobos Tsunekawa, Max Schmeller, Shunsuke Miura,
+Takeshi Miura, Yamato Ando, Yi-Hsiang Fang (Vivid), Yoshi Ri,
+Yukihiro Saito, kminoda</li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/common_sensor_launch/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_auto#github">ament_cmake_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_velodyne_monitor#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_velodyne_monitor#github">autoware_velodyne_monitor  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/nebula_sensor_driver#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/nebula_sensor_driver#github">nebula_sensor_driver  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_lint_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_lint_auto#github">ament_lint_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_lint_common#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_lint_common#github">autoware_lint_common  </a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No direct system dependencies.</em>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th>Name</th>
+                  <th class="text-center">Deps</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/carla_sensor_kit_launch#github">carla_sensor_kit_launch</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/carla_sensor_kit_launch#github-deps" class="endoftree">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/awsim_labs_sensor_kit_launch#github">awsim_labs_sensor_kit_launch</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/awsim_labs_sensor_kit_launch#github-deps" class="endoftree">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/awsim_sensor_kit_launch#github">awsim_sensor_kit_launch</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/awsim_sensor_kit_launch#github-deps" class="endoftree">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/sample_sensor_kit_launch#github">sample_sensor_kit_launch</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/sample_sensor_kit_launch#github-deps" class="endoftree">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <ul>
+            
+              <li><a href="https://github.com/autowarefoundation/autoware_launch/tree/main/sensor_kit/sample_sensor_kit_launch/common_sensor_launch/launch/velodyne_VLP16.launch.xml" target="_blank">launch/velodyne_VLP16.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>launch_driver</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>model</strong> <em>&#91;default: VLP16&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>max_range</strong> <em>&#91;default: 130.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>min_range</strong> <em>&#91;default: 0.4&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>sensor_frame</strong> <em>&#91;default: velodyne&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>return_mode</strong> <em>&#91;default: SingleStrongest&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>sensor_ip</strong> <em>&#91;default: 192.168.1.201&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>host_ip</strong> <em>&#91;default: 255.255.255.255&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>data_port</strong> <em>&#91;default: 2368&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>scan_phase</strong> <em>&#91;default: 0.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>cloud_min_angle</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>cloud_max_angle</strong> <em>&#91;default: 360&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>vehicle_mirror_param_file</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>container_name</strong> <em>&#91;default: velodyne_node_container&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>udp_only</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/autowarefoundation/autoware_launch/tree/main/sensor_kit/sample_sensor_kit_launch/common_sensor_launch/launch/robosense_Helios.launch.xml" target="_blank">launch/robosense_Helios.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>launch_driver</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>model</strong> <em>&#91;default: Helios&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>max_range</strong> <em>&#91;default: 150.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>min_range</strong> <em>&#91;default: 0.2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>sensor_frame</strong> <em>&#91;default: robosense&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>return_mode</strong> <em>&#91;default: SingleStrongest&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>sensor_ip</strong> <em>&#91;default: 192.168.1.200&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>host_ip</strong> <em>&#91;default: 255.255.255.255&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>data_port</strong> <em>&#91;default: 2368&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>gnss_port</strong> <em>&#91;default: 7788&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>scan_phase</strong> <em>&#91;default: 0.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>cloud_min_angle</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>cloud_max_angle</strong> <em>&#91;default: 360&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>vehicle_mirror_param_file</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>container_name</strong> <em>&#91;default: robosense_node_container&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>udp_only</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/autowarefoundation/autoware_launch/tree/main/sensor_kit/sample_sensor_kit_launch/common_sensor_launch/launch/velodyne_VLS128.launch.xml" target="_blank">launch/velodyne_VLS128.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>launch_driver</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>model</strong> <em>&#91;default: VLS128&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>max_range</strong> <em>&#91;default: 250.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>min_range</strong> <em>&#91;default: 0.5&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>sensor_frame</strong> <em>&#91;default: velodyne&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>return_mode</strong> <em>&#91;default: SingleStrongest&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>sensor_ip</strong> <em>&#91;default: 192.168.1.201&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>host_ip</strong> <em>&#91;default: 255.255.255.255&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>data_port</strong> <em>&#91;default: 2368&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>scan_phase</strong> <em>&#91;default: 0.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>cloud_min_angle</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>cloud_max_angle</strong> <em>&#91;default: 360&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>vehicle_mirror_param_file</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>container_name</strong> <em>&#91;default: velodyne_node_container&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>udp_only</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/autowarefoundation/autoware_launch/tree/main/sensor_kit/sample_sensor_kit_launch/common_sensor_launch/launch/robosense_Bpearl.launch.xml" target="_blank">launch/robosense_Bpearl.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>launch_driver</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>model</strong> <em>&#91;default: Bpearl&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>max_range</strong> <em>&#91;default: 30.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>min_range</strong> <em>&#91;default: 0.4&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>sensor_frame</strong> <em>&#91;default: robosense&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>return_mode</strong> <em>&#91;default: SingleStrongest&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>sensor_ip</strong> <em>&#91;default: 192.168.1.200&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>host_ip</strong> <em>&#91;default: 255.255.255.255&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>data_port</strong> <em>&#91;default: 2368&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>gnss_port</strong> <em>&#91;default: 7788&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>scan_phase</strong> <em>&#91;default: 0.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>cloud_min_angle</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>cloud_max_angle</strong> <em>&#91;default: 360&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>vehicle_mirror_param_file</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>container_name</strong> <em>&#91;default: robosense_node_container&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>udp_only</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No message files found.</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No plugins found.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>common_sensor_launch</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/common_sensor_launch+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/autowarefoundation/autoware_launch.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/common_sensor_launch"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/autowarefoundation/autoware_launch/tree/main/sensor_kit/sample_sensor_kit_launch/common_sensor_launch"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/common_sensor_launch?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/common_sensor_launch?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=common_sensor_launch&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "common_sensor_launch"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

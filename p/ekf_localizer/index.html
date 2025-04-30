@@ -1,0 +1,2919 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: ekf_localizer</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/ekf_localizer/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">ekf_localizer</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/ekf_localizer">ekf_localizer</a> <small>package from <a style="text-decoration:none" href="/r/autoware_learn/github-is-whale-autoware_learn">autoware_learn</a> repo</small>
+        </h3>
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/amathutils_lib">
+
+amathutils_lib
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_build_flags">
+
+autoware_build_flags
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_health_checker">
+
+autoware_health_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/emergency_handler">
+
+emergency_handler
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/gnss">
+
+gnss
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet2_extension">
+
+lanelet2_extension
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/libvectormap">
+
+libvectormap
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/libwaypoint_follower">
+
+libwaypoint_follower
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/map_file">
+
+map_file
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/object_map">
+
+object_map
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/op_planner">
+
+op_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/op_ros_helpers">
+
+op_ros_helpers
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/op_simu">
+
+op_simu
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/op_utility">
+
+op_utility
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ros_observer">
+
+ros_observer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tvm_utility">
+
+tvm_utility
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vector_map">
+
+vector_map
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vector_map_server">
+
+vector_map_server
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vehicle_sim_model">
+
+vehicle_sim_model
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_connector">
+
+autoware_connector
+</a>
+            
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+ekf_localizer
+</span>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/gnss_localizer">
+
+gnss_localizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/image_processor">
+
+image_processor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/imm_ukf_pda_track">
+
+imm_ukf_pda_track
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lidar_apollo_cnn_seg_detect">
+
+lidar_apollo_cnn_seg_detect
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lidar_euclidean_cluster_detect">
+
+lidar_euclidean_cluster_detect
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lidar_fake_perception">
+
+lidar_fake_perception
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lidar_kf_contour_track">
+
+lidar_kf_contour_track
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lidar_localizer">
+
+lidar_localizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lidar_naive_l_shape_detect">
+
+lidar_naive_l_shape_detect
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lidar_point_pillars">
+
+lidar_point_pillars
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lidar_shape_estimation">
+
+lidar_shape_estimation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/naive_motion_predict">
+
+naive_motion_predict
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ndt_cpu">
+
+ndt_cpu
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ndt_gpu">
+
+ndt_gpu
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ndt_tku">
+
+ndt_tku
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/obj_db">
+
+obj_db
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/pcl_omp_registration">
+
+pcl_omp_registration
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/pixel_cloud_fusion">
+
+pixel_cloud_fusion
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/points_downsampler">
+
+points_downsampler
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/points_preprocessor">
+
+points_preprocessor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/pos_db">
+
+pos_db
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/range_vision_fusion">
+
+range_vision_fusion
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/road_occupancy_processor">
+
+road_occupancy_processor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/roi_object_filter">
+
+roi_object_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/trafficlight_recognizer">
+
+trafficlight_recognizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/twist_generator">
+
+twist_generator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vel_pose_diff_checker">
+
+vel_pose_diff_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vision_beyond_track">
+
+vision_beyond_track
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vision_darknet_detect">
+
+vision_darknet_detect
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vision_lane_detect">
+
+vision_lane_detect
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vision_segment_enet_detect">
+
+vision_segment_enet_detect
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vision_ssd_detect">
+
+vision_ssd_detect
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/astar_search">
+
+astar_search
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/costmap_generator">
+
+costmap_generator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/decision_maker">
+
+decision_maker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/dp_planner">
+
+dp_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ff_waypoint_follower">
+
+ff_waypoint_follower
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/freespace_planner">
+
+freespace_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lane_planner">
+
+lane_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lattice_planner">
+
+lattice_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ll2_global_planner">
+
+ll2_global_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mpc_follower">
+
+mpc_follower
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/op_global_planner">
+
+op_global_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/op_local_planner">
+
+op_local_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/op_simulation_package">
+
+op_simulation_package
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/op_utilities">
+
+op_utilities
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/pure_pursuit">
+
+pure_pursuit
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/state_machine_lib">
+
+state_machine_lib
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/twist_filter">
+
+twist_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/twist_gate">
+
+twist_gate
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/way_planner">
+
+way_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/waypoint_maker">
+
+waypoint_maker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/waypoint_planner">
+
+waypoint_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_quickstart_examples">
+
+autoware_quickstart_examples
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_can_msgs">
+
+autoware_can_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_config_msgs">
+
+autoware_config_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_external_msgs">
+
+autoware_external_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lanelet2_msgs">
+
+autoware_lanelet2_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_map_msgs">
+
+autoware_map_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_msgs">
+
+autoware_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_system_msgs">
+
+autoware_system_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tablet_socket_msgs">
+
+tablet_socket_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vector_map_msgs">
+
+vector_map_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/carla_autoware_bridge">
+
+carla_autoware_bridge
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/gazebo_camera_description">
+
+gazebo_camera_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/gazebo_imu_description">
+
+gazebo_imu_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lgsvl_simulator_bridge">
+
+lgsvl_simulator_bridge
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vehicle_gazebo_simulation_interface">
+
+vehicle_gazebo_simulation_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vehicle_gazebo_simulation_launcher">
+
+vehicle_gazebo_simulation_launcher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/wf_simulator">
+
+wf_simulator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_bag_tools">
+
+autoware_bag_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_camera_lidar_calibrator">
+
+autoware_camera_lidar_calibrator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_launcher">
+
+autoware_launcher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_launcher_rviz">
+
+autoware_launcher_rviz
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/calibration_publisher">
+
+calibration_publisher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/data_preprocessor">
+
+data_preprocessor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/graph_tools">
+
+graph_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/kitti_box_publisher">
+
+kitti_box_publisher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/kitti_launch">
+
+kitti_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/kitti_player">
+
+kitti_player
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet_aisan_converter">
+
+lanelet_aisan_converter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/log_tools">
+
+log_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/map_tf_generator">
+
+map_tf_generator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/map_tools">
+
+map_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/marker_downsampler">
+
+marker_downsampler
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mqtt_socket">
+
+mqtt_socket
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/multi_lidar_calibrator">
+
+multi_lidar_calibrator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/oculus_socket">
+
+oculus_socket
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/pc2_downsampler">
+
+pc2_downsampler
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rosbag_controller">
+
+rosbag_controller
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/runtime_manager">
+
+runtime_manager
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/sound_player">
+
+sound_player
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/system_monitor">
+
+system_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tablet_socket">
+
+tablet_socket
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/twist2odom">
+
+twist2odom
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/udon_socket">
+
+udon_socket
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vehicle_engage_panel">
+
+vehicle_engage_panel
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vehicle_socket">
+
+vehicle_socket
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/decision_maker_panel">
+
+decision_maker_panel
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/detected_objects_visualizer">
+
+detected_objects_visualizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/fastvirtualscan">
+
+fastvirtualscan
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/gazebo_world_description">
+
+gazebo_world_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/glviewer">
+
+glviewer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/integrated_viewer">
+
+integrated_viewer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/points2image">
+
+points2image
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rosinterface">
+
+rosinterface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_rviz_plugins">
+
+autoware_rviz_plugins
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vehicle_description">
+
+vehicle_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vehicle_model">
+
+vehicle_model
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/adi_driver">
+
+adi_driver
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/as">
+
+as
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_driveworks_gmsl_interface">
+
+autoware_driveworks_gmsl_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_driveworks_interface">
+
+autoware_driveworks_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vlg22c_cam">
+
+vlg22c_cam
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/custom_msgs">
+
+custom_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/garmin">
+
+garmin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/hokuyo">
+
+hokuyo
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/javad_navsat_driver">
+
+javad_navsat_driver
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/kvaser">
+
+kvaser
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/sick_lms5xx">
+
+sick_lms5xx
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/memsic_imu">
+
+memsic_imu
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/microstrain_driver">
+
+microstrain_driver
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/nmea_navsat">
+
+nmea_navsat
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pointgrey_drivers">
+
+autoware_pointgrey_drivers
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/sick_ldmrs_description">
+
+sick_ldmrs_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/sick_ldmrs_driver">
+
+sick_ldmrs_driver
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/sick_ldmrs_laser">
+
+sick_ldmrs_laser
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/sick_ldmrs_msgs">
+
+sick_ldmrs_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/sick_ldmrs_tools">
+
+sick_ldmrs_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vectacam">
+
+vectacam
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/xsens_driver">
+
+xsens_driver
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ymc">
+
+ymc
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ds4">
+
+ds4
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ds4_driver">
+
+ds4_driver
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ds4_msgs">
+
+ds4_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet2">
+
+lanelet2
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet2_core">
+
+lanelet2_core
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet2_examples">
+
+lanelet2_examples
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet2_io">
+
+lanelet2_io
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet2_maps">
+
+lanelet2_maps
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet2_matching">
+
+lanelet2_matching
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet2_projection">
+
+lanelet2_projection
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet2_python">
+
+lanelet2_python
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet2_routing">
+
+lanelet2_routing
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet2_traffic_rules">
+
+lanelet2_traffic_rules
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet2_validation">
+
+lanelet2_validation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mrt_cmake_modules">
+
+mrt_cmake_modules
+</a>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/ekf_localizer"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/is-whale/autoware_learn/tree/1.14/autoware/core_perception/ekf_localizer"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-primary">1</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">10</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>1.12.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>Apache 2.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-info">
+                  
+                    CATKIN</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default">autoware src learn and recode.</span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/is-whale/autoware_learn.git">https://github.com/is-whale/autoware_learn.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">1.14</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-03-14
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <em>No category tags.</em>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/autoware_learn/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/autoware_learn/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/autoware_learn/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            The ekf_localizer package
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional links.</em>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>horibe</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional authors.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/is-whale/autoware_learn/tree/1.14/autoware/core_perception/ekf_localizer/README.md" title="Open in git repository">autoware/core_perception/ekf_localizer/README.md</a></div>
+              <div class="panel-body">
+                    <div class="rendered-markdown">
+<h1 id="overview">Overview</h1>
+
+<p>The <strong>Extend Kalman Filter Localizer</strong> estimates robust and less noisy robot pose and twist by integrating the 2D vehicle dynamics model with input ego-pose and ego-twist messages. The algorithm is designed especially for fast moving robot such as autonomous driving system.</p>
+
+<h2 id="flowchart">Flowchart</h2>
+
+<p>The overall flowchart of the ekf_localizer is described below.</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/is-whale/autoware_learn/1.14/autoware/core_perception/ekf_localizer/./media/ekf_flowchart.png" width="800">
+</p>
+
+<h2 id="features">Features</h2>
+<p>This package includes the following features:</p>
+
+<ul>
+  <li>
+<strong>Time delay compensation</strong> for input messages, which enables proper integration of input information with varying time delay. This is important especially for high speed moving robot, such as autonomous driving vehicle. (see following figure).</li>
+  <li>
+<strong>Automatic estimation of yaw bias</strong> prevents modeling errors caused by sensor mounting angle errors, which can improve estimation accuracy.</li>
+  <li>
+<strong>Mahalanobis distance gate</strong> enables probabilistic outlier detection to determine which inputs should be used or ignored.</li>
+  <li>
+<strong>Smooth update</strong>, the Kalman Filter measurement update is typically performed when a measurement is obtained, but it can cause large changes in the estimated value especially for low frequency measurements. Since the algorithm can consider the measurement time, the measurement data can be divided into multiple pieces and integrated smoothly while maintaining consistency (see following figure).</li>
+</ul>
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/is-whale/autoware_learn/1.14/autoware/core_perception/ekf_localizer/./media/ekf_delay_comp.png" width="800">
+</p>
+
+<p>####</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/is-whale/autoware_learn/1.14/autoware/core_perception/ekf_localizer/./media/ekf_smooth_update.png" width="800">
+</p>
+
+<h1 id="launch">Launch</h1>
+
+<p>The <code class="language-plaintext highlighter-rouge">ekf_localizer</code> starts with the default parameters with the following command.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>roslaunch ekf_localizer ekf_localizer.launch
+
+</code></pre></div></div>
+
+<p>The parameters and input topic names can be set in the <code class="language-plaintext highlighter-rouge">ekf_localizer.launch</code> file.</p>
+
+<h1 id="node">Node</h1>
+
+<h2 id="subscribed-topics">Subscribed Topics</h2>
+<ul>
+  <li>
+    <p>measured_pose_with_covariance (geometry_msgs/PoseWithCovarianceStamped)</p>
+
+    <p>Input pose source with measurement covariance matrix, used when <code class="language-plaintext highlighter-rouge">use_pose_with_covariance</code> is true.</p>
+  </li>
+  <li>
+    <p>measured_twist_with_covariance (geometry_msgs/PoseWithCovarianceStamped)</p>
+
+    <p>Input twist source with measurement covariance matrix, used when <code class="language-plaintext highlighter-rouge">use_twist_with_covariance</code> is true.</p>
+  </li>
+  <li>
+    <p>measured_pose (geometry_msgs/PoseStamped)</p>
+
+    <p>Input pose source, used when <code class="language-plaintext highlighter-rouge">use_pose_with_covariance</code> is false.</p>
+  </li>
+  <li>
+    <p>measured_twist (geometry_msgs/TwistStamped)</p>
+
+    <p>Input twist source, used when <code class="language-plaintext highlighter-rouge">use_twist_with_covariance</code> is false.</p>
+  </li>
+  <li>
+    <p>initialpose (geometry_msgs/PoseWithCovarianceStamped)</p>
+
+    <p>Initial pose for EKF. The estimated pose is initialized with zeros at start. It is initialized with this message whenever published.</p>
+  </li>
+</ul>
+
+<h2 id="published-topics">Published Topics</h2>
+
+<ul>
+  <li>
+    <p>ekf_pose (geometry_msgs/PoseStamped)</p>
+
+    <p>Estimated pose.</p>
+  </li>
+  <li>
+    <p>ekf_pose_with_covariance (geometry_msgs/PoseWithCovarianceStamped)</p>
+
+    <p>Estimated pose with covariance.</p>
+  </li>
+  <li>
+    <p>ekf_twist (geometry_msgs/TwistStamped)</p>
+
+    <p>Estimated twist.</p>
+  </li>
+  <li>
+    <p>ekf_twist_with_covariance (geometry_msgs/TwistWithCovarianceStamped)</p>
+
+    <p>Estimated twist with covariance.</p>
+  </li>
+</ul>
+
+<h2 id="published-tf">Published TF</h2>
+
+<ul>
+  <li>
+    <p>ekf_pose</p>
+
+    <p>TF from “map” coordinate to estimated pose.</p>
+  </li>
+</ul>
+
+<h1 id="functions">Functions</h1>
+
+<h2 id="predict">Predict</h2>
+
+<p>The current robot state is predicted from previously estimated data using a given prediction model. This calculation is called at constant interval (<code class="language-plaintext highlighter-rouge">predict_frequency [Hz]</code>). The prediction equation is described at the end of this page.</p>
+
+<h2 id="measurement-update">Measurement Update</h2>
+
+<p>Before update, the Mahalanobis distance is calculated between the measured input and the predicted state, the measurement update is not performed for inputs where the Mahalanobis distance exceeds the given threshold.</p>
+
+<p>The predicted state is updated with the latest measured inputs, measured_pose and measured_twist. The updates are performed with the same frequency as prediction, usually at a high frequency, in order to enable smooth state estimation.</p>
+
+<h1 id="parameter-description">Parameter description</h1>
+
+<p>The parameters are set in <code class="language-plaintext highlighter-rouge">launch/ekf_localizer.launch</code> .</p>
+
+<h2 id="for-node">For Node</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+      <th style="text-align: left">Default value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">show_debug_info</td>
+      <td style="text-align: left">bool</td>
+      <td style="text-align: left">Flag to display debug info</td>
+      <td style="text-align: left">false</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">predict_frequency</td>
+      <td style="text-align: left">double</td>
+      <td style="text-align: left">Frequency for filtering and publishing [Hz]</td>
+      <td style="text-align: left">50.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">tf_rate</td>
+      <td style="text-align: left">double</td>
+      <td style="text-align: left">Frqcuency for tf broadcasting [Hz]</td>
+      <td style="text-align: left">10.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">extend_state_step</td>
+      <td style="text-align: left">int</td>
+      <td style="text-align: left">Max delay step which can be dealt with in EKF. Large number increases computational cost.</td>
+      <td style="text-align: left">50</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">enable_yaw_bias_estimation</td>
+      <td style="text-align: left">bool</td>
+      <td style="text-align: left">Flag to enable yaw bias estimation</td>
+      <td style="text-align: left">true</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="for-pose-measurement">For pose measurement</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+      <th style="text-align: left">Default value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">pose_additional_delay</td>
+      <td style="text-align: left">double</td>
+      <td style="text-align: left">Additional delay time for pose measurement [s]</td>
+      <td style="text-align: left">0.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">pose_measure_uncertainty_time</td>
+      <td style="text-align: left">double</td>
+      <td style="text-align: left">Measured time uncertainty used for covariance calculation [s]</td>
+      <td style="text-align: left">0.01</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">pose_rate</td>
+      <td style="text-align: left">double</td>
+      <td style="text-align: left">Approximated input pose rate used for covariance calculation [Hz]</td>
+      <td style="text-align: left">10.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">pose_gate_dist</td>
+      <td style="text-align: left">double</td>
+      <td style="text-align: left">Limit of Mahalanobis distance used for outliers detection</td>
+      <td style="text-align: left">10000.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">use_pose_with_covariance</td>
+      <td style="text-align: left">bool</td>
+      <td style="text-align: left">Flag to use covariance in pose_with_covarianve message</td>
+      <td style="text-align: left">false</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">pose_stddev_x</td>
+      <td style="text-align: left">double</td>
+      <td style="text-align: left">Standard deviation for pose position x [m] (used when use_pose_with_covariance is false)</td>
+      <td style="text-align: left">0.05</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">pose_stddev_y</td>
+      <td style="text-align: left">double</td>
+      <td style="text-align: left">Standard deviation for pose position y [m] (used when use_pose_with_covariance is false)</td>
+      <td style="text-align: left">0.05</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">pose_stddev_yaw</td>
+      <td style="text-align: left">double</td>
+      <td style="text-align: left">Standard deviation for pose yaw angle [rad] (used when use_pose_with_covariance is false)</td>
+      <td style="text-align: left">0.025</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="for-twist-measurement">For twist measurement</h2>
+<p>|Name|Type|Description|Default value|
+|:—|:—|:—|:—|
+|twist_additional_delay|double|Additional delay time for twist [s]|0.0|
+|twist_rate|double|Approximated input twist rate used for covariance calculation [Hz]|10.0|
+|twist_gate_dist|double|Limit of Mahalanobis distance used for outliers detection|10000.0|
+|use_twist_with_covariance|bool|Flag to use covariance in twist_with_covariance message|false|
+|twist_stddev_vx|double|Standard deviation for twist linear x [m/s] (used when use_twist_with_covariance is false) |0.2|
+|twist_stddev_wz|double|Standard deviation for twist angular z [rad/s] (used when use_twist_with_covariance is false) |0.03|</p>
+
+<h2 id="for-process-noise">For process noise</h2>
+<p>|Name|Type|Description|Default value|
+|:—|:—|:—|:—|
+|proc_stddev_vx_c|double|Standard deviation of process noise in time differentiation expression of linear velocity x, noise for d_vx = 0|2.0|
+|proc_stddev_wz_c|double|Standard deviation of process noise in time differentiation expression of angular velocity z, noise for d_wz = 0|0.2|
+|proc_stddev_yaw_c|double|Standard deviation of process noise in time differentiation expression of yaw, noise for d_yaw = omege |0.005|
+|proc_stddev_yaw_bias_c|double|Standard deviation of process noise in time differentiation expression of yaw_bias, noise for d_yaw_bias = 0|0.001|</p>
+
+<p>note: process noise for position x &amp; y are calculated automatically from nonlinear dynamics.</p>
+
+<h1 id="how-to-turn-ekf-parameters">How to turn EKF parameters</h1>
+
+<p><strong>0. Preliminaries</strong></p>
+<ul>
+  <li>Check header time in pose and twist message is set to sensor time appropriately, because time delay is calculated from this value. If it is difficult to set appropriate time due to timer synchronization problem, use <code class="language-plaintext highlighter-rouge">twist_additional_delay</code> and <code class="language-plaintext highlighter-rouge">pose_additional_delay</code> to correct the time.</li>
+  <li>Check the relation between measurement pose and twist is appropriate (whether the derivative of pose has similar value to twist). This discrepancy is caused mainly by unit error (such as comfusing radian/degree) or bias noise, and it causes large estimation errors.</li>
+</ul>
+
+<p><strong>1. Set sensor parameters</strong></p>
+
+<p>Set sensor-rate and standard-deviation from the basic information of the sensor. The <code class="language-plaintext highlighter-rouge">pose_measure_uncertainty_time</code> is for uncertainty of the header timestamp data.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">pose_measure_uncertainty_time</code></li>
+  <li><code class="language-plaintext highlighter-rouge">pose_rate</code></li>
+  <li><code class="language-plaintext highlighter-rouge">pose_stddev_x</code></li>
+  <li><code class="language-plaintext highlighter-rouge">pose_stddev_y</code></li>
+  <li><code class="language-plaintext highlighter-rouge">pose_stddev_yaw</code></li>
+  <li><code class="language-plaintext highlighter-rouge">twist_rate</code></li>
+  <li><code class="language-plaintext highlighter-rouge">twist_stddev_vx</code></li>
+  <li><code class="language-plaintext highlighter-rouge">twist_stddev_wz</code></li>
+</ul>
+
+<p><strong>2. Set process model parameters</strong></p>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">proc_stddev_vx_c</code> : set to maximum linear acceleration</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">proc_stddev_wz_c</code> : set to maximum angular acceleration</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">proc_stddev_yaw_c</code> : This parameter describes the correlation between the yaw and yaw-rate. Large value means the change in yaw does not correlate to the estiamted yaw-rate. If this is set to 0, it means the change in estimate yaw is equal to yaw-rate. Usually this should be set to 0.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">proc_stddev_yaw_bias_c</code> : This parameter is the standard deviation for the rate of change in yaw bias. In most cases, yaw bias is constant, so it can be very small, but must be non-zero.</li>
+</ul>
+
+<p><strong>3. Tune sensor standard deviation parameters with rosbag simulation.</strong></p>
+
+<p>If the position measurement seems more reliable, make these parameters smaller. If the estimated position seems to be noisy due to pose measurement noise, make these values bigger.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">pose_stddev_x</code></li>
+  <li><code class="language-plaintext highlighter-rouge">pose_stddev_y</code></li>
+  <li><code class="language-plaintext highlighter-rouge">pose_stddev_yaw</code></li>
+</ul>
+
+<p>If the twist measurement seems more reliable, make these parameters smaller. If the estimated twist seems to be noisy due to pose measurement noise, make these values bigger.</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">twist_stddev_vx</code></li>
+  <li><code class="language-plaintext highlighter-rouge">twist_stddev_wz</code></li>
+</ul>
+
+<h1 id="kalman-filter-model">Kalman Filter Model</h1>
+
+<h2 id="kinematics-model-in-update-function">kinematics model in update function</h2>
+<p><img src="https://raw.githubusercontent.com/is-whale/autoware_learn/1.14/autoware/core_perception/ekf_localizer/./media/ekf_dynamics.png" width="320"></p>
+
+<p>where <code class="language-plaintext highlighter-rouge">b_k</code> is the yaw-bias.</p>
+
+<h2 id="time-delay-model">time delay model</h2>
+<p><img src="https://raw.githubusercontent.com/is-whale/autoware_learn/1.14/autoware/core_perception/ekf_localizer/./media/delay_model_eq.png" width="320"></p>
+
+<h1 id="test-result-with-autoware-ndt">Test Result with Autoware NDT</h1>
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/is-whale/autoware_learn/1.14/autoware/core_perception/ekf_localizer/./media/ekf_autoware_res.png" width="600">
+</p>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <em>No CHANGELOG found.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/ekf_localizer/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/catkin#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/catkin#github">catkin  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/amathutils_lib#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/amathutils_lib#github">amathutils_lib  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_build_flags#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_build_flags#github">autoware_build_flags  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_msgs#github">autoware_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/geometry_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/geometry_msgs#github">geometry_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/roscpp#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/roscpp#github">roscpp  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/sensor_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/sensor_msgs#github">sensor_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/std_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/std_msgs#github">std_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2#github">tf2  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2_ros#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2_ros#github">tf2_ros  </a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No direct system dependencies.</em>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th>Name</th>
+                  <th class="text-center">Deps</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/tier4_localization_launch#github">tier4_localization_launch</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/tier4_localization_launch#github-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                    <tr>
+                      <td><a href="/p/tier4_localization_launch#github">tier4_localization_launch</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/tier4_localization_launch#github-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                    <tr>
+                      <td><a href="/p/tier4_localization_launch#github">tier4_localization_launch</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/tier4_localization_launch#github-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                    <tr>
+                      <td><a href="/p/tier4_localization_launch#github">tier4_localization_launch</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/tier4_localization_launch#github-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                    <tr>
+                      <td><a href="/p/tier4_localization_launch#github">tier4_localization_launch</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/tier4_localization_launch#github-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <ul>
+            
+              <li><a href="https://github.com/is-whale/autoware_learn/tree/1.14/autoware/core_perception/ekf_localizer/launch/ekf_localizer.launch" target="_blank">launch/ekf_localizer.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>show_debug_info</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_yaw_bias_estimation</strong> <em>&#91;default: True&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>predict_frequency</strong> <em>&#91;default: 50.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>extend_state_step</strong> <em>&#91;default: 50&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_pose_with_covariance</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input_pose_name</strong> <em>&#91;default: in_pose&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input_pose_with_cov_name</strong> <em>&#91;default: in_pose_with_covariance&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>pose_additional_delay</strong> <em>&#91;default: 0.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>pose_measure_uncertainty_time</strong> <em>&#91;default: 0.01&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>pose_rate</strong> <em>&#91;default: 10.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>pose_gate_dist</strong> <em>&#91;default: 10000.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>pose_stddev_x</strong> <em>&#91;default: 0.05&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>pose_stddev_y</strong> <em>&#91;default: 0.05&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>pose_stddev_yaw</strong> <em>&#91;default: 0.025&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_twist_with_covariance</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input_twist_name</strong> <em>&#91;default: in_twist&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input_twist_with_cov_name</strong> <em>&#91;default: in_twist_with_covariance&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>twist_additional_delay</strong> <em>&#91;default: 0.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>twist_rate</strong> <em>&#91;default: 10.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>twist_gate_dist</strong> <em>&#91;default: 10000.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>twist_stddev_vx</strong> <em>&#91;default: 0.2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>twist_stddev_wz</strong> <em>&#91;default: 0.03&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>proc_stddev_yaw_c</strong> <em>&#91;default: 0.005&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>proc_stddev_yaw_bias_c</strong> <em>&#91;default: 0.001&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>proc_stddev_vx_c</strong> <em>&#91;default: 0.1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>proc_stddev_wz_c</strong> <em>&#91;default: 0.05&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No message files found.</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No plugins found.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>ekf_localizer</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/ekf_localizer+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/is-whale/autoware_learn.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/ekf_localizer"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/is-whale/autoware_learn/tree/1.14/autoware/core_perception/ekf_localizer"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/ekf_localizer?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/ekf_localizer?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=ekf_localizer&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "ekf_localizer"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

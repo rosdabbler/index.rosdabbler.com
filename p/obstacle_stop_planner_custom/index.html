@@ -1,0 +1,2146 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: obstacle_stop_planner_custom</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/obstacle_stop_planner_custom/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">obstacle_stop_planner_custom</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/obstacle_stop_planner_custom">obstacle_stop_planner_custom</a> <small>package from <a style="text-decoration:none" href="/r/aichallenge2022-sim/github-automotiveaichallenge-aichallenge2022-sim">aichallenge2022-sim</a> repo</small>
+        </h3>
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/aichallenge_eval">
+
+aichallenge_eval
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/aichallenge_launch">
+
+aichallenge_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/aichallenge_score_msgs">
+
+aichallenge_score_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/aichallenge_submit_launch">
+
+aichallenge_submit_launch
+</a>
+            
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+obstacle_stop_planner_custom
+</span>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/sample_code_cpp">
+
+sample_code_cpp
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_autoware_api_launch">
+
+tier4_autoware_api_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_control_launch">
+
+tier4_control_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_localization_launch">
+
+tier4_localization_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_map_launch">
+
+tier4_map_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_perception_launch">
+
+tier4_perception_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_planning_launch">
+
+tier4_planning_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_sensing_launch">
+
+tier4_sensing_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_simulator_launch">
+
+tier4_simulator_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_system_launch">
+
+tier4_system_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_vehicle_launch">
+
+tier4_vehicle_launch
+</a>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/obstacle_stop_planner_custom"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/automotiveaichallenge/aichallenge2022-sim/tree/main/autoware/aichallenge_ws/src/aichallenge_submit/obstacle_stop_planner_custom"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-primary">1</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">25</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>0.1.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>Apache License 2.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-default">
+                  
+                    AMENT_CMAKE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/automotiveaichallenge/aichallenge2022-sim.git">https://github.com/automotiveaichallenge/aichallenge2022-sim.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2023-01-14
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <em>No category tags.</em>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/aichallenge2022-sim/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/aichallenge2022-sim/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/aichallenge2022-sim/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            The obstacle_stop_planner package
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional links.</em>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Satoshi Ota</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Satoshi Ota</li>
+                
+                  <li>Yukihiro Saito</li>
+                
+              </ul>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/automotiveaichallenge/aichallenge2022-sim/tree/main/autoware/aichallenge_ws/src/aichallenge_submit/obstacle_stop_planner_custom/README.md" title="Open in git repository">autoware/aichallenge_ws/src/aichallenge_submit/obstacle_stop_planner_custom/README.md</a></div>
+              <div class="panel-body">
+                    <div class="rendered-markdown">
+<h1 id="obstacle-stop-planner">Obstacle Stop Planner</h1>
+
+<h2 id="overview">Overview</h2>
+
+<p><code class="language-plaintext highlighter-rouge">obstacle_stop_planner</code> has following modules</p>
+
+<ul>
+  <li>Obstacle Stop Planner
+    <ul>
+      <li>inserts a stop point in trajectory when there is a static point cloud on the trajectory.</li>
+    </ul>
+  </li>
+  <li>Slow Down Planner
+    <ul>
+      <li>inserts a deceleration section in trajectory when there is a point cloud near the trajectory.</li>
+    </ul>
+  </li>
+  <li>Adaptive Cruise Controller (ACC)
+    <ul>
+      <li>embeds target velocity in trajectory when there is a dynamic point cloud on the trajectory.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="input-topics">Input topics</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/input/pointcloud</code></td>
+      <td>sensor_msgs::PointCloud2</td>
+      <td>obstacle pointcloud</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/input/trajectory</code></td>
+      <td>autoware_auto_planning_msgs::Trajectory</td>
+      <td>trajectory</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/input/vector_map</code></td>
+      <td>autoware_auto_mapping_msgs::HADMapBin</td>
+      <td>vector map</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/input/odometry</code></td>
+      <td>nav_msgs::Odometry</td>
+      <td>vehicle velocity</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/input/dynamic_objects</code></td>
+      <td>autoware_auto_perception_msgs::PredictedObjects</td>
+      <td>dynamic objects</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/input/expand_stop_range</code></td>
+      <td>tier4_planning_msgs::msg::ExpandStopRange</td>
+      <td>expand stop range</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="output-topics">Output topics</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~output/trajectory</code></td>
+      <td>autoware_auto_planning_msgs::Trajectory</td>
+      <td>trajectory to be followed</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~output/stop_reasons</code></td>
+      <td>tier4_planning_msgs::StopReasonArray</td>
+      <td>reasons that cause the vehicle to stop</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="common-parameter">Common Parameter</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">enable_slow_down</code></td>
+      <td>bool</td>
+      <td>enable slow down planner [-]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">max_velocity</code></td>
+      <td>double</td>
+      <td>max velocity [m/s]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">hunting_threshold</code></td>
+      <td>double</td>
+      <td>even if the obstacle disappears, the stop judgment continues for hunting_threshold [s]</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="obstacle-stop-planner-1">Obstacle Stop Planner</h2>
+
+<h3 id="role">Role</h3>
+
+<p>This module inserts the stop point before the obstacle with margin. In nominal case, the margin is the sum of <code class="language-plaintext highlighter-rouge">baselink_to_front</code> and <code class="language-plaintext highlighter-rouge">max_longitudinal_margin</code>. The <code class="language-plaintext highlighter-rouge">baselink_to_front</code> means the distance between <code class="language-plaintext highlighter-rouge">baselink</code>(center of rear-wheel axis) and front of the car. The detection area is generated along the processed trajectory as following figure. (This module cut off the input trajectory behind the ego position and decimates the trajectory points for reducing computational costs.)</p>
+
+<figure>
+  ![example](./docs/collision_parameters.svg){width=1000}
+  <figcaption>parameters for obstacle stop planner</figcaption>
+</figure>
+
+<figure>
+  ![example](./docs/stop_target.svg){width=1000}
+  <figcaption>target for obstacle stop planner</figcaption>
+</figure>
+
+<p>If another stop point has already been inserted by other modules within <code class="language-plaintext highlighter-rouge">max_longitudinal_margin</code>, the margin is the sum of <code class="language-plaintext highlighter-rouge">baselink_to_front</code> and <code class="language-plaintext highlighter-rouge">min_longitudinal_margin</code>. This feature exists to avoid stopping unnaturally position. (For example, the ego stops unnaturally far away from stop line of crosswalk that pedestrians cross to without this feature.)</p>
+
+<figure>
+  ![example](./docs/min_longitudinal_margin.svg){width=1000}
+  <figcaption>minimum longitudinal margin</figcaption>
+</figure>
+
+<p>The module searches the obstacle pointcloud within detection area. When the pointcloud is found, <code class="language-plaintext highlighter-rouge">Adaptive Cruise Controller</code> modules starts to work. only when <code class="language-plaintext highlighter-rouge">Adaptive Cruise Controller</code> modules does not insert target velocity, the stop point is inserted to the trajectory. The stop point means the point with 0 velocity.</p>
+
+<h3 id="restart-prevention">Restart prevention</h3>
+
+<p>If it needs X meters (e.g. 0.5 meters) to stop once the vehicle starts moving due to the poor vehicle control performance, the vehicle goes over the stopping position that should be strictly observed when the vehicle starts to moving in order to approach the near stop point (e.g. 0.3 meters away).</p>
+
+<p>This module has parameter <code class="language-plaintext highlighter-rouge">hold_stop_margin_distance</code> in order to prevent from these redundant restart. If the vehicle is stopped within <code class="language-plaintext highlighter-rouge">hold_stop_margin_distance</code> meters from stop point of the module, the module judges that the vehicle has already stopped for the module’s stop point and plans to keep stopping current position even if the vehicle is stopped due to other factors.</p>
+
+<figure>
+  ![example](./docs/restart_prevention.svg){width=1000}
+  <figcaption>parameters</figcaption>
+</figure>
+
+<figure>
+  ![example](./docs/restart.svg){width=1000}
+  <figcaption>outside the hold_stop_margin_distance</figcaption>
+</figure>
+
+<figure>
+  ![example](./docs/keep_stopping.svg){width=1000}
+  <figcaption>inside the hold_stop_margin_distance</figcaption>
+</figure>
+
+<h3 id="parameters">Parameters</h3>
+
+<h4 id="stop-position">Stop position</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">max_longitudinal_margin</code></td>
+      <td>double</td>
+      <td>margin between obstacle and the ego’s front [m]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">min_longitudinal_margin</code></td>
+      <td>double</td>
+      <td>if any obstacle exists within <code class="language-plaintext highlighter-rouge">max_longitudinal_margin</code>, this module set margin as the value of <em>stop margin</em> to <code class="language-plaintext highlighter-rouge">min_longitudinal_margin</code> [m]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">hold_stop_margin_distance</code></td>
+      <td>double</td>
+      <td>parameter for restart prevention (See above section) [m]</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="obstacle-detection-area">Obstacle detection area</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">lateral_margin</code></td>
+      <td>double</td>
+      <td>lateral margin from the vehicle footprint for collision obstacle detection area [m]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">step_length</code></td>
+      <td>double</td>
+      <td>step length for pointcloud search range [m]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">extend_distance</code></td>
+      <td>double</td>
+      <td>extend trajectory to consider after goal obstacle in the extend_distance [m]</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="flowchart">Flowchart</h3>
+
+<pre><code class="language-plantuml">@startuml
+title insertStopPoint
+start
+
+
+:callback trajectory;
+
+:trim trajectory from self-pose;
+
+:decimate trajectory;
+
+:generate detection area;
+
+if ( search obstacle pointcloud in detection area?) then (yes(find))
+else (no(not find))
+  stop
+endif
+
+if ( insert target velocity by adaptive cruise module?) then (yes)
+  stop
+else (no)
+endif
+
+:insert stop point;
+
+
+stop
+@enduml
+
+</code></pre>
+
+<h2 id="slow-down-planner">Slow Down Planner</h2>
+
+<h3 id="role-1">Role</h3>
+
+<p>This module inserts the slow down section before the obstacle with forward margin and backward margin. The forward margin is the sum of <code class="language-plaintext highlighter-rouge">baselink_to_front</code> and <code class="language-plaintext highlighter-rouge">longitudinal_forward_margin</code>, and the backward margin is the sum of <code class="language-plaintext highlighter-rouge">baselink_to_front</code> and <code class="language-plaintext highlighter-rouge">longitudinal_backward_margin</code>. The ego keeps slow down velocity in slow down section. The velocity is calculated the following equation.</p>
+
+<p>$v_{target} = v_{min} + \frac{l_{ld} - l_{vw}/2}{l_{margin}} (v_{max} - v_{min} )$</p>
+
+<ul>
+  <li>$v_{target}$ : slow down target velocity [m/s]</li>
+  <li>$v_{min}$ : <code class="language-plaintext highlighter-rouge">min_slow_down_velocity</code> [m/s]</li>
+  <li>$v_{max}$ : <code class="language-plaintext highlighter-rouge">max_slow_down_velocity</code> [m/s]</li>
+  <li>$l_{ld}$ : lateral deviation between the obstacle and the ego footprint [m]</li>
+  <li>$l_{margin}$ : <code class="language-plaintext highlighter-rouge">lateral_margin</code> [m]</li>
+  <li>$l_{vw}$ : width of the ego footprint [m]</li>
+</ul>
+
+<p>The above equation means that the smaller the lateral deviation of the pointcloud, the lower the velocity of the slow down section.</p>
+
+<figure>
+  ![example](./docs/slow_down_parameters.svg){width=1000}
+  <figcaption>parameters for slow down planner</figcaption>
+</figure>
+
+<figure>
+  ![example](./docs/slow_down_target.svg){width=1000}
+  <figcaption>target for slow down planner</figcaption>
+</figure>
+
+<h3 id="parameters-1">Parameters</h3>
+
+<h4 id="slow-down-section">Slow down section</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">longitudinal_forward_margin</code></td>
+      <td>double</td>
+      <td>margin between obstacle and the ego’s front [m]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">longitudinal_backward_margin</code></td>
+      <td>double</td>
+      <td>margin between obstacle and the ego’s rear [m]</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="obstacle-detection-area-1">Obstacle detection area</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">lateral_margin</code></td>
+      <td>double</td>
+      <td>lateral margin from the vehicle footprint for slow down obstacle detection area [m]</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="slow-down-target-velocity">Slow down target velocity</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">max_slow_down_velocity</code></td>
+      <td>double</td>
+      <td>max slow down velocity [m/s]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">min_slow_down_velocity</code></td>
+      <td>double</td>
+      <td>min slow down velocity [m/s]</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="flowchart-1">Flowchart</h3>
+
+<pre><code class="language-plantuml">@startuml
+title insertDecelerationPoint
+start
+
+
+:callback trajectory;
+
+:trim trajectory from self-pose;
+
+:decimate trajectory;
+
+:generate detection area;
+
+if ( search obstacle pointcloud in detection area?) then (yes(find))
+else (no(not find))
+  stop
+endif
+
+:insert deceleration point;
+
+
+stop
+@enduml
+
+</code></pre>
+
+<h2 id="adaptive-cruise-controller">Adaptive Cruise Controller</h2>
+
+<h3 id="role-2">Role</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Adaptive Cruise Controller</code> module embeds maximum velocity in trajectory when there is a dynamic point cloud on the trajectory. The value of maximum velocity depends on the own velocity, the velocity of the point cloud ( = velocity of the front car), and the distance to the point cloud (= distance to the front car).</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.use_object_to_estimate_vel</code></td>
+      <td>bool</td>
+      <td>use dynamic objects for estimating object velocity or not</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.use_pcl_to_estimate_vel</code></td>
+      <td>bool</td>
+      <td>use raw pointclouds for estimating object velocity or not</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.consider_obj_velocity</code></td>
+      <td>bool</td>
+      <td>consider forward vehicle velocity to calculate target velocity in adaptive cruise or not</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.obstacle_velocity_thresh_to_start_acc</code></td>
+      <td>double</td>
+      <td>start adaptive cruise control when the velocity of the forward obstacle exceeds this value [m/s]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.obstacle_velocity_thresh_to_stop_acc</code></td>
+      <td>double</td>
+      <td>stop acc when the velocity of the forward obstacle falls below this value [m/s]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.emergency_stop_acceleration</code></td>
+      <td>double</td>
+      <td>supposed minimum acceleration (deceleration) in emergency stop [m/ss]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.emergency_stop_idling_time</code></td>
+      <td>double</td>
+      <td>supposed idling time to start emergency stop [s]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.min_dist_stop</code></td>
+      <td>double</td>
+      <td>minimum distance of emergency stop [m]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.obstacle_emergency_stop_acceleration</code></td>
+      <td>double</td>
+      <td>supposed minimum acceleration (deceleration) in emergency stop [m/ss]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.max_standard_acceleration</code></td>
+      <td>double</td>
+      <td>supposed maximum acceleration in active cruise control [m/ss]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.min_standard_acceleration</code></td>
+      <td>double</td>
+      <td>supposed minimum acceleration (deceleration) in active cruise control [m/ss]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.standard_idling_time</code></td>
+      <td>double</td>
+      <td>supposed idling time to react object in active cruise control [s]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.min_dist_standard</code></td>
+      <td>double</td>
+      <td>minimum distance in active cruise control [m]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.obstacle_min_standard_acceleration</code></td>
+      <td>double</td>
+      <td>supposed minimum acceleration of forward obstacle [m/ss]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.margin_rate_to_change_vel</code></td>
+      <td>double</td>
+      <td>rate of margin distance to insert target velocity [-]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.use_time_compensation_to_calc_distance</code></td>
+      <td>bool</td>
+      <td>use time-compensation to calculate distance to forward vehicle</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.p_coefficient_positive</code></td>
+      <td>double</td>
+      <td>coefficient P in PID control (used when target dist -current_dist &gt;=0) [-]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.p_coefficient_negative</code></td>
+      <td>double</td>
+      <td>coefficient P in PID control (used when target dist -current_dist &lt;0) [-]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.d_coefficient_positive</code></td>
+      <td>double</td>
+      <td>coefficient D in PID control (used when delta_dist &gt;=0) [-]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.d_coefficient_negative</code></td>
+      <td>double</td>
+      <td>coefficient D in PID control (used when delta_dist &lt;0) [-]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.object_polygon_length_margin</code></td>
+      <td>double</td>
+      <td>The distance to extend the polygon length the object in pointcloud-object matching [m]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.object_polygon_width_margin</code></td>
+      <td>double</td>
+      <td>The distance to extend the polygon width the object in pointcloud-object matching [m]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.valid_estimated_vel_diff_time</code></td>
+      <td>double</td>
+      <td>Maximum time difference treated as continuous points in speed estimation using a point cloud [s]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.valid_vel_que_time</code></td>
+      <td>double</td>
+      <td>Time width of information used for speed estimation in speed estimation using a point cloud [s]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.valid_estimated_vel_max</code></td>
+      <td>double</td>
+      <td>Maximum value of valid speed estimation results in speed estimation using a point cloud [m/s]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.valid_estimated_vel_min</code></td>
+      <td>double</td>
+      <td>Minimum value of valid speed estimation results in speed estimation using a point cloud [m/s]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.thresh_vel_to_stop</code></td>
+      <td>double</td>
+      <td>Embed a stop line if the maximum speed calculated by ACC is lower than this speed [m/s]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.lowpass_gain_of_upper_velocity</code></td>
+      <td>double</td>
+      <td>Lowpass-gain of target velocity</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.use_rough_velocity_estimation:</code></td>
+      <td>bool</td>
+      <td>Use rough estimated velocity if the velocity estimation is failed</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.rough_velocity_rate</code></td>
+      <td>double</td>
+      <td>In the rough velocity estimation, the velocity of front car is estimated as self current velocity * this value</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="flowchart-2">Flowchart</h3>
+
+<pre><code class="language-plantuml">@startuml
+title insertTargetVelocity()
+start
+
+:get target vehicle point (*1) in detection area ;
+
+partition Estimate-Target-Velocity {
+
+if (Is there a DynamicObject on the target vehicle point?) then (yes)
+:use the DynamicObject velocity\nas a target vehicle point velocity (*2);
+else (no)
+
+  if (The target vehicle point is found in the previous step?) then (yes)
+  else (no (estimation failed))
+  stop
+  endif
+
+  :estimate the target vehicle point velocity \nby the travel distance from the previous step;
+
+  if (The estimated velocity is valid?) then (yes)
+  else (no (estimation failed))
+  stop
+  endif
+
+  :use the estimated velocity\nas a target vehicle point velocity (*2);
+
+endif
+}
+
+if (Is the target vehicle point velocity fast enough?) then (yes)
+else (no)
+  stop
+endif
+
+if (calculate distance to the pointcloud from self-position?) then (yes)
+else (no)
+  stop
+endif
+
+:calculate target velocity to be inserted in the trajectory;
+
+if (the target velocity is fast enough?) then (yes)
+else (no)
+  stop
+endif
+
+:insert the target velocity;
+
+stop
+@enduml
+
+</code></pre>
+
+<p>(*1) The target vehicle point is calculated as a closest obstacle PointCloud from ego along the trajectory.</p>
+
+<p>(*2) The sources of velocity estimation can be changed by the following ROS parameters.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.use_object_to_estimate_vel</code></li>
+  <li><code class="language-plaintext highlighter-rouge">adaptive_cruise_control.use_pcl_to_estimate_vel</code></li>
+</ul>
+
+<p>This module works only when the target point is found in the detection area of the <code class="language-plaintext highlighter-rouge">Obstacle stop planner</code> module.</p>
+
+<p>The first process of this module is to estimate the velocity of the target vehicle point. The velocity estimation uses the velocity information of dynamic objects or the travel distance of the target vehicle point from the previous step. The dynamic object information is primal, and the travel distance estimation is used as a backup in case of the perception failure.
+If the target vehicle point is contained in the bounding box of a dynamic object geometrically, the velocity of the dynamic object is used as the target point velocity.
+Otherwise, the target point velocity is calculated by the travel distance of the target point from the previous step; that is <code class="language-plaintext highlighter-rouge">(current_position - previous_position) / dt</code>. Note that this travel distance based estimation fails when the target point is detected in the first time (it mainly happens in the cut-in situation). To improve the stability of the estimation, the median of the calculation result for several steps is used.</p>
+
+<p>If the calculated velocity is within the threshold range, it is used as the target point velocity.</p>
+
+<p>Only when the estimation is succeeded and the estimated velocity exceeds the value of <code class="language-plaintext highlighter-rouge">obstacle_stop_velocity_thresh_*</code>, the distance to the pointcloud from self-position is calculated. For prevent chattering in the mode transition, <code class="language-plaintext highlighter-rouge">obstacle_velocity_thresh_to_start_acc</code> is used for the threshold to start adaptive cruise, and <code class="language-plaintext highlighter-rouge">obstacle_velocity_thresh_to_stop_acc</code> is used for the threshold to stop adaptive cruise. When the calculated distance value exceeds the emergency distance $d_{emergency}$ calculated by emergency_stop parameters, target velocity to insert is calculated.</p>
+
+<p>The emergency distance $d_{emergency}$ is calculated as follows.</p>
+
+<p>$d_{emergency} = d_{margin_{emergency}} + t_{idling_{emergency}} \cdot v_{ego} + (-\frac{v_{ego}^2}{2 \cdot  a_{ego_{emergency}}}) - (-\frac{v_{obj}^2}{2 \cdot a_{obj_{emergency}}})$</p>
+
+<ul>
+  <li>$d_{margin_{emergency}}$ is a minimum margin to the obstacle pointcloud. The value of $d_{margin_{emergency}}$ depends on the parameter <code class="language-plaintext highlighter-rouge">min_dist_stop</code>
+</li>
+  <li>$t_{idling_{emergency}}$ is a supposed idling time. The value of $t_{idling_{emergency}}$ depends on the parameter <code class="language-plaintext highlighter-rouge">emergency_stop_idling_time</code>
+</li>
+  <li>$v_{ego}$ is a current velocity of own vehicle</li>
+  <li>$a_{ego_{<em>{emergency}}}$ is a minimum acceleration (maximum deceleration) of own vehicle. The value of $a</em>{ego_{_{emergency}}}$ depends on the parameter <code class="language-plaintext highlighter-rouge">emergency_stop_acceleration</code>
+</li>
+  <li>$v_{obj}$ is a current velocity of obstacle pointcloud.</li>
+  <li>$a_{obj_{<em>{emergency}}}$ is a supposed minimum acceleration of obstacle pointcloud. The value of $a</em>{obj_{_{emergency}}}$ depends on the parameter <code class="language-plaintext highlighter-rouge">obstacle_emergency_stop_acceleration</code>
+</li>
+  <li>*Above $X_{_{emergency}}$ parameters are used only in emergency situation.</li>
+</ul>
+
+<p>The target velocity is determined to keep the distance to the obstacle pointcloud from own vehicle at the standard distance $d_{standard}$ calculated as following. Therefore, if the distance
+to the obstacle pointcloud is longer than standard distance, The target velocity becomes higher than the current velocity, and vice versa. For keeping the distance, a PID controller is used.</p>
+
+<p>$d_{standard} = d_{margin_{standard}} + t_{idling_{standard}} \cdot v_{ego} + (-\frac{v_{ego}^2}{2 \cdot  a_{ego_{standard}}}) - (-\frac{v_{obj}^2}{2 \cdot a_{obj_{standard}}})$</p>
+
+<ul>
+  <li>$d_{margin_{standard}}$ is a minimum margin to the obstacle pointcloud. The value of $d_{margin_{standard}}$ depends on the parameter <code class="language-plaintext highlighter-rouge">min_dist_stop</code>
+</li>
+  <li>$t_{idling_{standard}}$ is a supposed idling time. The value of $t_{idling_{standard}}$ depends on the parameter <code class="language-plaintext highlighter-rouge">standard_stop_idling_time</code>
+</li>
+  <li>$v_{ego}$ is a current velocity of own vehicle</li>
+  <li>$a_{ego_{<em>{standard}}}$ is a minimum acceleration (maximum deceleration) of own vehicle. The value of $a</em>{ego_{_{standard}}}$ depends on the parameter <code class="language-plaintext highlighter-rouge">min_standard_acceleration</code>
+</li>
+  <li>$v_{obj}$ is a current velocity of obstacle pointcloud.</li>
+  <li>$a_{obj_{<em>{standard}}}$ is a supposed minimum acceleration of obstacle pointcloud. The value of $a</em>{obj_{_{standard}}}$ depends on the parameter <code class="language-plaintext highlighter-rouge">obstacle_min_standard_acceleration</code>
+</li>
+  <li>*Above $X_{_{standard}}$ parameters are used only in non-emergency situation.</li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/automotiveaichallenge/aichallenge2022-sim/main/autoware/aichallenge_ws/src/aichallenge_submit/obstacle_stop_planner_custom/./docs/adaptive_cruise.drawio.svg" alt="adaptive_cruise"></p>
+
+<p>If the target velocity exceeds the value of <code class="language-plaintext highlighter-rouge">thresh_vel_to_stop</code>, the target velocity is embedded in the trajectory.</p>
+
+<h2 id="known-limits">Known Limits</h2>
+
+<ul>
+  <li>
+    <p>It is strongly depends on velocity planning module whether or not it moves according to the target speed embedded by <code class="language-plaintext highlighter-rouge">Adaptive Cruise Controller</code> module. If the velocity planning module is updated, please take care of the vehicle’s behavior as much as possible and always be ready for overriding.</p>
+  </li>
+  <li>
+    <p>The velocity estimation algorithm in <code class="language-plaintext highlighter-rouge">Adaptive Cruise Controller</code> is depend on object tracking module. Please note that if the object-tracking fails or the tracking result is incorrect, it the possibility that the vehicle behaves dangerously.</p>
+  </li>
+  <li>
+    <p>It does not work for backward driving, but publishes the path of the input as it is. Please use <a href="https://github.com/automotiveaichallenge/aichallenge2022-sim/tree/main/autoware/aichallenge_ws/src/aichallenge_submit/obstacle_stop_planner_custom/../obstacle_cruise_planner/README.md">obstacle_cruise_planner</a> if you want to stop against an obstacle when backward driving.</p>
+  </li>
+</ul>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <em>No CHANGELOG found.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/obstacle_stop_planner_custom/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_cmake#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_cmake#github">autoware_cmake  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_auto#github">ament_cmake_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_lint_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_lint_auto#github">ament_lint_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_lint_common#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_lint_common#github">autoware_lint_common  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_auto_perception_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_auto_perception_msgs#github">autoware_auto_perception_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_auto_planning_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_auto_planning_msgs#github">autoware_auto_planning_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/diagnostic_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/diagnostic_msgs#github">diagnostic_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/motion_utils#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/motion_utils#github">motion_utils  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/nav_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/nav_msgs#github">nav_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/pcl_conversions#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/pcl_conversions#github">pcl_conversions  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/pcl_ros#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/pcl_ros#github">pcl_ros  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclcpp#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclcpp#github">rclcpp  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclcpp_components#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclcpp_components#github">rclcpp_components  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/sensor_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/sensor_msgs#github">sensor_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/signal_processing#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/signal_processing#github">signal_processing  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/std_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/std_msgs#github">std_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2#github">tf2  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2_eigen#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2_eigen#github">tf2_eigen  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2_geometry_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2_geometry_msgs#github">tf2_geometry_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2_ros#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2_ros#github">tf2_ros  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tier4_autoware_utils#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tier4_autoware_utils#github">tier4_autoware_utils  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tier4_debug_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tier4_debug_msgs#github">tier4_debug_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tier4_planning_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tier4_planning_msgs#github">tier4_planning_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/vehicle_info_util#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/vehicle_info_util#github">vehicle_info_util  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/visualization_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/visualization_msgs#github">visualization_msgs  </a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No direct system dependencies.</em>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No known dependants.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <ul>
+            
+              <li><a href="https://github.com/automotiveaichallenge/aichallenge2022-sim/tree/main/autoware/aichallenge_ws/src/aichallenge_submit/obstacle_stop_planner_custom/launch/obstacle_stop_planner.launch.xml" target="_blank">launch/obstacle_stop_planner.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>common_param_path</strong> <em>&#91;default: $(find-pkg-share obstacle_stop_planner_custom)/config/common.param.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>adaptive_cruise_control_param_path</strong> <em>&#91;default: $(find-pkg-share obstacle_stop_planner)/config/adaptive_cruise_control.param.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>obstacle_stop_planner_param_path</strong> <em>&#91;default: $(find-pkg-share obstacle_stop_planner)/config/obstacle_stop_planner.param.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>vehicle_info_param_file</strong> <em>&#91;default: $(find-pkg-share vehicle_info_util)/config/vehicle_info.param.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>enable_slow_down</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input_objects</strong> <em>&#91;default: /perception/object_recognition/objects&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input_pointcloud</strong> <em>&#91;default: input/pointcloud&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input_trajectory</strong> <em>&#91;default: input/trajectory&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input_odometry</strong> <em>&#91;default: /localization/kinematic_state&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>output_trajectory</strong> <em>&#91;default: output/trajectory&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>output_velocity_limit</strong> <em>&#91;default: /planning/scenario_planning/max_velocity_candidates&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>output_velocity_limit_clear_command</strong> <em>&#91;default: /planning/scenario_planning/clear_velocity_limit&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No message files found.</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No plugins found.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>obstacle_stop_planner_custom</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/obstacle_stop_planner_custom+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/automotiveaichallenge/aichallenge2022-sim.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/obstacle_stop_planner_custom"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/automotiveaichallenge/aichallenge2022-sim/tree/main/autoware/aichallenge_ws/src/aichallenge_submit/obstacle_stop_planner_custom"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/obstacle_stop_planner_custom?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/obstacle_stop_planner_custom?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=obstacle_stop_planner_custom&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "obstacle_stop_planner_custom"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

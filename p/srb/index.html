@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: srb</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/srb/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">srb</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/srb">srb</a> <small>package from <a style="text-decoration:none" href="/r/space_robotics_bench/github-andrejorsula-space_robotics_bench">space_robotics_bench</a> repo</small>
+        </h3>
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+srb
+</span>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/srb"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/andrejorsula/space_robotics_bench/tree/main/."
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-default">0</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">5</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>0.0.1</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>MIT OR Apache-2.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-default">
+                  
+                    AMENT_CMAKE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default">Benchmark for Space Robotics</span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/andrejorsula/space_robotics_bench.git">https://github.com/andrejorsula/space_robotics_bench.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-05-05
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <span class="label label-default">benchmark</span> <span class="label label-default">robotics</span> <span class="label label-default">simulation</span> <span class="label label-default">space</span> <span class="label label-default">robot-learning</span> <span class="label label-default">space-robotics</span> <span class="label label-default">space-ros</span> 
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/space_robotics_bench/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/space_robotics_bench/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/space_robotics_bench/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            Space Robotics Bench
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li><a href="
+        https://github.com/AndrejOrsula/space_robotics_bench
+    ">Repository</a></li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Andrej Orsula</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Andrej Orsula</li>
+                
+              </ul>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/andrejorsula/space_robotics_bench/tree/main/./README.md" title="Open in git repository">README.md</a></div>
+              <div class="panel-body">
+                    <div class="rendered-markdown">
+<h1 align="center">Space Robotics Bench</h1>
+
+<p align="center">
+  <a href="https://AndrejOrsula.github.io/space_robotics_bench"><img src="https://raw.githubusercontent.com/andrejorsula/space_robotics_bench/main/./docs/src/_images/srb_multi_env.jpg" width="100%"></a>
+</p>
+
+<p><a href="https://discord.gg/p9gZAPWa65"><img src="https://img.shields.io/badge/Discord-invite-5865F2?logo=discord" alt="Discord"></a>
+<a href="https://AndrejOrsula.github.io/space_robotics_bench"><img src="https://img.shields.io/badge/docs-online-blue?logo=markdown" alt="Docs"></a>
+<a href="https://github.com/AndrejOrsula/space_robotics_bench/actions/workflows/rust.yml"><img src="https://github.com/AndrejOrsula/space_robotics_bench/actions/workflows/rust.yml/badge.svg" alt="Rust"></a>
+<a href="https://github.com/AndrejOrsula/space_robotics_bench/actions/workflows/python.yml"><img src="https://github.com/AndrejOrsula/space_robotics_bench/actions/workflows/python.yml/badge.svg" alt="Python"></a>
+<a href="https://github.com/AndrejOrsula/space_robotics_bench/actions/workflows/docker.yml"><img src="https://github.com/AndrejOrsula/space_robotics_bench/actions/workflows/docker.yml/badge.svg" alt="Docker"></a>
+<a href="https://github.com/AndrejOrsula/space_robotics_bench/actions/workflows/docs.yml"><img src="https://github.com/AndrejOrsula/space_robotics_bench/actions/workflows/docs.yml/badge.svg" alt="Docs"></a></p>
+
+<!-- [![Codecov](https://codecov.io/gh/AndrejOrsula/space_robotics_bench/graph/badge.svg)](https://codecov.io/gh/AndrejOrsula/space_robotics_bench) -->
+
+<p><strong>Space Robotics Bench (SRB)</strong> is a comprehensive collection of environments and tasks for robotics research in the challenging domain of space. It provides a unified framework for developing and validating autonomous systems under diverse extraterrestrial scenarios. At the same time, its design is flexible and extensible to accommodate a variety of development workflows and research directions beyond Earth.</p>
+
+<h2 id="key-features">Key Features</h2>
+
+<ul>
+  <li>
+<strong>Parallelized Simulation</strong>: Highly parallelized simulation instances for accelerated workflows</li>
+  <li>
+<strong>Procedural Generation</strong>: On-demand generation of diverse simulation assets and scenes</li>
+  <li>
+<strong>Domain Randomization</strong>: Extensive randomization for robustness and generalization</li>
+  <li>
+<strong>Gymnasium API</strong>: Compatibility with standard API and frameworks for robot learning</li>
+  <li>
+<strong>ROS 2 Interface</strong>: Seamless interoperability with ROS 2 and Space ROS ecosystems</li>
+  <li>
+<strong>Abstract Architecture</strong>: Flexibility across different robots and space domains</li>
+</ul>
+
+<h2 id="documentation">Documentation</h2>
+
+<p>SRB documentation with detailed installation instructions, usage guides, and development resources is available <a href="https://AndrejOrsula.github.io/space_robotics_bench">online</a>.</p>
+
+<div align="right">
+<a href="https://AndrejOrsula.github.io/space_robotics_bench"><img alt="Documentation" src="https://github.com/user-attachments/assets/e4f6c735-9831-43c3-9d7e-fb6a5245e762" width="96" height="96"></a>
+</div>
+
+<h2 id="license">License</h2>
+
+<p>This project is dual-licensed under either the <a href="https://github.com/andrejorsula/space_robotics_bench/tree/main/./LICENSE-MIT">MIT</a> or <a href="https://github.com/andrejorsula/space_robotics_bench/tree/main/./LICENSE-APACHE">Apache 2.0</a> licenses.</p>
+
+<p>All assets created by contributors of this repository and those generated from <a href="https://github.com/AndrejOrsula/simforge">SimForge</a> procedural pipelines are licensed under the <a href="https://github.com/AndrejOrsula/srb_assets/blob/main/LICENSE-CC0">CC0 1.0 Universal</a> license. Resources from third-party sources are listed under <a href="https://andrejorsula.github.io/space_robotics_bench/misc/attributions.html">attributions</a>.</p>
+
+<p><a href="https://creativecommons.org/publicdomain/zero/1.0"><img src="https://licensebuttons.net/l/zero/1.0/88x31.png" alt="CC0 1.0 Universal"></a></p>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="changelog">Changelog</h1>
+
+<p>All notable changes to this project will be documented in this file.</p>
+
+<p>The format is based on <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>,
+and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+
+<h2 id="003---2025-04-01">[0.0.3] - 2025-04-01</h2>
+
+<h3 id="added">Added</h3>
+<ul>
+  <li>Add landing task (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/59f87a98b920cc7a13831257886b9df9731ecc6b">59f87a9</a>) by @AndrejOrsula</li>
+  <li>Add thrust action term and group (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/3e98a7460af03470f3ce2676a2b2193a224328fe">3e98a74</a>) by @AndrejOrsula</li>
+  <li>Add support for OSC action term (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/152973b42a4e84e81181cd00dbf496e9013ec099">152973b</a>) by @AndrejOrsula</li>
+  <li>Git-cliff: Add commits to the changelog (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/6521a4a2ae2c213086fd2a01412756ef93b352f1">6521a4a</a>) by @AndrejOrsula</li>
+</ul>
+
+<h3 id="changed">Changed</h3>
+<ul>
+  <li>Bump to 0.0.3 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/a1afc2904fa7bb82ee85d217e9ac912e048fb3e9">a1afc29</a>) by @AndrejOrsula</li>
+  <li>Docs: Update envs, robots, attributes (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/73b64622f1cb7a6aa168be91354cf71dee2f85b1">73b6462</a>) by @AndrejOrsula</li>
+  <li>Improve default hyperparameters of Dreamer (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/7a97996a3ca25939e3a6398db86ee51766a6eeb5">7a97996</a>) by @AndrejOrsula</li>
+  <li>Update assets (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/7988615ab3c4b2ec371ea26a7f7ce9c056f793ab">7988615</a>) by @AndrejOrsula</li>
+  <li>Tune peg_in_hole rewards (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/51442431629760fd669d3451ebfb0cba338ec83f">5144243</a>) by @AndrejOrsula</li>
+  <li>Update environment and agent rates in base environments (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/cde5eb5dc17a4c507017b54713baa1fc393cd1fd">cde5eb5</a>) by @AndrejOrsula</li>
+  <li>Update skydome asset directory path (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/5c1efee9006d30033a30a5ee0f0a2d873f7ea75d">5c1efee</a>) by @AndrejOrsula</li>
+  <li>Tests: Skip CLI agent train test (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/b523ef4c8b90d5f271cc66526b7d290a98696fa6">b523ef4</a>) by @AndrejOrsula</li>
+  <li>Standardize teleop device sensitivity (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/288f8ebffec6766772b936af1c9e80ab6b786cd8">288f8eb</a>) by @AndrejOrsula</li>
+  <li>Docker: Update development script with DEBUG_VIS environ (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/3b46457cdfdc55387af41d39cb9bbe2e1b7e8402">3b46457</a>) by @AndrejOrsula</li>
+  <li>Update base events and skydomes (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/d8172d22a99eb121f2f9a513eb2dc3e4d26f5d59">d8172d2</a>) by @AndrejOrsula</li>
+  <li>Autoreset environment instances that explode due to physics (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/ed88f2aa5d59ac51dcfd575f38fc9d7f6ef7060b">ed88f2a</a>) by @AndrejOrsula</li>
+  <li>GiGeneralize action term for all wheeled robots (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/c5b38e88a75e07d012ec078da199f4061da26740">c5b38e8</a>) by @AndrejOrsula</li>
+  <li>Docker: Mount Omniverse data volume (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/502d5b37ee48003eec5e55f425b047360dc4dcac">502d5b3</a>) by @AndrejOrsula</li>
+  <li>Build(deps): bump image from 0.25.5 to 0.25.6 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/eab74fc93b74a19f9641fe632a340edb8864f82f">eab74fc</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/55">#55</a>
+</li>
+  <li>Build(deps): bump sysinfo from 0.33.1 to 0.34.1 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/8db4e7762cfd3a5d1446f1d5d4244ed6f52d6a42">8db4e77</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/54">#54</a>
+</li>
+  <li>Build(deps): bump typed-builder from 0.20.1 to 0.21.0 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/a2d90a7231e466e252295f6b1daa4da27dcb3bba">a2d90a7</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/53">#53</a>
+</li>
+</ul>
+
+<h3 id="fixed">Fixed</h3>
+<ul>
+  <li>Fix naming of IMU visualization marker (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/4558a28c415843ebf56ee0e6937906be9be65eaf">4558a28</a>) by @AndrejOrsula</li>
+  <li>Fix contact sensor (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/4e3cd289a6e4ae53461889333e4fcf8ac5478107">4e3cd28</a>) by @AndrejOrsula</li>
+</ul>
+
+<h2 id="002---2025-03-20">[0.0.2] - 2025-03-20</h2>
+
+<h3 id="added-1">Added</h3>
+<ul>
+  <li>Add git-cliff configuration (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/ed79c90d3d1494e4d6be5bac6f412b5e46be192d">ed79c90</a>) by @AndrejOrsula</li>
+  <li>Add templates for mobile manipulation tasks (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/6dcf11a1cdd36784c14a42c37b1fbe85f203d960">6dcf11a</a>) by @AndrejOrsula</li>
+  <li>Docker: Add option to ensure Docker and NVIDIA toolkit are installed (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/4f0ce88c5cd14ff98cd91b89606b67f3a8fdd20e">4f0ce88</a>) by @AndrejOrsula</li>
+  <li>Devcontainer: Add default extensions (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/6b2bc4d52cdb74fa787e062d2185d45a362f299f">6b2bc4d</a>) by @AndrejOrsula</li>
+</ul>
+
+<h3 id="changed-1">Changed</h3>
+<ul>
+  <li>Bump to 0.0.2 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/b0a8a4bc3c6ec40d41b53a89ce9da30319d13a4f">b0a8a4b</a>) by @AndrejOrsula</li>
+  <li>Docs: Update towards 0.0.2 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/bf4fdb610e301e464c5a8081169b13b19b2b36d5">bf4fdb6</a>) by @AndrejOrsula</li>
+  <li>Bump MSRV to 1.84 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/bdceba6fae7c292d02af3597bcef2a1ab1c99c6c">bdceba6</a>) by @AndrejOrsula</li>
+  <li>Update dependencies (Python &amp; Rust) (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/9eea79d00f97ba5cdfe5c996e5f56743388dfaf0">9eea79d</a>) by @AndrejOrsula</li>
+  <li>Deny: Ignore RUSTSEC-2024-0436 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/22ee4b3045fbada214ebc6c0282a7d728db17bf4">22ee4b3</a>) by @AndrejOrsula</li>
+  <li>Docker: Update commits of dev dependencies (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/3b69be80ab65ff804a734050d35b8a70c8f92ae0">3b69be8</a>) by @AndrejOrsula</li>
+  <li>Tests: Update to match CLI changes (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/02e1c5647c1249b5e144b54b85452c92cccd45e1">02e1c56</a>) by @AndrejOrsula</li>
+  <li>CLI: Streamline usage for readable documentation (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/1265f8d163e09ee1a94d9c699907394daab57130">1265f8d</a>) by @AndrejOrsula</li>
+  <li>Locomotion_velocity_tracking: Adjust reward (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/4755ec8a1d0cd23b85185a1c2e0e62a8627d436c">4755ec8</a>) by @AndrejOrsula</li>
+  <li>Mobile_debris_capture: Use default robot of the base environment class (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/7b00c2e98c125feed02c9c3dd53f412aac82376e">7b00c2e</a>) by @AndrejOrsula</li>
+  <li>Orbital_evasion: Update observation and reward (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/578407a4c818c2e53103a352c61acc5340e0f905">578407a</a>) by @AndrejOrsula</li>
+  <li>Excavation: Default to Spot robot mobile base (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/a96a135bd7009d9a3ebaa162e8760062c0416572">a96a135</a>) by @AndrejOrsula</li>
+  <li>Refactor environment classes to improve naming consistency across manipulation tasks (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/f7176f2b8205f71ef6a5beb8c7ee2593770d7af4">f7176f2</a>) by @AndrejOrsula</li>
+  <li>Simplify base parameter naming in environment config (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/1e996e5aac92233dc4c3e0bbae127f03fb4d69b3">1e996e5</a>) by @AndrejOrsula</li>
+  <li>CLI: Improve command-line overrides for environment config (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/1f1895fcfc5d909e009d2ad652167f8a2878de88">1f1895f</a>) by @AndrejOrsula</li>
+  <li>Improve asset configuration consistency (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/71746aa21b57ce0a8a81f8abf1d29ff916898e6b">71746aa</a>) by @AndrejOrsula</li>
+  <li>Docker: Update the default development volumes (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/7acd71728e56f08692a9d4b0f4bd4751b0affa87">7acd717</a>) by @AndrejOrsula</li>
+  <li>Docker: Ensure assets are initialized when building the image (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/dbd70fe9e6c7b45b8908666982d4a7b6de2da1bc">dbd70fe</a>) by @AndrejOrsula</li>
+  <li>Update installation scripts (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/69b6227fe95ea6a09df747c6458e6b263ea396ab">69b6227</a>) by @AndrejOrsula</li>
+  <li>CI: Checkout submodules recursively to build Docker with assets (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/3b351d73c4c64501b1bee1fa2bdbe10332355c68">3b351d7</a>) by @AndrejOrsula</li>
+  <li>Build(deps): bump typed-builder from 0.20.0 to 0.20.1 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/f91220de5bd8eab9ff41e505bc806cd10699bd5a">f91220d</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/52">#52</a>
+</li>
+  <li>Build(deps): bump egui_extras from 0.31.0 to 0.31.1 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/a7691b91e7d0698d34d80729502cf1d6738f88e8">a7691b9</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/51">#51</a>
+</li>
+  <li>Build(deps): bump eframe from 0.31.0 to 0.31.1 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/03615af8960557a879b780d8f9376375acbd82c6">03615af</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/48">#48</a>
+</li>
+  <li>Build(deps): bump serde from 1.0.218 to 1.0.219 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/0b80920086b57bb074e910d23251c471b696f535">0b80920</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/49">#49</a>
+</li>
+</ul>
+
+<h3 id="fixed-1">Fixed</h3>
+<ul>
+  <li>Correct action term/group naming (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/7b305467f72bbf84509a267b3fa35968bd082a00">7b30546</a>) by @AndrejOrsula</li>
+</ul>
+
+<h3 id="removed">Removed</h3>
+<ul>
+  <li>Remove redundant event (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/92e4f7d44235816eebe02b9d642340fe66285cc7">92e4f7d</a>) by @AndrejOrsula</li>
+</ul>
+
+<h2 id="001---2025-03-04">[0.0.1] - 2025-03-04</h2>
+
+<h3 id="added-2">Added</h3>
+<ul>
+  <li>Add barebones mobile_debris_capture task (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/a3874214f2564f96ef6d1bb969b5aaa5188343d4">a387421</a>) by @AndrejOrsula</li>
+  <li>Add barebones excavation task (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/94387612a784b1f449d98dce3a3ea9ff3a61e07f">9438761</a>) by @AndrejOrsula</li>
+  <li>Add orbital_evasion task (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/fab2b5cd8a9025f0ae0f619d48c4b88121e8f8d6">fab2b5c</a>) by @AndrejOrsula</li>
+  <li>Add locomotion_velocity_tracking task (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/16652019b9497cd5d50cc0ac0bf097a95804180b">1665201</a>) by @AndrejOrsula</li>
+  <li>Add solar_panel_assembly task (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/4867c6b1b349f73423417b23130abd5d1e360876">4867c6b</a>) by @AndrejOrsula</li>
+  <li>Add peg_in_hole_assembly task (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/bdb411350ac00f4d32b34f6907e8fa0c20b6c3c7">bdb4113</a>) by @AndrejOrsula</li>
+  <li>Add sample_collection task (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/21e09d15c05e3e34151c310f09a9e7ac99f8553f">21e09d1</a>) by @AndrejOrsula</li>
+  <li>Add debris_capture task (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/b73a09ccc2ba7702e169c7d8ebc7aee9a60382e7">b73a09c</a>) by @AndrejOrsula</li>
+  <li>Add basic tests (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/764fbb8336e4eb11f13cf52ed159cf09095a6336">764fbb8</a>) by @AndrejOrsula</li>
+  <li>Add unified entrypoint script (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/ab35b1b66020101a8c8a7d1786f19c93657af07d">ab35b1b</a>) by @AndrejOrsula</li>
+  <li>Add config and hyparparam utils (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/444c99ff0a26538030a26913eb0eac9036999e95">444c99f</a>) by @AndrejOrsula</li>
+  <li>Add mobile manipulation base envs (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/13d37ca44323fa3b4c000e9ce4b3c67fbbce7152">13d37ca</a>) by @AndrejOrsula</li>
+  <li>Add mobile manipulation base envs (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/5eac2a8592a9a61a00cdda13d935a17913cf53a2">5eac2a8</a>) by @AndrejOrsula</li>
+  <li>Add manipulation base env and task template (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/486da35822a82b8e1c0762d1820e5512b2ab50a0">486da35</a>) by @AndrejOrsula</li>
+  <li>Add ROS 2 interface (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/7028fc7e574762342560d23ec6c46eb9ac1b973c">7028fc7</a>) by @AndrejOrsula</li>
+  <li>Add skrl integration (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/52cde701564dfe0fde84bf0c2017e1ec43aab070">52cde70</a>) by @AndrejOrsula</li>
+  <li>Add SB3 and SBX integrations (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/7cf19a3f761cf1c8c8593252d8b8fdfd85aebdff">7cf19a3</a>) by @AndrejOrsula</li>
+  <li>Add Dreamer integration (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/56a1ccf5f51fc7065eec4cc2a196dd87fddc0f80">56a1ccf</a>) by @AndrejOrsula</li>
+  <li>Add shape and ground plane assets (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/1294149741302d9f01f300ba1e39c6e83876a980">1294149</a>) by @AndrejOrsula</li>
+  <li>Add object/scenery assets from srb_assets (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/1cb39330564285d6c0ad9087c759a12599f73106">1cb3933</a>) by @AndrejOrsula</li>
+  <li>Add initial procedural SimForge assets (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/8a42593609a0db5a7250fcbf6e094b2d6389cfca">8a42593</a>) by @AndrejOrsula</li>
+  <li>Add initial tools (end-effectors) (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/a1b686a17a53ed980f2fad47afa1633f4f1ab03a">a1b686a</a>) by @AndrejOrsula</li>
+  <li>Add initial robot assets (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/2669fd16c655de6adeb6a7458aa68aa2596d1157">2669fd1</a>) by @AndrejOrsula</li>
+  <li>Add custom Franka arm and FrankaHand tool (separate) (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/594cab164e9189daea23a22252bf5596360bc92d">594cab1</a>) by @AndrejOrsula</li>
+  <li>Add AnyEnv/AnyEnvCfg type aliases (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/c5f7098d9255f317cedeb34bb3b62b5fd5a8e1fd">c5f7098</a>) by @AndrejOrsula</li>
+  <li>Add GUI interface (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/e5739f3927227be31ed73e9da659fd8ec306c0d5">e5739f3</a>) by @AndrejOrsula</li>
+  <li>Add teleop interfaces (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/bf803d9e78cd3f4c337e59330543300af5402d3d">bf803d9</a>) by @AndrejOrsula</li>
+  <li>Add visual environment extension (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/87d5c30b91d9ec7c3b751a4183c6b724dc060d45">87d5c30</a>) by @AndrejOrsula</li>
+  <li>Add common environment base classes (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/7564e4bd6e5617d2ec2f22f5cea9d82f6a7802f2">7564e4b</a>) by @AndrejOrsula</li>
+  <li>Add oxidasim sampling utils (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/7875e52e0d845fd6882a54fa9999637424ab11b0">7875e52</a>) by @AndrejOrsula</li>
+  <li>Add mobile robot action terms/groups (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/7de74a943a70f367f61952c6199b5993343fdccb">7de74a9</a>) by @AndrejOrsula</li>
+  <li>Add task space manipulation action terms/groups (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/96c3433321ef3892faa50a7475febab61c231504">96c3433</a>) by @AndrejOrsula</li>
+  <li>Add ParticleSpawner (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/53b53d9f8b7a193fb18fa610ea41bf33eed3540f">53b53d9</a>) by @AndrejOrsula</li>
+  <li>Add common action terms and groups (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/c6e657fe8a45f89f7ebcbaceca9f3a897d3be525">c6e657f</a>) by @AndrejOrsula</li>
+  <li>Add custom events (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/3bd0866903fa94895fa09cc4a2079a8653246daf">3bd0866</a>) by @AndrejOrsula</li>
+  <li>Add custom visualization markers (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/06d2ec260472afdb465d127cba028abdc4a66eb0">06d2ec2</a>) by @AndrejOrsula</li>
+  <li>Add custom RobotAssembler (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/71cf4cb3b1ce811aaeabff2902030ec47a24d284">71cf4cb</a>) by @AndrejOrsula</li>
+  <li>Add extra shape spawners (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/119fb84dec69270ec06882437cbd7a5d83a08372">119fb84</a>) by @AndrejOrsula</li>
+  <li>Add Domain enum with utils (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/474fcd0cf724d7cbbeaaed6fe800c1c3d66209ef">474fcd0</a>) by @AndrejOrsula</li>
+  <li>Add config for RTX visuals and post-processing (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/20bbc67546e890f7f08dc69eb3fb8d6796f36bd8">20bbc67</a>) by @AndrejOrsula</li>
+  <li>Add logging and tracing utils (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/6173aa32befdc3d615e089a6a40b930fdd9ec07a">6173aa3</a>) by @AndrejOrsula</li>
+  <li>Add common utils (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/31ba45439a833c6f6f19dbd9a20873b2bfa7ef40">31ba454</a>) by @AndrejOrsula</li>
+  <li>Docs: Add button for suggesting edits (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/360a8bf9f41af609dde6db40b6f2b8b7f134ccff">360a8bf</a>) by @AndrejOrsula</li>
+  <li>Docs: Add link to Discord (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/d3519486d17c792ccb429dc490802c2825938e83">d351948</a>) by @AndrejOrsula</li>
+  <li>Docker: Add option to install Space ROS (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/a788d056e6e24400bfdd58f85ba526c13ce02be4">a788d05</a>) by @AndrejOrsula</li>
+  <li>CLI: Add short args and update environ for extension module update (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/a30cfe07bc02a56d771f1ccf6363893970289839">a30cfe0</a>) by @AndrejOrsula</li>
+</ul>
+
+<h3 id="changed-2">Changed</h3>
+<ul>
+  <li>CI: Build Python package with uv (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/b23724ee6aa641e55f81c71959246442146da7ea">b23724e</a>) by @AndrejOrsula</li>
+  <li>CI: Disable llvm-cov in Rust workflow (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/8f68f995e3515e7d24b89e1ede0126b5e5b4d9de">8f68f99</a>) by @AndrejOrsula</li>
+  <li>Pre-commit: Downgrade mdformat (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/c1c8c6c36911dea05084061c42e3c5eaac34f9aa">c1c8c6c</a>) by @AndrejOrsula</li>
+  <li>GUI: Replace missing image (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/a64b31668d1a708d550c723ce8fefa0a2c4ede26">a64b316</a>) by @AndrejOrsula</li>
+  <li>CI: Update Python/Rust workflows (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/aa83406f50846bb83ccdcd9c4fbc014e0c72e2b2">aa83406</a>) by @AndrejOrsula</li>
+  <li>Update badges in README (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/6fa634ff368abdc6cd11eb81bc23c6911fb45e4f">6fa634f</a>) by @AndrejOrsula</li>
+  <li>Patch ActionManager to improve compatibility with ActionGroup (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/e882776c8dc74d9d3b86efe3c44c290baf7c9f6c">e882776</a>) by @AndrejOrsula</li>
+  <li>Wrap around Isaac Lab core modules (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/38455a1879501ccfd12f6d0518756b82c6db71f1">38455a1</a>) by @AndrejOrsula</li>
+  <li>Define ActionGroup model (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/d7095a6de15102f1c5ab4ec498b4ef26effd3c02">d7095a6</a>) by @AndrejOrsula</li>
+  <li>Define the full asset hierarchy model (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/f3511a73e1f888f7839f8e35000c55be43670ee9">f3511a7</a>) by @AndrejOrsula</li>
+  <li>Integrate uv (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/950ef53b5d7b10219e10dac69ca23a1b9e023fb4">950ef53</a>) by @AndrejOrsula</li>
+  <li>Update Docker setup (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/866287d57cf7b873af2e6b1348cb3c222832988b">866287d</a>) by @AndrejOrsula</li>
+  <li>Integrate SimForge (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/64c9bb652cf994bec9ee19cca87c6b46e82d0a95">64c9bb6</a>) by @AndrejOrsula</li>
+  <li>Update srb_assets (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/b2a3757b75933c999d68de118fbfb23b0914eed7">b2a3757</a>) by @AndrejOrsula</li>
+  <li>Update pre-commit hooks (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/a2a4d69749d1483095c8d353eae5dd4810edefb8">a2a4d69</a>) by @AndrejOrsula</li>
+  <li>Update copyright year to 2025 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/2c379dc33002174acdd20947f9786a0a991e0c9a">2c379dc</a>) by @AndrejOrsula</li>
+  <li>Update to Isaac Sim 4.5 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/3b0ff36484313a897d4d3c6f495993b5cb9a9792">3b0ff36</a>) by @AndrejOrsula</li>
+  <li>Update module name from space_robotics_bench to srb (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/803703bcfb173bc387babd547b76db6ad6ba5b33">803703b</a>) by @AndrejOrsula</li>
+  <li>Build(deps): bump chrono from 0.4.39 to 0.4.40 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/2dce970e89226d7e4fd8ebf040496045626fc23b">2dce970</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/46">#46</a>
+</li>
+  <li>Build(deps): bump serde from 1.0.217 to 1.0.218 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/2c33aaf1bef0e37d3371da16dd9c558bc70fb26b">2c33aaf</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/45">#45</a>
+</li>
+  <li>Build(deps): bump AdityaGarg8/remove-unwanted-software from 4 to 5 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/c25adbfdd389955880a7ef90960329053d70e4cf">c25adbf</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/44">#44</a>
+</li>
+  <li>Build(deps): bump winit from 0.30.8 to 0.30.9 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/f3013a0f22baef476bfea9a1dadede18fd49ac16">f3013a0</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/43">#43</a>
+</li>
+  <li>Build(deps): bump serde_json from 1.0.137 to 1.0.138 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/e90c8a24c1d9e2653d1e67a611cb434d731fe4aa">e90c8a2</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/38">#38</a>
+</li>
+  <li>CI: Exclude GUI from llvm-cov (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/eb925d7b670f1de68e73fad43666f40f05c3dbcd">eb925d7</a>) by @AndrejOrsula</li>
+  <li>Bump MSRV to 1.82 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/ed6a5d7b09ff83643286c5694b5bb68522c3e35d">ed6a5d7</a>) by @AndrejOrsula</li>
+  <li>Docker: Skip GUI build (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/4dfb4de5d931aa6a5cb011b755199ca455e66fa2">4dfb4de</a>) by @AndrejOrsula</li>
+  <li>Build(deps): bump serde_json from 1.0.135 to 1.0.137 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/8bcc2390caa8c53bcbc7a460a17889ca449141f7">8bcc239</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/36">#36</a>
+</li>
+  <li>Build(deps): bump thiserror from 2.0.9 to 2.0.11 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/651785ca329b2feb2d1414443fe9e1e3dd930ba2">651785c</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/34">#34</a>
+</li>
+  <li>Build(deps): bump pyo3 from 0.23.3 to 0.23.4 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/422adb708bdb17b618797cac95ce75d0a2a18678">422adb7</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/35">#35</a>
+</li>
+  <li>Build(deps): bump serde_json from 1.0.134 to 1.0.135 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/6bc337d237968c0b8232293c89008e10dc68a8bd">6bc337d</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/33">#33</a>
+</li>
+  <li>Build(deps): bump home from 0.5.9 to 0.5.11 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/0f115c99ecdb76d9f74f48253eb1ac1d72f84b6a">0f115c9</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/31">#31</a>
+</li>
+  <li>Build(deps): bump egui from 0.29.1 to 0.30.0 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/a712228628872270b179dbb5d405da59b9d037bc">a712228</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/29">#29</a>
+</li>
+  <li>Build(deps): bump serde from 1.0.216 to 1.0.217 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/c68f4a1848eca0a6e9066a20a8779106dcbb9176">c68f4a1</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/32">#32</a>
+</li>
+  <li>Build(deps): bump sysinfo from 0.33.0 to 0.33.1 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/e21bca9808fef309b6843c138c026e8291dc97e5">e21bca9</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/30">#30</a>
+</li>
+  <li>Build(deps): bump egui_commonmark from 0.18.0 to 0.19.0 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/883d29a45f3b17407f1b42cf9f2441b2c4cd7390">883d29a</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/27">#27</a>
+</li>
+  <li>Build(deps): bump eframe from 0.29.1 to 0.30.0 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/d3151dde127915d0f5903caa88b824f0e2538cdd">d3151dd</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/28">#28</a>
+</li>
+  <li>Build(deps): bump egui_extras from 0.29.1 to 0.30.0 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/964a35e95da16a322d5909b9143a7a833baaa20f">964a35e</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/25">#25</a>
+</li>
+  <li>Build(deps): bump serde_json from 1.0.133 to 1.0.134 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/7e80f2d2d58c620880d59ac7789c1168ea87f18e">7e80f2d</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/26">#26</a>
+</li>
+  <li>Build(deps): bump thiserror from 2.0.7 to 2.0.9 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/fe1dfb0be9a4907bb60f1a1bba0585ff7f1d0a7b">fe1dfb0</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/24">#24</a>
+</li>
+  <li>Docs: Update Discord invite link (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/1674cd91fe7b5600a818f85b5f9c66598000506f">1674cd9</a>) by @AndrejOrsula</li>
+  <li>Build(deps): bump thiserror from 2.0.6 to 2.0.7 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/c3aaa47c8730d64c5cb294715d6e4e93839e65c7">c3aaa47</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/23">#23</a>
+</li>
+  <li>Build(deps): bump serde from 1.0.215 to 1.0.216 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/e30ccc9ea478bc55bf8175a1833830243fbad5f5">e30ccc9</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/22">#22</a>
+</li>
+  <li>Build(deps): bump chrono from 0.4.38 to 0.4.39 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/18c91aa45ff6a6a27cfafbec9f1e2007cc7423dd">18c91aa</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/21">#21</a>
+</li>
+  <li>Build(deps): bump thiserror from 2.0.4 to 2.0.6 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/a5801fca2e5069ef514b229132452bda3d742b85">a5801fc</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/20">#20</a>
+</li>
+  <li>Build(deps): bump const_format from 0.2.33 to 0.2.34 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/3aa9ab249242cfd96cdebd411985ef0e09ca879e">3aa9ab2</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/19">#19</a>
+</li>
+  <li>Refactor: Improve organization (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/12d8179ffb5546896b645c2a37f8942320a840a0">12d8179</a>) by @AndrejOrsula</li>
+  <li>Update dependencies (Blender 4.3.0, Isaac Lab 1.3.0, …) (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/4432d7c0eda0097a78531fc1c1b697030fa7e3e3">4432d7c</a>) by @AndrejOrsula</li>
+  <li>Docker: Improve handling of DDS config for ROS 2 and Space ROS (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/476d4bf845187dc86406f9023e1df2779d85733e">476d4bf</a>) by @AndrejOrsula</li>
+  <li>Build(deps): bump sysinfo from 0.32.0 to 0.32.1 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/735c1bc815e33e3b7a779cf4254480074c4053cb">735c1bc</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/17">#17</a>
+</li>
+  <li>Build(deps): bump tracing-subscriber from 0.3.18 to 0.3.19 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/585fd11270a9949332bc878c9d28552fc5bdbd40">585fd11</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/18">#18</a>
+</li>
+  <li>Build(deps): bump tracing from 0.1.40 to 0.1.41 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/1a540670839fbdc51298070e9e601dd02bb9f974">1a54067</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/16">#16</a>
+</li>
+  <li>Build(deps): bump r2r from 0.9.3 to 0.9.4 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/d4e2f292e7efad5e192a9c0d0ad2b76cde817d08">d4e2f29</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/15">#15</a>
+</li>
+  <li>Build(deps): bump serde from 1.0.214 to 1.0.215 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/1b309d3d8540ddccb14029287c34b9be3030b36a">1b309d3</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/11">#11</a>
+</li>
+  <li>Build(deps): bump serde_json from 1.0.132 to 1.0.133 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/a16c951b4fc672d2d55f54ccb5ebecc360abea13">a16c951</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/10">#10</a>
+</li>
+  <li>Build(deps): bump codecov/codecov-action from 4 to 5 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/b5636d7a67971605777b7a8f9b9e17162b7744bc">b5636d7</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/9">#9</a>
+</li>
+  <li>Build(deps): bump r2r from 0.9.2 to 0.9.3 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/b37a42d0410e142a9365a9243d89e1b51d6118d2">b37a42d</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/8">#8</a>
+</li>
+  <li>Build(deps): bump image from 0.25.4 to 0.25.5 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/f3ab52569c9341389133deb586e553e4f2451c57">f3ab525</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/7">#7</a>
+</li>
+  <li>Build(deps): bump pyo3 from 0.22.5 to 0.22.6 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/4d642ed2c52e9d714638eee8a9a25587f330865c">4d642ed</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/6">#6</a>
+</li>
+  <li>Update rendering settings (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/62dbeb645530c254a471fa685491c1b6a34f1019">62dbeb6</a>) by @AndrejOrsula</li>
+  <li>Build(deps): bump serde from 1.0.210 to 1.0.214 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/90ccbbe2f7d21d434958da26fd118c77cff64ec7">90ccbbe</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/5">#5</a>
+</li>
+  <li>Bump thiserror from 1.0.64 to 1.0.65 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/c4800c052a31ddf0df6da0d613d49cf7d2b5fd9b">c4800c0</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/3">#3</a>
+</li>
+  <li>Bump EmbarkStudios/cargo-deny-action from 1 to 2 (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/d4978109533877a87ae1cb6ce9fd15f6d5e87531">d497810</a>) by @dependabot[bot] in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/2">#2</a>
+</li>
+  <li>Transfer script for automated procgen with Blender to <code class="language-plaintext highlighter-rouge">srb_assets</code> submodule (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/137e61ad3a523c1ea877e76e338c0b4f11e28d6f">137e61a</a>) by @AndrejOrsula</li>
+  <li>CI: Disable docker job for Dependabot PRs (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/1a70c2de3539f9e9d768ba448f50305e768b92be">1a70c2d</a>) by @AndrejOrsula</li>
+  <li>Docker: Use local Rust extension module if the project is mounted as a volume (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/be00d093ef3bff5d747a034bd1c2e2a78c9afdd0">be00d09</a>) by @AndrejOrsula</li>
+  <li>Big Bang (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/c8528ce0013f7a58f300cd8e0937b88542d0b752">c8528ce</a>) by @AndrejOrsula</li>
+</ul>
+
+<h3 id="fixed-2">Fixed</h3>
+<ul>
+  <li>CI: Fix Rust workflow (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/2b988668c74fa81750bd849b14fbc6077f171d3f">2b98866</a>) by @AndrejOrsula</li>
+  <li>GUI: Fix winit initialization (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/d9a3ddd6b01e644f30ef966552e97e34c9e72493">d9a3ddd</a>) by @AndrejOrsula</li>
+</ul>
+
+<h3 id="removed-1">Removed</h3>
+<ul>
+  <li>Remove direct reference dependencies (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/7fb8e73756d0666adf0c435087d2270b6dddb8ce">7fb8e73</a>) by @AndrejOrsula</li>
+  <li>Docs: Remove instructions about NGC Docker login (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/934721484e28993120dca20a0430e6426ead33fe">9347214</a>) by @AndrejOrsula</li>
+  <li>Cargo-deny: Remove deprecated keys (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/bd0d5dac3c457a3f76b3ae530ff1678a58afff7b">bd0d5da</a>) by @AndrejOrsula</li>
+  <li>Pre-commit: Remove redundant excludes (<a href="https://github.com/AndrejOrsula/space_robotics_bench/commit/cf6bf4028dac3044a0cf9864c4a7eb1bebfbf416">cf6bf40</a>) by @AndrejOrsula</li>
+</ul>
+
+<h2 id="new-contributors">New Contributors</h2>
+<ul>
+  <li>@AndrejOrsula made their first contribution</li>
+  <li>@dependabot[bot] made their first contribution in <a href="https://github.com/AndrejOrsula/space_robotics_bench/pull/46">#46</a>
+[0.0.3]: https://github.com/AndrejOrsula/space_robotics_bench/compare/0.0.2..0.0.3
+[0.0.2]: https://github.com/AndrejOrsula/space_robotics_bench/compare/0.0.1..0.0.2</li>
+</ul>
+
+<!-- generated by git-cliff -->
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/srb/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake#github">ament_cmake  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_python#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_python#github">ament_cmake_python  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rviz2#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rviz2#github">rviz2  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/teleop_twist_keyboard#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/teleop_twist_keyboard#github">teleop_twist_keyboard  </a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th>Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                      <tr>
+                        <td><a href="/d/xterm">xterm</a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No known dependants.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No launch files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No message files found.</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No plugins found.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>srb</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/srb+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/andrejorsula/space_robotics_bench.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/srb"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/andrejorsula/space_robotics_bench/tree/main/."
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/srb?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/srb?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=srb&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "srb"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

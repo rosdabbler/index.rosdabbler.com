@@ -1,0 +1,1857 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: okvis</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/okvis/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">okvis</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/okvis">okvis</a> <small>package from <a style="text-decoration:none" href="/r/okvis2/github-smartroboticslab-okvis2">okvis2</a> repo</small>
+        </h3>
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+okvis
+</span>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/okvis"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/smartroboticslab/okvis2/tree/main/."
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-primary">4</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">24</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>0.0.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>BSD 3-Clause</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-default">
+                  
+                    AMENT_CMAKE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default">Open Keyframe-based Visual-Inertial SLAM (Version 2)</span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/smartroboticslab/okvis2.git">https://github.com/smartroboticslab/okvis2.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-03-21
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <em>No category tags.</em>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/okvis2/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/okvis2/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/okvis2/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            OKVIS ROS2
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional links.</em>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Stefan Leutenegger</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Stefan Leutenegger</li>
+                
+              </ul>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/smartroboticslab/okvis2/tree/main/./README.md" title="Open in git repository">README.md</a></div>
+              <div class="panel-body">
+                    <div class="rendered-markdown">
+<h1 id="readme">README</h1>
+
+<p>Welcome to OKVIS2: Open Keyframe-based Visual-Inertial SLAM.</p>
+
+<p>This is the Author’s implementation of [1]. It is further based on work presented in [2-4].</p>
+
+<p>[1] Stefan Leutenegger. <a href="https://arxiv.org/pdf/2202.09199">OKVIS2: Realtime Scalable Visual-Inertial SLAM with Loop
+    Closure</a>. arXiv, 2022.</p>
+
+<p>[2] Stefan Leutenegger, Simon Lynen, Michael Bosse, Roland Siegwart and Paul Timothy Furgale.
+    Keyframe-based visual-inertial odometry using nonlinear optimization. The International Journal
+    of Robotics Research, 2015.</p>
+
+<p>[3] Stefan Leutenegger. Unmanned Solar Airplanes: Design and Algorithms for Efficient and Robust
+    Autonomous Operation. Doctoral dissertation, 2014.</p>
+
+<p>[4] Stefan Leutenegger, Paul Timothy Furgale, Vincent Rabaud, Margarita Chli, Kurt Konolige, Roland
+    Siegwart. Keyframe-Based Visual-Inertial SLAM using Nonlinear Optimization. In Proceedings of
+    Robotics: Science and Systems, 2013.</p>
+
+<p>Note that the codebase that you are provided here is free of charge and without any warranty. This
+is bleeding edge research software.</p>
+
+<p>Also note that the quaternion standard has been adapted to match Eigen/ROS, thus some related
+mathematical description in [2-3] will not match the implementation here.</p>
+
+<p>If you publish work that relates to this software, please cite at least [1].</p>
+
+<h3 id="license">License</h3>
+
+<p>The 3-clause BSD license (see file LICENSE) applies.</p>
+
+<h3 id="how-do-i-get-set-up">How do I get set up?</h3>
+<h4 id="ubuntu">Ubuntu</h4>
+
+<p>This is a pure cmake project.</p>
+
+<p>You will need to install the following dependencies,</p>
+
+<ul>
+  <li>
+    <p>CMake,</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  sudo apt install cmake
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>google-glog + gflags,</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  sudo apt install libgoogle-glog-dev
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>BLAS &amp; LAPACK,</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  sudo apt install libatlas-base-dev
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Eigen3,</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  sudo apt install libeigen3-dev
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>SuiteSparse and CXSparse,</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  sudo apt install libsuitesparse-dev
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Boost,</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  sudo apt install libboost-dev libboost-filesystem-dev
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>OpenCV 2.4-4: follow the instructions on http://opencv.org/ or install
+via</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  sudo apt install libopencv-dev
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>LibTorch: if you want to run the segmentation CNN to remove Sky points etc, install with
+instructions from the link below. Get the C++ version with C++11 ABI with or without CUDA
+(depending on availability on your machine):</p>
+
+    <p>https://pytorch.org/get-started/locally/</p>
+
+    <p>Also, depending on where you downloaded it to, you may want to tell cmake in your <code class="language-plaintext highlighter-rouge">~.bashrc</code>:</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  export Torch_DIR=/path/to/libtorch
+</code></pre></div>    </div>
+
+    <p>Furthermore, you can turn on the NVIDIA GPU to be used for inference, if you have one, with
+  <code class="language-plaintext highlighter-rouge">USE_GPU=ON</code>.</p>
+
+    <p>In case you absolutely do not want to use <code class="language-plaintext highlighter-rouge">LibTorch</code>, you may disable with <code class="language-plaintext highlighter-rouge">USE_NN=OFF</code>.</p>
+  </li>
+  <li>
+    <p>Optional: you can use this package with a Realsense D435i or D455.
+Follow the instructions on:
+https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linux.md</p>
+  </li>
+  <li>
+    <p>Optional: if you need to use openBLAS library, please use the openMP version of it:</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  sudo apt-get install libopenblas-openmp-dev
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Optional: you can use this package as part of a ROS2 workspace. In this case set <code class="language-plaintext highlighter-rouge">BUILD_ROS2=ON</code>.
+Assuming you are running Ubuntu 24.04, follow the steps here:
+https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debians.html</p>
+  </li>
+</ul>
+
+<h4 id="osx">OSX</h4>
+<p>The following has not extensively been tested, but runs on OSX Monterey-Sonoma (Intel and M1).</p>
+
+<p>This is a pure cmake project.</p>
+
+<p>You will need to install the following dependencies,</p>
+
+<ul>
+  <li>
+    <p>XCode and command line tools.</p>
+  </li>
+  <li>
+    <p>homebrew: follow the instructions here https://brew.sh/index_de</p>
+  </li>
+  <li>
+    <p>CMake,</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  brew install cmake
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>google-glog + gflags,</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  brew install glog
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Eigen3,</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  brew install eigen
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>SuiteSparse and CXSparse,</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  brew install suitesparse
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Boost,</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  brew install boost
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>OpenCV 2.4-4,</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  brew install opencv
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>LibTorch: if you want to run the segmentation CNN to remove Sky points etc, install with
+instructions from the link below. Get the C++ version with C++11 ABI with or without CUDA
+(depending on availability on your machine):</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  brew install libtorch
+</code></pre></div>    </div>
+
+    <p>Furthermore, you can turn on the NVIDIA GPU to be used for inference, if you have one, with
+  <code class="language-plaintext highlighter-rouge">USE_GPU=ON</code>.</p>
+
+    <p>In case you absolutely do not want to use <code class="language-plaintext highlighter-rouge">LibTorch</code>, you may disable with <code class="language-plaintext highlighter-rouge">USE_NN=OFF</code>. Also,
+  in that case you’ll really want to get OpenMP either with <code class="language-plaintext highlighter-rouge">brew</code> or by using LLVM that is
+  shipped with it.</p>
+  </li>
+  <li>
+    <p>Optional: you can use this package with a Realsense D435i or D455.</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  brew install openssl
+  brew install librealsense
+  brew uninstall --ignore-dependencies libusb
+  brew install libusb --HEAD
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Optional: you can use this package as part of a ROS2 workspace. In this case set <code class="language-plaintext highlighter-rouge">BUILD_ROS2=ON</code>.
+Getting ROS2 to work on a mac, especially with Apple Silicon, can be a bit of a headache.
+If you are upe for it, follow the steps here:
+https://docs.ros.org/en/jazzy/Installation/Alternatives/macOS-Development-Setup.html</p>
+  </li>
+</ul>
+
+<h3 id="building-the-project-no-ros2">Building the project (no ROS2)</h3>
+
+<p>Clone the OKVIS2 repository:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone --recurse-submodules git@github.com:smartroboticslab/okvis2.git
+</code></pre></div></div>
+
+<p>If you forgot the <code class="language-plaintext highlighter-rouge">--recurse-submodules</code> flag when cloning run the following command in the
+repository root:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git submodule update --init --recursive
+</code></pre></div></div>
+
+<p>To change the cmake build type for the whole project use:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir build &amp;&amp; cd build
+cmake -DCMAKE_BUILD_TYPE=Release ..
+make -j8
+</code></pre></div></div>
+
+<p>NOTE: if you want to use the library, install the project (default or somewhere else), so the
+dependencies can be resolved.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make install
+</code></pre></div></div>
+
+<h3 id="running-the-demo-application">Running the demo application</h3>
+
+<p>You will find a demo application in okvis_apps. It can process datasets in the EuRoC (ASL/ETH)
+format.</p>
+
+<p>In order to run a minimal working example, follow the steps below:</p>
+
+<ol>
+  <li>
+    <p>Download a dataset of your choice from
+http://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets.
+Assuming you downloaded <code class="language-plaintext highlighter-rouge">MH_01_easy/</code>.
+You will find a corresponding calibration / estimator configuration in the
+config folder.</p>
+  </li>
+  <li>
+    <p>Run the app as</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  ./okvis_app_synchronous &lt;path/to/euroc.yaml&gt; &lt;path/to/MH_01_easy/mav0/&gt;
+</code></pre></div>    </div>
+
+    <p>If you built with librealsense installed, you can connect a Realsense D455 (or D435i) and run</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  ./okvis_app_realsense &lt;path/to/realsense_D455.yaml&gt;
+</code></pre></div>    </div>
+
+    <p>Furthermore, there is a utility to record dataset in EuRoC format as above</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  ./okvis_app_realsense_record &lt;path/to/config.yaml&gt; &lt;path/to/folder&gt;
+</code></pre></div>    </div>
+
+    <p>If you are annoyed by info log messages, you can disable them in the terminal (assuming bash):</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  `export GLOG_minloglevel="2"`
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="outputs-and-frames">Outputs and frames</h3>
+
+<p><strong>Fundamentally, the library is meant to be used in a way that you maintain an <code class="language-plaintext highlighter-rouge">okvis::Trajectory</code>
+object in your client code via two callbacks that you need to implement (and where it is your
+responsibility to ensure threadsafe access and modification):</strong></p>
+
+<ol>
+  <li>Implement the callback that is called by the estimator whenever there are updates. The updates
+may involve many states, especially upon loop closure. Register it with
+<code class="language-plaintext highlighter-rouge">okvis::ViInterface::setOptimisedGraphCallback</code> and let it trigger the update to the
+<code class="language-plaintext highlighter-rouge">okvis::Trajectory</code> via <code class="language-plaintext highlighter-rouge">okvis::Trajectory::update</code>.</li>
+  <li>If you would like to have the high-rate, most up-to-date states available via prediction with the
+newest IMU measurements, then also register an IMU callback (last) to
+<code class="language-plaintext highlighter-rouge">okvis::ViSensorBase::setImuCallback</code> and let it trigger the update to the
+<code class="language-plaintext highlighter-rouge">okvis::Trajectory</code> via <code class="language-plaintext highlighter-rouge">okvis::Trajectory::addImuMeasurement</code>.</li>
+</ol>
+
+<p>This mechanism allows availability of a consistent trajectory, <code class="language-plaintext highlighter-rouge">okvis::Trajectory</code>, on which you can
+query states for any time (at estimated, image timestamps, or otherwise).</p>
+
+<p>In terms of coordinate frames and notation,</p>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">W</code> denotes the OKVIS World frame $<code class="language-plaintext highlighter-rouge">\underrightarrow{\mathcal{F}}_W</code>$ (z up)</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">C_i</code> denotes the i-th camera frame $<code class="language-plaintext highlighter-rouge">\underrightarrow{\mathcal{F}}_{C_i}</code>$</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">S</code> denotes the IMU sensor frame $<code class="language-plaintext highlighter-rouge">\underrightarrow{\mathcal{F}}_S</code>$</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">B</code> denotes a (user-specified / robot) body frame $<code class="language-plaintext highlighter-rouge">\underrightarrow{\mathcal{F}}_B</code>$</li>
+</ul>
+
+<p>States contain the pose <code class="language-plaintext highlighter-rouge">T_WS</code> ($<code class="language-plaintext highlighter-rouge">\boldsymbol{T}_{WS}</code>$) as a position <code class="language-plaintext highlighter-rouge">r_WS</code>
+($<code class="language-plaintext highlighter-rouge">_W\mathbf{r}_{S}</code>$) and quaternion <code class="language-plaintext highlighter-rouge">q_WS</code> ($<code class="language-plaintext highlighter-rouge">\mathbf{q}_{WS}</code>$), followed by the velocity
+in World frame <code class="language-plaintext highlighter-rouge">v_W</code> ($<code class="language-plaintext highlighter-rouge">_{W}\mathbf{v}</code>$) and gyro biases <code class="language-plaintext highlighter-rouge">b_g</code> ($<code class="language-plaintext highlighter-rouge">\mathbf{b}_g</code>$) as well as
+accelerometer biases <code class="language-plaintext highlighter-rouge">b_a</code> ($<code class="language-plaintext highlighter-rouge">\mathbf{b}_a</code>$).</p>
+
+<p><strong>See the example applications to understand how to use the estimator, sensor, callbacks, etc!</strong></p>
+
+<h3 id="configuration-files">Configuration files</h3>
+
+<p>The config folder contains example configuration files. Please read the documentation of the
+individual parameters in the yaml file carefully. You have various options to trade-off accuracy and
+computational expense as well as to enable online calibration.</p>
+
+<h3 id="building-the-project-with-ros2">Building the project with ROS2</h3>
+
+<p>Create a workspace e.g.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir -p ~/okvis_ws/src
+cd ~/okvis_ws/src
+</code></pre></div></div>
+
+<p>Now you can clone the repo</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone --recurse-submodules git@github.com:smartroboticslab/okvis2.git
+</code></pre></div></div>
+
+<p>You may want to run rosdep to make sure all dependencies are installed.</p>
+
+<p>Next, you can build:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/okvis_ws
+colcon build
+</code></pre></div></div>
+
+<p>Make sure to turn on the ROS2 specific build: it’s on by default, but you may add
+<code class="language-plaintext highlighter-rouge">--cmake-args -DBUILD_ROS2=ON</code> to force it.</p>
+
+<h3 id="running-ros2-nodes">Running ROS2 nodes</h3>
+
+<p>After sourcing the workspace, you can launch the live <code class="language-plaintext highlighter-rouge">realsense</code> node as</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 launch okvis okvis_node_realsense.launch.xml config_filename:=&lt;config.yaml&gt;
+</code></pre></div></div>
+
+<p>This will also bring up rviz that visualises the output.</p>
+
+<p>Alternatively, you can run the live node connected via subscription to topics. To experience this,
+you can run the realsense driver node as</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 launch okvis okvis_node_realsense_publisher.launch.xml config_filename:=&lt;config.yaml&gt;
+</code></pre></div></div>
+
+<p>… and launch the subscriber in a separate terminal as</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 launch okvis okvis_node_subscriber.launch.xml config_filename:=&lt;config.yaml&gt;
+</code></pre></div></div>
+
+<p>Note that you may use either <code class="language-plaintext highlighter-rouge">okvis_node_realsense</code> or <code class="language-plaintext highlighter-rouge">okvis_node_realsense_publisher</code> to record a
+bag, minimally with</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 bag record /okvis/imu0 /okvis/cam0/image_raw /okvis/cam1/image_raw
+</code></pre></div></div>
+
+<p>Finally, you can also process datasets. Currently, the EuRoC format is supported by default, as well
+as ROS2 bags (db3/mcap/..). Run the respective synchronous (blocking) processing as</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 launch okvis okvis_node_synchronous.launch.xml config_filename:=&lt;cfg.yaml&gt; path:=&lt;folder&gt;
+</code></pre></div></div>
+
+<h3 id="health-warning-calibration">HEALTH WARNING: calibration</h3>
+
+<p>If you would like to run the software/library on your own hardware setup, be aware that good results
+(or results at all) may only be obtained with appropriate calibration of the</p>
+
+<ul>
+  <li>camera intrinsics,</li>
+  <li>camera extrinsics (poses relative to the IMU),</li>
+  <li>knowledge about the IMU noise parameters,</li>
+  <li>and ACCURATE TIME SYNCHRONISATION OF ALL SENSORS.</li>
+</ul>
+
+<p>To perform a calibration yourself, we recommend the following:</p>
+
+<ul>
+  <li>
+    <p>Get Kalibr by following the instructions here
+https://github.com/ethz-asl/kalibr/wiki/installation . If you decide to build
+from source and you run ROS indigo checkout pull request 3:</p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>git fetch origin pull/3/head:request3
+git checkout request3
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Follow https://github.com/ethz-asl/kalibr/wiki/multiple-camera-calibration to calibrate intrinsic
+and extrinsic parameters of the cameras. If you receive an error message that the tool was unable
+to make an initial guess on focal length, make sure that your recorded dataset contains frames
+that have the whole calibration target in view.</p>
+  </li>
+  <li>
+    <p>Follow https://github.com/ethz-asl/kalibr/wiki/camera-imu-calibration to get estimates for the
+spatial parameters of the cameras with respect to the IMU.</p>
+  </li>
+</ul>
+
+<h3 id="using-the-library">Using the library</h3>
+
+<p>Here’s a minimal example of your CMakeLists.txt to build a project using OKVIS.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># To include OKVIS in your project if it's installed on the system add:
+find_package(okvis 2 REQUIRED)
+# OR if OKVIS is a git submodule of the current project add:
+add_subdirectory(okvis2)
+
+# Then to link some target with it add:
+target_link_libraries(MY_TARGET_NAME ${okvis_LIBRARIES})
+</code></pre></div></div>
+
+<h3 id="contribution-guidelines">Contribution guidelines</h3>
+
+<ul>
+  <li>
+    <p>Contact stefan.leutenegger@tum.de to request access to the github repository.</p>
+  </li>
+  <li>
+    <p>Programming guidelines: please follow
+https://github.com/ethz-asl/programming_guidelines/wiki/Cpp-Coding-Style-Guidelines.</p>
+  </li>
+  <li>
+    <p>Writing tests: please write unit tests (gtest).</p>
+  </li>
+  <li>
+    <p>Code review: please create a pull request for all changes proposed. The pull request will be
+reviewed by an admin before merging.</p>
+  </li>
+</ul>
+
+<h3 id="support">Support</h3>
+
+<p>The developpers will be happy to assist you or to consider bug reports / feature requests. But
+questions that can be answered reading this document will be ignored. Please contact
+stefan.leutenegger@tum.de.</p>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <em>No CHANGELOG found.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/okvis/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ros_environment#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ros_environment#github">ros_environment  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake#github">ament_cmake  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_python#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_python#github">ament_cmake_python  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/eigen3_cmake_module#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/eigen3_cmake_module#github">eigen3_cmake_module  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rosidl_default_runtime#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rosidl_default_runtime#github">rosidl_default_runtime  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ros2launch#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ros2launch#github">ros2launch  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_lint_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_lint_auto#github">ament_lint_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_lint_common#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_lint_common#github">ament_lint_common  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/builtin_interfaces#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/builtin_interfaces#github">builtin_interfaces  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclcpp#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclcpp#github">rclcpp  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclpy#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclpy#github">rclpy  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rosbag2_cpp#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rosbag2_cpp#github">rosbag2_cpp  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rosbag2_storage#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rosbag2_storage#github">rosbag2_storage  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/cv_bridge#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/cv_bridge#github">cv_bridge  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/std_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/std_msgs#github">std_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/sensor_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/sensor_msgs#github">sensor_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/visualization_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/visualization_msgs#github">visualization_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/nav_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/nav_msgs#github">nav_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/pcl_conversions#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/pcl_conversions#github">pcl_conversions  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/message_filters#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/message_filters#github">message_filters  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/launch#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/launch#github">launch  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/launch_testing#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/launch_testing#github">launch_testing  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/launch_testing_ros#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/launch_testing_ros#github">launch_testing_ros  </a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th>Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                      <tr>
+                        <td><a href="/d/eigen">eigen</a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No known dependants.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <ul>
+            
+              <li><a href="https://github.com/smartroboticslab/okvis2/tree/main/./launch/okvis_node_realsense_publisher.launch.xml" target="_blank">launch/okvis_node_realsense_publisher.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>config_filename</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/smartroboticslab/okvis2/tree/main/./launch/okvis_node_synchronous.launch.xml" target="_blank">launch/okvis_node_synchronous.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>rpg</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>config_filename</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>path</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rviz</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mesh</strong> <em>&#91;default: realsense.dae&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/smartroboticslab/okvis2/tree/main/./launch/okvis_node_subscriber.launch.xml" target="_blank">launch/okvis_node_subscriber.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>rpg</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>config_filename</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>path</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rviz</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mesh</strong> <em>&#91;default: realsense.dae&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/smartroboticslab/okvis2/tree/main/./launch/okvis_node_realsense.launch.xml" target="_blank">launch/okvis_node_realsense.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>rpg</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rgb</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>config_filename</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>path</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rviz</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mesh</strong> <em>&#91;default: realsense.dae&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No message files found.</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No plugins found.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>okvis</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/okvis+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/smartroboticslab/okvis2.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/okvis"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/smartroboticslab/okvis2/tree/main/."
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/okvis?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/okvis?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=okvis&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "okvis"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

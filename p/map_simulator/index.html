@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: map_simulator</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/map_simulator/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">map_simulator</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/map_simulator">map_simulator</a> <small>package from <a style="text-decoration:none" href="/r/opendr/github-opendr-eu-opendr">opendr</a> repo</small>
+        </h3>
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/opendr_bridge">
+
+opendr_bridge
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/opendr_data_generation">
+
+opendr_data_generation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/opendr_perception">
+
+opendr_perception
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/opendr_planning">
+
+opendr_planning
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/opendr_simulation">
+
+opendr_simulation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/opendr_interface">
+
+opendr_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mobile_manipulation_rl_demo">
+
+mobile_manipulation_rl_demo
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/franka_description">
+
+franka_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/panda_moveit_config">
+
+panda_moveit_config
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/single_demo_grasping_demo">
+
+single_demo_grasping_demo
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/fmp_slam_eval">
+
+fmp_slam_eval
+</a>
+            
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+map_simulator
+</span>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/openslam_gmapping">
+
+openslam_gmapping
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/gmapping">
+
+gmapping
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/slam_gmapping">
+
+slam_gmapping
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mobile_manipulation_rl">
+
+mobile_manipulation_rl
+</a>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/map_simulator"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/opendr-eu/opendr/tree/master/projects/python/perception/slam/full_map_posterior_gmapping/src/map_simulator"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-primary">1</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">3</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>3.0.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>
+    Copyright 2020-2024 OpenDR European Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+  </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-info">
+                  
+                    CATKIN</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default">A modular, open and non-proprietary toolkit for core robotic functionalities by harnessing deep learning</span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/opendr-eu/opendr.git">https://github.com/opendr-eu/opendr.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">master</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-01-29
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <span class="label label-default">deep-learning</span> <span class="label label-default">robotics</span> 
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/opendr/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/opendr/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/opendr/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            The 2D Map Simulator package for generating datasets for testing and evaluating SLAM algorithms
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional links.</em>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Jose Arce</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional authors.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/opendr-eu/opendr/tree/master/projects/python/perception/slam/full_map_posterior_gmapping/src/map_simulator/README.md" title="Open in git repository">projects/python/perception/slam/full_map_posterior_gmapping/src/map_simulator/README.md</a></div>
+              <div class="panel-body">
+                    <div class="rendered-markdown">
+<h1 id="map-simulator">Map Simulator</h1>
+
+<p>Python script for generating odometry and measurement datasets to test SLAM Algorithms.</p>
+
+<h2 id="usage">Usage</h2>
+
+<p>In a ROS system with <code class="language-plaintext highlighter-rouge">roscore</code> running:</p>
+
+<pre><code class="language-commandline">python2.7 map_simulator.py [-p] [-s &lt;search_paths&gt;] [-h] -i &lt;input_file&gt; [-o &lt;output_file&gt;] [&lt;param_name&gt;:&lt;param_value&gt;]...
+
+</code></pre>
+
+<h3 id="command-arguments">Command Arguments</h3>
+<h4 id="positional-arguments">Positional Arguments</h4>
+<ul>
+  <li>
+<strong><em><code class="language-plaintext highlighter-rouge">-i &lt;input_file&gt;</code></em></strong>, <strong><em><code class="language-plaintext highlighter-rouge">--input &lt;input_file&gt;</code></em></strong>: (String)<br>
+ Path to a JSON file containing the desired map, robot movement commands and parameters.</li>
+</ul>
+
+<h4 id="optional-arguments">Optional Arguments</h4>
+<ul>
+  <li>
+<strong><em><code class="language-plaintext highlighter-rouge">-o &lt;output_file&gt;</code></em></strong>, <strong><em><code class="language-plaintext highlighter-rouge">--output &lt;output_file&gt;</code></em></strong>: (Optional, String)<br>
+ Path and filename where the output ROSBag file is to be saved. If none is provided, only the visualization will be run, without generating a ROSBag.</li>
+  <li>
+<strong><em><code class="language-plaintext highlighter-rouge">-p</code></em></strong>, <strong><em><code class="language-plaintext highlighter-rouge">--preview</code></em></strong>: (Optional)<br>
+ Display a step-by-step imulation using MatPlotLib.</li>
+  <li>
+<strong><em><code class="language-plaintext highlighter-rouge">-s &lt;paths&gt;</code></em></strong>, <strong><em><code class="language-plaintext highlighter-rouge">--search_paths &lt;paths&gt;</code></em></strong>: (Optional, String) <em>[Default: “.:robots:maps”]</em><br>
+ Search paths for input and include files, separated by colons :.</li>
+  <li>
+<strong><em><code class="language-plaintext highlighter-rouge">-h</code></em></strong>, <strong><em><code class="language-plaintext highlighter-rouge">--help</code></em></strong>: (Optional)<br>
+ Display usage help.</li>
+</ul>
+
+<p>#### Parameter Override
+ Any parameter defined in the following section can be defined from the command line as well, and not just from the json files.
+ Parameters entered through the command line will override any values previously defined in the json files.
+ To enter a parameter, its name and value must be entered separated by a colon-equal sign and using spaces between different parameters.
+ E.g.:<br></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python2.7 map_simulator.py ... meas_per_move:=1 odom_frame:=odom_combined ...
+
+</code></pre></div></div>
+<p>For more information on the possible parameters, please review the next section.</p>
+
+<p>## Parameters
+ The JSON input files can define the following parameters.
+ If a given parameter is not defined in any of the files (main input file or included sub-files), then the default value will be used.</p>
+
+<p>### Include</p>
+<ul>
+  <li>
+<strong>include</strong>: <em>(list of strings) [Default: None]</em><br>
+  Parameter files to be included during parsing for reusing parameters between experiments with a more convenient, reduced-typing, smarter approach.<br>
+  E.g.:<br>
+</li>
+</ul>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="nl">"include"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"common.json"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"map.json"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"movements.json"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+    
+</span></code></pre></div></div>
+
+<p>The include procedure is done in the following manner:</p>
+<ul>
+  <li>
+<strong><em>recursively</em></strong> and in a <strong><em>depth-first</em></strong> order:<br>
+  If an included file contains <em>include</em> statement as well, the files listed are also included,<br>
+ E.g.: Input file contains:</li>
+</ul>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">     </span><span class="nl">"include"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+         </span><span class="s2">"a.json"</span><span class="p">,</span><span class="w">
+         </span><span class="s2">"b.json"</span><span class="p">,</span><span class="w">
+         </span><span class="s2">"c.json"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+     
+</span></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> and file `a.json` contains
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">     </span><span class="nl">"include"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+         </span><span class="s2">"d.json"</span><span class="p">,</span><span class="w">
+         </span><span class="s2">"e.json"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+     
+</span></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Then the include order will be: `a.json`, `d.json`, `e.json`, `b.json`, `c.json`.   * with ***duplicate detection***:&lt;br/&gt;   Parsed files are kept in a list and included only once, the first time (in depth-first order) it is included.   * ***last-in***:&lt;br/&gt;   The last definition of a parameter according to include order rules overrides any previous definitions.   ***Note:*** Included files are always parsed before any parameters configured locally in the file.
+</code></pre></div></div>
+
+<p>### TF
+ #### TF Frames</p>
+<ul>
+  <li>
+<strong>odom_frame</strong>: (String) <em>[Default: “odom”]</em><br>
+  TF Frame for the odometry measurements.</li>
+  <li>
+<strong>base_frame</strong>: (String) <em>[Default: “base_link”]</em><br>
+  TF Frame for the robot’s base</li>
+  <li>
+<strong>laser_frame</strong>: (String) <em>[Default:”laser_link”]</em><br>
+  TF Frame for the Laser Sensor</li>
+</ul>
+
+<h4 id="tf-transforms">TF Transforms</h4>
+<ul>
+  <li>
+<strong>base_to_laser_tf</strong>: (Array) <em>[Default: [[0.05, 0.0], [0]] ]</em><br>
+ Transform between the base and laser frames in the format [[x, y], θ].</li>
+</ul>
+
+<h3 id="map">Map</h3>
+<ul>
+  <li>
+<strong>obstacles</strong>: (List of Objects) <em>[Default: [] (Empty Map)]</em><br>
+ A world map is defined as a list of geometric obstacles.<br>
+E.g.:</li>
+</ul>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="nl">"obstacles"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"polygon"</span><span class="p">,</span><span class="w"> </span><span class="nl">"vertices"</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="mf">-0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">10.1</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">10.1</span><span class="p">,</span><span class="w"> </span><span class="mf">1.1</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">-0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">1.1</span><span class="p">]]},</span><span class="w">
+        </span><span class="p">{</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"circle"</span><span class="p">,</span><span class="w"> </span><span class="nl">"center"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">4.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">],</span><span class="w"> </span><span class="nl">"radius"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">},</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+    
+</span></code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Each obstacle is defined as a dictionary with a mandatory *type* and additional parameters depending on the type of geometric construct used. #### Obstacle Types ##### Polygon Defined as a set of vertices connected by straight line segments. ###### Arguments  * **vertices**: (Array)&lt;br/&gt;  List of ordered pairs of 2D points [x, y]. The order is relevant, as the segments of polyline connecting them are constructed between each consecutive pair of points, and between the last and first points.&lt;br/&gt;  * **opacity**: (float) *[Default: 1.0]*&lt;br/&gt;  Determines the probability with which the obstacle reflects a beam. A value of 1.0 makes the object always reflective, while 0.0 is completely transparent (so why bother defining the polygon in the first place).
+</code></pre></div></div>
+
+<h6 id="example">Example</h6>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"polygon"</span><span class="p">,</span><span class="w"> </span><span class="nl">"vertices"</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="mf">-0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">10.1</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">10.1</span><span class="p">,</span><span class="w"> </span><span class="mf">1.1</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">-0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">1.1</span><span class="p">]],</span><span class="w"> </span><span class="nl">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div></div>
+
+<h3 id="robot-movements">Robot Movements</h3>
+
+<ul>
+  <li>
+    <p><strong>start_pose</strong>: (Array) <em>[Default: [[0.0, 0.0], 0.0] ]</em><br>
+Position and Orientation [[x, y], θ] of the Robot’s base frame at timestep <em>t = 0</em>.<br>
+E.g.: <code class="language-plaintext highlighter-rouge">"start_pose": [[0.5, 0.5], [0.0]]</code>.</p>
+  </li>
+  <li>
+<strong>initial_timestamp</strong>: (Float | null) <em>[Default: null]</em><br>
+Timestamp of the initial pose message in seconds using Python’s <code class="language-plaintext highlighter-rouge">time.time()</code> representation.
+If <em>null</em>, then the current system time will be used instead.<br>
+E.g.:
+    <ul>
+      <li>
+<code class="language-plaintext highlighter-rouge">"initial_timestamp": null</code>: Set initial stamp to current system time.</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">"initial_timestamp": 1596820827.48</code>: Set initial stamp to <em>August 7th 2020, 19:20:27.480</em>.</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>move_time_interval</strong>: (Float) <em>[Default: 1000.0]</em><br>
+Unless otherwise specified, time in <em>ms</em> that each move command takes to execute.
+Used to advance the time stamp in the odometry messages.<br>
+E.g.: <code class="language-plaintext highlighter-rouge">"move_time_interval": 1000.0</code>.</p>
+  </li>
+  <li>
+<strong>move_commands</strong>: (List of Objects) <em>[Default: [] (No movement)]</em> Determines the position of the robot at every time step, and the total duration of the simulation.</li>
+</ul>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="nl">"move_commands"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pose"</span><span class="p">,</span><span class="w"> </span><span class="nl">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="mf">1.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">],</span><span class="w"> </span><span class="mf">0.0</span><span class="p">]},</span><span class="w">
+        </span><span class="p">{</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pose"</span><span class="p">,</span><span class="w"> </span><span class="nl">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="mf">2.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">],</span><span class="w"> </span><span class="mf">0.0</span><span class="p">]},</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+    
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Each command is defined by a type and additional parameters.
+</code></pre></div></div>
+
+<h4 id="movement-types">Movement Types</h4>
+<h5 id="pose">Pose</h5>
+<p>Defines the exact position and orientation of the robot at a given time step.</p>
+
+<h6 id="arguments">Arguments</h6>
+<ul>
+  <li>
+<strong>params</strong>: (Array) 2D Position and orientation [[x, y], θ]</li>
+</ul>
+
+<h6 id="example-1">Example</h6>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pose"</span><span class="p">,</span><span class="w"> </span><span class="nl">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="mf">1.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">],</span><span class="w"> </span><span class="mf">0.0</span><span class="p">]}</span><span class="w">
+
+</span></code></pre></div></div>
+
+<h5 id="pose-1">Pose</h5>
+<p>Defines the desired position and orientation of the robot at a given time step.
+From them, an initial rotation, a translation and a final rotation will be computed with respect to the previous desired pose.</p>
+
+<h6 id="arguments-1">Arguments</h6>
+<ul>
+  <li>
+<strong>params</strong>: (Array) 2D Position and orientation [[x, y], θ]</li>
+</ul>
+
+<h6 id="example-2">Example</h6>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"odometry"</span><span class="p">,</span><span class="w"> </span><span class="nl">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="mf">1.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">],</span><span class="w"> </span><span class="mf">0.0</span><span class="p">]}</span><span class="w">
+
+</span></code></pre></div></div>
+
+<h3 id="measurements">Measurements</h3>
+
+<ul>
+  <li>
+    <p><strong>scan_topic</strong>: (String) <em>[Default: “base_scan”]</em><br>
+Name of the message topic where the measurements will be published.<br>
+E.g.: <code class="language-plaintext highlighter-rouge">"scan_topic": "base_scan"</code>.</p>
+  </li>
+  <li>
+    <p><strong>meas_per_move</strong>: (Int) <em>[Default: 5]</em><br>
+Number of measurement scans to perform after each movement command.<br>
+E.g.: <code class="language-plaintext highlighter-rouge">"meas_per_move": 3</code>.</p>
+  </li>
+  <li>
+    <p><strong>scan_time_interval</strong>: (Float) <em>[Default: 50.0]</em><br>
+Time in <em>ms</em> that each measurement scan takes to execute.
+Used to advance the time stamp in the messages.<br>
+E.g.: <code class="language-plaintext highlighter-rouge">"scan_time_interval": 50.0</code>.</p>
+  </li>
+  <li>
+    <p><strong>max_range</strong>: (Float) <em>[Default: 20.0]</em><br>
+Maximum distance in <em>m</em> that a sensor can measure.
+If a beam does not hit an obstacle, then the returned value will be this.<br>
+E.g.: <code class="language-plaintext highlighter-rouge">"max_range": 20.0</code>.</p>
+  </li>
+  <li>
+    <p><strong>num_rays</strong>: (Int) <em>[Default: 180]</em><br>
+Number of measurements/beams/rays taken by the sensor in a single scan.
+Equally spaced between <em>start_ray</em> and <em>end_ray</em>.<br>
+E.g.: <code class="language-plaintext highlighter-rouge">"num_rays": 1</code> for a single beam.</p>
+  </li>
+  <li>
+    <p><strong>start_ray</strong>: (Float) <em>[Default: -1.5707963268 (-π/2)]</em><br>
+Start angle in radians for the scan rays.<br>
+E.g.: <code class="language-plaintext highlighter-rouge">"start_ray": -3.141592</code></p>
+  </li>
+  <li>
+    <p><strong>end_ray</strong>: (Float) <em>[Default: 1.5707963268 (π/2)]</em><br>
+End angle in radians for the scan rays.<br>
+E.g.: <code class="language-plaintext highlighter-rouge">"end_ray": 3.141592</code></p>
+  </li>
+</ul>
+
+<h3 id="uncertainty">Uncertainty</h3>
+
+<ul>
+  <li>
+    <p><strong>deterministic</strong>: (Bool) <em>[Default: false]</em><br>
+When true, then the ground truth positions and measurements will be displayed and saved to the ROSBag.
+Otherwise, zero-mean gaussian noise will be added to the odometry and sensor data according to the following covariances.</p>
+  </li>
+  <li>
+    <p><strong>Pose_sigma</strong>: (3x3 Matrix) <em>[Default: [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.]] ]</em><br>
+Covariance matrix defining the uncertainty in the robot’s pose (Only used for <em>pose</em>-type movements).<br></p>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>          ⎛ σxx σxy σxθ ⎞
+      Σ = ⎜ σyx σyy σyθ ⎟
+          ⎝ σθx σθy σθθ ⎠
+    
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>E.g.:
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="nl">"pose_sigma"</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="mf">0.01</span><span class="p">,</span><span class="w"> </span><span class="mf">0.00</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">],</span><span class="w">
+                   </span><span class="p">[</span><span class="mf">0.00</span><span class="p">,</span><span class="w"> </span><span class="mf">0.01</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">],</span><span class="w">
+                   </span><span class="p">[</span><span class="mf">0.00</span><span class="p">,</span><span class="w"> </span><span class="mf">0.00</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">]]</span><span class="err">,</span><span class="w">
+    
+</span></code></pre></div></div>
+<ul>
+  <li>
+<strong>odometry_alpha</strong>: (4 Vector) <em>[Default: [0.0, 0.0, 0.0, 0.0] ]</em><br>
+Weight parameters for odometry-based movements consisting of rotation,translation,rotation.<br>
+</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      α = ( α1 α2 α3 α4 )
+    
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>E.g.:
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="nl">"odometry_alpha"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mf">0.001</span><span class="p">,</span><span class="w"> </span><span class="mf">0.01</span><span class="p">,</span><span class="w"> </span><span class="mf">0.01</span><span class="p">,</span><span class="w"> </span><span class="mf">0.001</span><span class="p">]</span><span class="err">,</span><span class="w">
+    
+</span></code></pre></div></div>
+
+<ul>
+  <li>
+<strong>measurement_sigma</strong>: (2x2 Matrix) <em>[Default: [[0.0, 0.0], [0.0, 0.0]]</em><br>
+Covariance matrix defining the uncertainty in the robot’s measurement bearings and ranges.<br>
+</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>          ⎛ σφφ   σφz ⎞
+      Σ = ⎜           ⎟
+          ⎝ σzφ   σzz ⎠
+    
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>E.g.:
+</code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">    </span><span class="nl">"measurement_sigma"</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="mf">0.010</span><span class="p">,</span><span class="w"> </span><span class="mf">0.000</span><span class="p">],</span><span class="w">
+                          </span><span class="p">[</span><span class="mf">0.000</span><span class="p">,</span><span class="w"> </span><span class="mf">0.002</span><span class="p">]]</span><span class="w">
+    
+</span></code></pre></div></div>
+
+<h3 id="visualization">Visualization</h3>
+
+<ul>
+  <li>
+    <p><strong>render_move_pause</strong>: (float) <em>[Default: 0.5]</em><br>
+Time in seconds that the simulation will pause after displaying a movement.</p>
+  </li>
+  <li>
+    <p><strong>render_sense_pause</strong>: (float) <em>[Default: 0.35]</em><br>
+Time in seconds that the simulation will pause after displaying a measurement.</p>
+  </li>
+</ul>
+
+<hr>
+
+<p>JAB 2020</p>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <em>No CHANGELOG found.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/map_simulator/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rospy#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rospy#github">rospy  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/gmapping#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/gmapping#github">gmapping  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/catkin#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/catkin#github">catkin  </a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No direct system dependencies.</em>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th>Name</th>
+                  <th class="text-center">Deps</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/lab4_navigation#github">lab4_navigation</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/lab4_navigation#github-deps" class="endoftree">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/fmp_slam_eval#github">fmp_slam_eval</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/fmp_slam_eval#github-deps" class="endoftree">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <ul>
+            
+              <li><a href="https://github.com/opendr-eu/opendr/tree/master/projects/python/perception/slam/full_map_posterior_gmapping/src/map_simulator/launch/mapsim2d.launch" target="_blank">launch/mapsim2d.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>search_paths</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input_file</strong> <em>&#91;default: $(find map_simulator)/scenarios/robots/Robot_10Loop_noisy_3_2pi_180rays.json&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>output_file</strong> <em>&#91;default: $(find map_simulator)/rosbags/Robot_10Loop_noisy_3_2pi_180rays.bag&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No message files found.</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No plugins found.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>map_simulator</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/map_simulator+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/opendr-eu/opendr.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/map_simulator"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/opendr-eu/opendr/tree/master/projects/python/perception/slam/full_map_posterior_gmapping/src/map_simulator"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/map_simulator?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/map_simulator?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=map_simulator&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "map_simulator"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

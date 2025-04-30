@@ -1,0 +1,2546 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: pcl_omp_registration</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/pcl_omp_registration/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">pcl_omp_registration</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/pcl_omp_registration">pcl_omp_registration</a> <small>package from <a style="text-decoration:none" href="/r/autoware_learn/github-is-whale-autoware_learn">autoware_learn</a> repo</small>
+        </h3>
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/amathutils_lib">
+
+amathutils_lib
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_build_flags">
+
+autoware_build_flags
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_health_checker">
+
+autoware_health_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/emergency_handler">
+
+emergency_handler
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/gnss">
+
+gnss
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet2_extension">
+
+lanelet2_extension
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/libvectormap">
+
+libvectormap
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/libwaypoint_follower">
+
+libwaypoint_follower
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/map_file">
+
+map_file
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/object_map">
+
+object_map
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/op_planner">
+
+op_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/op_ros_helpers">
+
+op_ros_helpers
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/op_simu">
+
+op_simu
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/op_utility">
+
+op_utility
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ros_observer">
+
+ros_observer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tvm_utility">
+
+tvm_utility
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vector_map">
+
+vector_map
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vector_map_server">
+
+vector_map_server
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vehicle_sim_model">
+
+vehicle_sim_model
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_connector">
+
+autoware_connector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ekf_localizer">
+
+ekf_localizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/gnss_localizer">
+
+gnss_localizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/image_processor">
+
+image_processor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/imm_ukf_pda_track">
+
+imm_ukf_pda_track
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lidar_apollo_cnn_seg_detect">
+
+lidar_apollo_cnn_seg_detect
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lidar_euclidean_cluster_detect">
+
+lidar_euclidean_cluster_detect
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lidar_fake_perception">
+
+lidar_fake_perception
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lidar_kf_contour_track">
+
+lidar_kf_contour_track
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lidar_localizer">
+
+lidar_localizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lidar_naive_l_shape_detect">
+
+lidar_naive_l_shape_detect
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lidar_point_pillars">
+
+lidar_point_pillars
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lidar_shape_estimation">
+
+lidar_shape_estimation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/naive_motion_predict">
+
+naive_motion_predict
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ndt_cpu">
+
+ndt_cpu
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ndt_gpu">
+
+ndt_gpu
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ndt_tku">
+
+ndt_tku
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/obj_db">
+
+obj_db
+</a>
+            
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+pcl_omp_registration
+</span>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/pixel_cloud_fusion">
+
+pixel_cloud_fusion
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/points_downsampler">
+
+points_downsampler
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/points_preprocessor">
+
+points_preprocessor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/pos_db">
+
+pos_db
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/range_vision_fusion">
+
+range_vision_fusion
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/road_occupancy_processor">
+
+road_occupancy_processor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/roi_object_filter">
+
+roi_object_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/trafficlight_recognizer">
+
+trafficlight_recognizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/twist_generator">
+
+twist_generator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vel_pose_diff_checker">
+
+vel_pose_diff_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vision_beyond_track">
+
+vision_beyond_track
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vision_darknet_detect">
+
+vision_darknet_detect
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vision_lane_detect">
+
+vision_lane_detect
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vision_segment_enet_detect">
+
+vision_segment_enet_detect
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vision_ssd_detect">
+
+vision_ssd_detect
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/astar_search">
+
+astar_search
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/costmap_generator">
+
+costmap_generator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/decision_maker">
+
+decision_maker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/dp_planner">
+
+dp_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ff_waypoint_follower">
+
+ff_waypoint_follower
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/freespace_planner">
+
+freespace_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lane_planner">
+
+lane_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lattice_planner">
+
+lattice_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ll2_global_planner">
+
+ll2_global_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mpc_follower">
+
+mpc_follower
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/op_global_planner">
+
+op_global_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/op_local_planner">
+
+op_local_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/op_simulation_package">
+
+op_simulation_package
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/op_utilities">
+
+op_utilities
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/pure_pursuit">
+
+pure_pursuit
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/state_machine_lib">
+
+state_machine_lib
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/twist_filter">
+
+twist_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/twist_gate">
+
+twist_gate
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/way_planner">
+
+way_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/waypoint_maker">
+
+waypoint_maker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/waypoint_planner">
+
+waypoint_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_quickstart_examples">
+
+autoware_quickstart_examples
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_can_msgs">
+
+autoware_can_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_config_msgs">
+
+autoware_config_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_external_msgs">
+
+autoware_external_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lanelet2_msgs">
+
+autoware_lanelet2_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_map_msgs">
+
+autoware_map_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_msgs">
+
+autoware_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_system_msgs">
+
+autoware_system_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tablet_socket_msgs">
+
+tablet_socket_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vector_map_msgs">
+
+vector_map_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/carla_autoware_bridge">
+
+carla_autoware_bridge
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/gazebo_camera_description">
+
+gazebo_camera_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/gazebo_imu_description">
+
+gazebo_imu_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lgsvl_simulator_bridge">
+
+lgsvl_simulator_bridge
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vehicle_gazebo_simulation_interface">
+
+vehicle_gazebo_simulation_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vehicle_gazebo_simulation_launcher">
+
+vehicle_gazebo_simulation_launcher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/wf_simulator">
+
+wf_simulator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_bag_tools">
+
+autoware_bag_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_camera_lidar_calibrator">
+
+autoware_camera_lidar_calibrator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_launcher">
+
+autoware_launcher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_launcher_rviz">
+
+autoware_launcher_rviz
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/calibration_publisher">
+
+calibration_publisher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/data_preprocessor">
+
+data_preprocessor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/graph_tools">
+
+graph_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/kitti_box_publisher">
+
+kitti_box_publisher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/kitti_launch">
+
+kitti_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/kitti_player">
+
+kitti_player
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet_aisan_converter">
+
+lanelet_aisan_converter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/log_tools">
+
+log_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/map_tf_generator">
+
+map_tf_generator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/map_tools">
+
+map_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/marker_downsampler">
+
+marker_downsampler
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mqtt_socket">
+
+mqtt_socket
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/multi_lidar_calibrator">
+
+multi_lidar_calibrator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/oculus_socket">
+
+oculus_socket
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/pc2_downsampler">
+
+pc2_downsampler
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rosbag_controller">
+
+rosbag_controller
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/runtime_manager">
+
+runtime_manager
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/sound_player">
+
+sound_player
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/system_monitor">
+
+system_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tablet_socket">
+
+tablet_socket
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/twist2odom">
+
+twist2odom
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/udon_socket">
+
+udon_socket
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vehicle_engage_panel">
+
+vehicle_engage_panel
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vehicle_socket">
+
+vehicle_socket
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/decision_maker_panel">
+
+decision_maker_panel
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/detected_objects_visualizer">
+
+detected_objects_visualizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/fastvirtualscan">
+
+fastvirtualscan
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/gazebo_world_description">
+
+gazebo_world_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/glviewer">
+
+glviewer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/integrated_viewer">
+
+integrated_viewer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/points2image">
+
+points2image
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rosinterface">
+
+rosinterface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_rviz_plugins">
+
+autoware_rviz_plugins
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vehicle_description">
+
+vehicle_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vehicle_model">
+
+vehicle_model
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/adi_driver">
+
+adi_driver
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/as">
+
+as
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_driveworks_gmsl_interface">
+
+autoware_driveworks_gmsl_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_driveworks_interface">
+
+autoware_driveworks_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vlg22c_cam">
+
+vlg22c_cam
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/custom_msgs">
+
+custom_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/garmin">
+
+garmin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/hokuyo">
+
+hokuyo
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/javad_navsat_driver">
+
+javad_navsat_driver
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/kvaser">
+
+kvaser
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/sick_lms5xx">
+
+sick_lms5xx
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/memsic_imu">
+
+memsic_imu
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/microstrain_driver">
+
+microstrain_driver
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/nmea_navsat">
+
+nmea_navsat
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pointgrey_drivers">
+
+autoware_pointgrey_drivers
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/sick_ldmrs_description">
+
+sick_ldmrs_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/sick_ldmrs_driver">
+
+sick_ldmrs_driver
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/sick_ldmrs_laser">
+
+sick_ldmrs_laser
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/sick_ldmrs_msgs">
+
+sick_ldmrs_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/sick_ldmrs_tools">
+
+sick_ldmrs_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vectacam">
+
+vectacam
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/xsens_driver">
+
+xsens_driver
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ymc">
+
+ymc
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ds4">
+
+ds4
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ds4_driver">
+
+ds4_driver
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ds4_msgs">
+
+ds4_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet2">
+
+lanelet2
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet2_core">
+
+lanelet2_core
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet2_examples">
+
+lanelet2_examples
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet2_io">
+
+lanelet2_io
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet2_maps">
+
+lanelet2_maps
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet2_matching">
+
+lanelet2_matching
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet2_projection">
+
+lanelet2_projection
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet2_python">
+
+lanelet2_python
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet2_routing">
+
+lanelet2_routing
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet2_traffic_rules">
+
+lanelet2_traffic_rules
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lanelet2_validation">
+
+lanelet2_validation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mrt_cmake_modules">
+
+mrt_cmake_modules
+</a>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/pcl_omp_registration"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/is-whale/autoware_learn/tree/1.14/autoware/core_perception/pcl_omp_registration"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-default">0</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">1</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>1.12.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>Apache 2</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-info">
+                  
+                    CATKIN</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default">autoware src learn and recode.</span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/is-whale/autoware_learn.git">https://github.com/is-whale/autoware_learn.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">1.14</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-03-14
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <em>No category tags.</em>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/autoware_learn/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/autoware_learn/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/autoware_learn/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            The pcl_omp_registration package
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional links.</em>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Yuki Kitsukawa</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional authors.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="panel panel-default">
+            <div class="panel-heading"><span class="glyphicon glyphicon-file"></span> README </div>
+            <div class="panel-body">
+            <em>No README found.</em>
+             <em><a href="/r/autoware_learn/github-is-whale-autoware_learn/#github">See repository README.</a></em>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="changelog-for-package-registration">Changelog for package registration</h1>
+
+<h2 id="1110-2019-03-21">1.11.0 (2019-03-21)</h2>
+
+<ul>
+  <li>Fix license notice in corresponding package.xml</li>
+  <li>Contributors: amc-nu</li>
+</ul>
+
+<h2 id="1100-2019-01-17">1.10.0 (2019-01-17)</h2>
+
+<h2 id="191-2018-11-06">1.9.1 (2018-11-06)</h2>
+
+<h2 id="190-2018-10-31">1.9.0 (2018-10-31)</h2>
+
+<h2 id="180-2018-08-31">1.8.0 (2018-08-31)</h2>
+
+<h2 id="170-2018-05-18">1.7.0 (2018-05-18)</h2>
+
+<ul>
+  <li>update Version from 1.6.3 to 1.7.0 in package.xml and CHANGELOG.rst</li>
+  <li>[fix] Fixes for all packages and dependencies
+(<a href="https://github.com/CPFL/Autoware/pull/1240">#1240</a>)
+    <ul>
+      <li>Initial Cleanup</li>
+      <li>fixed also for indigo</li>
+      <li>kf cjeck</li>
+      <li>Fix road wizard</li>
+      <li>Added travis ci</li>
+      <li>Trigger CI</li>
+      <li>Fixes to cv_tracker and lidar_tracker cmake</li>
+      <li>Fix kitti player dependencies</li>
+      <li>Removed unnecessary dependencies</li>
+      <li>messages fixing for can</li>
+      <li>Update build script travis</li>
+      <li>Travis Path</li>
+      <li>Travis Paths fix</li>
+      <li>Travis test</li>
+      <li>Eigen checks</li>
+      <li>removed unnecessary dependencies</li>
+      <li>Eigen Detection</li>
+      <li>Job number reduced</li>
+      <li>Eigen3 more fixes</li>
+      <li>More Eigen3</li>
+      <li>Even more Eigen</li>
+      <li>find package cmake modules included</li>
+      <li>More fixes to cmake modules</li>
+      <li>Removed non ros dependency</li>
+      <li>Enable industrial_ci for indidog and kinetic</li>
+      <li>Wrong install command</li>
+      <li>fix rviz_plugin install</li>
+      <li>FastVirtualScan fix</li>
+      <li>Fix Qt5 Fastvirtualscan</li>
+      <li>Fixed qt5 system dependencies for rosdep</li>
+      <li>NDT TKU Fix catkin not pacakged</li>
+      <li>More in detail dependencies fixes for more packages</li>
+      <li>GLEW library for ORB</li>
+      <li>Ignore OrbLocalizer</li>
+      <li>Ignore Version checker</li>
+      <li>Fix for driveworks interface</li>
+      <li>driveworks not catkinpackagedd</li>
+      <li>Missing catkin for driveworks</li>
+      <li>libdpm opencv not catkin packaged</li>
+      <li>catkin lib gnss not included in obj_db</li>
+      <li>Points2Polygon fix</li>
+      <li>More missing dependencies</li>
+      <li>image viewer not packaged</li>
+      <li>Fixed SSH2 detection, added viewers for all distros</li>
+      <li>Fix gnss localizer incorrect dependency config</li>
+      <li>Fixes to multiple packages dependencies</li>
+      <li>gnss plib and package</li>
+      <li>More fixes to gnss</li>
+      <li>gnss dependencies for gnss_loclaizer</li>
+      <li>Missing gnss dependency for gnss on localizer</li>
+    </ul>
+
+    <p>* More fixes for dependencies Replaced gnss for
+autoware_gnss_library</p>
+    <ul>
+      <li>gnss more fixes</li>
+      <li>fixes to more dependencies</li>
+      <li>header dependency</li>
+      <li>Debug message</li>
+      <li>more debug messages changed back to gnss</li>
+      <li>debud messages</li>
+      <li>gnss test</li>
+      <li>gnss install command</li>
+      <li>Several fixes for OpenPlanner and its lbiraries</li>
+      <li>Fixes to ROSInterface</li>
+      <li>More fixes to robotsdk and rosinterface</li>
+      <li>robotsdk calibration fix</li>
+      <li>Fixes to rosinterface robotsdk libraries and its nodes</li>
+      <li>Fixes to Qt5 missing dependencies in robotsdk</li>
+      <li>glviewer missing dependencies</li>
+      <li>Missing qt specific config cmake for robotsdk</li>
+      <li>disable cv_tracker</li>
+      <li>Fix to open planner un needed dependendecies</li>
+      <li>Fixes for libraries indecision maker</li>
+      <li>Fixes to libraries decision_maker installation</li>
+      <li>Gazebo on Kinetic</li>
+      <li>Added Missing library</li>
+      <li>
+        <ul>
+          <li>Removed Gazebo and synchonization packages</li>
+        </ul>
+      </li>
+      <li>Renames vmap in lane_planner</li>
+      <li>Added installation commands for missing pakcages</li>
+      <li>Fixes to lane_planner</li>
+      <li>Added NDT TKU Glut extra dependencies</li>
+    </ul>
+
+    <p>* ndt localizer/lib fast pcl fixes re enable cv_tracker</p>
+    <ul>
+      <li>Fix kf_lib</li>
+      <li>Keep industrial_ci</li>
+      <li>Fixes for dpm library</li>
+      <li>Fusion lib fixed</li>
+      <li>dpm and fusion header should match exported project name</li>
+      <li>Fixes to dpm_ocv ndt_localizer and pcl_omp</li>
+      <li>no fast_pcl anymore</li>
+      <li>fixes to libdpm and its package</li>
+      <li>CI test</li>
+      <li>test with native travis ci</li>
+      <li>missing update for apt</li>
+      <li>Fixes to pcl_omp installation and headers</li>
+      <li>Final fixes for tests, modified README</li>
+      <li>
+        <ul>
+          <li>Fixes to README</li>
+        </ul>
+      </li>
+      <li>Enable industrial_ci</li>
+      <li>re enable native travis tests</li>
+    </ul>
+  </li>
+  <li>Contributors: Abraham Monrroy, Kosuke Murakami</li>
+</ul>
+
+<h2 id="163-2018-03-06">1.6.3 (2018-03-06)</h2>
+
+<h2 id="162-2018-02-27">1.6.2 (2018-02-27)</h2>
+
+<ul>
+  <li>Update CHANGELOG</li>
+  <li>Contributors: Yusuke FUJII</li>
+</ul>
+
+<h2 id="161-2018-01-20">1.6.1 (2018-01-20)</h2>
+
+<ul>
+  <li>update CHANGELOG</li>
+  <li>Contributors: Yusuke FUJII</li>
+</ul>
+
+<h2 id="160-2017-12-11">1.6.0 (2017-12-11)</h2>
+
+<ul>
+  <li>Prepare release for 1.6.0</li>
+  <li>Contributors: Yamato ANDO</li>
+</ul>
+
+<h2 id="151-2017-09-25">1.5.1 (2017-09-25)</h2>
+
+<ul>
+  <li>Release/1.5.1 (<a href="https://github.com/cpfl/autoware/issues/816">#816</a>)
+    <ul>
+      <li>fix a build error by gcc version</li>
+      <li>fix build error for older indigo version</li>
+      <li>update changelog for v1.5.1</li>
+      <li>1.5.1</li>
+    </ul>
+  </li>
+  <li>Contributors: Yusuke FUJII</li>
+</ul>
+
+<h2 id="150-2017-09-21">1.5.0 (2017-09-21)</h2>
+
+<ul>
+  <li>Update changelog</li>
+  <li>Contributors: Yusuke FUJII</li>
+</ul>
+
+<h2 id="140-2017-08-04">1.4.0 (2017-08-04)</h2>
+
+<ul>
+  <li>version number must equal current release number so we can start
+releasing in the future</li>
+  <li>added changelogs</li>
+  <li>Contributors: Dejan Pangercic</li>
+</ul>
+
+<h2 id="131-2017-07-16">1.3.1 (2017-07-16)</h2>
+
+<h2 id="130-2017-07-14">1.3.0 (2017-07-14)</h2>
+
+<h2 id="120-2017-06-07">1.2.0 (2017-06-07)</h2>
+
+<ul>
+  <li>ROS Kinectic Upgrade tested on Ubuntu 16.04 and OpenCV 3.2.0 Modules
+not included: -orb_localizer -dpm_ocv node and lib Everything else
+working Added some libraries for Gazebo on src/extras</li>
+  <li>Contributors: amc-nu</li>
+</ul>
+
+<h2 id="112-2017-02-27-2310">1.1.2 (2017-02-27 23:10)</h2>
+
+<h2 id="111-2017-02-27-2225">1.1.1 (2017-02-27 22:25)</h2>
+
+<h2 id="110-2017-02-24">1.1.0 (2017-02-24)</h2>
+
+<h2 id="101-2017-01-14">1.0.1 (2017-01-14)</h2>
+
+<h2 id="100-2016-12-22">1.0.0 (2016-12-22)</h2>
+
+<ul>
+  <li>Fix ndt_mapping Improve CMakeLists.txt</li>
+  <li>Updated fast_pcl</li>
+  <li>Switch use_openmp true/false in ndt_matching.launch</li>
+  <li>Prallelized ndt_matching</li>
+  <li>Use fast_pcl only when pcl 1.7.2 or higher version is installed pcl
+package of Ubuntu 14.04 is version 1.7.1 and some header files which
+are included in fast_pcl are missed in pcl 1.7.1.</li>
+  <li>Add fast_pcl library.</li>
+  <li>Contributors: Syohei YOSHIDA, Yukihiro Saito, yukikitsukawa</li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/pcl_omp_registration/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/catkin#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/catkin#github">catkin  </a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No direct system dependencies.</em>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th>Name</th>
+                  <th class="text-center">Deps</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/lidar_localizer#github">lidar_localizer</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/lidar_localizer#github-deps" class="endoftree">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No launch files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No message files found.</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No plugins found.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>pcl_omp_registration</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/pcl_omp_registration+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/is-whale/autoware_learn.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/pcl_omp_registration"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/is-whale/autoware_learn/tree/1.14/autoware/core_perception/pcl_omp_registration"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/pcl_omp_registration?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/pcl_omp_registration?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=pcl_omp_registration&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "pcl_omp_registration"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

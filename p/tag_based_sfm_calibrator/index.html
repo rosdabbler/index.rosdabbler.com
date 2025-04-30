@@ -1,0 +1,2718 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: tag_based_sfm_calibrator</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/tag_based_sfm_calibrator/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">tag_based_sfm_calibrator</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/tag_based_sfm_calibrator">tag_based_sfm_calibrator</a> <small>package from <a style="text-decoration:none" href="/r/calibrationtools/github-tier4-calibrationtools">calibrationtools</a> repo</small>
+        </h3>
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ground_plane_calibrator">
+
+ground_plane_calibrator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interactive_camera_lidar_calibrator">
+
+interactive_camera_lidar_calibrator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ceres_intrinsic_camera_calibrator">
+
+ceres_intrinsic_camera_calibrator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/intrinsic_camera_calibrator">
+
+intrinsic_camera_calibrator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lidar_to_lidar_2d_calibrator">
+
+lidar_to_lidar_2d_calibrator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mapping_based_calibrator">
+
+mapping_based_calibrator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/marker_radar_lidar_calibrator">
+
+marker_radar_lidar_calibrator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tag_based_pnp_calibrator">
+
+tag_based_pnp_calibrator
+</a>
+            
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+tag_based_sfm_calibrator
+</span>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/point_cloud_accumulator">
+
+point_cloud_accumulator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_calibration_pcl_extensions">
+
+tier4_calibration_pcl_extensions
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_calibration_views">
+
+tier4_calibration_views
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_ground_plane_utils">
+
+tier4_ground_plane_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_sensor_calibration_msgs">
+
+tier4_sensor_calibration_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_tag_utils">
+
+tier4_tag_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/sensor_calibration_manager">
+
+sensor_calibration_manager
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/sensor_calibration_tools">
+
+sensor_calibration_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tunable_static_tf_broadcaster">
+
+tunable_static_tf_broadcaster
+</a>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/tag_based_sfm_calibrator"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/tier4/calibrationtools/tree/tier4/universe/calibrators/tag_based_sfm_calibrator"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-primary">3</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">31</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>0.0.1</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>BSD</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-default">
+                  
+                    AMENT_CMAKE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default">sensor calibration tools for autonomous driving and robotics</span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/tier4/calibrationtools.git">https://github.com/tier4/calibrationtools.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">tier4/universe</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-04-14
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <span class="label label-default">computer-vision</span> <span class="label label-default">camera-calibration</span> <span class="label label-default">calibration</span> <span class="label label-default">autonomous-driving</span> <span class="label label-default">ros2</span> <span class="label label-default">autoware</span> <span class="label label-default">sensor-calibration</span> <span class="label label-default">lidar-calibration</span> <span class="label label-default">robtics</span> 
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/calibrationtools/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/calibrationtools/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/calibrationtools/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            The tag_based_sfm_calibrator package
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional links.</em>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Kenzo Lobos Tsunekawa</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional authors.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/tier4/calibrationtools/tree/tier4/universe/calibrators/tag_based_sfm_calibrator/README.md" title="Open in git repository">calibrators/tag_based_sfm_calibrator/README.md</a></div>
+              <div class="panel-body">
+                    <div class="rendered-markdown">
+<h1 id="tag_based_sfm_calibrator">tag_based_sfm_calibrator</h1>
+
+<p>A tutorial for this calibrator can be found <a href="https://github.com/tier4/calibrationtools/tree/tier4/universe/calibrators/tag_based_sfm_calibrator/../../docs/tutorials/tag_based_sfm_calibrator.md">here</a>.</p>
+
+<h2 id="purpose">Purpose</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">tag_based_sfm_calibrator</code> package performs extrinsic calibration among most sensors and frames used in autonomous driving and robotics.
+In particular, it allows the following extrinsic calibrations:</p>
+
+<ul>
+  <li>base_frame (e.g., <code class="language-plaintext highlighter-rouge">base_link</code>)</li>
+  <li>cameras</li>
+  <li>lidars (see the list of supported lidars for Lidartag [1] detection in our <a href="https://github.com/tier4/LiDARTag">repository</a>)</li>
+</ul>
+
+<p>Note: depending on how this tool is configured it can perform the following calibrations:</p>
+
+<ul>
+  <li>base-camera(s)</li>
+  <li>base-lidar(s)</li>
+  <li>camera-camera(s)</li>
+  <li>lidar-lidar(s)</li>
+  <li>camera(s)-lidar(s)</li>
+  <li>base-camera(s)-lidar(s)</li>
+</ul>
+
+<h2 id="inner-workings--algorithms">Inner-workings / Algorithms</h2>
+
+<p>As the name of the calibrator suggests, this tool relies upon SfM (Structure from Motion) to find the extrinsics between different sensors. However, since we prioritize calibration accuracy, we do not use natural features and local descriptors, but fiducial systems (in our case apriltags/lidartags). Furthermore, since the sensors are attached to a still vehicle, we employ an additional camera (from now on referred to as the <code class="language-plaintext highlighter-rouge">external camera</code>), which we use to create a graph and connect the different vehicle’s sensors, which we optimize using standard bundling adjustment.
+By using a particular sensor as the origin during bundle adjustment, the other sensor’s poses correspond to the desired extrinsics.</p>
+
+<p>Base calibration, on the other hand, can not be directly formulated as a sensor calibration problem (since the base is not a sensor !). We instead formulate an indirect approach to find the <code class="language-plaintext highlighter-rouge">base_link</code> by using its definitions: a frame between the rear axle projected to the ground. We place two tags in each of the rear wheels and then define the <code class="language-plaintext highlighter-rouge">base_link</code> as the intersection between these two tags projected into the ground.</p>
+
+<h2 id="ros-interfaces">ROS Interfaces</h2>
+
+<h3 id="input">Input</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">{calibration_lidar_detections_topics}</code></td>
+      <td>
+<code class="language-plaintext highlighter-rouge">lidartag_msgs::msg::</code> <code class="language-plaintext highlighter-rouge">LidarTagDetectionArray</code>
+</td>
+      <td>Lidartag detections. <code class="language-plaintext highlighter-rouge">calibration_lidar_detections_topics</code> is provided via parameters</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">{calibration_camera_detections_topics}</code></td>
+      <td>
+<code class="language-plaintext highlighter-rouge">apriltag_msgs::msg::</code> <code class="language-plaintext highlighter-rouge">AprilTagDetectionArray</code>
+</td>
+      <td>Apriltag detections. <code class="language-plaintext highlighter-rouge">calibration_camera_detections_topics</code> is provided via parameters</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">{calibration_compressed_image_topics}</code></td>
+      <td>
+<code class="language-plaintext highlighter-rouge">sensor_msgs::msg::</code> <code class="language-plaintext highlighter-rouge">CompressedImage</code>
+</td>
+      <td>Calibration cameras’ image topics. Not used directly for calibration but for debugging and evaluation. <code class="language-plaintext highlighter-rouge">{calibration_compressed_image_topics}</code> is provided via parameters</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">{calibration_camera_info_topics}</code></td>
+      <td>
+<code class="language-plaintext highlighter-rouge">sensor_msgs::msg::</code> <code class="language-plaintext highlighter-rouge">CameraInfo</code>
+</td>
+      <td>Intrinsic parameters for the calibration cameras . <code class="language-plaintext highlighter-rouge">calibration_camera_info_topics</code> is provided via parameters</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="output">Output</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">markers</code></td>
+      <td><code class="language-plaintext highlighter-rouge">visualization_msgs::msg::MarkerArray</code></td>
+      <td>Calibration markers</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">raw_detections_markers</code></td>
+      <td><code class="language-plaintext highlighter-rouge">visualization_msgs::msg::MarkerArray</code></td>
+      <td>Detection markers</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="services">Services</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">extrinsic_calibration</code></td>
+      <td>
+<code class="language-plaintext highlighter-rouge">tier4_sensor_calibration_msgs::</code> <code class="language-plaintext highlighter-rouge">srv::ExtrinsicCalibrator</code>
+</td>
+      <td>Generic calibration service. The call is blocking and only returns when the calibration process finishes</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">add_external_camera_</code> <code class="language-plaintext highlighter-rouge">images_to_scenes</code>
+</td>
+      <td>
+<code class="language-plaintext highlighter-rouge">tier4_sensor_calibration_msgs::</code> <code class="language-plaintext highlighter-rouge">srv::FilesListSrv</code>
+</td>
+      <td>Provides a list of external camera images’ files for each <code class="language-plaintext highlighter-rouge">scene</code>
+</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">add_calibration_sensor_</code> <code class="language-plaintext highlighter-rouge">detections_to_new_scene</code>
+</td>
+      <td><code class="language-plaintext highlighter-rouge">tier4_sensor_calibration_msgs::srv::Empty</code></td>
+      <td>Creates a new <code class="language-plaintext highlighter-rouge">scene</code> from the latest detections received by the node</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">load_external_camera_intrinsics</code></td>
+      <td><code class="language-plaintext highlighter-rouge">tier4_sensor_calibration_msgs::srv::FilesSrv</code></td>
+      <td>Provides a file containing previously computed external camera intrinsics</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">save_external_camera_intrinsics</code></td>
+      <td><code class="language-plaintext highlighter-rouge">tier4_sensor_calibration_msgs::srv::FilesSrv</code></td>
+      <td>Provides a path to save the computed external camera intrinsics</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">calibrate_external_camera_intrinsics</code></td>
+      <td><code class="language-plaintext highlighter-rouge">tier4_sensor_calibration_msgs::srv::FilesSrv</code></td>
+      <td>Provides a list of files of external camera images to perform intrinsic calibration for the external camera</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">process_scenes</code></td>
+      <td><code class="language-plaintext highlighter-rouge">tier4_sensor_calibration_msgs::srv::Empty</code></td>
+      <td>Processes all the obtained <code class="language-plaintext highlighter-rouge">scenes</code>, mainly applying the tag detector to the external images</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">calibrate</code></td>
+      <td><code class="language-plaintext highlighter-rouge">tier4_sensor_calibration_msgs::srv::Empty</code></td>
+      <td>Uses the processed <code class="language-plaintext highlighter-rouge">scenes</code> to perform <code class="language-plaintext highlighter-rouge">bundling adjustment</code> optimization</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">load_database</code></td>
+      <td><code class="language-plaintext highlighter-rouge">tier4_sensor_calibration_msgs::srv::FilesSrv</code></td>
+      <td>For debugging purposes. Loads a processed database of <code class="language-plaintext highlighter-rouge">scenes</code>
+</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">save_database</code></td>
+      <td><code class="language-plaintext highlighter-rouge">tier4_sensor_calibration_msgs::srv::FilesSrv</code></td>
+      <td>For debugging purposes. Saves a processed database of <code class="language-plaintext highlighter-rouge">scenes</code>
+</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="parameters">Parameters</h2>
+
+<h3 id="core-parameters">Core Parameters</h3>
+
+<!--cSpell:ignore nthreads -->
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">publish_tfs</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td> </td>
+      <td>Flag to optionally publish the resulting calibration as tfs</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">write_debug_images</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td> </td>
+      <td>Flag to optionally create images with the resulting calibration poses and detections</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">base_frame</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std::string</code></td>
+      <td><code class="language-plaintext highlighter-rouge">base_link</code></td>
+      <td>The <code class="language-plaintext highlighter-rouge">base_frame</code> is used to compare the initial and calibrated values</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">main_calibration_sensor_frame</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std::string</code></td>
+      <td> </td>
+      <td>The sensor whose frame will act as the origin during optimization</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">calibration_lidar_frames</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std::vector&lt;std::string&gt;</code></td>
+      <td> </td>
+      <td>List of the calibration lidars’ frames</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">calibration_camera_frames</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std::vector&lt;std::string&gt;</code></td>
+      <td> </td>
+      <td>List of calibration cameras’ frames</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">lidartag_to_apriltag_scale</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td> </td>
+      <td>The scale factor for converting lidartag detection sizes to apriltag detection sizes</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">auxiliar_tag.family</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std::string</code></td>
+      <td> </td>
+      <td>The family name of the auxiliary tags</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">auxiliar_tag.rows</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td> </td>
+      <td>The number of rows in the auxiliary tags</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">auxiliar_tag.cols</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td> </td>
+      <td>The number of columns in the auxiliary tags</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">auxiliar_tag.size</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td> </td>
+      <td>The size of the auxiliary tags in meters</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">auxiliar_tag.spacing</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td> </td>
+      <td>The spacing between auxiliary tags (as a proportion relative to the tag size). Only relevant when rows or cols is greater than one</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">auxiliar_tag.ids</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std::vector&lt;int64_t&gt;</code></td>
+      <td> </td>
+      <td>The auxiliar tag IDs</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">waypoint_tag.family</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std::string</code></td>
+      <td> </td>
+      <td>The family name of the waypoint tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">waypoint_tag.rows</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td> </td>
+      <td>The number of rows in the waypoint tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">waypoint_tag.cols</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td> </td>
+      <td>The number of columns in the waypoint tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">waypoint_tag.size</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td> </td>
+      <td>The size of the waypoint tag in meters</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">waypoint_tag.spacing</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td> </td>
+      <td>The spacing between waypoint tags (as a proportion relative to the tag size). Only relevant when rows or cols is greater than one</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">waypoint_tag.ids</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std::vector&lt;int64_t&gt;</code></td>
+      <td> </td>
+      <td>The waypoint tag IDs</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ground_tag.family</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std::string</code></td>
+      <td> </td>
+      <td>The family name of the ground tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ground_tag.rows</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td> </td>
+      <td>The number of rows in the ground tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ground_tag.cols</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td> </td>
+      <td>The number of columns in the ground tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ground_tag.size</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td> </td>
+      <td>The size of the ground tag in meters</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ground_tag.spacing</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td> </td>
+      <td>The spacing between ground tags (as a proportion relative to the tag size). Only relevant when rows or cols is greater than one</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ground_tag.ids</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std::vector&lt;int64_t&gt;</code></td>
+      <td> </td>
+      <td>The ground tags IDs</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">wheel_tag.family</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std::string</code></td>
+      <td> </td>
+      <td>The family name of the wheel tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">wheel_tag.rows</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td> </td>
+      <td>The number of rows in the wheel tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">wheel_tag.cols</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td> </td>
+      <td>The number of columns in the wheel tag</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">wheel_tag.size</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td> </td>
+      <td>The size of the wheel tag in meters</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">wheel_tag.spacing</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td> </td>
+      <td>The spacing between wheel tags (as a proportion relative to the tag size). Only relevant when rows or cols is greater than one</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">left_wheel_tag_id</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td> </td>
+      <td>The left wheel tag ID</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">right_wheel_tag_id</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td> </td>
+      <td>The right wheel tag ID</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ba.optimize_intrinsics</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td> </td>
+      <td>Flag to optimize the external camera intrinsics during bundle optimization</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ba.share_intrinsics</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td> </td>
+      <td>Flag to share intrinsics between different external camera images</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ba.force_shared_ground_plane</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td> </td>
+      <td>Flag to force the use of a shared ground plane model among the ground tags during bundle optimization</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ba.virtual_lidar_f</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td> </td>
+      <td>The focal length of the virtual pinhole model for lidars used in the bundle adjustment optimization</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">ba.calibration_camera_</code> <code class="language-plaintext highlighter-rouge">optimization_weight</code>
+</td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td> </td>
+      <td>The weight of the camera calibration term in the bundle adjustment optimization</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">ba.calibration_lidar_</code> <code class="language-plaintext highlighter-rouge">optimization_weight</code>
+</td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td> </td>
+      <td>The weight of the lidar calibration term in the bundle adjustment optimization</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">ba.external_camera_</code> <code class="language-plaintext highlighter-rouge">optimization_weight</code>
+</td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td> </td>
+      <td>The weight of the external camera calibration term in the bundle adjustment optimization</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ba.fixed_ground_plane_model</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td><code class="language-plaintext highlighter-rouge">false</code></td>
+      <td>Flag to fix the ground plane model during the optimization using the values from the initial calibration</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">initial_intrinsic_calibration.</code> <code class="language-plaintext highlighter-rouge">board_type</code>
+</td>
+      <td><code class="language-plaintext highlighter-rouge">std::string</code></td>
+      <td> </td>
+      <td>The type of calibration board used for the initial intrinsic calibration for the external camera. Valid values are <code class="language-plaintext highlighter-rouge">apriltag</code> and <code class="language-plaintext highlighter-rouge">chessboard</code>
+</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">initial_intrinsic_calibration.</code> <code class="language-plaintext highlighter-rouge">tangent_distortion</code>
+</td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td> </td>
+      <td>Flag to enable tangent distortion in the initial intrinsic calibration for the external camera</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">initial_intrinsic_calibration.</code> <code class="language-plaintext highlighter-rouge">radial_distortion_coeffs</code>
+</td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td> </td>
+      <td>The number of radial distortion coefficients used in the initial intrinsic calibration for the external camera</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">initial_intrinsic_</code> <code class="language-plaintext highlighter-rouge">calibration.debug</code>
+</td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td> </td>
+      <td>Flag to enable debug mode in the initial the intrinsic calibration for the external camera</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">initial_intrinsic_</code> <code class="language-plaintext highlighter-rouge">calibration.tag.family</code>
+</td>
+      <td><code class="language-plaintext highlighter-rouge">std::string</code></td>
+      <td> </td>
+      <td>The family name of the tags used in the initial intrinsic calibration for the external camera</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">initial_intrinsic_</code> <code class="language-plaintext highlighter-rouge">calibration.</code> <code class="language-plaintext highlighter-rouge">tag.rows</code>
+</td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td> </td>
+      <td>The number of rows in the tags used in the initial intrinsic calibration for the external camera</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">initial_intrinsic_</code> <code class="language-plaintext highlighter-rouge">calibration.tag.cols</code>
+</td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td> </td>
+      <td>The number of columns in the tags used in the initial intrinsic calibration for the external camera</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">initial_intrinsic_</code> <code class="language-plaintext highlighter-rouge">calibration.tag.size</code>
+</td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td> </td>
+      <td>The size of the tags used in the initial intrinsic calibration in meters for the external camera</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">initial_intrinsic_</code> <code class="language-plaintext highlighter-rouge">calibration.tag.spacing</code>
+</td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td> </td>
+      <td>The spacing between tags used in the initial intrinsic calibration in meters for the external camera</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">initial_intrinsic_</code> <code class="language-plaintext highlighter-rouge">calibration.tag.ids</code>
+</td>
+      <td><code class="language-plaintext highlighter-rouge">std::vector&lt;int64_t&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">[0]</code></td>
+      <td>The tag IDs used in the initial intrinsic calibration for the external camera. Only used when <code class="language-plaintext highlighter-rouge">board_type</code> equals <code class="language-plaintext highlighter-rouge">apriltag</code>
+</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">initial_intrinsic_</code> <code class="language-plaintext highlighter-rouge">calibration.board_cols</code>
+</td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td> </td>
+      <td>The number of columns in the calibration board used for the initial intrinsic calibration for the external camera. Only used when <code class="language-plaintext highlighter-rouge">board_type</code> equals <code class="language-plaintext highlighter-rouge">chessboard</code>
+</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">initial_intrinsic_</code> <code class="language-plaintext highlighter-rouge">calibration.board_rows</code>
+</td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td> </td>
+      <td>The number of rows in the calibration board used for the initial intrinsic calibration for the external camera. Only used when <code class="language-plaintext highlighter-rouge">board_type</code> equals <code class="language-plaintext highlighter-rouge">chessboard</code>
+</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">apriltag.max_hamming</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td> </td>
+      <td>The maximum allowed Hamming distance ins bits for apriltag detection</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">apriltag.min_margin</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td> </td>
+      <td>The minimum required margin in pixels for apriltag detection</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">apriltag.max_out_of_plane_angle</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td> </td>
+      <td>The maximum allowed out-of-plane angle in degrees for apriltag detection</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">apriltag.max_reprojection_error</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td> </td>
+      <td>The maximum allowed reprojection error in pixels for apriltag detection</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">apriltag.max_homography_error</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td> </td>
+      <td>The maximum allowed homography error for apriltag detection</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">apriltag.quad_decimate</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td> </td>
+      <td>The decimation factor for quad detection in apriltag detection</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">apriltag.quad_sigma</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td> </td>
+      <td>The sigma value for quad detection in apriltag detection</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">apriltag.nthreads</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td> </td>
+      <td>The number of threads to use for apriltag detection</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">apriltag.debug</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td> </td>
+      <td>Flag to enable debug mode in apriltag detection</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">apriltag.refine_edges</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td> </td>
+      <td>Flag to enable edge refinement in apriltag detection</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="requirements">Requirements</h2>
+
+<p>The following figure presents the elements involved in the calibration process:</p>
+
+<p><img src="https://raw.githubusercontent.com/tier4/calibrationtools/tier4/universe/calibrators/tag_based_sfm_calibrator/../../docs/images/tag_based_sfm_calibrator/bev_setup.svg" alt="segment"></p>
+
+<h3 id="waypoint-tag">Waypoint tag</h3>
+
+<p>Waypoint tags are meant to be detected by both lidars and cameras.
+Since lidar can not detect the tags if they are in the same plane as other elements, an additional structure is needed to allow the detector algorithm to segment it from other objects (see Figure 2).</p>
+
+<p>Considerations:</p>
+
+<ul>
+  <li>Among all the tags in the environment, waypoints are the only ones that can be moved during experiments (please read the provided tutorial and the concept of scenes).</li>
+  <li>The orientation of the waypoint tags should be so that the line that connects the calibration sensors and the waypoint tag is perpendicular to the waypoint tag plane. This is recommended since lidartag detection presents worse performance when this is not the case (more than the detector, it is a limitation of most lidars).</li>
+  <li>We so far have used 800mmx800mm (complete side lengths, as opposed to the inner apriltag payload) waypoints, and have worked well for most lidars/configurations in our projects.
+There should be at least one waypoint tag no matter the desired calibration type. However, in practice, the more waypoint tags (tags that the calibration sensors can detect) the faster the calibration process becomes.</li>
+</ul>
+
+<h3 id="wheel-tag">Wheel tag</h3>
+
+<p>Wheel tags are what allow us to find the <code class="language-plaintext highlighter-rouge">base_link</code> via solving the bundle adjustment problem.</p>
+
+<p>Considerations:</p>
+
+<ul>
+  <li>They usually can not be detected by the calibration sensors (instead they are detected by the external camera).</li>
+  <li>Since the number of images that contain wheel tags is expected to be low, it is convenient to use grids of individual tags to increase the number of features (tag corners) corresponding to the wheels. An example of a 2x2 tag is presented in Figure 3.</li>
+  <li>Since the wheel tags determine the base link, their center should coincide with the axle as much as possible (at least in the x-axis seen from the <code class="language-plaintext highlighter-rouge">base_link</code>).</li>
+</ul>
+
+<h3 id="ground-tag">Ground tag</h3>
+
+<p>Ground tags are essential during the calibration of the <code class="language-plaintext highlighter-rouge">base_link</code> since it defines the plane that the <code class="language-plaintext highlighter-rouge">base_link</code> lives in (an example is presented in Figure 4).</p>
+
+<p>Considerations:</p>
+
+<ul>
+  <li>The surface (ground) in which the vehicle and the ground tags are placed needs to be as flat as possible (plane).</li>
+  <li>For this particular tag, the width of the tag is relevant. If it can not be assumed to be null, the final <code class="language-plaintext highlighter-rouge">base_link</code> pose needs to be adjusted manually manually. E.g., if the pose from <code class="language-plaintext highlighter-rouge">base_link</code> to lidar is <code class="language-plaintext highlighter-rouge">z=1m</code> and the tag width is 1cm, the real pose would be <code class="language-plaintext highlighter-rouge">z=1.01m</code>.</li>
+  <li>The ground tags can be printed using normal paper and then attached via tape to the floor. The user needs to be careful not to move them during the experiment (in particular since it is very easy to step on them).</li>
+  <li>The ground tags can be laminated for reuse, but the reflections caused by it can make it difficult or impossible to perform detection.</li>
+</ul>
+
+<h3 id="auxiliary-tag">Auxiliary tag</h3>
+
+<p>Auxiliary tags are tags that do not have restrictions on their placement and use and were added to improve the observation distribution in the bundle adjustment graph. If it were not for the auxiliary tags, most of the tags would be on a single plane, save a few observations corresponding to the waypoints and the wheel tags.</p>
+
+<p>Considerations:</p>
+
+<ul>
+  <li>It is recommended to place them in positions and orientations without sufficient samples otherwise. Good candidates are walls, for which an example is presented in Figure 5.</li>
+</ul>
+
+<h3 id="external-camera">External camera</h3>
+
+<p>The role of the external camera is to connect the sensors and their detections creating the graph required for bundle adjustment.</p>
+
+<p>Considerations:</p>
+
+<ul>
+  <li>The camera must behave like a pinhole + distortion model. That is to say, the lenses must be “fixed” during the experiment.</li>
+  <li>The highest “real” resolution the better. So far we have tried with Nikon DSLRs (half frame) with moving and fixed lenses, and a simple point-and-shot camera. <!--cSpell:ignore DSLRs -->
+</li>
+  <li>In the <a href="https://github.com/tier4/calibrationtools/tree/tier4/universe/calibrators/tag_based_sfm_calibrator/#pro-tipsrecommendations">pro-tips / recommendations</a> section, more suggestions regarding the camera settings are provided.</li>
+</ul>
+
+<h3 id="initial-external-camera-intrinsics-calibration-board">Initial (external) camera intrinsics calibration board</h3>
+
+<p>To use the external camera in bundle adjustment, it is necessary to know, to a certain degree, its intrinsics.
+Any intrinsic calibration board that can be used for this purpose is acceptable, but circle-patterned chess boards and apriltags are supported directly by this tool. If you do not have these boards, you will need to calibrate your camera independently and provide directly the camera intrinsics.</p>
+
+<table>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/tier4/calibrationtools/tier4/universe/calibrators/tag_based_sfm_calibrator/../../docs/images/tag_based_sfm_calibrator/waypoint_tag.jpg" alt="waypoint" height="256px"></td>
+    <td><img src="https://raw.githubusercontent.com/tier4/calibrationtools/tier4/universe/calibrators/tag_based_sfm_calibrator/../../docs/images/tag_based_sfm_calibrator/wheel_tag.jpg" alt="wheel" width="256px" height="256px"></td>
+    <td><img src="https://raw.githubusercontent.com/tier4/calibrationtools/tier4/universe/calibrators/tag_based_sfm_calibrator/../../docs/images/tag_based_sfm_calibrator/ground_tag.jpg" alt="ground" width="256px" height="256px"></td>
+    <td>&lt;img src="../../docs/images/tag_based_sfm_calibrator/auxiliar_tag.jpg" alt="auxiliary"width = 256px height = 256px&gt;</td>
+   </tr>
+   <tr>
+    <td><p style="text-align: center;">Figure 2. Waypoint tag</p></td>
+    <td><p style="text-align: center;">Figure 3. Wheel tag</p></td>
+    <td><p style="text-align: center;">Figure 4. Ground tag</p></td>
+    <td><p style="text-align: center;">Figure 5. Auxiliar tag</p></td>
+  </tr>
+</table>
+
+<h2 id="calibration-process">Calibration process</h2>
+
+<p>A complete example with real data is provided in our <a href="https://github.com/tier4/calibrationtools/tree/tier4/universe/calibrators/tag_based_sfm_calibrator/../../docs/tutorials/tag_based_sfm_calibrator.md">tutorial</a>, so we recommend users interested in this tools to get hands-on-experience directly with that example. Nevertheless, the calibration process consists of the following steps:</p>
+
+<ul>
+  <li>External camera intrinsic calibration. This can be done directly with this tool if you have either apriltags or dot boards.</li>
+  <li>Place waypoint tags in positions where the calibrations can detect them accurately.</li>
+  <li>Obtain detections with the calibrations sensors (through the UI).</li>
+  <li>Using the external camera, obtain samples of the environment, taking care to avoid motion blur. The user should focus on connecting the calibrator sensors by taking photos containing multiple waypoints, ot at least photos that contain one waypoints and multiple other tags.</li>
+  <li>Repeat N scenes (this depend on the users criteria and availability of waypoints).</li>
+  <li>Process the scenes (done through the UI).</li>
+  <li>Start the calibration process /graph optimization (done through the UI).</li>
+</ul>
+
+<h2 id="known-issueslimitations">Known issues/limitations</h2>
+
+<ul>
+  <li>Our version of lidartag only supports the family <code class="language-plaintext highlighter-rouge">16h5</code>.</li>
+  <li>Our codebase only supports apriltag detections for <code class="language-plaintext highlighter-rouge">16h5</code> and <code class="language-plaintext highlighter-rouge">36h11</code>.</li>
+  <li>Ground tags are assumed to have no width. If that is not the case, you can directly compensate the width in the resulting extrinsics (basically just add the width to the z-component of the extrinsics).</li>
+  <li>We only use 2 wheel tags. The quality of the calibration could improve, mainly in the yaw component, if we were to use tags in the four wheels.</li>
+</ul>
+
+<h2 id="pro-tipsrecommendations">Pro tips/recommendations</h2>
+
+<ul>
+  <li>If the <code class="language-plaintext highlighter-rouge">base_link</code> seems flipped in yaw by 180 degrees, it is probably because you mistook the left and right wheel tags.</li>
+  <li>Regarding the operation of the external camera:
+    <ul>
+      <li>For an optimal depth of field, use the highest f-number possible of the camera and focus the lens to infinity.</li>
+      <li>Prefer fixed lenses and do not forget to turn off auto zoom.</li>
+      <li>One of the biggest concerns is motion blur when using the external camera. Since a high f-number is recommended, instead of increasing the exposure, prefer using a higher ISO or just under-exposed images.</li>
+      <li>Images taken from the external cameras should have as many possible detections in each image. The absolute minimum is 2, but under 3 are discarded.</li>
+      <li>Detections from the external camera should, whenever possible, have the least amount of out-of-plane rotation. This is due to how the pose estimation gets distorted in extreme cases.</li>
+      <li>The sampling of the scene by the external camera should focus on the waypoints and wheel tags whenever possible. In terms of usefulness for calibration, images that contain both waypoints and wheel tags are highly coveted. This is due to how they form the closest possible connection between the calibration sensors and the wheels.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="referencesexternal-links">References/External links</h2>
+
+<p>[1] Jiunn-Kai (Bruce) Huang, Shoutian Wang, Maani Ghaffari, and Jessy W. Grizzle, “LiDARTag: A Real-Time Fiducial Tag System for Point Clouds,” in IEEE Robotics and Automation Letters. Volume: 6, Issue: 3, July 2021. <!--cSpell:ignore Jiunn,Shoutian,Jessy,Ghaffari,Maani --></p>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <em>No CHANGELOG found.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/tag_based_sfm_calibrator/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_cmake#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_cmake#github">autoware_cmake  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_auto#github">ament_cmake_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_python#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_python#github">ament_cmake_python  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclpy#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclpy#github">rclpy  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/apriltag#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/apriltag#github">apriltag  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/apriltag_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/apriltag_msgs#github">apriltag_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_universe_utils#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_universe_utils#github">autoware_universe_utils  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/cv_bridge#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/cv_bridge#github">cv_bridge  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/geometry_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/geometry_msgs#github">geometry_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/image_geometry#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/image_geometry#github">image_geometry  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/image_transport#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/image_transport#github">image_transport  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center"></td>
+                        <td>lidartag_msgs</td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/pcl_conversions#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/pcl_conversions#github">pcl_conversions  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/pcl_ros#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/pcl_ros#github">pcl_ros  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclcpp#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclcpp#github">rclcpp  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/sensor_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/sensor_msgs#github">sensor_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/std_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/std_msgs#github">std_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/std_srvs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/std_srvs#github">std_srvs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2#github">tf2  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2_eigen#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2_eigen#github">tf2_eigen  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2_geometry_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2_geometry_msgs#github">tf2_geometry_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2_ros#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2_ros#github">tf2_ros  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tier4_ground_plane_utils#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tier4_ground_plane_utils#github">tier4_ground_plane_utils  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tier4_sensor_calibration_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tier4_sensor_calibration_msgs#github">tier4_sensor_calibration_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tier4_tag_utils#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tier4_tag_utils#github">tier4_tag_utils  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/visualization_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/visualization_msgs#github">visualization_msgs  </a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th>Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                      <tr>
+                        <td><a href="/d/eigen">eigen</a></td>
+                      </tr>
+                    
+                  
+                    
+                      <tr>
+                        <td><a href="/d/libboost-filesystem">libboost-filesystem</a></td>
+                      </tr>
+                    
+                  
+                    
+                      <tr>
+                        <td><a href="/d/libboost-serialization">libboost-serialization</a></td>
+                      </tr>
+                    
+                  
+                    
+                      <tr>
+                        <td><a href="/d/libceres-dev">libceres-dev</a></td>
+                      </tr>
+                    
+                  
+                    
+                      <tr>
+                        <td><a href="/d/libgoogle-glog-dev">libgoogle-glog-dev</a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th>Name</th>
+                  <th class="text-center">Deps</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/sensor_calibration_manager#github">sensor_calibration_manager</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/sensor_calibration_manager#github-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/sensor_calibration_tools#github">sensor_calibration_tools</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/sensor_calibration_tools#github-deps" class="endoftree">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <ul>
+            
+              <li><a href="https://github.com/tier4/calibrationtools/tree/tier4/universe/calibrators/tag_based_sfm_calibrator/launch/calibrator.launch.xml" target="_blank">launch/calibrator.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>ns</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rviz</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_service_name</strong> <em>&#91;default: extrinsic_calibration&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>config_file</strong> <em>&#91;default: omiya_calibration_room_2023.param.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>publish_tfs</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>fixed_ground_plane_model</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>base_frame</strong> <em>&#91;default: base_link&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>main_calibration_sensor_frame</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_lidar_0_frame</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_lidar_1_frame</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_lidar_2_frame</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_lidar_3_frame</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_lidar_4_frame</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_lidar_5_frame</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_lidar_6_frame</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_lidar_7_frame</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_0_frame</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_1_frame</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_2_frame</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_3_frame</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_4_frame</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_5_frame</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_6_frame</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_7_frame</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_lidar_0_model</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_lidar_1_model</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_lidar_2_model</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_lidar_3_model</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_lidar_4_model</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_lidar_5_model</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_lidar_6_model</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_lidar_7_model</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_lidar_0_topic</strong> <em>&#91;default: /null&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_lidar_1_topic</strong> <em>&#91;default: /null&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_lidar_2_topic</strong> <em>&#91;default: /null&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_lidar_3_topic</strong> <em>&#91;default: /null&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_lidar_4_topic</strong> <em>&#91;default: /null&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_lidar_5_topic</strong> <em>&#91;default: /null&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_lidar_6_topic</strong> <em>&#91;default: /null&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_lidar_7_topic</strong> <em>&#91;default: /null&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_info_0_topic</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_info_1_topic</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_info_2_topic</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_info_3_topic</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_info_4_topic</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_info_5_topic</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_info_6_topic</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_info_7_topic</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_compressed_image_0_topic</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_compressed_image_1_topic</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_compressed_image_2_topic</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_compressed_image_3_topic</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_compressed_image_4_topic</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_compressed_image_5_topic</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_compressed_image_6_topic</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_compressed_image_7_topic</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_0_detections_topic</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_1_detections_topic</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_2_detections_topic</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_3_detections_topic</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_4_detections_topic</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_5_detections_topic</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_6_detections_topic</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_7_detections_topic</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>auxiliar_tag_ids</strong> <em>&#91;default: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>waypoint_tag_ids</strong> <em>&#91;default: [0, 3, 4, 5]&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>ground_tag_ids</strong> <em>&#91;default: [50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99]&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>left_wheel_tag_id</strong> <em>&#91;default: 22&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>right_wheel_tag_id</strong> <em>&#91;default: 26&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/tier4/calibrationtools/tree/tier4/universe/calibrators/tag_based_sfm_calibrator/launch/apriltag_detector.launch.xml" target="_blank">launch/apriltag_detector.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>ns</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>image_compressed_topic</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>camera_info_topic</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>filtered_detections_topic</strong> <em>&#91;default: apriltag/filtered/detections_array&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>apriltag_detector_families</strong>  </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/tier4/calibrationtools/tree/tier4/universe/calibrators/tag_based_sfm_calibrator/launch/lidartag_detector.launch.xml" target="_blank">launch/lidartag_detector.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>ns</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>pointcloud_topic</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>filtered_detections_topic</strong> <em>&#91;default: lidartag/filtered/detections_array&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>lidar_model</strong>  </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No message files found.</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No plugins found.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>tag_based_sfm_calibrator</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/tag_based_sfm_calibrator+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/tier4/calibrationtools.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/tag_based_sfm_calibrator"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/tier4/calibrationtools/tree/tier4/universe/calibrators/tag_based_sfm_calibrator"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/tag_based_sfm_calibrator?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/tag_based_sfm_calibrator?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=tag_based_sfm_calibrator&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "tag_based_sfm_calibrator"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

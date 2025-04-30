@@ -1,0 +1,2949 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: a5_resize</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/a5_resize/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">a5_resize</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/a5_resize">a5_resize</a> <small>package from <a style="text-decoration:none" href="/r/benchmarks/github-robotperf-benchmarks">benchmarks</a> repo</small>
+        </h3>
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/c1_rrbot_joint_trajectory_controller">
+
+c1_rrbot_joint_trajectory_controller
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/c2_diffbot_diff_driver_controller">
+
+c2_diffbot_diff_driver_controller
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/c3_rrbot_forward_command_controller_position">
+
+c3_rrbot_forward_command_controller_position
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/c4_rrbot_forward_command_controller_velocity">
+
+c4_rrbot_forward_command_controller_velocity
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/c5_rrbot_forward_command_controller_acceleration">
+
+c5_rrbot_forward_command_controller_acceleration
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/b1_visual_slam">
+
+b1_visual_slam
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/b2_map_localization">
+
+b2_map_localization
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/b3_apriltag_detection">
+
+b3_apriltag_detection
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/d1_xarm6_planning_and_traj_execution">
+
+d1_xarm6_planning_and_traj_execution
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/d2_collision_checking_fcl">
+
+d2_collision_checking_fcl
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/d3_collision_checking_bullet">
+
+d3_collision_checking_bullet
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/d4_inverse_kinematics_kdl">
+
+d4_inverse_kinematics_kdl
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/d5_inverse_kinematics_lma">
+
+d5_inverse_kinematics_lma
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/d6_direct_kinematics">
+
+d6_direct_kinematics
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/d8_single_arm_static_avoidance_perception">
+
+d8_single_arm_static_avoidance_perception
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/m1_turtle_tf2_demo">
+
+m1_turtle_tf2_demo
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/m2_xarm6_planning_and_traj_execution">
+
+m2_xarm6_planning_and_traj_execution
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/m3_collision_checking_fcl">
+
+m3_collision_checking_fcl
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/m4_collision_checking_bullet">
+
+m4_collision_checking_bullet
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/m5_inverse_kinematics_kdl">
+
+m5_inverse_kinematics_kdl
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/m6_inverse_kinematics_lma">
+
+m6_inverse_kinematics_lma
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/m7_direct_kinematics">
+
+m7_direct_kinematics
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/n1_intra_process">
+
+n1_intra_process
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/n2_inter_process">
+
+n2_inter_process
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/n3_intra_network">
+
+n3_intra_network
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/n4_intra_network_security">
+
+n4_intra_network_security
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/n5_intra_network_vpn">
+
+n5_intra_network_vpn
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/n6_intra_network_security_vpn">
+
+n6_intra_network_security_vpn
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/n7_inter_network_vpn">
+
+n7_inter_network_vpn
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/n8_inter_network_vpn_security">
+
+n8_inter_network_vpn_security
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/benchmark_utilities">
+
+benchmark_utilities
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ros2benchmark">
+
+ros2benchmark
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tracetools_benchmark">
+
+tracetools_benchmark
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/a1_perception_2nodes">
+
+a1_perception_2nodes
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/a2_rectify">
+
+a2_rectify
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/a3_stereo_image_proc">
+
+a3_stereo_image_proc
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/a4_depth_image_proc">
+
+a4_depth_image_proc
+</a>
+            
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+a5_resize
+</span>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/a5_resize"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/robotperf/benchmarks/tree/main/benchmarks/perception/a5_resize"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-default">0</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">4</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>0.1.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>Apache License 2.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-default">
+                  
+                    AMENT_CMAKE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default">Benchmarking suite to evaluate 🤖 robotics computing performance. Vendor-neutral. ⚪Grey-box and ⚫Black-box approaches.</span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/robotperf/benchmarks.git">https://github.com/robotperf/benchmarks.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2024-07-10
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <span class="label label-default">benchmarking</span> <span class="label label-default">performance</span> <span class="label label-default">acceleration</span> <span class="label label-default">cpu</span> <span class="label label-default">fpga</span> <span class="label label-default">robotics</span> <span class="label label-default">gpu</span> <span class="label label-default">ros2</span> <span class="label label-default">tpu</span> 
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/benchmarks/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/benchmarks/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/benchmarks/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            
+    A simple perception resize ROS robotics operation. 
+    Used to demonstrate a simple perception component 
+    image_pipeline package.
+  
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional links.</em>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Martiño Crespo</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional authors.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/robotperf/benchmarks/tree/main/benchmarks/perception/a5_resize/README.md" title="Open in git repository">benchmarks/perception/a5_resize/README.md</a></div>
+              <div class="panel-body">
+                    <div class="rendered-markdown">
+<h1 id="a5_resize">a5_resize</h1>
+
+<p>Perception resize ROS Component.</p>
+
+<h3 id="id">ID</h3>
+<p>a5</p>
+
+<h3 id="description">Description</h3>
+<p>A simple perception resize ROS robotics operation. Used to demonstrate a simple perception component <a href="https://github.com/ros-perception/image_pipeline">image_pipeline</a> package.</p>
+
+<p><img src="https://raw.githubusercontent.com/robotperf/benchmarks/main/benchmarks/perception/a5_resize/../../../imgs/a5_resize.png" alt=""></p>
+
+<h2 id="reproduction-steps">Reproduction Steps</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Refer to https://github.com/robotperf/benchmarks/tree/main/benchmarks/perception/a5_resize and review the launch files to reproduce this package.
+
+</code></pre></div></div>
+
+<h2 id="results">Results</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Hardware</th>
+      <th>Metric</th>
+      <th>Value</th>
+      <th>Category</th>
+      <th>Timestamp</th>
+      <th>Note</th>
+      <th>Data Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i5-8250U</td>
+      <td>latency</td>
+      <td>33.68</td>
+      <td>workstation</td>
+      <td>08-05-2023</td>
+      <td> </td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image2">perception/image2</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>NVIDIA AGX Orin Dev. Kit</td>
+      <td>power</td>
+      <td>11.99144172668457</td>
+      <td>edge</td>
+      <td>2023-06-30 21:06:37</td>
+      <td> </td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>latency</td>
+      <td>42.158766</td>
+      <td>workstation</td>
+      <td>2023-07-01 19:22:31</td>
+      <td>mean_benchmark 14.496061530612247, rms_benchmark 15.356667129367795, max_benchmark 42.158766, min_benchmark 8.635698999999999, lost messages 4.08 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>power</td>
+      <td>7.256417274475098</td>
+      <td>workstation</td>
+      <td>2023-07-01 19:25:55</td>
+      <td> </td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>throughput</td>
+      <td>28.13782469333202</td>
+      <td>workstation</td>
+      <td>2023-07-01 19:29:08</td>
+      <td>mean_benchmark 28.13782469333202, rms_benchmark 28.724165714347563, max_benchmark 41.0098276361045, min_benchmark 7.467416618321986, lost messages 4.08 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>latency</td>
+      <td>20.891331</td>
+      <td>workstation</td>
+      <td>2023-07-01 19:32:27</td>
+      <td>mean_benchmark 12.440568647058823, rms_benchmark 12.96673046128797, max_benchmark 20.891331, min_benchmark 6.284897, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>power</td>
+      <td>8.132538795471191</td>
+      <td>workstation</td>
+      <td>2023-07-01 19:35:40</td>
+      <td> </td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>throughput</td>
+      <td>30.022796000514997</td>
+      <td>workstation</td>
+      <td>2023-07-01 19:39:11</td>
+      <td>mean_benchmark 30.022796000514997, rms_benchmark 30.056996886641937, max_benchmark 34.55349916548109, min_benchmark 27.56425662355994, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>latency</td>
+      <td>35.53647</td>
+      <td>workstation</td>
+      <td>2023-07-01 19:42:28</td>
+      <td>mean_benchmark 11.631717441176473, rms_benchmark 12.280089043557881, max_benchmark 35.53647, min_benchmark 5.307922, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>power</td>
+      <td>8.141988754272461</td>
+      <td>workstation</td>
+      <td>2023-07-01 19:45:59</td>
+      <td> </td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>throughput</td>
+      <td>30.10943593812154</td>
+      <td>workstation</td>
+      <td>2023-07-01 19:49:10</td>
+      <td>mean_benchmark 30.10943593812154, rms_benchmark 30.127403064335265, max_benchmark 34.86660264461089, min_benchmark 27.652619716555716, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>latency</td>
+      <td>17.602448</td>
+      <td>workstation</td>
+      <td>2023-07-04 20:43:34</td>
+      <td>✋ mean_benchmark 12.77105203846154, rms_benchmark 12.812109406906421, max_benchmark 17.602448, min_benchmark 9.66194, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>power</td>
+      <td>5.426401615142822</td>
+      <td>workstation</td>
+      <td>2023-07-04 20:45:57</td>
+      <td>✋</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>throughput</td>
+      <td>30.069367467988336</td>
+      <td>workstation</td>
+      <td>2023-07-04 20:48:16</td>
+      <td>✋ mean_benchmark 30.069367467988336, rms_benchmark 30.59355337325691, max_benchmark 41.91874328278335, min_benchmark 7.731052874773458, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>latency</td>
+      <td>10.134706</td>
+      <td>workstation</td>
+      <td>2023-07-04 20:50:39</td>
+      <td>mean_benchmark 8.628460235294119, rms_benchmark 8.656195413168286, max_benchmark 10.134706, min_benchmark 5.688471000000001, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>power</td>
+      <td>5.59568452835083</td>
+      <td>workstation</td>
+      <td>2023-07-04 20:52:56</td>
+      <td> </td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>throughput</td>
+      <td>30.002134442402998</td>
+      <td>workstation</td>
+      <td>2023-07-04 20:55:18</td>
+      <td>mean_benchmark 30.002134442402998, rms_benchmark 30.003188966841154, max_benchmark 30.639335072503716, min_benchmark 29.198526151835146, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>latency</td>
+      <td>15.28866</td>
+      <td>workstation</td>
+      <td>2023-07-04 20:57:38</td>
+      <td>mean_latency 12.277667842666665, rms_latency 12.295075339728617, max_latency 15.28866, min_latency 7.335238, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>power</td>
+      <td>5.481223487854004</td>
+      <td>workstation</td>
+      <td>2023-07-04 21:00:02</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>throughput</td>
+      <td>30.195265535377274</td>
+      <td>workstation</td>
+      <td>2023-07-04 21:03:00</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>latency</td>
+      <td>27.783397</td>
+      <td>workstation</td>
+      <td>2023-07-04 21:42:02</td>
+      <td>✋ mean_benchmark 14.62051411627907, rms_benchmark 15.226874547984831, max_benchmark 27.783397, min_benchmark 8.226162, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>power</td>
+      <td>7.279778957366943</td>
+      <td>workstation</td>
+      <td>2023-07-04 21:45:28</td>
+      <td>✋</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>throughput</td>
+      <td>28.167554784580165</td>
+      <td>workstation</td>
+      <td>2023-07-04 21:48:41</td>
+      <td>✋ mean_benchmark 28.167554784580165, rms_benchmark 28.847555932791277, max_benchmark 41.09578964183107, min_benchmark 3.745502302515704, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>latency</td>
+      <td>36.38458000000001</td>
+      <td>workstation</td>
+      <td>2023-07-04 21:52:05</td>
+      <td>mean_benchmark 12.021364250000001, rms_benchmark 13.04070267358616, max_benchmark 36.38458000000001, min_benchmark 5.430663999999999, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>power</td>
+      <td>8.422808647155762</td>
+      <td>workstation</td>
+      <td>2023-07-04 21:55:34</td>
+      <td> </td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>throughput</td>
+      <td>30.182929655918755</td>
+      <td>workstation</td>
+      <td>2023-07-04 21:59:01</td>
+      <td>mean_benchmark 30.182929655918755, rms_benchmark 30.225292587638936, max_benchmark 35.92829904330484, min_benchmark 27.73264674695361, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>latency</td>
+      <td>34.306258</td>
+      <td>workstation</td>
+      <td>2023-07-04 22:02:24</td>
+      <td>mean_latency 14.917151552000002, rms_latency 15.46935395559654, max_latency 34.306258, min_latency 6.99196, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>power</td>
+      <td>8.909902000427246</td>
+      <td>workstation</td>
+      <td>2023-07-04 22:05:43</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>throughput</td>
+      <td>30.12898400666691</td>
+      <td>workstation</td>
+      <td>2023-07-04 22:08:59</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-12700H</td>
+      <td>latency</td>
+      <td>17.79</td>
+      <td>workstation</td>
+      <td>07-07-2023</td>
+      <td>mean_latency 11.67, rms_latency 11.83, max_latency 17.79, min_latency 4.79, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-12700H</td>
+      <td>power</td>
+      <td>13.57</td>
+      <td>workstation</td>
+      <td>07-07-2023</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-12700H</td>
+      <td>throughput</td>
+      <td>30.155</td>
+      <td>workstation</td>
+      <td>07-07-2023</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-12700H</td>
+      <td>latency</td>
+      <td>259.14</td>
+      <td>workstation</td>
+      <td>07-07-2023</td>
+      <td>mean_latency 74.53, rms_latency 80.49, max_latency 259.14, min_latency 3.07, lost messages 0.00 %, throughput swept 30-300fps</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-12700H</td>
+      <td>power</td>
+      <td>44.31</td>
+      <td>workstation</td>
+      <td>07-07-2023</td>
+      <td>lost messages 0.00 %, throughput swept 30-300fps</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-12700H</td>
+      <td>throughput</td>
+      <td>193.678</td>
+      <td>workstation</td>
+      <td>07-07-2023</td>
+      <td>lost messages 0.00 %, throughput swept 30-300fps</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-12700H + NVIDIA GeForce RTX 3060 (ROBOTCORE® Perception)</td>
+      <td>latency</td>
+      <td>180.14</td>
+      <td>workstation</td>
+      <td>07-07-2023</td>
+      <td>mean_latency 80.58, rms_latency 91.65, max_latency 180.14, min_latency 3.42, lost messages 3.06 %, throughput swept 30-300fps</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-12700H + NVIDIA GeForce RTX 3060 (ROBOTCORE® Perception)</td>
+      <td>throughput</td>
+      <td>266.403</td>
+      <td>workstation</td>
+      <td>07-07-2023</td>
+      <td>lost messages 0.00 %, throughput swept 30-300fps</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-12700H + NVIDIA GeForce RTX 3060 (ROBOTCORE® Perception)</td>
+      <td>latency</td>
+      <td>339.25</td>
+      <td>workstation</td>
+      <td>07-07-2023</td>
+      <td>mean_latency 146.69, rms_latency 168.37, max_latency 339.25, min_latency 4.27, lost messages 5.65 %, throughput swept 30-300fps</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-12700H + NVIDIA GeForce RTX 3060 (ROBOTCORE® Perception)</td>
+      <td>throughput</td>
+      <td>227.5</td>
+      <td>workstation</td>
+      <td>07-07-2023</td>
+      <td>lost messages 0.00 %, throughput swept 30-300fps</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i5-13600K + NVIDIA GeForce RTX 3060 (ROBOTCORE® Perception)</td>
+      <td>latency</td>
+      <td>7.18</td>
+      <td>workstation</td>
+      <td>07-07-2023</td>
+      <td>mean_latency 4.58, rms_latency 4.63, max_latency 7.18, min_latency 2.30, lost messages 0.00 %, throughput swept 30-300fps</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i5-13600K + NVIDIA GeForce RTX 3060 (ROBOTCORE® Perception)</td>
+      <td>throughput</td>
+      <td>296.798</td>
+      <td>workstation</td>
+      <td>07-07-2023</td>
+      <td>lost messages 0.00 %, throughput swept 30-300fps</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-12700H + NVIDIA GeForce RTX 3060 (ROBOTCORE® Perception)</td>
+      <td>power</td>
+      <td>44.03</td>
+      <td>workstation</td>
+      <td>07-07-2023</td>
+      <td>lost messages 0.00 %, throughput swept 30-300fps</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i5-13600K + NVIDIA GeForce RTX 3060 (ROBOTCORE® Perception)</td>
+      <td>latency</td>
+      <td>12.41</td>
+      <td>workstation</td>
+      <td>07-07-2023</td>
+      <td>mean_latency 4.63, rms_latency 4.71, max_latency 12.41, min_latency 3.00, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i5-13600K + NVIDIA GeForce RTX 3060 (ROBOTCORE® Perception)</td>
+      <td>throughput</td>
+      <td>30.203</td>
+      <td>workstation</td>
+      <td>07-07-2023</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-12700H + NVIDIA GeForce RTX 3060 (ROBOTCORE® Perception)</td>
+      <td>latency</td>
+      <td>13.72</td>
+      <td>workstation</td>
+      <td>07-07-2023</td>
+      <td>mean_latency 8.87, rms_latency 8.93, max_latency 13.72, min_latency 3.12, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-12700H + NVIDIA GeForce RTX 3060 (ROBOTCORE® Perception)</td>
+      <td>throughput</td>
+      <td>30.176</td>
+      <td>workstation</td>
+      <td>07-07-2023</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-12700H + NVIDIA GeForce RTX 3060 (ROBOTCORE® Perception)</td>
+      <td>latency</td>
+      <td>13.78</td>
+      <td>workstation</td>
+      <td>07-07-2023</td>
+      <td>mean_latency 7.97, rms_latency 8.16, max_latency 13.78, min_latency 4.02, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-12700H + NVIDIA GeForce RTX 3060 (ROBOTCORE® Perception)</td>
+      <td>throughput</td>
+      <td>30.207</td>
+      <td>workstation</td>
+      <td>07-07-2023</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-12700H + NVIDIA GeForce RTX 3060 (ROBOTCORE® Perception)</td>
+      <td>power</td>
+      <td>42.86</td>
+      <td>workstation</td>
+      <td>07-07-2023</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i5-13600K</td>
+      <td>latency</td>
+      <td>22.35</td>
+      <td>workstation</td>
+      <td>07-07-2023</td>
+      <td>mean_latency 9.65, rms_latency 10.41, max_latency 22.35, min_latency 4.19, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i5-13600K</td>
+      <td>power</td>
+      <td>18.93</td>
+      <td>workstation</td>
+      <td>07-07-2023</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i5-13600K</td>
+      <td>throughput</td>
+      <td>30.178</td>
+      <td>workstation</td>
+      <td>07-07-2023</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>latency</td>
+      <td>24.563346</td>
+      <td>workstation</td>
+      <td>2023-07-05 04:57:04</td>
+      <td>✋ mean_benchmark 12.550747596491227, rms_benchmark 12.913270486330948, max_benchmark 24.563346, min_benchmark 6.462185, lost messages 1.75 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>power</td>
+      <td>5.1117329597473145</td>
+      <td>workstation</td>
+      <td>2023-07-05 04:59:19</td>
+      <td>✋</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>throughput</td>
+      <td>49.95534382006773</td>
+      <td>workstation</td>
+      <td>2023-07-05 05:01:39</td>
+      <td>✋ mean_benchmark 49.95534382006773, rms_benchmark 144.3189571593515, max_benchmark 1052.2339452775213, min_benchmark 23.124447730377135, lost messages 1.75 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>latency</td>
+      <td>10.466444000000001</td>
+      <td>workstation</td>
+      <td>2023-07-05 05:04:11</td>
+      <td>mean_benchmark 8.434597602941174, rms_benchmark 8.475462595626698, max_benchmark 10.466444000000001, min_benchmark 4.68153, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>power</td>
+      <td>5.5884552001953125</td>
+      <td>workstation</td>
+      <td>2023-07-05 05:06:28</td>
+      <td> </td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>throughput</td>
+      <td>30.020175615468986</td>
+      <td>workstation</td>
+      <td>2023-07-05 05:08:44</td>
+      <td>mean_benchmark 30.020175615468986, rms_benchmark 30.022400363243186, max_benchmark 31.343394500281132, min_benchmark 29.096577739087067, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>latency</td>
+      <td>15.377339</td>
+      <td>workstation</td>
+      <td>2023-07-05 05:11:01</td>
+      <td>mean_latency 12.131241462666669, rms_latency 12.153856067749832, max_latency 15.377339, min_latency 6.606552, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>throughput</td>
+      <td>30.194206892283262</td>
+      <td>workstation</td>
+      <td>2023-07-05 05:14:21</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>latency</td>
+      <td>22.356665000000003</td>
+      <td>workstation</td>
+      <td>2023-07-05 05:54:55</td>
+      <td>✋ mean_benchmark 14.327783958333335, rms_benchmark 14.731160765336117, max_benchmark 22.356665000000003, min_benchmark 7.446937999999999, lost messages 8.33 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>power</td>
+      <td>7.1114726066589355</td>
+      <td>workstation</td>
+      <td>2023-07-05 05:58:08</td>
+      <td>✋</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>throughput</td>
+      <td>27.312881035065327</td>
+      <td>workstation</td>
+      <td>2023-07-05 06:01:29</td>
+      <td>✋ mean_benchmark 27.312881035065327, rms_benchmark 28.449418293786458, max_benchmark 39.14815187447223, min_benchmark 3.351665513649042, lost messages 8.33 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>latency</td>
+      <td>32.181614</td>
+      <td>workstation</td>
+      <td>2023-07-05 06:05:04</td>
+      <td>mean_benchmark 11.576029014705883, rms_benchmark 12.373138750199129, max_benchmark 32.181614, min_benchmark 5.530825000000001, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>power</td>
+      <td>8.376054763793945</td>
+      <td>workstation</td>
+      <td>2023-07-05 06:08:39</td>
+      <td> </td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>throughput</td>
+      <td>30.158642603475016</td>
+      <td>workstation</td>
+      <td>2023-07-05 06:12:11</td>
+      <td>mean_benchmark 30.158642603475016, rms_benchmark 30.18896525206822, max_benchmark 36.28021956353516, min_benchmark 26.789235635062667, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>latency</td>
+      <td>48.15582</td>
+      <td>workstation</td>
+      <td>2023-07-05 06:15:28</td>
+      <td>mean_latency 15.789972922666667, rms_latency 16.346501397230565, max_latency 48.15582, min_latency 7.558166, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>power</td>
+      <td>8.608599662780762</td>
+      <td>workstation</td>
+      <td>2023-07-05 06:18:42</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>throughput</td>
+      <td>30.134422680018652</td>
+      <td>workstation</td>
+      <td>2023-07-05 06:21:58</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>latency</td>
+      <td>12.796015</td>
+      <td>workstation</td>
+      <td>2023-07-05 14:30:25</td>
+      <td>✋ mean_benchmark 12.218374550000002, rms_benchmark 12.255033430160928, max_benchmark 12.796015, min_benchmark 6.458771, lost messages 2.50 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>power</td>
+      <td>4.982558250427246</td>
+      <td>workstation</td>
+      <td>2023-07-05 14:32:47</td>
+      <td>✋</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>throughput</td>
+      <td>28.73271220840982</td>
+      <td>workstation</td>
+      <td>2023-07-05 14:35:11</td>
+      <td>✋ mean_benchmark 28.73271220840982, rms_benchmark 29.36615453503821, max_benchmark 41.932659503450026, min_benchmark 3.7405798639423917, lost messages 2.50 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>latency</td>
+      <td>9.662417999999999</td>
+      <td>workstation</td>
+      <td>2023-07-05 14:37:36</td>
+      <td>mean_benchmark 8.376391602941178, rms_benchmark 8.416162478677629, max_benchmark 9.662417999999999, min_benchmark 5.463990000000001, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>power</td>
+      <td>5.4591169357299805</td>
+      <td>workstation</td>
+      <td>2023-07-05 14:40:07</td>
+      <td> </td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>throughput</td>
+      <td>30.00871343160104</td>
+      <td>workstation</td>
+      <td>2023-07-05 14:42:25</td>
+      <td>mean_benchmark 30.00871343160104, rms_benchmark 30.010102852102154, max_benchmark 30.874369873407367, min_benchmark 29.26317919217063, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>latency</td>
+      <td>15.434274</td>
+      <td>workstation</td>
+      <td>2023-07-05 14:44:48</td>
+      <td>mean_latency 12.132992652, rms_latency 12.161622075107953, max_latency 15.434274, min_latency 6.198323, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>power</td>
+      <td>5.700312995910645</td>
+      <td>workstation</td>
+      <td>2023-07-05 14:47:08</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>latency</td>
+      <td>42.896915</td>
+      <td>workstation</td>
+      <td>2023-07-05 15:16:14</td>
+      <td>✋ mean_benchmark 14.244803862745098, rms_benchmark 15.237455294550728, max_benchmark 42.896915, min_benchmark 8.033426, lost messages 1.96 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>power</td>
+      <td>7.546749114990234</td>
+      <td>workstation</td>
+      <td>2023-07-05 15:19:43</td>
+      <td>✋</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>throughput</td>
+      <td>29.112083977483472</td>
+      <td>workstation</td>
+      <td>2023-07-05 15:22:49</td>
+      <td>✋ mean_benchmark 29.112083977483472, rms_benchmark 29.65825778943919, max_benchmark 44.291455850409676, min_benchmark 7.405482804709607, lost messages 1.96 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>latency</td>
+      <td>21.300284</td>
+      <td>workstation</td>
+      <td>2023-07-05 15:25:55</td>
+      <td>mean_benchmark 12.186293897058825, rms_benchmark 12.811953614050351, max_benchmark 21.300284, min_benchmark 5.4518450000000005, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>power</td>
+      <td>8.295573234558105</td>
+      <td>workstation</td>
+      <td>2023-07-05 15:29:00</td>
+      <td> </td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>throughput</td>
+      <td>30.032274813820766</td>
+      <td>workstation</td>
+      <td>2023-07-05 15:32:12</td>
+      <td>mean_benchmark 30.032274813820766, rms_benchmark 30.065213858556373, max_benchmark 34.27872691002113, min_benchmark 26.731206491620014, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>latency</td>
+      <td>44.011407</td>
+      <td>workstation</td>
+      <td>2023-07-05 15:35:23</td>
+      <td>mean_latency 15.411728126666665, rms_latency 16.024482681182935, max_latency 44.011407, min_latency 7.409485, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>power</td>
+      <td>8.732030487060547</td>
+      <td>workstation</td>
+      <td>2023-07-05 15:38:40</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>throughput</td>
+      <td>30.12620587059871</td>
+      <td>workstation</td>
+      <td>2023-07-05 15:41:06</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>latency</td>
+      <td>13.727453</td>
+      <td>workstation</td>
+      <td>2023-07-05 21:13:06</td>
+      <td>✋ mean_benchmark 12.467261791666667, rms_benchmark 12.523623909036445, max_benchmark 13.727453, min_benchmark 7.413185, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>power</td>
+      <td>5.241540908813477</td>
+      <td>workstation</td>
+      <td>2023-07-05 21:15:34</td>
+      <td>✋</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>throughput</td>
+      <td>29.989336485653734</td>
+      <td>workstation</td>
+      <td>2023-07-05 21:17:49</td>
+      <td>✋ mean_benchmark 29.989336485653734, rms_benchmark 30.45182660093644, max_benchmark 41.921099795022805, min_benchmark 4.136186539332676, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>latency</td>
+      <td>11.254781000000001</td>
+      <td>workstation</td>
+      <td>2023-07-05 21:20:06</td>
+      <td>mean_benchmark 8.389946220588236, rms_benchmark 8.447005434136395, max_benchmark 11.254781000000001, min_benchmark 4.306128, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>power</td>
+      <td>5.555389404296875</td>
+      <td>workstation</td>
+      <td>2023-07-05 21:22:25</td>
+      <td> </td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>throughput</td>
+      <td>30.01498974188979</td>
+      <td>workstation</td>
+      <td>2023-07-05 21:24:57</td>
+      <td>mean_benchmark 30.01498974188979, rms_benchmark 30.017669039745773, max_benchmark 31.934997717286347, min_benchmark 28.496525048246053, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>latency</td>
+      <td>14.975267</td>
+      <td>workstation</td>
+      <td>2023-07-05 21:27:23</td>
+      <td>mean_latency 12.128540926666664, rms_latency 12.147161060386832, max_latency 14.975267, min_latency 7.222717, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>power</td>
+      <td>5.630777072906494</td>
+      <td>workstation</td>
+      <td>2023-07-05 21:29:51</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>throughput</td>
+      <td>30.18830488565225</td>
+      <td>workstation</td>
+      <td>2023-07-05 21:32:17</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>latency</td>
+      <td>14.284108999999999</td>
+      <td>workstation</td>
+      <td>2023-07-05 22:01:11</td>
+      <td>✋ mean_benchmark 8.517229129032259, rms_benchmark 8.639200833016053, max_benchmark 14.284108999999999, min_benchmark 7.699902000000001, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>power</td>
+      <td>28.668167114257812</td>
+      <td>workstation</td>
+      <td>2023-07-05 22:04:22</td>
+      <td>✋</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>throughput</td>
+      <td>28.91826532048507</td>
+      <td>workstation</td>
+      <td>2023-07-05 22:07:29</td>
+      <td>✋ mean_benchmark 28.91826532048507, rms_benchmark 29.575914289729297, max_benchmark 41.9861233343214, min_benchmark 7.49604064755027, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>latency</td>
+      <td>12.241793</td>
+      <td>workstation</td>
+      <td>2023-07-05 22:10:44</td>
+      <td>mean_benchmark 5.696363544117646, rms_benchmark 5.763272377101703, max_benchmark 12.241793, min_benchmark 4.636248999999999, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>power</td>
+      <td>30.2865047454834</td>
+      <td>workstation</td>
+      <td>2023-07-05 22:13:48</td>
+      <td> </td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>throughput</td>
+      <td>30.008452065824105</td>
+      <td>workstation</td>
+      <td>2023-07-05 22:16:59</td>
+      <td>mean_benchmark 30.008452065824105, rms_benchmark 30.008665603726214, max_benchmark 30.351642597510573, min_benchmark 29.790740602875765, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>latency</td>
+      <td>9.414791</td>
+      <td>workstation</td>
+      <td>2023-07-05 22:20:09</td>
+      <td>mean_latency 7.692392979999999, rms_latency 7.695436705990123, max_latency 9.414791, min_latency 7.125432, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>power</td>
+      <td>30.736435317993163</td>
+      <td>workstation</td>
+      <td>2023-07-05 22:23:15</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>throughput</td>
+      <td>30.20605137222958</td>
+      <td>workstation</td>
+      <td>2023-07-05 22:26:38</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>latency</td>
+      <td>12.226298000000002</td>
+      <td>workstation</td>
+      <td>2023-07-06 07:44:20</td>
+      <td>✋ mean_benchmark 9.945675765957448, rms_benchmark 10.00087797684143, max_benchmark 12.226298000000002, min_benchmark 4.755987, lost messages 4.26 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>power</td>
+      <td>5.231168746948242</td>
+      <td>workstation</td>
+      <td>2023-07-06 07:46:32</td>
+      <td>✋</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>throughput</td>
+      <td>29.514051024884818</td>
+      <td>workstation</td>
+      <td>2023-07-06 07:48:47</td>
+      <td>✋ mean_benchmark 29.514051024884818, rms_benchmark 29.743583234728753, max_benchmark 34.71296302146074, min_benchmark 7.412072016492218, lost messages 4.26 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>latency</td>
+      <td>9.7537</td>
+      <td>workstation</td>
+      <td>2023-07-06 07:51:20</td>
+      <td>mean_benchmark 8.422632029411764, rms_benchmark 8.48657561646415, max_benchmark 9.7537, min_benchmark 4.457755, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>power</td>
+      <td>5.5626115798950195</td>
+      <td>workstation</td>
+      <td>2023-07-06 07:53:46</td>
+      <td> </td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>throughput</td>
+      <td>30.015744231870144</td>
+      <td>workstation</td>
+      <td>2023-07-06 07:56:15</td>
+      <td>mean_benchmark 30.015744231870144, rms_benchmark 30.01716304066126, max_benchmark 31.076352142181523, min_benchmark 29.463837706110596, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>latency</td>
+      <td>16.104279</td>
+      <td>workstation</td>
+      <td>2023-07-06 07:58:32</td>
+      <td>mean_latency 12.048705642666672, rms_latency 12.076405183781182, max_latency 16.104279, min_latency 6.530637, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>power</td>
+      <td>5.603167533874512</td>
+      <td>workstation</td>
+      <td>2023-07-06 08:00:51</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>AMD Ryzen 5 PRO 4650G</td>
+      <td>throughput</td>
+      <td>30.18701614708459</td>
+      <td>workstation</td>
+      <td>2023-07-06 08:03:35</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>latency</td>
+      <td>12.761457</td>
+      <td>workstation</td>
+      <td>2023-07-06 08:29:30</td>
+      <td>✋ mean_benchmark 8.181200729729731, rms_benchmark 8.22380372565144, max_benchmark 12.761457, min_benchmark 7.645253, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>power</td>
+      <td>28.4294376373291</td>
+      <td>workstation</td>
+      <td>2023-07-06 08:32:37</td>
+      <td>✋</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>throughput</td>
+      <td>29.722456751933855</td>
+      <td>workstation</td>
+      <td>2023-07-06 08:35:44</td>
+      <td>✋ mean_benchmark 29.722456751933855, rms_benchmark 29.931457297170383, max_benchmark 41.900525721706224, min_benchmark 14.679849582627655, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>power</td>
+      <td>30.429712295532227</td>
+      <td>workstation</td>
+      <td>2023-07-06 08:40:50</td>
+      <td> </td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>throughput</td>
+      <td>30.010664436954823</td>
+      <td>workstation</td>
+      <td>2023-07-06 08:44:01</td>
+      <td>mean_benchmark 30.010664436954823, rms_benchmark 30.01103977449267, max_benchmark 30.807788849823243, min_benchmark 29.770311330771033, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>latency</td>
+      <td>9.348727</td>
+      <td>workstation</td>
+      <td>2023-07-06 08:47:11</td>
+      <td>mean_latency 7.769275953333334, rms_latency 7.777772387862147, max_latency 9.348727, min_latency 7.118619, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>power</td>
+      <td>31.18579864501953</td>
+      <td>workstation</td>
+      <td>2023-07-06 08:50:23</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Intel i7-8700K</td>
+      <td>throughput</td>
+      <td>30.203949756569422</td>
+      <td>workstation</td>
+      <td>2023-07-06 08:53:31</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>NVIDIA Jetson Nano</td>
+      <td>latency</td>
+      <td>62.713607</td>
+      <td>edge</td>
+      <td>2023-07-21 16:15:36</td>
+      <td>mean_benchmark 54.07958676470588, rms_benchmark 54.32142963558273, max_benchmark 62.713607, min_benchmark 38.251629, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>NVIDIA AGX Orin Dev. Kit</td>
+      <td>latency</td>
+      <td>24.596631</td>
+      <td>edge</td>
+      <td>2023-07-21 16:18:01</td>
+      <td>mean_benchmark 17.250353897058826, rms_benchmark 17.743214554273216, max_benchmark 24.596631, min_benchmark 8.8751, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>NVIDIA Jetson Nano</td>
+      <td>power</td>
+      <td>0.0</td>
+      <td>edge</td>
+      <td>2023-07-21 16:27:35</td>
+      <td> </td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>NVIDIA AGX Orin Dev. Kit</td>
+      <td>power</td>
+      <td>12.202873229980469</td>
+      <td>edge</td>
+      <td>2023-07-21 16:29:56</td>
+      <td> </td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>NVIDIA Jetson Nano</td>
+      <td>throughput</td>
+      <td>30.23</td>
+      <td>edge</td>
+      <td>2023-07-21 16:44:16</td>
+      <td>mean_benchmark 30.23, rms_benchmark 30.33, max_benchmark 40.07, min_benchmark 25.2, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>NVIDIA AGX Orin Dev. Kit</td>
+      <td>throughput</td>
+      <td>30.08</td>
+      <td>edge</td>
+      <td>2023-07-21 16:46:40</td>
+      <td>mean_benchmark 30.08, rms_benchmark 30.1, max_benchmark 33.43, min_benchmark 27.53, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>NVIDIA Jetson Nano</td>
+      <td>latency</td>
+      <td>100.29058</td>
+      <td>edge</td>
+      <td>2023-07-21 16:54:14</td>
+      <td>✋ mean_benchmark 70.82114697435895, rms_benchmark 72.61460961941978, max_benchmark 100.29058, min_benchmark 36.544290000000004, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>NVIDIA AGX Orin Dev. Kit</td>
+      <td>latency</td>
+      <td>19.560926000000002</td>
+      <td>edge</td>
+      <td>2023-07-21 16:56:35</td>
+      <td>✋ mean_benchmark 13.444046, rms_benchmark 13.68611678346014, max_benchmark 19.560926000000002, min_benchmark 9.385097, lost messages 2.33 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>NVIDIA Jetson Nano</td>
+      <td>power</td>
+      <td>0.0</td>
+      <td>edge</td>
+      <td>2023-07-21 17:19:15</td>
+      <td>✋</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>NVIDIA AGX Orin Dev. Kit</td>
+      <td>power</td>
+      <td>11.309270858764648</td>
+      <td>edge</td>
+      <td>2023-07-21 17:21:49</td>
+      <td>✋</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>NVIDIA Jetson Nano</td>
+      <td>throughput</td>
+      <td>48.72</td>
+      <td>edge</td>
+      <td>2023-07-21 17:43:28</td>
+      <td>✋ mean_benchmark 48.72, rms_benchmark 80.5, max_benchmark 335.71, min_benchmark 7.62, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>NVIDIA AGX Orin Dev. Kit</td>
+      <td>throughput</td>
+      <td>28.76</td>
+      <td>edge</td>
+      <td>2023-07-21 17:46:02</td>
+      <td>✋ mean_benchmark 28.76, rms_benchmark 29.35, max_benchmark 38.11, min_benchmark 3.73, lost messages 2.33 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>NVIDIA Jetson Nano</td>
+      <td>latency</td>
+      <td>63.578862</td>
+      <td>edge</td>
+      <td>2023-07-21 18:12:30</td>
+      <td>mean_latency 41.37774685600001, rms_latency 41.86567333791047, max_latency 63.578862, min_latency 23.384541, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>NVIDIA Jetson Nano</td>
+      <td>latency</td>
+      <td>2023.679941</td>
+      <td>edge</td>
+      <td>2023-07-21 18:15:06</td>
+      <td>Fast-DDS mean_latency 533.1800477337346, rms_latency 541.1141658094255, max_latency 2023.679941, min_latency 18.996073, lost messages 10.67 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>NVIDIA AGX Orin Dev. Kit</td>
+      <td>latency</td>
+      <td>24.209385</td>
+      <td>edge</td>
+      <td>2023-07-21 18:17:27</td>
+      <td>mean_latency 14.192803442666667, rms_latency 14.263350085921905, max_latency 24.209385, min_latency 8.028909, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>NVIDIA AGX Orin Dev. Kit</td>
+      <td>latency</td>
+      <td>27.158093</td>
+      <td>edge</td>
+      <td>2023-07-21 18:19:48</td>
+      <td>Fast-DDS mean_latency 13.38254698533333, rms_latency 13.616938592996433, max_latency 27.158093, min_latency 6.964445, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>NVIDIA AGX Orin Dev. Kit</td>
+      <td>throughput</td>
+      <td>30.198576051430802</td>
+      <td>edge</td>
+      <td>2023-07-21 18:29:46</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>NVIDIA Jetson Nano</td>
+      <td>throughput</td>
+      <td>30.12034316231395</td>
+      <td>edge</td>
+      <td>2023-07-21 18:32:18</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>NVIDIA AGX Orin Dev. Kit</td>
+      <td>power</td>
+      <td>11.906664085388183</td>
+      <td>edge</td>
+      <td>2023-07-21 18:42:21</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>NVIDIA Jetson Nano</td>
+      <td>power</td>
+      <td>0.0</td>
+      <td>edge</td>
+      <td>2023-07-21 18:44:57</td>
+      <td>lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Kria KV260</td>
+      <td>latency</td>
+      <td>157.245696</td>
+      <td>edge</td>
+      <td>2023-07-24 18:45:01</td>
+      <td>✋ mean_benchmark 135.05602549999998, rms_benchmark 136.69634079127712, max_benchmark 157.245696, min_benchmark 83.84622100000001, lost messages 37.50 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Kria KV260</td>
+      <td>power</td>
+      <td>3.0899999141693115</td>
+      <td>edge</td>
+      <td>2023-07-24 18:47:25</td>
+      <td>✋</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Kria KV260</td>
+      <td>throughput</td>
+      <td>18.07</td>
+      <td>edge</td>
+      <td>2023-07-24 18:49:44</td>
+      <td>✋ mean_benchmark 18.07, rms_benchmark 19.27, max_benchmark 25.29, min_benchmark 2.58, lost messages 37.50 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Kria KV260</td>
+      <td>latency</td>
+      <td>374.1884840000001</td>
+      <td>edge</td>
+      <td>2023-07-24 19:03:20</td>
+      <td>mean_benchmark 295.83793347619047, rms_benchmark 306.43506353167953, max_benchmark 374.1884840000001, min_benchmark 115.79734400000001, lost messages 223.81 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Kria KV260</td>
+      <td>power</td>
+      <td>3.0799999237060547</td>
+      <td>edge</td>
+      <td>2023-07-24 19:05:43</td>
+      <td> </td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Kria KV260</td>
+      <td>throughput</td>
+      <td>18.5</td>
+      <td>edge</td>
+      <td>2023-07-24 19:08:02</td>
+      <td>mean_benchmark 18.5, rms_benchmark 21.29, max_benchmark 34.83, min_benchmark 1.9, lost messages 223.81 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Kria KV260</td>
+      <td>latency</td>
+      <td>2437.400464</td>
+      <td>edge</td>
+      <td>2023-07-24 19:21:50</td>
+      <td>mean_latency 1427.7203067418566, rms_latency 1538.3138145051448, max_latency 2437.400464, min_latency 397.588729, lost messages 41.33 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Kria KV260</td>
+      <td>power</td>
+      <td>3.059999942779541</td>
+      <td>edge</td>
+      <td>2023-07-24 19:24:12</td>
+      <td>lost messages 41.33 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Kria KV260</td>
+      <td>throughput</td>
+      <td>18.22812521540363</td>
+      <td>edge</td>
+      <td>2023-07-24 19:26:40</td>
+      <td>lost messages 41.33 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Kria KR260</td>
+      <td>latency</td>
+      <td>173.201235</td>
+      <td>edge</td>
+      <td>2023-07-24 19:31:54</td>
+      <td>✋ mean_benchmark 126.4740654, rms_benchmark 131.27447100538808, max_benchmark 173.201235, min_benchmark 67.885568, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Kria KR260</td>
+      <td>power</td>
+      <td>3.440000057220459</td>
+      <td>edge</td>
+      <td>2023-07-24 19:34:37</td>
+      <td>✋</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Kria KR260</td>
+      <td>throughput</td>
+      <td>62.02</td>
+      <td>edge</td>
+      <td>2023-07-24 19:37:01</td>
+      <td>✋ mean_benchmark 62.02, rms_benchmark 107.76, max_benchmark 214.44, min_benchmark 6.64, lost messages 0.00 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Kria KV260</td>
+      <td>latency</td>
+      <td>2234.292503</td>
+      <td>edge</td>
+      <td>2023-07-24 19:40:21</td>
+      <td>Fast-DDS mean_latency 1309.3866764833867, rms_latency 1408.6469681290841, max_latency 2234.292503, min_latency 403.14324, lost messages 37.33 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Kria KR260</td>
+      <td>latency</td>
+      <td>375.28024999999997</td>
+      <td>edge</td>
+      <td>2023-07-24 19:51:13</td>
+      <td>mean_benchmark 304.21905699999996, rms_benchmark 314.1356238045953, max_benchmark 375.28024999999997, min_benchmark 139.367793, lost messages 353.33 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Kria KR260</td>
+      <td>power</td>
+      <td>3.240000009536743</td>
+      <td>edge</td>
+      <td>2023-07-24 19:53:38</td>
+      <td> </td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Kria KR260</td>
+      <td>throughput</td>
+      <td>18.62</td>
+      <td>edge</td>
+      <td>2023-07-24 19:56:10</td>
+      <td>mean_benchmark 18.62, rms_benchmark 22.52, max_benchmark 37.82, min_benchmark 1.2, lost messages 353.33 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Kria KR260</td>
+      <td>latency</td>
+      <td>2888.078617</td>
+      <td>edge</td>
+      <td>2023-07-24 20:12:43</td>
+      <td>mean_latency 1665.3133597113992, rms_latency 1764.734554427403, max_latency 2888.078617, min_latency 403.878564, lost messages 44.67 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Kria KR260</td>
+      <td>power</td>
+      <td>3.2480000019073487</td>
+      <td>edge</td>
+      <td>2023-07-24 20:15:07</td>
+      <td>lost messages 44.67 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:black_circle:</a></td>
+      <td>Kria KR260</td>
+      <td>throughput</td>
+      <td>18.541965997156815</td>
+      <td>edge</td>
+      <td>2023-07-24 20:18:10</td>
+      <td>lost messages 44.67 %</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/robotperf/benchmarks/blob/main/benchmarks/README.md#type">:white_circle:</a></td>
+      <td>Kria KR260 (ROBOTCORE® Perception)</td>
+      <td>latency</td>
+      <td>15.31</td>
+      <td>edge</td>
+      <td>2023-09-09 00:00:00</td>
+      <td>N/A</td>
+      <td><a href="https://github.com/robotperf/rosbags/tree/main/perception/image">perception/image</a></td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <em>No CHANGELOG found.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/a5_resize/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake#github">ament_cmake  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_lint_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_lint_auto#github">ament_lint_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_lint_common#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_lint_common#github">ament_lint_common  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/a1_perception_2nodes#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/a1_perception_2nodes#github">a1_perception_2nodes  </a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No direct system dependencies.</em>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No known dependants.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No launch files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No message files found.</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No plugins found.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>a5_resize</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/a5_resize+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/robotperf/benchmarks.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/a5_resize"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/robotperf/benchmarks/tree/main/benchmarks/perception/a5_resize"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/a5_resize?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/a5_resize?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=a5_resize&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "a5_resize"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,2620 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: mapping_based_calibrator</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/mapping_based_calibrator/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">mapping_based_calibrator</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/mapping_based_calibrator">mapping_based_calibrator</a> <small>package from <a style="text-decoration:none" href="/r/calibrationtools/github-tier4-calibrationtools">calibrationtools</a> repo</small>
+        </h3>
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ground_plane_calibrator">
+
+ground_plane_calibrator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interactive_camera_lidar_calibrator">
+
+interactive_camera_lidar_calibrator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ceres_intrinsic_camera_calibrator">
+
+ceres_intrinsic_camera_calibrator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/intrinsic_camera_calibrator">
+
+intrinsic_camera_calibrator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lidar_to_lidar_2d_calibrator">
+
+lidar_to_lidar_2d_calibrator
+</a>
+            
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+mapping_based_calibrator
+</span>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/marker_radar_lidar_calibrator">
+
+marker_radar_lidar_calibrator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tag_based_pnp_calibrator">
+
+tag_based_pnp_calibrator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tag_based_sfm_calibrator">
+
+tag_based_sfm_calibrator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/point_cloud_accumulator">
+
+point_cloud_accumulator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_calibration_pcl_extensions">
+
+tier4_calibration_pcl_extensions
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_calibration_views">
+
+tier4_calibration_views
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_ground_plane_utils">
+
+tier4_ground_plane_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_sensor_calibration_msgs">
+
+tier4_sensor_calibration_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_tag_utils">
+
+tier4_tag_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/sensor_calibration_manager">
+
+sensor_calibration_manager
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/sensor_calibration_tools">
+
+sensor_calibration_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tunable_static_tf_broadcaster">
+
+tunable_static_tf_broadcaster
+</a>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/mapping_based_calibrator"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/tier4/calibrationtools/tree/tier4/universe/calibrators/mapping_based_calibrator"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-primary">1</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">30</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>0.0.1</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>BSD</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-default">
+                  
+                    AMENT_CMAKE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default">sensor calibration tools for autonomous driving and robotics</span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/tier4/calibrationtools.git">https://github.com/tier4/calibrationtools.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">tier4/universe</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-04-14
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <span class="label label-default">computer-vision</span> <span class="label label-default">camera-calibration</span> <span class="label label-default">calibration</span> <span class="label label-default">autonomous-driving</span> <span class="label label-default">ros2</span> <span class="label label-default">autoware</span> <span class="label label-default">sensor-calibration</span> <span class="label label-default">lidar-calibration</span> <span class="label label-default">robtics</span> 
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/calibrationtools/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/calibrationtools/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/calibrationtools/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            The mapping_based_calibrator package
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional links.</em>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Kenzo Lobos Tsunekawa</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional authors.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/tier4/calibrationtools/tree/tier4/universe/calibrators/mapping_based_calibrator/README.md" title="Open in git repository">calibrators/mapping_based_calibrator/README.md</a></div>
+              <div class="panel-body">
+                    <div class="rendered-markdown">
+<h1 id="mapping_based_calibrator">mapping_based_calibrator</h1>
+
+<p>A tutorial for this calibrator can be found <a href="https://github.com/tier4/calibrationtools/tree/tier4/universe/calibrators/mapping_based_calibrator/../../docs/tutorials/mapping_based_calibrator.md">here</a></p>
+
+<h2 id="purpose">Purpose</h2>
+
+<p>The package <code class="language-plaintext highlighter-rouge">mapping_based_calibrator</code> performs extrinsic calibration between 3d lidar sensors, as well as the (partial) calibration between a single 3d lidar and <code class="language-plaintext highlighter-rouge">base_link</code>.</p>
+
+<h2 id="inner-workings--algorithms">Inner-workings / Algorithms</h2>
+
+<h3 id="lidar-lidar-calibration">lidar-lidar calibration</h3>
+
+<p>The calibrator is designed to estimate the transformation between multiple lidar sensors. It does so by moving the robot/vehicle, creating a trajectory in which lidars observe the same features, and formulating the calibration problem as a pointcloud registration one.</p>
+
+<p>One of the lidars is used to map the trajectory (denoted as the <code class="language-plaintext highlighter-rouge">mapping lidar</code>), and once a map created with this lidar, the other lidars (denoted as <code class="language-plaintext highlighter-rouge">calibration lidars</code>) are registered against an augmented <code class="language-plaintext highlighter-rouge">mapping lidar</code> pointcloud (through the mapping process), which is equivalent to lidar-lidar calibration (between the <code class="language-plaintext highlighter-rouge">mapping lidar</code> and each of the <code class="language-plaintext highlighter-rouge">calibration lidars</code> individually).</p>
+
+<p>The calibration process encompasses three main steps: constructing a map with the <code class="language-plaintext highlighter-rouge">mapping lidar</code> via moving the vehicle, preprocessing and selecting the calibration data, and finally performing lidar-lidar calibration via pointcloud registration.</p>
+
+<p>General notes about the environment, trajectory, and sensors used:</p>
+
+<ul>
+  <li>The environment should contain features appropriate for mapping (e.g., an open space with no walls is inadequate).</li>
+  <li>The data from the lidars needs to be synchronized since we pair and interpolate data from different sensors.</li>
+  <li>Since lidar scans get distorted with the vehicle’s movement, the trajectory followed by the vehicle should be as slow and continuous as possible. Failure to do this has a detrimental impact on the calibration process.</li>
+  <li>In addition to mapping, the different lidars must observe common, highly distinctive features to perform pointcloud registration among them. Good examples are objects with a lack of symmetry, and clear 3d shapes (as opposed to 2d objects like walls).</li>
+  <li>The mapping lidar is usually chosen as the one with the highest resolution, range, and field of view.</li>
+  <li>The resolution and range of the lidars used have a great impact on how or whether this method can be used. We do not make guarantees about any set of combinations, and in most cases, parameters will need to be modified to maintain a good performance.</li>
+</ul>
+
+<p>Note: although this package can perform calibration between the <code class="language-plaintext highlighter-rouge">mapping lidar</code> and several <code class="language-plaintext highlighter-rouge">calibration lidars</code>, the documentation will assume only one <code class="language-plaintext highlighter-rouge">calibration lidar</code> is used. In the presence of multiple <code class="language-plaintext highlighter-rouge">calibration lidars</code>, the process is done in parallel in an independent fashion.</p>
+
+<h4 id="step-1-map-construction">Step 1: Map construction</h4>
+
+<p>As mentioned in the previous section, one of the lidars is termed the <code class="language-plaintext highlighter-rouge">mapping lidar</code> (set in the launchers via the <code class="language-plaintext highlighter-rouge">mapping_pointcloud</code> argument), and while the robot/vehicle moves, its data is used to construct a map.</p>
+
+<p>The mapping process is implemented via direct pointcloud registration between individual scans of the <code class="language-plaintext highlighter-rouge">mapping lidar</code> using either NDT[1] or GICP[2] (the algorithm can be set in the launcher). The output of this step is a series of registered pointclouds (raw pointcloud and its pose in the map) dubbed <code class="language-plaintext highlighter-rouge">frames</code> (or <code class="language-plaintext highlighter-rouge">keyframes</code>).</p>
+
+<p>However, not all pointclouds coming from the <code class="language-plaintext highlighter-rouge">mapping lidar</code> are used in the map creation, since there is a chance of data redundancy, which is known to difficult data processing and the registration process itself. For this reason, we consider the following rules when mapping:</p>
+
+<ul>
+  <li>An incoming lidar scan is compared against an aggregated pointcloud of the latest <code class="language-plaintext highlighter-rouge">local_map_num_keyframes</code> <code class="language-plaintext highlighter-rouge">keyframes</code>.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">keyframes</code> are lidar scans sampled uniformly every <code class="language-plaintext highlighter-rouge">new_keyframe_min_distance</code> meters.</li>
+  <li>Incoming lidars that are not deemed <code class="language-plaintext highlighter-rouge">keyframes</code>, are saved as <code class="language-plaintext highlighter-rouge">frames</code> if their distance to the latest accepted <code class="language-plaintext highlighter-rouge">frame</code> is over <code class="language-plaintext highlighter-rouge">new_frame_min_distance</code> meters. Otherwise, the incoming scan is discarded.</li>
+  <li>If the vehicle stops (and this fact is detected), a special <code class="language-plaintext highlighter-rouge">stopped frame</code> is saved, since this data is useful for calibration (still data).</li>
+  <li>If the trajectory followed by the <code class="language-plaintext highlighter-rouge">frames</code> is deemed non-continuous (e.g., high accelerations or data loss), the <code class="language-plaintext highlighter-rouge">frame</code> at which this fact is detected is deemed a <code class="language-plaintext highlighter-rouge">lost frame</code> and the new incoming scan will not compare against this or previous frames (essentially restarting the mapping process). Note: although in normal mapping applications this is not acceptable, for calibration purposes we only need sequences of registered pointclouds so this is still allowed. However, whenever possible the user should restart the mapping process if he identifies this issue.</li>
+</ul>
+
+<h4 id="step-2-calibration-data-preparation">Step 2: Calibration data preparation</h4>
+
+<p>The data required for calibration is created throughout the mapping process and right before the calibration itself. In particular, the mapping and calibration lidar are expected to have different timestamps so they can not be directly registered. Additionally, the mapping process produces a great amount of potential combinations of pointclouds to register, so the data best suited for calibration needs to be chosen.</p>
+
+<h5 id="data-interpolation">Data interpolation</h5>
+
+<p>As explained in the previous section, pointclouds from the <code class="language-plaintext highlighter-rouge">mapping lidar</code> and <code class="language-plaintext highlighter-rouge">calibration lidar</code> have different timestamps which makes registration directly unfeasible. To address this problem, whenever a <code class="language-plaintext highlighter-rouge">keyframe</code> from the <code class="language-plaintext highlighter-rouge">mapping lidar</code> is generated, the temporally closest <code class="language-plaintext highlighter-rouge">calibration lidar</code> pointcloud is associated to it, and the pose of the <code class="language-plaintext highlighter-rouge">mapping lidar</code> pointcloud is interpolated to the stamp of the <code class="language-plaintext highlighter-rouge">calibration lidar</code> pointcloud using the map (adjacent frames to the <code class="language-plaintext highlighter-rouge">keyframe</code>).</p>
+
+<p>However, the interpolation is only an approximation and its use induces an interpolation error that can be detrimental to calibration. For this reason, interpolation statistics like the interpolation time, distance, angle, and estimated dynamics are computed.</p>
+
+<p>The output of this step is a list of what we call <code class="language-plaintext highlighter-rouge">calibration frames</code>, consisting of the <code class="language-plaintext highlighter-rouge">mapping lidar</code> <code class="language-plaintext highlighter-rouge">keyframe</code>, the <code class="language-plaintext highlighter-rouge">calibration lidar</code> pointcloud, the interpolated pose, and the interpolation statistics.</p>
+
+<h5 id="data-selection">Data selection</h5>
+
+<p>At this point, we have obtained a series of <code class="language-plaintext highlighter-rouge">calibration frames</code> that can be used to perform lidar calibration. However, their contents could have little to no useful information (calibration-wise), their data could be compromised due to an incorrect mapping, or their interpolation error could be non-negligible. For these reasons, we select the calibration data using the following criteria:</p>
+
+<ul>
+  <li>All <code class="language-plaintext highlighter-rouge">calibration frames</code> “close” to <code class="language-plaintext highlighter-rouge">lost frames</code> are discarded. The term “close” in this context refers to the fact that the <code class="language-plaintext highlighter-rouge">frames</code> near the <code class="language-plaintext highlighter-rouge">calibration lidar</code> <code class="language-plaintext highlighter-rouge">keyframe</code> from the <code class="language-plaintext highlighter-rouge">calibration frame</code> are used to augment said pointcloud. This step makes sure no invalid data is used (mapping-wise).</li>
+  <li>The interpolation statistics are used to discard <code class="language-plaintext highlighter-rouge">calibration frames</code>. High interpolation times, distances, angles, speed, and acceleration are not accepted (thresholds are set via parameters).</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">calibration frames</code> have varying levels of “information” in them, and in some cases, that information may not be useful for calibration. To select the frames more suited for calibration information-wise, the following criteria are used:
+    <ul>
+      <li>The Principal Component Analysis (PCA) is applied to the <code class="language-plaintext highlighter-rouge">calibration lidar</code> pointcloud of the <code class="language-plaintext highlighter-rouge">calibration frames</code>. In this context, the higher the smallest component of PCA is, the more suited a pointcloud is for calibration.</li>
+      <li>Then, the <code class="language-plaintext highlighter-rouge">calibration frames</code> are sorted in descending order and they are greedily added to the final calibration set until a maximum budget is reached.</li>
+      <li>However, <code class="language-plaintext highlighter-rouge">calibration frames</code> will be skipped if another one near it has already been added (using distance criteria in the map).</li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="data-preprocessing">Data preprocessing</h5>
+
+<p>When doing source-to-target pointcloud registration, all points in the source pointcloud are projected into the target one, and each source point forms a pair with its closest target one. In the case of sparse pointclouds from lidar scans, this causes convergence issues that are very common in the case of algorithms like <code class="language-plaintext highlighter-rouge">ICP</code> and still cause problems on others like <code class="language-plaintext highlighter-rouge">GICP</code>.</p>
+
+<p>For this reason, instead of registering the <code class="language-plaintext highlighter-rouge">calibration lidar</code> points into the <code class="language-plaintext highlighter-rouge">mapping lidar</code> ones, we first augment the <code class="language-plaintext highlighter-rouge">mapping lidar</code> pointclouds with their neighbors in the map within a vicinity. This augmented pointcloud has a very high number of points, which makes pointcloud registration intractable. To solve this, we use voxel subsampling before pointcloud registration.</p>
+
+<h4 id="step-3-pointcloud-registration">Step 3: Pointcloud registration</h4>
+
+<p>Lidar-to-lidar calibration is solved implicitly via the pointcloud registration of <code class="language-plaintext highlighter-rouge">calibration lidar</code> pointclouds into the augmented <code class="language-plaintext highlighter-rouge">mapping lidar</code> pointclouds. Each pair of pointclouds produces a registered pose, essentially the calibration pose. Among all of these resulting poses, the one that presents a lower overall error (source to target error among all <code class="language-plaintext highlighter-rouge">calibration frames</code>) is the one chosen as the output calibration result.</p>
+
+<p>However, as registration algorithms are very sensitive to their initial guess and parameters, we use multiple registrators (<code class="language-plaintext highlighter-rouge">ICP</code>, <code class="language-plaintext highlighter-rouge">GICP</code>, and <code class="language-plaintext highlighter-rouge">NDT</code> with different parameters) in a sequential fashion similar to an ensemble, using as the initial guess at every step the best calibration pose so far.</p>
+
+<p>In addition to calibrating using <code class="language-plaintext highlighter-rouge">calibration frame</code> independently, we also use <code class="language-plaintext highlighter-rouge">Batched ICP</code>, which allows us to perform ICP using all the <code class="language-plaintext highlighter-rouge">calibration frames</code> of each lidar simultaneously.</p>
+
+<h3 id="base-lidar-calibration">base-lidar calibration</h3>
+
+<p>In addition of lidar-lidar calibration, we can also utilize the map generated by the <code class="language-plaintext highlighter-rouge">mapping lidar</code> to partially calibrate the transformation between the <code class="language-plaintext highlighter-rouge">mapping lidar</code> and the <code class="language-plaintext highlighter-rouge">base_link</code>. This possible if the assumption that the area around of the vehicle forms a plane holds true.</p>
+
+<h4 id="step-1-map-construction-1">Step 1: Map construction</h4>
+
+<p>The first step of base-lidar calibration is identical to the <a href="https://github.com/tier4/calibrationtools/tree/tier4/universe/calibrators/mapping_based_calibrator/#step-1-map-construction">Step 1</a> of <code class="language-plaintext highlighter-rouge">lidar-lidar calibration</code>.</p>
+
+<h4 id="step-2-extract-ground-plane-from-the-pointcloud">Step 2: Extract ground plane from the pointcloud</h4>
+
+<p>After constructing the map, and computing the augmented pointcloud from <code class="language-plaintext highlighter-rouge">mapping lidar</code>, which is identical to the <a href="https://github.com/tier4/calibrationtools/tree/tier4/universe/calibrators/mapping_based_calibrator/#step-2-calibration-data-preparation">Step 2</a>, a RANSAC-based plane estimation algorithm is used to extract the ground plane pointcloud and its mathematical model.</p>
+
+<h4 id="step-3-estimate-transformation">Step 3: Estimate transformation</h4>
+
+<p>To estimate the transformation between the <code class="language-plaintext highlighter-rouge">mapping lidar</code> and the <code class="language-plaintext highlighter-rouge">base_link</code>, the tool needs to calculate the transformation between the lidar and the ground pose, as well as the transformation between the ground pose and the <code class="language-plaintext highlighter-rouge">base_link</code>.</p>
+
+<p>The transformation between the lidar and the ground pose is calculated by utilizing the normal vector and a point on the ground plane, both obtained in the last step. To estimate the transformation between the ground pose and the <code class="language-plaintext highlighter-rouge">base_link</code>, the tool first determines the initial ground-pose-to-base-link using the initial lidar-to-base-link and lidar-to-ground-pose transformations. Then, the tool projects this initial ground-pose-to-base-link transformation onto the xy plane to estimate the transformation between the ground pose and the <code class="language-plaintext highlighter-rouge">base_link</code>. The final lidar to <code class="language-plaintext highlighter-rouge">base_link</code> pose can be obtained by composing the previous poses.</p>
+
+<h2 id="ros-interfaces">ROS Interfaces</h2>
+
+<h3 id="input">Input</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">calibration_camera_info_topics</code></td>
+      <td><code class="language-plaintext highlighter-rouge">sensor_msgs::msg::CameraInfo</code></td>
+      <td>The intrinsic parameters of calibration cameras. <code class="language-plaintext highlighter-rouge">calibration_camera_info_topics</code> is provided via parameters (currently not used).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">calibration_image_topics</code></td>
+      <td><code class="language-plaintext highlighter-rouge">sensor_msgs::msg::CompressedImage</code></td>
+      <td>Calibration cameras’ image topics. <code class="language-plaintext highlighter-rouge">calibration_image_topics</code> is provided via parameters (currently not used).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mapping_pointcloud</code></td>
+      <td><code class="language-plaintext highlighter-rouge">sensor_msgs::msg::PointCloud2</code></td>
+      <td>Pointcloud’s topic used for mapping. It is recommended to select the lidar that has the highest resolution and best FOV.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">calibration_pointcloud_topics</code></td>
+      <td><code class="language-plaintext highlighter-rouge">sensor_msgs::msg::PointCloud2</code></td>
+      <td>Pointclouds’ topics used for calibrating with the <code class="language-plaintext highlighter-rouge">mapping pointcloud</code>. <code class="language-plaintext highlighter-rouge">calibration_pointcloud_topics</code> is provided via parameters.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">detected_objects</code></td>
+      <td><code class="language-plaintext highlighter-rouge">autoware_perception_msgs::msg::DetectedObjects</code></td>
+      <td>Messages containing detected objects, used in the filtering procedure.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">predicted_objects</code></td>
+      <td><code class="language-plaintext highlighter-rouge">autoware_perception_msgs::msg::PredictedObjects</code></td>
+      <td>Messages that contain predicted object paths and positions, used in the filtering procedure.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="output">Output</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">output_map</code></td>
+      <td><code class="language-plaintext highlighter-rouge">sensor_msgs::msg::PointCloud2</code></td>
+      <td>Output map constructed from the <code class="language-plaintext highlighter-rouge">mapping_pointcloud</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">frame_path</code></td>
+      <td><code class="language-plaintext highlighter-rouge">nav_msgs::msg::Path</code></td>
+      <td>The actual path of the <code class="language-plaintext highlighter-rouge">mapping_pointcloud</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">frame_predicted_path</code></td>
+      <td><code class="language-plaintext highlighter-rouge">nav_msgs::msg::Path</code></td>
+      <td>The predicted path of the <code class="language-plaintext highlighter-rouge">mapping_pointcloud</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">keyframe_path</code></td>
+      <td><code class="language-plaintext highlighter-rouge">nav_msgs::msg::Path</code></td>
+      <td>The keyframe path of the <code class="language-plaintext highlighter-rouge">mapping_pointcloud</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">keyframe_markers</code></td>
+      <td><code class="language-plaintext highlighter-rouge">visualization_msgs::msg::MarkerArray</code></td>
+      <td>Keyframe markers.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">initial_source_aligned_map</code></td>
+      <td><code class="language-plaintext highlighter-rouge">sensor_msgs::msg::PointCloud2</code></td>
+      <td>Initial map from calibration lidars.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">calibrated_source_aligned_map</code></td>
+      <td><code class="language-plaintext highlighter-rouge">sensor_msgs::msg::PointCloud2</code></td>
+      <td>Calibrated map from calibration lidars.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">target_map</code></td>
+      <td><code class="language-plaintext highlighter-rouge">sensor_msgs::msg::PointCloud2</code></td>
+      <td>Target map from the <code class="language-plaintext highlighter-rouge">mapping lidar</code>, used for comparing with the <code class="language-plaintext highlighter-rouge">calibrated_source_aligned_map</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">target_markers</code></td>
+      <td><code class="language-plaintext highlighter-rouge">visualization_msgs::msg::MarkerArray</code></td>
+      <td>Markers for the camera calibrator (currently not used).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">base_lidar_augmented_pointcloud</code></td>
+      <td><code class="language-plaintext highlighter-rouge">sensor_msgs::msg::PointCloud2</code></td>
+      <td>The ground pointcloud extracted from the augmented pointcloud.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ground_pointcloud</code></td>
+      <td><code class="language-plaintext highlighter-rouge">sensor_msgs::msg::PointCloud2</code></td>
+      <td>The ground pointcloud extracted from the calibrated pointcloud.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="services">Services</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">extrinsic_calibration</code></td>
+      <td>
+<code class="language-plaintext highlighter-rouge">tier4_sensor_calibration_msgs::</code> <code class="language-plaintext highlighter-rouge">srv::ExtrinsicCalibrator</code>
+</td>
+      <td>Generic calibration service. The call is blocked until the calibration process finishes.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">stop_mapping</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std_srvs::srv::Empty</code></td>
+      <td>Stops building the map and starts the calibration process.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">load_database</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std_srvs::srv::Empty</code></td>
+      <td>Loads lidar and camera calibration frames from the database (for developers).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">save_database</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std_srvs::srv::Empty</code></td>
+      <td>Saves lidar and camera calibration frames to the database (for developers).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="parameters">Parameters</h2>
+
+<h3 id="core-parameters">Core Parameters</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">calibrate_base_frame</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td><code class="language-plaintext highlighter-rouge">false</code></td>
+      <td>Flag to optionally calibrate the base frame. (base_link).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">base_frame</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std::string</code></td>
+      <td> </td>
+      <td>The frame name of the base frame used in base-lidar calibration.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">map_frame</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std::string</code></td>
+      <td> </td>
+      <td>The frame name of the <code class="language-plaintext highlighter-rouge">map</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">calibration_camera_optical_link_frames</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std::vector&lt;string&gt;</code></td>
+      <td> </td>
+      <td>The list of frame names for <code class="language-plaintext highlighter-rouge">calibration camera</code>. (currently not used)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">calibration_lidar_frames</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std::vector&lt;string&gt;</code></td>
+      <td> </td>
+      <td>The list of frame names for <code class="language-plaintext highlighter-rouge">calibration lidars</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">calibration_camera_info_topics</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std::vector&lt;string&gt;</code></td>
+      <td> </td>
+      <td>The list of camera info topics for <code class="language-plaintext highlighter-rouge">calibration camera</code>. (currently not used)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">calibration_image_topics</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std::vector&lt;string&gt;</code></td>
+      <td> </td>
+      <td>The list of camera image topics for <code class="language-plaintext highlighter-rouge">calibration camera</code>. (currently not used)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">calibration_pointcloud_topics</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std::vector&lt;string&gt;</code></td>
+      <td> </td>
+      <td>The list of pointcloud topics for <code class="language-plaintext highlighter-rouge">calibration lidars</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mapping_lidar_frame</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std::string</code></td>
+      <td> </td>
+      <td>The frame name of the <code class="language-plaintext highlighter-rouge">mapping_lidar</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mapping_registrator</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std::string</code></td>
+      <td>
+<code class="language-plaintext highlighter-rouge">NDT</code> / <code class="language-plaintext highlighter-rouge">GICP</code>
+</td>
+      <td>The type of the PCL registration algorithm used for mapping.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mapping_verbose</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td><code class="language-plaintext highlighter-rouge">false</code></td>
+      <td>Verbose output flag for mapping.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">use_rosbag</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td><code class="language-plaintext highlighter-rouge">true</code></td>
+      <td>Flag to determine if data should be read from a rosbag file.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mapping_max_frames</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td><code class="language-plaintext highlighter-rouge">500</code></td>
+      <td>The maximum number of frames to use for mapping. If the number of frames is larger than this value, the mapper stops and the calibration starts.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">local_map_num_keyframes</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td><code class="language-plaintext highlighter-rouge">15</code></td>
+      <td>The number of keyframes stored in the local map.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">dense_pointcloud_num_keyframes</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td><code class="language-plaintext highlighter-rouge">10</code></td>
+      <td>Dense pointcloud for calibration is generated by integrating the pointclouds in the range of [keyframe_id - <code class="language-plaintext highlighter-rouge">dense_pointcloud_num_keyframes</code>, keyframe_id + <code class="language-plaintext highlighter-rouge">dense_pointcloud_num_keyframes</code>].</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mapping_min_range</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.5</code></td>
+      <td>The minimum range in meters of each lidar pointcloud for mapping.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mapping_max_range</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">60.0</code></td>
+      <td>The maximum range in meters of each lidar pointcloud for mapping.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">min_mapping_pointcloud_size</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td><code class="language-plaintext highlighter-rouge">10000</code></td>
+      <td>The minimum size of the pointcloud required for mapping.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">min_calibration_pointcloud_size</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td><code class="language-plaintext highlighter-rouge">500</code></td>
+      <td>The minimum size of the pointcloud that is necessary for estimating transformation.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mapping_lost_timeout</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">1.0</code></td>
+      <td>Sensor’s timeout in seconds to consider the mapping process is failed.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="mapping-parameters">Mapping Parameters</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mapper_resolution</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">5.0</code></td>
+      <td>Resolution for <code class="language-plaintext highlighter-rouge">pclomp::NormalDistributionsTransform</code> algorithm.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mapper_step_size</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.1</code></td>
+      <td>Step size for <code class="language-plaintext highlighter-rouge">pclomp::NormalDistributionsTransform</code> algorithm.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mapper_max_iterations</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td><code class="language-plaintext highlighter-rouge">35</code></td>
+      <td>The maximum number of iterations for <code class="language-plaintext highlighter-rouge">pclomp::NormalDistributionsTransform</code> and <code class="language-plaintext highlighter-rouge">pcl::GeneralizedIterativeClosestPoint</code> algorithm.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mapper_epsilon</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.01</code></td>
+      <td>Epsilon value for <code class="language-plaintext highlighter-rouge">pclomp::NormalDistributionsTransform</code> and <code class="language-plaintext highlighter-rouge">pcl::GeneralizedIterativeClosestPoint</code> algorithm.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mapper_num_threads</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td><code class="language-plaintext highlighter-rouge">8</code></td>
+      <td>The number of threads to use for <code class="language-plaintext highlighter-rouge">pclomp::NormalDistributionsTransform</code> algorithm.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mapper_max_correspondence_distance</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.1</code></td>
+      <td>Maximum correspondence distance in meters for <code class="language-plaintext highlighter-rouge">pcl::GeneralizedIterativeClosestPoint</code> algorithm.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mapping_viz_leaf_size</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.15</code></td>
+      <td>Leaf size in meters for <code class="language-plaintext highlighter-rouge">pcl::VoxelGrid</code> to voxelize the mapping pointcloud.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">calibration_viz_leaf_size</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.15</code></td>
+      <td>Leaf size in meters for <code class="language-plaintext highlighter-rouge">pcl::VoxelGridTriplets</code> to voxelize the calibration pointcloud.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">leaf_size_input</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.1</code></td>
+      <td>Leaf size in meters for <code class="language-plaintext highlighter-rouge">pcl::VoxelGrid</code> to voxelize the input pointcloud.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">leaf_size_local_map</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.1</code></td>
+      <td>Leaf size in meters for <code class="language-plaintext highlighter-rouge">pcl::VoxelGrid</code> to voxelize the local map.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">leaf_size_dense_map</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.05</code></td>
+      <td>Leaf size in meters for <code class="language-plaintext highlighter-rouge">pcl::VoxelGrid</code> to voxelize the dense map.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">new_keyframe_min_distance</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">1.0</code></td>
+      <td>Minimum distance in meters between consecutive keyframes.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">new_frame_min_distance</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.05</code></td>
+      <td>Minimum distance in meters of a new frame needs to be apart from the last to be processed.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">frame_stopped_distance</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.02</code></td>
+      <td>Threshold distance in meters to determine if the frame has stopped moving.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">frames_since_stopped_force_frame</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td><code class="language-plaintext highlighter-rouge">5</code></td>
+      <td>If the number of stopped frames is equal to this value, we set it as <code class="language-plaintext highlighter-rouge">keyframe_and_stop frame</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">calibration_skip_keyframes</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td><code class="language-plaintext highlighter-rouge">5</code></td>
+      <td>The number of initial keyframes that are skipped for calibration.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="calibration-criteria-parameters">Calibration Criteria Parameters</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">max_allowed_interpolated_time</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.05</code></td>
+      <td>Maximum allowable time in seconds for frame interpolated time in standard criteria.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">max_allowed_interpolated_distance</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.05</code></td>
+      <td>Maximum allowable distance in meters for frame interpolated distance in standard criteria.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">max_allowed_interpolated_angle</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">1.0</code></td>
+      <td>Maximum allowable angle in degrees for frame interpolated angle in standard criteria.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">max_allowed_interpolated_speed</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">3.0</code></td>
+      <td>Maximum allowable speed in meters/second for frame interpolated speed in standard criteria.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">max_allowed_interpolated_accel</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.4</code></td>
+      <td>Maximum allowable acceleration in meters/second^2 for frame interpolated acceleration in standard criteria.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">max_allowed_interpolated_distance_straight</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.08</code></td>
+      <td>Maximum allowable distance in meters for frame interpolated distance in straight criteria.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">max_allowed_interpolated_angle_straight</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.5</code></td>
+      <td>Maximum allowable angle in degrees for frame interpolated angle in straight criteria.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">max_allowed_interpolated_speed_straight</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">5.0</code></td>
+      <td>Maximum allowable speed in meters/second for frame interpolated speed in straight criteria.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">max_allowed_interpolated_accel_straight</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.1</code></td>
+      <td>Maximum allowable acceleration in meters/second^2 for frame interpolated acceleration in straight criteria.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">filter_detections</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td><code class="language-plaintext highlighter-rouge">true</code></td>
+      <td>Flag to enable filtering of detection to improve calibration accuracy and reduce noise.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">detection_max_time_tolerance</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.5</code></td>
+      <td>Maximum time tolerance in seconds for obtaining all detections close in time to the source pointcloud.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">detection_size_tolerance</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.4</code></td>
+      <td>Tolerance for detection size in meters to account for measurement errors and environmental factors.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">lost_frame_max_angle_diff</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">25.0</code></td>
+      <td>Maximum allowable angular difference in degrees between keyframes to consider a frame as lost, used in handling outliers in frame processing.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">lost_frame_interpolation_error</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.05</code></td>
+      <td>Maximum allowable interpolation error in meters between keyframes to consider a frame as lost, used in handling outliers in frame processing.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">lost_frame_max_acceleration</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">8.0</code></td>
+      <td>Maximum allowable acceleration in meters/second between keyframes to consider a frame as lost, used in handling outliers in frame processing.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">viz_max_range</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">80.0</code></td>
+      <td>Maximum range in meters for visualization purposes, setting the boundary for displayable data.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">crop_z_calibration_pointclouds</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td><code class="language-plaintext highlighter-rouge">true</code></td>
+      <td>Flag to enable cropping of the Z-axis in calibration pointclouds.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">crop_z_calibration_pointclouds_value</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">2.0</code></td>
+      <td>Value of cropping the Z-axis in the calibration pointcloud.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">calibration_use_only_stopped</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td><code class="language-plaintext highlighter-rouge">false</code></td>
+      <td>Flag to use only data from stopped frames.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">calibration_use_only_last_frames</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td><code class="language-plaintext highlighter-rouge">false</code></td>
+      <td>Flag to use only last frames for calibration.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">max_calibration_range</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">80.0</code></td>
+      <td>Maximum range in meters to consider for calibration purposes, defining the spatial boundary for calibration data.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">min_calibration_range</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">1.5</code></td>
+      <td>Minimum range in meters to consider for calibration purposes, defining the spatial boundary for calibration data.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">calibration_min_pca_eigenvalue</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.25</code></td>
+      <td>If the eigenvalue of a pointcloud is less than this value, it will be filtered out.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">calibration_min_distance_between_frames</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">5.0</code></td>
+      <td>Threshold for the minimum distance in meters between frames.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">calibration_eval_max_corr_distance</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.1</code></td>
+      <td>Maximum correspondence distance in meters for source pointcloud and target pointcloud.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="calibration-parameters">Calibration Parameters</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">solver_iterations</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td><code class="language-plaintext highlighter-rouge">200</code></td>
+      <td>Number of iterations for the PCL registration algorithm during calibration, affecting the convergence rate and accuracy.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">max_corr_dist_coarse</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.5</code></td>
+      <td>Maximum coarse correspondence distance in meters for the PCL registration algorithm during calibration.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">max_corr_dist_fine</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.1</code></td>
+      <td>Maximum fine correspondence distance in meters for the PCL registration algorithm during calibration.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">max_corr_dist_ultra_fine</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.05</code></td>
+      <td>Maximum ultra fine correspondence distance in meters for the PCL registration algorithm during calibration.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="lidar-calibration-parameters">Lidar Calibration Parameters</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">lidar_calibration_min_frames</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td><code class="language-plaintext highlighter-rouge">2</code></td>
+      <td>The minimum number of calibration frames to use in lidar calibration.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">lidar_calibration_max_frames</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td><code class="language-plaintext highlighter-rouge">10</code></td>
+      <td>The maximum number of calibration frames to use in lidar calibration.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="camera-calibration-parameters-currently-not-used">Camera Calibration Parameters (currently not used)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">camera_calibration_min_frames</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td><code class="language-plaintext highlighter-rouge">1</code></td>
+      <td>The minimum number of frames to consider for camera calibration.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">camera_calibration_max_frames</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td><code class="language-plaintext highlighter-rouge">10</code></td>
+      <td>The maximum number of frames to use in camera calibration.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">pc_features_min_distance</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.2</code></td>
+      <td>Near plane distance in meters for <code class="language-plaintext highlighter-rouge">pcl::FrustumCulling</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">pc_features_max_distance</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">40.0</code></td>
+      <td>Far plane distance in meters for <code class="language-plaintext highlighter-rouge">pcl::FrustumCulling</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="base-lidar-calibration-parameters">Base-Lidar Calibration Parameters</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Default Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">base_lidar_crop_box_min_x</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">-20.0</code></td>
+      <td>Minimum x-coordinate in meters for the cropping box in base-lidar calibration to focus on relevant data areas.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">base_lidar_crop_box_min_y</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">-20.0</code></td>
+      <td>Minimum y-coordinate in meters for the cropping box in base-lidar calibration to focus on relevant data areas.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">base_lidar_crop_box_min_z</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">-20.0</code></td>
+      <td>Minimum z-coordinate in meters for the cropping box in base-lidar calibration to focus on relevant data areas.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">base_lidar_crop_box_max_x</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">20.0</code></td>
+      <td>Maximum x-coordinate in meters for the cropping box in base-lidar calibration to focus on relevant data areas.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">base_lidar_crop_box_max_y</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">20.0</code></td>
+      <td>Maximum y-coordinate in meters for the cropping box in base-lidar calibration to focus on relevant data areas.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">base_lidar_crop_box_max_z</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">20.0</code></td>
+      <td>Maximum z-coordinate in meters for the cropping box in base-lidar calibration to focus on relevant data areas.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">base_lidar_max_inlier_distance</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.01</code></td>
+      <td>Maximum inlier distance in meters for ground extraction by using <code class="language-plaintext highlighter-rouge">pcl::SACSegmentation</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">base_lidar_max_iterations</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td><code class="language-plaintext highlighter-rouge">1000</code></td>
+      <td>The maximum number of iterations for ground extraction by using <code class="language-plaintext highlighter-rouge">pcl::SACSegmentation</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">base_lidar_min_plane_points</code></td>
+      <td><code class="language-plaintext highlighter-rouge">int</code></td>
+      <td><code class="language-plaintext highlighter-rouge">1000</code></td>
+      <td>The minimum number of points required in a pointcloud, ensuring sufficient data for applying ground extraction.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">base_lidar_min_plane_points_percentage</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">10.0</code></td>
+      <td>The minimum percentage of the ground plane points in a pointcloud.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">base_lidar_max_cos_distance</code></td>
+      <td><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td><code class="language-plaintext highlighter-rouge">0.5</code></td>
+      <td>Maximum cosine distance for applying ground plane extraction.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">base_lidar_overwrite_xy_yaw</code></td>
+      <td><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td><code class="language-plaintext highlighter-rouge">false</code></td>
+      <td>Flag to allow overwriting the x, y, and yaw value during base-lidar calibration.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="known-issueslimitations">Known issues/limitations</h2>
+
+<ul>
+  <li>As described in <a href="https://github.com/tier4/calibrationtools/tree/tier4/universe/calibrators/mapping_based_calibrator/#step-2-calibration-data-preparation">Step 2</a>, the calibrator interpolates the pose of the <code class="language-plaintext highlighter-rouge">mapping lidar</code> at the timestamp of the <code class="language-plaintext highlighter-rouge">calibration lidars</code>. Therefore, the calibrator has strict sensor synchronization requirements.</li>
+  <li>It is required that the <code class="language-plaintext highlighter-rouge">mapping lidar</code> has a high resolution. For the <code class="language-plaintext highlighter-rouge">calibration lidar</code>, both high and low resolutions are acceptable. Therefore, vehicles with only low-resolution lidars cannot use the calibrator.</li>
+  <li>A good initial calibration is required for this calibrator (due to the nature of pointcloud registration).</li>
+</ul>
+
+<h2 id="pro-tipsrecommendations">Pro tips/recommendations</h2>
+
+<ul>
+  <li>It is recommended to select the lidar that has the highest resolution and best FOV as the <code class="language-plaintext highlighter-rouge">mapping lidar</code>.</li>
+  <li>To build the map accurately, drive your vehicle at the lowest feasible speed, such as 2 km/h. Driving too fast can distort the point cloud, negatively impacting the map’s accuracy.</li>
+  <li>The surroundings of the calibration area are crucial for creating an accurate map and estimating transformations. Therefore, it is essential to ensure that the environment is rich in natural landmarks suitable for registration-based mapping and calibration in all directions, as shown in the image below. This richness in natural landmarks helps the lidar capture sufficient details beyond simple features like lane surfaces or walls, thereby enhancing the accuracy and reliability of the mapping and calibration processes.</li>
+</ul>
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/tier4/calibrationtools/tier4/universe/calibrators/mapping_based_calibrator/../../docs/images/mapping_based_calibrator/mapping_based_vis.svg" alt="radar_reflector" width="900">
+</p>
+<p align="center">
+
+[1] Peter Biber and Wolfgang Straßer, "The normal distributions transform: A new approach to laser scan matching" in Proceedings 2003 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2003). <!--cSpell:ignore Biber,Wolfgang,Straßer,IROS -->
+
+[2] Aleksandr V. Segal, Dirk Haehnel, and Sebastian Thrun, "Generalized-ICP" in Robotics: Science and Systems 2009.. <!--cSpell:ignore Aleksandr,Segal,Haehnel,Thrun -->
+</p>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <em>No CHANGELOG found.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/mapping_based_calibrator/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_cmake#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_cmake#github">autoware_cmake  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_auto#github">ament_cmake_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_kalman_filter#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_kalman_filter#github">autoware_kalman_filter  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_perception_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_perception_msgs#github">autoware_perception_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_universe_utils#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_universe_utils#github">autoware_universe_utils  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/geometry_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/geometry_msgs#github">geometry_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/image_geometry#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/image_geometry#github">image_geometry  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/image_transport#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/image_transport#github">image_transport  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/nav_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/nav_msgs#github">nav_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ndt_omp#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ndt_omp#github">ndt_omp  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/pcl_conversions#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/pcl_conversions#github">pcl_conversions  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/pcl_ros#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/pcl_ros#github">pcl_ros  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclcpp#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclcpp#github">rclcpp  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rosbag2_interfaces#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rosbag2_interfaces#github">rosbag2_interfaces  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/sensor_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/sensor_msgs#github">sensor_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/std_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/std_msgs#github">std_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/std_srvs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/std_srvs#github">std_srvs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2#github">tf2  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2_eigen#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2_eigen#github">tf2_eigen  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2_geometry_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2_geometry_msgs#github">tf2_geometry_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2_ros#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2_ros#github">tf2_ros  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2_sensor_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2_sensor_msgs#github">tf2_sensor_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tier4_calibration_pcl_extensions#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tier4_calibration_pcl_extensions#github">tier4_calibration_pcl_extensions  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tier4_ground_plane_utils#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tier4_ground_plane_utils#github">tier4_ground_plane_utils  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tier4_sensor_calibration_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tier4_sensor_calibration_msgs#github">tier4_sensor_calibration_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/visualization_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/visualization_msgs#github">visualization_msgs  </a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th>Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                      <tr>
+                        <td><a href="/d/eigen">eigen</a></td>
+                      </tr>
+                    
+                  
+                    
+                      <tr>
+                        <td><a href="/d/libboost-filesystem">libboost-filesystem</a></td>
+                      </tr>
+                    
+                  
+                    
+                      <tr>
+                        <td><a href="/d/libboost-serialization">libboost-serialization</a></td>
+                      </tr>
+                    
+                  
+                    
+                      <tr>
+                        <td><a href="/d/libpcl-all-dev">libpcl-all-dev</a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th>Name</th>
+                  <th class="text-center">Deps</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/sensor_calibration_manager#github">sensor_calibration_manager</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/sensor_calibration_manager#github-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/sensor_calibration_tools#github">sensor_calibration_tools</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/sensor_calibration_tools#github-deps" class="endoftree">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <ul>
+            
+              <li><a href="https://github.com/tier4/calibrationtools/tree/tier4/universe/calibrators/mapping_based_calibrator/launch/calibrator.launch.xml" target="_blank">launch/calibrator.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>ns</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>rviz</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_service_name</strong> <em>&#91;default: extrinsic_calibration&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibrate_base_frame</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>base_frame</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>mapping_pointcloud</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>detected_objects</strong> <em>&#91;default: detected_objects&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>predicted_objects</strong> <em>&#91;default: predicted_objects&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_info_topics</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_image_topics</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_pointcloud_topics</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_camera_optical_link_frames</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_lidar_frames</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>mapping_lidar_frame</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>mapping_registrator</strong> <em>&#91;default: gicp&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>local_map_num_keyframes</strong> <em>&#91;default: 15&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>dense_pointcloud_num_keyframes</strong> <em>&#91;default: 10&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mapping_max_frames</strong> <em>&#91;default: 5000&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mapping_min_range</strong> <em>&#91;default: 1.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mapping_max_range</strong> <em>&#91;default: 100.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>marker_size</strong> <em>&#91;default: 10.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mapper_resolution</strong> <em>&#91;default: 1.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mapper_step_size</strong> <em>&#91;default: 0.05&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mapper_max_iterations</strong> <em>&#91;default: 500&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mapper_epsilon</strong> <em>&#91;default: 0.001&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mapper_num_threads</strong> <em>&#91;default: 12&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mapper_max_correspondence_distance</strong> <em>&#91;default: 0.1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>lidar_calibration_max_frames</strong> <em>&#91;default: 7&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>camera_calibration_max_frames</strong> <em>&#91;default: 1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>lost_frame_max_angle_diff</strong> <em>&#91;default: 25.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>lost_frame_interpolation_error</strong> <em>&#91;default: 0.05&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>lost_frame_max_acceleration</strong> <em>&#91;default: 8.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>min_calibration_range</strong> <em>&#91;default: 1.5&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>max_calibration_range</strong> <em>&#91;default: 80.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_min_pca_eigenvalue</strong> <em>&#91;default: 0.02&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_eval_max_corr_distance</strong> <em>&#91;default: 0.2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>solver_iterations</strong> <em>&#91;default: 100&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_skip_keyframes</strong> <em>&#91;default: 3&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>lidar_calibration_min_frames</strong> <em>&#91;default: 1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_use_only_last_frames</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>crop_z_calibration_pointclouds</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>crop_z_calibration_pointclouds_value</strong> <em>&#91;default: 4.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>base_lidar_crop_box_min_x</strong> <em>&#91;default: -5.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>base_lidar_crop_box_min_y</strong> <em>&#91;default: -5.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>base_lidar_crop_box_min_z</strong> <em>&#91;default: -5.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>base_lidar_crop_box_max_x</strong> <em>&#91;default: 10.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>base_lidar_crop_box_max_y</strong> <em>&#91;default: 5.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>base_lidar_crop_box_max_z</strong> <em>&#91;default: 5.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>base_lidar_min_plane_points_percentage</strong> <em>&#91;default: 10.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>base_lidar_max_inlier_distance</strong> <em>&#91;default: 0.03&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>base_lidar_min_plane_points</strong> <em>&#91;default: 500&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>base_lidar_max_cos_distance</strong> <em>&#91;default: 0.2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>base_lidar_max_iterations</strong> <em>&#91;default: 500&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>base_lidar_overwrite_xy_yaw</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>calibration_min_distance_between_frames</strong> <em>&#91;default: 1.5&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_rosbag</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No message files found.</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No plugins found.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>mapping_based_calibrator</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/mapping_based_calibrator+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/tier4/calibrationtools.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/mapping_based_calibrator"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/tier4/calibrationtools/tree/tier4/universe/calibrators/mapping_based_calibrator"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/mapping_based_calibrator?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/mapping_based_calibrator?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=mapping_based_calibrator&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "mapping_based_calibrator"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

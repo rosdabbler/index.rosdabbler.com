@@ -1,0 +1,4734 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: autoware_obstacle_cruise_planner</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/autoware_obstacle_cruise_planner/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">autoware_obstacle_cruise_planner</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/autoware_obstacle_cruise_planner">autoware_obstacle_cruise_planner</a> <small>package from <a style="text-decoration:none" href="/r/autoware_universe/github-autowarefoundation-autoware_universe">autoware_universe</a> repo</small>
+        </h3>
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_adapi_specs">
+
+autoware_adapi_specs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_agnocast_wrapper">
+
+autoware_agnocast_wrapper
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_auto_common">
+
+autoware_auto_common
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_component_interface_specs_universe">
+
+autoware_component_interface_specs_universe
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_component_interface_tools">
+
+autoware_component_interface_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_component_interface_utils">
+
+autoware_component_interface_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_cuda_dependency_meta">
+
+autoware_cuda_dependency_meta
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_fake_test_node">
+
+autoware_fake_test_node
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_glog_component">
+
+autoware_glog_component
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_goal_distance_calculator">
+
+autoware_goal_distance_calculator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_grid_map_utils">
+
+autoware_grid_map_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_path_distance_calculator">
+
+autoware_path_distance_calculator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_polar_grid">
+
+autoware_polar_grid
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_time_utils">
+
+autoware_time_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_recognition_marker_publisher">
+
+autoware_traffic_light_recognition_marker_publisher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_utils">
+
+autoware_traffic_light_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_universe_utils">
+
+autoware_universe_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_api_utils">
+
+tier4_api_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_autonomous_emergency_braking">
+
+autoware_autonomous_emergency_braking
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_collision_detector">
+
+autoware_collision_detector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_control_performance_analysis">
+
+autoware_control_performance_analysis
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_control_validator">
+
+autoware_control_validator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_external_cmd_selector">
+
+autoware_external_cmd_selector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_joy_controller">
+
+autoware_joy_controller
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lane_departure_checker">
+
+autoware_lane_departure_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_mpc_lateral_controller">
+
+autoware_mpc_lateral_controller
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_obstacle_collision_checker">
+
+autoware_obstacle_collision_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_operation_mode_transition_manager">
+
+autoware_operation_mode_transition_manager
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pid_longitudinal_controller">
+
+autoware_pid_longitudinal_controller
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_predicted_path_checker">
+
+autoware_predicted_path_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pure_pursuit">
+
+autoware_pure_pursuit
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_shift_decider">
+
+autoware_shift_decider
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_smart_mpc_trajectory_follower">
+
+autoware_smart_mpc_trajectory_follower
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_trajectory_follower_base">
+
+autoware_trajectory_follower_base
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_trajectory_follower_node">
+
+autoware_trajectory_follower_node
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_vehicle_cmd_gate">
+
+autoware_vehicle_cmd_gate
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_control_evaluator">
+
+autoware_control_evaluator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_kinematic_evaluator">
+
+autoware_kinematic_evaluator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_localization_evaluator">
+
+autoware_localization_evaluator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_perception_online_evaluator">
+
+autoware_perception_online_evaluator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_planning_evaluator">
+
+autoware_planning_evaluator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_scenario_simulator_v2_adapter">
+
+autoware_scenario_simulator_v2_adapter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_autoware_api_launch">
+
+tier4_autoware_api_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_control_launch">
+
+tier4_control_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_localization_launch">
+
+tier4_localization_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_map_launch">
+
+tier4_map_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_perception_launch">
+
+tier4_perception_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_planning_launch">
+
+tier4_planning_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_sensing_launch">
+
+tier4_sensing_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_simulator_launch">
+
+tier4_simulator_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_system_launch">
+
+tier4_system_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_vehicle_launch">
+
+tier4_vehicle_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_geo_pose_projector">
+
+autoware_geo_pose_projector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_gyro_odometer">
+
+autoware_gyro_odometer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_ar_tag_based_localizer">
+
+autoware_ar_tag_based_localizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_landmark_manager">
+
+autoware_landmark_manager
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lidar_marker_localizer">
+
+autoware_lidar_marker_localizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_localization_error_monitor">
+
+autoware_localization_error_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_ndt_scan_matcher">
+
+autoware_ndt_scan_matcher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pose2twist">
+
+autoware_pose2twist
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pose_covariance_modifier">
+
+autoware_pose_covariance_modifier
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pose_estimator_arbiter">
+
+autoware_pose_estimator_arbiter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pose_initializer">
+
+autoware_pose_initializer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pose_instability_detector">
+
+autoware_pose_instability_detector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/yabloc_common">
+
+yabloc_common
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/yabloc_image_processing">
+
+yabloc_image_processing
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/yabloc_monitor">
+
+yabloc_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/yabloc_particle_filter">
+
+yabloc_particle_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/yabloc_pose_initializer">
+
+yabloc_pose_initializer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lanelet2_map_visualizer">
+
+autoware_lanelet2_map_visualizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_map_height_fitter">
+
+autoware_map_height_fitter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_map_tf_generator">
+
+autoware_map_tf_generator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_bevfusion">
+
+autoware_bevfusion
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_bytetrack">
+
+autoware_bytetrack
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_cluster_merger">
+
+autoware_cluster_merger
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_compare_map_segmentation">
+
+autoware_compare_map_segmentation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_crosswalk_traffic_light_estimator">
+
+autoware_crosswalk_traffic_light_estimator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_detected_object_feature_remover">
+
+autoware_detected_object_feature_remover
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_detected_object_validation">
+
+autoware_detected_object_validation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_detection_by_tracker">
+
+autoware_detection_by_tracker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_elevation_map_loader">
+
+autoware_elevation_map_loader
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_euclidean_cluster">
+
+autoware_euclidean_cluster
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_ground_segmentation">
+
+autoware_ground_segmentation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_image_projection_based_fusion">
+
+autoware_image_projection_based_fusion
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lidar_apollo_instance_segmentation">
+
+autoware_lidar_apollo_instance_segmentation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lidar_centerpoint">
+
+autoware_lidar_centerpoint
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lidar_transfusion">
+
+autoware_lidar_transfusion
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_map_based_prediction">
+
+autoware_map_based_prediction
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_multi_object_tracker">
+
+autoware_multi_object_tracker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_object_merger">
+
+autoware_object_merger
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_object_range_splitter">
+
+autoware_object_range_splitter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_object_velocity_splitter">
+
+autoware_object_velocity_splitter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_occupancy_grid_map_outlier_filter">
+
+autoware_occupancy_grid_map_outlier_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_probabilistic_occupancy_grid_map">
+
+autoware_probabilistic_occupancy_grid_map
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_crossing_objects_noise_filter">
+
+autoware_radar_crossing_objects_noise_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_fusion_to_detected_object">
+
+autoware_radar_fusion_to_detected_object
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_object_clustering">
+
+autoware_radar_object_clustering
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_object_tracker">
+
+autoware_radar_object_tracker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_tracks_msgs_converter">
+
+autoware_radar_tracks_msgs_converter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_raindrop_cluster_filter">
+
+autoware_raindrop_cluster_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_shape_estimation">
+
+autoware_shape_estimation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_simple_object_merger">
+
+autoware_simple_object_merger
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_tensorrt_classifier">
+
+autoware_tensorrt_classifier
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_tensorrt_common">
+
+autoware_tensorrt_common
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_tensorrt_plugins">
+
+autoware_tensorrt_plugins
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_tensorrt_yolox">
+
+autoware_tensorrt_yolox
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_tracking_object_merger">
+
+autoware_tracking_object_merger
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_arbiter">
+
+autoware_traffic_light_arbiter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_category_merger">
+
+autoware_traffic_light_category_merger
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_classifier">
+
+autoware_traffic_light_classifier
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_fine_detector">
+
+autoware_traffic_light_fine_detector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_map_based_detector">
+
+autoware_traffic_light_map_based_detector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_multi_camera_fusion">
+
+autoware_traffic_light_multi_camera_fusion
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_occlusion_predictor">
+
+autoware_traffic_light_occlusion_predictor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_selector">
+
+autoware_traffic_light_selector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_visualization">
+
+autoware_traffic_light_visualization
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/perception_utils">
+
+perception_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_costmap_generator">
+
+autoware_costmap_generator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_external_velocity_limit_selector">
+
+autoware_external_velocity_limit_selector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_freespace_planner">
+
+autoware_freespace_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_freespace_planning_algorithms">
+
+autoware_freespace_planning_algorithms
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_mission_planner_universe">
+
+autoware_mission_planner_universe
+</a>
+            
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+autoware_obstacle_cruise_planner
+</span>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_obstacle_stop_planner">
+
+autoware_obstacle_stop_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_path_optimizer">
+
+autoware_path_optimizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_path_smoother">
+
+autoware_path_smoother
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_planning_validator">
+
+autoware_planning_validator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_remaining_distance_time_calculator">
+
+autoware_remaining_distance_time_calculator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_rtc_interface">
+
+autoware_rtc_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_scenario_selector">
+
+autoware_scenario_selector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_surround_obstacle_checker">
+
+autoware_surround_obstacle_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_avoidance_by_lane_change_module">
+
+autoware_behavior_path_avoidance_by_lane_change_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_dynamic_obstacle_avoidance_module">
+
+autoware_behavior_path_dynamic_obstacle_avoidance_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_external_request_lane_change_module">
+
+autoware_behavior_path_external_request_lane_change_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_goal_planner_module">
+
+autoware_behavior_path_goal_planner_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_lane_change_module">
+
+autoware_behavior_path_lane_change_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_planner">
+
+autoware_behavior_path_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_planner_common">
+
+autoware_behavior_path_planner_common
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_sampling_planner_module">
+
+autoware_behavior_path_sampling_planner_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_side_shift_module">
+
+autoware_behavior_path_side_shift_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_start_planner_module">
+
+autoware_behavior_path_start_planner_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_static_obstacle_avoidance_module">
+
+autoware_behavior_path_static_obstacle_avoidance_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_blind_spot_module">
+
+autoware_behavior_velocity_blind_spot_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_crosswalk_module">
+
+autoware_behavior_velocity_crosswalk_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_detection_area_module">
+
+autoware_behavior_velocity_detection_area_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_intersection_module">
+
+autoware_behavior_velocity_intersection_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_no_drivable_lane_module">
+
+autoware_behavior_velocity_no_drivable_lane_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_no_stopping_area_module">
+
+autoware_behavior_velocity_no_stopping_area_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_occlusion_spot_module">
+
+autoware_behavior_velocity_occlusion_spot_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_rtc_interface">
+
+autoware_behavior_velocity_rtc_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_run_out_module">
+
+autoware_behavior_velocity_run_out_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_speed_bump_module">
+
+autoware_behavior_velocity_speed_bump_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_template_module">
+
+autoware_behavior_velocity_template_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_traffic_light_module">
+
+autoware_behavior_velocity_traffic_light_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_virtual_traffic_light_module">
+
+autoware_behavior_velocity_virtual_traffic_light_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_walkway_module">
+
+autoware_behavior_velocity_walkway_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_dynamic_obstacle_stop_module">
+
+autoware_motion_velocity_dynamic_obstacle_stop_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_obstacle_cruise_module">
+
+autoware_motion_velocity_obstacle_cruise_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_obstacle_slow_down_module">
+
+autoware_motion_velocity_obstacle_slow_down_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_obstacle_velocity_limiter_module">
+
+autoware_motion_velocity_obstacle_velocity_limiter_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_out_of_lane_module">
+
+autoware_motion_velocity_out_of_lane_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_run_out_module">
+
+autoware_motion_velocity_run_out_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_bezier_sampler">
+
+autoware_bezier_sampler
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_frenet_planner">
+
+autoware_frenet_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_path_sampler">
+
+autoware_path_sampler
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_sampler_common">
+
+autoware_sampler_common
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_cuda_pointcloud_preprocessor">
+
+autoware_cuda_pointcloud_preprocessor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_cuda_utils">
+
+autoware_cuda_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_image_diagnostics">
+
+autoware_image_diagnostics
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_image_transport_decompressor">
+
+autoware_image_transport_decompressor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_imu_corrector">
+
+autoware_imu_corrector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pcl_extensions">
+
+autoware_pcl_extensions
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pointcloud_preprocessor">
+
+autoware_pointcloud_preprocessor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_objects_adapter">
+
+autoware_radar_objects_adapter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_scan_to_pointcloud2">
+
+autoware_radar_scan_to_pointcloud2
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_static_pointcloud_filter">
+
+autoware_radar_static_pointcloud_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_threshold_filter">
+
+autoware_radar_threshold_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_tracks_noise_filter">
+
+autoware_radar_tracks_noise_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_livox_tag_filter">
+
+autoware_livox_tag_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_carla_interface">
+
+autoware_carla_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_dummy_perception_publisher">
+
+autoware_dummy_perception_publisher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_fault_injection">
+
+autoware_fault_injection
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_learning_based_vehicle_model">
+
+autoware_learning_based_vehicle_model
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_simple_planning_simulator">
+
+autoware_simple_planning_simulator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_vehicle_door_simulator">
+
+autoware_vehicle_door_simulator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_dummy_object_rviz_plugin">
+
+tier4_dummy_object_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_bluetooth_monitor">
+
+autoware_bluetooth_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_component_monitor">
+
+autoware_component_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_component_state_monitor">
+
+autoware_component_state_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_default_adapi">
+
+autoware_default_adapi
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_adapi_adaptors">
+
+autoware_adapi_adaptors
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_adapi_visualizers">
+
+autoware_adapi_visualizers
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_automatic_pose_initializer">
+
+autoware_automatic_pose_initializer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_diagnostic_graph_aggregator">
+
+autoware_diagnostic_graph_aggregator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_diagnostic_graph_utils">
+
+autoware_diagnostic_graph_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_dummy_diag_publisher">
+
+autoware_dummy_diag_publisher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_dummy_infrastructure">
+
+autoware_dummy_infrastructure
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_duplicated_node_checker">
+
+autoware_duplicated_node_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_hazard_status_converter">
+
+autoware_hazard_status_converter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_mrm_comfortable_stop_operator">
+
+autoware_mrm_comfortable_stop_operator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_mrm_emergency_stop_operator">
+
+autoware_mrm_emergency_stop_operator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_mrm_handler">
+
+autoware_mrm_handler
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_processing_time_checker">
+
+autoware_processing_time_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_system_diagnostic_monitor">
+
+autoware_system_diagnostic_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_system_monitor">
+
+autoware_system_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_topic_relay_controller">
+
+autoware_topic_relay_controller
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_topic_state_monitor">
+
+autoware_topic_state_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_velodyne_monitor">
+
+autoware_velodyne_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/reaction_analyzer">
+
+reaction_analyzer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_accel_brake_map_calibrator">
+
+autoware_accel_brake_map_calibrator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_external_cmd_converter">
+
+autoware_external_cmd_converter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_raw_vehicle_cmd_converter">
+
+autoware_raw_vehicle_cmd_converter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_steer_offset_estimator">
+
+autoware_steer_offset_estimator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_bag_time_manager_rviz_plugin">
+
+autoware_bag_time_manager_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_mission_details_overlay_rviz_plugin">
+
+autoware_mission_details_overlay_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_overlay_rviz_plugin">
+
+autoware_overlay_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_string_stamped_rviz_plugin">
+
+autoware_string_stamped_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_perception_rviz_plugin">
+
+autoware_perception_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_adapi_rviz_plugin">
+
+tier4_adapi_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_camera_view_rviz_plugin">
+
+tier4_camera_view_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_datetime_rviz_plugin">
+
+tier4_datetime_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_localization_rviz_plugin">
+
+tier4_localization_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_planning_factor_rviz_plugin">
+
+tier4_planning_factor_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_planning_rviz_plugin">
+
+tier4_planning_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_state_rviz_plugin">
+
+tier4_state_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_system_rviz_plugin">
+
+tier4_system_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_traffic_light_rviz_plugin">
+
+tier4_traffic_light_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_vehicle_rviz_plugin">
+
+tier4_vehicle_rviz_plugin
+</a>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/autoware_obstacle_cruise_planner"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/autowarefoundation/autoware_universe/tree/main/planning/autoware_obstacle_cruise_planner"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-primary">1</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">30</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>0.44.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>Apache License 2.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-default">
+                  
+                    AMENT_CMAKE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/autowarefoundation/autoware_universe.git">https://github.com/autowarefoundation/autoware_universe.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-05-02
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <span class="label label-default">planner</span> <span class="label label-default">ros</span> <span class="label label-default">calibration</span> <span class="label label-default">self-driving-car</span> <span class="label label-default">autonomous-driving</span> <span class="label label-default">autonomous-vehicles</span> <span class="label label-default">ros2</span> <span class="label label-default">3d-map</span> <span class="label label-default">autoware</span> 
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/autoware_universe/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/autoware_universe/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/autoware_universe/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            The autoware_obstacle_cruise_planner package
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional links.</em>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Takayuki Murooka</li>
+                
+                  <li>Kosuke Takeuchi</li>
+                
+                  <li>Satoshi Ota</li>
+                
+                  <li>Yuki Takagi</li>
+                
+                  <li>Berkay Karaman</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Takayuki Murooka</li>
+                
+                  <li>Yutaka Shimizu</li>
+                
+              </ul>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/autowarefoundation/autoware_universe/tree/main/planning/autoware_obstacle_cruise_planner/README.md" title="Open in git repository">planning/autoware_obstacle_cruise_planner/README.md</a></div>
+              <div class="panel-body">
+                    <div class="rendered-markdown">
+<h1 id="obstacle-cruise-planner">Obstacle Cruise Planner</h1>
+
+<h2 id="overview">Overview</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">autoware_obstacle_cruise_planner</code> package has following modules.</p>
+
+<ul>
+  <li>Stop planning
+    <ul>
+      <li>stop when there is a static obstacle near the trajectory.</li>
+    </ul>
+  </li>
+  <li>Cruise planning
+    <ul>
+      <li>cruise a dynamic obstacle in front of the ego.</li>
+    </ul>
+  </li>
+  <li>Slow down planning
+    <ul>
+      <li>slow down when there is a static/dynamic obstacle near the trajectory.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="interfaces">Interfaces</h2>
+
+<h3 id="input-topics">Input topics</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/input/trajectory</code></td>
+      <td>autoware_planning_msgs::Trajectory</td>
+      <td>input trajectory</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/input/objects</code></td>
+      <td>autoware_perception_msgs::PredictedObjects</td>
+      <td>dynamic objects</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/input/odometry</code></td>
+      <td>nav_msgs::msg::Odometry</td>
+      <td>ego odometry</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="output-topics">Output topics</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/output/trajectory</code></td>
+      <td>autoware_planning_msgs::Trajectory</td>
+      <td>output trajectory</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/output/velocity_limit</code></td>
+      <td>autoware_internal_planning_msgs::msg::VelocityLimit</td>
+      <td>velocity limit for cruising</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/output/clear_velocity_limit</code></td>
+      <td>autoware_internal_planning_msgs::msg::VelocityLimitClearCommand</td>
+      <td>clear command for velocity limit</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="design">Design</h2>
+
+<p>Design for the following functions is defined here.</p>
+
+<ul>
+  <li>Behavior determination against obstacles</li>
+  <li>Stop planning</li>
+  <li>Cruise planning</li>
+  <li>Slow down planning</li>
+</ul>
+
+<p>A data structure for cruise and stop planning is as follows.
+This planner data is created first, and then sent to the planning algorithm.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="nc">PlannerData</span>
+<span class="p">{</span>
+  <span class="n">rclcpp</span><span class="o">::</span><span class="n">Time</span> <span class="n">current_time</span><span class="p">;</span>
+  <span class="n">autoware_planning_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Trajectory</span> <span class="n">traj</span><span class="p">;</span>
+  <span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Pose</span> <span class="n">current_pose</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">ego_vel</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">current_acc</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Obstacle</span><span class="o">&gt;</span> <span class="n">target_obstacles</span><span class="p">;</span>
+<span class="p">};</span>
+
+</code></pre></div></div>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="nc">Obstacle</span>
+<span class="p">{</span>
+  <span class="n">rclcpp</span><span class="o">::</span><span class="n">Time</span> <span class="n">stamp</span><span class="p">;</span>  <span class="c1">// This is not the current stamp, but when the object was observed.</span>
+  <span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Pose</span> <span class="n">pose</span><span class="p">;</span>  <span class="c1">// interpolated with the current stamp</span>
+  <span class="kt">bool</span> <span class="n">orientation_reliable</span><span class="p">;</span>
+  <span class="n">Twist</span> <span class="n">twist</span><span class="p">;</span>
+  <span class="kt">bool</span> <span class="n">twist_reliable</span><span class="p">;</span>
+  <span class="n">ObjectClassification</span> <span class="n">classification</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">uuid</span><span class="p">;</span>
+  <span class="n">Shape</span> <span class="n">shape</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">PredictedPath</span><span class="o">&gt;</span> <span class="n">predicted_paths</span><span class="p">;</span>
+<span class="p">};</span>
+
+</code></pre></div></div>
+
+<h3 id="behavior-determination-against-obstacles">Behavior determination against obstacles</h3>
+
+<p>Obstacles for cruising, stopping and slowing down are selected in this order based on their pose and velocity.
+The obstacles not in front of the ego will be ignored.</p>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/autoware_obstacle_cruise_planner/./media/determine_cruise_stop_slow_down.drawio.svg" alt="determine_cruise_stop_slow_down"></p>
+
+<p>The behavior determination flowchart is shown below.</p>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/autoware_obstacle_cruise_planner/./media/behavior_determination_flowchart.drawio.svg" alt="behavior_determination_flowchart"></p>
+
+<h4 id="determine-cruise-vehicles">Determine cruise vehicles</h4>
+
+<p>The obstacles meeting the following condition are determined as obstacles for cruising.</p>
+
+<ul>
+  <li>
+    <p>The lateral distance from the object to the ego’s trajectory is smaller than <code class="language-plaintext highlighter-rouge">behavior_determination.cruise.max_lat_margin</code>.</p>
+  </li>
+  <li>The object type is for cruising according to <code class="language-plaintext highlighter-rouge">common.cruise_obstacle_type.*</code>.</li>
+  <li>The object is not crossing the ego’s trajectory (*1).</li>
+  <li>If the object is inside the trajectory.
+    <ul>
+      <li>The object type is for inside cruising according to <code class="language-plaintext highlighter-rouge">common.cruise_obstacle_type.inside.*</code>.</li>
+      <li>The object velocity is larger than <code class="language-plaintext highlighter-rouge">behavior_determination.obstacle_velocity_threshold_from_cruise_to_stop</code>.</li>
+    </ul>
+  </li>
+  <li>If the object is outside the trajectory.
+    <ul>
+      <li>The object type is for outside cruising according to <code class="language-plaintext highlighter-rouge">common.cruise_obstacle_type.outside.*</code>.</li>
+      <li>The object velocity is larger than <code class="language-plaintext highlighter-rouge">behavior_determination.cruise.outside_obstacle.obstacle_velocity_threshold</code>.</li>
+      <li>The highest confident predicted path collides with the ego’s trajectory.</li>
+      <li>Its collision’s period is larger than <code class="language-plaintext highlighter-rouge">behavior_determination.cruise.outside_obstacle.ego_obstacle_overlap_time_threshold</code>.</li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">common.cruise_obstacle_type.inside.unknown</code></td>
+      <td>bool</td>
+      <td>flag to consider unknown objects for cruising</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">common.cruise_obstacle_type.inside.car</code></td>
+      <td>bool</td>
+      <td>flag to consider unknown objects for cruising</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">common.cruise_obstacle_type.inside.truck</code></td>
+      <td>bool</td>
+      <td>flag to consider unknown objects for cruising</td>
+    </tr>
+    <tr>
+      <td>…</td>
+      <td>bool</td>
+      <td>…</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">common.cruise_obstacle_type.outside.unknown</code></td>
+      <td>bool</td>
+      <td>flag to consider unknown objects for cruising</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">common.cruise_obstacle_type.outside.car</code></td>
+      <td>bool</td>
+      <td>flag to consider unknown objects for cruising</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">common.cruise_obstacle_type.outside.truck</code></td>
+      <td>bool</td>
+      <td>flag to consider unknown objects for cruising</td>
+    </tr>
+    <tr>
+      <td>…</td>
+      <td>bool</td>
+      <td>…</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">behavior_determination.cruise.max_lat_margin</code></td>
+      <td>double</td>
+      <td>maximum lateral margin for cruise obstacles</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">behavior_determination.obstacle_velocity_threshold_from_cruise_to_stop</code></td>
+      <td>double</td>
+      <td>maximum obstacle velocity for cruise obstacle inside the trajectory</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">behavior_determination.cruise.outside_obstacle.obstacle_velocity_threshold</code></td>
+      <td>double</td>
+      <td>maximum obstacle velocity for cruise obstacle outside the trajectory</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">behavior_determination.cruise.outside_obstacle.ego_obstacle_overlap_time_threshold</code></td>
+      <td>double</td>
+      <td>maximum overlap time of the collision between the ego and obstacle</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="yield-for-vehicles-that-might-cut-in-into-the-egos-lane">Yield for vehicles that might cut in into the ego’s lane</h5>
+
+<p>It is also possible to yield (cruise) behind vehicles in neighbor lanes if said vehicles might cut in the ego vehicle’s current lane.</p>
+
+<p>The obstacles meeting the following condition are determined as obstacles for yielding (cruising).</p>
+
+<ul>
+  <li>The object type is for cruising according to <code class="language-plaintext highlighter-rouge">common.cruise_obstacle_type.*</code> and it is moving with a speed greater than <code class="language-plaintext highlighter-rouge">behavior_determination.cruise.yield.stopped_obstacle_velocity_threshold</code>.</li>
+  <li>The object is not crossing the ego’s trajectory (*1).</li>
+  <li>There is another object of type <code class="language-plaintext highlighter-rouge">common.cruise_obstacle_type.*</code> stopped in front of the moving obstacle.</li>
+  <li>The lateral distance (using the ego’s trajectory as reference) between both obstacles is less than <code class="language-plaintext highlighter-rouge">behavior_determination.cruise.yield.max_lat_dist_between_obstacles</code>
+</li>
+  <li>Both obstacles, moving and stopped, are within <code class="language-plaintext highlighter-rouge">behavior_determination.cruise.yield.lat_distance_threshold</code> and <code class="language-plaintext highlighter-rouge">behavior_determination.cruise.yield.lat_distance_threshold</code> + <code class="language-plaintext highlighter-rouge">behavior_determination.cruise.yield.max_lat_dist_between_obstacles</code> lateral distance from the ego’s trajectory respectively.</li>
+</ul>
+
+<p>If the above conditions are met, the ego vehicle will cruise behind the moving obstacle, yielding to it so it can cut in into the ego’s lane to avoid the stopped obstacle.</p>
+
+<h4 id="determine-stop-vehicles">Determine stop vehicles</h4>
+
+<p>Among obstacles which are not for cruising, the obstacles meeting the following condition are determined as obstacles for stopping.</p>
+
+<ul>
+  <li>The object type is for stopping according to <code class="language-plaintext highlighter-rouge">common.stop_obstacle_type.*</code>.</li>
+  <li>The lateral distance from the object to the ego’s trajectory is smaller than <code class="language-plaintext highlighter-rouge">behavior_determination.stop.max_lat_margin</code>.</li>
+  <li>The object velocity along the ego’s trajectory is smaller than <code class="language-plaintext highlighter-rouge">behavior_determination.obstacle_velocity_threshold_from_stop_to_cruise</code>.</li>
+  <li>The object
+    <ul>
+      <li>does not cross the ego’s trajectory (*1)</li>
+      <li>with the velocity smaller than <code class="language-plaintext highlighter-rouge">behavior_determination.crossing_obstacle.obstacle_velocity_threshold</code>
+</li>
+      <li>and its collision time margin is large enough (*2).</li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">common.stop_obstacle_type.unknown</code></td>
+      <td>bool</td>
+      <td>flag to consider unknown objects for stopping</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">common.stop_obstacle_type.car</code></td>
+      <td>bool</td>
+      <td>flag to consider unknown objects for stopping</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">common.stop_obstacle_type.truck</code></td>
+      <td>bool</td>
+      <td>flag to consider unknown objects for stopping</td>
+    </tr>
+    <tr>
+      <td>…</td>
+      <td>bool</td>
+      <td>…</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">behavior_determination.stop.max_lat_margin</code></td>
+      <td>double</td>
+      <td>maximum lateral margin for stop obstacles</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">behavior_determination.crossing_obstacle.obstacle_velocity_threshold</code></td>
+      <td>double</td>
+      <td>maximum crossing obstacle velocity to ignore</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">behavior_determination.obstacle_velocity_threshold_from_stop_to_cruise</code></td>
+      <td>double</td>
+      <td>maximum obstacle velocity for stop</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="determine-slow-down-vehicles">Determine slow down vehicles</h4>
+
+<p>Among obstacles which are not for cruising and stopping, the obstacles meeting the following condition are determined as obstacles for slowing down.</p>
+
+<ul>
+  <li>The object type is for slowing down according to <code class="language-plaintext highlighter-rouge">common.slow_down_obstacle_type.*</code>.</li>
+  <li>The lateral distance from the object to the ego’s trajectory is smaller than <code class="language-plaintext highlighter-rouge">behavior_determination.slow_down.max_lat_margin</code>.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">common.slow_down_obstacle_type.unknown</code></td>
+      <td>bool</td>
+      <td>flag to consider unknown objects for slowing down</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">common.slow_down_obstacle_type.car</code></td>
+      <td>bool</td>
+      <td>flag to consider unknown objects for slowing down</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">common.slow_down_obstacle_type.truck</code></td>
+      <td>bool</td>
+      <td>flag to consider unknown objects for slowing down</td>
+    </tr>
+    <tr>
+      <td>…</td>
+      <td>bool</td>
+      <td>…</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">behavior_determination.slow_down.max_lat_margin</code></td>
+      <td>double</td>
+      <td>maximum lateral margin for slow down obstacles</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="note">NOTE</h4>
+
+<h5 id="1-crossing-obstacles">*1: Crossing obstacles</h5>
+
+<p>Crossing obstacle is the object whose orientation’s yaw angle against the ego’s trajectory is smaller than <code class="language-plaintext highlighter-rouge">behavior_determination.crossing_obstacle.obstacle_traj_angle_threshold</code>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">behavior_determination.crossing_obstacle.obstacle_traj_angle_threshold</code></td>
+      <td>double</td>
+      <td>maximum angle against the ego’s trajectory to judge the obstacle is crossing the trajectory [rad]</td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="2-enough-collision-time-margin">*2: Enough collision time margin</h5>
+
+<p>We predict the collision area and its time by the ego with a constant velocity motion and the obstacle with its predicted path.
+Then, we calculate a collision time margin which is the difference of the time when the ego will be inside the collision area and the obstacle will be inside the collision area.
+When this time margin is smaller than <code class="language-plaintext highlighter-rouge">behavior_determination.stop.crossing_obstacle.collision_time_margin</code>, the margin is not enough.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">behavior_determination.stop.crossing_obstacle.collision_time_margin</code></td>
+      <td>double</td>
+      <td>maximum collision time margin of the ego and obstacle</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="stop-planning">Stop planning</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">common.min_strong_accel</code></td>
+      <td>double</td>
+      <td>ego’s minimum acceleration to stop [m/ss]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">common.safe_distance_margin</code></td>
+      <td>double</td>
+      <td>distance with obstacles for stop [m]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">common.terminal_safe_distance_margin</code></td>
+      <td>double</td>
+      <td>terminal_distance with obstacles for stop, which cannot be exceed safe distance margin [m]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The role of the stop planning is keeping a safe distance with static vehicle objects or dynamic/static non vehicle objects.</p>
+
+<p>The stop planning just inserts the stop point in the trajectory to keep a distance with obstacles.
+The safe distance is parameterized as <code class="language-plaintext highlighter-rouge">common.safe_distance_margin</code>.
+When it stops at the end of the trajectory, and obstacle is on the same point, the safe distance becomes <code class="language-plaintext highlighter-rouge">terminal_safe_distance_margin</code>.</p>
+
+<p>When inserting the stop point, the required acceleration for the ego to stop in front of the stop point is calculated.
+If the acceleration is less than <code class="language-plaintext highlighter-rouge">common.min_strong_accel</code>, the stop planning will be cancelled since this package does not assume a strong sudden brake for emergency.</p>
+
+<h3 id="cruise-planning">Cruise planning</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">common.safe_distance_margin</code></td>
+      <td>double</td>
+      <td>minimum distance with obstacles for cruise [m]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The role of the cruise planning is keeping a safe distance with dynamic vehicle objects with smoothed velocity transition.
+This includes not only cruising a front vehicle, but also reacting a cut-in and cut-out vehicle.</p>
+
+<p>The safe distance is calculated dynamically based on the Responsibility-Sensitive Safety (RSS) by the following equation.</p>
+
+\[d_{rss} = v_{ego} t_{idling} + \frac{1}{2} a_{ego} t_{idling}^2 + \frac{v_{ego}^2}{2 a_{ego}} - \frac{v_{obstacle}^2}{2 a_{obstacle}},\]
+
+<p>assuming that $d_{rss}$ is the calculated safe distance, $t_{idling}$ is the idling time for the ego to detect the front vehicle’s deceleration, $v_{ego}$ is the ego’s current velocity, $v_{obstacle}$ is the front obstacle’s current velocity, $a_{ego}$ is the ego’s acceleration, and $a_{obstacle}$ is the obstacle’s acceleration.
+These values are parameterized as follows. Other common values such as ego’s minimum acceleration is defined in <code class="language-plaintext highlighter-rouge">common.param.yaml</code>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">common.idling_time</code></td>
+      <td>double</td>
+      <td>idling time for the ego to detect the front vehicle starting deceleration [s]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">common.min_ego_accel_for_rss</code></td>
+      <td>double</td>
+      <td>ego’s acceleration for RSS [m/ss]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">common.min_object_accel_for_rss</code></td>
+      <td>double</td>
+      <td>front obstacle’s acceleration for RSS [m/ss]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The detailed formulation is as follows.</p>
+
+\[\begin{align}
+d_{error} &amp; = d - d_{rss} \\
+d_{normalized} &amp; = lpf(d_{error} / d_{obstacle}) \\
+d_{quad, normalized} &amp; = sign(d_{normalized}) *d_{normalized}*d_{normalized} \\
+v_{pid} &amp; = pid(d_{quad, normalized}) \\
+v_{add} &amp; = v_{pid} &gt; 0 ? v_{pid}* w_{acc} : v_{pid} \\
+v_{target} &amp; = max(v_{ego} + v_{add}, v_{min, cruise})
+\end{align}\]
+
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">d</code></td>
+      <td>actual distance to obstacle</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">d_{rss}</code></td>
+      <td>ideal distance to obstacle based on RSS</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">v_{min, cruise}</code></td>
+      <td><code class="language-plaintext highlighter-rouge">min_cruise_target_vel</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">w_{acc}</code></td>
+      <td><code class="language-plaintext highlighter-rouge">output_ratio_during_accel</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">lpf(val)</code></td>
+      <td>apply low-pass filter to <code class="language-plaintext highlighter-rouge">val</code>
+</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">pid(val)</code></td>
+      <td>apply pid to <code class="language-plaintext highlighter-rouge">val</code>
+</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="block-diagram">Block diagram</h4>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/autoware_obstacle_cruise_planner/./media/cruise_planning_block_diagram.drawio.svg" alt="cruise_planning_block_diagram"></p>
+
+<h3 id="slow-down-planning">Slow down planning</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">slow_down.labels</code></td>
+      <td>vector(string)</td>
+      <td>A vector of labels for customizing obstacle-label-based slow down behavior. Each label represents an obstacle type that will be treated differently when applying slow down. The possible labels are (“default” (Mandatory), “unknown”,”car”,”truck”,”bus”,”trailer”,”motorcycle”,”bicycle” or “pedestrian”)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">slow_down.default.static.min_lat_velocity</code></td>
+      <td>double</td>
+      <td>minimum velocity to linearly calculate slow down velocity [m]. Note: This default value will be used when the detected obstacle label does not match any of the slow_down.labels and the obstacle is considered to be static, or not moving</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">slow_down.default.static.max_lat_velocity</code></td>
+      <td>double</td>
+      <td>maximum velocity to linearly calculate slow down velocity [m]. Note: This default value will be used when the detected obstacle label does not match any of the slow_down.labels and the obstacle is considered to be static, or not moving</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">slow_down.default.static.min_lat_margin</code></td>
+      <td>double</td>
+      <td>minimum lateral margin to linearly calculate slow down velocity [m]. Note: This default value will be used when the detected obstacle label does not match any of the slow_down.labels and the obstacle is considered to be static, or not moving</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">slow_down.default.static.max_lat_margin</code></td>
+      <td>double</td>
+      <td>maximum lateral margin to linearly calculate slow down velocity [m]. Note: This default value will be used when the detected obstacle label does not match any of the slow_down.labels and the obstacle is considered to be static, or not moving</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">slow_down.default.moving.min_lat_velocity</code></td>
+      <td>double</td>
+      <td>minimum velocity to linearly calculate slow down velocity [m]. Note: This default value will be used when the detected obstacle label does not match any of the slow_down.labels and the obstacle is considered to be moving</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">slow_down.default.moving.max_lat_velocity</code></td>
+      <td>double</td>
+      <td>maximum velocity to linearly calculate slow down velocity [m]. Note: This default value will be used when the detected obstacle label does not match any of the slow_down.labels and the obstacle is considered to be moving</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">slow_down.default.moving.min_lat_margin</code></td>
+      <td>double</td>
+      <td>minimum lateral margin to linearly calculate slow down velocity [m]. Note: This default value will be used when the detected obstacle label does not match any of the slow_down.labels and the obstacle is considered to be moving</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">slow_down.default.moving.max_lat_margin</code></td>
+      <td>double</td>
+      <td>maximum lateral margin to linearly calculate slow down velocity [m]. Note: This default value will be used when the detected obstacle label does not match any of the slow_down.labels and the obstacle is considered to be moving</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">(optional) slow_down."label".(static &amp; moving).min_lat_velocity</code></td>
+      <td>double</td>
+      <td>minimum velocity to linearly calculate slow down velocity [m]. Note: only for obstacles specified in <code class="language-plaintext highlighter-rouge">slow_down.labels</code>. Requires a <code class="language-plaintext highlighter-rouge">static</code> and a <code class="language-plaintext highlighter-rouge">moving</code> value</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">(optional) slow_down."label".(static &amp; moving).max_lat_velocity</code></td>
+      <td>double</td>
+      <td>maximum velocity to linearly calculate slow down velocity [m]. Note: only for obstacles specified in <code class="language-plaintext highlighter-rouge">slow_down.labels</code>. Requires a <code class="language-plaintext highlighter-rouge">static</code> and a <code class="language-plaintext highlighter-rouge">moving</code> value</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">(optional) slow_down."label".(static &amp; moving).min_lat_margin</code></td>
+      <td>double</td>
+      <td>minimum lateral margin to linearly calculate slow down velocity [m]. Note: only for obstacles specified in <code class="language-plaintext highlighter-rouge">slow_down.labels</code>. Requires a <code class="language-plaintext highlighter-rouge">static</code> and a <code class="language-plaintext highlighter-rouge">moving</code> value</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">(optional) slow_down."label".(static &amp; moving).max_lat_margin</code></td>
+      <td>double</td>
+      <td>maximum lateral margin to linearly calculate slow down velocity [m]. Note: only for obstacles specified in <code class="language-plaintext highlighter-rouge">slow_down.labels</code>. Requires a <code class="language-plaintext highlighter-rouge">static</code> and a <code class="language-plaintext highlighter-rouge">moving</code> value</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The role of the slow down planning is inserting slow down velocity in the trajectory where the trajectory points are close to the obstacles. The parameters can be customized depending on the obstacle type (see <code class="language-plaintext highlighter-rouge">slow_down.labels</code>), making it possible to adjust the slow down behavior depending if the obstacle is a pedestrian, bicycle, car, etc. Each obstacle type has a <code class="language-plaintext highlighter-rouge">static</code> and a <code class="language-plaintext highlighter-rouge">moving</code> parameter set, so it is possible to customize the slow down response of the ego vehicle according to the obstacle type and if it is moving or not. If an obstacle is determined to be moving, the corresponding <code class="language-plaintext highlighter-rouge">moving</code> set of parameters will be used to compute the vehicle slow down, otherwise, the <code class="language-plaintext highlighter-rouge">static</code> parameters will be used. The <code class="language-plaintext highlighter-rouge">static</code> and <code class="language-plaintext highlighter-rouge">moving</code> separation is useful for customizing the ego vehicle slow down behavior to, for example, slow down more significantly when passing stopped vehicles that might cause occlusion or that might suddenly open its doors.</p>
+
+<p>An obstacle is classified as <code class="language-plaintext highlighter-rouge">static</code> if its total speed is less than the <code class="language-plaintext highlighter-rouge">moving_object_speed_threshold</code> parameter. Furthermore, a hysteresis based approach is used to avoid chattering, it uses the <code class="language-plaintext highlighter-rouge">moving_object_hysteresis_range</code> parameter range and the obstacle’s previous state (<code class="language-plaintext highlighter-rouge">moving</code> or <code class="language-plaintext highlighter-rouge">static</code>) to determine if the obstacle is moving or not. In other words, if an obstacle was previously classified as <code class="language-plaintext highlighter-rouge">static</code>, it will not change its classification to <code class="language-plaintext highlighter-rouge">moving</code> unless its total speed is greater than <code class="language-plaintext highlighter-rouge">moving_object_speed_threshold</code> + <code class="language-plaintext highlighter-rouge">moving_object_hysteresis_range</code>. Likewise, an obstacle previously classified as <code class="language-plaintext highlighter-rouge">moving</code>, will only change to <code class="language-plaintext highlighter-rouge">static</code> if its speed is lower than <code class="language-plaintext highlighter-rouge">moving_object_speed_threshold</code> - <code class="language-plaintext highlighter-rouge">moving_object_hysteresis_range</code>.</p>
+
+<p>The closest point on the obstacle to the ego’s trajectory is calculated.
+Then, the slow down velocity is calculated by linear interpolation with the distance between the point and trajectory as follows.</p>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/autoware_obstacle_cruise_planner/./media/slow_down_velocity_calculation.svg" alt="slow_down_velocity_calculation"></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">v_{out}</code></td>
+      <td>calculated velocity for slow down</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">v_{min}</code></td>
+      <td><code class="language-plaintext highlighter-rouge">slow_down.min_lat_velocity</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">v_{max}</code></td>
+      <td><code class="language-plaintext highlighter-rouge">slow_down.max_lat_velocity</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">l_{min}</code></td>
+      <td><code class="language-plaintext highlighter-rouge">slow_down.min_lat_margin</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">l_{max}</code></td>
+      <td><code class="language-plaintext highlighter-rouge">slow_down.max_lat_margin</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">l'_{max}</code></td>
+      <td><code class="language-plaintext highlighter-rouge">behavior_determination.slow_down.max_lat_margin</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The calculated velocity is inserted in the trajectory where the obstacle is inside the area with <code class="language-plaintext highlighter-rouge">behavior_determination.slow_down.max_lat_margin</code>.</p>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/planning/autoware_obstacle_cruise_planner/./media/slow_down_planning.drawio.svg" alt="slow_down_planning"></p>
+
+<h2 id="implementation">Implementation</h2>
+
+<h3 id="flowchart">Flowchart</h3>
+
+<p>Successive functions consist of <code class="language-plaintext highlighter-rouge">autoware_obstacle_cruise_planner</code> as follows.</p>
+
+<p>Various algorithms for stop and cruise planning will be implemented, and one of them is designated depending on the use cases.
+The core algorithm implementation <code class="language-plaintext highlighter-rouge">generateTrajectory</code> depends on the designated algorithm.</p>
+
+<pre><code class="language-plantuml">@startuml
+title onTrajectory
+start
+
+group convertToObstacles
+  :check obstacle's label;
+  :check obstacle is in front of ego;
+  :check obstacle's lateral deviation to trajectory;
+  :create obstacle instance;
+end group
+
+group determineEgoBehaviorAgainstObstacles
+  :resampleExtendedTrajectory;
+  group for each obstacle
+    :createCruiseObstacle;
+    :createStopObstacle;
+    :createSlowDownObstacle;
+  end group
+  :update previous obstacles;
+end group
+
+:createPlannerData;
+
+:generateStopTrajectory;
+
+:generateCruiseTrajectory;
+
+:generateSlowDownTrajectory;
+
+:publish trajectory;
+
+:publishDebugData;
+
+:publish and print calculation time;
+
+stop
+@enduml
+
+</code></pre>
+
+<h3 id="algorithm-selection-for-cruise-planner">Algorithm selection for cruise planner</h3>
+
+<p>Currently, only a PID-based planner is supported.
+Each planner will be explained in the following.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">common.planning_method</code></td>
+      <td>string</td>
+      <td>cruise and stop planning algorithm, selected from “pid_base”</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="pid-based-planner">PID-based planner</h3>
+
+<h4 id="stop-planning-1">Stop planning</h4>
+
+<p>In the <code class="language-plaintext highlighter-rouge">pid_based_planner</code> namespace,</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">obstacle_velocity_threshold_from_cruise_to_stop</code></td>
+      <td>double</td>
+      <td>obstacle velocity threshold to be stopped from cruised [m/s]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Only one obstacle is targeted for the stop planning.
+It is the obstacle among obstacle candidates whose velocity is less than <code class="language-plaintext highlighter-rouge">obstacle_velocity_threshold_from_cruise_to_stop</code>, and which is the nearest to the ego along the trajectory. A stop point is inserted keeping<code class="language-plaintext highlighter-rouge">common.safe_distance_margin</code> distance between the ego and obstacle.</p>
+
+<p>Note that, as explained in the stop planning design, a stop planning which requires a strong acceleration (less than <code class="language-plaintext highlighter-rouge">common.min_strong_accel</code>) will be canceled.</p>
+
+<h4 id="cruise-planning-1">Cruise planning</h4>
+
+<p>In the <code class="language-plaintext highlighter-rouge">pid_based_planner</code> namespace,</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">kp</code></td>
+      <td>double</td>
+      <td>p gain for pid control [-]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ki</code></td>
+      <td>double</td>
+      <td>i gain for pid control [-]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">kd</code></td>
+      <td>double</td>
+      <td>d gain for pid control [-]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">output_ratio_during_accel</code></td>
+      <td>double</td>
+      <td>The output velocity will be multiplied by the ratio during acceleration to follow the front vehicle. [-]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">vel_to_acc_weight</code></td>
+      <td>double</td>
+      <td>target acceleration is target velocity * <code class="language-plaintext highlighter-rouge">vel_to_acc_weight</code> [-]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">min_cruise_target_vel</code></td>
+      <td>double</td>
+      <td>minimum target velocity during cruise [m/s]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>In order to keep the safe distance, the target velocity and acceleration is calculated and sent as an external velocity limit to the velocity smoothing package (<code class="language-plaintext highlighter-rouge">motion_velocity_smoother</code> by default).
+The target velocity and acceleration is respectively calculated with the PID controller according to the error between the reference safe distance and the actual distance.</p>
+
+<h3 id="optimization-based-planner">Optimization-based planner</h3>
+
+<p>under construction</p>
+
+<h2 id="minor-functions">Minor functions</h2>
+
+<h3 id="prioritization-of-behavior-modules-stop-point">Prioritization of behavior module’s stop point</h3>
+
+<p>When stopping for a pedestrian walking on the crosswalk, the behavior module inserts the zero velocity in the trajectory in front of the crosswalk.
+Also <code class="language-plaintext highlighter-rouge">autoware_obstacle_cruise_planner</code>’s stop planning also works, and the ego may not reach the behavior module’s stop point since the safe distance defined in <code class="language-plaintext highlighter-rouge">autoware_obstacle_cruise_planner</code> may be longer than the behavior module’s safe distance.
+To resolve this non-alignment of the stop point between the behavior module and <code class="language-plaintext highlighter-rouge">autoware_obstacle_cruise_planner</code>, <code class="language-plaintext highlighter-rouge">common.min_behavior_stop_margin</code> is defined.
+In the case of the crosswalk described above, <code class="language-plaintext highlighter-rouge">autoware_obstacle_cruise_planner</code> inserts the stop point with a distance <code class="language-plaintext highlighter-rouge">common.min_behavior_stop_margin</code> at minimum between the ego and obstacle.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">common.min_behavior_stop_margin</code></td>
+      <td>double</td>
+      <td>minimum stop margin when stopping with the behavior module enabled [m]</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="a-function-to-keep-the-closest-stop-obstacle-in-target-obstacles">A function to keep the closest stop obstacle in target obstacles</h3>
+
+<p>In order to keep the closest stop obstacle in the target obstacles, we check whether it is disappeared or not from the target obstacles in the <code class="language-plaintext highlighter-rouge">checkConsistency</code> function.
+If the previous closest stop obstacle is remove from the lists, we keep it in the lists for <code class="language-plaintext highlighter-rouge">stop_obstacle_hold_time_threshold</code> seconds.
+Note that if a new stop obstacle appears and the previous closest obstacle removes from the lists, we do not add it to the target obstacles again.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">behavior_determination.stop_obstacle_hold_time_threshold</code></td>
+      <td>double</td>
+      <td>maximum time for holding closest stop obstacle [s]</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="how-to-debug">How To Debug</h2>
+
+<p>How to debug can be seen <a href="https://github.com/autowarefoundation/autoware_universe/tree/main/planning/autoware_obstacle_cruise_planner/docs/debug.md">here</a>.</p>
+
+<h2 id="known-limits">Known Limits</h2>
+
+<ul>
+  <li>Common
+    <ul>
+      <li>When the obstacle pose or velocity estimation has a delay, the ego sometimes will go close to the front vehicle keeping deceleration.</li>
+      <li>Current implementation only uses predicted objects message for static/dynamic obstacles and does not use pointcloud. Therefore, if object recognition is lost, the ego cannot deal with the lost obstacle.</li>
+      <li>The current predicted paths for obstacle’s lane change does not have enough precision for obstacle_cruise_planner. Therefore, we set <code class="language-plaintext highlighter-rouge">rough_detection_area</code> a small value.</li>
+    </ul>
+  </li>
+  <li>PID-based planner
+    <ul>
+      <li>The algorithm strongly depends on the velocity smoothing package (<code class="language-plaintext highlighter-rouge">motion_velocity_smoother</code> by default) whether or not the ego realizes the designated target speed. If the velocity smoothing package is updated, please take care of the vehicle’s behavior as much as possible.</li>
+    </ul>
+  </li>
+</ul>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="changelog-for-package-autoware_obstacle_cruise_planner">Changelog for package autoware_obstacle_cruise_planner</h1>
+
+<h2 id="0440-2025-04-18">0.44.0 (2025-04-18)</h2>
+
+<h2 id="0430-2025-03-21">0.43.0 (2025-03-21)</h2>
+
+<ul>
+  <li>Merge remote-tracking branch 'origin/main' into
+chore/bump-version-0.43</li>
+  <li>chore: rename from [autoware.universe]{.title-ref} to
+[autoware_universe]{.title-ref}
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10306">#10306</a>)</li>
+  <li>feat(path_optimizer): additional failure logging and failure mode
+handling
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10276">#10276</a>)
+MRM when MPT fails</li>
+  <li>feat!: replace VelocityLimit messages with
+autoware_internal_planning_msgs
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10273">#10273</a>)</li>
+  <li>feat: adaption to ROS nodes guidelines about directory structure
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10268">#10268</a>)</li>
+  <li>feat(Autoware_planning_factor_interface): replace tier4_msgs
+with autoware_internal_msgs
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10204">#10204</a>)</li>
+  <li>Contributors: Arjun Jagdish Ram, Hayato Mizushima, NorahXiong,
+Ryohsuke Mitsudome, Yutaka Kondo, 心刚</li>
+</ul>
+
+<h2 id="0420-2025-03-03">0.42.0 (2025-03-03)</h2>
+
+<ul>
+  <li>Merge remote-tracking branch 'origin/main' into
+tmp/bot/bump_version_base</li>
+  <li>feat(autoware_utils): replace autoware_universe_utils with
+autoware_utils
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10191">#10191</a>)</li>
+  <li>feat(autoware_vehicle_info_utils): replace
+autoware_universe_utils with autoware_utils
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10167">#10167</a>)</li>
+  <li>feat(planning_test_manager): abstract message-specific functions
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9882">#9882</a>)
+    <ul>
+      <li>abstract message-specific functions</li>
+      <li>include necessary header</li>
+      <li>adapt velocity_smoother to new test manager</li>
+      <li>adapt behavior_velocity_planner to new test manager</li>
+      <li>adapt path_optimizer to new test manager</li>
+      <li>fix output subscription</li>
+      <li>adapt behavior_path_planner to new test manager</li>
+      <li>adapt scenario_selector to new test manager</li>
+      <li>adapt freespace_planner to new test manager</li>
+      <li>adapt planning_validator to new test manager</li>
+      <li>adapt obstacle_stop_planner to new test manager</li>
+      <li>adapt obstacle_cruise_planner to new test manager</li>
+      <li>disable test for freespace_planner</li>
+      <li>adapt behavior_velocity_crosswalk_module to new test manager</li>
+      <li>adapt behavior_path_lane_change_module to new test manager</li>
+      <li>adapt behavior_path_avoidance_by_lane_change_module to new
+test manager</li>
+      <li>adapt behavior_path_dynamic_obstacle_avoidance_module to
+new test manager</li>
+      <li>adapt behavior_path_external_request_lane_change_module to
+new test manager</li>
+      <li>adapt behavior_path_side_shift_module to new test manager</li>
+      <li>adapt behavior_path_static_obstacle_avoidance_module to new
+test manager</li>
+      <li>adapt path_smoother to new test manager</li>
+      <li>adapt behavior_velocity_blind_spot_module to new test
+manager</li>
+      <li>adapt behavior_velocity_detection_area_module to new test
+manager</li>
+      <li>adapt behavior_velocity_intersection_module to new test
+manager</li>
+      <li>adapt behavior_velocity_no_stopping_area_module to new test
+manager</li>
+      <li>adapt behavior_velocity_run_out_module to new test manager</li>
+      <li>adapt behavior_velocity_stop_line_module to new test manager</li>
+      <li>adapt behavior_velocity_traffic_light_module to new test
+manager</li>
+      <li>adapt behavior_velocity_virtual_traffic_light_module to new
+test manager</li>
+      <li>adapt behavior_velocity_walkway_module to new test manager</li>
+      <li>adapt motion_velocity_planner_node_universe to new test
+manager</li>
+      <li>include necessary headers</li>
+    </ul>
+
+    <p>* Odometries -&gt; Odometry ---------Co-authored-by: Takayuki
+Murooka &lt;&lt;takayuki5168@gmail.com&gt;&gt;</p>
+  </li>
+  <li>Contributors: Fumiya Watanabe, Mitsuhiro Sakamoto, Ryohsuke
+Mitsudome, 心刚</li>
+</ul>
+
+<h2 id="0412-2025-02-19">0.41.2 (2025-02-19)</h2>
+
+<ul>
+  <li>chore: bump version to 0.41.1
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10088">#10088</a>)</li>
+  <li>Contributors: Ryohsuke Mitsudome</li>
+</ul>
+
+<h2 id="0411-2025-02-10">0.41.1 (2025-02-10)</h2>
+
+<h2 id="0410-2025-01-29">0.41.0 (2025-01-29)</h2>
+
+<ul>
+  <li>Merge remote-tracking branch 'origin/main' into
+tmp/bot/bump_version_base</li>
+  <li>feat(autoware_obstacle_cruise_planner)!: tier4_debug_msgs
+changed to autoware_internal_debug_msgs in
+autoware_obstacle_cruise_planner
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9905">#9905</a>)
+feat: tier4_debug_msgs changed to autoware_internal_debug_msgs
+in files planning/autoware_obstacle_cruise_planner</li>
+  <li>chore(planning): move package directory for planning factor
+interface
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9948">#9948</a>)
+    <ul>
+      <li>chore: add new package for planning factor interface</li>
+      <li>chore(surround_obstacle_checker): update include file</li>
+      <li>chore(obstacle_stop_planner): update include file</li>
+      <li>chore(obstacle_cruise_planner): update include file</li>
+      <li>chore(motion_velocity_planner): update include file</li>
+      <li>chore(bpp): update include file</li>
+      <li>chore(bvp-common): update include file</li>
+      <li>chore(blind_spot): update include file</li>
+      <li>chore(crosswalk): update include file</li>
+      <li>chore(detection_area): update include file</li>
+      <li>chore(intersection): update include file</li>
+      <li>chore(no_drivable_area): update include file</li>
+      <li>chore(no_stopping_area): update include file</li>
+      <li>chore(occlusion_spot): update include file</li>
+      <li>chore(run_out): update include file</li>
+      <li>chore(speed_bump): update include file</li>
+      <li>chore(stop_line): update include file</li>
+      <li>chore(template_module): update include file</li>
+      <li>chore(traffic_light): update include file</li>
+      <li>chore(vtl): update include file</li>
+      <li>chore(walkway): update include file</li>
+    </ul>
+
+    <p>* chore(motion_utils): remove factor interface ---------</p>
+  </li>
+  <li>feat(planning_factor)!: remove velocity_factor, steering_factor
+and introduce planning_factor
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9927">#9927</a>)
+Co-authored-by: Satoshi OTA
+&lt;&lt;44889564+satoshi-ota@users.noreply.github.com&gt;&gt; Co-authored-by:
+Ryohsuke Mitsudome
+&lt;&lt;43976834+mitsudome-r@users.noreply.github.com&gt;&gt; Co-authored-by:
+satoshi-ota &lt;&lt;satoshi.ota928@gmail.com&gt;&gt;</li>
+  <li>docs(obstacle_cruise_planner): add supplemental figures
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9154">#9154</a>)
+    <ul>
+      <li>add behavior determination flowchart</li>
+      <li>add cruise planning block diagram</li>
+    </ul>
+
+    <p>* style(pre-commit): autofix ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>Contributors: Fumiya Watanabe, Mamoru Sobue, Mitsuhiro Sakamoto,
+Satoshi OTA, Vishal Chauhan</li>
+</ul>
+
+<h2 id="0400-2024-12-12">0.40.0 (2024-12-12)</h2>
+
+<ul>
+  <li>Merge branch 'main' into release-0.40.0</li>
+  <li>Revert "chore(package.xml): bump version to 0.39.0
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9587">#9587</a>)"
+This reverts commit c9f0f2688c57b0f657f5c1f28f036a970682e7f5.</li>
+  <li>refactor(obstacle_cruise_planner)!: refactor rviz and terminal
+info
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9594">#9594</a>)</li>
+  <li>fix: fix ticket links in CHANGELOG.rst
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9588">#9588</a>)</li>
+  <li>chore(package.xml): bump version to 0.39.0
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9587">#9587</a>)
+    <ul>
+      <li>chore(package.xml): bump version to 0.39.0</li>
+      <li>fix: fix ticket links in CHANGELOG.rst</li>
+    </ul>
+
+    <p>* fix: remove unnecessary diff ---------Co-authored-by:
+Yutaka Kondo &lt;&lt;yutaka.kondo@youtalk.jp&gt;&gt;</p>
+  </li>
+  <li>fix: fix ticket links in CHANGELOG.rst
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9588">#9588</a>)</li>
+  <li>fix(cpplint): include what you use - planning
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9570">#9570</a>)</li>
+  <li>fix(obstacle_cruise_planner)!: remove stop reason
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9464">#9464</a>)
+fix(obstacle_cruise_planner): remove stop reason</li>
+  <li>0.39.0</li>
+  <li>update changelog</li>
+  <li>Merge commit '6a1ddbd08bd' into release-0.39.0</li>
+  <li>fix: fix ticket links to point to
+<a href="https://github.com/autowarefoundation/autoware_universe">https://github.com/autowarefoundation/autoware_universe</a>
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9304">#9304</a>)</li>
+  <li>feat(obstacle_cruise_planner): outputs velocity factor when the
+ego follows front vehicle.
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9359">#9359</a>)
+    <ul>
+      <li>feat(obstacle_cruise_planner): outputs velocity factor when
+the ego follows front vehicle.</li>
+    </ul>
+
+    <p>* fix: cppcheck ---------</p>
+  </li>
+  <li>fix(autoware_obstacle_cruise_planner): fix
+clang-diagnostic-delete-abstract-non-virtual-dtor
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9419">#9419</a>)
+fix: clang-diagnostic-delete-abstract-non-virtual-dtor</li>
+  <li>fix(autoware_obstacle_cruise_planner): fix
+clang-diagnostic-defaulted-function-deleted
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9398">#9398</a>)
+fix: clang-diagnostic-defaulted-function-deleted</li>
+  <li>fix: fix ticket links to point to
+<a href="https://github.com/autowarefoundation/autoware_universe">https://github.com/autowarefoundation/autoware_universe</a>
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9304">#9304</a>)</li>
+  <li>feat(tier4_metric_msgs): apply tier4_metric_msgs for
+scenario_simulator_v2_adapter, control_evaluator,
+planning_evaluator, autonomous_emergency_braking,
+obstacle_cruise_planner, motion_velocity_planner,
+processing_time_checker
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9180">#9180</a>)
+    <ul>
+      <li>first commit</li>
+      <li>fix building errs.</li>
+      <li>change diagnostic messages to metric messages for publishing
+decision.</li>
+      <li>fix bug about motion_velocity_planner</li>
+      <li>change the diagnostic msg to metric msg in
+autoware_obstacle_cruise_planner.</li>
+      <li>tmp save for planning_evaluator</li>
+      <li>change the topic to which metrics published to.</li>
+      <li>fix typo.</li>
+      <li>remove unnesessary publishing of metrics.</li>
+      <li>mke planning_evaluator publish msg of MetricArray instead of
+Diags.</li>
+      <li>update aeb with metric type for decision.</li>
+      <li>fix some bug</li>
+      <li>remove autoware_evaluator_utils package.</li>
+      <li>remove diagnostic_msgs dependency of planning_evaluator</li>
+      <li>use metric_msgs for autoware_processing_time_checker.</li>
+      <li>rewrite diagnostic_convertor to
+scenario_simulator_v2_adapter, supporting metric_msgs.</li>
+      <li>pre-commit and fix typo</li>
+      <li>publish metrics even if there is no metric in the MetricArray.</li>
+      <li>modify the metric name of processing_time.</li>
+      <li>update unit test for test_planning/control_evaluator</li>
+    </ul>
+
+    <p>* manual pre-commit ---------</p>
+  </li>
+  <li>chore(package.xml): bump version to 0.38.0
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9266">#9266</a>)
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9284">#9284</a>)
+    <ul>
+      <li>unify package.xml version to 0.37.0</li>
+      <li>remove system_monitor/CHANGELOG.rst</li>
+      <li>add changelog</li>
+    </ul>
+
+    <h2 id="-0380">* 0.38.0</h2>
+  </li>
+  <li>
+    <p>chore(obstacle_cruise_planner): add function tests for a utils
+function
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9206">#9206</a>)
+* add utils test ---------</p>
+  </li>
+  <li>Contributors: Esteve Fernandez, Fumiya Watanabe, Kem
+(TiankuiXian), M. Fatih Cırıt, Ryohsuke Mitsudome, Satoshi OTA, Yuki
+TAKAGI, Yutaka Kondo, kobayu858</li>
+</ul>
+
+<h2 id="0390-2024-11-25">0.39.0 (2024-11-25)</h2>
+
+<ul>
+  <li>Merge commit '6a1ddbd08bd' into release-0.39.0</li>
+  <li>fix: fix ticket links to point to
+<a href="https://github.com/autowarefoundation/autoware_universe">https://github.com/autowarefoundation/autoware_universe</a>
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9304">#9304</a>)</li>
+  <li>fix: fix ticket links to point to
+<a href="https://github.com/autowarefoundation/autoware_universe">https://github.com/autowarefoundation/autoware_universe</a>
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9304">#9304</a>)</li>
+  <li>feat(tier4_metric_msgs): apply tier4_metric_msgs for
+scenario_simulator_v2_adapter, control_evaluator,
+planning_evaluator, autonomous_emergency_braking,
+obstacle_cruise_planner, motion_velocity_planner,
+processing_time_checker
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9180">#9180</a>)
+    <ul>
+      <li>first commit</li>
+      <li>fix building errs.</li>
+      <li>change diagnostic messages to metric messages for publishing
+decision.</li>
+      <li>fix bug about motion_velocity_planner</li>
+      <li>change the diagnostic msg to metric msg in
+autoware_obstacle_cruise_planner.</li>
+      <li>tmp save for planning_evaluator</li>
+      <li>change the topic to which metrics published to.</li>
+      <li>fix typo.</li>
+      <li>remove unnesessary publishing of metrics.</li>
+      <li>mke planning_evaluator publish msg of MetricArray instead of
+Diags.</li>
+      <li>update aeb with metric type for decision.</li>
+      <li>fix some bug</li>
+      <li>remove autoware_evaluator_utils package.</li>
+      <li>remove diagnostic_msgs dependency of planning_evaluator</li>
+      <li>use metric_msgs for autoware_processing_time_checker.</li>
+      <li>rewrite diagnostic_convertor to
+scenario_simulator_v2_adapter, supporting metric_msgs.</li>
+      <li>pre-commit and fix typo</li>
+      <li>publish metrics even if there is no metric in the MetricArray.</li>
+      <li>modify the metric name of processing_time.</li>
+      <li>update unit test for test_planning/control_evaluator</li>
+    </ul>
+
+    <p>* manual pre-commit ---------</p>
+  </li>
+  <li>chore(package.xml): bump version to 0.38.0
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9266">#9266</a>)
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9284">#9284</a>)
+    <ul>
+      <li>unify package.xml version to 0.37.0</li>
+      <li>remove system_monitor/CHANGELOG.rst</li>
+      <li>add changelog</li>
+    </ul>
+
+    <h2 id="-0380-1">* 0.38.0</h2>
+  </li>
+  <li>
+    <p>chore(obstacle_cruise_planner): add function tests for a utils
+function
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9206">#9206</a>)
+* add utils test ---------</p>
+  </li>
+  <li>Contributors: Esteve Fernandez, Kem (TiankuiXian), Yuki TAKAGI,
+Yutaka Kondo</li>
+</ul>
+
+<h2 id="0380-2024-11-08">0.38.0 (2024-11-08)</h2>
+
+<ul>
+  <li>unify package.xml version to 0.37.0</li>
+  <li>refactor(object_recognition_utils): add autoware prefix to
+object_recognition_utils
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8946">#8946</a>)</li>
+  <li>refactor(osqp_interface): added autoware prefix to osqp_interface
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8958">#8958</a>)</li>
+  <li>chore(obstacle_cruise_planner): add maintainer
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9077">#9077</a>)</li>
+  <li>feat(obstacle_cruise_planner): improve stop and cruise behavior
+for cut-in &amp; out
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8072">#8072</a>)
+    <ul>
+      <li>feat(obstacle_cruise_planner): improve stop and cruise
+behavior for cut-in &amp; out</li>
+    </ul>
+
+    <p>* cleanup, add stop safety margin for transient objects
+style(pre-commit): autofix</p>
+    <ul>
+      <li>fix: debug</li>
+      <li>fix: precommit error</li>
+      <li>fix: unused-variable</li>
+      <li>feat: improve cruise behavior for outside obstacles</li>
+      <li>fix projected velocity, improve transient obstacle behavior</li>
+      <li>feat: add predefined deceleration rate for VRUs</li>
+    </ul>
+
+    <p>* feat: update ---------</p>
+  </li>
+  <li>refactor(autoware_interpolation): prefix package and namespace with
+autoware
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8088">#8088</a>)
+Co-authored-by: kosuke55 &lt;&lt;kosuke.tnp@gmail.com&gt;&gt;</li>
+  <li>refactor(signal_processing): prefix package and namespace with
+autoware
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8541">#8541</a>)</li>
+  <li>fix(motion_planning): align the parameters with launcher
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8792">#8792</a>)
+parameters in motion_planning aligned</li>
+  <li>fix(velocity_smoother, obstacle_cruise_planner ): float type of
+processing time was wrong
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8161">#8161</a>)
+fix(velocity_smoother): float type of processing time was wrong</li>
+  <li>feat(cruise_planner,planning_evaluator): add cruise and slow down
+diags
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7960">#7960</a>)
+    <ul>
+      <li>add cruise and slow down diags to cruise planner</li>
+      <li>add cruise types</li>
+    </ul>
+
+    <p>* adjust planning eval ---------</p>
+  </li>
+  <li>feat(obstacle_cruise_planner): prevent chattering when using point
+cloud
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7861">#7861</a>)
+    <ul>
+      <li>prevent chattering of stop planning</li>
+    </ul>
+
+    <p>* Update planning/autoware_obstacle_cruise_planner/src/node.cpp
+Co-authored-by: Satoshi OTA
+&lt;&lt;44889564+satoshi-ota@users.noreply.github.com&gt;&gt;
+* fix stop position oscillation ---------Co-authored-by:
+Satoshi OTA &lt;&lt;44889564+satoshi-ota@users.noreply.github.com&gt;&gt;</p>
+  </li>
+  <li>feat(obstacle_cruise_planner): add diagnostics publishing to
+cruise planner
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7836">#7836</a>)
+add diagnostics publishing to cruise planner</li>
+  <li>feat(obstacle_cruise_planner): support pointcloud-based obstacles
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/6907">#6907</a>)
+    <ul>
+      <li>add pointcloud to obstacle properties</li>
+      <li>add tf listener &amp; pointcloud subscriber</li>
+      <li>add parameters for pointcloud obstacle</li>
+      <li>add type aliases</li>
+      <li>convert pointcloud to obstacle</li>
+      <li>add type alias</li>
+      <li>add polygon conversion for pointcloud obstacle</li>
+      <li>initialize twist &amp; pose of pointcloud obstacle</li>
+      <li>overload to handle both obstacle &amp; predicted path</li>
+      <li>implement ego behavior determination against pointcloud
+obstacles</li>
+      <li>generate obstacle from point</li>
+      <li>revert getCollisionIndex()</li>
+      <li>generate obstacle from each point in cloud</li>
+      <li>set pointcloud obstacle velocity to 0</li>
+      <li>use tf buffer &amp; listener with pointers</li>
+      <li>update latest pointcloud data</li>
+      <li>add topic remap</li>
+      <li>remove unnecessary includes</li>
+      <li>set slow down obstacle velocity to 0</li>
+      <li>add flag to consider pointcloud obstacle for stopping &amp; slowing
+down</li>
+      <li>style(pre-commit): autofix</li>
+      <li>downsample pointcloud using voxel grid</li>
+      <li>change shape type of pointcloud obstacle to polygon</li>
+      <li>convert pointcloud to obstacle by clustering</li>
+      <li>add parameters for clustering</li>
+      <li>add max_num_points parameter to dummy object</li>
+      <li>downsample pointcloud when the number of points is larger than
+max_num_points</li>
+      <li>add max_num_points property to dummy bus</li>
+      <li>add parameters for pointcloud based obstacles</li>
+      <li>store pointcloud in obstacle struct</li>
+      <li>change obstacle conversion method</li>
+      <li>migrate previous changes to new package</li>
+      <li>store necessary points only</li>
+      <li>move use_pointcloud to common parameter</li>
+      <li>extract necessary points from pointcloud</li>
+      <li>add use_pointcloud parameter to planner interface</li>
+      <li>fix obstacle conversion</li>
+      <li>fix collision point determination</li>
+      <li>simplify pointcloud transformation</li>
+      <li>style(pre-commit): autofix</li>
+      <li>fix collision point determination</li>
+      <li>pick nearest stop collision point</li>
+      <li>check collision for every point in cluster</li>
+      <li>migrate previous changes to new files</li>
+      <li>reduce diff</li>
+      <li>remove use_pointcloud parameter</li>
+      <li>add parameters for pointcloud filtering</li>
+      <li>add autoware namespace</li>
+    </ul>
+
+    <p>* Revert "add max_num_points parameter to dummy object" This
+reverts commit 98bcd0856f861d23c9f7989d8128939ec0b3e27c.
+* Revert "downsample pointcloud when the number of points is
+larger than max_num_points" This reverts commit
+fb00b59d8f14cec6810e7fab12bc34d8a0c617c7.
+* Revert "add max_num_points property to dummy bus" This
+reverts commit 5f9e4ab5ae7d8d46521c736b1d259040121f3bc5.</p>
+    <ul>
+      <li>feat(diagnostic_graph_utils): add logging tool</li>
+      <li>fix all OK</li>
+      <li>feat(default_ad_api): add log when operation mode change fails</li>
+      <li>get only the necessary one of object or pointcloud data</li>
+      <li>addfield for obstacle source type</li>
+      <li>enable simultaneous use of PredictedObjects and PointCloud</li>
+      <li>separate convertToObstacles() by source type</li>
+      <li>avoid using pointer</li>
+      <li>reduce diff</li>
+      <li>make nest shallower</li>
+      <li>define vector concatenate function</li>
+      <li>shorten variable names</li>
+    </ul>
+
+    <p>* fix redundant condition ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;
+Co-authored-by: Takagi, Isamu &lt;&lt;isamu.takagi@tier4.jp&gt;&gt;
+Co-authored-by: Satoshi OTA
+&lt;&lt;44889564+satoshi-ota@users.noreply.github.com&gt;&gt;</p>
+  </li>
+  <li>feat: add [autoware_]{.title-ref} prefix to
+[lanelet2_extension]{.title-ref}
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7640">#7640</a>)</li>
+  <li>fix(autoware_obstacle_cruise_planner): fix shadowVariable warning
+in generateSlowDownTrajectory
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7659">#7659</a>)</li>
+  <li>fix(autoware_obstacle_cruise_planner): fix shadowVariable warning
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7656">#7656</a>)
+    <ul>
+      <li>fix(autoware_obstacle_cruise_planner): fix shadowVariable
+warning</li>
+      <li>fix</li>
+    </ul>
+
+    <p>* style(pre-commit): autofix ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>fix(autoware_obstacle_cruise_planner): fix
+knownConditionTrueFalse warnings
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7620">#7620</a>)
+    <ul>
+      <li>fix(autoware_obstacle_cruise_planner): fix
+knownConditionTrueFalse warnings</li>
+    </ul>
+
+    <h2 id="-fix">* fix</h2>
+  </li>
+  <li>fix(autoware_obstacle_cruise_planner): fix unreadVariable warning
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7627">#7627</a>)</li>
+  <li>refactor(obstacle_cruise_planner): apply clang-tidy check
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7553">#7553</a>)
+obstacle_cruise</li>
+  <li>refactor(universe_utils/motion_utils)!: add autoware namespace
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7594">#7594</a>)</li>
+  <li>fix(autoware_obstacle_cruise_planner): fix assignBoolToFloat
+warning
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7541">#7541</a>)
+    <ul>
+      <li>fix(autoware_obstacle_cruise_planner): fix assignBoolToFloat
+warning</li>
+      <li>delete unnecessary file</li>
+    </ul>
+
+    <p>* style(pre-commit): autofix ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>fix(autoware_obstacle_cruise_planner): fix unusedScopedObject bug
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7569">#7569</a>)</li>
+  <li>refactor(motion_utils)!: add autoware prefix and include dir
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7539">#7539</a>)
+refactor(motion_utils): add autoware prefix and include dir</li>
+  <li>feat(autoware_universe_utils)!: rename from tier4_autoware_utils
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7538">#7538</a>)
+Co-authored-by: kosuke55 &lt;&lt;kosuke.tnp@gmail.com&gt;&gt;</li>
+  <li>feat(obstacle_cruise_planner): rename to
+include/autoware/{package_name}
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7510">#7510</a>)</li>
+  <li>refactor(test_utils): move to common folder
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7158">#7158</a>)
+    <ul>
+      <li>Move autoware planning test manager to autoware namespace</li>
+      <li>fix package share directory for behavior path planner</li>
+      <li>renaming files and directory</li>
+      <li>rename variables that has planning_test_utils in its name.</li>
+      <li>use autoware namespace for test utils</li>
+      <li>move folder to common</li>
+      <li>update .pages file</li>
+      <li>fix test error</li>
+      <li>removed obstacle velocity limiter test artifact</li>
+    </ul>
+
+    <p>* remove namespace from planning validator, it has using keyword
+---------</p>
+  </li>
+  <li>refactor(obstacle_cruise_planner)!: add autoware_ prefix
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7419">#7419</a>)</li>
+  <li>Contributors: Berkay Karaman, Esteve Fernandez, Koichi98, Kosuke
+Takeuchi, Mamoru Sobue, Mitsuhiro Sakamoto, Ryuta Kambe, Takayuki
+Murooka, Yuki TAKAGI, Yutaka Kondo, Zhe Shen, Zulfaqar Azmi,
+danielsanchezaran</li>
+</ul>
+
+<h2 id="0260-2024-04-03">0.26.0 (2024-04-03)</h2>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/autoware_obstacle_cruise_planner/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_auto#github">ament_cmake_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_cmake#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_cmake#github">autoware_cmake  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_ros#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_ros#github">ament_cmake_ros  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_lint_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_lint_auto#github">ament_lint_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_lint_common#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_lint_common#github">autoware_lint_common  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_internal_debug_msgs#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_internal_debug_msgs#github">autoware_internal_debug_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_internal_planning_msgs#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_internal_planning_msgs#github">autoware_internal_planning_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_interpolation#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_interpolation#github">autoware_interpolation  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_lanelet2_extension#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_lanelet2_extension#github">autoware_lanelet2_extension  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_motion_utils#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_motion_utils#github">autoware_motion_utils  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_object_recognition_utils#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_object_recognition_utils#github">autoware_object_recognition_utils  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_objects_of_interest_marker_interface#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_objects_of_interest_marker_interface#github">autoware_objects_of_interest_marker_interface  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_osqp_interface#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_osqp_interface#github">autoware_osqp_interface  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_perception_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_perception_msgs#github">autoware_perception_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_planning_factor_interface#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_planning_factor_interface#github">autoware_planning_factor_interface  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_planning_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_planning_msgs#github">autoware_planning_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_planning_test_manager#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_planning_test_manager#github">autoware_planning_test_manager  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_signal_processing#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_signal_processing#github">autoware_signal_processing  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_utils#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_utils#github">autoware_utils  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_vehicle_info_utils#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_vehicle_info_utils#github">autoware_vehicle_info_utils  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/geometry_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/geometry_msgs#github">geometry_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/nav_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/nav_msgs#github">nav_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclcpp#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclcpp#github">rclcpp  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclcpp_components#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclcpp_components#github">rclcpp_components  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/std_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/std_msgs#github">std_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2#github">tf2  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2_ros#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2_ros#github">tf2_ros  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tier4_metric_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tier4_metric_msgs#github">tier4_metric_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tier4_planning_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tier4_planning_msgs#github">tier4_planning_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/visualization_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/visualization_msgs#github">visualization_msgs  </a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No direct system dependencies.</em>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th>Name</th>
+                  <th class="text-center">Deps</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/tier4_planning_launch#github">tier4_planning_launch</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/tier4_planning_launch#github-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <ul>
+            
+              <li><a href="https://github.com/autowarefoundation/autoware_universe/tree/main/planning/autoware_obstacle_cruise_planner/launch/obstacle_cruise_planner.launch.xml" target="_blank">launch/obstacle_cruise_planner.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>obstacle_cruise_planner_param_path</strong> <em>&#91;default: $(find-pkg-share autoware_obstacle_cruise_planner)/config/obstacle_cruise_planner.param.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>vehicle_info_param_path</strong> <em>&#91;default: $(find-pkg-share autoware_vehicle_info_utils)/config/vehicle_info.param.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input_trajectory</strong> <em>&#91;default: /planning/scenario_planning/lane_driving/trajectory&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input_odometry</strong> <em>&#91;default: /localization/kinematic_state&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input_map</strong> <em>&#91;default: /map/vector_map&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input_objects</strong> <em>&#91;default: /perception/object_recognition/objects&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>output_trajectory</strong> <em>&#91;default: /planning/scenario_planning/lane_driving/trajectory&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>output_velocity_limit</strong> <em>&#91;default: /planning/scenario_planning/max_velocity_candidates&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>output_clear_velocity_limit</strong> <em>&#91;default: /planning/scenario_planning/clear_velocity_limit&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No message files found.</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No plugins found.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>autoware_obstacle_cruise_planner</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/autoware_obstacle_cruise_planner+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/autowarefoundation/autoware_universe.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/autoware_obstacle_cruise_planner"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/autowarefoundation/autoware_universe/tree/main/planning/autoware_obstacle_cruise_planner"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/autoware_obstacle_cruise_planner?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/autoware_obstacle_cruise_planner?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=autoware_obstacle_cruise_planner&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "autoware_obstacle_cruise_planner"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

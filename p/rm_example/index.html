@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: rm_example</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/rm_example/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">rm_example</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/rm_example">rm_example</a> <small>package from <a style="text-decoration:none" href="/r/ros2_rm_robot/github-realmanrobot-ros2_rm_robot">ros2_rm_robot</a> repo</small>
+        </h3>
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/control_arm_move">
+
+control_arm_move
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/force_position_control">
+
+force_position_control
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/get_arm_state">
+
+get_arm_state
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rm_bringup">
+
+rm_bringup
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rm_control">
+
+rm_control
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rm_description">
+
+rm_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rm_doc">
+
+rm_doc
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rm_driver">
+
+rm_driver
+</a>
+            
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+rm_example
+</span>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rm_gazebo">
+
+rm_gazebo
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rm_install">
+
+rm_install
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rm_63_config">
+
+rm_63_config
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rm_65_config">
+
+rm_65_config
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rm_75_config">
+
+rm_75_config
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rm_eco63_config">
+
+rm_eco63_config
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rm_eco65_config">
+
+rm_eco65_config
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rm_gen72_config">
+
+rm_gen72_config
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rm_ros_interfaces">
+
+rm_ros_interfaces
+</a>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/rm_example"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/realmanrobot/ros2_rm_robot/tree/humble/rm_example"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-default">0</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">5</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>0.0.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>TODO: License declaration</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-default">
+                  
+                    AMENT_CMAKE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default">ROS2 was developed for the Realman robot (http://www.realman-robotics.com/).</span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/realmanrobot/ros2_rm_robot.git">https://github.com/realmanrobot/ros2_rm_robot.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">humble</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-01-09
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <em>No category tags.</em>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/ros2_rm_robot/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/ros2_rm_robot/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/ros2_rm_robot/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            TODO: Package description
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional links.</em>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>rm</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional authors.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/realmanrobot/ros2_rm_robot/tree/humble/rm_example/README.md" title="Open in git repository">rm_example/README.md</a></div>
+              <div class="panel-body">
+                    <div class="rendered-markdown">
+<div align="right">
+
+[简体中文](https://github.com/RealManRobot/ros2_rm_robot/blob/humble/rm_example/README_CN.md)|[English](https://github.com/RealManRobot/ros2_rm_robot/blob/humble/rm_example/README.md)
+ 
+</div>
+
+<div align="center">
+
+# RealMan Robotrm_exampleUser Manual V1.1
+
+RealMan Intelligent Technology (Beijing) Co., Ltd. 
+
+Revision History:
+
+|No.	  | Date   |	Comment |
+| :---: | :----: | :---:   |
+|V1.0	  | 2/19/2024 | Draft |
+|V1.1	  | 7/3 /2024 | Amend(Add GEN72 adapter files) |
+
+</div>
+
+<h2 id="content">Content</h2>
+<ul>
+  <li>1.<a href="https://github.com/realmanrobot/ros2_rm_robot/tree/humble/rm_example/#rm_example_Package_Description">rm_example Package Description</a>
+</li>
+  <li>2.<a href="https://github.com/realmanrobot/ros2_rm_robot/tree/humble/rm_example/#rm_example_Package_Use">rm_example Package Use</a>
+</li>
+  <li>2.1<a href="https://github.com/realmanrobot/ros2_rm_robot/tree/humble/rm_example/#Changing_the_work_coordinate_system">Changing the work coordinate system</a>
+</li>
+  <li>2.2<a href="https://github.com/realmanrobot/ros2_rm_robot/tree/humble/rm_example/#Get_the_current_state_message_of_the_robotic_arm">Get the current state message of the robotic arm</a>
+</li>
+  <li>2.3<a href="https://github.com/realmanrobot/ros2_rm_robot/tree/humble/rm_example/#MoveJ_motion_of_the_robotic_arm">MoveJ motion of the robotic arm</a>
+</li>
+  <li>2.4<a href="https://github.com/realmanrobot/ros2_rm_robot/tree/humble/rm_example/#MoveJ_P_motion_of_the_robotic_arm">MoveJ_P motion of the robotic arm</a>
+</li>
+  <li>2.5<a href="https://github.com/realmanrobot/ros2_rm_robot/tree/humble/rm_example/#MoveL_motion_of_the_robotic_arm">MoveL motion of the robotic arm</a>
+</li>
+  <li>3.<a href="https://github.com/realmanrobot/ros2_rm_robot/tree/humble/rm_example/#rm_example_Package_Architecture_Description">rm_example Package Architecture Description</a>
+</li>
+  <li>3.1<a href="https://github.com/realmanrobot/ros2_rm_robot/tree/humble/rm_example/#Overview_of_Package_Files">Overview of Package Files</a>
+</li>
+  <li>4.<a href="https://github.com/realmanrobot/ros2_rm_robot/tree/humble/rm_example/#rm_example_Topic_Description">rm_example Topic Description</a>
+</li>
+  <li>4.1<a href="https://github.com/realmanrobot/ros2_rm_robot/tree/humble/rm_example/#rm_change_work_frame_topic_description">rm_change_work_frame topic description</a>
+</li>
+  <li>4.2<a href="https://github.com/realmanrobot/ros2_rm_robot/tree/humble/rm_example/#rm_get_state_topic_description">rm_get_state topic description</a>
+</li>
+  <li>4.3<a href="https://github.com/realmanrobot/ros2_rm_robot/tree/humble/rm_example/#movej_demo_topic_description">movej_demo topic description</a>
+</li>
+  <li>4.4<a href="https://github.com/realmanrobot/ros2_rm_robot/tree/humble/rm_example/#movejp_demo_topic_description">movejp_demo topic description</a>
+</li>
+  <li>4.5<a href="https://github.com/realmanrobot/ros2_rm_robot/tree/humble/rm_example/#movel_demo_topic_description">movel_demo topic description</a>
+</li>
+</ul>
+
+<h2 id="rm_example_package_description">rm_example_Package_Description</h2>
+<p>rm_bringup package is used for realizing some basic robotic arm functions. And we can also refer to the code to realize other robotic arm functions. This package is introduced in detail in the following aspects.</p>
+<ul>
+  <li>1.Package use.</li>
+  <li>2.Package architecture description.</li>
+  <li>3.Package topic description.<br>
+Through the introduction of the three parts, it can help you:</li>
+  <li>1.Understand the package use.</li>
+  <li>2.Familiar with the file structure and function of the package.</li>
+  <li>3.Familiar with the topic related to the package for easy development and use.
+Source code address:https://github.com/RealManRobot/ros2_rm_robot.git.
+    <h2 id="rm_example_package_use">rm_example_Package_Use</h2>
+    <h3 id="changing_the_work_coordinate_system">Changing_the_work_coordinate_system</h3>
+    <p>First, we need to run the underlying driver node of the robotic arm rm_driver.</p>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm@rm-desktop:~$ ros2 launch rm_driver rm_&lt;arm_type&gt;_driver.launch.py
+
+</code></pre></div></div>
+<p>In practice, the above <arm_type> needs to be replaced by the actual model of the robotic arm. The available models of the robotic arm are 65, 63, eco65, eco63, and 75.  
+For example, the launch command of 65 robotic arm:</arm_type></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm@rm-desktop:~$ ros2 launch rm_driver rm_65_driver.launch.py
+
+</code></pre></div></div>
+<p>After successfully launching the node, execute the following commands to replace the node in the work coordinate system.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm@rm-desktop:~$ ros2 run rm_example rm_change_work_frame
+
+</code></pre></div></div>
+<p>The following command pops up to indicate successful replacement.
+<img src="https://raw.githubusercontent.com/realmanrobot/ros2_rm_robot/humble/rm_example/doc/rm_example11.png" alt="image">
+Enter the following commands in the end for verification, first subscribe to the current work coordinate system topic.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm@rm-desktop:~$ ros2 topic echo /rm_driver/get_curr_workFrame_result
+
+</code></pre></div></div>
+<p>Then publish the request of the current coordinate system.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm@rm-desktop:~$ ros2 topic pub --once /rm_driver/get_curr_workFrame_cmd std_msgs/msg/Empty "{}"
+
+</code></pre></div></div>
+<p>You can see the following interface pop up at the end.
+<img src="https://raw.githubusercontent.com/realmanrobot/ros2_rm_robot/humble/rm_example/doc/rm_example1.png" alt="image"></p>
+<h3 id="get_the_current_state_message_of_the_robotic_arm">Get_the_current_state_message_of_the_robotic_arm</h3>
+<p>First, we need to run the underlying driver node of the robotic arm rm_driver.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm@rm-desktop:~$ ros2 launch rm_driver rm_&lt;arm_type&gt;_driver.launch.py
+
+</code></pre></div></div>
+<p>In practice, the above <arm_type> needs to be replaced by the actual model of the robotic arm. The available models of the robotic arm are 65, 63, eco65, eco63, and 75.  
+For example, the launch command of 65 robotic arm:</arm_type></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm@rm-desktop:~$ ros2 launch rm_driver rm_65_driver.launch.py
+
+</code></pre></div></div>
+<p>After successfully launching the node, execute the following commands to obtain the current state of the robotic arm node.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm@rm-desktop:~$ ros2 run rm_example rm_get_state
+
+</code></pre></div></div>
+<p>The following command pops up to indicate successful replacement.
+<img src="https://raw.githubusercontent.com/realmanrobot/ros2_rm_robot/humble/rm_example/doc/rm_example2.png" alt="image">
+What is displayed in the interface is the current angle message of the robotic arm, as well as the current end coordinate position and Euler angle posture message of the robotic arm.</p>
+<h3 id="movej_motion_of_the_robotic_arm">MoveJ_motion_of_the_robotic_arm</h3>
+<p>Through the following commands, we can control the joint MoveJ motion of the robotic arm.
+First, we need to run the underlying driver node of the robotic arm rm_driver.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm@rm-desktop:~$ ros2 launch rm_driver rm_&lt;arm_type&gt;_driver.launch.py
+
+</code></pre></div></div>
+<p>In practice, the above <arm_type> needs to be replaced by the actual model of the robotic arm. The available models of the robotic arm are 65, 63, eco65, eco63, and 75.  
+For example, the launch command of 65 robotic arm:</arm_type></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm@rm-desktop:~$ ros2 launch rm_driver rm_65_driver.launch.py
+
+</code></pre></div></div>
+<p>After successfully launching the node, execute the following commands to control the movement of the robotic arm.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm@rm-desktop:~$ ros2 launch rm_example rm_&lt;dof&gt;_movej.launch.py
+
+</code></pre></div></div>
+<p>dof represents the current degree of freedom message of the arm, and the parameters can be selected as 6dof and 7dof.<br>
+For example, when starting the 7-axis robotic arm, the following commands are needed.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm@rm-desktop:~$ ros2 launch rm_example rm_7dof_movej.launch.py
+
+</code></pre></div></div>
+<p>After successful running, the joint of the robotic arm rotates and the interface displays as follows.
+<img src="https://raw.githubusercontent.com/realmanrobot/ros2_rm_robot/humble/rm_example/doc/rm_example3.png" alt="image"></p>
+<h3 id="movej_p_motion_of_the_robotic_arm">MoveJ_P_motion_of_the_robotic_arm</h3>
+<p>Through the following commands, we can control the joint MoveJ_P motion of the robotic arm.<br>
+First, we need to run the underlying driver node of the robotic arm rm_driver.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm@rm-desktop:~$ ros2 launch rm_driver rm_&lt;arm_type&gt;_driver.launch.py
+
+</code></pre></div></div>
+<p>In practice, the above <arm_type> needs to be replaced by the actual model of the robotic arm. The available models of the robotic arm are 65, 63, eco65, eco63, and 75.  
+For example, the launch command of 65 robotic arm:</arm_type></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm@rm-desktop:~$ ros2 launch rm_driver rm_65_driver.launch.py
+
+</code></pre></div></div>
+<p>After successfully launching the node, execute the following commands to control the movement of the robotic arm.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm@rm-desktop:~$ ros2 run rm_example movejp_demo
+
+</code></pre></div></div>
+<p>Arm version is GEN72, execute the following commands to control the movement of the robotic arm.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm@rm-desktop:~$ ros2 run rm_example movejp_gen72_demo
+
+</code></pre></div></div>
+<p>After successful execution, the interface appears as follows, and the robotic arm will move to the specified pose.
+<img src="https://raw.githubusercontent.com/realmanrobot/ros2_rm_robot/humble/rm_example/doc/rm_example4.png" alt="image"></p>
+<h3 id="movel_motion_of_the_robotic_arm">MoveL_motion_of_the_robotic_arm</h3>
+<p>Through the following commands, we can control the joint MoveL motion of the robotic arm.<br>
+First, we need to run the underlying driver node of the robotic arm rm_driver.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm@rm-desktop:~$ ros2 launch rm_driver rm_&lt;arm_type&gt;_driver.launch.py
+
+</code></pre></div></div>
+<p>In practice, the above <arm_type> needs to be replaced by the actual model of the robotic arm. The available models of the robotic arm are 65, 63, eco65, eco63, and 75.
+For example, the launch command of 65 robotic arm:</arm_type></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm@rm-desktop:~$ ros2 launch rm_driver rm_65_driver.launch.py
+
+</code></pre></div></div>
+<p>After successfully launching the node, execute the following commands to control the movement of the robotic arm.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm@rm-desktop:~$ ros2 run rm_example movel_demo
+
+</code></pre></div></div>
+<p>Arm version is GEN72, execute the following commands to control the movement of the robotic arm.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm@rm-desktop:~$ ros2 run rm_example movel_gen72_demo
+
+</code></pre></div></div>
+<p>After successful execution, the interface appears as follows, and the robotic arm performs two motions. Firstly, it moves to the specified pose through MoveJP, and then performs joint motion through MoveL.
+<img src="https://raw.githubusercontent.com/realmanrobot/ros2_rm_robot/humble/rm_example/doc/rm_example5.png" alt="image"></p>
+
+<h2 id="rm_example_package_architecture_description">rm_example_Package_Architecture_Description</h2>
+<h3 id="overview_of_package_files">Overview_of_Package_Files</h3>
+<p>The current rm_driver package is composed of the following files.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>├── CMakeLists.txt                           # compilation rule file
+├── doc
+│   ├── rm_example10.png
+│   ├── rm_example11.png
+│   ├── rm_example1.png
+│   ├── rm_example2.png
+│   ├── rm_example3.png
+│   ├── rm_example4.png
+│   ├── rm_example5.png
+│   ├── rm_example6.png
+│   ├── rm_example7.png
+│   ├── rm_example8.png
+│   └── rm_example9.png
+├── include
+│   └── rm_example
+├── launch
+│   ├── rm_6dof_movej.launch.py              # 6 degrees of freedom MoveJ movement launch file
+│   └── rm_7dof_movej.launch.py              # 7 degrees of freedom MoveJ movement launch file
+├── package.xml
+└── src
+    ├── api_ChangeWorkFrame_demo.cpp         # source file to change the work coordinate system
+    ├── api_Get_Arm_State_demo.cpp           # source file to get the robotic arm's state
+    ├── api_MoveJ_demo.cpp                   # MoveJ motion source file
+    ├── api_MoveJP_demo.cpp                  # MoveJP motion source file
+    ├── api_MoveJP_Gen72_demo.cpp            # GEN72 MoveJP motion source file
+    ├── api_MoveL_demo.cpp                   # MoveL motion source file
+    └── api_MoveL_Gen72_demo.cpp             # GEN72 MoveL motion source file
+
+</code></pre></div></div>
+<h2 id="rm_example_topic_description">rm_example_Topic_Description</h2>
+<h3 id="rm_change_work_frame_topic_description">rm_change_work_frame_topic_description</h3>
+<p>The following is the data communication diagram of this node:
+<img src="https://raw.githubusercontent.com/realmanrobot/ros2_rm_robot/humble/rm_example/doc/rm_example6.png" alt="image">
+You can see that the main communication topics between /changeframe node and /rm_driver are /rm_driver/change_work_frame_result and /rm_driver/change_work_frame_cmd. / rm_driver/change_work_frame_cmd is the release of the switch request and the switch target coordinates, and /rm_driver/change_work_frame_result is the switch result.</p>
+<h3 id="rm_get_state_topic_description">rm_get_state_topic_description</h3>
+<p>The following is the data communication diagram of this node:
+<img src="https://raw.githubusercontent.com/realmanrobot/ros2_rm_robot/humble/rm_example/doc/rm_example7.png" alt="image">
+You can see that the main communication topics between the /get_state node and /rm_driver are /rm_driver/get_current_arm_state_cmd and /rm_driver/get_current_arm_original_state_result. / rm_driver/get_current_arm_state_cmd is the request to get the current state of the arm, and /rm_driver/get_current_arm_original_state_result is the switch result.</p>
+<h3 id="movej_demo_topic_description">movej_demo_topic_description</h3>
+<p>The following is the data communication diagram of this node:
+<img src="https://raw.githubusercontent.com/realmanrobot/ros2_rm_robot/humble/rm_example/doc/rm_example8.png" alt="image">
+You can see that the main communication topics between the /Movej_demo node and /rm_driver are /rm_driver/movej_cmd and /rm_driver/movej_result. / rm_driver/movej_cmd is the request to control the motion of the robotic arm, which will release the radian information of each joint that needs to be moved, and /rm_driver/movej_result is the motion result.</p>
+<h3 id="movejp_demo_topic_description">movejp_demo_topic_description</h3>
+<p>The following is the data communication diagram of this node:
+<img src="https://raw.githubusercontent.com/realmanrobot/ros2_rm_robot/humble/rm_example/doc/rm_example9.png" alt="image">
+You can see that the main communication topics between the /Movejp_demo_node node and /rm_driver are /rm_driver/movej_p_cmd and rm_driver/movej_p_result. / rm_driver/movej_p_cmd is the request to control the motion planning of the robotic arm, which will publish the coordinates of the target point to be moved, and /rm_driver/movej_p_result is the motion result.</p>
+<h3 id="movel_demo_topic_description">movel_demo_topic_description</h3>
+<p>The following is the data communication diagram of this node:
+<img src="https://raw.githubusercontent.com/realmanrobot/ros2_rm_robot/humble/rm_example/doc/rm_example10.png" alt="image">
+You can see that the main communication topics between the /Movel_demo_node node and /rm_driver are /rm_driver/movej_p_cmd and /rm_driver/movej_p_result, and /rm_driver/movel_cmd and /rm_driver/movel_result. / rm_driver/movej_p_cmd is the request to control the motion planning of the robotic arm, which will publish the coordinates of the target point to be moved first, /rm_driver/movej_p_result is the motion result. After reaching the first point, we reach the second point through linear motion, we can publish the pose of the second point through /rm_driver/movel_cmd, and the topic of /rm_driver/movel_result is the result of the motion.</p>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <em>No CHANGELOG found.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/rm_example/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake#github">ament_cmake  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_lint_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_lint_auto#github">ament_lint_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_lint_common#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_lint_common#github">ament_lint_common  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclcpp#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclcpp#github">rclcpp  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rm_ros_interfaces#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rm_ros_interfaces#github">rm_ros_interfaces  </a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No direct system dependencies.</em>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No known dependants.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No launch files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No message files found.</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No plugins found.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>rm_example</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/rm_example+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/realmanrobot/ros2_rm_robot.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/rm_example"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/realmanrobot/ros2_rm_robot/tree/humble/rm_example"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/rm_example?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/rm_example?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=rm_example&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "rm_example"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,2374 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: cmd_vel_mux</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/cmd_vel_mux/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">cmd_vel_mux</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/cmd_vel_mux">cmd_vel_mux</a> <small>package from <a style="text-decoration:none" href="/r/ros2-essentials/github-j3soon-ros2-essentials">ros2-essentials</a> repo</small>
+        </h3>
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_footswitch_driver">
+
+interbotix_footswitch_driver
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_footswitch_msgs">
+
+interbotix_footswitch_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_ros_slate">
+
+interbotix_ros_slate
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_slate_driver">
+
+interbotix_slate_driver
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_slate_msgs">
+
+interbotix_slate_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/dynamixel_workbench_toolbox">
+
+dynamixel_workbench_toolbox
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_ros_xseries">
+
+interbotix_ros_xseries
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_xs_driver">
+
+interbotix_xs_driver
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_xs_msgs">
+
+interbotix_xs_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_xs_sdk">
+
+interbotix_xs_sdk
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_ros_xsarms_examples">
+
+interbotix_ros_xsarms_examples
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_xsarm_diagnostic_tool">
+
+interbotix_xsarm_diagnostic_tool
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_xsarm_dual">
+
+interbotix_xsarm_dual
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_xsarm_dual_joy">
+
+interbotix_xsarm_dual_joy
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_xsarm_joy">
+
+interbotix_xsarm_joy
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_xsarm_moveit_interface">
+
+interbotix_xsarm_moveit_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_xsarm_pid">
+
+interbotix_xsarm_pid
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_xsarm_puppet">
+
+interbotix_xsarm_puppet
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_ros_xsarms">
+
+interbotix_ros_xsarms
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_xsarm_control">
+
+interbotix_xsarm_control
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_xsarm_descriptions">
+
+interbotix_xsarm_descriptions
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_xsarm_moveit">
+
+interbotix_xsarm_moveit
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_xsarm_perception">
+
+interbotix_xsarm_perception
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_xsarm_ros_control">
+
+interbotix_xsarm_ros_control
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_xsarm_sim">
+
+interbotix_xsarm_sim
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_common_modules">
+
+interbotix_common_modules
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_common_sim">
+
+interbotix_common_sim
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_common_toolbox">
+
+interbotix_common_toolbox
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_landmark_modules">
+
+interbotix_landmark_modules
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_moveit_interface">
+
+interbotix_moveit_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_moveit_interface_msgs">
+
+interbotix_moveit_interface_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_tf_tools">
+
+interbotix_tf_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_io_modules">
+
+interbotix_io_modules
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_io_toolbox">
+
+interbotix_io_toolbox
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_perception_modules">
+
+interbotix_perception_modules
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_perception_msgs">
+
+interbotix_perception_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_perception_pipelines">
+
+interbotix_perception_pipelines
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_perception_toolbox">
+
+interbotix_perception_toolbox
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_rpi_modules">
+
+interbotix_rpi_modules
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_rpi_msgs">
+
+interbotix_rpi_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_rpi_toolbox">
+
+interbotix_rpi_toolbox
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_xs_modules">
+
+interbotix_xs_modules
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_xs_ros_control">
+
+interbotix_xs_ros_control
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_xs_rviz">
+
+interbotix_xs_rviz
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/interbotix_xs_toolbox">
+
+interbotix_xs_toolbox
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/moveit_visual_tools">
+
+moveit_visual_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/cartographer_demo">
+
+cartographer_demo
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/multi_lidar_desp">
+
+multi_lidar_desp
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/multi_lidar_gazebo">
+
+multi_lidar_gazebo
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/aws_robomaker_hospital_world">
+
+aws_robomaker_hospital_world
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/aws_robomaker_small_house_world">
+
+aws_robomaker_small_house_world
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/aws_robomaker_small_warehouse_world">
+
+aws_robomaker_small_warehouse_world
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/citysim">
+
+citysim
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/clearpath_playpen">
+
+clearpath_playpen
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/gazebo_launch">
+
+gazebo_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/turtlebot3_gazebo">
+
+turtlebot3_gazebo
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lms1xx">
+
+lms1xx
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/husky_base">
+
+husky_base
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/husky_bringup">
+
+husky_bringup
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/husky_control">
+
+husky_control
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/husky_description">
+
+husky_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/husky_desktop">
+
+husky_desktop
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/husky_gazebo">
+
+husky_gazebo
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/husky_msgs">
+
+husky_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/husky_navigation">
+
+husky_navigation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/husky_robot">
+
+husky_robot
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/husky_simulator">
+
+husky_simulator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/husky_viz">
+
+husky_viz
+</a>
+            
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+cmd_vel_mux
+</span>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_command_line">
+
+ecl_command_line
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_concepts">
+
+ecl_concepts
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_containers">
+
+ecl_containers
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_converters">
+
+ecl_converters
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_core">
+
+ecl_core
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_core_apps">
+
+ecl_core_apps
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_devices">
+
+ecl_devices
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_eigen">
+
+ecl_eigen
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_exceptions">
+
+ecl_exceptions
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_filesystem">
+
+ecl_filesystem
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_formatters">
+
+ecl_formatters
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_geometry">
+
+ecl_geometry
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_ipc">
+
+ecl_ipc
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_linear_algebra">
+
+ecl_linear_algebra
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_manipulators">
+
+ecl_manipulators
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_math">
+
+ecl_math
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_mobile_robot">
+
+ecl_mobile_robot
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_mpl">
+
+ecl_mpl
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_sigslots">
+
+ecl_sigslots
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_statistics">
+
+ecl_statistics
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_streams">
+
+ecl_streams
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_threads">
+
+ecl_threads
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_time">
+
+ecl_time
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_type_traits">
+
+ecl_type_traits
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_utilities">
+
+ecl_utilities
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_config">
+
+ecl_config
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_console">
+
+ecl_console
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_converters_lite">
+
+ecl_converters_lite
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_errors">
+
+ecl_errors
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_io">
+
+ecl_io
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_lite">
+
+ecl_lite
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_sigslots_lite">
+
+ecl_sigslots_lite
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ecl_time_lite">
+
+ecl_time_lite
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/kobuki_core">
+
+kobuki_core
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/kobuki_keyop">
+
+kobuki_keyop
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/kobuki_node">
+
+kobuki_node
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/kobuki_ros">
+
+kobuki_ros
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/kobuki_ros_interfaces">
+
+kobuki_ros_interfaces
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/sophus">
+
+sophus
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/kobuki_control">
+
+kobuki_control
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/kobuki_description">
+
+kobuki_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/kobuki_gazebo">
+
+kobuki_gazebo
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/kobuki_launch">
+
+kobuki_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/kobuki_navigation">
+
+kobuki_navigation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/kobuki_rviz">
+
+kobuki_rviz
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/velodyne_description">
+
+velodyne_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/velodyne_gazebo_plugins">
+
+velodyne_gazebo_plugins
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/velodyne_simulator">
+
+velodyne_simulator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rtabmap_sim">
+
+rtabmap_sim
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/minimal_pkg">
+
+minimal_pkg
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/turtlebot3">
+
+turtlebot3
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/turtlebot3_bringup">
+
+turtlebot3_bringup
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/turtlebot3_cartographer">
+
+turtlebot3_cartographer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/turtlebot3_description">
+
+turtlebot3_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/turtlebot3_example">
+
+turtlebot3_example
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/turtlebot3_navigation2">
+
+turtlebot3_navigation2
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/turtlebot3_node">
+
+turtlebot3_node
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/turtlebot3_teleop">
+
+turtlebot3_teleop
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/turtlebot3_cartographer_ex">
+
+turtlebot3_cartographer_ex
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/turtlebot3_fake_node">
+
+turtlebot3_fake_node
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/turtlebot3_simulations">
+
+turtlebot3_simulations
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vlp_cartographer">
+
+vlp_cartographer
+</a>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/cmd_vel_mux"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/j3soon/ros2-essentials/tree/main/kobuki_ws/docker/kobuki_driver_ws/src/cmd_vel_mux"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-default">0</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">16</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>0.12.1</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>BSD</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-default">
+                  
+                    AMENT_CMAKE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default">A repo containing essential ROS2 Humble features for controlling Autonomous Mobile Robots (AMRs) and robotic arm manipulators.</span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/j3soon/ros2-essentials.git">https://github.com/j3soon/ros2-essentials.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-02-20
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <span class="label label-default">docker</span> <span class="label label-default">robotics</span> <span class="label label-default">docker-compose</span> <span class="label label-default">ros</span> <span class="label label-default">isaac</span> <span class="label label-default">slam</span> <span class="label label-default">nvidia-docker</span> <span class="label label-default">ros2</span> <span class="label label-default">isaacsim</span> <span class="label label-default">isaac-sim</span> <span class="label label-default">nav2</span> <span class="label label-default">omniverse</span> <span class="label label-default">ros2-humble</span> 
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/ros2-essentials/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/ros2-essentials/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/ros2-essentials/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            
+     A multiplexer for command velocity inputs. Arbitrates incoming cmd_vel messages from several topics,
+     allowing one topic at a time to command the robot, based on priorities. It also deallocates current
+     allowed topic if no messages are received after a configured timeout. All topics, together with their
+     priority and timeout are configured through a YAML file, that can be reload at runtime.
+  
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li><a href="https://github.com/kobuki-base/cmd_vel_mux">Website</a></li>
+                
+                  <li><a href="https://github.com/kobuki-base/cmd_vel_mux">Repository</a></li>
+                
+                  <li><a href="https://github.com/kobuki-base/cmd_vel_mux/issues">Bugtracker</a></li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Chris Lalancette</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Jorge Santos Simon</li>
+                
+                  <li>Jihoon Lee</li>
+                
+              </ul>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/j3soon/ros2-essentials/tree/main/kobuki_ws/docker/kobuki_driver_ws/src/cmd_vel_mux/README.md" title="Open in git repository">kobuki_ws/docker/kobuki_driver_ws/src/cmd_vel_mux/README.md</a></div>
+              <div class="panel-body">
+                    <div class="rendered-markdown">
+<h1 id="cmd_vel-mux">cmd_vel mux</h1>
+
+<h2 id="about">About</h2>
+
+<p>A ROS 2 package for selecting among a number of incoming geometry_msg/msg/Twist messages, choosing the highest
+priority one to republish on the output topic.  It will automatically dislodge streams that are lower
+priority or that stop publishing for any reason.  The stream currently in use is published on the
+“active” topic.</p>
+
+<h2 id="published-topics">Published Topics</h2>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">/active</code> (<code class="language-plaintext highlighter-rouge">std_msgs/msg/String</code>) - A latched topic.  Publishes the “name” field of the currently active <code class="language-plaintext highlighter-rouge">geometry_msgs/msg/Twist</code> stream (see Parameters below), or “idle” if nothing is being a published.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">/cmd_vel</code> (<code class="language-plaintext highlighter-rouge">geometry_msgs/msg/Twist</code>) - The current <code class="language-plaintext highlighter-rouge">geometry_msgs/msg/Twist</code> message.  The values from the current highest-priority <code class="language-plaintext highlighter-rouge">geometry_msgs/msg/Twist</code> are republished here without change.</li>
+</ul>
+
+<h2 id="subscribed-topics">Subscribed Topics</h2>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">/any</code> (<code class="language-plaintext highlighter-rouge">geometry_msgs/msg/Twist</code>) - For each named input (see Parameters below), a topic of type <code class="language-plaintext highlighter-rouge">geometry_msgs/msg/Twist</code> is subscribed to based on the <code class="language-plaintext highlighter-rouge">topic</code> parameter.  The data from the highest-priority of these inputs is republished on the output <code class="language-plaintext highlighter-rouge">/cmd_vel</code>.</li>
+</ul>
+
+<h2 id="parameters">Parameters</h2>
+<p>The cmd_vel_mux node uses a dictionary to hold the subscribers, with <code class="language-plaintext highlighter-rouge">name</code> being the key of each element:</p>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">name</code> (string) - The “name” of each of the input <code class="language-plaintext highlighter-rouge">geometry_msgs/msg/Twist</code> topics.  This is what will be published on the <code class="language-plaintext highlighter-rouge">active</code> topic when the currently active publisher changes.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">topic</code> (string) - The “topic” corresponding to each of the input <code class="language-plaintext highlighter-rouge">geometry_msgs/msg/Twist</code> topics.  This is what will be subscribed to.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">timeout</code> (double) - The “timeout” of each of the input <code class="language-plaintext highlighter-rouge">geometry_msgs/msg/Twist</code> topics.  If no data is received on the input topic for this amount of time, the input will be automatically disabled.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">priority</code> (integer) - The “priority” of each of the input <code class="language-plaintext highlighter-rouge">geometry_msgs/msg/Twist</code> topics.  The higher the number, the higher the priority.  Higher priority topics will dislodge lower priority topics and start publishing to the output topic automatically.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">short_desc</code> (string) - The “short description” of each of the input <code class="language-plaintext highlighter-rouge">geometry_msgs/msg/Twist</code> topics.  This is informational only.</li>
+</ul>
+
+<p>See config/cmd_vel_mux_params.yaml for an example of how to set these up.</p>
+
+<h2 id="changing-values">Changing values</h2>
+<p>The dictionary translates to parameters in the form of <code class="language-plaintext highlighter-rouge">subscribers.</code> + name + <code class="language-plaintext highlighter-rouge">topic/timeout/priority/short_desc</code>.
+It can be changed on the fly using <code class="language-plaintext highlighter-rouge">ros2 param set</code> command, followed with the parameter in the form mentioned above and the value.</p>
+
+<h2 id="adding-subscriber">Adding subscriber</h2>
+<p>To add a new subscriber, call the service <code class="language-plaintext highlighter-rouge">/cmd_vel_mux/set_parameters_atomically</code> with a <code class="language-plaintext highlighter-rouge">rcl_interfaces/srv/SetParametersAtomically</code> message with a parameters value equal to an array of 4 <code class="language-plaintext highlighter-rouge">rcl_interfaces/msg/Parameter</code> messages, containing the new subscriber topic, timeout, priority and short_desc. All 4 need to be present for a new subscriber to be added.</p>
+
+<p><strong>Ex.1</strong> for testing:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 service call /cmd_vel_mux/set_parameters_atomically rcl_interfaces/srv/SetParametersAtomically "{parameters: [{name : subscribers.new_input.topic, value: {type: 4, string_value: /input/new_input}}, {name : subscribers.new_input.priority, value: {type: 2, integer_value: 20}}, {name : subscribers.new_input.timeout, value: {type: 3, double_value: 0.2}}, {name : subscribers.new_input.short_desc, value: {type: 4, string_value: 'test input'}}]}"
+
+</code></pre></div></div>
+<p>sets <em>new_input</em> subscriber listening at topic <code class="language-plaintext highlighter-rouge">/input/new_input</code></p>
+
+<h2 id="deleting-subscriber">Deleting subscriber</h2>
+<p>To delete a subscriber, call the service <code class="language-plaintext highlighter-rouge">/cmd_vel_mux/set_parameters_atomically</code> with a <code class="language-plaintext highlighter-rouge">rcl_interfaces/srv/SetParametersAtomically</code> message with a parameters value equal to an array of 4 <code class="language-plaintext highlighter-rouge">rcl_interfaces/msg/Parameter</code> messages, containing the new subscriber topic,timeout,priority and short_desc with the <code class="language-plaintext highlighter-rouge">type</code> key inside the <code class="language-plaintext highlighter-rouge">rcl/parameter/ParameterValue</code> being set to 0 (PARAMETER_NOT_SET).</p>
+
+<p><strong>Ex.2</strong> for testing:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 service call /cmd_vel_mux/set_parameters_atomically rcl_interfaces/srv/SetParametersAtomically "{parameters: [{name : subscribers.new_input.topic, value: {type: 0}}, {name : subscribers.new_input.priority, value: {type: 0}}, {name : subscribers.new_input.timeout, value: {type: 0}}, {name : subscribers.new_input.short_desc, value: {type: 0}}]}"
+
+</code></pre></div></div>
+<p>deletes <em>new_input</em> subscriber added at ex.1</p>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="changelog-for-package-yocs_cmd_vel_mux">Changelog for package yocs_cmd_vel_mux</h1>
+
+<h2 id="063-2014-12-05">0.6.3 (2014-12-05)</h2>
+
+<h2 id="062-2014-11-30">0.6.2 (2014-11-30)</h2>
+
+<ul>
+  <li>yocs_cmd_vel_mux: fixes node handle for output pub to keep
+backwards compatibility</li>
+  <li>adds a little launcher restructing for muxer and smoother</li>
+  <li>Contributors: Marcus Liebhardt</li>
+</ul>
+
+<h2 id="060-2014-07-08">0.6.0 (2014-07-08)</h2>
+
+<ul>
+  <li>updating package informations. remove email for authors. updating
+maintainer</li>
+  <li>Contributors: Jihoon Lee</li>
+</ul>
+
+<h2 id="053-2014-03-24">0.5.3 (2014-03-24)</h2>
+
+<ul>
+  <li>Added support for YAML-CPP 0.5+. The new yaml-cpp API removes the
+"node &gt;&gt; outputvar;" operator, and it has a new way of loading
+documents. There's no version hint in the library's headers, so
+I'm getting the version number from pkg-config. This part of the
+patch is a port of the ones created by \@ktossell for map_server
+and other packages. The new yaml-cpp also does not have FindValue.</li>
+  <li>Contributors: Scott K Logan</li>
+</ul>
+
+<h2 id="052-2013-11-05">0.5.2 (2013-11-05)</h2>
+
+<h2 id="051-2013-10-14">0.5.1 (2013-10-14)</h2>
+
+<ul>
+  <li>Unify naming politics for binaries and plugins.</li>
+</ul>
+
+<h2 id="050-2013-10-11">0.5.0 (2013-10-11)</h2>
+
+<ul>
+  <li>Renamed as yocs_cmd_vel_mux.</li>
+</ul>
+
+<h2 id="041-2013-10-08">0.4.1 (2013-10-08)</h2>
+
+<h2 id="040-2013-08-29">0.4.0 (2013-08-29)</h2>
+
+<ul>
+  <li>Add bugtracker and repo info URLs.</li>
+  <li>Changelogs at package level.</li>
+  <li>License link fixed.</li>
+</ul>
+
+<h2 id="030-2013-07-02">0.3.0 (2013-07-02)</h2>
+
+<h2 id="023-2013-04-15">0.2.3 (2013-04-15)</h2>
+
+<h2 id="022-2013-02-10">0.2.2 (2013-02-10)</h2>
+
+<h2 id="021-2013-02-08">0.2.1 (2013-02-08)</h2>
+
+<h2 id="020-2013-02-07">0.2.0 (2013-02-07)</h2>
+
+<ul>
+  <li>Catkinized.</li>
+</ul>
+
+<h2 id="013-2013-01-08">0.1.3 (2013-01-08)</h2>
+
+<ul>
+  <li>More generous description.</li>
+</ul>
+
+<h2 id="012-2013-01-02">0.1.2 (2013-01-02)</h2>
+
+<ul>
+  <li>Dynamically reconfigurable.</li>
+  <li>Upgraded to new groovy plugin formats.</li>
+  <li>Add reconfigure launcher and parameter file.</li>
+  <li>Add a dynamic reconfigure script to accept a yaml filename.</li>
+</ul>
+
+<h2 id="011-2012-12-21">0.1.1 (2012-12-21)</h2>
+
+<h2 id="010-2012-12-05">0.1.0 (2012-12-05)</h2>
+
+<ul>
+  <li>Initial version.</li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/cmd_vel_mux/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/geometry_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/geometry_msgs#github">geometry_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rcl_interfaces#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rcl_interfaces#github">rcl_interfaces  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclcpp#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclcpp#github">rclcpp  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclcpp_components#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclcpp_components#github">rclcpp_components  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rcpputils#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rcpputils#github">rcpputils  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/std_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/std_msgs#github">std_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_ros#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_ros#github">ament_cmake_ros  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_cppcheck#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_cppcheck#github">ament_cmake_cppcheck  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_cpplint#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_cpplint#github">ament_cmake_cpplint  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_flake8#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_flake8#github">ament_cmake_flake8  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_lint_cmake#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_lint_cmake#github">ament_cmake_lint_cmake  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_pep257#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_pep257#github">ament_cmake_pep257  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_uncrustify#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_uncrustify#github">ament_cmake_uncrustify  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_xmllint#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_xmllint#github">ament_cmake_xmllint  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_lint_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_lint_auto#github">ament_lint_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ros_testing#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ros_testing#github">ros_testing  </a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No direct system dependencies.</em>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No known dependants.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No launch files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No message files found.</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No plugins found.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>cmd_vel_mux</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/cmd_vel_mux+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/j3soon/ros2-essentials.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/cmd_vel_mux"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/j3soon/ros2-essentials/tree/main/kobuki_ws/docker/kobuki_driver_ws/src/cmd_vel_mux"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/cmd_vel_mux?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/cmd_vel_mux?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=cmd_vel_mux&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "cmd_vel_mux"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

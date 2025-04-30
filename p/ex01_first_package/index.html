@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: ex01_first_package</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/ex01_first_package/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">ex01_first_package</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/ex01_first_package">ex01_first_package</a> <small>package from <a style="text-decoration:none" href="/r/ros2_tutorial/github-uos-ros2_tutorial">ros2_tutorial</a> repo</small>
+        </h3>
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+ex01_first_package
+</span>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ex02_gazebo_simulation">
+
+ex02_gazebo_simulation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ex03_state_estimation">
+
+ex03_state_estimation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ex04_actions">
+
+ex04_actions
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ex04_msgs">
+
+ex04_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ex04_nav2_client">
+
+ex04_nav2_client
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ex05_behavior_trees">
+
+ex05_behavior_trees
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ex05_bt_plugins">
+
+ex05_bt_plugins
+</a>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/ex01_first_package"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/uos/ros2_tutorial/tree/main/ex01_first_package"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-default">0</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">3</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>0.0.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>BSD</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-default">
+                  
+                    AMENT_CMAKE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default">Tutorials for the KBS robotics labs</span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/uos/ros2_tutorial.git">https://github.com/uos/ros2_tutorial.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2024-03-12
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <em>No category tags.</em>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/ros2_tutorial/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/ros2_tutorial/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/ros2_tutorial/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            Install ROS. Create a workspace. Create a package.
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional links.</em>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Alexander Mock</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Alexander Mock</li>
+                
+              </ul>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/uos/ros2_tutorial/tree/main/ex01_first_package/README.md" title="Open in git repository">ex01_first_package/README.md</a></div>
+              <div class="panel-body">
+                    <div class="rendered-markdown">
+<h1 id="ex01_first_package">ex01_first_package</h1>
+
+<p>ROS is short for Robot Operating System. It is a framework/middleware for the quick development of software related to robotics.
+It provides the infrastructure for sensor and actuator communications, sensor data handling, serialization, visualizations, and software packaging.
+All these things don’t change for different types of robots.
+Roboticists are happy</p>
+<ul>
+  <li>to not implement everything from scratch for every robot they have,</li>
+  <li>that they can use other software that was already implemented somewhere in the world.</li>
+</ul>
+
+<p>ROS1 was invented in 2007. It was mostly used in research and is completely open-source. Some design choices were considered bad. In addition, it had no guarantees in real-time executions nor in how safe communications were. Recently ROS2 was released in 2017, seeking to overcome those and other issues.</p>
+
+<p>With the following set of repositories, we try to explain the basic ROS concepts by example.</p>
+
+<h2 id="ros2">ROS2</h2>
+
+<p>To continue a computer with natively installed Ubuntu 22.04 is required. Come back if you find one.</p>
+
+<p>Great to see you have found one. Now install ROS2 humble with the following steps (official instructions: https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)</p>
+
+<p>Open a terminal:</p>
+
+<h3 id="useful-packages">Useful packages</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install vim
+
+</code></pre></div></div>
+
+<h3 id="preparation">Preparation</h3>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">locale  #</span><span class="w"> </span>check <span class="k">for </span>UTF-8
+<span class="go">
+sudo apt update &amp;&amp; sudo apt install locales
+sudo locale-gen en_US en_US.UTF-8
+sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+</span><span class="gp">locale  #</span><span class="w"> </span>verify settings
+<span class="go">
+</span></code></pre></div></div>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">sudo apt install software-properties-common
+sudo add-apt-repository universe
+
+</span></code></pre></div></div>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">sudo apt update &amp;&amp; sudo apt install curl -y
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+
+</span></code></pre></div></div>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">echo "deb [arch=$</span><span class="o">(</span>dpkg <span class="nt">--print-architecture</span><span class="o">)</span> signed-by<span class="o">=</span>/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu <span class="si">$(</span><span class="nb">.</span> /etc/os-release <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$UBUNTU_CODENAME</span><span class="si">)</span> main<span class="s2">" | sudo tee /etc/apt/sources.list.d/ros2.list &gt; /dev/null
+</span><span class="go">
+</span></code></pre></div></div>
+
+<p>Refresh the package sources</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">sudo apt update
+
+</span></code></pre></div></div>
+
+<p>Upgrade all packages you already have</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">sudo apt upgrade
+
+</span></code></pre></div></div>
+
+<h3 id="installation">Installation</h3>
+
+<p>Now start the ROS2-humble installation:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">sudo apt install ros-humble-desktop
+
+</span></code></pre></div></div>
+
+<p>Some additional dev tools:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">sudo apt install ros-dev-tools
+
+</span></code></pre></div></div>
+
+<h3 id="environment-variables">Environment Variables</h3>
+
+<p>In many situations, ROS2 will need additional configuration via setting environment variables. A good way is to add additional environment variables to the <code class="language-plaintext highlighter-rouge">~/.bashrc</code> file (<code class="language-plaintext highlighter-rouge">~</code> is the path to your home folder). Then they will be set every time a new terminal is started. Open the file with Vim (yes with vim) and add the following line to the end of the file:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">vi ~/.bashrc
+
+</span></code></pre></div></div>
+
+<p>Try to insert this at the end of the file:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">source /opt/ros/humble/setup.bash
+
+</span></code></pre></div></div>
+
+<p>Exit Vim: https://stackoverflow.com/questions/11828270/how-do-i-exit-vim. The sooner you learn Vim the better. As soon as you restart your terminal this command will set up everything you will need for your global ROS2. Test your installation via</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">ros2 run demo_nodes_cpp talker
+
+</span></code></pre></div></div>
+
+<p>open another terminal (Ctrl+Shift+T) and execute:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">ros2 run demo_nodes_py listener
+
+</span></code></pre></div></div>
+
+<p>The listener should hear what the talker is saying, even though they are not the same process, and not written in the same programming language. How this works comes soon.</p>
+
+<h2 id="package">Package</h2>
+
+<p>A package is a piece of software that has a closed purpose. For example, one package could be a driver for a sensor, another package could handle the detection of objects in images. Now you will create your very first package. But where to put it? Into a ROS workspace.</p>
+
+<p>It doesn’t matter how you call it. We mostly name the workspace after the robots we are using. Since we are later using the “ceres” robot we are calling the workspace <code class="language-plaintext highlighter-rouge">ceres_ws</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>user@pc:~$ mkdir ceres_ws
+
+</code></pre></div></div>
+
+<p>all packages will be placed within a <code class="language-plaintext highlighter-rouge">src</code> folder inside of this package:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ceres_ws/
+  src/
+    package1/
+      package.xml
+      CMakeLists.txt
+      ...
+    package2/
+      package.xml
+      ...
+    folder/
+      package3/
+        package.xml
+        CMakeLists.txt
+        ...
+      package4/
+        package.xml
+        ...
+    ...
+
+</code></pre></div></div>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">user@pc:~$</span><span class="w"> </span><span class="nb">cd </span>ceres_ws
+<span class="gp">user@pc:~/ceres_ws$</span><span class="w"> </span><span class="nb">mkdir </span>src 
+<span class="go">
+</span></code></pre></div></div>
+
+<p>Source your new workspace by adding the following line to the end of your <code class="language-plaintext highlighter-rouge">.bashrc</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source ~/ceres_ws/install/setup.bash
+
+</code></pre></div></div>
+
+<p>Then create a package:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">user@pc:~/ceres_ws$</span><span class="w"> </span><span class="nb">cd </span>src
+<span class="gp">user@pc:~/ceres_ws/src$</span><span class="w"> </span><span class="nb">mkdir </span>ex01_first_package
+<span class="gp">user@pc:~/ceres_ws/src$</span><span class="w"> </span><span class="nb">cd </span>ex01_first_package
+<span class="go">
+</span></code></pre></div></div>
+
+<p>A folder becomes a ROS package once you put a package.xml into it.</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">user@pc:~/ceres_ws/src/ex01_first_package$</span><span class="w"> </span><span class="nb">touch </span>package.xml 
+<span class="go">
+</span></code></pre></div></div>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">user@pc:~/ceres_ws/src/ex01_first_package$</span><span class="w"> </span>vi package.xml
+<span class="go">
+</span></code></pre></div></div>
+
+<p>Open the <a href="https://github.com/uos/ros2_tutorial/tree/main/ex01_first_package/./package.xml" target="_blank"><code class="language-plaintext highlighter-rouge">package.xml</code></a> file of this repository to see its contents.</p>
+
+<p>Everything until <code class="language-plaintext highlighter-rouge">license</code> are tags providing meta-information about the package.
+The rest describes what the package needs to compile successfully.
+The <code class="language-plaintext highlighter-rouge">rclcpp</code> package contains everything we need to write C++ code for a robot.
+So if we decide to write our software in C++, we usually depend on <code class="language-plaintext highlighter-rouge">rclcpp</code>.
+The second package is <code class="language-plaintext highlighter-rouge">std_msgs</code>.
+It is a package that only consists of message definitions.</p>
+
+<h2 id="messages--topics">Messages &amp; Topics</h2>
+
+<p>In ROS-Messages we can store and transfer data to other nodes.
+For example, the message <code class="language-plaintext highlighter-rouge">std_msgs/msg/String</code> is defined <a href="https://docs.ros2.org/foxy/api/std_msgs/msg/String.html" target="_blank">here</a>.</p>
+
+<p>It is a rather simple message because it only contains one field.
+The description of a message is compiled into types that can be used in any supported programming language.
+Like this, we can use the same message in C++ or Python and communicate between programs written in Python and C++.
+For example, we can write something into the message using C++ and send it</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;std_msgs/msg/string.hpp&gt;</span><span class="cp">
+</span>
+<span class="p">...</span>
+
+<span class="n">std_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">String</span> <span class="n">message</span><span class="p">;</span>
+<span class="n">message</span><span class="p">.</span><span class="n">data</span> <span class="o">=</span> <span class="s">"Hello!"</span><span class="p">;</span>
+<span class="c1">// send message ... (publisher)</span>
+
+</code></pre></div></div>
+
+<p>and read the data using Python:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">std_msgs.msg.String</span>
+
+<span class="bp">...</span>
+
+<span class="n">msg</span> <span class="o">=</span> <span class="n">std_msgs</span><span class="p">.</span><span class="n">msg</span><span class="p">.</span><span class="nc">String</span><span class="p">()</span>
+<span class="c1"># receive message ... (subscriber)
+</span><span class="nf">print</span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="n">data</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<p>Communications between nodes are not done directly but with so-called ROS-topics in the middle.
+So a <code class="language-plaintext highlighter-rouge">Publisher</code> is publishing a message on a topic. One ore multiple nodes can subscribe on the topic to receive the ROS-Message that was published on the topic before. This scheme is exceptionally well suited for sensor data:
+An example from reality: ROS-sensor drivers usually access the sensor on low-level and then publish the sensor data to a topic.
+For example, a USB webcam driver is accessing the USB interface of the camera and reads the images. The driver doesn’t care about <em>who</em> exactly needs the images, so it just publishes the image data to a topic.
+Then one node wants to detect cats in the images, so it subscribes on the topic, another node wants to filter the image so that only edges remain, so it subscribes on the topic. Maybe in the future, someone implements some new nodes doing cool things with the images, so they will subscribe to the image topic.
+But the image driver never needs to be changed for that.
+And on the other side, the image processing nodes will never know there is a USB-interface existing.</p>
+
+<p>Another example is a Radio station where someone is broadcasting something without caring about who is actually receiving it:</p>
+
+<p><img src="https://raw.githubusercontent.com/uos/ros2_tutorial/main/ex01_first_package/./dat/radio_ros_simple.png" alt="radio-ros"></p>
+
+<h3 id="publisher">Publisher</h3>
+
+<p>The next task deals with implementing our own publisher node for our package. It should publish a <code class="language-plaintext highlighter-rouge">std_msgs/String</code> on a topic called <code class="language-plaintext highlighter-rouge">important_messages</code>. So the Node acts similarly to the sensor-driver-Node described before (except accessing a USB-interface).</p>
+
+<p>Read <a href="https://github.com/uos/ros2_tutorial/tree/main/ex01_first_package/./src/publisher.cpp" target="_blank"><code class="language-plaintext highlighter-rouge">src/publisher.cpp</code></a> and try to replicate the contents into your own node. Try without copy-paste.</p>
+
+<p>After writing this file we need to add some instructions to compile the C++ project. ROS internally using CMake for that. So create a <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code> at the base folder of your package and add the following contents:</p>
+
+<div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cmake_minimum_required</span><span class="p">(</span>VERSION 3.8<span class="p">)</span>
+<span class="nb">project</span><span class="p">(</span>ex01_first_package<span class="p">)</span>
+
+<span class="c1">###########################</span>
+<span class="c1"># Not important to know start</span>
+
+<span class="c1"># Default to C++14</span>
+<span class="nb">if</span><span class="p">(</span>NOT CMAKE_CXX_STANDARD<span class="p">)</span>
+  <span class="nb">set</span><span class="p">(</span>CMAKE_CXX_STANDARD 14<span class="p">)</span>
+<span class="nb">endif</span><span class="p">()</span>
+
+<span class="nb">if</span><span class="p">(</span>CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES <span class="s2">"Clang"</span><span class="p">)</span>
+  <span class="nb">add_compile_options</span><span class="p">(</span>-Wall -Wextra -Wpedantic<span class="p">)</span>
+<span class="nb">endif</span><span class="p">()</span>
+
+<span class="c1"># Not important to know end</span>
+<span class="c1">###########################</span>
+
+<span class="c1"># 'find_package' trys to find packages</span>
+<span class="c1"># usually all dependencies of the package.xml file </span>
+<span class="c1"># should occour here too</span>
+<span class="nb">find_package</span><span class="p">(</span>ament_cmake REQUIRED<span class="p">)</span>
+<span class="nb">find_package</span><span class="p">(</span>rclcpp REQUIRED<span class="p">)</span>
+<span class="nb">find_package</span><span class="p">(</span>std_msgs REQUIRED<span class="p">)</span>
+
+<span class="c1"># Compile our node!</span>
+<span class="nb">add_executable</span><span class="p">(</span>publisher src/publisher.cpp<span class="p">)</span>
+
+<span class="c1">######</span>
+<span class="c1"># Properly add ROS dependencies</span>
+<span class="c1"># - header files become available in code</span>
+<span class="c1"># - libraries are linked</span>
+<span class="nf">ament_target_dependencies</span><span class="p">(</span>publisher 
+  rclcpp
+  std_msgs<span class="p">)</span>
+
+<span class="c1">#######</span>
+<span class="c1"># at execution time ROS2 only knows about things exist</span>
+<span class="c1"># in the install directory 'ceres_ws/install/...'</span>
+<span class="c1"># So we install our executables to 'ceres_ws/install/...'</span>
+<span class="c1"># via</span>
+<span class="nb">install</span><span class="p">(</span>TARGETS
+    publisher
+  DESTINATION lib/<span class="si">${</span><span class="nv">PROJECT_NAME</span><span class="si">}</span><span class="p">)</span>
+
+<span class="c1"># and finish with do ament_package cleanup</span>
+<span class="nf">ament_package</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<p>The comments explain roughly what is going on during compilation.
+If you are interested you can read them. But from my experience, you will be good if you just copy-paste those commands. If you understand everything else you can come back to it.
+Now go to your workspace’s base directory and call</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">user@pc:~/ceres_ws$</span><span class="w"> </span>colcon build
+<span class="go">
+</span></code></pre></div></div>
+
+<p>If no errors occur the compilation has been successful. After that, you can run your node by calling</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">ros2 run ex01_first_package publisher
+
+</span></code></pre></div></div>
+
+<p>Open a second terminal (Ctrl + Shift + T) and enter</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">ros2 topic list
+
+</span></code></pre></div></div>
+
+<p>to list all the topics that are available. The topic <code class="language-plaintext highlighter-rouge">important_messages</code> should appear. With</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">ros2 topic echo /important_messages
+
+</span></code></pre></div></div>
+
+<p>You can print the (important) messages from the topic.</p>
+
+<h3 id="subscriber">Subscriber</h3>
+
+<p>Now we want to receive the message in a self-written program. Imagine you want to write a Node that subscribes to an Image to detect cats. But in this example it is a stream of strings:</p>
+
+<p>Read <a href="https://github.com/uos/ros2_tutorial/tree/main/ex01_first_package/./src/subscriber.cpp" target="_blank"><code class="language-plaintext highlighter-rouge">src/subscriber.cpp</code></a> and try to replicate the contents into your own node. Try without copy-paste.</p>
+
+<p>Afterward, try adding your cpp file to your <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code> for compilation. Then call <code class="language-plaintext highlighter-rouge">colcon build</code> again. If you are not manage to fill out the <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code> correctly, get yourself help by reading the <code class="language-plaintext highlighter-rouge">CMakeLists.txt</code> from this repository.</p>
+
+<p>When it compiles, test your program by calling</p>
+
+<p>First Terminal:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">ros2 run ex01_first_package publisher
+
+</span></code></pre></div></div>
+
+<p>Second Terminal:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">ros2 run ex01_first_package subscriber
+
+</span></code></pre></div></div>
+
+<p>The subscriber should always print the most recent messages that were sent by the publisher. Even after starting ending and restarting the subscriber.</p>
+
+<h3 id="better-publisher--subscriber">Better Publisher &amp; Subscriber</h3>
+
+<p>Further examples are in <code class="language-plaintext highlighter-rouge">src</code> folder of this repository. All publishers are doing exactly the same. As well as all subscribers are doing exactly the same. <code class="language-plaintext highlighter-rouge">publisher_class.cpp</code> and <code class="language-plaintext highlighter-rouge">subsriber_class.cpp</code> are the recommended styles of writing nodes. It’s done by inheriting from <code class="language-plaintext highlighter-rouge">rclcpp::Node</code>.</p>
+
+<p>Read it, understand it, execute it.</p>
+
+<h2 id="last-words">Last Words</h2>
+
+<p>One node does not need to be a subscriber or publisher alone. A node can also be composed of multiple subscribers and publishers.
+ROS has more useful tools like <code class="language-plaintext highlighter-rouge">ros2 topic list</code> or <code class="language-plaintext highlighter-rouge">ros2 topic echo</code>.
+To see them just type <code class="language-plaintext highlighter-rouge">ros2 topic</code> and press enter.
+Test the commands with your topics.</p>
+
+<h3 id="data-distribution-services">Data Distribution Services</h3>
+
+<p><strong>Important</strong>: This step is required when working with our robots!!!</p>
+
+<p>The default DDS that is used by ROS is <code class="language-plaintext highlighter-rouge">FastDDS</code>. In our tests, it tends to be unstable in networks. Luckily, we can switch to another implementation called <code class="language-plaintext highlighter-rouge">CylconeDDS</code> by installing it:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">sudo apt install ros-humble-rmw-cyclonedds-cpp
+
+</span></code></pre></div></div>
+
+<p>And enabling it by adding the following lines to your <code class="language-plaintext highlighter-rouge">.bashrc</code>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># export RMW_IMPLEMENTATION=rmw_fastrtps_cpp</span>
+<span class="nb">export </span><span class="nv">RMW_IMPLEMENTATION</span><span class="o">=</span>rmw_cyclonedds_cpp
+
+</code></pre></div></div>
+
+<p>Then restart your computer or the ROS daemon</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">ros2 daemon stop
+ros2 daemon start
+
+</span></code></pre></div></div>
+
+<p>Now try if your nodes are still working.</p>
+
+<p>Not required but just in case: If you want to recover the default <code class="language-plaintext highlighter-rouge">FastDDS</code> use:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">RMW_IMPLEMENTATION</span><span class="o">=</span>rmw_fastrtps_cpp
+
+</code></pre></div></div>
+
+<h3 id="addition-cpp-tutorial">Addition: CPP tutorial</h3>
+
+<p>In this package, I placed another method of writing a publisher. With <code class="language-plaintext highlighter-rouge">src/my_publisher.cpp</code> and <code class="language-plaintext highlighter-rouge">include/ex01_first_package/my_publisher.hpp</code> a library is built named <code class="language-plaintext highlighter-rouge">my_publisher</code>. This library is installed and can be used by every other package. As an example, the main node <code class="language-plaintext highlighter-rouge">src/publisher_lib.cpp</code> includes the header and links to the library.</p>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <em>No CHANGELOG found.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/ex01_first_package/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake#github">ament_cmake  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclcpp#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclcpp#github">rclcpp  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/std_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/std_msgs#github">std_msgs  </a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No direct system dependencies.</em>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No known dependants.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No launch files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No message files found.</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No plugins found.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>ex01_first_package</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/ex01_first_package+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/uos/ros2_tutorial.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/ex01_first_package"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/uos/ros2_tutorial/tree/main/ex01_first_package"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/ex01_first_package?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/ex01_first_package?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=ex01_first_package&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "ex01_first_package"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

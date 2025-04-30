@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: march_rqt_input_device</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/march_rqt_input_device/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">march_rqt_input_device</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/march_rqt_input_device">march_rqt_input_device</a> <small>package from <a style="text-decoration:none" href="/r/projectmarch/github-project-march-projectmarch">projectmarch</a> repo</small>
+        </h3>
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/fuzzy_generator">
+
+fuzzy_generator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/control_toolbox">
+
+control_toolbox
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_ble_ipd">
+
+march_ble_ipd
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_control">
+
+march_control
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_gain_scheduler">
+
+march_gain_scheduler
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_gait_planning">
+
+march_gait_planning
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_motor_controller_state_broadcaster">
+
+march_motor_controller_state_broadcaster
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_pdb_state_broadcaster">
+
+march_pdb_state_broadcaster
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_hardware">
+
+march_hardware
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_hardware_builder">
+
+march_hardware_builder
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_system_interface">
+
+march_system_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_ik_solver">
+
+march_ik_solver
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_input_device">
+
+march_input_device
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_launch">
+
+march_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_mode_machine">
+
+march_mode_machine
+</a>
+            
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+march_rqt_input_device
+</span>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_state_estimator">
+
+march_state_estimator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_vision">
+
+march_vision
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mujoco_interfaces">
+
+mujoco_interfaces
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mujoco_pid_tuner">
+
+mujoco_pid_tuner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mujoco_reader">
+
+mujoco_reader
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mujoco_sim">
+
+mujoco_sim
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mujoco_writer">
+
+mujoco_writer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_safety">
+
+march_safety
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_description">
+
+march_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_logger_cpp">
+
+march_logger_cpp
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_shared_msgs">
+
+march_shared_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_utility">
+
+march_utility
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/gait_planning_manager">
+
+gait_planning_manager
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_ik_test">
+
+march_ik_test
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_test_joints_gui">
+
+march_test_joints_gui
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/bezier_visualization">
+
+bezier_visualization
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_monitor">
+
+march_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_plotjuggler_launcher">
+
+march_plotjuggler_launcher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_rqt_gait_version_tool">
+
+march_rqt_gait_version_tool
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_rqt_note_taker">
+
+march_rqt_note_taker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_rqt_robot_monitor">
+
+march_rqt_robot_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/march_state_estimator_visualizer">
+
+march_state_estimator_visualizer
+</a>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/march_rqt_input_device"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/project-march/projectmarch/tree/main/ros2/src/march_rqt_input_device"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-primary">1</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">6</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>0.0.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>TODO: License declaration</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-default">
+                  
+                    AMENT_PYTHON</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/project-march/projectmarch.git">https://github.com/project-march/projectmarch.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2024-08-20
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <em>No category tags.</em>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/projectmarch/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/projectmarch/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/projectmarch/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            Developer input device to send commands to the march exoskeleton
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional links.</em>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Project March</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional authors.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/project-march/projectmarch/tree/main/ros2/src/march_rqt_input_device/readme.md" title="Open in git repository">ros2/src/march_rqt_input_device/readme.md</a></div>
+              <div class="panel-body">
+                    <div class="rendered-markdown">
+<h1 id="march-rqt-input-device">March RQT Input Device</h1>
+<p><strong>Author: Andrew Hutani, MIX</strong></p>
+<h2 id="overview">Overview</h2>
+<p>This package is the implementation of the RQT input device, which allows the user to control the exoskeleton using a virtual button interface. In essence, the user can relay instructions to the whole ROS architecture using this package. Note how the whole layout is dependant on the modes defined in the <code class="language-plaintext highlighter-rouge">modes.json</code> file in the <code class="language-plaintext highlighter-rouge">march_mode_machine</code> package. In this file, all possible exoModes are defined, which will all be tied to a button on the RQT Input Device. Note that exoMode::Error and exoMode::BootUp do <strong>not</strong> have a button in the RQT Input Device, since these should not be accessible by the user.</p>
+
+<h2 id="user-interface-structure">User Interface Structure</h2>
+<p>The user interface of this plugin follows the classic Model-View-Controller (MVC) architectural pattern, which separates the application into three interconnected components. This allows for efficient code organization, modular design, and easier maintenance. Blame old Marchies for the naming convention, but in this case the following holds:</p>
+<ul>
+  <li>Controller: <code class="language-plaintext highlighter-rouge">InputDevicePlugin</code>
+</li>
+  <li>View: <code class="language-plaintext highlighter-rouge">InputDeviceView</code>
+</li>
+  <li>Model:  <code class="language-plaintext highlighter-rouge">InputDeviceController</code>
+</li>
+</ul>
+
+<p>I will henceforth refer to these by their class names (i.e. <code class="language-plaintext highlighter-rouge">InputDevicePlugin</code>, <code class="language-plaintext highlighter-rouge">InputDeviceView</code>, <code class="language-plaintext highlighter-rouge">InputDeviceController</code>)</p>
+
+<h3 id="inputdeviceplugin">InputDevicePlugin</h3>
+<p><em>The <code class="language-plaintext highlighter-rouge">InputDevicePlugin</code> class should acts as the controller in the MVC structure. It is responsible for handling the logic and coordinating between the view and the model. It communicates user actions from the view to the model, and updates the view when the model changes. The controller contains a reference to the InputDeviceController (the model) and manages the settings of the plugin.</em></p>
+
+<p>In my humble opinion this class can be viewed as a passthrough/wrapper, since it really does not seem to do anything.</p>
+
+<h3 id="inputdeviceview">InputDeviceView</h3>
+<p>The InputDeviceView class represents the view component in the MVC structure. It is responsible for presenting the data to the user and capturing user inputs. The view contains a layout of buttons, each of which is associated with a callback function in the controller. The view updates the state of these buttons based on the current possible modes provided by the controller.</p>
+
+<p>In this view buttons are defined that communicate with the controller</p>
+
+<h3 id="inputdevicecontroller">InputDeviceController</h3>
+<p>The InputDeviceController class acts as the model in the MVC structure. It manages the data, logic, and rules of the application. In this case, it handles the communication with the ROS 2 network, including publishing mode changes and storing available modes. The controller is independent of the user interface and can be used without the view and the plugin.</p>
+
+<p>This MVC structure allows for a clear separation of concerns. Each component has a specific responsibility, making the code easier to understand and maintain. Changes in one component (for example, a change in the user interface design) can be made independently of the others, reducing the risk of introducing bugs.</p>
+
+<h2 id="possible-dependencies">Possible dependencies</h2>
+<p>PyQt5 version &lt;= 5.11.2</p>
+
+<h2 id="known-issues">Known issues</h2>
+<p>An issue that came up when launching the RQT input device, is the following error:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>qt_gui_main<span class="o">()</span> found no plugin matching <span class="s2">"rqt_input_device"</span>
+try passing the option <span class="s2">"--force-discover"</span>
+
+</code></pre></div></div>
+<p>This appears to be a problem with rqt caching the locations of plugins in its config and not updating that info. A workaround that works for me is delete that cache and relaunching the node:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm ~/.config/ros.org/rqt_gui.ini
+
+</code></pre></div></div>
+
+<h2 id="node-structure">Node structure</h2>
+<h3 id="client">Client</h3>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">'get_exo_mode_array'</code> (<a href="https://gitlab.com/project-march/march/-/blob/dev/ros2/src/shared/march_shared_msgs/srv/GetExoModeArray.srv">GetExoModeArray.srv</a>)</li>
+</ul>
+
+<h3 id="publishers">Publishers</h3>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">"/march/input_device/alive"</code> (<a href="https://gitlab.com/project-march/march/-/blob/dev/ros2/src/shared/march_shared_msgs/msg/Alive.msg">Alive</a>)</li>
+</ul>
+
+<h2 id="construction-of-the-node">Construction of the node</h2>
+<p>Since the relation between Plugin, View and Controller can be a bit confusing, a sequence diagram has been made to visually aid with comprehending the construction of this node.</p>
+
+<p><img src="https://raw.githubusercontent.com/project-march/projectmarch/main/ros2/src/march_rqt_input_device/resource/img/ipd_construction.png" alt="Sequence diagram of constructor/init"></p>
+
+<ul>
+  <li>On construction, first the plugin is created (which can be largely ignored).</li>
+  <li>Afterwards, the controller class is initialized including all the callback functions for each button/exoMode</li>
+  <li>Subsequently, the view class is created, and all buttons defined in the layout file are created, linked to a callback function and displayed.</li>
+  <li>Lastly, the view class is linked to the controller to allow communication between the two.</li>
+</ul>
+
+<p>To avoid repeating a lot of code for all the different modes, a lambda notation is used to (more or less) tie the button to a specific mode and sending that mode.</p>
+
+<blockquote>
+  <p><strong>Using copilot to explain the lambda expression</strong>:</p>
+  <ul>
+    <li><em>In Python, lambda is used to create small anonymous functions at runtime. These functions are called “anonymous” because they are not declared with the standard def keyword.</em></li>
+    <li><em>The general syntax of a lambda function is: <code class="language-plaintext highlighter-rouge">lambda arguments: expression</code>.</em></li>
+    <li><em>In your case, <code class="language-plaintext highlighter-rouge">lambda: self._controller.publish_mode(mode)</code> is a lambda function that takes no arguments (hence the empty : before the colon) and calls <code class="language-plaintext highlighter-rouge">self._controller.publish_mode(mode)</code> when it’s invoked.</em></li>
+    <li><em>The reason we use a lambda function here is because the button.clicked.connect() method expects a function object that it can call when the button is clicked. However, we want to call <code class="language-plaintext highlighter-rouge">self._controller.publish_mode(mode)</code>, which requires an argument (mode).</em></li>
+    <li><em>If we simply passed <code class="language-plaintext highlighter-rouge">self._controller.publish_mode</code> to <code class="language-plaintext highlighter-rouge">button.clicked.connect()</code>, it wouldn’t know what value to use for mode. By using a lambda function, we create a new function that takes no arguments and calls <code class="language-plaintext highlighter-rouge">self._controller.publish_mode(mode)</code> with the correct value for mode.</em></li>
+    <li><em>So when the button is clicked, it calls the lambda function (which takes no arguments), and the lambda function in turn calls <code class="language-plaintext highlighter-rouge">self._controller.publish_mode(mode)</code> with the correct value for mode. This is a common pattern when working with GUIs in Python, because often you need to respond to an event (like a button click) with a function that takes some specific arguments.</em></li>
+  </ul>
+</blockquote>
+
+<h2 id="button-presses">Button presses</h2>
+<p><strong>This functionality might seem needlessly convoluted, but so far I have not been able to circumvent this.</strong>
+The main problem with correctly relaying the button presses to the ModeMachine, is the alive message that needs to continuouosly be published.</p>
+
+<p>In a usual client/service relation between nodes, the request is sent asyncronously to the server, after which the client waits for the future to be completed. The issues arises from the fact that this is blocking.</p>
+
+<p>After this block is lifted (i.e. the response has been received), the alive publishing does not continue for some reason?? 
+<strong>Note that</strong> the alive message is being published from the Controller class</p>
+
+<p>To circumvent this, it is possible to do the waiting in the View class, but this does create some stupid behaviour between the controller and viewer, since the button presses are handled in the controller. A sequence diagram is shown below to visualize the interactions.</p>
+
+<p><img src="https://raw.githubusercontent.com/project-march/projectmarch/main/ros2/src/march_rqt_input_device/resource/img/ipd_button_press.png" alt="Sequence diagram of button presses">
+\</p>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <em>No CHANGELOG found.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/march_rqt_input_device/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclpy#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclpy#github">rclpy  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rqt_gui#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rqt_gui#github">rqt_gui  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rqt_gui_py#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rqt_gui_py#github">rqt_gui_py  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/std_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/std_msgs#github">std_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/march_shared_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/march_shared_msgs#github">march_shared_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/builtin_interfaces#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/builtin_interfaces#github">builtin_interfaces  </a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No direct system dependencies.</em>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No known dependants.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No launch files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No message files found.</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <ul>
+            
+              <li><a href="https://github.com/project-march/projectmarch/tree/main/ros2/src/march_rqt_input_device//plugin.xml" target="_blank">rqt_gui</a></li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>march_rqt_input_device</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/march_rqt_input_device+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/project-march/projectmarch.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/march_rqt_input_device"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/project-march/projectmarch/tree/main/ros2/src/march_rqt_input_device"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/march_rqt_input_device?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/march_rqt_input_device?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=march_rqt_input_device&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "march_rqt_input_device"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

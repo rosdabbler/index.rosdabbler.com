@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: ifm3d_ros2</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/ifm3d_ros2/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">ifm3d_ros2</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/ifm3d_ros2">ifm3d_ros2</a> <small>package from <a style="text-decoration:none" href="/r/ifm3d-ros2/github-ifm-ifm3d-ros2">ifm3d-ros2</a> repo</small>
+        </h3>
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+ifm3d_ros2
+</span>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/ifm3d_ros2"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/ifm/ifm3d-ros2/tree/master/."
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-primary">11</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">25</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>1.1.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>Apache 2.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-default">
+                  
+                    AMENT_CMAKE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default">ifm pmd-based 3D ToF Camera ROS2 Package</span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/ifm/ifm3d-ros2.git">https://github.com/ifm/ifm3d-ros2.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">master</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2024-12-17
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <em>No category tags.</em>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/ifm3d-ros2/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/ifm3d-ros2/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/ifm3d-ros2/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            ifm ToF Camera ROS2 package
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional links.</em>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>ifm Robotics Support</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>ifm Robotics Support</li>
+                
+              </ul>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/ifm/ifm3d-ros2/tree/master/./README.md" title="Open in git repository">README.md</a></div>
+              <div class="panel-body">
+                    <div class="rendered-markdown">
+<h1 id="ifm3d-ros2-overview">ifm3d-ros2 overview</h1>
+<p><em>This documentation is formatted to be read on <a href="https://ros2.ifm3d.com/latest/">www.ros2.ifm3d.com</a>.</em></p>
+
+<p>:::{note}
+This release is intended to be used with the O3R camera platform ONLY. For other ifm cameras (e.g. O3D3xx and O3X1xx) please see the tagged releases 0.3.0 and 0.7.0 respectively.
+:::</p>
+
+<p><code class="language-plaintext highlighter-rouge">ifm3d-ros2</code> is a wrapper around <a href="https://github.com/ifm/ifm3d">ifm3d</a> enabling the usage of ifm O3R camera platform from within <a href="https://index.ros.org/doc/ros2/">ROS 2</a> software systems.</p>
+
+<p>As of version 1.2.0, <code class="language-plaintext highlighter-rouge">ifm3d_ros2</code> also supports the Obstacle Detection Solution (ODS). Refer to <a href="https://ifm3d.com/latest/ODS/index_ods.html">the ODS documentation</a> for more details on this application.</p>
+
+<p><img src="https://raw.githubusercontent.com/ifm/ifm3d-ros2/master/./doc/camera_node/figures/O3R_merged_point_cloud.png" alt="rviz"></p>
+
+<h2 id="software-compatibility-matrix">Software Compatibility Matrix</h2>
+
+<h3 id="releases-versions">Releases versions</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>
+<code class="language-plaintext highlighter-rouge">ifm3d_ros2</code> version</th>
+      <th>ifm3d version</th>
+      <th>O3R firmware version</th>
+      <th>ROS 2 distribution</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.2.0</td>
+      <td>1.4.3 and 1.5.3</td>
+      <td>1.4.30 and 1.10.13</td>
+      <td>Jazzy, Humble</td>
+      <td>Added support for ODS applications</td>
+    </tr>
+    <tr>
+      <td>1.1.0</td>
+      <td>1.2.6</td>
+      <td>1.0.14</td>
+      <td>Humble</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>1.0.1</td>
+      <td>0.93.0</td>
+      <td>0.14.23</td>
+      <td>Foxy</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>Note: The version numbers listed above for the ifm3d API or the O3R firmware versions are the ones explicitly tested. Any other version might work but is not officially supported.</p>
+</blockquote>
+
+<h3 id="known-issues">Known Issues</h3>
+
+<p>For a complete list of changes, refer to <a href="https://github.com/ifm/ifm3d-ros2/tree/master/././CHANGELOG.rst">the changelog</a>.</p>
+
+<p>Below is a list of all known issues with the latest released version:</p>
+<ul>
+  <li>There is an issue in how the intrinsic parameters are calculated: see <a href="https://github.com/ifm/ifm3d-ros2/issues/18">issue 18</a>.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">camera_info</code> topic does not work for rectification: see <a href="https://github.com/ifm/ifm3d-ros2/issues/24">issue 24</a>.</li>
+</ul>
+
+<h3 id="deprecated-ifm3d-ros2-versions">Deprecated ifm3d-ros2 versions</h3>
+
+<p>The following versions are deprecated and no longer supported.
+| <code class="language-plaintext highlighter-rouge">ifm3d_ros2</code> version | ifm3d version | ROS 2 distribution |
+| ——————– | ————- | —————— |
+| 1.0.1 DEPRECATED     | 0.93.0        | Galactic           |
+| 1.0.0 DEPRECATED     | 0.92.0        | Galactic           |
+| 0.3.0 DEPRECATED     | 0.17.0        | Dashing, Eloquent  |
+| 0.2.0 DEPRECATED     | 0.12.0        | Dashing            |
+| 0.1.1 DEPRECATED     | 0.12.0        | Dashing            |
+| 0.1.0 DEPRECATED     | 0.12.0        | Dashing            |</p>
+
+<h2 id="license">LICENSE</h2>
+<p>Please see the file called <a href="https://github.com/ifm/ifm3d-ros2/tree/master/./LICENSE">LICENSE</a>.</p>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<p>\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^ Changelog for package
+ifm3d-ros2 \^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^\^ 1.2 ===</p>
+
+<h1 id="120">1.2.0</h1>
+
+<ul>
+  <li>Create an ODS node to publish ODS data:
+    <ul>
+      <li>The launch file [ods.launch.py]{.title-ref} can be used,</li>
+      <li>Add two topics, ["~/ods_info"]{.title-ref} and
+["~/ods_occupancy_map_ros"]{.title-ref},</li>
+      <li>An example launch configuration for ODS is provided
+[ods_default_parameters.yaml]{.title-ref} and can be used with
+the launch file,</li>
+      <li>It is expected that ODS is configured before the node is
+launched. Alternatively, one can use the new
+[config_file]{.title-ref} parameter.</li>
+    </ul>
+  </li>
+  <li>Remove the [diag_mode]{.title-ref} parameter: diagnostic is always
+polled periodically and published to ["/diagnostic"]{.title-ref}</li>
+  <li>Add the [GetDiag]{.title-ref} service for polling filtered
+diagnostic data.</li>
+  <li>Camera info topic:
+    <ul>
+      <li>Add a ["~/camera_info"]{.title-ref} topic for RGB cameras.</li>
+      <li>The ["~/camera_info"]{.title-ref} topic for the TOF cameras
+is published when the [TOF_INFO]{.title-ref} buffer is
+requested, instead of the [INTRINSIC]{.title-ref} buffer.</li>
+    </ul>
+  </li>
+  <li>Add a [config_file]{.title-ref} parameter. It should be formatted
+in JSON and will be used to configure the device when the
+[CONFIGURE]{.title-ref} state is triggered.</li>
+</ul>
+
+<dl>
+  <dt>* Transforms:</dt>
+  <dd>
+    <ul>
+      <li>The [cloud_link]{.title-ref} was renamed to
+[ifm_base_link]{.title-ref}, and is used as the reference ifm
+calibrated coordinate system for all ifm data (RGB, 3D and ODS).</li>
+      <li>The transforms between the [cloud_link]{.title-ref} (now
+[ifm_base_link]{.title-ref}), and the
+[mounting_link]{.title-ref} and [optical_link]{.title-ref} are
+fixed.</li>
+      <li>The [mounting_link]{.title-ref} to [optical_link]{.title-ref}
+transform is read when the first [TOF_INFO]{.title-ref} or
+[RGB_INFO]{.title-ref} buffer is received, and remains
+constant.</li>
+      <li>The [ifm_base_link]{.title-ref} to
+[mounting_link]{.title-ref} transform is published once when
+the first [TOF_INFO]{.title-ref} or [RGB_INFO]{.title-ref}
+buffer is received, and is only re-published subsequently if
+changed.</li>
+      <li>The camera node parameters related to tf publication got
+reworked, the new parameters are:
+        <ul>
+          <li>`tf.base_frame_name`: Name for ifm reference frame</li>
+        </ul>
+      </li>
+    </ul>
+  </dd>
+</dl>
+
+<p>|   * `tf.mounting_frame_name`: Name for the mounting point frame
+|   * `tf.optical_frame_name`: Name for the optical frame
+|   * `tf.publish_base_to_mounting`: Whether the transform from
+  the ifm base link to the camera mounting point should be published
+|   * `tf.publish_mounting_to_optical`: Whether the transform from
+  the cameras mounting point to the optical center should be published</p>
+
+<h2 id="11">1.1</h2>
+
+<p>1.1.0 (unreleased preparations for FW 1.4 release)
+------------------* Update for compatibility with O3R
+FW 1.4.x and ifm3d &gt;= 1.4.3 * Tested with FW 1.4.22 and ifm3d API
+1.4.3 * Tested with FW 1.4.22 and ifm3d API 1.5.3</p>
+
+<h1 id="110">1.1.0</h1>
+
+<ul>
+  <li>Update for compatibility with O3R FW &gt;= 1.0.14 and ifm3d &gt;= 1.2.6
+    <ul>
+      <li>Using ifm3d::O3R instead of ifm3d::Device to access camera</li>
+      <li>Added [buffer_id_list]{.title-ref} param to define which data
+to get from the device and consequently which topics to publish.
+Maps to ifm3d [buffer_id]{.title-ref}.</li>
+    </ul>
+  </li>
+  <li>Remove the need to use cyclonedds: TODO: verification</li>
+  <li>Remove dependency to Boost library</li>
+  <li>Include Dockerfile and helper scripts:
+    <ul>
+      <li>Dockerfile for building the ROS2 node inside a Docker container</li>
+      <li>Helper build and launch scripts for ROS Docker images</li>
+      <li>Adds docker-compose example files for launching the ROS node on
+a O3R edge device: VPU</li>
+    </ul>
+  </li>
+  <li>Moved Publishers into node namespace: This matches the ifm3d-ros2
+node version's naming (&lt;= 1.0.x).</li>
+  <li>Switch to a new camera.launch.py launch file (instead of
+camera_managed and camera_standalone): launches and activates a
+single camera node
+    <ul>
+      <li>focusses on configurability</li>
+      <li>camera_default_parameters.yaml contains only default params</li>
+      <li>Add option for visualization to launch file: If visualization is
+true, RViz2 with the config file from etc is opened</li>
+      <li>Formatting of node names improved</li>
+    </ul>
+  </li>
+  <li>old launch files are marked as deprecated and will be removed with
+next release: please migrate your launch files to the new structure</li>
+  <li>Switching json handling to ifm3d::json</li>
+  <li>Reduce logging level for continuous outputs.</li>
+  <li>Added topics:
+    <ul>
+      <li>diagnostics (published to global /diagnostic topic),</li>
+      <li>camera_info,</li>
+      <li>TOF_INFO,</li>
+      <li>RGB_INFO,</li>
+      <li>extrinsics</li>
+    </ul>
+  </li>
+  <li>Added parameters:
+    <ul>
+      <li>log_level,</li>
+      <li>tf related parameters (see parameters doc for more details),</li>
+      <li>buffer_id_list,</li>
+      <li>diag_mode</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="10">1.0</h2>
+
+<h1 id="104-unreleased">1.0.4 (unreleased)</h1>
+
+<ul>
+  <li>Updating to underlying ifm3d API version 1.1.1</li>
+  <li>Name change for TOF_INFO and RGB_INFO buffer.</li>
+  <li>Added Error, AsynError and AsyncNotification callbacks.</li>
+</ul>
+
+<h1 id="103-unreleased">1.0.3 (unreleased)</h1>
+
+<ul>
+  <li>Updating to underlying ifm3d API version 1.0.1</li>
+  <li>Switching to using buffer_ids instead of schemas to determine data
+types.</li>
+  <li>Introducing buffer_id_utils.hpp for buffer_id handling.</li>
+</ul>
+
+<h1 id="102">1.0.2</h1>
+
+<ul>
+  <li>Fixed tf chain in launchfiles</li>
+</ul>
+
+<h1 id="101">1.0.1</h1>
+
+<ul>
+  <li>Removed dependencies to OpenCV and PCL and the Image module of the
+ifm3d library. Now using the StlImage module of ifm3d.</li>
+  <li>The RGB image is published as a compressed JPEG image. To view it
+with RViz, you can use the image_transport republish node (see
+documentation).</li>
+  <li>Update the launchfiles for compatibility with pyyaml 6.0 (backward
+compatibility maintained down to pyyaml 5.1).</li>
+</ul>
+
+<h1 id="100">1.0.0</h1>
+
+<ul>
+  <li>Update the ROS node for the O3R camera platform</li>
+  <li>add a 2D RGB data publisher</li>
+  <li>add support for specifying the PCIC data communication TCP port</li>
+  <li>add example yaml files and launch file for multi PCIC TCP port
+settings</li>
+  <li>add service functions for setting each camera head to RUN / IDLE
+state</li>
+  <li>update the dump and config service to O3R JSON structure</li>
+  <li>removed unit vector publishing: please use the intrinsic camera
+calibration parameters instead</li>
+  <li>removed the temperature publisher until diagnose chunk is available</li>
+  <li>removed axis permutation for ROS node specific axis order</li>
+  <li>removed xyz image publisher</li>
+</ul>
+
+<h1 id="known-limitations">known limitations</h1>
+
+<ul>
+  <li>DDS settings need to be set to cyclonedds - ROS 2 Galactic is the
+preferred ROS 2 distro atm.</li>
+</ul>
+
+<p>0.3.0 (2020-01-31) --------</p>
+
+<ul>
+  <li>Publish camera temperature (Thanks \@dustingooding of Houston
+Mechatronics)</li>
+  <li>Tested on Eloquent</li>
+</ul>
+
+<p>0.2.0 (2019-06-26) --------</p>
+
+<ul>
+  <li>Provided an implementation of the [Dump]{.title-ref} service</li>
+  <li>Provided an implementation of the [dump]{.title-ref} command-line
+tool</li>
+  <li>Provided an implementation of the [Config]{.title-ref} service</li>
+  <li>Provided an implementation of the [config]{.title-ref} command-line
+tool</li>
+</ul>
+
+<p>0.1.1 (2019-06-25) --------</p>
+
+<ul>
+  <li>Unit vectors are published on a "latched topic". Please see
+[qos.hpp]{.title-ref} for the specifics of the QoS profile
+[ifm3d_ros2::LatchedQoS]{.title-ref}.</li>
+  <li>On-camera extrinsics in support of off-line point cloud computation
+are now exposed.</li>
+  <li>Bootstrapped some unit tests</li>
+  <li>Cleaned up some documentation.</li>
+</ul>
+
+<p>0.1.0 (2019-06-06) --------</p>
+
+<ul>
+  <li>Initial (alpha) release</li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/ifm3d_ros2/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/geometry_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/geometry_msgs#github">geometry_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_auto#github">ament_cmake_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_ros#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_ros#github">ament_cmake_ros  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_index_python#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_index_python#github">ament_index_python  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/launch_testing_ament_cmake#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/launch_testing_ament_cmake#github">launch_testing_ament_cmake  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/builtin_interfaces#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/builtin_interfaces#github">builtin_interfaces  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/diagnostic_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/diagnostic_msgs#github">diagnostic_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/launch#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/launch#github">launch  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/launch_ros#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/launch_ros#github">launch_ros  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/lifecycle_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/lifecycle_msgs#github">lifecycle_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/nav_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/nav_msgs#github">nav_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/nav2_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/nav2_msgs#github">nav2_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclcpp#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclcpp#github">rclcpp  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclcpp_components#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclcpp_components#github">rclcpp_components  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclcpp_lifecycle#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclcpp_lifecycle#github">rclcpp_lifecycle  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rcl_interfaces#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rcl_interfaces#github">rcl_interfaces  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclpy#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclpy#github">rclpy  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rmw#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rmw#github">rmw  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ros2launch#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ros2launch#github">ros2launch  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rosidl_default_generators#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rosidl_default_generators#github">rosidl_default_generators  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/sensor_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/sensor_msgs#github">sensor_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/std_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/std_msgs#github">std_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2_ros#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2_ros#github">tf2_ros  </a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th>Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                      <tr>
+                        <td><a href="/d/python3-opencv">python3-opencv</a></td>
+                      </tr>
+                    
+                  
+                    
+                      <tr>
+                        <td><a href="/d/python3-numpy">python3-numpy</a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No known dependants.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No launch files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <ul>
+            
+              <li><a href="https://github.com/ifm/ifm3d-ros2/tree/master/./msg/InverseIntrinsics.msg" target="_blank">msg/InverseIntrinsics.msg</a></li>
+            
+              <li><a href="https://github.com/ifm/ifm3d-ros2/tree/master/./msg/Zones.msg" target="_blank">msg/Zones.msg</a></li>
+            
+              <li><a href="https://github.com/ifm/ifm3d-ros2/tree/master/./msg/RGBInfo.msg" target="_blank">msg/RGBInfo.msg</a></li>
+            
+              <li><a href="https://github.com/ifm/ifm3d-ros2/tree/master/./msg/Intrinsics.msg" target="_blank">msg/Intrinsics.msg</a></li>
+            
+              <li><a href="https://github.com/ifm/ifm3d-ros2/tree/master/./msg/Extrinsics.msg" target="_blank">msg/Extrinsics.msg</a></li>
+            
+              <li><a href="https://github.com/ifm/ifm3d-ros2/tree/master/./msg/TOFInfo.msg" target="_blank">msg/TOFInfo.msg</a></li>
+            
+          </ul>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <ul>
+            
+              <li><a href="https://github.com/ifm/ifm3d-ros2/tree/master/./srv/Dump.srv" target="_blank">srv/Dump.srv</a></li>
+            
+              <li><a href="https://github.com/ifm/ifm3d-ros2/tree/master/./srv/Softon.srv" target="_blank">srv/Softon.srv</a></li>
+            
+              <li><a href="https://github.com/ifm/ifm3d-ros2/tree/master/./srv/GetDiag.srv" target="_blank">srv/GetDiag.srv</a></li>
+            
+              <li><a href="https://github.com/ifm/ifm3d-ros2/tree/master/./srv/Softoff.srv" target="_blank">srv/Softoff.srv</a></li>
+            
+              <li><a href="https://github.com/ifm/ifm3d-ros2/tree/master/./srv/Config.srv" target="_blank">srv/Config.srv</a></li>
+            
+          </ul>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No plugins found.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>ifm3d_ros2</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/ifm3d_ros2+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/ifm/ifm3d-ros2.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/ifm3d_ros2"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/ifm/ifm3d-ros2/tree/master/."
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/ifm3d_ros2?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/ifm3d_ros2?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=ifm3d_ros2&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "ifm3d_ros2"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,2071 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: vins_estimator</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/vins_estimator/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">vins_estimator</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/vins_estimator">vins_estimator</a> <small>package from <a style="text-decoration:none" href="/r/vslam/github-mrwangmaomao-vslam">vslam</a> repo</small>
+        </h3>
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ORB_SLAM2">
+
+ORB_SLAM2
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/communicate">
+
+communicate
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/learning_tf">
+
+learning_tf
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mbot_description">
+
+mbot_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mbot_gazebo">
+
+mbot_gazebo
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mbot_teleop">
+
+mbot_teleop
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rbx1">
+
+rbx1
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rbx1_apps">
+
+rbx1_apps
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rbx1_bringup">
+
+rbx1_bringup
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rbx1_description">
+
+rbx1_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rbx1_dynamixels">
+
+rbx1_dynamixels
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rbx1_nav">
+
+rbx1_nav
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rbx1_speech">
+
+rbx1_speech
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rbx1_vision">
+
+rbx1_vision
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/robot_vision">
+
+robot_vision
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/robot_voice">
+
+robot_voice
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mbot_bringup">
+
+mbot_bringup
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mbot_navigation">
+
+mbot_navigation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/marm_description">
+
+marm_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/marm_gazebo">
+
+marm_gazebo
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/marm_moveit_config">
+
+marm_moveit_config
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/marm_planning">
+
+marm_planning
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/follower_velocity_smoother">
+
+follower_velocity_smoother
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mbot_follower">
+
+mbot_follower
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mbot_with_arm_moveit_config">
+
+mbot_with_arm_moveit_config
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/example_interfaces">
+
+example_interfaces
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ros2_demo">
+
+ros2_demo
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/plan_and_run">
+
+plan_and_run
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/actionlib_lutorials">
+
+actionlib_lutorials
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/agitros">
+
+agitros
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/cv_camera">
+
+cv_camera
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/industrial_core">
+
+industrial_core
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/industrial_deprecated">
+
+industrial_deprecated
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/industrial_msgs">
+
+industrial_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/industrial_robot_client">
+
+industrial_robot_client
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/industrial_robot_simulator">
+
+industrial_robot_simulator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/industrial_trajectory_filters">
+
+industrial_trajectory_filters
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/industrial_utils">
+
+industrial_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/simple_message">
+
+simple_message
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/learn_gazebo">
+
+learn_gazebo
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/learn_nav_msg">
+
+learn_nav_msg
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/lesson_perception">
+
+lesson_perception
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/myworkcell_core">
+
+myworkcell_core
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/nodelet_tutorial_math">
+
+nodelet_tutorial_math
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/collision_avoidance_pick_and_place">
+
+collision_avoidance_pick_and_place
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/manipulation_msgs">
+
+manipulation_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/face_recognition">
+
+face_recognition
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/robot_setup_tf">
+
+robot_setup_tf
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ros_arduino_bridge">
+
+ros_arduino_bridge
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ros_arduino_firmware">
+
+ros_arduino_firmware
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ros_arduino_msgs">
+
+ros_arduino_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ros_arduino_python">
+
+ros_arduino_python
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ros_industrial_learn">
+
+ros_industrial_learn
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ros_orb">
+
+ros_orb
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rosserial">
+
+rosserial
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rosserial_arduino">
+
+rosserial_arduino
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rosserial_client">
+
+rosserial_client
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rosserial_embeddedlinux">
+
+rosserial_embeddedlinux
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rosserial_mbed">
+
+rosserial_mbed
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rosserial_msgs">
+
+rosserial_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rosserial_python">
+
+rosserial_python
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rosserial_server">
+
+rosserial_server
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rosserial_test">
+
+rosserial_test
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rosserial_tivac">
+
+rosserial_tivac
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rosserial_windows">
+
+rosserial_windows
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rosserial_xbee">
+
+rosserial_xbee
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/usb_cam">
+
+usb_cam
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/using_markers_rviz">
+
+using_markers_rviz
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vision_system">
+
+vision_system
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/voice_system">
+
+voice_system
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/ar_demo">
+
+ar_demo
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/benchmark_publisher">
+
+benchmark_publisher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/camera_model">
+
+camera_model
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/feature_tracker">
+
+feature_tracker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/pose_graph">
+
+pose_graph
+</a>
+            
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+vins_estimator
+</span>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/camera_models">
+
+camera_models
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/global_fusion">
+
+global_fusion
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/loop_fusion">
+
+loop_fusion
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vins">
+
+vins
+</a>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/vins_estimator"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/mrwangmaomao/vslam/tree/master/VINS/VINS-Mono-code-annotation-master/vins_estimator"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-primary">9</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">2</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>0.0.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>TODO</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-info">
+                  
+                    CATKIN</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default">Vision SLAM study and research</span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/mrwangmaomao/vslam.git">https://github.com/mrwangmaomao/vslam.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">master</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2019-04-01
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <em>No category tags.</em>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/vslam/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/vslam/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/vslam/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            The vins_estimator package
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional links.</em>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>qintong</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional authors.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/mrwangmaomao/vslam/tree/master/VINS/VINS-Mono-code-annotation-master/vins_estimator/README.md" title="Open in git repository">VINS/VINS-Mono-code-annotation-master/vins_estimator/README.md</a></div>
+              <div class="panel-body">
+                    <div class="rendered-markdown">
+<h1 id="视觉惯组系统">视觉惯组系统</h1>
+
+<hr>
+<h2 id="1-各文件作用">1 各文件作用</h2>
+
+<ul>
+  <li>
+<strong>factor</strong> 实现IMU、camera等残差模型，涉及了ceres优化库</li>
+  <li>
+<strong>initial</strong> 系统初始化，外参标定，SFM</li>
+  <li>
+<strong>loop_closure</strong> 闭环检测，这里主要利用DBOW2作者的一个demo程序</li>
+  <li>
+<strong>utility</strong> 相机显示，四元数转换，系统rviz可视化</li>
+  <li>
+<strong>estimator_node</strong> (main()函数) 执行多线程measurement_process、loop_detection、pose_graph</li>
+  <li>
+<strong>feature_manager.cpp</strong>特征点管理，三角化，关键帧操作</li>
+  <li>
+<strong>parameters.cpp</strong>外部系统设置参数输入</li>
+</ul>
+
+<hr>
+
+<h2 id="2-estimator_node文件">2 estimator_node文件</h2>
+<h3 id="main函数">main函数</h3>
+<h5 id="step1">step1</h5>
+<p>初始化”vins_estimator”节点，读取配置文件参数。</p>
+<h5 id="step2">step2</h5>
+<p>发布Rviz相关话题
+订阅 “图像特征点数据” “复位estimator” “根据回环检测信息进行重定位”三个话题</p>
+<h5 id="step3">step3</h5>
+<p>执行process()线程函数。主要处理VIO后端，包括IMU预积分、松耦合初始化和局部BA</p>
+<ul>
+  <li>调用匿名函数，从缓存队列中读取IMU数据和图像特征点数据，如果measurements为空，则匿名函数返回false，调用wait(lock),释放m_buf（为了使图像和IMU回调函数可以访问缓存队列），阻塞当前线程，等待被con.notify_one()唤醒直到measurements不为空时（成功从缓存队列获取数据），匿名函数返回true，则可以退出while循环。</li>
+  <li>遍历数组中各帧的IMU数据，进行预积分。如果第一帧IMU数据的时间戳晚于图像特征点的时间戳，需要对IMU数据进行插值得到图像帧时间戳对应的IMU数据，然后进行预积分estimator.processIMU(dt_1, Vector3d(dx, dy, dz), Vector3d(rx, ry, rz));</li>
+  <li>检测是否有回环 重定位，如果有重定位，需要estimator.setReloFrame(frame_stamp, frame_index, match_points, relo_t, relo_r);</li>
+  <li>将图像特征点数据存到一个map容器中，键是特征点id，键值是特征点。执行处理图像程序estimator.processImage(image, img_msg-&gt;header);</li>
+  <li>每处理完一帧图像特征点数据，发布话题</li>
+  <li>检测是否需要优化，VINS系统完成滑动窗口优化后，用优化后的结果，更新里程计数据update();</li>
+</ul>
+
+<h3 id="线程锁的使用">线程锁的使用</h3>
+<p>|线程锁|作用|
+|-|-|
+|m_buf|处理多个线程使用imu_buf和feature_buf的冲突|
+|m_state|处理多个线程使用当前里程计信息（即tmp_P、tmp_Q、tmp_V）的冲突|
+|m_estimator|处理多个线程使用VINS系统对象（即Estimator类的实例estimator）的冲突|</p>
+
+<h2 id="3-预积分-factorintegration_baseh">3 预积分 factor/integration_base.h</h2>
+<p>参考:<br>
+https://blog.csdn.net/LilyNothing/article/details/79113841</p>
+
+<p>https://blog.csdn.net/lancelot_vim/article/details/77888788</p>
+
+<h5 id="为什么需要预积分">为什么需要预积分</h5>
+<p><img src="https://github.com/MRwangmaomao/VSLAM/blob/master/VINS/VINS-Mono-code-annotation-master/vins_estimator/src/factor/OKVIS_pre_integration.png" alt="1"></p>
+
+<p>在两帧视觉帧之间，往往有很多IMU的采集数据，其中计算速度积分的时候需要相机当前位姿，将当前位置引入到世界坐标系$C_Ws$，从p时刻数字积分一次得到p+1时刻，然后根据公式乘以p时刻相机位姿得到世界坐标系，最终导致要对k时刻开始的每一个时刻的相机pose求导，计算代价很大，由于状态变了，积分的值也会跟着变，每优化一次就要重新算一次积分。</p>
+
+<h5 id="中点积分">中点积分</h5>
+<p>\(w=(w_0+w_1)/2+bg --&gt;更新角速率\) 
+\(R=R_0 \times \frac{w}{2} --&gt;更新旋转\) 
+\(a_0=R_0(a_0^{'}-ba) --&gt;上一次载体的加速度\) 
+\(a_1=R_0(a_1^{'}-ba) --&gt;当前载体的加速度\) 
+\(a=(a_0+a_1)/2 --&gt;更新加速度\) 
+\(\Delta P=\Delta P^{'}+\Delta V^{'}\times dt + \frac{1}{2}a\Delta t^2 --&gt;更新位移\)
+\(\Delta V=\Delta V^{'} + a\Delta t --&gt;更新速度\)<br>
+对应代码(factor/interation_base.h midPointIntegration()函数)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Vector3d un_acc_0 = delta_q * (_acc_0 - linearized_ba);
+Vector3d un_gyr = 0.5 * (_gyr_0 + _gyr_1) - linearized_bg;
+result_delta_q = delta_q * Quaterniond(1, un_gyr(0) * _dt / 2, un_gyr(1) * _dt / 2, un_gyr(2) * _dt / 2);
+Vector3d un_acc_1 = result_delta_q * (_acc_1 - linearized_ba);
+Vector3d un_acc = 0.5 * (un_acc_0 + un_acc_1);
+result_delta_p = delta_p + delta_v * _dt + 0.5 * un_acc * _dt * _dt;
+result_delta_v = delta_v + un_acc * _dt;
+result_linearized_ba = linearized_ba;
+result_linearized_bg = linearized_bg;    
+</code></pre></div></div>
+
+<p><img src="https://github.com/MRwangmaomao/VSLAM/blob/master/VINS/VINS-Mono-code-annotation-master/vins_estimator/src/factor/IMU_and_Camera_relationship.jpg" alt="yujifen"></p>
+
+<h5 id="误差状态方程">误差状态方程</h5>
+<p>公式的推导详细看<a href="https://github.com/MRwangmaomao/VSLAM/blob/master/VINS/VINS-Mono-code-annotation-master/paper/VINS-Mono%E8%AF%A6%E8%A7%A3.pdf">VINS-Mono详解</a>
+中的2.2和2.3部分。
+雅克比矩阵初始为单位矩阵，协方差矩阵初始为0矩阵。</p>
+
+<p>当加速度计和陀螺仪的偏置发生微小改变时，就可以根据雅克比矩阵对预计积分项进行修正，避免重复积分。</p>
+
+<p>设置F和V矩阵</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MatrixXd F = MatrixXd::Zero(15, 15);
+F.block&lt;3, 3&gt;(0, 0) = Matrix3d::Identity();
+F.block&lt;3, 3&gt;(0, 3) = -0.25 * delta_q.toRotationMatrix() * R_a_0_x * _dt * _dt + 
+                        -0.25 * result_delta_q.toRotationMatrix() * R_a_1_x * (Matrix3d::Identity() - R_w_x * _dt) * _dt * _dt;
+F.block&lt;3, 3&gt;(0, 6) = MatrixXd::Identity(3,3) * _dt;
+F.block&lt;3, 3&gt;(0, 9) = -0.25 * (delta_q.toRotationMatrix() + result_delta_q.toRotationMatrix()) * _dt * _dt;
+F.block&lt;3, 3&gt;(0, 12) = -0.25 * result_delta_q.toRotationMatrix() * R_a_1_x * _dt * _dt * -_dt;
+F.block&lt;3, 3&gt;(3, 3) = Matrix3d::Identity() - R_w_x * _dt;
+F.block&lt;3, 3&gt;(3, 12) = -1.0 * MatrixXd::Identity(3,3) * _dt;
+F.block&lt;3, 3&gt;(6, 3) = -0.5 * delta_q.toRotationMatrix() * R_a_0_x * _dt + 
+                        -0.5 * result_delta_q.toRotationMatrix() * R_a_1_x * (Matrix3d::Identity() - R_w_x * _dt) * _dt;
+F.block&lt;3, 3&gt;(6, 6) = Matrix3d::Identity();
+F.block&lt;3, 3&gt;(6, 9) = -0.5 * (delta_q.toRotationMatrix() + result_delta_q.toRotationMatrix()) * _dt;
+F.block&lt;3, 3&gt;(6, 12) = -0.5 * result_delta_q.toRotationMatrix() * R_a_1_x * _dt * -_dt;
+F.block&lt;3, 3&gt;(9, 9) = Matrix3d::Identity();
+F.block&lt;3, 3&gt;(12, 12) = Matrix3d::Identity();
+//cout&lt;&lt;"A"&lt;&lt;endl&lt;&lt;A&lt;&lt;endl;
+
+MatrixXd V = MatrixXd::Zero(15,18);
+V.block&lt;3, 3&gt;(0, 0) =  0.25 * delta_q.toRotationMatrix() * _dt * _dt;
+V.block&lt;3, 3&gt;(0, 3) =  0.25 * -result_delta_q.toRotationMatrix() * R_a_1_x  * _dt * _dt * 0.5 * _dt;
+V.block&lt;3, 3&gt;(0, 6) =  0.25 * result_delta_q.toRotationMatrix() * _dt * _dt;
+V.block&lt;3, 3&gt;(0, 9) =  V.block&lt;3, 3&gt;(0, 3);
+V.block&lt;3, 3&gt;(3, 3) =  0.5 * MatrixXd::Identity(3,3) * _dt;
+V.block&lt;3, 3&gt;(3, 9) =  0.5 * MatrixXd::Identity(3,3) * _dt;
+V.block&lt;3, 3&gt;(6, 0) =  0.5 * delta_q.toRotationMatrix() * _dt;
+V.block&lt;3, 3&gt;(6, 3) =  0.5 * -result_delta_q.toRotationMatrix() * R_a_1_x  * _dt * 0.5 * _dt;
+V.block&lt;3, 3&gt;(6, 6) =  0.5 * result_delta_q.toRotationMatrix() * _dt;
+V.block&lt;3, 3&gt;(6, 9) =  V.block&lt;3, 3&gt;(6, 3);
+V.block&lt;3, 3&gt;(9, 12) = MatrixXd::Identity(3,3) * _dt;
+V.block&lt;3, 3&gt;(12, 15) = MatrixXd::Identity(3,3) * _dt;
+</code></pre></div></div>
+
+<p>更新雅克比矩阵和协方差矩阵</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jacobian = F * jacobian; //更新雅可比矩阵
+covariance = F * covariance * F.transpose() + V * noise * V.transpose(); //更新协方差矩阵
+</code></pre></div></div>
+
+<p>计算残差</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Eigen::Vector3d dba = Bai - linearized_ba;
+Eigen::Vector3d dbg = Bgi - linearized_bg;
+
+Eigen::Quaterniond corrected_delta_q = delta_q * Utility::deltaQ(dq_dbg * dbg);//对旋转进行校正
+Eigen::Vector3d corrected_delta_v = delta_v + dv_dba * dba + dv_dbg * dbg;//对速度进行校正
+Eigen::Vector3d corrected_delta_p = delta_p + dp_dba * dba + dp_dbg * dbg;//对位移进行校正
+
+//计算残差
+residuals.block&lt;3, 1&gt;(O_P, 0) = Qi.inverse() * (0.5 * G * sum_dt * sum_dt + Pj - Pi - Vi * sum_dt) - corrected_delta_p;
+residuals.block&lt;3, 1&gt;(O_R, 0) = 2 * (corrected_delta_q.inverse() * (Qi.inverse() * Qj)).vec();
+residuals.block&lt;3, 1&gt;(O_V, 0) = Qi.inverse() * (G * sum_dt + Vj - Vi) - corrected_delta_v;
+residuals.block&lt;3, 1&gt;(O_BA, 0) = Baj - Bai;
+residuals.block&lt;3, 1&gt;(O_BG, 0) = Bgj - Bgi;
+</code></pre></div></div>
+
+<hr>
+
+<h2 id="4-滑动窗口的维护-estimatorslidewindow">4 滑动窗口的维护 Estimator::slideWindow()</h2>
+<p>窗口的大小默认是10。</p>
+
+<p>每当进来一个新的图像帧的时候，首先判断它与窗口里面存储的之前的那一帧的的相对位移，就是与第10帧的特征点的相对位置，用特征点的相对位移来表示。</p>
+
+<p>如果特征点的平均相对位移大于某一个阈值，就认为是一个新的关键帧。就把这个新的关键帧压入到窗口里面，就是压入到第10个位置，然后其它的关键帧都往前移动。第一个位置的关键帧被移出去，边缘化。 <br>
+如果不是新的关键帧，就把之前的第10帧边缘化掉，这个新的一帧替换成为第10帧。</p>
+
+<p>总之，无论是哪种情况，这个新的一帧肯定都会成为窗口里面的第10帧。</p>
+
+<p>边缘化，是在优化之后才进行的，而且最新的这帧上面观察到的新的特征点并不参与优化。所以，优化的时候，是包括最新的这一帧的11帧的姿态，以及前10帧的特征点在每一帧的投影，包括它们在最新这帧的投影点。所以para_Pose之类的待优化变量的数组长度是11。</p>
+
+<hr>
+<h2 id="5-处理接收的图像帧数据-estimatorprocessimage">5 处理接收的图像帧数据 Estimator::processImage()</h2>
+
+<h5 id="step1-计算平均视差-featuremanageraddfeaturecheckparallax">step1 计算平均视差 FeatureManager::addFeatureCheckParallax()</h5>
+<p>当前帧图像特征点存入feature中后，并不会立即判断是否将当前帧添加为新的关键帧，而是去判断当前帧的前一帧（第2最新帧）。当前帧图像要在下一次接收到图像时进行判断（那个时候，当前帧已经变成了第2最新帧）。</p>
+
+<p>计算第2最新帧与第3最新帧之间的平均视差（当前帧是第1最新帧）,然后判断是否把第2最新帧添加为关键帧。f_manager.addFeatureCheckParallax(frame_count, image, td)</p>
+
+<p>相机与IMU外参的在线标定。</p>
+
+<p>在未完成初始化时，如果窗口没有塞满，不进行初始化，直到窗口塞满时进行初始化initialStructure()。如果初始化不成功，则滑动窗口。如果初始化成功，进行紧耦合优化 solveOdometry()，对窗口进行滑动，去除滑出了滑动窗口的特征点。</p>
+
+<p>在完成初始化时，进行紧耦合优化 solveOdometry()，对窗口进行滑动，去除滑出了滑动窗口的特征点。同时判断系统是否失效。</p>
+
+<h2 id="6-系统初始化">6 系统初始化</h2>
+<p>用SFM求解滑动窗口中所有帧的位姿和所有路标点的3D位置。<strong>将SFM的结果与IMU预积分的值进行对齐</strong>，实现对陀螺仪偏置的矫正。<br>
+求解每一帧对应的速度，求解重力向量方向，恢复单目相机的尺度因子。在初始化过程中，<strong>没有对加速度计的偏置进行较正</strong>，因为重力是初始化过程中待求的量，而加速度计偏置与重力耦合，而且系统的加速度相对于重力加速度很小，所以加速度计偏置在初始化过程中很难观测，因此不考虑加速度计偏置的矫正。</p>
+
+<h3 id="61-通过重力variance确保imu有足够的excitation">6.1 通过重力variance确保IMU有足够的excitation</h3>
+
+<h3 id="62-选定帧在滑动窗口中的帧号">6.2 选定帧在滑动窗口中的帧号</h3>
+
+<h3 id="63-sfm">6.3 SFM</h3>
+<p>先在关键帧窗口里面找到第1帧，第1帧与最后一帧有足够的像素位移，并且能用8点法计算出旋转和位移。<br>
+以1帧的姿态为世界坐标系。先从1帧开始与最后一帧进行三角定位。<br>
+再用pnp估计出下一帧的位姿，下一帧与最后一帧三角定位出更多的三维点。<br>
+重复上一步骤到倒数第二帧。<br>
+从2帧开始往第一帧，逐帧pnp，再与第1帧进行三角定位得到更多三维点。<br>
+每帧pnp的位姿初值都用上一个关键帧的位姿，剩下的那些还没有被三角定位的特征点，通过它被观察到的第一帧和最后一帧进行三角定位。<br>
+固定住第一帧的位置和姿态，固定住最后一帧的位置，这时候图像的位姿和点的位置都不太难，所以用ceres统一一起优化图像位姿和三维点位置，优化重投影误差。优化的测量值是特征点在每帧中被观察到的位置，可以转成重投影误差约束。有关的自变量是每帧图像的位姿，特征点的三维坐标。 <br>
+优化完成之后，即用ceres优化出这些关键帧的位姿和地图点后，再用pnp算出在这段时间区域内的所有图像的位姿。每个图像的计算都用下一个关键帧的位姿来当pnp的初值。</p>
+
+<h3 id="64-通过pnp求解所有帧">6.4 通过PnP求解所有帧</h3>
+
+<h3 id="65-视觉sfm的结果与imu预积分结果对齐visualinitialalign这部分内容详细看论文">6.5 视觉SFM的结果与IMU预积分结果对齐visualInitialAlign()（这部分内容详细看论文）</h3>
+<p>视觉SFM的结果与IMU预积分结果对齐 initial/initial_aligment.cpp
+根据视觉SFM的结果来校正陀螺仪的Bias，注意得到了新的Bias后对应的预积分需要repropagate,对应代码中的solveGyroscopeBias()函数</p>
+
+<p>初始化速度、重力向量和尺度因子，这一部分对应代码initial_aligment.cpp中的LinearAlignment()</p>
+
+<p>重力细化</p>
+
+<h2 id="7-相机和imu外参的旋转">7 相机和IMU外参的旋转</h2>
+<p>用机器人手眼标定的方法计算出外参中的旋转。<br>
+其中$q_{b_{k+1}^{b_k}}$是陀螺仪预积分得到的，$q_{C_{k+1}^{C_k}}$是用8点法对前后帧对应的特征点进行计算得到的，</p>
+
+<h2 id="8-vio紧耦合优化">8 VIO紧耦合优化</h2>
+
+<p>VINS-Mono优化的状态向量包括滑动窗口内的n+1个关键帧时刻IMU坐标系的位置、姿态、旋转、加速度计偏置和陀螺仪偏置，Camera到IMU的外参，m+1个3D路标点的逆深度。</p>
+
+<h3 id="81-滑动窗口紧耦合优化">8.1 滑动窗口紧耦合优化</h3>
+
+<h2 id="rviz可视化">rviz可视化</h2>
+
+<p>注册发布话题，主要用于可视化</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>话题</th>
+      <th>名称</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pub_latest_odometry</td>
+      <td>imu_propagate</td>
+    </tr>
+    <tr>
+      <td>pub_path</td>
+      <td>path</td>
+    </tr>
+    <tr>
+      <td>relocalization_path</td>
+      <td>relocalization_path</td>
+    </tr>
+    <tr>
+      <td>pub_odometry</td>
+      <td>odometry</td>
+    </tr>
+    <tr>
+      <td>pub_point_cloud</td>
+      <td>point_cloud</td>
+    </tr>
+    <tr>
+      <td>pub_margin_cloud</td>
+      <td>point_cloud</td>
+    </tr>
+    <tr>
+      <td>pub_key_poses</td>
+      <td>key_poses</td>
+    </tr>
+    <tr>
+      <td>pub_camera_pose</td>
+      <td>camera_pose</td>
+    </tr>
+    <tr>
+      <td>pub_camera_pose_visual</td>
+      <td>camera_pose_visual</td>
+    </tr>
+    <tr>
+      <td>pub_keyframe_pose</td>
+      <td>keyframe_pose</td>
+    </tr>
+    <tr>
+      <td>pub_keyframe_point</td>
+      <td>keyframe_point</td>
+    </tr>
+    <tr>
+      <td>pub_extrinsic</td>
+      <td>extrinsic</td>
+    </tr>
+    <tr>
+      <td>pub_relo_relative_pose</td>
+      <td>relo_relative_pose</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <em>No CHANGELOG found.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/vins_estimator/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/roscpp#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/roscpp#github">roscpp  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/catkin#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/catkin#github">catkin  </a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No direct system dependencies.</em>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No known dependants.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <ul>
+            
+              <li><a href="https://github.com/mrwangmaomao/vslam/tree/master/VINS/VINS-Mono-code-annotation-master/vins_estimator/launch/black_box.launch" target="_blank">launch/black_box.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>config_path</strong> <em>&#91;default: $(find feature_tracker)/../config/black_box/black_box_config.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>vins_path</strong> <em>&#91;default: $(find feature_tracker)/../config/../&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/mrwangmaomao/vslam/tree/master/VINS/VINS-Mono-code-annotation-master/vins_estimator/launch/euroc_no_extrinsic_param.launch" target="_blank">launch/euroc_no_extrinsic_param.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>config_path</strong> <em>&#91;default: $(find feature_tracker)/../config/euroc/euroc_config_no_extrinsic.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>vins_path</strong> <em>&#91;default: $(find feature_tracker)/../config/../&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/mrwangmaomao/vslam/tree/master/VINS/VINS-Mono-code-annotation-master/vins_estimator/launch/cla.launch" target="_blank">launch/cla.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>config_path</strong> <em>&#91;default: $(find feature_tracker)/../config/cla/cla_config.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>vins_path</strong> <em>&#91;default: $(find feature_tracker)/../config/../&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/mrwangmaomao/vslam/tree/master/VINS/VINS-Mono-code-annotation-master/vins_estimator/launch/3dm.launch" target="_blank">launch/3dm.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>config_path</strong> <em>&#91;default: $(find feature_tracker)/../config/3dm/3dm_config.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>vins_path</strong> <em>&#91;default: $(find feature_tracker)/../config/../&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/mrwangmaomao/vslam/tree/master/VINS/VINS-Mono-code-annotation-master/vins_estimator/launch/vins_rviz.launch" target="_blank">launch/vins_rviz.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/mrwangmaomao/vslam/tree/master/VINS/VINS-Mono-code-annotation-master/vins_estimator/launch/euroc.launch" target="_blank">launch/euroc.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>config_path</strong> <em>&#91;default: $(find feature_tracker)/../config/euroc/euroc_config.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>vins_path</strong> <em>&#91;default: $(find feature_tracker)/../config/../&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/mrwangmaomao/vslam/tree/master/VINS/VINS-Mono-code-annotation-master/vins_estimator/launch/tum.launch" target="_blank">launch/tum.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>config_path</strong> <em>&#91;default: $(find feature_tracker)/../config/tum/tum_config.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>vins_path</strong> <em>&#91;default: $(find feature_tracker)/../config/../&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/mrwangmaomao/vslam/tree/master/VINS/VINS-Mono-code-annotation-master/vins_estimator/launch/realsense_fisheye.launch" target="_blank">launch/realsense_fisheye.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>config_path</strong> <em>&#91;default: $(find feature_tracker)/../config/realsense/realsense_fisheye_config.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>vins_path</strong> <em>&#91;default: $(find feature_tracker)/../config/../&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/mrwangmaomao/vslam/tree/master/VINS/VINS-Mono-code-annotation-master/vins_estimator/launch/realsense_color.launch" target="_blank">launch/realsense_color.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>config_path</strong> <em>&#91;default: $(find feature_tracker)/../config/realsense/realsense_color_config.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>vins_path</strong> <em>&#91;default: $(find feature_tracker)/../config/../&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No message files found.</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No plugins found.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>vins_estimator</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/vins_estimator+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/mrwangmaomao/vslam.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/vins_estimator"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/mrwangmaomao/vslam/tree/master/VINS/VINS-Mono-code-annotation-master/vins_estimator"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/vins_estimator?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/vins_estimator?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=vins_estimator&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "vins_estimator"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,4790 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: autoware_image_projection_based_fusion</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/autoware_image_projection_based_fusion/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">autoware_image_projection_based_fusion</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/autoware_image_projection_based_fusion">autoware_image_projection_based_fusion</a> <small>package from <a style="text-decoration:none" href="/r/autoware_universe/github-autowarefoundation-autoware_universe">autoware_universe</a> repo</small>
+        </h3>
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_adapi_specs">
+
+autoware_adapi_specs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_agnocast_wrapper">
+
+autoware_agnocast_wrapper
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_auto_common">
+
+autoware_auto_common
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_component_interface_specs_universe">
+
+autoware_component_interface_specs_universe
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_component_interface_tools">
+
+autoware_component_interface_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_component_interface_utils">
+
+autoware_component_interface_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_cuda_dependency_meta">
+
+autoware_cuda_dependency_meta
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_fake_test_node">
+
+autoware_fake_test_node
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_glog_component">
+
+autoware_glog_component
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_goal_distance_calculator">
+
+autoware_goal_distance_calculator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_grid_map_utils">
+
+autoware_grid_map_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_path_distance_calculator">
+
+autoware_path_distance_calculator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_polar_grid">
+
+autoware_polar_grid
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_time_utils">
+
+autoware_time_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_recognition_marker_publisher">
+
+autoware_traffic_light_recognition_marker_publisher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_utils">
+
+autoware_traffic_light_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_universe_utils">
+
+autoware_universe_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_api_utils">
+
+tier4_api_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_autonomous_emergency_braking">
+
+autoware_autonomous_emergency_braking
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_collision_detector">
+
+autoware_collision_detector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_control_performance_analysis">
+
+autoware_control_performance_analysis
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_control_validator">
+
+autoware_control_validator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_external_cmd_selector">
+
+autoware_external_cmd_selector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_joy_controller">
+
+autoware_joy_controller
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lane_departure_checker">
+
+autoware_lane_departure_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_mpc_lateral_controller">
+
+autoware_mpc_lateral_controller
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_obstacle_collision_checker">
+
+autoware_obstacle_collision_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_operation_mode_transition_manager">
+
+autoware_operation_mode_transition_manager
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pid_longitudinal_controller">
+
+autoware_pid_longitudinal_controller
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_predicted_path_checker">
+
+autoware_predicted_path_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pure_pursuit">
+
+autoware_pure_pursuit
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_shift_decider">
+
+autoware_shift_decider
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_smart_mpc_trajectory_follower">
+
+autoware_smart_mpc_trajectory_follower
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_trajectory_follower_base">
+
+autoware_trajectory_follower_base
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_trajectory_follower_node">
+
+autoware_trajectory_follower_node
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_vehicle_cmd_gate">
+
+autoware_vehicle_cmd_gate
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_control_evaluator">
+
+autoware_control_evaluator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_kinematic_evaluator">
+
+autoware_kinematic_evaluator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_localization_evaluator">
+
+autoware_localization_evaluator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_perception_online_evaluator">
+
+autoware_perception_online_evaluator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_planning_evaluator">
+
+autoware_planning_evaluator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_scenario_simulator_v2_adapter">
+
+autoware_scenario_simulator_v2_adapter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_autoware_api_launch">
+
+tier4_autoware_api_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_control_launch">
+
+tier4_control_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_localization_launch">
+
+tier4_localization_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_map_launch">
+
+tier4_map_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_perception_launch">
+
+tier4_perception_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_planning_launch">
+
+tier4_planning_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_sensing_launch">
+
+tier4_sensing_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_simulator_launch">
+
+tier4_simulator_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_system_launch">
+
+tier4_system_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_vehicle_launch">
+
+tier4_vehicle_launch
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_geo_pose_projector">
+
+autoware_geo_pose_projector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_gyro_odometer">
+
+autoware_gyro_odometer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_ar_tag_based_localizer">
+
+autoware_ar_tag_based_localizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_landmark_manager">
+
+autoware_landmark_manager
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lidar_marker_localizer">
+
+autoware_lidar_marker_localizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_localization_error_monitor">
+
+autoware_localization_error_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_ndt_scan_matcher">
+
+autoware_ndt_scan_matcher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pose2twist">
+
+autoware_pose2twist
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pose_covariance_modifier">
+
+autoware_pose_covariance_modifier
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pose_estimator_arbiter">
+
+autoware_pose_estimator_arbiter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pose_initializer">
+
+autoware_pose_initializer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pose_instability_detector">
+
+autoware_pose_instability_detector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/yabloc_common">
+
+yabloc_common
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/yabloc_image_processing">
+
+yabloc_image_processing
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/yabloc_monitor">
+
+yabloc_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/yabloc_particle_filter">
+
+yabloc_particle_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/yabloc_pose_initializer">
+
+yabloc_pose_initializer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lanelet2_map_visualizer">
+
+autoware_lanelet2_map_visualizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_map_height_fitter">
+
+autoware_map_height_fitter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_map_tf_generator">
+
+autoware_map_tf_generator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_bevfusion">
+
+autoware_bevfusion
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_bytetrack">
+
+autoware_bytetrack
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_cluster_merger">
+
+autoware_cluster_merger
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_compare_map_segmentation">
+
+autoware_compare_map_segmentation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_crosswalk_traffic_light_estimator">
+
+autoware_crosswalk_traffic_light_estimator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_detected_object_feature_remover">
+
+autoware_detected_object_feature_remover
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_detected_object_validation">
+
+autoware_detected_object_validation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_detection_by_tracker">
+
+autoware_detection_by_tracker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_elevation_map_loader">
+
+autoware_elevation_map_loader
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_euclidean_cluster">
+
+autoware_euclidean_cluster
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_ground_segmentation">
+
+autoware_ground_segmentation
+</a>
+            
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+autoware_image_projection_based_fusion
+</span>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lidar_apollo_instance_segmentation">
+
+autoware_lidar_apollo_instance_segmentation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lidar_centerpoint">
+
+autoware_lidar_centerpoint
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lidar_transfusion">
+
+autoware_lidar_transfusion
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_map_based_prediction">
+
+autoware_map_based_prediction
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_multi_object_tracker">
+
+autoware_multi_object_tracker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_object_merger">
+
+autoware_object_merger
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_object_range_splitter">
+
+autoware_object_range_splitter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_object_velocity_splitter">
+
+autoware_object_velocity_splitter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_occupancy_grid_map_outlier_filter">
+
+autoware_occupancy_grid_map_outlier_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_probabilistic_occupancy_grid_map">
+
+autoware_probabilistic_occupancy_grid_map
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_crossing_objects_noise_filter">
+
+autoware_radar_crossing_objects_noise_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_fusion_to_detected_object">
+
+autoware_radar_fusion_to_detected_object
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_object_clustering">
+
+autoware_radar_object_clustering
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_object_tracker">
+
+autoware_radar_object_tracker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_tracks_msgs_converter">
+
+autoware_radar_tracks_msgs_converter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_raindrop_cluster_filter">
+
+autoware_raindrop_cluster_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_shape_estimation">
+
+autoware_shape_estimation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_simple_object_merger">
+
+autoware_simple_object_merger
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_tensorrt_classifier">
+
+autoware_tensorrt_classifier
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_tensorrt_common">
+
+autoware_tensorrt_common
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_tensorrt_plugins">
+
+autoware_tensorrt_plugins
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_tensorrt_yolox">
+
+autoware_tensorrt_yolox
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_tracking_object_merger">
+
+autoware_tracking_object_merger
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_arbiter">
+
+autoware_traffic_light_arbiter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_category_merger">
+
+autoware_traffic_light_category_merger
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_classifier">
+
+autoware_traffic_light_classifier
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_fine_detector">
+
+autoware_traffic_light_fine_detector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_map_based_detector">
+
+autoware_traffic_light_map_based_detector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_multi_camera_fusion">
+
+autoware_traffic_light_multi_camera_fusion
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_occlusion_predictor">
+
+autoware_traffic_light_occlusion_predictor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_selector">
+
+autoware_traffic_light_selector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_traffic_light_visualization">
+
+autoware_traffic_light_visualization
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/perception_utils">
+
+perception_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_costmap_generator">
+
+autoware_costmap_generator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_external_velocity_limit_selector">
+
+autoware_external_velocity_limit_selector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_freespace_planner">
+
+autoware_freespace_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_freespace_planning_algorithms">
+
+autoware_freespace_planning_algorithms
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_mission_planner_universe">
+
+autoware_mission_planner_universe
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_obstacle_cruise_planner">
+
+autoware_obstacle_cruise_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_obstacle_stop_planner">
+
+autoware_obstacle_stop_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_path_optimizer">
+
+autoware_path_optimizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_path_smoother">
+
+autoware_path_smoother
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_planning_validator">
+
+autoware_planning_validator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_remaining_distance_time_calculator">
+
+autoware_remaining_distance_time_calculator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_rtc_interface">
+
+autoware_rtc_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_scenario_selector">
+
+autoware_scenario_selector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_surround_obstacle_checker">
+
+autoware_surround_obstacle_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_avoidance_by_lane_change_module">
+
+autoware_behavior_path_avoidance_by_lane_change_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_dynamic_obstacle_avoidance_module">
+
+autoware_behavior_path_dynamic_obstacle_avoidance_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_external_request_lane_change_module">
+
+autoware_behavior_path_external_request_lane_change_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_goal_planner_module">
+
+autoware_behavior_path_goal_planner_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_lane_change_module">
+
+autoware_behavior_path_lane_change_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_planner">
+
+autoware_behavior_path_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_planner_common">
+
+autoware_behavior_path_planner_common
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_sampling_planner_module">
+
+autoware_behavior_path_sampling_planner_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_side_shift_module">
+
+autoware_behavior_path_side_shift_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_start_planner_module">
+
+autoware_behavior_path_start_planner_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_path_static_obstacle_avoidance_module">
+
+autoware_behavior_path_static_obstacle_avoidance_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_blind_spot_module">
+
+autoware_behavior_velocity_blind_spot_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_crosswalk_module">
+
+autoware_behavior_velocity_crosswalk_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_detection_area_module">
+
+autoware_behavior_velocity_detection_area_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_intersection_module">
+
+autoware_behavior_velocity_intersection_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_no_drivable_lane_module">
+
+autoware_behavior_velocity_no_drivable_lane_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_no_stopping_area_module">
+
+autoware_behavior_velocity_no_stopping_area_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_occlusion_spot_module">
+
+autoware_behavior_velocity_occlusion_spot_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_rtc_interface">
+
+autoware_behavior_velocity_rtc_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_run_out_module">
+
+autoware_behavior_velocity_run_out_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_speed_bump_module">
+
+autoware_behavior_velocity_speed_bump_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_template_module">
+
+autoware_behavior_velocity_template_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_traffic_light_module">
+
+autoware_behavior_velocity_traffic_light_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_virtual_traffic_light_module">
+
+autoware_behavior_velocity_virtual_traffic_light_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_walkway_module">
+
+autoware_behavior_velocity_walkway_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_dynamic_obstacle_stop_module">
+
+autoware_motion_velocity_dynamic_obstacle_stop_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_obstacle_cruise_module">
+
+autoware_motion_velocity_obstacle_cruise_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_obstacle_slow_down_module">
+
+autoware_motion_velocity_obstacle_slow_down_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_obstacle_velocity_limiter_module">
+
+autoware_motion_velocity_obstacle_velocity_limiter_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_out_of_lane_module">
+
+autoware_motion_velocity_out_of_lane_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_run_out_module">
+
+autoware_motion_velocity_run_out_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_bezier_sampler">
+
+autoware_bezier_sampler
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_frenet_planner">
+
+autoware_frenet_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_path_sampler">
+
+autoware_path_sampler
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_sampler_common">
+
+autoware_sampler_common
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_cuda_pointcloud_preprocessor">
+
+autoware_cuda_pointcloud_preprocessor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_cuda_utils">
+
+autoware_cuda_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_image_diagnostics">
+
+autoware_image_diagnostics
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_image_transport_decompressor">
+
+autoware_image_transport_decompressor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_imu_corrector">
+
+autoware_imu_corrector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pcl_extensions">
+
+autoware_pcl_extensions
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pointcloud_preprocessor">
+
+autoware_pointcloud_preprocessor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_objects_adapter">
+
+autoware_radar_objects_adapter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_scan_to_pointcloud2">
+
+autoware_radar_scan_to_pointcloud2
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_static_pointcloud_filter">
+
+autoware_radar_static_pointcloud_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_threshold_filter">
+
+autoware_radar_threshold_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_radar_tracks_noise_filter">
+
+autoware_radar_tracks_noise_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_livox_tag_filter">
+
+autoware_livox_tag_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_carla_interface">
+
+autoware_carla_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_dummy_perception_publisher">
+
+autoware_dummy_perception_publisher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_fault_injection">
+
+autoware_fault_injection
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_learning_based_vehicle_model">
+
+autoware_learning_based_vehicle_model
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_simple_planning_simulator">
+
+autoware_simple_planning_simulator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_vehicle_door_simulator">
+
+autoware_vehicle_door_simulator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_dummy_object_rviz_plugin">
+
+tier4_dummy_object_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_bluetooth_monitor">
+
+autoware_bluetooth_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_component_monitor">
+
+autoware_component_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_component_state_monitor">
+
+autoware_component_state_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_default_adapi">
+
+autoware_default_adapi
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_adapi_adaptors">
+
+autoware_adapi_adaptors
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_adapi_visualizers">
+
+autoware_adapi_visualizers
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_automatic_pose_initializer">
+
+autoware_automatic_pose_initializer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_diagnostic_graph_aggregator">
+
+autoware_diagnostic_graph_aggregator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_diagnostic_graph_utils">
+
+autoware_diagnostic_graph_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_dummy_diag_publisher">
+
+autoware_dummy_diag_publisher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_dummy_infrastructure">
+
+autoware_dummy_infrastructure
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_duplicated_node_checker">
+
+autoware_duplicated_node_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_hazard_status_converter">
+
+autoware_hazard_status_converter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_mrm_comfortable_stop_operator">
+
+autoware_mrm_comfortable_stop_operator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_mrm_emergency_stop_operator">
+
+autoware_mrm_emergency_stop_operator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_mrm_handler">
+
+autoware_mrm_handler
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_processing_time_checker">
+
+autoware_processing_time_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_system_diagnostic_monitor">
+
+autoware_system_diagnostic_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_system_monitor">
+
+autoware_system_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_topic_relay_controller">
+
+autoware_topic_relay_controller
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_topic_state_monitor">
+
+autoware_topic_state_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_velodyne_monitor">
+
+autoware_velodyne_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/reaction_analyzer">
+
+reaction_analyzer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_accel_brake_map_calibrator">
+
+autoware_accel_brake_map_calibrator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_external_cmd_converter">
+
+autoware_external_cmd_converter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_raw_vehicle_cmd_converter">
+
+autoware_raw_vehicle_cmd_converter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_steer_offset_estimator">
+
+autoware_steer_offset_estimator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_bag_time_manager_rviz_plugin">
+
+autoware_bag_time_manager_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_mission_details_overlay_rviz_plugin">
+
+autoware_mission_details_overlay_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_overlay_rviz_plugin">
+
+autoware_overlay_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_string_stamped_rviz_plugin">
+
+autoware_string_stamped_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_perception_rviz_plugin">
+
+autoware_perception_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_adapi_rviz_plugin">
+
+tier4_adapi_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_camera_view_rviz_plugin">
+
+tier4_camera_view_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_datetime_rviz_plugin">
+
+tier4_datetime_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_localization_rviz_plugin">
+
+tier4_localization_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_planning_factor_rviz_plugin">
+
+tier4_planning_factor_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_planning_rviz_plugin">
+
+tier4_planning_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_state_rviz_plugin">
+
+tier4_state_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_system_rviz_plugin">
+
+tier4_system_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_traffic_light_rviz_plugin">
+
+tier4_traffic_light_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_vehicle_rviz_plugin">
+
+tier4_vehicle_rviz_plugin
+</a>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/autoware_image_projection_based_fusion"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/autowarefoundation/autoware_universe/tree/main/perception/autoware_image_projection_based_fusion"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-primary">5</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">27</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>0.44.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>Apache License 2.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-default">
+                  
+                    AMENT_CMAKE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/autowarefoundation/autoware_universe.git">https://github.com/autowarefoundation/autoware_universe.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-05-02
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <span class="label label-default">planner</span> <span class="label label-default">ros</span> <span class="label label-default">calibration</span> <span class="label label-default">self-driving-car</span> <span class="label label-default">autonomous-driving</span> <span class="label label-default">autonomous-vehicles</span> <span class="label label-default">ros2</span> <span class="label label-default">3d-map</span> <span class="label label-default">autoware</span> 
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/autoware_universe/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/autoware_universe/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/autoware_universe/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            The autoware_image_projection_based_fusion package
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional links.</em>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Yukihiro Saito</li>
+                
+                  <li>Yoshi Ri</li>
+                
+                  <li>Dai Nguyen</li>
+                
+                  <li>Kotaro Uetake</li>
+                
+                  <li>Tao Zhong</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional authors.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/autowarefoundation/autoware_universe/tree/main/perception/autoware_image_projection_based_fusion/README.md" title="Open in git repository">perception/autoware_image_projection_based_fusion/README.md</a></div>
+              <div class="panel-body">
+                    <div class="rendered-markdown">
+<h1 id="autoware_image_projection_based_fusion">autoware_image_projection_based_fusion</h1>
+
+<h2 id="purpose">Purpose</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">autoware_image_projection_based_fusion</code> package is designed to enhance obstacle detection accuracy by integrating information from both image-based and LiDAR-based perception. It fuses detected obstacles — such as bounding boxes or segmentation — from 2D images with 3D point clouds or other obstacle representations, including bounding boxes, clusters, or segmentation. This fusion helps to refine obstacle classification and detection in autonomous driving applications.</p>
+
+<h3 id="fusion-algorithms">Fusion algorithms</h3>
+
+<p>The package provides multiple fusion algorithms, each designed for specific use cases. Below are the different fusion methods along with their descriptions and detailed documentation links:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fusion Name</th>
+      <th>Description</th>
+      <th>Detail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>roi_cluster_fusion</td>
+      <td>Assigns classification labels to LiDAR-detected clusters by matching them with Regions of Interest (ROIs) from a 2D object detector.</td>
+      <td><a href="https://github.com/autowarefoundation/autoware_universe/tree/main/perception/autoware_image_projection_based_fusion/./docs/roi-cluster-fusion.md">link</a></td>
+    </tr>
+    <tr>
+      <td>roi_detected_object_fusion</td>
+      <td>Updates classification labels of detected objects using ROI information from a 2D object detector.</td>
+      <td><a href="https://github.com/autowarefoundation/autoware_universe/tree/main/perception/autoware_image_projection_based_fusion/./docs/roi-detected-object-fusion.md">link</a></td>
+    </tr>
+    <tr>
+      <td>pointpainting_fusion</td>
+      <td>Augments the point cloud by painting each point with additional information from ROIs of a 2D object detector. The enriched point cloud is then processed by a 3D object detector for improved accuracy.</td>
+      <td><a href="https://github.com/autowarefoundation/autoware_universe/tree/main/perception/autoware_image_projection_based_fusion/./docs/pointpainting-fusion.md">link</a></td>
+    </tr>
+    <tr>
+      <td>roi_pointcloud_fusion</td>
+      <td>Matching pointcloud with ROIs from a 2D object detector to detect unknown-labeled objects.</td>
+      <td><a href="https://github.com/autowarefoundation/autoware_universe/tree/main/perception/autoware_image_projection_based_fusion/./docs/roi-pointcloud-fusion.md">link</a></td>
+    </tr>
+    <tr>
+      <td>segmentation_pointcloud_fusion</td>
+      <td>Filtering pointcloud that are belong to less interesting region which is defined by semantic or instance segmentation by 2D image segmentation.</td>
+      <td><a href="https://github.com/autowarefoundation/autoware_universe/tree/main/perception/autoware_image_projection_based_fusion/./docs/segmentation-pointcloud-fusion.md">link</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="inner-workings--algorithms">Inner Workings / Algorithms</h2>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/perception/autoware_image_projection_based_fusion/./docs/images/fusion_algorithm.drawio.svg" alt="fusion_algorithm"></p>
+
+<p>The fusion process operates on two primary types of input data:</p>
+
+<ul>
+  <li>
+<strong>Msg3d</strong>: This includes 3D data such as point clouds, bounding boxes, or clusters from LiDAR.</li>
+  <li>
+<strong>RoIs</strong> (Regions of Interest): These are 2D detections or proposals from camera-based perception modules, such as object detection bounding boxes.</li>
+</ul>
+
+<p>Both inputs come with timestamps, which are crucial for synchronization and fusion. Since sensors operate at different frequencies and may experience network delays, a systematic approach is needed to handle their arrival, align their timestamps, and ensure reliable fusion.</p>
+
+<p>The following steps describe how the node processes these inputs, synchronizes them, and performs multi-sensor fusion.</p>
+
+<h3 id="step-1-matching-and-creating-a-collector">Step 1: Matching and Creating a Collector</h3>
+
+<p>When a Msg3d or a set of RoIs arrives, its timestamp is checked, and an offset is subtracted to determine the reference timestamp. The node then searches for an existing collector with the same reference timestamp.</p>
+
+<ul>
+  <li>If a matching collector is found, the incoming data is added to it.</li>
+  <li>If no matching collector exists, a new collector is created and initialized with the reference timestamp.</li>
+</ul>
+
+<h3 id="step-2-triggering-the-timer">Step 2: Triggering the Timer</h3>
+
+<p>Once a collector is created, a countdown timer is started. The timeout duration depends on which message type arrived first and is defined by either <code class="language-plaintext highlighter-rouge">msg3d_timeout_sec</code> for msg3d or <code class="language-plaintext highlighter-rouge">rois_timeout_sec</code> for RoIs.</p>
+
+<p>The collector will attempt to fuse the collected 3D and 2D data either:</p>
+
+<ul>
+  <li>When both Msg3d and RoI data are available, or</li>
+  <li>When the timer expires.</li>
+</ul>
+
+<p>If no Msg3d is received before the timer expires, the collector will discard the data without performing fusion.</p>
+
+<h3 id="step-3-fusion-process">Step 3: Fusion Process</h3>
+
+<p>The fusion process consists of three main stages:</p>
+
+<ol>
+  <li>
+<strong>Preprocessing</strong> – Preparing the input data for fusion.</li>
+  <li>
+<strong>Fusion</strong> – Aligning and merging RoIs with the 3D point cloud.</li>
+  <li>
+<strong>Postprocessing</strong> – Refining the fused output based on the algorithm’s requirements.</li>
+</ol>
+
+<p>The specific operations performed during these stages may vary depending on the type of fusion being applied.</p>
+
+<h3 id="step-4-publishing-the-fused-result">Step 4: Publishing the Fused Result</h3>
+
+<p>After the fusion process is completed, the fused output is published. The collector is then reset to an idle state, ready to process the next incoming message.</p>
+
+<p>The figure below shows how the input data is fused in different scenarios.
+<img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/perception/autoware_image_projection_based_fusion/./docs/images/roi_sync_2.png" alt="roi_sync_image2"></p>
+
+<h2 id="parameters">Parameters</h2>
+
+<p>All of the fusion nodes have the common parameters described in the following</p>
+
+<p>{{ json_to_markdown(“perception/autoware_image_projection_based_fusion/schema/fusion_common.schema.json”) }}</p>
+
+<h3 id="parameter-settings">Parameter Settings</h3>
+
+<h4 id="timeout">Timeout</h4>
+
+<p>The order in which <code class="language-plaintext highlighter-rouge">RoIs</code> or the <code class="language-plaintext highlighter-rouge">msg3d</code> message arrives at the fusion node depends on your system and sensor configuration. Since the primary goal is to fuse <code class="language-plaintext highlighter-rouge">2D RoIs</code> with <code class="language-plaintext highlighter-rouge">msg3d</code> data, <code class="language-plaintext highlighter-rouge">msg3d</code> is essential for processing.</p>
+
+<p>If <code class="language-plaintext highlighter-rouge">RoIs</code> arrive earlier, they must wait until <code class="language-plaintext highlighter-rouge">msg3d</code> is received. You can adjust the waiting time using the <code class="language-plaintext highlighter-rouge">rois_timeout_sec</code> parameter.</p>
+
+<p>If <code class="language-plaintext highlighter-rouge">msg3d</code> arrives first, the fusion process should proceed as quickly as possible, so the waiting time for <code class="language-plaintext highlighter-rouge">msg3d</code> (<code class="language-plaintext highlighter-rouge">msg3d_timeout_sec</code>) should be kept minimal.</p>
+
+<h4 id="rois-offsets">RoIs Offsets</h4>
+
+<p>The offset between each camera and the LiDAR is determined by their shutter timing. To ensure accurate fusion, users must understand the timing offset between the <code class="language-plaintext highlighter-rouge">RoIs</code> and <code class="language-plaintext highlighter-rouge">msg3d</code>. Once this offset is known, it should be specified in the parameter <code class="language-plaintext highlighter-rouge">rois_timestamp_offsets</code>.</p>
+
+<p>In the figure below, the LiDAR completes a full scan from the rear in 100 milliseconds. When the LiDAR scan reaches the area where the camera is facing, the camera is triggered, capturing an image with a corresponding timestamp. The <code class="language-plaintext highlighter-rouge">rois_timestamp_offsets</code> can then be calculated by subtracting the LiDAR header timestamp from the camera header timestamp. As a result, the <code class="language-plaintext highlighter-rouge">rois_timestamp_offsets</code> would be <code class="language-plaintext highlighter-rouge">[0.059, 0.010, 0.026, 0.042, 0.076, 0.093]</code>.</p>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/perception/autoware_image_projection_based_fusion/./docs/images/lidar_camera_sync.svg" alt="lidar_camera_sync"></p>
+
+<p>To check the header timestamp of the msg3d and RoIs, user can easily run</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 <span class="nb">echo</span> <span class="o">[</span>topic] <span class="nt">--header</span> field
+
+</code></pre></div></div>
+
+<h4 id="matching-strategies">Matching Strategies</h4>
+
+<p>We provide two matching strategies for different scenarios:</p>
+
+<h5 id="naive-mode">Naive Mode</h5>
+
+<p>User should use this mode if the concatenation node from the Autoware point cloud preprocessor is not being used. User should also set an appropriate <code class="language-plaintext highlighter-rouge">threshold</code> value to determine whether the time interval between the <code class="language-plaintext highlighter-rouge">msg3d</code> and <code class="language-plaintext highlighter-rouge">RoI</code> messages is within an acceptable range.
+If the interval is less than the match threshold, the messages are considered matched.
+<img src="https://raw.githubusercontent.com/autowarefoundation/autoware_universe/main/perception/autoware_image_projection_based_fusion/./docs/images/roi_sync_1.png" alt="roi_sync_image1"></p>
+
+<ul>
+  <li>Example usage:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  matching_strategy:
+    <span class="nb">type</span>: naive
+    threshold: 0.05
+  
+</code></pre></div></div>
+
+<h5 id="advanced-mode">Advanced Mode</h5>
+
+<p>If the concatenation node from the Autoware point cloud preprocessor is being used, enable this mode.
+The advanced mode parses diagnostics from the concatenation node to verify whether all point clouds have been successfully concatenated. If concatenation is incomplete, it dynamically adjusts <code class="language-plaintext highlighter-rouge">rois_timestamp_offsets</code> based on diagnostic messages.
+Instead of using a fixed threshold, this mode requires setting two parameters:</p>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">msg3d_noise_window</code> (a single value)</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">rois_timestamp_noise_window</code> (a vector)</li>
+</ul>
+
+<p>These parameters enforce stricter matching between the <code class="language-plaintext highlighter-rouge">RoI</code> messages and <code class="language-plaintext highlighter-rouge">msg3d</code> input.</p>
+
+<ul>
+  <li>Example usage:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    matching_strategy:
+      <span class="nb">type</span>: advanced
+      msg3d_noise_window: 0.02
+      rois_timestamp_noise_window: <span class="o">[</span>0.01, 0.01, 0.01, 0.01, 0.01, 0.01]
+  
+</code></pre></div></div>
+
+<h4 id="approximate-camera-projection">Approximate camera projection</h4>
+
+<p>For algorithms like <code class="language-plaintext highlighter-rouge">pointpainting_fusion</code>, the computation required to project points onto an unrectified (raw) image can be substantial. To address this, an option is provided to reduce the computational load. Set the <a href="https://github.com/autowarefoundation/autoware_universe/tree/main/perception/autoware_image_projection_based_fusion/config/fusion_common.param.yaml"><code class="language-plaintext highlighter-rouge">approximate_camera_projection parameter</code></a> to <code class="language-plaintext highlighter-rouge">true</code> for each camera (ROIs). If the corresponding <code class="language-plaintext highlighter-rouge">point_project_to_unrectified_image</code> parameter is also set to true, the projections will be pre-cached.</p>
+
+<p>The cached projections are calculated using a grid, with the grid size specified by the <code class="language-plaintext highlighter-rouge">approximation_grid_width_size</code> and <code class="language-plaintext highlighter-rouge">approximation_grid_height_size</code> parameters in the <a href="https://github.com/autowarefoundation/autoware_universe/tree/main/perception/autoware_image_projection_based_fusion/config/fusion_common.param.yaml">configuration file</a>. The centers of the grid are used as the projected points.</p>
+
+<h2 id="debug-and-diagnostics">Debug and Diagnostics</h2>
+
+<p>To verify whether the node has successfully fuse the msg3d or rois, the user can examine rqt or the <code class="language-plaintext highlighter-rouge">/diagnostics</code> topic using the following command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 topic <span class="nb">echo</span> /diagnostics
+
+</code></pre></div></div>
+
+<p>Below is an example output when the fusion is success:</p>
+
+<ul>
+  <li>msg3d has a value of <code class="language-plaintext highlighter-rouge">True</code>.</li>
+  <li>Each rois has a value of <code class="language-plaintext highlighter-rouge">True</code>.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">fusion_success</code> is <code class="language-plaintext highlighter-rouge">True</code>.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">level</code> value is <code class="language-plaintext highlighter-rouge">\0</code>. (diagnostic_msgs::msg::DiagnosticStatus::OK)</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>header:
+  stamp:
+    sec: 1722492015
+    nanosec: 848508777
+  frame_id: <span class="s1">''</span>
+status:
+- level: <span class="s2">"</span><span class="se">\0</span><span class="s2">"</span>
+  name: <span class="s1">'pointpainting: pointpainting_fusion_status'</span>
+  message: Fused output is published and include all rois and msg3d
+  hardware_id: pointpainting_fusion_checker
+  values:
+  - key: msg3d/is_fused
+    value: <span class="s1">'True'</span>
+  - key: fused_timestamp
+    value: <span class="s1">'1738725170.860273600'</span>
+  - key: reference_timestamp_min
+    value: <span class="s1">'1738725170.850771904'</span>
+  - key: reference_timestamp_max
+    value: <span class="s1">'1738725170.870771885'</span>
+  - key: /rois0/timestamp
+    value: <span class="s1">'1738725170.903310537'</span>
+  - key: /rois0/is_fused
+    value: <span class="s1">'True'</span>
+  - key: /rois1/timestamp
+    value: <span class="s1">'1738725170.934378386'</span>
+  - key: /rois1/is_fused
+    value: <span class="s1">'True'</span>
+  - key: /rois2/timestamp
+    value: <span class="s1">'1738725170.917550087'</span>
+  - key: /rois2/is_fused
+    value: <span class="s1">'True'</span>
+  - key: fusion_success
+    value: <span class="s1">'True'</span>
+
+</code></pre></div></div>
+
+<p>Below is an example output when the fusion is failed:</p>
+
+<ul>
+  <li>msg3d has a value of <code class="language-plaintext highlighter-rouge">True</code>.</li>
+  <li>Each rois has a value of <code class="language-plaintext highlighter-rouge">False</code>.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">fusion_success</code> is <code class="language-plaintext highlighter-rouge">False</code>.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">level</code> value is <code class="language-plaintext highlighter-rouge">\x02</code>. (diagnostic_msgs::msg::DiagnosticStatus::ERROR)</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>header:
+  stamp:
+    sec: 1722492015
+    nanosec: 848508777
+  frame_id: <span class="s1">''</span>
+status:
+- level: <span class="s2">"</span><span class="se">\x</span><span class="s2">02"</span>
+  name: <span class="s1">'pointpainting: pointpainting_fusion_status'</span>
+  message: Fused output msg is published but misses some ROIs
+  hardware_id: pointpainting_fusion_checker
+  values:
+  - key: msg3d/is_fused
+    value: <span class="s1">'True'</span>
+  - key: fused_timestamp
+    value: <span class="s1">'1738725170.860273600'</span>
+  - key: reference_timestamp_min
+    value: <span class="s1">'1738725170.850771904'</span>
+  - key: reference_timestamp_max
+    value: <span class="s1">'1738725170.870771885'</span>
+  - key: /rois0/is_fused
+    value: <span class="s1">'False'</span>
+  - key: /rois1/timestamp
+    value: <span class="s1">'1738725170.934378386'</span>
+  - key: /rois1/is_fused
+    value: <span class="s1">'True'</span>
+  - key: /rois2/timestamp
+    value: <span class="s1">'1738725170.917550087'</span>
+  - key: /rois2/is_fused
+    value: <span class="s1">'True'</span>
+  - key: fusion_success
+    value: <span class="s1">'False'</span>
+
+</code></pre></div></div>
+
+<h2 id="the-build_only-option">The <code class="language-plaintext highlighter-rouge">build_only</code> option</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">pointpainting_fusion</code> node has <code class="language-plaintext highlighter-rouge">build_only</code> option to build the TensorRT engine file from the ONNX file.
+Although it is preferred to move all the ROS parameters in <code class="language-plaintext highlighter-rouge">.param.yaml</code> file in Autoware Universe, the <code class="language-plaintext highlighter-rouge">build_only</code> option is not moved to the <code class="language-plaintext highlighter-rouge">.param.yaml</code> file for now, because it may be used as a flag to execute the build as a pre-task. You can execute with the following command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 launch autoware_image_projection_based_fusion pointpainting_fusion.launch.xml model_name:<span class="o">=</span>pointpainting model_path:<span class="o">=</span>/home/autoware/autoware_data/image_projection_based_fusion model_param_path:<span class="o">=</span><span class="si">$(</span>ros2 pkg prefix autoware_image_projection_based_fusion <span class="nt">--share</span><span class="si">)</span>/config/pointpainting.param.yaml build_only:<span class="o">=</span><span class="nb">true</span>
+
+</code></pre></div></div>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="changelog-for-package-autoware_image_projection_based_fusion">Changelog for package autoware_image_projection_based_fusion</h1>
+
+<h2 id="0440-2025-04-18">0.44.0 (2025-04-18)</h2>
+
+<ul>
+  <li>Merge remote-tracking branch 'origin/main' into humble</li>
+  <li>fix(autoware_image_projection_based_fusion): add missing params
+[common_param_path]{.title-ref} when not use container
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10499">#10499</a>)
+add missing params common_param_path when not use container</li>
+  <li>feat(pointpainting_fusion): add diagnostics for processing time of
+pointpainting
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10397">#10397</a>)
+    <ul>
+      <li>add diagnostics for pointpainting</li>
+      <li>add common params</li>
+      <li>add schema for common param</li>
+      <li>style(pre-commit): autofix</li>
+      <li>include diagnostic_msgs</li>
+      <li>fix typo</li>
+      <li>fix stop watch recording name</li>
+    </ul>
+
+    <p>* fix parameter and message ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>feat(autoware_lidar_centerpoint): added the cuda_blackboard to
+centerpoint
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9453">#9453</a>)
+    <ul>
+      <li>feat: introduced the cuda transport layer (cuda blackboard) to
+centerpoint</li>
+      <li>chore: fixed compilation issue on pointpainting</li>
+      <li>fix: fixed compile errors in the ml models</li>
+      <li>fix: fixed standalone non-composed launcher</li>
+      <li>chore: ci/cd</li>
+      <li>chore: clang tidy related fix</li>
+      <li>chore: removed non applicable override (point painting does not
+support the blackboard yet)</li>
+      <li>chore: temporarily ignoring warning until pointpainting also
+supports the blackboard</li>
+      <li>chore: ignoring spell</li>
+      <li>feat: removed the deprecated compatible subs option in the
+constructor</li>
+      <li>chore: bump the cuda blackboard version in the build depends</li>
+    </ul>
+
+    <p>* Update
+perception/autoware_image_projection_based_fusion/src/pointpainting_fusion/pointpainting_trt.cpp
+Co-authored-by: badai nguyen
+&lt;&lt;94814556+badai-nguyen@users.noreply.github.com&gt;&gt;
+* Update
+perception/autoware_image_projection_based_fusion/src/pointpainting_fusion/pointpainting_trt.cpp
+Co-authored-by: badai nguyen
+&lt;&lt;94814556+badai-nguyen@users.noreply.github.com&gt;&gt;
+---------Co-authored-by: Amadeusz Szymko
+&lt;&lt;amadeusz.szymko.2@tier4.jp&gt;&gt; Co-authored-by: badai nguyen
+&lt;&lt;94814556+badai-nguyen@users.noreply.github.com&gt;&gt;</p>
+  </li>
+  <li>chore(localization, perception): remove koji minoda as maintainer
+from multiple packages
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10359">#10359</a>)
+fix: remove Koji Minoda as maintainer from multiple package.xml
+files</li>
+  <li>fix(autoware_image_projection_based_fusion): unintended new
+container behavior
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10346">#10346</a>)
+fix: the current launcher was creating a new container with the same
+name</li>
+  <li>fix(roi_pointcloud_fusion): merge into pointcloud container
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10334">#10334</a>)</li>
+  <li>fix(roi_pointcloud_fusion): add roi scale factor param
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10333">#10333</a>)
+    <ul>
+      <li>fix(roi_pointcloud_fusion): add roi scale factor param</li>
+    </ul>
+
+    <p>* fix: missing declare ---------</p>
+  </li>
+  <li>fix(image_projection_based_fusion): add outside of FOV checking
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10329">#10329</a>)</li>
+  <li>Contributors: Kenzo Lobos Tsunekawa, Masaki Baba, Masato Saeki,
+Ryohsuke Mitsudome, Taekjin LEE, badai nguyen</li>
+</ul>
+
+<h2 id="0430-2025-03-21">0.43.0 (2025-03-21)</h2>
+
+<ul>
+  <li>Merge remote-tracking branch 'origin/main' into
+chore/bump-version-0.43</li>
+  <li>chore: rename from [autoware.universe]{.title-ref} to
+[autoware_universe]{.title-ref}
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10306">#10306</a>)</li>
+  <li>fix(segmentation_pointcloud_fusion): fix typo of defaut camera
+info topic
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10272">#10272</a>)
+fix(segmentation_pointcloud_fusion): typo for defaut camera info
+topic</li>
+  <li>refactor: add autoware_cuda_dependency_meta
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10073">#10073</a>)</li>
+  <li>fix(segmentation_pointcloud_fusion): set valid pointcloud field
+for output pointcloud
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10196">#10196</a>)
+set valid pointcloud field</li>
+  <li>feat(autoware_image_based_projection_fusion): redesign image
+based projection fusion node
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10016">#10016</a>)</li>
+  <li>Contributors: Esteve Fernandez, Hayato Mizushima, Kento Yabuuchi,
+Yi-Hsiang Fang (Vivid), Yutaka Kondo, badai nguyen</li>
+</ul>
+
+<h2 id="0420-2025-03-03">0.42.0 (2025-03-03)</h2>
+
+<ul>
+  <li>Merge remote-tracking branch 'origin/main' into
+tmp/bot/bump_version_base</li>
+  <li>feat(autoware_utils): replace autoware_universe_utils with
+autoware_utils
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10191">#10191</a>)</li>
+  <li>chore: refine maintainer list
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10110">#10110</a>)
+    <ul>
+      <li>chore: remove Miura from maintainer</li>
+    </ul>
+
+    <p>* chore: add Taekjin-san to perception_utils package maintainer
+---------</p>
+  </li>
+  <li>fix(autoware_image_projection_based_fusion): modify incorrect
+index access in pointcloud filtering for out-of-range points
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10087">#10087</a>)
+    <ul>
+      <li>fix(pointpainting): modify pointcloud index</li>
+    </ul>
+
+    <p>* style(pre-commit): autofix ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>Contributors: Fumiya Watanabe, Shunsuke Miura, keita1523, 心刚</li>
+</ul>
+
+<h2 id="0412-2025-02-19">0.41.2 (2025-02-19)</h2>
+
+<ul>
+  <li>chore: bump version to 0.41.1
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/10088">#10088</a>)</li>
+  <li>Contributors: Ryohsuke Mitsudome</li>
+</ul>
+
+<h2 id="0411-2025-02-10">0.41.1 (2025-02-10)</h2>
+
+<h2 id="0410-2025-01-29">0.41.0 (2025-01-29)</h2>
+
+<ul>
+  <li>Merge remote-tracking branch 'origin/main' into
+tmp/bot/bump_version_base</li>
+  <li>feat(autoware_image_projection_based_fusion)!: tier4_debug-msgs
+changed to autoware_internal_debug_msgs in
+autoware_image_projection_based_fusion
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9877">#9877</a>)</li>
+  <li>fix(image_projection_based_fusion): revise message publishers
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9865">#9865</a>)
+    <ul>
+      <li>refactor: fix condition for publishing painted pointcloud
+message</li>
+      <li>fix: publish output revised</li>
+      <li>feat: fix condition for publishing painted pointcloud message</li>
+      <li>feat: roi-pointclout fusion - publish empty image even when
+there is no target roi</li>
+      <li>fix: remap output topic for clusters in roi_pointcloud_fusion</li>
+      <li>style(pre-commit): autofix</li>
+      <li>feat: fix condition for publishing painted pointcloud message</li>
+      <li>feat: Add debug publisher for internal debugging</li>
+    </ul>
+
+    <p>* feat: remove !! pointer to bool conversion
+---------Co-authored-by: pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>refactor(autoware_tensorrt_common): multi-TensorRT compatibility &amp;
+tensorrt_common as unified lib for all perception components
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9762">#9762</a>)
+    <ul>
+      <li>refactor(autoware_tensorrt_common): multi-TensorRT
+compatibility &amp; tensorrt_common as unified lib for all
+perception components</li>
+      <li>style(pre-commit): autofix</li>
+      <li>style(autoware_tensorrt_common): linting</li>
+    </ul>
+
+    <p>* style(autoware_lidar_centerpoint): typo Co-authored-by: Kenzo
+Lobos Tsunekawa &lt;&lt;kenzo.lobos@tier4.jp&gt;&gt;
+* docs(autoware_tensorrt_common): grammar Co-authored-by: Kenzo
+Lobos Tsunekawa &lt;&lt;kenzo.lobos@tier4.jp&gt;&gt;</p>
+    <ul>
+      <li>fix(autoware_lidar_transfusion): reuse cast variable</li>
+      <li>fix(autoware_tensorrt_common): remove deprecated inference API</li>
+    </ul>
+
+    <p>* style(autoware_tensorrt_common): grammar Co-authored-by: Kenzo
+Lobos Tsunekawa &lt;&lt;kenzo.lobos@tier4.jp&gt;&gt;
+* style(autoware_tensorrt_common): grammar Co-authored-by: Kenzo
+Lobos Tsunekawa &lt;&lt;kenzo.lobos@tier4.jp&gt;&gt;</p>
+    <ul>
+      <li>fix(autoware_tensorrt_common): const pointer</li>
+      <li>fix(autoware_tensorrt_common): remove unused method
+declaration</li>
+      <li>style(pre-commit): autofix</li>
+    </ul>
+
+    <p>* refactor(autoware_tensorrt_common): readability Co-authored-by:
+Kotaro Uetake &lt;&lt;60615504+ktro2828@users.noreply.github.com&gt;&gt;</p>
+    <ul>
+      <li>fix(autoware_tensorrt_common): return if layer not registered</li>
+    </ul>
+
+    <p>* refactor(autoware_tensorrt_common): readability Co-authored-by:
+Kotaro Uetake &lt;&lt;60615504+ktro2828@users.noreply.github.com&gt;&gt;</p>
+    <ul>
+      <li>fix(autoware_tensorrt_common): rename struct</li>
+    </ul>
+
+    <p>* style(pre-commit): autofix ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;
+Co-authored-by: Kenzo Lobos Tsunekawa &lt;&lt;kenzo.lobos@tier4.jp&gt;&gt;
+Co-authored-by: Kotaro Uetake
+&lt;&lt;60615504+ktro2828@users.noreply.github.com&gt;&gt;</p>
+  </li>
+  <li>fix(image_projection_based_fusion): remove mutex
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9862">#9862</a>)
+refactor: Refactor fusion_node.hpp and fusion_node.cpp for
+improved code organization and readability</li>
+  <li>refactor(autoware_image_projection_based_fusion): organize
+2d-detection related members
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9789">#9789</a>)
+    <ul>
+      <li>chore: input_camera_topics_ is only for debug</li>
+      <li>feat: fuse main message with cached roi messages in
+fusion_node.cpp</li>
+      <li>chore: add comments on each process step, organize methods</li>
+    </ul>
+
+    <p>* feat: Export process method in fusion_node.cpp Export the
+[exportProcess()]{.title-ref} method in
+[fusion_node.cpp]{.title-ref} to handle the post-processing and
+publishing of the fused messages. This method cancels the timer,
+performs the necessary post-processing steps, publishes the output
+message, and resets the flags. It also adds processing time for
+debugging purposes. This change improves the organization and
+readability of the code.
+* feat: Refactor fusion_node.hpp and fusion_node.cpp Refactor the
+[fusion_node.hpp]{.title-ref} and [fusion_node.cpp]{.title-ref}
+files to improve code organization and readability. This includes
+exporting the [exportProcess()]{.title-ref} method in
+[fusion_node.cpp]{.title-ref} to handle post-processing and
+publishing of fused messages, adding comments on each process step,
+organizing methods, and fusing the main message with cached ROI
+messages. These changes enhance the overall quality of the codebase.</p>
+    <ul>
+      <li>Refactor fusion_node.cpp and fusion_node.hpp for improved code
+organization and readability</li>
+      <li>Refactor fusion_node.hpp and fusion_node.cpp for improved code
+organization and readability</li>
+      <li>feat: Refactor fusion_node.cpp for improved code organization
+and readability</li>
+      <li>Refactor fusion_node.cpp for improved code organization and
+readability</li>
+      <li>feat: implement mutex per 2d detection process</li>
+      <li>Refactor fusion_node.hpp and fusion_node.cpp for improved code
+organization and readability</li>
+      <li>Refactor fusion_node.hpp and fusion_node.cpp for improved code
+organization and readability</li>
+      <li>revise template, inputs first and output at the last</li>
+      <li>explicit in and out types 1</li>
+      <li>clarify pointcloud message type</li>
+      <li>Refactor fusion_node.hpp and fusion_node.cpp for improved code
+organization and readability</li>
+      <li>Refactor fusion_node.hpp and fusion_node.cpp for improved code
+organization and readability</li>
+      <li>Refactor fusion_node.hpp and fusion_node.cpp for improved code
+organization and readability</li>
+      <li>Refactor publisher types in fusion_node.hpp and node.hpp</li>
+      <li>fix: resolve cppcheck issue shadowVariable</li>
+      <li>Refactor fusion_node.hpp and fusion_node.cpp for improved code
+organization and readability</li>
+      <li>chore: rename Det2dManager to Det2dStatus</li>
+      <li>revert mutex related changes</li>
+      <li>refactor: review member and method's access</li>
+      <li>fix: resolve shadowVariable of 'det2d'</li>
+      <li>fix missing line</li>
+      <li>refactor message postprocess and publish methods</li>
+      <li>publish the main message is common</li>
+      <li>fix: replace pointcloud message type by the typename</li>
+      <li>review member access</li>
+      <li>Refactor fusion_node.hpp and fusion_node.cpp for improved code
+organization and readability</li>
+      <li>refactor: fix condition for publishing painted pointcloud
+message</li>
+    </ul>
+
+    <p>* fix: remove unused variable ---------</p>
+  </li>
+  <li>feat(lidar_centerpoint, pointpainting): add diag publisher for max
+voxel size
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9720">#9720</a>)</li>
+  <li>feat(pointpainting_fusion): enable cloud display on image
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9813">#9813</a>)</li>
+  <li>feat(image_projection_based_fusion): add cache for camera
+projection
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9635">#9635</a>)
+    <ul>
+      <li>add camera_projection class and projection cache</li>
+      <li>style(pre-commit): autofix</li>
+      <li>fix FOV filtering</li>
+      <li>style(pre-commit): autofix</li>
+      <li>remove unused includes</li>
+      <li>update schema</li>
+      <li>fix cpplint error</li>
+      <li>apply suggestion: more simple and effcient computation</li>
+      <li>correct terminology</li>
+      <li>style(pre-commit): autofix</li>
+      <li>fix comments</li>
+    </ul>
+
+    <p>* fix var name Co-authored-by: Taekjin LEE
+&lt;&lt;technolojin@gmail.com&gt;&gt;
+* fix variable names Co-authored-by: Taekjin LEE
+&lt;&lt;technolojin@gmail.com&gt;&gt;
+* fix variable names Co-authored-by: Taekjin LEE
+&lt;&lt;technolojin@gmail.com&gt;&gt;
+* fix variable names Co-authored-by: Taekjin LEE
+&lt;&lt;technolojin@gmail.com&gt;&gt;
+* fix variable names Co-authored-by: Taekjin LEE
+&lt;&lt;technolojin@gmail.com&gt;&gt;</p>
+    <ul>
+      <li>fix variable names</li>
+    </ul>
+
+    <p>* fix initialization Co-authored-by: badai nguyen
+&lt;&lt;94814556+badai-nguyen@users.noreply.github.com&gt;&gt;
+* add verification to point_project_to_unrectified_image when
+loading Co-authored-by: badai nguyen
+&lt;&lt;94814556+badai-nguyen@users.noreply.github.com&gt;&gt;
+* chore: add option description to project points to unrectified
+image ---------Co-authored-by: pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;
+Co-authored-by: Taekjin LEE &lt;&lt;technolojin@gmail.com&gt;&gt;
+Co-authored-by: badai nguyen
+&lt;&lt;94814556+badai-nguyen@users.noreply.github.com&gt;&gt; Co-authored-by:
+Taekjin LEE &lt;&lt;taekjin.lee@tier4.jp&gt;&gt;</p>
+  </li>
+  <li>feat(image_projection_based_fusion): add timekeeper
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9632">#9632</a>)
+    <ul>
+      <li>add timekeeper</li>
+      <li>chore: refactor time-keeper position</li>
+      <li>chore: bring back a missing comment</li>
+    </ul>
+
+    <p>* chore: remove redundant timekeepers
+---------Co-authored-by: Taekjin LEE
+&lt;&lt;taekjin.lee@tier4.jp&gt;&gt;</p>
+  </li>
+  <li>Contributors: Amadeusz Szymko, Fumiya Watanabe, Masaki Baba, Taekjin
+LEE, Vishal Chauhan, Yi-Hsiang Fang (Vivid), kminoda</li>
+</ul>
+
+<h2 id="0400-2024-12-12">0.40.0 (2024-12-12)</h2>
+
+<ul>
+  <li>Merge branch 'main' into release-0.40.0</li>
+  <li>Revert "chore(package.xml): bump version to 0.39.0
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9587">#9587</a>)"
+This reverts commit c9f0f2688c57b0f657f5c1f28f036a970682e7f5.</li>
+  <li>fix(lidar_centerpoint): non-maximum suppression target decision
+logic
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9595">#9595</a>)
+    <ul>
+      <li>refactor(lidar_centerpoint): optimize non-maximum suppression
+search distance calculation</li>
+      <li>feat(lidar_centerpoint): do not suppress if one side of the
+object is pedestrian</li>
+      <li>style(pre-commit): autofix</li>
+      <li>refactor(lidar_centerpoint): remove unused variables</li>
+    </ul>
+
+    <p>* refactor: remove unused variables fix: implement non-maximum
+suppression logic to the transfusion refactor: remove unused
+parameter iou_nms_target_class_names Revert "fix: implement
+non-maximum suppression logic to the transfusion" This reverts
+commit b8017fc366ec7d67234445ef5869f8beca9b6f45. fix: revert
+transfusion modification ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>feat: remove max rois limit in the image projection based fusion
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9596">#9596</a>)
+feat: remove max rois limit</li>
+  <li>fix: fix ticket links in CHANGELOG.rst
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9588">#9588</a>)</li>
+  <li>fix(autoware_image_projection_based_fusion): detected object roi
+box projection fix
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9519">#9519</a>)
+* fix: detected object roi box projection fix
+    <ol>
+      <li>eliminate misuse of std::numeric_limits&lt;double&gt;::min()</li>
+    </ol>
+
+    <p>2. fix roi range up to the image edges
+* fix: fix roi range calculation in RoiDetectedObjectFusionNode
+Improve the calculation of the region of interest (ROI) in the
+RoiDetectedObjectFusionNode. The previous code had an issue where
+the ROI range was not correctly limited to the image edges. This fix
+ensures that the ROI is within the image boundaries by using the
+correct comparison operators for the x and y coordinates.
+---------</p>
+  </li>
+  <li>chore(package.xml): bump version to 0.39.0
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9587">#9587</a>)
+    <ul>
+      <li>chore(package.xml): bump version to 0.39.0</li>
+      <li>fix: fix ticket links in CHANGELOG.rst</li>
+    </ul>
+
+    <p>* fix: remove unnecessary diff ---------Co-authored-by:
+Yutaka Kondo &lt;&lt;yutaka.kondo@youtalk.jp&gt;&gt;</p>
+  </li>
+  <li>fix: fix ticket links in CHANGELOG.rst
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9588">#9588</a>)</li>
+  <li>ci(pre-commit): update cpplint to 2.0.0
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9557">#9557</a>)</li>
+  <li>fix(cpplint): include what you use - perception
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9569">#9569</a>)</li>
+  <li>chore(image_projection_based_fusion): add debug for
+roi_pointcloud fusion
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9481">#9481</a>)</li>
+  <li>fix(autoware_image_projection_based_fusion): fix
+clang-diagnostic-inconsistent-missing-override
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9509">#9509</a>)</li>
+  <li>fix(autoware_image_projection_based_fusion): fix
+clang-diagnostic-unused-private-field
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9505">#9505</a>)</li>
+  <li>fix(autoware_image_projection_based_fusion): fix
+clang-diagnostic-inconsistent-missing-override
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9495">#9495</a>)</li>
+  <li>fix(autoware_image_projection_based_fusion): fix
+clang-diagnostic-inconsistent-missing-override
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9516">#9516</a>)
+fix: clang-diagnostic-inconsistent-missing-override</li>
+  <li>fix(autoware_image_projection_based_fusion): fix
+clang-diagnostic-inconsistent-missing-override
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9510">#9510</a>)</li>
+  <li>fix(autoware_image_projection_based_fusion): fix
+clang-diagnostic-unused-private-field
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9473">#9473</a>)
+    <ul>
+      <li>fix: clang-diagnostic-unused-private-field</li>
+    </ul>
+
+    <p>* fix: build error ---------</p>
+  </li>
+  <li>fix(autoware_image_projection_based_fusion): fix
+clang-diagnostic-inconsistent-missing-override
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9472">#9472</a>)</li>
+  <li>0.39.0</li>
+  <li>update changelog</li>
+  <li>Merge commit '6a1ddbd08bd' into release-0.39.0</li>
+  <li>fix: fix ticket links to point to
+<a href="https://github.com/autowarefoundation/autoware_universe">https://github.com/autowarefoundation/autoware_universe</a>
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9304">#9304</a>)</li>
+  <li>fix: fix ticket links to point to
+<a href="https://github.com/autowarefoundation/autoware_universe">https://github.com/autowarefoundation/autoware_universe</a>
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9304">#9304</a>)</li>
+  <li>chore(package.xml): bump version to 0.38.0
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9266">#9266</a>)
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9284">#9284</a>)
+    <ul>
+      <li>unify package.xml version to 0.37.0</li>
+      <li>remove system_monitor/CHANGELOG.rst</li>
+      <li>add changelog</li>
+    </ul>
+
+    <h2 id="-0380">* 0.38.0</h2>
+  </li>
+  <li>fix(autoware_image_projection_based_fusion): make optional to
+consider lens distortion in the point projection
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9233">#9233</a>)
+chore: add point_project_to_unrectified_image parameter to
+fusion_common.param.yaml</li>
+  <li>fix(autoware_image_projection_based_fusion): fix
+bugprone-misplaced-widening-cast
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9226">#9226</a>)
+    <ul>
+      <li>fix: bugprone-misplaced-widening-cast</li>
+    </ul>
+
+    <p>* fix: clang-format ---------</p>
+  </li>
+  <li>fix(autoware_image_projection_based_fusion): fix
+bugprone-misplaced-widening-cast
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9229">#9229</a>)
+    <ul>
+      <li>fix: bugprone-misplaced-widening-cast</li>
+    </ul>
+
+    <p>* fix: clang-format ---------</p>
+  </li>
+  <li>Contributors: Esteve Fernandez, Fumiya Watanabe, M. Fatih Cırıt,
+Ryohsuke Mitsudome, Taekjin LEE, Yoshi Ri, Yutaka Kondo,
+awf-autoware-bot[bot], badai nguyen, kobayu858</li>
+</ul>
+
+<h2 id="0390-2024-11-25">0.39.0 (2024-11-25)</h2>
+
+<ul>
+  <li>Merge commit '6a1ddbd08bd' into release-0.39.0</li>
+  <li>fix: fix ticket links to point to
+<a href="https://github.com/autowarefoundation/autoware_universe">https://github.com/autowarefoundation/autoware_universe</a>
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9304">#9304</a>)</li>
+  <li>fix: fix ticket links to point to
+<a href="https://github.com/autowarefoundation/autoware_universe">https://github.com/autowarefoundation/autoware_universe</a>
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9304">#9304</a>)</li>
+  <li>chore(package.xml): bump version to 0.38.0
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9266">#9266</a>)
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9284">#9284</a>)
+    <ul>
+      <li>unify package.xml version to 0.37.0</li>
+      <li>remove system_monitor/CHANGELOG.rst</li>
+      <li>add changelog</li>
+    </ul>
+
+    <h2 id="-0380-1">* 0.38.0</h2>
+  </li>
+  <li>fix(autoware_image_projection_based_fusion): make optional to
+consider lens distortion in the point projection
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9233">#9233</a>)
+chore: add point_project_to_unrectified_image parameter to
+fusion_common.param.yaml</li>
+  <li>fix(autoware_image_projection_based_fusion): fix
+bugprone-misplaced-widening-cast
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9226">#9226</a>)
+    <ul>
+      <li>fix: bugprone-misplaced-widening-cast</li>
+    </ul>
+
+    <p>* fix: clang-format ---------</p>
+  </li>
+  <li>fix(autoware_image_projection_based_fusion): fix
+bugprone-misplaced-widening-cast
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9229">#9229</a>)
+    <ul>
+      <li>fix: bugprone-misplaced-widening-cast</li>
+    </ul>
+
+    <p>* fix: clang-format ---------</p>
+  </li>
+  <li>Contributors: Esteve Fernandez, Taekjin LEE, Yutaka Kondo, kobayu858</li>
+</ul>
+
+<h2 id="0380-2024-11-08">0.38.0 (2024-11-08)</h2>
+
+<ul>
+  <li>unify package.xml version to 0.37.0</li>
+  <li>refactor(autoware_point_types): prefix namespace with
+autoware::point_types
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9169">#9169</a>)</li>
+  <li>fix(autoware_image_projection_based_fusion): pointpainting bug
+fix for point projection
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/9150">#9150</a>)
+fix: projected 2d point has 1.0 of depth</li>
+  <li>refactor(object_recognition_utils): add autoware prefix to
+object_recognition_utils
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8946">#8946</a>)</li>
+  <li>fix(autoware_image_projection_based_fusion): roi cluster fusion
+has no existence probability update
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8864">#8864</a>)
+fix: add existence probability update, refactoring</li>
+  <li>fix(autoware_image_projection_based_fusion): resolve issue with
+segmentation pointcloud fusion node failing with multiple mask
+inputs
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8769">#8769</a>)</li>
+  <li>fix(image_projection_based_fusion): remove unused variable
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8634">#8634</a>)
+fix: remove unused variable</li>
+  <li>fix(autoware_image_projection_based_fusion): fix unusedFunction
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8567">#8567</a>)
+fix:unusedFunction</li>
+  <li>fix(image_projection_based_fusion): add run length decoding for
+segmentation_pointcloud_fusion
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7909">#7909</a>)
+    <ul>
+      <li>fix: add rle decompress</li>
+      <li>style(pre-commit): autofix</li>
+      <li>fix: use rld in tensorrt utils</li>
+      <li>fix: rebase error</li>
+      <li>fix: dependency</li>
+      <li>fix: skip publish debug mask</li>
+    </ul>
+
+    <p>* Update
+perception/autoware_image_projection_based_fusion/src/segmentation_pointcloud_fusion/node.cpp
+Co-authored-by: kminoda
+&lt;&lt;44218668+kminoda@users.noreply.github.com&gt;&gt;</p>
+    <ul>
+      <li>style(pre-commit): autofix</li>
+    </ul>
+
+    <p>* Revert "fix: skip publish debug mask" This reverts commit
+30fa9aed866a019705abde71e8f5c3f98960c19e.
+---------Co-authored-by: pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;
+Co-authored-by: kminoda
+&lt;&lt;44218668+kminoda@users.noreply.github.com&gt;&gt;</p>
+  </li>
+  <li>fix(image_projection_based_fusion): handle projection errors in
+image fusion nodes
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/7747">#7747</a>)
+    <ul>
+      <li>fix: add check for camera distortion model</li>
+      <li>feat(utils): add const qualifier to local variables in
+checkCameraInfo function</li>
+      <li>style(pre-commit): autofix</li>
+    </ul>
+
+    <p>* chore(utils): update checkCameraInfo function to use
+RCLCPP_ERROR_STREAM for unsupported distortion model and
+coefficients size ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>fix(autoware_image_projection_based_fusion): fix passedByValue
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8234">#8234</a>)
+fix:passedByValue</li>
+  <li>refactor(image_projection_based_fusion)!: add package name prefix
+of autoware_
+(<a href="https://github.com/autowarefoundation/autoware_universe/issues/8162">#8162</a>)
+refactor: rename image_projection_based_fusion to
+autoware_image_projection_based_fusion</li>
+  <li>Contributors: Esteve Fernandez, Taekjin LEE, Yi-Hsiang Fang (Vivid),
+Yoshi Ri, Yutaka Kondo, badai nguyen, kobayu858</li>
+</ul>
+
+<h2 id="0260-2024-04-03">0.26.0 (2024-04-03)</h2>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/autoware_image_projection_based_fusion/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_auto#github">ament_cmake_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_cmake#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_cmake#github">autoware_cmake  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_gtest#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_gtest#github">ament_cmake_gtest  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_lint_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_lint_auto#github">ament_lint_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_lint_common#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_lint_common#github">autoware_lint_common  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_cuda_dependency_meta#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_cuda_dependency_meta#github">autoware_cuda_dependency_meta  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_euclidean_cluster#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_euclidean_cluster#github">autoware_euclidean_cluster  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_internal_debug_msgs#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_internal_debug_msgs#github">autoware_internal_debug_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_lidar_centerpoint#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_lidar_centerpoint#github">autoware_lidar_centerpoint  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_object_recognition_utils#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_object_recognition_utils#github">autoware_object_recognition_utils  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_perception_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_perception_msgs#github">autoware_perception_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_point_types#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_point_types#github">autoware_point_types  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_utils#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_utils#github">autoware_utils  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/cv_bridge#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/cv_bridge#github">cv_bridge  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/diagnostic_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/diagnostic_msgs#github">diagnostic_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/diagnostic_updater#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/diagnostic_updater#github">diagnostic_updater  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/image_geometry#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/image_geometry#github">image_geometry  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/image_transport#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/image_transport#github">image_transport  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/message_filters#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/message_filters#github">message_filters  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/perception_utils#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/perception_utils#github">perception_utils  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclcpp#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclcpp#github">rclcpp  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclcpp_components#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclcpp_components#github">rclcpp_components  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/sensor_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/sensor_msgs#github">sensor_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2_eigen#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2_eigen#github">tf2_eigen  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2_ros#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2_ros#github">tf2_ros  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2_sensor_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2_sensor_msgs#github">tf2_sensor_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tier4_perception_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tier4_perception_msgs#github">tier4_perception_msgs  </a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No direct system dependencies.</em>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th>Name</th>
+                  <th class="text-center">Deps</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/tier4_perception_launch#github">tier4_perception_launch</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/tier4_perception_launch#github-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <ul>
+            
+              <li><a href="https://github.com/autowarefoundation/autoware_universe/tree/main/perception/autoware_image_projection_based_fusion/launch/roi_pointcloud_fusion.launch.xml" target="_blank">launch/roi_pointcloud_fusion.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>pointcloud_container_name</strong> <em>&#91;default: pointcloud_container&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois_number</strong> <em>&#91;default: 6&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois0</strong> <em>&#91;default: rois0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info0</strong> <em>&#91;default: /camera_info0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois1</strong> <em>&#91;default: rois1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info1</strong> <em>&#91;default: /camera_info1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois2</strong> <em>&#91;default: rois2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info2</strong> <em>&#91;default: /camera_info2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois3</strong> <em>&#91;default: rois3&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info3</strong> <em>&#91;default: /camera_info3&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois4</strong> <em>&#91;default: rois4&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info4</strong> <em>&#91;default: /camera_info4&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois5</strong> <em>&#91;default: rois5&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info5</strong> <em>&#91;default: /camera_info5&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois6</strong> <em>&#91;default: rois6&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info6</strong> <em>&#91;default: /camera_info6&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois7</strong> <em>&#91;default: rois7&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info7</strong> <em>&#91;default: /camera_info7&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/pointcloud</strong> <em>&#91;default: /perception/object_recognition/detection/pointcloud_map_filtered/pointcloud&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>output/clusters</strong> <em>&#91;default: output/clusters&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>debug/clusters</strong> <em>&#91;default: roi_pointcloud_fusion/debug/clusters&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>param_path</strong> <em>&#91;default: $(find-pkg-share autoware_image_projection_based_fusion)/config/roi_pointcloud_fusion.param.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>sync_param_path</strong> <em>&#91;default: $(find-pkg-share autoware_image_projection_based_fusion)/config/fusion_common.param.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input_rois_number</strong> <em>&#91;default: $(var input/rois_number)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image0</strong> <em>&#91;default: /image_raw0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image1</strong> <em>&#91;default: /image_raw1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image2</strong> <em>&#91;default: /image_raw2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image3</strong> <em>&#91;default: /image_raw3&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image4</strong> <em>&#91;default: /image_raw4&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image5</strong> <em>&#91;default: /image_raw5&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image6</strong> <em>&#91;default: /image_raw6&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image7</strong> <em>&#91;default: /image_raw7&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/autowarefoundation/autoware_universe/tree/main/perception/autoware_image_projection_based_fusion/launch/roi_cluster_fusion.launch.xml" target="_blank">launch/roi_cluster_fusion.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>input/rois_number</strong> <em>&#91;default: 6&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois0</strong> <em>&#91;default: rois0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info0</strong> <em>&#91;default: /camera_info0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois1</strong> <em>&#91;default: rois1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info1</strong> <em>&#91;default: /camera_info1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois2</strong> <em>&#91;default: rois2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info2</strong> <em>&#91;default: /camera_info2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois3</strong> <em>&#91;default: rois3&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info3</strong> <em>&#91;default: /camera_info3&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois4</strong> <em>&#91;default: rois4&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info4</strong> <em>&#91;default: /camera_info4&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois5</strong> <em>&#91;default: rois5&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info5</strong> <em>&#91;default: /camera_info5&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois6</strong> <em>&#91;default: rois6&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info6</strong> <em>&#91;default: /camera_info6&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois7</strong> <em>&#91;default: rois7&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info7</strong> <em>&#91;default: /camera_info7&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/clusters</strong> <em>&#91;default: clusters&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>output/clusters</strong> <em>&#91;default: labeled_clusters&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>param_path</strong> <em>&#91;default: $(find-pkg-share autoware_image_projection_based_fusion)/config/roi_cluster_fusion.param.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>sync_param_path</strong> <em>&#91;default: $(find-pkg-share autoware_image_projection_based_fusion)/config/fusion_common.param.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image0</strong> <em>&#91;default: /image_raw0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image1</strong> <em>&#91;default: /image_raw1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image2</strong> <em>&#91;default: /image_raw2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image3</strong> <em>&#91;default: /image_raw3&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image4</strong> <em>&#91;default: /image_raw4&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image5</strong> <em>&#91;default: /image_raw5&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image6</strong> <em>&#91;default: /image_raw6&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image7</strong> <em>&#91;default: /image_raw7&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/autowarefoundation/autoware_universe/tree/main/perception/autoware_image_projection_based_fusion/launch/segmentation_pointcloud_fusion.launch.xml" target="_blank">launch/segmentation_pointcloud_fusion.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>input/camera_number</strong> <em>&#91;default: 1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/mask0</strong> <em>&#91;default: /perception/object_recognition/detection/mask0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info0</strong> <em>&#91;default: /sensing/camera/camera0/camera_info&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/mask1</strong> <em>&#91;default: /perception/object_recognition/detection/mask1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info1</strong> <em>&#91;default: /sensing/camera/camera1/camera_info&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/mask2</strong> <em>&#91;default: /perception/object_recognition/detection/mask2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info2</strong> <em>&#91;default: /sensing/camera/camera2/camera_info&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/mask3</strong> <em>&#91;default: /perception/object_recognition/detection/mask3&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info3</strong> <em>&#91;default: /sensing/camera/camera3/camera_info&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/mask4</strong> <em>&#91;default: /perception/object_recognition/detection/mask4&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info4</strong> <em>&#91;default: /sensing/camera/camera4/camera_info&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/mask5</strong> <em>&#91;default: /perception/object_recognition/detection/mask5&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info5</strong> <em>&#91;default: /sensing/camera/camera5/camera_info&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/mask6</strong> <em>&#91;default: /perception/object_recognition/detection/mask6&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info6</strong> <em>&#91;default: /sensing/camera/camera6/camera_info&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/mask7</strong> <em>&#91;default: /perception/object_recognition/detection/mask7&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info7</strong> <em>&#91;default: /sensing/camera/camera7/camera_info&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/pointcloud</strong> <em>&#91;default: /sensing/lidar/top/outlier_filtered/pointcloud&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>output/pointcloud</strong> <em>&#91;default: output/pointcloud&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>sync_param_path</strong> <em>&#91;default: $(find-pkg-share autoware_image_projection_based_fusion)/config/fusion_common.param.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>semantic_segmentation_based_filter_param_path</strong> <em>&#91;default: $(find-pkg-share autoware_image_projection_based_fusion)/config/segmentation_pointcloud_fusion.param.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image0</strong> <em>&#91;default: /image_raw0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image1</strong> <em>&#91;default: /image_raw1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image2</strong> <em>&#91;default: /image_raw2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image3</strong> <em>&#91;default: /image_raw3&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image4</strong> <em>&#91;default: /image_raw4&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image5</strong> <em>&#91;default: /image_raw5&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image6</strong> <em>&#91;default: /image_raw6&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image7</strong> <em>&#91;default: /image_raw7&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/autowarefoundation/autoware_universe/tree/main/perception/autoware_image_projection_based_fusion/launch/roi_detected_object_fusion.launch.xml" target="_blank">launch/roi_detected_object_fusion.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>input/rois_number</strong> <em>&#91;default: 6&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois0</strong> <em>&#91;default: rois0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info0</strong> <em>&#91;default: /camera_info0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois1</strong> <em>&#91;default: rois1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info1</strong> <em>&#91;default: /camera_info1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois2</strong> <em>&#91;default: rois2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info2</strong> <em>&#91;default: /camera_info2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois3</strong> <em>&#91;default: rois3&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info3</strong> <em>&#91;default: /camera_info3&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois4</strong> <em>&#91;default: rois4&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info4</strong> <em>&#91;default: /camera_info4&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois5</strong> <em>&#91;default: rois5&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info5</strong> <em>&#91;default: /camera_info5&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois6</strong> <em>&#91;default: rois6&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info6</strong> <em>&#91;default: /camera_info6&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois7</strong> <em>&#91;default: rois7&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info7</strong> <em>&#91;default: /camera_info7&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/objects</strong> <em>&#91;default: objects&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>output/objects</strong> <em>&#91;default: fused_objects&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>param_path</strong> <em>&#91;default: $(find-pkg-share autoware_image_projection_based_fusion)/config/roi_detected_object_fusion.param.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>sync_param_path</strong> <em>&#91;default: $(find-pkg-share autoware_image_projection_based_fusion)/config/fusion_common.param.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input_rois_number</strong> <em>&#91;default: $(var input/rois_number)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image0</strong> <em>&#91;default: /image_raw0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image1</strong> <em>&#91;default: /image_raw1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image2</strong> <em>&#91;default: /image_raw2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image3</strong> <em>&#91;default: /image_raw3&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image4</strong> <em>&#91;default: /image_raw4&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image5</strong> <em>&#91;default: /image_raw5&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image6</strong> <em>&#91;default: /image_raw6&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image7</strong> <em>&#91;default: /image_raw7&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/autowarefoundation/autoware_universe/tree/main/perception/autoware_image_projection_based_fusion/launch/pointpainting_fusion.launch.xml" target="_blank">launch/pointpainting_fusion.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>input/rois_number</strong> <em>&#91;default: 6&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois0</strong> <em>&#91;default: rois0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info0</strong> <em>&#91;default: /camera_info0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois1</strong> <em>&#91;default: rois1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info1</strong> <em>&#91;default: /camera_info1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois2</strong> <em>&#91;default: rois2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info2</strong> <em>&#91;default: /camera_info2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois3</strong> <em>&#91;default: rois3&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info3</strong> <em>&#91;default: /camera_info3&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois4</strong> <em>&#91;default: rois4&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info4</strong> <em>&#91;default: /camera_info4&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois5</strong> <em>&#91;default: rois5&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info5</strong> <em>&#91;default: /camera_info5&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois6</strong> <em>&#91;default: rois6&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info6</strong> <em>&#91;default: /camera_info6&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/rois7</strong> <em>&#91;default: rois7&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/camera_info7</strong> <em>&#91;default: /camera_info7&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/pointcloud</strong> <em>&#91;default: /sensing/lidar/top/rectified/pointcloud&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>output/objects</strong> <em>&#91;default: objects&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>data_path</strong> <em>&#91;default: $(env HOME)/autoware_data&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>model_name</strong> <em>&#91;default: pointpainting&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>model_path</strong> <em>&#91;default: $(var data_path)/image_projection_based_fusion&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>model_param_path</strong> <em>&#91;default: $(find-pkg-share autoware_image_projection_based_fusion)/config/pointpainting.param.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>ml_package_param_path</strong> <em>&#91;default: $(var model_path)/$(var model_name)_ml_package.param.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>class_remapper_param_path</strong> <em>&#91;default: $(var model_path)/detection_class_remapper.param.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>sync_param_path</strong> <em>&#91;default: $(find-pkg-share autoware_image_projection_based_fusion)/config/fusion_common.param.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>common_param_path</strong> <em>&#91;default: $(find-pkg-share autoware_image_projection_based_fusion)/config/pointpainting_common.param.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>build_only</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>use_pointcloud_container</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>pointcloud_container_name</strong> <em>&#91;default: pointcloud_container&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input_rois_number</strong> <em>&#91;default: $(var input/rois_number)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image0</strong> <em>&#91;default: /image_raw0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image1</strong> <em>&#91;default: /image_raw1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image2</strong> <em>&#91;default: /image_raw2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image3</strong> <em>&#91;default: /image_raw3&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image4</strong> <em>&#91;default: /image_raw4&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image5</strong> <em>&#91;default: /image_raw5&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image6</strong> <em>&#91;default: /image_raw6&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>input/image7</strong> <em>&#91;default: /image_raw7&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No message files found.</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No plugins found.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>autoware_image_projection_based_fusion</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/autoware_image_projection_based_fusion+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/autowarefoundation/autoware_universe.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/autoware_image_projection_based_fusion"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/autowarefoundation/autoware_universe/tree/main/perception/autoware_image_projection_based_fusion"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/autoware_image_projection_based_fusion?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/autoware_image_projection_based_fusion?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=autoware_image_projection_based_fusion&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "autoware_image_projection_based_fusion"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

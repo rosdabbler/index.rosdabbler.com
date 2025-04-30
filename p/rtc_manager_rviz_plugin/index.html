@@ -1,0 +1,2129 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: rtc_manager_rviz_plugin</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/rtc_manager_rviz_plugin/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">rtc_manager_rviz_plugin</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/rtc_manager_rviz_plugin">rtc_manager_rviz_plugin</a> <small>package from <a style="text-decoration:none" href="/r/autoware_tools/github-autowarefoundation-autoware_tools">autoware_tools</a> repo</small>
+        </h3>
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_dependency_checker">
+
+autoware_dependency_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/bag2lanelet">
+
+bag2lanelet
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_debug_tools">
+
+autoware_debug_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_sample_vehicle_description">
+
+autoware_sample_vehicle_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mission_planner_rviz_plugin">
+
+mission_planner_rviz_plugin
+</a>
+            
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+rtc_manager_rviz_plugin
+</span>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_automatic_goal_rviz_plugin">
+
+tier4_automatic_goal_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_calibration_msgs">
+
+tier4_calibration_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_calibration_rviz_plugin">
+
+tier4_calibration_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_control_rviz_plugin">
+
+tier4_control_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_debug_rviz_plugin">
+
+tier4_debug_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_debug_tools">
+
+tier4_debug_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_logging_level_configure_rviz_plugin">
+
+tier4_logging_level_configure_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_screen_capture_rviz_plugin">
+
+tier4_screen_capture_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_simulated_clock_rviz_plugin">
+
+tier4_simulated_clock_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_string_viewer_rviz_plugin">
+
+tier4_string_viewer_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_target_object_type_rviz_plugin">
+
+tier4_target_object_type_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/control_debug_tools">
+
+control_debug_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vehicle_cmd_analyzer">
+
+vehicle_cmd_analyzer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/control_data_collecting_tool">
+
+control_data_collecting_tool
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/driving_environment_analyzer">
+
+driving_environment_analyzer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_metrics_rviz_plugin">
+
+tier4_metrics_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_localization_evaluation_scripts">
+
+autoware_localization_evaluation_scripts
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/deviation_estimator">
+
+deviation_estimator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/deviation_evaluator">
+
+deviation_evaluator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lanelet2_map_utils">
+
+autoware_lanelet2_map_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lanelet2_map_validator">
+
+autoware_lanelet2_map_validator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pointcloud_divider">
+
+autoware_pointcloud_divider
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pointcloud_merger">
+
+autoware_pointcloud_merger
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_tp_manager">
+
+autoware_tp_manager
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_planning_data_analyzer">
+
+autoware_planning_data_analyzer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_route_client">
+
+autoware_route_client
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_rtc_replayer">
+
+autoware_rtc_replayer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_static_centerline_generator">
+
+autoware_static_centerline_generator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/planning_debug_tools">
+
+planning_debug_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/simulator_compatibility_test">
+
+simulator_compatibility_test
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rqt_diagnostic_graph_monitor">
+
+rqt_diagnostic_graph_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/calibration_adapter">
+
+calibration_adapter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/estimator_utils">
+
+estimator_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/parameter_estimator">
+
+parameter_estimator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/pitch_checker">
+
+pitch_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/time_delay_estimator">
+
+time_delay_estimator
+</a>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/rtc_manager_rviz_plugin"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/autowarefoundation/autoware_tools/tree/main/common/rtc_manager_rviz_plugin"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-primary">1</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">14</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>0.2.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>Apache License 2.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-default">
+                  
+                    AMENT_CMAKE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/autowarefoundation/autoware_tools.git">https://github.com/autowarefoundation/autoware_tools.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-05-01
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <em>No category tags.</em>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/autoware_tools/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/autoware_tools/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/autoware_tools/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            The rtc manager rviz plugin package
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional links.</em>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Taiki Tanaka</li>
+                
+                  <li>Tomoya Kimura</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional authors.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/autowarefoundation/autoware_tools/tree/main/common/rtc_manager_rviz_plugin/README.md" title="Open in git repository">common/rtc_manager_rviz_plugin/README.md</a></div>
+              <div class="panel-body">
+                    <div class="rendered-markdown">
+<h1 id="rtc_manager_rviz_plugin">rtc_manager_rviz_plugin</h1>
+
+<h2 id="purpose">Purpose</h2>
+
+<p>The purpose of this Rviz plugin is</p>
+
+<ol>
+  <li>
+    <p>To display each content of RTC status.</p>
+  </li>
+  <li>
+    <p>To switch each module of RTC auto mode.</p>
+  </li>
+  <li>
+    <p>To change RTC cooperate commands by button.</p>
+  </li>
+</ol>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_tools/main/common/rtc_manager_rviz_plugin/./images/rtc_manager_panel.png" alt="rtc_manager_panel"></p>
+
+<h2 id="inputs--outputs">Inputs / Outputs</h2>
+
+<h3 id="input">Input</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/api/external/get/rtc_status</code></td>
+      <td><code class="language-plaintext highlighter-rouge">tier4_rtc_msgs::msg::CooperateStatusArray</code></td>
+      <td>The statuses of each Cooperate Commands</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="output">Output</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/api/external/set/rtc_commands</code></td>
+      <td><code class="language-plaintext highlighter-rouge">tier4_rtc_msgs::src::CooperateCommands</code></td>
+      <td>The Cooperate Commands for each planning</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/planning/enable_auto_mode/*</code></td>
+      <td><code class="language-plaintext highlighter-rouge">tier4_rtc_msgs::src::AutoMode</code></td>
+      <td>The Cooperate Commands mode for each planning module</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="howtouse">HowToUse</h2>
+
+<ol>
+  <li>
+    <p>Start rviz and select panels/Add new panel.
+<img src="https://raw.githubusercontent.com/autowarefoundation/autoware_tools/main/common/rtc_manager_rviz_plugin/./images/select_panels.png" alt="select_panel"></p>
+  </li>
+  <li>
+    <p>tier4_state_rviz_plugin/RTCManagerPanel and press OK.
+<img src="https://raw.githubusercontent.com/autowarefoundation/autoware_tools/main/common/rtc_manager_rviz_plugin/./images/rtc_selection.png" alt="select_rtc_panel"></p>
+  </li>
+</ol>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="changelog-for-package-rtc_manager_rviz_plugin">Changelog for package rtc_manager_rviz_plugin</h1>
+
+<h2 id="020-2025-03-24">0.2.0 (2025-03-24)</h2>
+
+<h2 id="010-2025-01-28">0.1.0 (2025-01-28)</h2>
+
+<ul>
+  <li>chore: sync files
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/11">#11</a>)
+Co-authored-by: github-actions &lt;&lt;github-actions@github.com&gt;&gt;
+Co-authored-by: pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</li>
+  <li>feat(rtc_manager_panel): add cooperateStatus state column
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/104">#104</a>)
+    <ul>
+      <li>add another column</li>
+    </ul>
+
+    <h2 id="-fix">* fix</h2>
+  </li>
+  <li>chore(rtc_manager_panel): update module name
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/29">#29</a>)
+    <ul>
+      <li>chore(rtc_manager_panel): update module name</li>
+    </ul>
+
+    <p>* chore(gitignore): remove py cache ---------</p>
+  </li>
+  <li>chore(rviz_plugin): move peripheral rviz plugin
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/27">#27</a>)
+    <ul>
+      <li>feat: calibrator tier4 pkg name
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/200">#200</a>)</li>
+      <li>feat: change names</li>
+      <li>feat: move pkg to common</li>
+      <li>feat: change pkg name</li>
+    </ul>
+
+    <p>* fix: library path
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/225">#225</a>)
+Co-authored-by: taikitanaka3 &lt;&lt;taiki.tanaka@tier4.jp&gt;&gt;</p>
+    <ul>
+      <li>feat: add rviz plugin to publish and control the simulated clock
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/349">#349</a>)</li>
+      <li>Add tier4_clock_rviz_plugin to publish&amp;control the sim clock
+in rviz</li>
+      <li>Add step control</li>
+      <li>Fix precommit</li>
+      <li>Update documentation</li>
+      <li>Fix spellcheck</li>
+      <li>Update plugin description and icon</li>
+      <li>Rename package</li>
+      <li>Fix bug with long duration jumps (high speed + low rate)</li>
+      <li>ci: check include guard
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/438">#438</a>)</li>
+      <li>ci: check include guard</li>
+      <li>apply pre-commit</li>
+    </ul>
+
+    <p>* Update .pre-commit-config.yaml Co-authored-by: Kenji Miyake
+&lt;&lt;31987104+kenji-miyake@users.noreply.github.com&gt;&gt;
+* fix: pre-commit Co-authored-by: Kenji Miyake
+&lt;&lt;kenji.miyake@tier4.jp&gt;&gt; Co-authored-by: Kenji Miyake
+&lt;&lt;31987104+kenji-miyake@users.noreply.github.com&gt;&gt;</p>
+    <ul>
+      <li>chore: sync files
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/629">#629</a>)</li>
+      <li>chore: sync files</li>
+    </ul>
+
+    <p>* ci(pre-commit): autofix Co-authored-by: kenji-miyake
+&lt;&lt;kenji-miyake@users.noreply.github.com&gt;&gt; Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+    <ul>
+      <li>style: fix format of package.xml
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/844">#844</a>)</li>
+      <li>refactor: use autoware cmake
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/849">#849</a>)</li>
+      <li>remove autoware_auto_cmake</li>
+      <li>add build_depend of autoware_cmake</li>
+      <li>use autoware_cmake in CMakeLists.txt</li>
+      <li>fix bugs</li>
+      <li>fix cmake lint errors</li>
+      <li>chore: upgrade cmake_minimum_required to 3.14
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/856">#856</a>)</li>
+      <li>fix(accel_brake_map_calibrator): rviz panel type
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/895">#895</a>)</li>
+      <li>fixed panel type</li>
+      <li>modified instruction for rosbag replay case</li>
+      <li>modified update_map_dir service name</li>
+      <li>feat: add manual controller
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/989">#989</a>)</li>
+      <li>feat: add manual controller</li>
+      <li>ci(pre-commit): autofix</li>
+      <li>fix : typo</li>
+      <li>chore: minor update</li>
+      <li>chore : add minor update</li>
+      <li>docs: add image for readme</li>
+      <li>docs: update docs</li>
+      <li>ci(pre-commit): autofix</li>
+      <li>ci(pre-commit): autofix</li>
+    </ul>
+
+    <p>* Update
+common/tier4_control_rviz_plugin/src/tools/manual_controller.cpp
+Co-authored-by: taikitanaka3
+&lt;&lt;65527974+taikitanaka3@users.noreply.github.com&gt;&gt;
+* Update
+common/tier4_control_rviz_plugin/src/tools/manual_controller.hpp
+Co-authored-by: taikitanaka3
+&lt;&lt;65527974+taikitanaka3@users.noreply.github.com&gt;&gt; Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;
+Co-authored-by: Shumpei Wakabayashi
+&lt;&lt;shumpei.wakabayashi@tier4.jp&gt;&gt; Co-authored-by: Shumpei
+Wakabayashi &lt;&lt;42209144+shmpwk@users.noreply.github.com&gt;&gt;</p>
+    <ul>
+      <li>feat(manual_controller): support backward driving
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/1119">#1119</a>)</li>
+      <li>feat(manual_controller): support backward driving</li>
+      <li>chore: unite variable</li>
+      <li>feat: add screen capture package
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/1177">#1177</a>)</li>
+      <li>feat: add screen capture package</li>
+      <li>feat: add state to current process</li>
+      <li>style: refactor codes</li>
+      <li>fix: time</li>
+      <li>feat: add mp4 writer and finalize folders</li>
+      <li>feat: add trigger by service</li>
+      <li>feat: update recorder</li>
+      <li>fix: change codec of mp4 to h264
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/1262">#1262</a>)</li>
+      <li>feat: optimize screen capture panel
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/1470">#1470</a>)</li>
+      <li>feat: optimize screen capture panel</li>
+      <li>apply pre-commit</li>
+      <li>fix: remove unused check of rviz plugin version
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/1474">#1474</a>)</li>
+      <li>fix(rviz_plugin): fix screen capture plugin
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/1492">#1492</a>)</li>
+      <li>refactor(tier4_calibration_rviz_plugin): apply clang-tidy
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/1596">#1596</a>)</li>
+      <li>refactor(tier4_control_rviz_plugin): apply clang-tidy
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/1597">#1597</a>)</li>
+      <li>refactor(tier4_control_rviz_plugin): apply clang-tidy</li>
+      <li>revert: readability-identifier-naming</li>
+      <li>revert(tier4_calibration_rviz_plugin):
+readability-identifier-naming
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/1618">#1618</a>)</li>
+      <li>fix(tier4_screen_capture_rviz_plugin): fix release process
+to handle video writer correctly
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/1622">#1622</a>)</li>
+      <li>refactor(tier4_screen_capture_rviz_plugin):apply clang-tidy
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/1649">#1649</a>)</li>
+      <li>fix(tier4_screen_capture_rviz_plugin): fix spell check
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/1790">#1790</a>)</li>
+      <li>fix(tier4_screen_capture_rviz_plugin): fix spell check</li>
+    </ul>
+
+    <p>* ci(pre-commit): autofix Co-authored-by: pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+    <ul>
+      <li>feat: add rtc manager rviz plugin
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/1936">#1936</a>)</li>
+      <li>feat: add rtc manager rviz plugin</li>
+      <li>chore: cosmetic change</li>
+      <li>chore: remove indent</li>
+      <li>feat: add rtc safe unsafe color</li>
+      <li>fix: typo</li>
+      <li>chore: simplify layout</li>
+      <li>feat: update rtc panel</li>
+      <li>feat(rtc_manager_panel): add rtc all approval
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/2009">#2009</a>)</li>
+      <li>feat(rtc_manager_panel): add rtc all approval</li>
+      <li>chore: cosmetic change</li>
+      <li>fix: static cast</li>
+    </ul>
+
+    <p>* chore: update text Co-authored-by: Fumiya Watanabe
+&lt;&lt;rej55.g@gmail.com&gt;&gt;
+* chore: update text Co-authored-by: Fumiya Watanabe
+&lt;&lt;rej55.g@gmail.com&gt;&gt;</p>
+    <ul>
+      <li>doc: update documents</li>
+      <li>doc: update</li>
+    </ul>
+
+    <p>* doc: small update Co-authored-by: Fumiya Watanabe
+&lt;&lt;rej55.g@gmail.com&gt;&gt;</p>
+    <ul>
+      <li>feat(rtc_manager_rviz_plugin): add_indivisual_exe
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/2021">#2021</a>)</li>
+    </ul>
+
+    <p>* feat(tier4_screen_capture_rviz_plugin): add prefix to video
+name
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/2038">#2038</a>)
+feat: add prefix</p>
+    <ul>
+      <li>feat(tier4_debug_rviz_plugin): pie chart with float32 multi
+array stamped
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/2055">#2055</a>)</li>
+      <li>feat(tier4_debug_rviz_plugin): add ros2 pie chart with
+Float32MultiArrayStamped</li>
+      <li>update README.md</li>
+      <li>fix typo</li>
+      <li>fixed license</li>
+      <li>fix</li>
+      <li>removed unnecessary include</li>
+      <li>fix</li>
+      <li>fix</li>
+      <li>fix(tier4_control_rviz_plugin): add time stamp for control
+command
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/2154">#2154</a>)</li>
+      <li>fix(rtc_manager_rviz_plugin): size check
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/2163">#2163</a>)</li>
+      <li>feat(behavior_path_planner): external request lane change
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/2442">#2442</a>)</li>
+    </ul>
+
+    <p>* feature(behavior_path_planner): add external request lane
+change module feature(behavior_path_planner): fix for RTC
+feature(behavior_path_planner): fix decision logic
+feat(behavior_path_planner): fix behavior_path_planner_tree.xml
+feat(behavior_path_planner): fix for rebase
+feat(behavior_path_planner): output multiple candidate paths
+feat(behavior_path_planner): get path candidate in behavior tree
+manager feat(behavior_path_planner): fix for multiple candidate
+path feat(behavior_path_planner): separate external request lane
+change module feature(behavior_path_planner): add create publisher
+method feature(behavior_path_planner): move publishers to node
+feature(behavior_path_planner): remove unnecessary publisher
+feat(behavior_path_planner): move reset path candidate function to
+behavior tree manager feat(behavior_path_planner): add external
+request lane change path candidate publisher
+feat(behavior_path_planner): apply abort lane change</p>
+    <ul>
+      <li>fix(behavior_path_planner): remove unnecessary change</li>
+      <li>feat(behavior_path_planner): fix getLaneChangePaths()</li>
+      <li>feat(behavior_path_planner): disable external request lane
+change in default tree</li>
+      <li>Update rtc_auto_mode_manager.param.yaml</li>
+      <li>fix(route_handler): remove redundant code</li>
+      <li>fix(behavior_path_planner): fix for turn signal</li>
+      <li>chore(rtc_manager_rviz_plugin): add code owner
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/2792">#2792</a>)</li>
+      <li>feat(rtc_manager_rviz_plugin): add the number of rtc status
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/2791">#2791</a>)</li>
+      <li>feat(rtc_manager_rviz_plugin): add the number of rtc status</li>
+    </ul>
+
+    <p>* chore: simplify layout ---------Co-authored-by: Tomoya
+Kimura &lt;&lt;tomoya.kimura@tier4.jp&gt;&gt;</p>
+    <ul>
+      <li>feat(automatic_goal): add automatic goal rviz plugin
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/3031">#3031</a>)</li>
+      <li>add first version automatic_goal plugin</li>
+      <li>feat(automatic_goal): extract automatic_goal_sender, add
+logging achieved goals</li>
+      <li>doc(automatic_goal): append README</li>
+      <li>ref(automatic_goal): apply pre-commity, fix depend</li>
+      <li>fix(automatic_goal): fix warnings - treated as errors</li>
+      <li>ref(automatic_goal): add author, apply clang-tidy hints</li>
+      <li>ref(automatic_goal): add maintainer, change year</li>
+      <li>ref(automatic_goal): fix package.xml order</li>
+      <li>ref(automatic_goal): names, initializations, main except</li>
+      <li>fix(automatic_goal): change path home-&gt;tmp</li>
+      <li>fix(automatic_goal): fix bad string init, expand readme</li>
+    </ul>
+
+    <p>* fix(automatic_goal): fix name ---------</p>
+    <ul>
+      <li>feat(rtc_manager_rviz_plugin): add avoidance by lc
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/3118">#3118</a>)</li>
+      <li>fix(tier4_screen_capture_rviz_plugin): fix extra/missing
+naming components
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/3207">#3207</a>)</li>
+      <li>chore: sync files
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/3227">#3227</a>)</li>
+      <li>chore: sync files</li>
+    </ul>
+
+    <p>* style(pre-commit): autofix ---------Co-authored-by:
+kenji-miyake &lt;&lt;kenji-miyake@users.noreply.github.com&gt;&gt;
+Co-authored-by: pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+    <ul>
+      <li>feat: change external lane change rtc name
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/3259">#3259</a>)</li>
+      <li>feat: change external lane change rtc name</li>
+    </ul>
+
+    <p>* update config ---------</p>
+    <ul>
+      <li>feat(behavior_velocity_planner::intersection): add occlusion
+detection feature
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/3458">#3458</a>)</li>
+      <li>migrated</li>
+      <li>WIP</li>
+      <li>IntersectionModuleManager own one rtc_interface for
+intersection_occlusion</li>
+      <li>divide occlusion safety and activated</li>
+      <li>fixed to update occlusion cooperate status at construction</li>
+      <li>fixed getOcclusionFirstStopSafety()</li>
+      <li>fixed not to show both intersection and intersection_occlusion
+after passed 1st stop line</li>
+      <li>fixed the intersection_occlusion/inersection stop position afte
+r CLEARED</li>
+      <li>if occlusion cleared when eog is before 1st stop line, set stop
+line to 1st stop line and clear
+prev_occlusion_stop_line_pose_</li>
+      <li>(misc) fix viz, sync param</li>
+      <li>fixed vehicle footprint offset calculation</li>
+      <li>add occcupancy_grid_map method/param var to launcher</li>
+      <li>migrated latest</li>
+      <li>use static pass judge line</li>
+      <li>removed some params</li>
+      <li>organized param</li>
+      <li>add occlusion enable flag</li>
+      <li>revert occupancy grid settings in this PR</li>
+      <li>remove comment</li>
+      <li>fixed pass judge line collision detection to original</li>
+      <li>style(pre-commit): autofix</li>
+      <li>use vehicle_length for static pass judge line</li>
+    </ul>
+
+    <p>* fixed virtual wall marker ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+    <ul>
+      <li>fix(rtc_manager_rviz_plugin): update panel visualization
+properly
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/3517">#3517</a>)</li>
+      <li>refactor(behavior_path_planner): rename pull_over to
+goal_planner
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/3501">#3501</a>)</li>
+      <li>build: mark autoware_cmake as &lt;buildtool_depend&gt;
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/3616">#3616</a>)</li>
+    </ul>
+
+    <p>* build: mark autoware_cmake as &lt;buildtool_depend&gt; with
+&lt;build_depend&gt;, autoware_cmake is automatically exported with
+ament_target_dependencies() (unecessary)</p>
+    <ul>
+      <li>style(pre-commit): autofix</li>
+    </ul>
+
+    <p>* chore: fix pre-commit errors ---------Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;
+Co-authored-by: Kenji Miyake &lt;&lt;kenji.miyake@tier4.jp&gt;&gt;</p>
+    <ul>
+      <li>build(iron): remove rmw_qos_profile_t
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/3809">#3809</a>)</li>
+      <li>refactor(start_planner): rename pull out to start planner
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/3908">#3908</a>)</li>
+      <li>fix(accel_brake_map_calibrator_button_panel): fix
+calibration service name
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/4539">#4539</a>)</li>
+      <li>fix(accel_brake_map_calibrator_button_panel): fix
+calibration service name</li>
+    </ul>
+
+    <h2 id="-misc">* misc</h2>
+
+    <ul>
+      <li>feat(rviz_plugin): add target object type display
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/4855">#4855</a>)</li>
+      <li>add common/tier4_target_object_type_rviz_plugin</li>
+      <li>fix format</li>
+      <li>update color</li>
+      <li>update</li>
+      <li>add readme</li>
+    </ul>
+
+    <p>* Update
+common/tier4_target_object_type_rviz_plugin/src/target_object_type_panel.cpp
+Co-authored-by: Satoshi OTA
+&lt;&lt;44889564+satoshi-ota@users.noreply.github.com&gt;&gt;
+* Update
+common/tier4_target_object_type_rviz_plugin/src/target_object_type_panel.hpp
+Co-authored-by: Satoshi OTA
+&lt;&lt;44889564+satoshi-ota@users.noreply.github.com&gt;&gt;
+* remove unused depend ---------Co-authored-by: Satoshi OTA
+&lt;&lt;44889564+satoshi-ota@users.noreply.github.com&gt;&gt;</p>
+    <ul>
+      <li>fix(rtc_manager_panel): fix panel chattering
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/4988">#4988</a>)</li>
+      <li>build(tier4_target_object_type_rviz_plugin): add missing
+cv_bridge dependency
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/5000">#5000</a>)</li>
+      <li>feat(logging_level_configure): add rviz plugin to change
+logging level
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/5112">#5112</a>)</li>
+      <li>feat(logging_level_configure): add rviz plugin to change
+logging level</li>
+      <li>change file names</li>
+      <li>move initialization code from constructor to onInitialize</li>
+      <li>add maintainer</li>
+      <li>add maintainer</li>
+    </ul>
+
+    <p>* fix include ---------</p>
+    <ul>
+      <li>feat(logger_level_reconfigure_plugin): use node interface and
+some cosmetic updates
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/5204">#5204</a>)</li>
+      <li>use node service</li>
+      <li>enable yaml configuration</li>
+      <li>update yaml loading</li>
+      <li>make it scrollable</li>
+      <li>change function order</li>
+      <li>change color for level</li>
+      <li>fix depend</li>
+    </ul>
+
+    <p>* Update
+common/tier4_logging_level_configure_rviz_plugin/src/logging_level_configure.cpp
+Co-authored-by: Kosuke Takeuchi &lt;&lt;kosuke.tnp@gmail.com&gt;&gt;
+* Update
+common/tier4_logging_level_configure_rviz_plugin/src/logging_level_configure.cpp
+---------Co-authored-by: Kosuke Takeuchi
+&lt;&lt;kosuke.tnp@gmail.com&gt;&gt;</p>
+    <ul>
+      <li>refactor(lane_change): add debug log
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/5308">#5308</a>)</li>
+      <li>docs(logger_level_reconfigure): update readme
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/5471">#5471</a>)</li>
+      <li>feat(localization): enable logging_level_configure
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/5487">#5487</a>)</li>
+      <li>feat(localization): enable logging_level_configure</li>
+      <li>style(pre-commit): autofix</li>
+      <li>update logger config</li>
+      <li>fix pre-commit</li>
+      <li>add tier4_autoware_utils in dependency</li>
+    </ul>
+
+    <p>* add tier4_autoware_utils in dependency
+---------Co-authored-by: pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+    <ul>
+      <li>Logger level update
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/5494">#5494</a>)</li>
+      <li>address ordering</li>
+      <li>add grouping</li>
+    </ul>
+
+    <p>* remove unused comment ---------</p>
+    <ul>
+      <li>feat(logging_level_configure_rviz_plugin): add
+autoware_util logger button
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/5666">#5666</a>)</li>
+      <li>feat(logging_level_configure_rviz_plugin): add
+autoware_util logger button</li>
+    </ul>
+
+    <p>* add for control ---------</p>
+    <ul>
+      <li>refactor(lane_change): standardizing lane change logger name
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/5899">#5899</a>)</li>
+      <li>feat(tier4_logging_level_configure_rviz_plugin): add
+goal/start planner
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/5978">#5978</a>)</li>
+      <li>chore: set log level of debug printing in rviz plugin to DEBUG
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/5996">#5996</a>)</li>
+      <li>feat(rviz_plugin): add string visualization plugin
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/6100">#6100</a>)</li>
+      <li>feat(tier4_automatic_goal_rviz_plugin): make it possible to
+register checkpoints
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/6153">#6153</a>)</li>
+      <li>chore(object_type_panel): update rosparam name config
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/6347">#6347</a>)</li>
+      <li>style(update): autoware tools icons
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/6351">#6351</a>)</li>
+      <li>fix(readme): add acknowledgement for material icons in tool
+plugins
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/6354">#6354</a>)</li>
+      <li>feat(mission_planner_rviz_plugin): create mission planner
+tool
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/6362">#6362</a>)</li>
+      <li>feat(mission_planner_rviz_plugin): create package</li>
+      <li>fix copyright</li>
+      <li>add interrupted state</li>
+    </ul>
+
+    <p>* use full license text instead of spdx ---------</p>
+    <ul>
+      <li>fix(manual_controller): set PARK gear when going from reverse
+to drive
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/6230">#6230</a>)</li>
+      <li>feat(logger_level_configure): make it possible to change level
+of container logger
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/6823">#6823</a>)</li>
+      <li>feat(launch): add logging_demo::LoggerConfig into container</li>
+      <li>fix(logger_level_reconfigure_plugin): fix yaml</li>
+    </ul>
+
+    <p>* feat(logging_level_configure): add composable node
+---------
+* revert: "feat(logger_level_configure): make it possible to
+change level of container logger
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/6823">#6823</a>)"
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/6842">#6842</a>)
+This reverts commit 9d045335d8e3763984bce8dea92f63de3423ebde.</p>
+    <ul>
+      <li>docs(tier4_logging_level_configure_rviz_plugin): update
+document
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/6720">#6720</a>)</li>
+      <li>docs(tier4_logging_level_configure_rviz_plugin): update
+document</li>
+      <li>fix spell check</li>
+    </ul>
+
+    <p>* fix Warning ---------</p>
+    <ul>
+      <li>refactor(bpp, avoidance): remove unnecessary verbose flag
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/6822">#6822</a>)</li>
+      <li>refactor(avoidance): logger small change</li>
+    </ul>
+
+    <p>* refactor(bpp): remove verbose flag ---------</p>
+    <ul>
+      <li>feat(tier4_screen_capture_panel): add new service to capture
+screen shot
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/6867">#6867</a>)</li>
+      <li>feat(tier4_screen_capture_panel): add new service to capture
+screen shot</li>
+    </ul>
+
+    <p>* docs(tier4_screen_capture_rviz_plugin): update readme
+---------</p>
+    <ul>
+      <li>refactor(lane_change): fix logger
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/6873">#6873</a>)</li>
+      <li>fix(route_handler): add logger
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/6888">#6888</a>)</li>
+      <li>fix(route_handler): add logger</li>
+    </ul>
+
+    <p>* fix indent ---------</p>
+    <ul>
+      <li>docs(tier4_simulated_clock_rviz_plugin): update how to use
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/6914">#6914</a>)</li>
+      <li>docs(tier4_simulated_clock_rviz_plugin): update how to use</li>
+      <li>fixed tabbed warning</li>
+      <li>fix warning not working</li>
+    </ul>
+
+    <p>* Fix bullet list ---------</p>
+    <ul>
+      <li>refactor(bpp): path shifter clang tidy and logging level
+configuration
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/6917">#6917</a>)</li>
+      <li>fix(accel_brake_calibrator): fix to set service name and
+exception failure
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/6973">#6973</a>)</li>
+      <li>add service</li>
+      <li>fix exception</li>
+      <li>fix style</li>
+      <li>refactor(motion_utils): supress log message with rclcpp logging
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/6955">#6955</a>)</li>
+      <li>refactor(motion_utils): supress log message with rclcpp logging</li>
+    </ul>
+
+    <p>* remove std string
+------------------Co-authored-by: taikitanaka3
+&lt;&lt;65527974+taikitanaka3@users.noreply.github.com&gt;&gt; Co-authored-by:
+taikitanaka3 &lt;&lt;taiki.tanaka@tier4.jp&gt;&gt; Co-authored-by: Maxime
+CLEMENT &lt;&lt;78338830+maxime-clem@users.noreply.github.com&gt;&gt;
+Co-authored-by: Takagi, Isamu
+&lt;&lt;43976882+isamu-takagi@users.noreply.github.com&gt;&gt; Co-authored-by:
+Kenji Miyake &lt;&lt;kenji.miyake@tier4.jp&gt;&gt; Co-authored-by: Kenji
+Miyake &lt;&lt;31987104+kenji-miyake@users.noreply.github.com&gt;&gt;
+Co-authored-by: awf-autoware-bot[bot]
+&lt;94889083+awf-autoware-bot[bot]\@users.noreply.github.com&gt;
+Co-authored-by: kenji-miyake
+&lt;&lt;kenji-miyake@users.noreply.github.com&gt;&gt; Co-authored-by:
+pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;
+Co-authored-by: Shumpei Wakabayashi
+&lt;&lt;shumpei.wakabayashi@tier4.jp&gt;&gt; Co-authored-by: Shumpei
+Wakabayashi &lt;&lt;42209144+shmpwk@users.noreply.github.com&gt;&gt;
+Co-authored-by: Tomoya Kimura &lt;&lt;tomoya.kimura@tier4.jp&gt;&gt;
+Co-authored-by: Hiroki OTA &lt;&lt;hiroki.ota@tier4.jp&gt;&gt; Co-authored-by:
+Fumiya Watanabe &lt;&lt;rej55.g@gmail.com&gt;&gt; Co-authored-by: Takayuki
+Murooka &lt;&lt;takayuki5168@gmail.com&gt;&gt; Co-authored-by: dmoszynski
+&lt;&lt;121798334+dmoszynski@users.noreply.github.com&gt;&gt; Co-authored-by:
+Satoshi OTA &lt;&lt;44889564+satoshi-ota@users.noreply.github.com&gt;&gt;
+Co-authored-by: Mehmet Dogru
+&lt;&lt;48479081+mehmetdogru@users.noreply.github.com&gt;&gt; Co-authored-by:
+Kosuke Takeuchi &lt;&lt;kosuke.tnp@gmail.com&gt;&gt; Co-authored-by: Vincent
+Richard &lt;&lt;richard-v@macnica.co.jp&gt;&gt; Co-authored-by: Daisuke
+Nishimatsu &lt;&lt;42202095+wep21@users.noreply.github.com&gt;&gt;
+Co-authored-by: Takamasa Horibe &lt;&lt;horibe.takamasa@gmail.com&gt;&gt;
+Co-authored-by: Esteve Fernandez
+&lt;&lt;33620+esteve@users.noreply.github.com&gt;&gt; Co-authored-by: kminoda
+&lt;&lt;44218668+kminoda@users.noreply.github.com&gt;&gt; Co-authored-by:
+Zulfaqar Azmi
+&lt;&lt;93502286+zulfaqar-azmi-t4@users.noreply.github.com&gt;&gt;
+Co-authored-by: Khalil Selyan
+&lt;&lt;36904941+KhalilSelyan@users.noreply.github.com&gt;&gt;</p>
+  </li>
+  <li>Contributors: Go Sakayori, Mamoru Sobue, Satoshi OTA,
+awf-autoware-bot[bot]</li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/rtc_manager_rviz_plugin/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_auto#github">ament_cmake_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_cmake#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_cmake#github">autoware_cmake  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_lint_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_lint_auto#github">ament_lint_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_lint_common#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_lint_common#github">autoware_lint_common  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclcpp#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclcpp#github">rclcpp  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rviz_common#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rviz_common#github">rviz_common  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tier4_external_api_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tier4_external_api_msgs#github">tier4_external_api_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tier4_planning_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tier4_planning_msgs#github">tier4_planning_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tier4_rtc_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tier4_rtc_msgs#github">tier4_rtc_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/unique_identifier_msgs#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/unique_identifier_msgs#github">unique_identifier_msgs  </a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th>Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                      <tr>
+                        <td><a href="/d/libqt5-core">libqt5-core</a></td>
+                      </tr>
+                    
+                  
+                    
+                      <tr>
+                        <td><a href="/d/libqt5-gui">libqt5-gui</a></td>
+                      </tr>
+                    
+                  
+                    
+                      <tr>
+                        <td><a href="/d/libqt5-widgets">libqt5-widgets</a></td>
+                      </tr>
+                    
+                  
+                    
+                      <tr>
+                        <td><a href="/d/qtbase5-dev">qtbase5-dev</a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No known dependants.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No launch files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No message files found.</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <ul>
+            
+              <li><a href="https://github.com/autowarefoundation/autoware_tools/tree/main/common/rtc_manager_rviz_plugin//plugins/plugin_description.xml" target="_blank">rviz</a></li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>rtc_manager_rviz_plugin</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/rtc_manager_rviz_plugin+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/autowarefoundation/autoware_tools.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/rtc_manager_rviz_plugin"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/autowarefoundation/autoware_tools/tree/main/common/rtc_manager_rviz_plugin"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/rtc_manager_rviz_plugin?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/rtc_manager_rviz_plugin?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=rtc_manager_rviz_plugin&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "rtc_manager_rviz_plugin"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

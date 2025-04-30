@@ -1,0 +1,2476 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: autoware_lanelet2_map_validator</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/autoware_lanelet2_map_validator/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">autoware_lanelet2_map_validator</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/autoware_lanelet2_map_validator">autoware_lanelet2_map_validator</a> <small>package from <a style="text-decoration:none" href="/r/autoware_tools/github-autowarefoundation-autoware_tools">autoware_tools</a> repo</small>
+        </h3>
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_dependency_checker">
+
+autoware_dependency_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/bag2lanelet">
+
+bag2lanelet
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_debug_tools">
+
+autoware_debug_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_sample_vehicle_description">
+
+autoware_sample_vehicle_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mission_planner_rviz_plugin">
+
+mission_planner_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rtc_manager_rviz_plugin">
+
+rtc_manager_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_automatic_goal_rviz_plugin">
+
+tier4_automatic_goal_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_calibration_msgs">
+
+tier4_calibration_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_calibration_rviz_plugin">
+
+tier4_calibration_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_control_rviz_plugin">
+
+tier4_control_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_debug_rviz_plugin">
+
+tier4_debug_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_debug_tools">
+
+tier4_debug_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_logging_level_configure_rviz_plugin">
+
+tier4_logging_level_configure_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_screen_capture_rviz_plugin">
+
+tier4_screen_capture_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_simulated_clock_rviz_plugin">
+
+tier4_simulated_clock_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_string_viewer_rviz_plugin">
+
+tier4_string_viewer_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_target_object_type_rviz_plugin">
+
+tier4_target_object_type_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/control_debug_tools">
+
+control_debug_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/vehicle_cmd_analyzer">
+
+vehicle_cmd_analyzer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/control_data_collecting_tool">
+
+control_data_collecting_tool
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/driving_environment_analyzer">
+
+driving_environment_analyzer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/tier4_metrics_rviz_plugin">
+
+tier4_metrics_rviz_plugin
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_localization_evaluation_scripts">
+
+autoware_localization_evaluation_scripts
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/deviation_estimator">
+
+deviation_estimator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/deviation_evaluator">
+
+deviation_evaluator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lanelet2_map_utils">
+
+autoware_lanelet2_map_utils
+</a>
+            
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+autoware_lanelet2_map_validator
+</span>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pointcloud_divider">
+
+autoware_pointcloud_divider
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pointcloud_merger">
+
+autoware_pointcloud_merger
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_tp_manager">
+
+autoware_tp_manager
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_planning_data_analyzer">
+
+autoware_planning_data_analyzer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_route_client">
+
+autoware_route_client
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_rtc_replayer">
+
+autoware_rtc_replayer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_static_centerline_generator">
+
+autoware_static_centerline_generator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/planning_debug_tools">
+
+planning_debug_tools
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/simulator_compatibility_test">
+
+simulator_compatibility_test
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/rqt_diagnostic_graph_monitor">
+
+rqt_diagnostic_graph_monitor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/calibration_adapter">
+
+calibration_adapter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/estimator_utils">
+
+estimator_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/parameter_estimator">
+
+parameter_estimator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/pitch_checker">
+
+pitch_checker
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/time_delay_estimator">
+
+time_delay_estimator
+</a>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/autoware_lanelet2_map_validator"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/autowarefoundation/autoware_tools/tree/main/map/autoware_lanelet2_map_validator"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-default">0</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">12</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>0.2.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>Apache License 2.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-default">
+                  
+                    AMENT_CMAKE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/autowarefoundation/autoware_tools.git">https://github.com/autowarefoundation/autoware_tools.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-05-01
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <em>No category tags.</em>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/autoware_tools/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/autoware_tools/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/autoware_tools/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            Validation tool for lanelet2 maps especially for Autoware usage
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional links.</em>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Taiki Yamada</li>
+                
+                  <li>Mamoru Sobue</li>
+                
+                  <li>Yamato Ando</li>
+                
+                  <li>Masahiro Sakamoto</li>
+                
+                  <li>NGUYEN Viet Anh</li>
+                
+                  <li>Shintaro Sakoda</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional authors.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/autowarefoundation/autoware_tools/tree/main/map/autoware_lanelet2_map_validator/README.md" title="Open in git repository">map/autoware_lanelet2_map_validator/README.md</a></div>
+              <div class="panel-body">
+                    <div class="rendered-markdown">
+<h1 id="autoware_lanelet2_map_validator">autoware_lanelet2_map_validator</h1>
+
+<p><code class="language-plaintext highlighter-rouge">autoware_lanelet2_map_validator</code> is a tool to validate Lanelet2 maps to ensure that Autoware can work properly with it.</p>
+
+<p>This validation tool is an extension of <a href="https://github.com/fzi-forschungszentrum-informatik/Lanelet2/tree/master/lanelet2_validation">lanelet2_validation</a> so that Autoware specific rules can be applied. As you can see from the codes in the <code class="language-plaintext highlighter-rouge">src/validators</code> directory, the group of validators belong to this tool inherits the <a href="https://github.com/fzi-forschungszentrum-informatik/Lanelet2/blob/master/lanelet2_validation/include/lanelet2_validation/BasicValidator.h#L17">lanelet::validation::MapValidator class</a> from the original <code class="language-plaintext highlighter-rouge">lanelet2_validation</code>. Therefore, we believe that reading the source code of the <code class="language-plaintext highlighter-rouge">lanelet2_validation</code> will help you understand this tool better.</p>
+
+<p><strong>Note that this validator is still on construction that there are only a few rules and a template to define those rules.</strong></p>
+
+<p>The official Autoware requirements for lanelet2 maps are described in <a href="https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-architecture/map/map-requirements/vector-map-requirements-overview/">Vector Map creation requirement specifications (in Autoware Documentation)</a>.</p>
+
+<h2 id="design-concept">Design concept</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">autoware_lanelet2_map_validator</code> is designed to validate <code class="language-plaintext highlighter-rouge">.osm</code> map files by using and extending the <a href="https://github.com/fzi-forschungszentrum-informatik/Lanelet2/tree/master/lanelet2_validation">lanelet2_validation</a> package for Autoware.</p>
+
+<p><code class="language-plaintext highlighter-rouge">autoware_lanelet2_map_validator</code> takes the lanelet2 map (.osm file) and requirement set (JSON file, optional) as the input, and output validation results to the console.</p>
+
+<p>If a requirement set is given, <code class="language-plaintext highlighter-rouge">autoware_lanelet2_map_validator</code> also outputs validation results reflecting the input requirement set.
+See <a href="https://github.com/autowarefoundation/autoware_tools/tree/main/map/autoware_lanelet2_map_validator/#run-with-a-requirement-set">“Run with a requirement set”</a> for further information, <a href="https://github.com/autowarefoundation/autoware_tools/tree/main/map/autoware_lanelet2_map_validator/#input-file">“Input file”</a> to understand the input format, and <a href="https://github.com/autowarefoundation/autoware_tools/tree/main/map/autoware_lanelet2_map_validator/#output-file">“Output file”</a> to understand the output format.</p>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_tools/main/map/autoware_lanelet2_map_validator/./media/autoware_lanelet2_map_validator_architecture.drawio.svg" alt="autoware_lanelet2_map_validator_architecture"></p>
+
+<h2 id="how-to-use">How to use</h2>
+
+<p>Basically, you can use the following command to execute <code class="language-plaintext highlighter-rouge">autoware_lanelet2_map_validator</code>. However, note that <code class="language-plaintext highlighter-rouge">autoware_lanelet2_map_validator</code> is a ROS/rclcpp free tool, so you can just run the built executable whatever way.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 run autoware_lanelet2_map_validator autoware_lanelet2_map_validator
+
+</code></pre></div></div>
+
+<h3 id="run-all-validators">Run ALL validators</h3>
+
+<p>You can use <code class="language-plaintext highlighter-rouge">autoware_lanelet2_map_validator</code> with the following command. This will run all validators including the default built-in validators in the <a href="https://github.com/fzi-forschungszentrum-informatik/Lanelet2/tree/master/lanelet2_validation">lanelet2_validation</a>.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 run autoware_lanelet2_map_validator autoware_lanelet2_map_validator <span class="nt">--map_file</span> &lt;absolute_or_relative_path/to_your/lanelet2_map.osm&gt; <span class="nt">--projector</span> mgrs
+
+</code></pre></div></div>
+
+<h3 id="run-a-specific-validator">Run a specific validator</h3>
+
+<p><code class="language-plaintext highlighter-rouge">autoware_lanelet2_map_validator</code> consists of multiple small validators in order to realize complex requirements with a combination of them.
+If you want to call a few validators, you can select them with the <code class="language-plaintext highlighter-rouge">--validator, -v</code> option.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 run autoware_lanelet2_map_validator autoware_lanelet2_map_validator <span class="nt">--map_file</span> path/to_your/lanelet2_map.osm <span class="nt">--projector</span> mgrs <span class="nt">--validator</span> mapping.traffic_light.missing_regulatory_elements
+
+</code></pre></div></div>
+
+<p>You can get a list of available validators with the <code class="language-plaintext highlighter-rouge">--print</code> option.
+(<code class="language-plaintext highlighter-rouge">-p</code> is for <code class="language-plaintext highlighter-rouge">--projector</code>)</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 run autoware_lanelet2_map_validator autoware_lanelet2_map_validator <span class="nt">--print</span>
+
+</code></pre></div></div>
+
+<h3 id="run-with-a-requirement-set">Run with a requirement set</h3>
+
+<p><code class="language-plaintext highlighter-rouge">autoware_lanelet2_map_validator</code> can manage to run a group of validators by a list of validator names.
+<code class="language-plaintext highlighter-rouge">autoware_lanelet2_map_validator</code> will scan through the input JSON file given by the <code class="language-plaintext highlighter-rouge">--input_requirements, -i</code> option, and output the validation results to the directory given by the <code class="language-plaintext highlighter-rouge">--output_directory, -o</code> option.
+The output filename will be <code class="language-plaintext highlighter-rouge">lanelet2_validation_results.json</code>.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 run autoware_lanelet2_map_validator autoware_lanelet2_map_validator <span class="nt">--map_file</span> &lt;absolute_or_relative_path/to_your/lanelet2_map.osm&gt; <span class="nt">--projector</span> mgrs <span class="nt">--input_requirements</span> &lt;absolute_or_relative_path_to_autoware_requirement_set.json&gt; <span class="nt">--output_directory</span> ./
+
+</code></pre></div></div>
+
+<p>(Short version)</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 run autoware_lanelet2_map_validator autoware_lanelet2_map_validator <span class="nt">-m</span> &lt;absolute_or_relative_path/to_your/lanelet2_map.osm&gt; <span class="nt">-p</span> mgrs <span class="nt">-i</span> &lt;absolute_or_relative_path_to_autoware_requirement_set.json&gt; <span class="nt">-o</span> ./
+
+</code></pre></div></div>
+
+<h4 id="input-file">Input file</h4>
+
+<p>The JSON file input should follow the structure like this example.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"requirements"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vm-02-02"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"validators"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mapping.stop_line.missing_regulatory_elements"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vm-04-01"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"validators"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mapping.crosswalk.missing_regulatory_elements"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mapping.crosswalk.regulatory_element_details"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"prerequisites"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mapping.crosswalk.missing_regulatory_elements"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vm-05-01"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"validators"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mapping.traffic_light.missing_regulatory_elements"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mapping.traffic_light.regulatory_element_details"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"prerequisites"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mapping.traffic_light.missing_regulatory_elements"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div></div>
+
+<ul>
+  <li>MUST have a single <code class="language-plaintext highlighter-rouge">requirements</code> field.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">requirements</code> field MUST be a list of requirements. A requirement MUST have
+    <ul>
+      <li>
+<code class="language-plaintext highlighter-rouge">id</code> : The id of the requirement. Its name is arbitrary.</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">validators</code> : A list of validators that structures the requirement.
+        <ul>
+          <li>A validator MUST be given with its name on the <code class="language-plaintext highlighter-rouge">name</code> field.</li>
+          <li>The name list of available validators can be obtained from the <code class="language-plaintext highlighter-rouge">--print</code> option.</li>
+          <li>You can add a list of <code class="language-plaintext highlighter-rouge">prerequisites</code> to each validator. Then, the validator will only be run when the prerequisites pass the validation.</li>
+          <li>In the <code class="language-plaintext highlighter-rouge">prerequisites</code> field, you can add <code class="language-plaintext highlighter-rouge">forgive_warnings: true</code> in order to run the validator even if the prerequisites output warning issues. (Error issues from prerequisites will still skip the validation.). Note that NOT writing the <code class="language-plaintext highlighter-rouge">forgive_warnings</code> field and writing <code class="language-plaintext highlighter-rouge">forgive_warnings: false</code> means the same.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>The user can write any other field (like <code class="language-plaintext highlighter-rouge">version</code>) besides <code class="language-plaintext highlighter-rouge">requirements</code>.</li>
+</ul>
+
+<h4 id="output-file">Output file</h4>
+
+<p>When the <code class="language-plaintext highlighter-rouge">input_requirements</code> is thrown to <code class="language-plaintext highlighter-rouge">autoware_lanelet2_map_validator</code>, it will output a <code class="language-plaintext highlighter-rouge">lanelet2_validation_results.json</code> file which looks like the following example.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"requirements"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vm-02-02"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"passed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"validators"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mapping.stop_line.missing_regulatory_elements"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"passed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vm-04-01"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"passed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"validators"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"issues"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">163</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"issue_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Crosswalk.MissingRegulatoryElements-001"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"No regulatory element refers to this crosswalk."</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"primitive"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lanelet"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"severity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Error"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">164</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"issue_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Crosswalk.MissingRegulatoryElements-001"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"No regulatory element refers to this crosswalk."</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"primitive"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lanelet"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"severity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Error"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">165</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"issue_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Crosswalk.MissingRegulatoryElements-001"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"No regulatory element refers to this crosswalk."</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"primitive"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lanelet"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"severity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Error"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">166</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"issue_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Crosswalk.MissingRegulatoryElements-001"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"No regulatory element refers to this crosswalk."</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"primitive"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lanelet"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"severity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Error"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">],</span><span class="w">
+          </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mapping.crosswalk.missing_regulatory_elements"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"passed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"issues"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"issue_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"General.PrerequisitesFailure-001"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Prerequisites didn't pass"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"primitive"</span><span class="p">:</span><span class="w"> </span><span class="s2">"primitive"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"severity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Error"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">],</span><span class="w">
+          </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mapping.crosswalk.regulatory_element_details"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"passed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"prerequisites"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mapping.crosswalk.missing_regulatory_elements"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vm-05-01"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"passed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"validators"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mapping.traffic_light.missing_regulatory_elements"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"passed"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"issues"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9896</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"issue_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TrafficLight.MissingRegulatoryElements-001"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Regulatory element of traffic light must have a stop line(ref_line)."</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"primitive"</span><span class="p">:</span><span class="w"> </span><span class="s2">"regulatory element"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"severity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Error"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9918</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"issue_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TrafficLight.MissingRegulatoryElements-001"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Regulatory element of traffic light must have a stop line(ref_line)."</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"primitive"</span><span class="p">:</span><span class="w"> </span><span class="s2">"regulatory element"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"severity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Error"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9838</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"issue_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TrafficLight.MissingRegulatoryElements-001"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Regulatory element of traffic light must have a stop line(ref_line)."</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"primitive"</span><span class="p">:</span><span class="w"> </span><span class="s2">"regulatory element"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"severity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Error"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9874</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"issue_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TrafficLight.MissingRegulatoryElements-001"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Regulatory element of traffic light must have a stop line(ref_line)."</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"primitive"</span><span class="p">:</span><span class="w"> </span><span class="s2">"regulatory element"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"severity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Error"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">],</span><span class="w">
+          </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mapping.traffic_light.regulatory_element_details"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"passed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"prerequisites"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mapping.traffic_light.missing_regulatory_elements"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div></div>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">lanelet2_validation_results.json</code> inherits the JSON file of <code class="language-plaintext highlighter-rouge">input_requirements</code> and add results to it.
+    <ul>
+      <li>So additional input information not related to this validator also remains in the output.</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-plaintext highlighter-rouge">autoware_lanelet2_map_validator</code> adds a boolean <code class="language-plaintext highlighter-rouge">passed</code> field to each requirement. If all validators of the requirement have been passed, the <code class="language-plaintext highlighter-rouge">passed</code> field of the requirement will be <code class="language-plaintext highlighter-rouge">true</code> (<code class="language-plaintext highlighter-rouge">false</code> if not).</li>
+  <li>The <code class="language-plaintext highlighter-rouge">passed</code> field is also given to each validator. If the validator found any issues the <code class="language-plaintext highlighter-rouge">passed</code> field will turn to be <code class="language-plaintext highlighter-rouge">false</code> (<code class="language-plaintext highlighter-rouge">true</code> if not), and adds an <code class="language-plaintext highlighter-rouge">issues</code> field which is a list of issues found. Each issue contains information of <code class="language-plaintext highlighter-rouge">severity</code>, <code class="language-plaintext highlighter-rouge">primitive</code>, <code class="language-plaintext highlighter-rouge">id</code>, <code class="language-plaintext highlighter-rouge">message</code> and <code class="language-plaintext highlighter-rouge">issue_code</code>.</li>
+</ul>
+
+<h3 id="available-command-options">Available command options</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>option</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-h, --help</code></td>
+      <td>Explains about this tool and show a list of options</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">--print</code></td>
+      <td>Print all available checker without running them</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-m, --map_file</code></td>
+      <td>Path to the map to be validated</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-i, --input_requirements</code></td>
+      <td>Path to the JSON file where the list of requirements and validations is written</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-o, --output_directory</code></td>
+      <td>Directory to save the list of validation results in a JSON format</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-v, --validator</code></td>
+      <td>Comma separated list of regexes to filter the applicable validators. Will run all validators by default. Example: <code class="language-plaintext highlighter-rouge">mapping.*</code> to run all checks for the mapping</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-p, --projector</code></td>
+      <td>Projector used for loading lanelet map. Available projectors are: <code class="language-plaintext highlighter-rouge">mgrs</code>, <code class="language-plaintext highlighter-rouge">utm</code>, and <code class="language-plaintext highlighter-rouge">transverse_mercator</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-l, --location</code></td>
+      <td>Location of the map (for instantiating the traffic rules), e.g. de for Germany</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">--participants</code></td>
+      <td>Participants for which the routing graph will be instantiated (default: vehicle)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">--lat</code></td>
+      <td>latitude coordinate of map origin. This is required for the transverse mercator and utm projector.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">--lon</code></td>
+      <td>longitude coordinate of map origin. This is required for the transverse mercator and utm projector.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="available-validators">Available validators</h3>
+
+<p>Since there will be hundreds of validators in the future, the documents for each validator should categorized in the docs file.
+The directory structure should be the same to that of the <code class="language-plaintext highlighter-rouge">src/validators</code> directory.</p>
+
+<h4 id="stop-line">Stop Line</h4>
+
+<ul>
+  <li><a href="https://github.com/autowarefoundation/autoware_tools/tree/main/map/autoware_lanelet2_map_validator/./docs/stop_line/missing_regulatory_elements_for_stop_lines.md">mapping.stop_line.missing_regulatory_elements</a></li>
+</ul>
+
+<h4 id="traffic-light">Traffic Light</h4>
+
+<ul>
+  <li><a href="https://github.com/autowarefoundation/autoware_tools/tree/main/map/autoware_lanelet2_map_validator/./docs/traffic_light/missing_regulatory_elements_for_traffic_lights.md">mapping.traffic_light.missing_regulatory_elements</a></li>
+  <li><a href="https://github.com/autowarefoundation/autoware_tools/tree/main/map/autoware_lanelet2_map_validator/./docs/traffic_light/regulatory_element_details_for_traffic_lights.md">mapping.traffic_light.regulatory_element_details</a></li>
+</ul>
+
+<h4 id="crosswalk">Crosswalk</h4>
+
+<ul>
+  <li><a href="https://github.com/autowarefoundation/autoware_tools/tree/main/map/autoware_lanelet2_map_validator/./docs/crosswalk/missing_regulatory_elements_for_crosswalk.md">mapping.crosswalk.missing_regulatory_elements</a></li>
+  <li><a href="https://github.com/autowarefoundation/autoware_tools/tree/main/map/autoware_lanelet2_map_validator/./docs/crosswalk/regulatory_element_details_for_crosswalks.md">mapping.crosswalk.regulatory_element_details</a></li>
+</ul>
+
+<h2 id="how-to-add-a-new-validator">How to add a new validator</h2>
+
+<p>If you want to contribute to <code class="language-plaintext highlighter-rouge">autoware_lanelet2_map_validator</code>, please check out the <a href="https://github.com/autowarefoundation/autoware_tools/tree/main/map/autoware_lanelet2_map_validator/./docs/how_to_contribute.md">how_to_contribute</a> first.</p>
+
+<h2 id="relationship-between-requirements-and-validators">Relationship between requirements and validators</h2>
+
+<p>This is a table describing the correspondence between the validators that each requirement consists of.
+The “Validators” column will be blank if it hasn’t be implemented.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Requirements</th>
+      <th>Validators</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>vm-01-01</td>
+      <td>Lanelet basics</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-01-02</td>
+      <td>Allowance for lane changes</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-01-03</td>
+      <td>Linestring sharing</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-01-04</td>
+      <td>Sharing of the centerline of lanes for opposing traffic</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-01-05</td>
+      <td>Lane geometry</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-01-06</td>
+      <td>Line position (1)</td>
+      <td>(Not possible to validate because real-world correspondence cannot be determined programmatically.)</td>
+    </tr>
+    <tr>
+      <td>vm-01-07</td>
+      <td>Line position (2)</td>
+      <td>(Not possible to validate because real-world correspondence cannot be determined programmatically.)</td>
+    </tr>
+    <tr>
+      <td>vm-01-08</td>
+      <td>Line position (3)</td>
+      <td>(Not possible to validate because real-world correspondence cannot be determined programmatically.)</td>
+    </tr>
+    <tr>
+      <td>vm-01-09</td>
+      <td>Speed limits</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-01-10</td>
+      <td>Centerline</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-01-11</td>
+      <td>Centerline connection (1)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-01-12</td>
+      <td>Centerline connection (2)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-01-13</td>
+      <td>Roads with no centerline (1)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-01-14</td>
+      <td>Roads with no centerline (2)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-01-15</td>
+      <td>Road shoulder</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-01-16</td>
+      <td>Road shoulder Linestring sharing</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-01-17</td>
+      <td>Side strip</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-01-18</td>
+      <td>Side strip Linestring sharing</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-01-19</td>
+      <td>Walkway</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-02-01</td>
+      <td>Stop line alignment</td>
+      <td>(Not possible to validate because real-world correspondence cannot be determined programmatically.)</td>
+    </tr>
+    <tr>
+      <td>vm-02-02</td>
+      <td>Stop sign</td>
+      <td><a href="https://github.com/autowarefoundation/autoware_tools/tree/main/map/autoware_lanelet2_map_validator/./docs/stop_line/missing_regulatory_elements_for_stop_lines.md">mapping.stop_line.missing_regulatory_elements</a></td>
+    </tr>
+    <tr>
+      <td>vm-03-01</td>
+      <td>Intersection criteria</td>
+      <td><a href="https://github.com/autowarefoundation/autoware_tools/tree/main/map/autoware_lanelet2_map_validator/./docs/intersection/intersection_area_dangling_reference.md">mapping.intersection.intersection_area_dangling_reference</a></td>
+    </tr>
+    <tr>
+      <td>vm-03-02</td>
+      <td>Lanelet’s turn direction and virtual</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-03-03</td>
+      <td>Lanelet width in the intersection</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-03-04</td>
+      <td>Lanelet creation in the intersection</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-03-05</td>
+      <td>Lanelet division in the intersection</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-03-06</td>
+      <td>Guide lines in the intersection</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-03-07</td>
+      <td>Multiple lanelets in the intersection</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-03-08</td>
+      <td>Intersection Area range</td>
+      <td>
+<a href="https://github.com/autowarefoundation/autoware_tools/tree/main/map/autoware_lanelet2_map_validator/./docs/intersection/intersection_area_validity.md">mapping.intersection.intersection_area_validity</a>, <a href="https://github.com/autowarefoundation/autoware_tools/tree/main/map/autoware_lanelet2_map_validator/./docs/intersection/intersection_area_segment_type.md">mapping.intersection.intersection_area_segment_type</a>
+</td>
+    </tr>
+    <tr>
+      <td>vm-03-09</td>
+      <td>Range of Lanelet in the intersection</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-03-10</td>
+      <td>Right of way (with signal)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-03-11</td>
+      <td>Right of way (without signal)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-03-12</td>
+      <td>Right of way supplements</td>
+      <td>(Nothing to validate.)</td>
+    </tr>
+    <tr>
+      <td>vm-03-13</td>
+      <td>Merging from private area, sidewalk</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-03-14</td>
+      <td>Road marking</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-03-15</td>
+      <td>Exclusive bicycle lane</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-04-01</td>
+      <td>Traffic light basics</td>
+      <td>
+<a href="https://github.com/autowarefoundation/autoware_tools/tree/main/map/autoware_lanelet2_map_validator/./docs/traffic_light/missing_regulatory_elements_for_traffic_lights.md">mapping.traffic_light.missing_regulatory_elements</a>, <a href="https://github.com/autowarefoundation/autoware_tools/tree/main/map/autoware_lanelet2_map_validator/./docs/traffic_light/regulatory_element_details_for_traffic_lights.md">mapping.traffic_light.regulatory_element_details</a>, <a href="https://github.com/autowarefoundation/autoware_tools/tree/main/map/autoware_lanelet2_map_validator/./docs/traffic_light/missing_referrers_for_traffic_lights.md">mapping.traffic_light.missing_referrers</a>
+</td>
+    </tr>
+    <tr>
+      <td>vm-04-02</td>
+      <td>Traffic light position and size</td>
+      <td>
+<a href="https://github.com/autowarefoundation/autoware_tools/tree/main/map/autoware_lanelet2_map_validator/./docs/traffic_light/traffic_light_facing.md">mapping.traffic_light.correct_facing</a> (TODO: Compare the light_bulb direction and traffic_light direction.)</td>
+    </tr>
+    <tr>
+      <td>vm-04-03</td>
+      <td>Traffic light lamps</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-05-01</td>
+      <td>Crosswalks across the road</td>
+      <td>
+<a href="https://github.com/autowarefoundation/autoware_tools/tree/main/map/autoware_lanelet2_map_validator/./docs/crosswalk/missing_regulatory_elements_for_crosswalk.md">mapping.crosswalk.missing_regulatory_elements</a>, <a href="https://github.com/autowarefoundation/autoware_tools/tree/main/map/autoware_lanelet2_map_validator/./docs/crosswalk/regulatory_element_details_for_crosswalks.md">mapping.crosswalk.regulatory_element_details</a> (TODO: handle cases against missing referrers)</td>
+    </tr>
+    <tr>
+      <td>vm-05-02</td>
+      <td>Crosswalks with pedestrian signals</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-05-03</td>
+      <td>Deceleration for safety at crosswalks</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-05-04</td>
+      <td>Fences</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-06-01</td>
+      <td>Buffer Zone</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-06-02</td>
+      <td>No parking signs</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-06-03</td>
+      <td>No stopping signs</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-06-04</td>
+      <td>No stopping sections</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-06-05</td>
+      <td>Detection area</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>vm-07-01</td>
+      <td>Vector Map creation range</td>
+      <td>(Not possible to validate because real-world correspondence cannot be determined programmatically?)</td>
+    </tr>
+    <tr>
+      <td>vm-07-02</td>
+      <td>Range of detecting pedestrians who enter the road</td>
+      <td>(Not possible to validate because real-world correspondence cannot be determined programmatically.)</td>
+    </tr>
+    <tr>
+      <td>vm-07-03</td>
+      <td>Guardrails, guard pipes, fences</td>
+      <td>(Not possible to validate because real-world correspondence cannot be determined programmatically.)</td>
+    </tr>
+    <tr>
+      <td>vm-07-04</td>
+      <td>Ellipsoidal height</td>
+      <td>(Not possible to validate because real-world correspondence cannot be determined programmatically?)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="changelog-for-package-autoware_lanelet2_map_validator">Changelog for package autoware_lanelet2_map_validator</h1>
+
+<h2 id="020-2025-03-24">0.2.0 (2025-03-24)</h2>
+
+<h2 id="010-2025-01-28">0.1.0 (2025-01-28)</h2>
+
+<ul>
+  <li>unify version to 0.0.0</li>
+  <li>feat(lanelet2_map_validator): check local coordinates declaration
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/194">#194</a>)
+    <ul>
+      <li>Implement mapping.lane.local_coordinates_declaration</li>
+      <li>Added test for mapping.lane.local_coordinates_declaration</li>
+    </ul>
+
+    <p>* Added documents for mapping.lane.local_coordinates_declaration
+---------</p>
+  </li>
+  <li>feat(lanelet2_map_validator): add validator to check whether
+intersection lanelets have valid turn_direction tags
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/186">#186</a>)
+    <ul>
+      <li>Added validator which checks the "turn_direction" tag in
+intersection_areas</li>
+      <li>Added test code for
+mapping.intersection.turn_direction_tagging</li>
+      <li>Added document for mapping.intersection.turn_direction_tagging</li>
+      <li>Added mapping.intersection.turn_direction_tagging to
+autoware_requirement_set.json</li>
+      <li>Fixed spelling errors</li>
+    </ul>
+
+    <p>* Removed crosswalk boundaries from test map ---------</p>
+  </li>
+  <li>docs(lanelet2_map_validator): update README
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/193">#193</a>)
+    <ul>
+      <li>Updated document</li>
+      <li>Added explanation about issue_code</li>
+      <li>Removed back ticks in the title</li>
+    </ul>
+
+    <p>* Fixed spelling issues ---------</p>
+  </li>
+  <li>fix(lanelet2_map_validator): restore missing intersection lane and
+removed unnecessary linestrings from intersection test maps
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/188">#188</a>)
+    <ul>
+      <li>Restore missing linestring 197 and lanelet 49</li>
+    </ul>
+
+    <p>* Removed crosswalk remainings from intersection category test maps
+---------</p>
+  </li>
+  <li>docs(autoware_lanelet2_map_validator): update usage
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/191">#191</a>)</li>
+  <li>feat(lanelet2_map_validator): generation script for new validators
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/180">#180</a>)
+    <ul>
+      <li>temporary commit</li>
+      <li>Added python script</li>
+      <li>Finished except docs</li>
+      <li>Added documents related stuff</li>
+      <li>Moved stuff to templates</li>
+      <li>Revised files to suit the current directory</li>
+      <li>Added arguments</li>
+      <li>Added prints</li>
+      <li>added #include &lt;string&gt; to test code</li>
+      <li>Fixed typo</li>
+      <li>Write explanation of create_new_validator.py</li>
+      <li>Added back slashes to example command</li>
+    </ul>
+
+    <p>* Enable the generation script to be run by [ros2 run]{.title-ref}
+---------</p>
+  </li>
+  <li>chore(lanelet2_map_validator): automate test code compilation and
+categorize test codes
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/183">#183</a>)
+    <ul>
+      <li>Categorize test codes</li>
+    </ul>
+
+    <p>* Rewrite CMakeLists.txt so that contributors doesn't have to
+write the test code name in it ---------</p>
+  </li>
+  <li>feat(autoware_lanelet_map_validator): add dangling reference
+checker to non existing intersection_area
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/177">#177</a>)</li>
+  <li>chore: sync files
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/11">#11</a>)
+Co-authored-by: github-actions &lt;&lt;github-actions@github.com&gt;&gt;
+Co-authored-by: pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</li>
+  <li>feat(lanelet2_map_validator): check whether intersection_area
+satisfies vm-03-08
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/171">#171</a>)
+    <ul>
+      <li>Create the framework for intersection_area_validity.</li>
+      <li>Made is_valid checker in intersection_area_validity</li>
+      <li>Split and create a new validator
+intersection_area_segement_type.</li>
+      <li>Completed intersection_area_segment_type</li>
+      <li>Added [vm-03-08]{.title-ref} to autoware_requirement_set.json</li>
+      <li>Added [vm-03-08]{.title-ref} to autoware_requirement_set.json</li>
+      <li>Added documents for intersection_area validators</li>
+      <li>Added [intersection_area]{.title-ref} type polygons to
+sample_map.osm</li>
+      <li>Added test codes</li>
+      <li>Fixed spelling error</li>
+      <li>Removed original bbox calculation and use the one in the
+Lanelet2 library</li>
+    </ul>
+
+    <p>* Added explanation of functions ---------</p>
+  </li>
+  <li>docs(lanelet2_map_validator): add a new document
+how_to_contribute.md
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/170">#170</a>)
+    <ul>
+      <li>Added a document how_to_contribute.md to
+lanelet2_map_validator</li>
+      <li>Added information about CMakeLists in tests.</li>
+      <li>Added figure illustrating the input output</li>
+      <li>Add a link to how_to_contribute.md to README.md</li>
+      <li>Fixed spelling and grammar mistakes</li>
+      <li>Fixed some sentences</li>
+      <li>Fixed spelling errors</li>
+      <li>Fixed link URLs</li>
+      <li>Quit using .. to direct to README.md</li>
+    </ul>
+
+    <p>* Fixed link mistakes ---------</p>
+  </li>
+  <li>Fixed issue that invalid prerequisites are not reflected to the
+results
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/169">#169</a>)</li>
+  <li>feat(lanelet2_map_validator): add validator to check traffic light
+facing
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/165">#165</a>)
+    <ul>
+      <li>Added valdiator missing_referrers_for_traffic_lights</li>
+      <li>Added validator traffic_light_facing</li>
+      <li>Added traffic_light_facing and
+missing_referrers_for_traffic_lights</li>
+      <li>Added new validators to README.md</li>
+      <li>Added test codes for traffic_light_facing and
+missing_referrers_for_traffic_lights</li>
+      <li>feat(lanelet2_map_validator): added issue codes
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/163">#163</a>)</li>
+      <li>Added issue code processing</li>
+      <li>Revised tests for json processing</li>
+      <li>Added issue codes for
+missing_regulatory_elements_for_crosswalks</li>
+      <li>Added issue codes for
+regulatory_element_details_for_crosswalks</li>
+      <li>Added issue codes for
+missing_regulatory_elements_for_stop_lines</li>
+      <li>Added issue codes for
+missing_regulatory_elements_for_traffic_lights</li>
+      <li>Added issue codes for
+regulatory_element_details_for_traffic_lights</li>
+      <li>Added issue codes to docs</li>
+      <li>Change issue_code_prefix to append_issue_code_prefix</li>
+    </ul>
+
+    <p>* Fixed merging mistake ---------
+* Changed to append_issue_code_prefix. Added test for
+TrafficLight.CorrectFacing-001</p>
+    <ul>
+      <li>Rearrange code structure</li>
+      <li>Fixed spelling mistakes</li>
+      <li>Fixed traffic_light_facing_procedure.svg</li>
+      <li>Fixed mistakes in document</li>
+      <li>Refine algorithm in traffic_light_facing.cpp</li>
+      <li>Shorten the data collection process, and updated the procedure
+svg</li>
+      <li>Use findUsages in missing_referrers_for_traffic_lights</li>
+    </ul>
+
+    <p>* Update
+map/autoware_lanelet2_map_validator/docs/traffic_light/missing_referrers_for_traffic_lights.md
+Co-authored-by: Mamoru Sobue &lt;&lt;hilo.soblin@gmail.com&gt;&gt;</p>
+    <ul>
+      <li>style(pre-commit): autofix</li>
+    </ul>
+
+    <p>* Quit stocking all lanelets to collect traffic light regulatory
+elements ---------Co-authored-by: Mamoru Sobue
+&lt;&lt;hilo.soblin@gmail.com&gt;&gt; Co-authored-by: pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>feat(lanelet2_map_validator): added issue codes
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/163">#163</a>)
+    <ul>
+      <li>Added issue code processing</li>
+      <li>Revised tests for json processing</li>
+      <li>Added issue codes for
+missing_regulatory_elements_for_crosswalks</li>
+      <li>Added issue codes for
+regulatory_element_details_for_crosswalks</li>
+      <li>Added issue codes for
+missing_regulatory_elements_for_stop_lines</li>
+      <li>Added issue codes for
+missing_regulatory_elements_for_traffic_lights</li>
+      <li>Added issue codes for
+regulatory_element_details_for_traffic_lights</li>
+      <li>Added issue codes to docs</li>
+      <li>Change issue_code_prefix to append_issue_code_prefix</li>
+    </ul>
+
+    <p>* Fixed merging mistake ---------</p>
+  </li>
+  <li>feat(lanelet2_map_validator): add test codes for existing
+validators
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/150">#150</a>)
+* Added small maps for testing. Added test codes using these maps.
+* Rearrange architecture of test directory. Added
+regulatory_elements_details_for_crosswalks test
+    <ul>
+      <li>Removed old test programs</li>
+      <li>Removed test_regulatory_elements_details.cpp</li>
+      <li>Revised test (TestRegulatoryElementDetailsForTrafficLights,
+MissingRefers) to look into the loading errors</li>
+      <li>Added sample_map for testing a normal map</li>
+      <li>Reflect PR comments</li>
+      <li>Fixed detection area in sample_map.osm</li>
+    </ul>
+
+    <p>* Added autoware namespace to test codes ---------</p>
+  </li>
+  <li>refactor(lalenet2_map_validator): divide map loading process
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/153">#153</a>)</li>
+  <li>refactor(lanelet2_map_validator): move custom implementation to
+lanelet::autoware::validation
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/152">#152</a>)</li>
+  <li>fix(lanelet2_map_validator): change validation order in
+regulatory_elements_details
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/151">#151</a>)
+    <ul>
+      <li>Changed the order to validate in regulatory_element_details</li>
+    </ul>
+
+    <p>* Revised test code ---------</p>
+  </li>
+  <li>Removed redundant appendIssues
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/148">#148</a>)</li>
+  <li>feat(autoware_lanelet2_map_validator): allow prerequisites
+attribute for input
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/147">#147</a>)
+* Added prerequisites tag to input. Moved process_requirements to
+validation.cpp
+    <ul>
+      <li>Added prerequisites to autoware_requirement_set.json</li>
+      <li>Redefine ValidatorInfo</li>
+      <li>Changed check_prerequisite_completion not to read the
+json_data</li>
+      <li>Added two tests CreateValidationQueueNoCycles
+CreateValidationQueueWithCycles</li>
+      <li>Added test CheckPrerequisiteCompletionSuccess
+CheckPrerequisiteCompletionFailure</li>
+      <li>Change how to load json files in tests.</li>
+      <li>Added test DescriptUnusedValidatorsToJson and
+SummarizeValidatorResults</li>
+      <li>Revised README.md to the current status</li>
+      <li>Fixed typo and unknown words</li>
+      <li>Reflect PR comments</li>
+    </ul>
+
+    <p>* Fixed typo ---------</p>
+  </li>
+  <li>refactor(lanelet2_map_validator): move headers to include/
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/144">#144</a>)</li>
+  <li>chore(autoware_lanelet2_map_validator): add requirement vm-02-02
+to autoware_requirement_set
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/143">#143</a>)
+    <ul>
+      <li>Add Sobue-san as maintainer of
+autoware_lanelet2_map_validator</li>
+      <li>Added maintainers to autoware_lanelet2_map_validator</li>
+      <li>Added vm-02-02 to autoware_requirement_set.json</li>
+      <li>Fixed error of autoware_lanelet2_map_validator template</li>
+    </ul>
+
+    <p>* Detect stop lines that are referred as [refers]{.title-ref} role.
+---------</p>
+  </li>
+  <li>chore(autoware_lanelet2_map_validator): add maintainers
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/141">#141</a>)
+    <ul>
+      <li>Add Sobue-san as maintainer of
+autoware_lanelet2_map_validator</li>
+    </ul>
+
+    <p>* Added maintainers to autoware_lanelet2_map_validator
+---------</p>
+  </li>
+  <li>feat(autoware_lanelet2_map_validator): introduce
+autoware_lanelet2_map_validator
+(<a href="https://github.com/autowarefoundation/autoware_tools/issues/118">#118</a>)
+    <ul>
+      <li>introduce autoware_lanelet2_map_validator to autoware_tools</li>
+      <li>wrote description a little to README.md</li>
+      <li>style(pre-commit): autofix</li>
+    </ul>
+
+    <p>* Restore commented out parts. Removed rclcpp which is unused.</p>
+    <ul>
+      <li>style(pre-commit): autofix</li>
+    </ul>
+
+    <p>* Separate validation rules to samller pieces. Added validation
+template
+* Split the validation code into smaller pieces. Added yaml
+input/output for a set of validations</p>
+    <ul>
+      <li>Fixed test codes to use the separated codes</li>
+      <li>Removed unused code which are already divided to smaller codes.</li>
+      <li>Rename new_main.cpp to main.cpp</li>
+      <li>style(pre-commit): autofix</li>
+      <li>Wrote detailed README.md</li>
+      <li>Fixed commit mistake</li>
+    </ul>
+
+    <p>* Renew input command option to [-i]{.title-ref} from
+[-r]{.title-ref}. Fixed mistakes in README.md</p>
+    <ul>
+      <li>style(pre-commit): autofix</li>
+      <li>Fixed long to uint64_t</li>
+      <li>Fixed spelling</li>
+      <li>style(pre-commit): autofix</li>
+      <li>Fixed typo</li>
+      <li>Split long lines in the code</li>
+      <li>style(pre-commit): autofix</li>
+    </ul>
+
+    <p>* Changed the entire structure. Fixed pre-commit.ci related errors.</p>
+    <ul>
+      <li>style(pre-commit): autofix</li>
+      <li>Fixed pre-commit.ci related stuff</li>
+    </ul>
+
+    <p>* Write more details about the relationship to
+lanelet2_validation. Rewrite misleading examples.</p>
+    <ul>
+      <li>Added figure of the architecture</li>
+      <li>Change the input/output to JSON</li>
+      <li>Revised architecture image of autoware_lanelet2_map_validator</li>
+      <li>fixed typo</li>
+      <li>Renew year numbers</li>
+      <li>Fixed dependency</li>
+      <li>Fixed pointed out issues</li>
+    </ul>
+
+    <p>* Improve error handling Refactor code style
+* Avoid clang format Delete unused variables
+* Removed redundant process. Restrict input/output format.</p>
+    <ul>
+      <li>Added approaches to the documents</li>
+      <li>Fixed typo</li>
+      <li>Removed catch and improve io error handling</li>
+    </ul>
+
+    <p>* Fixed grammatical error. Fixed explanation of issues</p>
+    <ul>
+      <li>Added stop_line validator to the table in the main README.md</li>
+    </ul>
+
+    <p>* Renamed lib to common. Refined CMakeLists.txt</p>
+    <ul>
+      <li>Removed redundant under score</li>
+      <li>Removed redundant underscore again</li>
+    </ul>
+
+    <p>* Changed years. Removed redundant else statement. Removed debug
+comments
+* Removed underscore from test_regulatory_element_details.cpp
+---------Co-authored-by: pre-commit-ci[bot]
+&lt;66853113+pre-commit-ci[bot]\@users.noreply.github.com&gt;</p>
+  </li>
+  <li>Contributors: Mamoru Sobue, TaikiYamada4, Yutaka Kondo,
+awf-autoware-bot[bot]</li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/autoware_lanelet2_map_validator/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_auto#github">ament_cmake_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_cmake#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_cmake#github">autoware_cmake  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_ros#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_ros#github">ament_cmake_ros  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_lanelet2_extension#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_lanelet2_extension#github">autoware_lanelet2_extension  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/lanelet2_core#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/lanelet2_core#github">lanelet2_core  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/lanelet2_io#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/lanelet2_io#github">lanelet2_io  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/lanelet2_maps#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/lanelet2_maps#github">lanelet2_maps  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/lanelet2_projection#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/lanelet2_projection#github">lanelet2_projection  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/lanelet2_routing#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/lanelet2_routing#github">lanelet2_routing  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/lanelet2_traffic_rules#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/lanelet2_traffic_rules#github">lanelet2_traffic_rules  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/lanelet2_validation#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/lanelet2_validation#github">lanelet2_validation  </a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th>Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                      <tr>
+                        <td><a href="/d/nlohmann-json-dev">nlohmann-json-dev</a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No known dependants.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No launch files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No message files found.</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No plugins found.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>autoware_lanelet2_map_validator</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/autoware_lanelet2_map_validator+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/autowarefoundation/autoware_tools.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/autoware_lanelet2_map_validator"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/autowarefoundation/autoware_tools/tree/main/map/autoware_lanelet2_map_validator"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/autoware_lanelet2_map_validator?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/autoware_lanelet2_map_validator?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=autoware_lanelet2_map_validator&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "autoware_lanelet2_map_validator"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

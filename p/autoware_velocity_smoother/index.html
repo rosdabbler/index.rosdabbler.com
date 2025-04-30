@@ -1,0 +1,2660 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: autoware_velocity_smoother</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/autoware_velocity_smoother/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">autoware_velocity_smoother</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/autoware_velocity_smoother">autoware_velocity_smoother</a> <small>package from <a style="text-decoration:none" href="/r/autoware_core/github-autowarefoundation-autoware_core">autoware_core</a> repo</small>
+        </h3>
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_core">
+
+autoware_core
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_component_interface_specs">
+
+autoware_component_interface_specs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_geography_utils">
+
+autoware_geography_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_global_parameter_loader">
+
+autoware_global_parameter_loader
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_interpolation">
+
+autoware_interpolation
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_kalman_filter">
+
+autoware_kalman_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_lanelet2_utils">
+
+autoware_lanelet2_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_utils">
+
+autoware_motion_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_node">
+
+autoware_node
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_object_recognition_utils">
+
+autoware_object_recognition_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_osqp_interface">
+
+autoware_osqp_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_point_types">
+
+autoware_point_types
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_qp_interface">
+
+autoware_qp_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_signal_processing">
+
+autoware_signal_processing
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_trajectory">
+
+autoware_trajectory
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_vehicle_info_utils">
+
+autoware_vehicle_info_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_core_control">
+
+autoware_core_control
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_simple_pure_pursuit">
+
+autoware_simple_pure_pursuit
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_core_localization">
+
+autoware_core_localization
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_ekf_localizer">
+
+autoware_ekf_localizer
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_localization_util">
+
+autoware_localization_util
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_stop_filter">
+
+autoware_stop_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_twist2accel">
+
+autoware_twist2accel
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_core_map">
+
+autoware_core_map
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_map_loader">
+
+autoware_map_loader
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_map_projection_loader">
+
+autoware_map_projection_loader
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_core_perception">
+
+autoware_core_perception
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_ground_filter">
+
+autoware_ground_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_core_planning">
+
+autoware_core_planning
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_mission_planner">
+
+autoware_mission_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_objects_of_interest_marker_interface">
+
+autoware_objects_of_interest_marker_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_path_generator">
+
+autoware_path_generator
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_planning_factor_interface">
+
+autoware_planning_factor_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_planning_topic_converter">
+
+autoware_planning_topic_converter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_route_handler">
+
+autoware_route_handler
+</a>
+            
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+autoware_velocity_smoother
+</span>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_planner">
+
+autoware_behavior_velocity_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_planner_common">
+
+autoware_behavior_velocity_planner_common
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_behavior_velocity_stop_line_module">
+
+autoware_behavior_velocity_stop_line_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_obstacle_stop_module">
+
+autoware_motion_velocity_obstacle_stop_module
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_planner">
+
+autoware_motion_velocity_planner
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_motion_velocity_planner_common">
+
+autoware_motion_velocity_planner_common
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_core_sensing">
+
+autoware_core_sensing
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_crop_box_filter">
+
+autoware_crop_box_filter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_gnss_poser">
+
+autoware_gnss_poser
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_vehicle_velocity_converter">
+
+autoware_vehicle_velocity_converter
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_planning_test_manager">
+
+autoware_planning_test_manager
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_pyplot">
+
+autoware_pyplot
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_test_node">
+
+autoware_test_node
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_test_utils">
+
+autoware_test_utils
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_testing">
+
+autoware_testing
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/autoware_core_vehicle">
+
+autoware_core_vehicle
+</a>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/autoware_velocity_smoother"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/autowarefoundation/autoware_core/tree/main/planning/autoware_velocity_smoother"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-primary">1</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">26</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>1.1.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>Apache License 2.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-default">
+                  
+                    AMENT_CMAKE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/autowarefoundation/autoware_core.git">https://github.com/autowarefoundation/autoware_core.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-05-03
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <span class="label label-default">planner</span> <span class="label label-default">ros</span> <span class="label label-default">calibration</span> <span class="label label-default">self-driving-car</span> <span class="label label-default">autonomous-driving</span> <span class="label label-default">autonomous-vehicles</span> <span class="label label-default">ros2</span> <span class="label label-default">3d-map</span> <span class="label label-default">autoware</span> 
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/autoware_core/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/autoware_core/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/autoware_core/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            The autoware_velocity_smoother package
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional links.</em>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Fumiya Watanabe</li>
+                
+                  <li>Takamasa Horibe</li>
+                
+                  <li>Makoto Kurihara</li>
+                
+                  <li>Satoshi Ota</li>
+                
+                  <li>Go Sakayori</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Takamasa Horibe</li>
+                
+                  <li>Fumiya Watanabe</li>
+                
+                  <li>Yutaka Shimizu</li>
+                
+                  <li>Makoto Kurihara</li>
+                
+              </ul>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/autowarefoundation/autoware_core/tree/main/planning/autoware_velocity_smoother/README.md" title="Open in git repository">planning/autoware_velocity_smoother/README.md</a></div>
+              <div class="panel-body">
+                    <div class="rendered-markdown">
+<h1 id="velocity-smoother">Velocity Smoother</h1>
+
+<h2 id="purpose">Purpose</h2>
+
+<p><code class="language-plaintext highlighter-rouge">autoware_velocity_smoother</code> outputs a desired velocity profile on a reference trajectory.
+This module plans a velocity profile within the limitations of the velocity, the acceleration and the jerk to realize both the maximization of velocity and the ride quality.
+We call this module <code class="language-plaintext highlighter-rouge">autoware_velocity_smoother</code> because the limitations of the acceleration and the jerk means the smoothness of the velocity profile.</p>
+
+<h2 id="inner-workings--algorithms">Inner-workings / Algorithms</h2>
+
+<h3 id="flow-chart">Flow chart</h3>
+
+<p><img src="https://raw.githubusercontent.com/autowarefoundation/autoware_core/main/planning/autoware_velocity_smoother/./media/motion_velocity_smoother_flow.drawio.svg" alt="motion_velocity_smoother_flow"></p>
+
+<h4 id="extract-trajectory">Extract trajectory</h4>
+
+<p>For the point on the reference trajectory closest to the center of the rear wheel axle of the vehicle, it extracts the reference path between <code class="language-plaintext highlighter-rouge">extract_behind_dist</code> behind and <code class="language-plaintext highlighter-rouge">extract_ahead_dist</code> ahead.</p>
+
+<h4 id="apply-external-velocity-limit">Apply external velocity limit</h4>
+
+<p>It applies the velocity limit input from the external of <code class="language-plaintext highlighter-rouge">autoware_velocity_smoother</code>.
+Remark that the external velocity limit is different from the velocity limit already set on the map and the reference trajectory.
+The external velocity is applied at the position that it is able to reach the velocity limit with the deceleration and the jerk constraints set as the parameter.</p>
+
+<h4 id="apply-stop-approaching-velocity">Apply stop approaching velocity</h4>
+
+<p>It applies the velocity limit near the stopping point.
+This function is used to approach near the obstacle or improve the accuracy of stopping.</p>
+
+<h4 id="apply-lateral-acceleration-limit">Apply lateral acceleration limit</h4>
+
+<p>It applies the velocity limit to decelerate at the curve.
+It calculates the velocity limit from the curvature of the reference trajectory and the maximum lateral acceleration <code class="language-plaintext highlighter-rouge">max_lateral_accel</code>.
+The velocity limit is set as not to fall under <code class="language-plaintext highlighter-rouge">min_curve_velocity</code>.</p>
+
+<p>Note: velocity limit that requests larger than <code class="language-plaintext highlighter-rouge">nominal.jerk</code> is not applied. In other words, even if a sharp curve is planned just in front of the ego, no deceleration is performed.</p>
+
+<h4 id="apply-steering-rate-limit">Apply steering rate limit</h4>
+
+<p>It calculates the desired steering angles of trajectory points. and it applies the steering rate limit. If the (<code class="language-plaintext highlighter-rouge">steering_angle_rate</code> &gt; <code class="language-plaintext highlighter-rouge">max_steering_angle_rate</code>), it decreases the velocity of the trajectory point to acceptable velocity.</p>
+
+<h4 id="resample-trajectory">Resample trajectory</h4>
+
+<p>It resamples the points on the reference trajectory with designated time interval.
+Note that the range of the length of the trajectory is set between <code class="language-plaintext highlighter-rouge">min_trajectory_length</code> and <code class="language-plaintext highlighter-rouge">max_trajectory_length</code>, and the distance between two points is longer than <code class="language-plaintext highlighter-rouge">min_trajectory_interval_distance</code>.
+It samples densely up to the distance traveled between <code class="language-plaintext highlighter-rouge">resample_time</code> with the current velocity, then samples sparsely after that.
+By sampling according to the velocity, both calculation load and accuracy are achieved since it samples finely at low velocity and coarsely at high velocity.</p>
+
+<h4 id="calculate-initial-state">Calculate initial state</h4>
+
+<p>Calculate initial values for velocity planning.
+The initial values are calculated according to the situation as shown in the following table.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Situation</th>
+      <th>Initial velocity</th>
+      <th>Initial acceleration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>First calculation</td>
+      <td>Current velocity</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>Engaging</td>
+      <td><code class="language-plaintext highlighter-rouge">engage_velocity</code></td>
+      <td><code class="language-plaintext highlighter-rouge">engage_acceleration</code></td>
+    </tr>
+    <tr>
+      <td>Deviate between the planned velocity and the current velocity</td>
+      <td>Current velocity</td>
+      <td>Previous planned value</td>
+    </tr>
+    <tr>
+      <td>Normal</td>
+      <td>Previous planned value</td>
+      <td>Previous planned value</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="smooth-velocity">Smooth velocity</h4>
+
+<p>It plans the velocity.
+The algorithm of velocity planning is chosen from <code class="language-plaintext highlighter-rouge">JerkFiltered</code>, <code class="language-plaintext highlighter-rouge">L2</code> and <code class="language-plaintext highlighter-rouge">Linf</code>, and it is set in the launch file.
+In these algorithms, they use OSQP[1] as the solver of the optimization.</p>
+
+<h5 id="jerkfiltered">JerkFiltered</h5>
+
+<p>It minimizes the sum of the minus of the square of the velocity and the square of the violation of the velocity limit, the acceleration limit and the jerk limit.</p>
+
+<h5 id="l2">L2</h5>
+
+<p>It minimizes the sum of the minus of the square of the velocity, the square of the the pseudo-jerk[2] and the square of the violation of the velocity limit and the acceleration limit.</p>
+
+<h5 id="linf">Linf</h5>
+
+<p>It minimizes the sum of the minus of the square of the velocity, the maximum absolute value of the the pseudo-jerk[2] and the square of the violation of the velocity limit and the acceleration limit.</p>
+
+<h4 id="post-process">Post process</h4>
+
+<p>It performs the post-process of the planned velocity.</p>
+
+<ul>
+  <li>Set zero velocity ahead of the stopping point</li>
+  <li>Set maximum velocity given in the config named <code class="language-plaintext highlighter-rouge">max_velocity</code>
+</li>
+  <li>Set velocity behind the current pose</li>
+  <li>Resample trajectory (<code class="language-plaintext highlighter-rouge">post resampling</code>)</li>
+  <li>Output debug data</li>
+</ul>
+
+<p>After the optimization, a resampling called <code class="language-plaintext highlighter-rouge">post resampling</code> is performed before passing the optimized trajectory to the next node. Since the required path interval from optimization may be different from the one for the next module, <code class="language-plaintext highlighter-rouge">post resampling</code> helps to fill this gap. Therefore, in <code class="language-plaintext highlighter-rouge">post resampling</code>, it is necessary to check the path specification of the following module to determine the parameters. Note that if the computational load of the optimization algorithm is high and the path interval is sparser than the path specification of the following module in the first resampling, <code class="language-plaintext highlighter-rouge">post resampling</code> would resample the trajectory densely. On the other hand, if the computational load of the optimization algorithm is small and the path interval is denser than the path specification of the following module in the first resampling, the path is sparsely resampled according to the specification of the following module.</p>
+
+<h2 id="inputs--outputs">Inputs / Outputs</h2>
+
+<h3 id="input">Input</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/input/trajectory</code></td>
+      <td><code class="language-plaintext highlighter-rouge">autoware_planning_msgs/Trajectory</code></td>
+      <td>Reference trajectory</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/planning/scenario_planning/max_velocity</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std_msgs/Float32</code></td>
+      <td>External velocity limit [m/s]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/localization/kinematic_state</code></td>
+      <td><code class="language-plaintext highlighter-rouge">nav_msgs/Odometry</code></td>
+      <td>Current odometry</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/tf</code></td>
+      <td><code class="language-plaintext highlighter-rouge">tf2_msgs/TFMessage</code></td>
+      <td>TF</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/tf_static</code></td>
+      <td><code class="language-plaintext highlighter-rouge">tf2_msgs/TFMessage</code></td>
+      <td>TF static</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="output">Output</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/output/trajectory</code></td>
+      <td><code class="language-plaintext highlighter-rouge">autoware_planning_msgs/Trajectory</code></td>
+      <td>Modified trajectory</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/planning/scenario_planning/current_max_velocity</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std_msgs/Float32</code></td>
+      <td>Current external velocity limit [m/s]</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/closest_velocity</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std_msgs/Float32</code></td>
+      <td>Planned velocity closest to ego base_link (for debug)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/closest_acceleration</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std_msgs/Float32</code></td>
+      <td>Planned acceleration closest to ego base_link (for debug)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/closest_jerk</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std_msgs/Float32</code></td>
+      <td>Planned jerk closest to ego base_link (for debug)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/debug/trajectory_raw</code></td>
+      <td><code class="language-plaintext highlighter-rouge">autoware_planning_msgs/Trajectory</code></td>
+      <td>Extracted trajectory (for debug)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/debug/trajectory_external_velocity_limited</code></td>
+      <td><code class="language-plaintext highlighter-rouge">autoware_planning_msgs/Trajectory</code></td>
+      <td>External velocity limited trajectory (for debug)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/debug/trajectory_lateral_acc_filtered</code></td>
+      <td><code class="language-plaintext highlighter-rouge">autoware_planning_msgs/Trajectory</code></td>
+      <td>Lateral acceleration limit filtered trajectory (for debug)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/debug/trajectory_steering_rate_limited</code></td>
+      <td><code class="language-plaintext highlighter-rouge">autoware_planning_msgs/Trajectory</code></td>
+      <td>Steering angle rate limit filtered trajectory (for debug)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/debug/trajectory_time_resampled</code></td>
+      <td><code class="language-plaintext highlighter-rouge">autoware_planning_msgs/Trajectory</code></td>
+      <td>Time resampled trajectory (for debug)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/distance_to_stopline</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std_msgs/Float32</code></td>
+      <td>Distance to stop line from current ego pose (max 50 m) (for debug)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/stop_speed_exceeded</code></td>
+      <td><code class="language-plaintext highlighter-rouge">std_msgs/Bool</code></td>
+      <td>It publishes <code class="language-plaintext highlighter-rouge">true</code> if planned velocity on the point which the maximum velocity is zero is over threshold</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="parameters">Parameters</h2>
+
+<h3 id="constraint-parameters">Constraint parameters</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+      <th style="text-align: left">Default value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">max_velocity</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Max velocity limit [m/s]</td>
+      <td style="text-align: left">20.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">max_accel</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Max acceleration limit [m/ss]</td>
+      <td style="text-align: left">1.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">min_decel</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Min deceleration limit [m/ss]</td>
+      <td style="text-align: left">-0.5</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">stop_decel</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Stop deceleration value at a stop point [m/ss]</td>
+      <td style="text-align: left">0.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">max_jerk</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Max jerk limit [m/sss]</td>
+      <td style="text-align: left">1.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">min_jerk</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Min jerk limit [m/sss]</td>
+      <td style="text-align: left">-0.5</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="external-velocity-limit-parameter">External velocity limit parameter</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+      <th style="text-align: left">Default value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">margin_to_insert_external_velocity_limit</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">margin distance to insert external velocity limit [m]</td>
+      <td style="text-align: left">0.3</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="curve-parameters">Curve parameters</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+      <th style="text-align: left">Default value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">enable_lateral_acc_limit</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td style="text-align: left">To toggle the lateral acceleration filter on and off. You can switch it dynamically at runtime.</td>
+      <td style="text-align: left">true</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">max_lateral_accel</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Max lateral acceleration limit [m/ss]</td>
+      <td style="text-align: left">0.5</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">min_curve_velocity</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Min velocity at lateral acceleration limit [m/ss]</td>
+      <td style="text-align: left">2.74</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">decel_distance_before_curve</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Distance to slowdown before a curve for lateral acceleration limit [m]</td>
+      <td style="text-align: left">3.5</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">decel_distance_after_curve</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Distance to slowdown after a curve for lateral acceleration limit [m]</td>
+      <td style="text-align: left">2.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">min_decel_for_lateral_acc_lim_filter</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Deceleration limit to avoid sudden braking by the lateral acceleration filter [m/ss]. Strong limitation degrades the deceleration response to the appearance of sharp curves due to obstacle avoidance, etc.</td>
+      <td style="text-align: left">-2.5</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="engage--replan-parameters">Engage &amp; replan parameters</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+      <th style="text-align: left">Default value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">replan_vel_deviation</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Velocity deviation to replan initial velocity [m/s]</td>
+      <td style="text-align: left">5.53</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">engage_velocity</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Engage velocity threshold [m/s] (if the trajectory velocity is higher than this value, use this velocity for engage vehicle speed)</td>
+      <td style="text-align: left">0.25</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">engage_acceleration</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Engage acceleration [m/ss] (use this acceleration when engagement)</td>
+      <td style="text-align: left">0.1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">engage_exit_ratio</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Exit engage sequence to normal velocity planning when the velocity exceeds engage_exit_ratio x engage_velocity.</td>
+      <td style="text-align: left">0.5</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">stop_dist_to_prohibit_engage</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">If the stop point is in this distance, the speed is set to 0 not to move the vehicle [m]</td>
+      <td style="text-align: left">0.5</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="stopping-velocity-parameters">Stopping velocity parameters</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+      <th style="text-align: left">Default value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">stopping_velocity</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">change target velocity to this value before v=0 point [m/s]</td>
+      <td style="text-align: left">2.778</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">stopping_distance</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">distance for the stopping_velocity [m]. 0 means the stopping velocity is not applied.</td>
+      <td style="text-align: left">0.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="extraction-parameters">Extraction parameters</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+      <th style="text-align: left">Default value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">extract_ahead_dist</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Forward trajectory distance used for planning [m]</td>
+      <td style="text-align: left">200.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">extract_behind_dist</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">backward trajectory distance used for planning [m]</td>
+      <td style="text-align: left">5.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">delta_yaw_threshold</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Allowed delta yaw between ego pose and trajectory pose [radian]</td>
+      <td style="text-align: left">1.0472</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="resampling-parameters">Resampling parameters</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+      <th style="text-align: left">Default value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">max_trajectory_length</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Max trajectory length for resampling [m]</td>
+      <td style="text-align: left">200.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">min_trajectory_length</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Min trajectory length for resampling [m]</td>
+      <td style="text-align: left">30.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">resample_time</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Resample total time [s]</td>
+      <td style="text-align: left">10.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">dense_dt</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">resample time interval for dense sampling [s]</td>
+      <td style="text-align: left">0.1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">dense_min_interval_distance</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">minimum points-interval length for dense sampling [m]</td>
+      <td style="text-align: left">0.1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">sparse_dt</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">resample time interval for sparse sampling [s]</td>
+      <td style="text-align: left">0.5</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">sparse_min_interval_distance</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">minimum points-interval length for sparse sampling [m]</td>
+      <td style="text-align: left">4.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="resampling-parameters-for-post-process">Resampling parameters for post process</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+      <th style="text-align: left">Default value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">post_max_trajectory_length</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">max trajectory length for resampling [m]</td>
+      <td style="text-align: left">300.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">post_min_trajectory_length</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">min trajectory length for resampling [m]</td>
+      <td style="text-align: left">30.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">post_resample_time</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">resample total time for dense sampling [s]</td>
+      <td style="text-align: left">10.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">post_dense_dt</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">resample time interval for dense sampling [s]</td>
+      <td style="text-align: left">0.1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">post_dense_min_interval_distance</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">minimum points-interval length for dense sampling [m]</td>
+      <td style="text-align: left">0.1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">post_sparse_dt</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">resample time interval for sparse sampling [s]</td>
+      <td style="text-align: left">0.1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">post_sparse_min_interval_distance</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">minimum points-interval length for sparse sampling [m]</td>
+      <td style="text-align: left">1.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="limit-steering-angle-rate-parameters">Limit steering angle rate parameters</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+      <th style="text-align: left">Default value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">enable_steering_rate_limit</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">bool</code></td>
+      <td style="text-align: left">To toggle the steer rate filter on and off. You can switch it dynamically at runtime.</td>
+      <td style="text-align: left">true</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">max_steering_angle_rate</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Maximum steering angle rate [degree/s]</td>
+      <td style="text-align: left">40.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">resample_ds</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Distance between trajectory points [m]</td>
+      <td style="text-align: left">0.1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">curvature_threshold</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">If curvature &gt; curvature_threshold, steeringRateLimit is triggered [1/m]</td>
+      <td style="text-align: left">0.02</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">curvature_calculation_distance</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Distance of points while curvature is calculating [m]</td>
+      <td style="text-align: left">1.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="weights-for-optimization">Weights for optimization</h3>
+
+<h4 id="jerkfiltered-1">JerkFiltered</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+      <th style="text-align: left">Default value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">jerk_weight</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Weight for “smoothness” cost for jerk</td>
+      <td style="text-align: left">10.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">over_v_weight</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Weight for “over speed limit” cost</td>
+      <td style="text-align: left">100000.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">over_a_weight</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Weight for “over accel limit” cost</td>
+      <td style="text-align: left">5000.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">over_j_weight</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Weight for “over jerk limit” cost</td>
+      <td style="text-align: left">1000.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="l2-1">L2</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+      <th style="text-align: left">Default value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">pseudo_jerk_weight</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Weight for “smoothness” cost</td>
+      <td style="text-align: left">100.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">over_v_weight</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Weight for “over speed limit” cost</td>
+      <td style="text-align: left">100000.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">over_a_weight</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Weight for “over accel limit” cost</td>
+      <td style="text-align: left">1000.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="linf-1">Linf</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+      <th style="text-align: left">Default value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">pseudo_jerk_weight</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Weight for “smoothness” cost</td>
+      <td style="text-align: left">100.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">over_v_weight</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Weight for “over speed limit” cost</td>
+      <td style="text-align: left">100000.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">over_a_weight</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Weight for “over accel limit” cost</td>
+      <td style="text-align: left">1000.0</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="others">Others</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Type</th>
+      <th style="text-align: left">Description</th>
+      <th style="text-align: left">Default value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">over_stop_velocity_warn_thr</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">double</code></td>
+      <td style="text-align: left">Threshold to judge that the optimized velocity exceeds the input velocity on the stop point [m/s]</td>
+      <td style="text-align: left">1.389</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Write parameters of this package.
+
+Example:
+  ### Node Parameters
+
+  | Name                   | Type | Description                     |
+  | ---------------------- | ---- | ------------------------------- |
+  | `output_debug_markers` | bool | whether to output debug markers |
+
+  ### Core Parameters
+
+  | Name                 | Type     | Description                                                          |
+  | -------------------- | -------- | -------------------------------------------------------------------- |
+  | `min_object_size_m`  | `double` | minimum object size to be selected as avoidance target obstacles [m] |
+  | `avoidance_margin_m` | `double` | avoidance margin to obstacles [m]                                    |
+-->
+
+<h2 id="assumptions--known-limits">Assumptions / Known limits</h2>
+
+<ul>
+  <li>Assume that the velocity limit or the stopping point is properly set at the point on the reference trajectory</li>
+  <li>If the velocity limit set in the reference path cannot be achieved by the designated constraints of the deceleration and the jerk, decelerate while suppressing the velocity, the acceleration and the jerk deviation as much as possible</li>
+  <li>The importance of the deviations is set in the config file</li>
+</ul>
+
+<h2 id="optional-error-detection-and-handling">(Optional) Error detection and handling</h2>
+
+<h2 id="optional-performance-characterization">(Optional) Performance characterization</h2>
+
+<h2 id="optional-referencesexternal-links">(Optional) References/External links</h2>
+
+<p>[1] B. Stellato, et al., “OSQP: an operator splitting solver for quadratic programs”, Mathematical Programming Computation, 2020, <a href="https://link.springer.com/article/10.1007/s12532-020-00179-2">10.1007/s12532-020-00179-2</a>.</p>
+
+<p>[2] Y. Zhang, et al., “Toward a More Complete, Flexible, and Safer Speed Planning for Autonomous Driving via Convex Optimization”, Sensors, vol. 18, no. 7, p. 2185, 2018, <a href="https://doi.org/10.3390/s18072185">10.3390/s18072185</a></p>
+
+<h2 id="optional-future-extensions--unimplemented-parts">(Optional) Future extensions / Unimplemented parts</h2>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="changelog-for-package-autoware_velocity_smoother">Changelog for package autoware_velocity_smoother</h1>
+
+<h2 id="110-2025-05-01">1.1.0 (2025-05-01)</h2>
+
+<h2 id="100-2025-03-31">1.0.0 (2025-03-31)</h2>
+
+<ul>
+  <li>chore: update version in package.xml</li>
+  <li>feat(autoware_velocity_smoother): port the package from Autoware
+Universe
+(<a href="https://github.com/autowarefoundation/autoware_core/issues/299">#299</a>)</li>
+  <li>Contributors: Ryohsuke Mitsudome</li>
+</ul>
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/autoware_velocity_smoother/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_auto#github">ament_cmake_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_cmake#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_cmake#github">autoware_cmake  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/eigen3_cmake_module#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/eigen3_cmake_module#github">eigen3_cmake_module  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake_ros#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake_ros#github">ament_cmake_ros  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_lint_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_lint_auto#github">ament_lint_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_lint_common#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_lint_common#github">autoware_lint_common  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_internal_debug_msgs#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_internal_debug_msgs#github">autoware_internal_debug_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_internal_planning_msgs#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_internal_planning_msgs#github">autoware_internal_planning_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_interpolation#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_interpolation#github">autoware_interpolation  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_motion_utils#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_motion_utils#github">autoware_motion_utils  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_osqp_interface#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_osqp_interface#github">autoware_osqp_interface  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_planning_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_planning_msgs#github">autoware_planning_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_planning_test_manager#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_planning_test_manager#github">autoware_planning_test_manager  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_qp_interface#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_qp_interface#github">autoware_qp_interface  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_utils_debug#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_utils_debug#github">autoware_utils_debug  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_utils_diagnostics#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_utils_diagnostics#github">autoware_utils_diagnostics  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_utils_geometry#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_utils_geometry#github">autoware_utils_geometry  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_utils_logging#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_utils_logging#github">autoware_utils_logging  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_utils_math#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_utils_math#github">autoware_utils_math  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_utils_rclcpp#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_utils_rclcpp#github">autoware_utils_rclcpp  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/autoware_vehicle_info_utils#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/autoware_vehicle_info_utils#github">autoware_vehicle_info_utils  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/geometry_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/geometry_msgs#github">geometry_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/nav_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/nav_msgs#github">nav_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclcpp#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclcpp#github">rclcpp  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2#github">tf2  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2_ros#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2_ros#github">tf2_ros  </a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No direct system dependencies.</em>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th>Name</th>
+                  <th class="text-center">Deps</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/autoware_core_planning#github">autoware_core_planning</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/autoware_core_planning#github-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/autoware_behavior_velocity_planner#github">autoware_behavior_velocity_planner</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/autoware_behavior_velocity_planner#github-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/autoware_behavior_velocity_planner_common#github">autoware_behavior_velocity_planner_common</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/autoware_behavior_velocity_planner_common#github-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/autoware_motion_velocity_planner#github">autoware_motion_velocity_planner</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/autoware_motion_velocity_planner#github-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/autoware_motion_velocity_planner_common#github">autoware_motion_velocity_planner_common</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/autoware_motion_velocity_planner_common#github-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/tier4_planning_launch#github">tier4_planning_launch</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/tier4_planning_launch#github-deps" >
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                    
+                    
+                    <tr>
+                      <td><a href="/p/autoware_motion_velocity_run_out_module#github">autoware_motion_velocity_run_out_module</a></td>
+                      <td class="text-center">
+                        
+                        <a href="/p/autoware_motion_velocity_run_out_module#github-deps" class="endoftree">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                        </a>
+                      </td>
+                    </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <ul>
+            
+              <li><a href="https://github.com/autowarefoundation/autoware_core/tree/main/planning/autoware_velocity_smoother/launch/velocity_smoother.launch.xml" target="_blank">launch/velocity_smoother.launch.xml</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>common_param_path</strong> <em>&#91;default: $(find-pkg-share autoware_velocity_smoother)/config/default_common.param.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>nearest_search_param_path</strong>  </em></li>
+                        
+                      
+                        
+                          <li><strong>input_trajectory</strong> <em>&#91;default: /planning/scenario_planning/scenario_selector/trajectory&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>output_trajectory</strong> <em>&#91;default: /planning/scenario_planning/trajectory&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>publish_debug_trajs</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>velocity_smoother_type</strong> <em>&#91;default: JerkFiltered&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>param_path</strong> <em>&#91;default: $(find-pkg-share autoware_velocity_smoother)/config/default_velocity_smoother.param.yaml&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>velocity_smoother_param_path</strong> <em>&#91;default: $(find-pkg-share autoware_velocity_smoother)/config/$(var velocity_smoother_type).param.yaml&#93; </em></li>
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No message files found.</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No plugins found.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>autoware_velocity_smoother</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/autoware_velocity_smoother+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/autowarefoundation/autoware_core.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/autoware_velocity_smoother"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/autowarefoundation/autoware_core/tree/main/planning/autoware_velocity_smoother"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/autoware_velocity_smoother?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/autoware_velocity_smoother?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=autoware_velocity_smoother&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "autoware_velocity_smoother"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

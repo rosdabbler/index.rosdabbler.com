@@ -1,0 +1,1802 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: SQLiteCpp</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/SQLiteCpp/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">SQLiteCpp</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/SQLiteCpp">SQLiteCpp</a> <small>package from <a style="text-decoration:none" href="/r/sqlitecpp/github-srombauts-sqlitecpp">sqlitecpp</a> repo</small>
+        </h3>
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+SQLiteCpp
+</span>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/SQLiteCpp"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/srombauts/sqlitecpp/tree/master/."
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-default">0</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">2</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>3.3.2</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>MIT</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-default">
+                  
+                    CMAKE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default">SQLiteC++ (SQLiteCpp) is a smart and easy to use C++ SQLite3 wrapper.</span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/srombauts/sqlitecpp.git">https://github.com/srombauts/sqlitecpp.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">master</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-01-24
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <em>No category tags.</em>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/sqlitecpp/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/sqlitecpp/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/sqlitecpp/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            A smart and easy to use C++ SQLite3 wrapper.
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional links.</em>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Sébastien Rombauts</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Sébastien Rombauts</li>
+                
+              </ul>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/srombauts/sqlitecpp/tree/master/./README.md" title="Open in git repository">README.md</a></div>
+              <div class="panel-body">
+                    <div class="rendered-markdown">
+<h2 id="sqlitec">SQLiteC++</h2>
+
+<p><a href="https://github.com/SRombauts/SQLiteCpp/releases"><img src="https://img.shields.io/github/release/SRombauts/SQLiteCpp.svg" alt="release"></a>
+<a href="https://github.com/SRombauts/SQLiteCpp/blob/master/LICENSE.txt"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="license"></a>
+<a href="https://travis-ci.org/SRombauts/SQLiteCpp" title="Travis CI Linux Build Status"><img src="https://travis-ci.org/SRombauts/SQLiteCpp.svg?branch=master" alt="Travis CI Linux Build Status"></a>
+<a href="https://ci.appveyor.com/project/SbastienRombauts/SQLiteCpp" title="AppVeyor Windows Build status"><img src="https://ci.appveyor.com/api/projects/status/github/SRombauts/SQLiteCpp?svg=true" alt="AppVeyor Windows Build status"></a>
+<a href="https://github.com/SRombauts/SQLiteCpp/actions" title="GitHhub Actions Build status"><img src="https://github.com/SRombauts/SQLiteCpp/workflows/build/badge.svg" alt="GitHub Actions Build status"></a>
+<a href="https://coveralls.io/github/SRombauts/SQLiteCpp" title="Coveralls test coverage"><img src="https://img.shields.io/coveralls/SRombauts/SQLiteCpp.svg" alt="Coveralls"></a>
+<a href="https://scan.coverity.com/projects/srombauts-sqlitecpp" title="Coverity Scan Build Status"><img src="https://img.shields.io/coverity/scan/14508.svg" alt="Coverity"></a>
+<a href="https://gitter.im/SRombauts/SQLiteCpp?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/SRombauts/SQLiteCpp"></a></p>
+
+<p>SQLiteC++ (SQLiteCpp) is a lean and easy to use C++ SQLite3 wrapper.</p>
+
+<!--Keywords: sqlite, sqlite3, C, library, wrapper C++-->
+<meta name="keywords" content="sqlite, sqlite3, C, library, wrapper C++">
+
+<h2 id="about-sqlitec">About SQLiteC++:</h2>
+
+<p>SQLiteC++ offers an encapsulation around the native C APIs of SQLite,
+with a few intuitive and well documented C++ classes.</p>
+
+<h3 id="license">License:</h3>
+
+<p>Copyright (c) 2012-2024 Sébastien Rombauts (sebastien.rombauts@gmail.com)
+<a href="https://www.paypal.me/SRombauts" title="Pay Me a Beer! Donate with PayPal :)"><img src="https://www.paypalobjects.com/webstatic/paypalme/images/pp_logo_small.png" width="118"></a></p>
+
+<p>Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
+or copy at http://opensource.org/licenses/MIT)</p>
+
+<h4 id="note-on-redistribution-of-sqlite-source-files">Note on redistribution of SQLite source files</h4>
+
+<p>As stated by the MIT License, you are welcome to reuse, modify, and redistribute the SQLiteCpp source code
+the way you want it to, be it a git submodule, a subdirectory, or a selection of some source files.</p>
+
+<p>I would love a mention in your README, a web link to the SQLite repository, and a mention of the author,
+but none of those are mandatory.</p>
+
+<h3 id="about-sqlite-underlying-library">About SQLite underlying library:</h3>
+
+<p>SQLite is a library that implements a serverless transactional SQL database engine.
+It is the most widely deployed SQL database engine in the world.
+All of the code and documentation in SQLite has been dedicated to the public domain by the authors.
+<a href="http://www.sqlite.org/about.html">http://www.sqlite.org/about.html</a></p>
+
+<h3 id="the-goals-of-sqlitec-are">The goals of SQLiteC++ are:</h3>
+
+<ul>
+  <li>to offer the best of the existing simple C++ SQLite wrappers</li>
+  <li>to be elegantly written with good C++11 design, STL, exceptions and RAII idiom</li>
+  <li>to keep dependencies to a minimum (C++11 STL and SQLite3)</li>
+  <li>to be portable</li>
+  <li>to be light and fast</li>
+  <li>to be thread-safe only as much as SQLite “Multi-thread” mode (see below)</li>
+  <li>to have a good unit test coverage</li>
+  <li>to use API names sticking with those of the SQLite library</li>
+  <li>to be well documented with Doxygen tags, and with some good examples</li>
+  <li>to be well maintained</li>
+  <li>to use a permissive MIT license, similar to BSD or Boost, for proprietary/commercial usage</li>
+</ul>
+
+<p>It is designed using the Resource Acquisition Is Initialization (RAII) idiom
+(see <a href="http://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization">http://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization</a>),
+and throwing exceptions in case of SQLite errors (except in destructors,
+where assert() are used instead).
+Each SQLiteC++ object must be constructed with a valid SQLite database connection,
+and then is always valid until destroyed.</p>
+
+<h3 id="supported-platforms">Supported platforms:</h3>
+
+<p>Now requires a C++11 compiler. Use branch <a href="https://github.com/SRombauts/SQLiteCpp/tree/sqlitecpp-2.x">sqlitecpp-2.x</a> for latest pre-C++11 developments.</p>
+
+<p>Developments and tests are done under the following OSs:</p>
+<ul>
+  <li>Ubuntu 14.04, 16.04 and 18.04 (Travis CI and Github Actions)</li>
+  <li>Windows 10, and Windows Server 2012 R2, Windows Server 2016, Windows Server 2022 (AppVeyor and Github Actions)</li>
+  <li>MacOS 10.11 and 11.7 (Travis CI and Github Actions)</li>
+  <li>Valgrind memcheck tool</li>
+</ul>
+
+<p>And the following IDEs/Compilers</p>
+<ul>
+  <li>GCC 4.8.4, 5.3.0, 7.1.1 and latest eg 9.4 (C++11, C++14, C++17)</li>
+  <li>Clang 5 and 7 (Travis CI)</li>
+  <li>AppleClang 8, 9 and 13 (Travis CI and Github Actions)</li>
+  <li>Xcode 8 &amp; 9 (Travis CI)</li>
+  <li>Visual Studio Community/Entreprise 2022, 2019, 2017, and 2015 (AppVeyor and Github Actions)</li>
+</ul>
+
+<h3 id="dependencies">Dependencies</h3>
+
+<ul>
+  <li>a modern C++11 STL implementation with GCC, Clang, or Visual Studio 2015</li>
+  <li>exception support (the class Exception inherits from std::runtime_error)</li>
+  <li>the SQLite library (3.7.15 minimum from 2012-12-12) either by linking to it dynamically or statically (install the libsqlite3-dev package under Debian/Ubuntu/Mint Linux),
+or by adding its source file in your project code base (source code provided in src/sqlite3 for Windows),
+with the <code class="language-plaintext highlighter-rouge">SQLITE_ENABLE_COLUMN_METADATA</code> macro defined (see http://www.sqlite.org/compile.html#enable_column_metadata).</li>
+</ul>
+
+<h2 id="getting-started">Getting started</h2>
+<h3 id="installation">Installation</h3>
+
+<p>To use this wrapper, you need to add the SQLiteC++ source files from the src/ directory
+in your project code base, and compile/link against the sqlite library.</p>
+
+<p>The easiest way to do this is to add the wrapper as a library.
+The “CMakeLists.txt” file defining the static library is provided in the root directory,
+so you simply have to add_subdirectory(SQLiteCpp) to you main CMakeLists.txt
+and link to the “SQLiteCpp” wrapper library.</p>
+
+<p>Example for Linux:</p>
+
+<div class="language-cmake highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">add_subdirectory</span><span class="p">(</span><span class="si">${</span><span class="nv">CMAKE_CURRENT_LIST_DIR</span><span class="si">}</span>/thirdparty/SQLiteCpp<span class="p">)</span>
+
+<span class="nb">add_executable</span><span class="p">(</span>main src/main.cpp<span class="p">)</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span>main
+  SQLiteCpp
+  sqlite3
+  pthread
+  dl
+  <span class="p">)</span>
+
+</code></pre></div></div>
+<p>Thus this SQLiteCpp repository can be directly used as a Git submodule.
+See the <a href="https://github.com/SRombauts/SQLiteCpp_Example">SQLiteCpp_Example</a> side repository for a standalone “from scratch” example.</p>
+
+<p>Under Debian/Ubuntu/Mint Linux, you can install the libsqlite3-dev package if you don’t want to use the embedded sqlite3 library.</p>
+
+<h3 id="building-example-and-unit-tests">Building example and unit-tests:</h3>
+
+<p>Use git to clone the repository. Then init and update submodule “googletest”.</p>
+
+<pre><code class="language-Shell">git clone https://github.com/SRombauts/SQLiteCpp.git
+cd SQLiteCpp
+git submodule init
+git submodule update
+
+</code></pre>
+
+<h3 id="installing-sqlitecpp-vcpkg">Installing SQLiteCpp (vcpkg)</h3>
+
+<p>Alternatively, you can build and install SQLiteCpp using <a href="https://github.com/Microsoft/vcpkg/">vcpkg</a> dependency manager:</p>
+
+<p>```bash or powershell
+git clone https://github.com/Microsoft/vcpkg.git
+cd vcpkg
+./bootstrap-vcpkg.sh
+./vcpkg integrate install
+./vcpkg install sqlitecpp</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+The SQLiteCpp port in vcpkg is kept up to date by Microsoft team members and community contributors. If the version is out of date, please [create an issue or pull request](https://github.com/Microsoft/vcpkg) on the vcpkg repository.
+
+
+#### Using SQLiteCpp on a system-wide installation
+
+If you installed this package to your system, a `SQLiteCppConfig.cmake` file will be generated &amp; installed to your system.  
+This file lets you link against the SQLiteCpp library for use in your Cmake project.
+
+Here's an example of using this in your CMakeLists.txt
+
+```cmake
+# You can optionally define a minimum version in this call
+find_package(SQLiteCpp REQUIRED)
+# For this example, lets say you created an target with add_executable (or add_library) called "my_target"
+# You can optionally declare PUBLIC or PRIVATE linkage here, depending on your needs.
+target_link_libraries(my_target PRIVATE SQLiteCpp)
+
+</code></pre></div></div>
+
+<h4 id="cmake-and-tests">CMake and tests</h4>
+<p>A CMake configuration file is also provided for multi-platform support and testing.</p>
+
+<p>Typical generic build for MS Visual Studio under Windows (from <a href="https://github.com/srombauts/sqlitecpp/tree/master/./build.bat">build.bat</a>):</p>
+
+<pre><code class="language-Batchfile">mkdir build
+cd build
+
+cmake ..        # cmake .. -G "Visual Studio 16 2019"    # for Visual Studio 2019
+@REM Generate a Visual Studio solution for latest version found
+cmake -DSQLITECPP_BUILD_EXAMPLES=ON -DSQLITECPP_BUILD_TESTS=ON ..
+
+@REM Build default configuration (ie 'Debug')
+cmake --build .
+
+@REM Build and run tests
+ctest --output-on-failure
+
+</code></pre>
+
+<p>Generating the Linux Makefile, building in Debug and executing the tests (from <a href="https://github.com/srombauts/sqlitecpp/tree/master/./build.sh">build.sh</a>):</p>
+
+<pre><code class="language-Shell">mkdir Debug
+cd Debug
+
+# Generate a Makefile for GCC (or Clang, depanding on CC/CXX envvar)
+cmake -DSQLITECPP_BUILD_EXAMPLES=ON -DSQLITECPP_BUILD_TESTS=ON ..
+
+# Build (ie 'make')
+cmake --build .
+
+# Build and run unit-tests (ie 'make test')
+ctest --output-on-failure
+
+</code></pre>
+
+<h4 id="building-with-meson">Building with meson</h4>
+
+<p>You can build SQLiteCpp with <a href="https://mesonbuild.com/">meson</a> using the provided meson project.</p>
+
+<p>you can install meson using pip: <code class="language-plaintext highlighter-rouge">pip install meson</code> however you may need to install ninja and other dependencies depending on your platform as an compiler toolchain</p>
+
+<p>Arch Linux:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># install clang (compiler toolchain) and ninja (recommended build system)</span>
+<span class="nb">sudo </span>pacman <span class="nt">-Syu</span> clang ninja
+<span class="c"># install python and pip (required for meson)</span>
+<span class="nb">sudo </span>pacman <span class="nt">-Syu</span> python python-pip
+<span class="c"># install meson </span>
+pip <span class="nb">install </span>meson
+
+</code></pre></div></div>
+
+<p>Ubuntu:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># install gcc(compiler toolchain) and ninja (recommended build system)</span>
+<span class="nb">sudo </span>apt <span class="nb">install </span>build-essential ninja-build
+<span class="c"># install python and pip (required for meson)</span>
+<span class="nb">sudo </span>apt <span class="nb">install </span>python3 python3-pip
+<span class="c"># install meson</span>
+pip <span class="nb">install </span>meson
+
+</code></pre></div></div>
+
+<p>for example you can build the library using the default options with:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># setup the build directory</span>
+meson setup builddir 
+<span class="c"># build sqlitecpp</span>
+meson compile <span class="nt">-C</span> builddir
+
+</code></pre></div></div>
+
+<p>or if you wish to build with tests and examples:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># setup the build directory with tests and examples enabled</span>
+meson setup builddir <span class="nt">-DSQLITECPP_BUILD_TESTS</span><span class="o">=</span><span class="nb">true</span> <span class="nt">-DSQLITECPP_BUILD_EXAMPLES</span><span class="o">=</span><span class="nb">true</span>
+<span class="c"># build sqlitecpp</span>
+meson compile <span class="nt">-C</span> builddir
+
+</code></pre></div></div>
+
+<h4 id="using-sqlitecpp-as-subproject-in-meson">Using SQLiteCpp as subproject in meson</h4>
+
+<p>please check the examples in the examples folder for usage of SQLiteCpp as a subproject in meson, as for the wrap file you can use the one provided in the subprojects folder called <code class="language-plaintext highlighter-rouge">SQLiteCpp.wrap</code></p>
+
+<blockquote>
+  <p>keep in mind that even that this wrap should be up to date, it is recommended to check the latest version of SQLiteCpp and update the wrap file accordingly</p>
+</blockquote>
+
+<h4 id="system-sqlitecpp-support-under-meson">System SQLiteCpp support under meson</h4>
+
+<p>additionally meson can detect and use the bundled sqlitecpp library included on your system if available, for example with vcpkg you would need to set the <code class="language-plaintext highlighter-rouge">PKG_CONFIG_PATH</code> environment variable to the vcpkg directory before running meson setup, and if applies the corresponding <code class="language-plaintext highlighter-rouge">PKG-CONFIG</code> executable to the path.</p>
+
+<h4 id="building-the-doxygenhtml-documentation">Building the Doxygen/html documentation</h4>
+
+<p>Make sure you have Dogygen installed and configure CMake using the <code class="language-plaintext highlighter-rouge">SQLITECPP_RUN_DOXYGEN=ON</code> flag:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake -DSQLITECPP_RUN_DOXYGEN=ON   &lt;MORE ARGUMENTS_HERE&gt;
+
+</code></pre></div></div>
+
+<p>and then execute the <code class="language-plaintext highlighter-rouge">SQLiteCpp_doxygen</code> target (or build all targets, see above).
+The documentation will be generated in the ‘doc’ subfolder of the source tree.</p>
+
+<h4 id="cmake-options">CMake options</h4>
+
+<ul>
+  <li>For more options on customizing the build, see the <a href="https://github.com/SRombauts/SQLiteCpp/blob/master/CMakeLists.txt">CMakeLists.txt</a> file.</li>
+</ul>
+
+<h4 id="troubleshooting">Troubleshooting</h4>
+
+<p>Under Linux, if you get multiple linker errors like “undefined reference to sqlite3_xxx”,
+it’s that you lack the “sqlite3” library: install the libsqlite3-dev package.</p>
+
+<p>If you get a single linker error “Column.cpp: undefined reference to sqlite3_column_origin_name”,
+it’s that your “sqlite3” library was not compiled with
+the <code class="language-plaintext highlighter-rouge">SQLITE_ENABLE_COLUMN_METADATA</code> macro defined (see <a href="http://www.sqlite.org/compile.html#enable_column_metadata">http://www.sqlite.org/compile.html#enable_column_metadata</a>).
+You can:</p>
+<ul>
+  <li>either recompile the sqlite3 library provided by your distribution yourself (seek help online)</li>
+  <li>or turn off the <code class="language-plaintext highlighter-rouge">option(SQLITE_ENABLE_COLUMN_METADATA "Enable Column::getColumnOriginName(). Require support from sqlite3 library." ON)</code> in <a href="https://github.com/srombauts/sqlitecpp/tree/master/./CMakeFiles.txt">CMakeFiles.txt</a> (or other build system scripts)</li>
+  <li>or turn on the <code class="language-plaintext highlighter-rouge">option(SQLITECPP_INTERNAL_SQLITE "Add the internal SQLite3 source to the project." ON)</code> in <a href="https://github.com/srombauts/sqlitecpp/tree/master/./CMakeFiles.txt">CMakeFiles.txt</a>
+</li>
+</ul>
+
+<h3 id="continuous-integration">Continuous Integration</h3>
+
+<p>This project is continuously tested under Ubuntu Linux with the gcc and clang compilers
+using the Travis CI community service with the above CMake building and testing procedure.
+It is also tested in the same way under Windows Server 2012 R2 with Visual Studio 2013 compiler
+using the AppVeyor continuous integration service.</p>
+
+<p>Detailed results can be seen online:</p>
+<ul>
+  <li><a href="https://travis-ci.org/SRombauts/SQLiteCpp">https://travis-ci.org/SRombauts/SQLiteCpp</a></li>
+  <li><a href="https://ci.appveyor.com/project/SbastienRombauts/SQLiteCpp">https://ci.appveyor.com/project/SbastienRombauts/SQLiteCpp</a></li>
+</ul>
+
+<h3 id="thread-safety">Thread-safety</h3>
+
+<p>SQLite supports three modes of thread safety, as describe in “SQLite And Multiple Threads”:
+see <a href="http://www.sqlite.org/threadsafe.html">http://www.sqlite.org/threadsafe.html</a></p>
+
+<p>This SQLiteC++ wrapper does no add any locks (no mutexes) nor any other thread-safety mechanism
+above the SQLite library itself, by design, for lightness and speed.</p>
+
+<p>Thus, SQLiteC++ naturally supports the “Multi Thread” mode of SQLite:
+“In this mode, SQLite can be safely used by multiple threads
+provided that no single database connection is used simultaneously in two or more threads.”</p>
+
+<p>But SQLiteC++ does not support the fully thread-safe “Serialized” mode of SQLite,
+because of the way it shares the underlying SQLite precompiled statement
+in a custom shared pointer (See the inner class “Statement::Ptr”).</p>
+
+<h3 id="valgrind-memcheck">Valgrind memcheck</h3>
+
+<p>Run valgrind to search for memory leaks in your application, the SQLiteCpp wrapper, or the sqlite3 library.
+Execute the following command under Unix like OS (Linux, MacOS or WSL2/Ubuntu under Windows Subsystem for Linux):</p>
+
+<pre><code class="language-Shell">valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose build/SQLiteCpp_example1
+
+</code></pre>
+
+<p>or uncoment the line at the end of <a href="https://github.com/srombauts/sqlitecpp/tree/master/./build.sh">build.sh</a></p>
+
+<h2 id="examples">Examples</h2>
+<h3 id="the-first-sample-demonstrates-how-to-query-a-database-and-get-results">The first sample demonstrates how to query a database and get results:</h3>
+
+<pre><code class="language-C++">try
+{
+    // Open a database file
+    SQLite::Database    db("example.db3");
+    
+    // Compile a SQL query, containing one parameter (index 1)
+    SQLite::Statement   query(db, "SELECT * FROM test WHERE size &gt; ?");
+    
+    // Bind the integer value 6 to the first parameter of the SQL query
+    query.bind(1, 6);
+    
+    // Loop to execute the query step by step, to get rows of result
+    while (query.executeStep())
+    {
+        // Demonstrate how to get some typed column value
+        int         id      = query.getColumn(0);
+        const char* value   = query.getColumn(1);
+        int         size    = query.getColumn(2);
+        
+        std::cout &lt;&lt; "row: " &lt;&lt; id &lt;&lt; ", " &lt;&lt; value &lt;&lt; ", " &lt;&lt; size &lt;&lt; std::endl;
+    }
+}
+catch (std::exception&amp; e)
+{
+    std::cout &lt;&lt; "exception: " &lt;&lt; e.what() &lt;&lt; std::endl;
+}
+
+</code></pre>
+
+<h3 id="the-second-sample-shows-how-to-manage-a-transaction">The second sample shows how to manage a transaction:</h3>
+
+<pre><code class="language-C++">try
+{
+    SQLite::Database    db("transaction.db3", SQLite::OPEN_READWRITE|SQLite::OPEN_CREATE);
+
+    db.exec("DROP TABLE IF EXISTS test");
+
+    // Begin transaction
+    SQLite::Transaction transaction(db);
+
+    db.exec("CREATE TABLE test (id INTEGER PRIMARY KEY, value TEXT)");
+
+    int nb = db.exec("INSERT INTO test VALUES (NULL, \"test\")");
+    std::cout &lt;&lt; "INSERT INTO test VALUES (NULL, \"test\")\", returned " &lt;&lt; nb &lt;&lt; std::endl;
+
+    // Commit transaction
+    transaction.commit();
+}
+catch (std::exception&amp; e)
+{
+    std::cout &lt;&lt; "exception: " &lt;&lt; e.what() &lt;&lt; std::endl;
+}
+
+</code></pre>
+
+<h3 id="the-third-sample-shows-how-to-manage-a-prepared-statement-with-a-transaction">The third sample shows how to manage a prepared statement with a transaction:</h3>
+
+<pre><code class="language-C++">try 
+{ 
+    SQLite::Database    db("test.db3", SQLite::OPEN_READWRITE|SQLite::OPEN_CREATE);
+
+    db.exec("DROP TABLE IF EXISTS test");
+
+    db.exec("CREATE TABLE test (value INTEGER)");
+
+    // Begin transaction
+    SQLite::Transaction transaction(db);
+
+    // Prepare query
+    SQLite::Statement query {db, "INSERT INTO test (value) VALUES (?)"};
+
+    // Collection to save in database
+    std::vector&lt;int&gt; values{1, 2, 3};
+
+    for (const auto&amp; v: values)
+    {
+      query.bind(1, v);
+      query.exec();
+      query.reset();
+    }
+
+    // Commit transaction
+    transaction.commit();
+}
+catch (std::exception&amp; e)
+{
+  std::cout &lt;&lt; "exception: " &lt;&lt; e.what() &lt;&lt; std::endl;
+}
+
+</code></pre>
+
+<h3 id="how-to-handle-assertion-in-sqlitec">How to handle assertion in SQLiteC++:</h3>
+<p>Exceptions shall not be used in destructors, so SQLiteC++ uses SQLITECPP_ASSERT() to check for errors in destructors.
+If you don’t want assert() to be called, you have to enable and define an assert handler as shown below,
+and by setting the flag SQLITECPP_ENABLE_ASSERT_HANDLER when compiling the lib.</p>
+
+<pre><code class="language-C++">#ifdef SQLITECPP_ENABLE_ASSERT_HANDLER
+namespace SQLite
+{
+/// definition of the assertion handler enabled when SQLITECPP_ENABLE_ASSERT_HANDLER is defined in the project (CMakeList.txt)
+void assertion_failed(const char* apFile, const long apLine, const char* apFunc, const char* apExpr, const char* apMsg)
+{
+    // Print a message to the standard error output stream, and abort the program.
+    std::cerr &lt;&lt; apFile &lt;&lt; ":" &lt;&lt; apLine &lt;&lt; ":" &lt;&lt; " error: assertion failed (" &lt;&lt; apExpr &lt;&lt; ") in " &lt;&lt; apFunc &lt;&lt; "() with message \"" &lt;&lt; apMsg &lt;&lt; "\"\n";
+    std::abort();
+}
+}
+#endif
+
+</code></pre>
+
+<h2 id="how-to-contribute">How to contribute</h2>
+<h3 id="github-website">GitHub website</h3>
+<p>The most efficient way to help and contribute to this wrapper project is to
+use the tools provided by GitHub:</p>
+<ul>
+  <li>please fill bug reports and feature requests here: <a href="https://github.com/SRombauts/SQLiteCpp/issues">https://github.com/SRombauts/SQLiteCpp/issues</a>
+</li>
+  <li>fork the repository, make some small changes and submit them with pull-request</li>
+</ul>
+
+<h3 id="contact">Contact</h3>
+<p>You can also email me directly, I will try to answer questions and requests whenever I get the time for it.</p>
+
+<h3 id="coding-style-guidelines">Coding Style Guidelines</h3>
+<p>The source code use the CamelCase naming style variant where:</p>
+<ul>
+  <li>type names (class, struct, typedef, enums…) begin with a capital letter</li>
+  <li>files (.cpp/.h) are named like the class they contain</li>
+  <li>function and variable names begin with a lower case letter</li>
+  <li>member variables begin with a ‘m’, function arguments begin with a ‘a’, booleans with a ‘b’, pointers with a ‘p’</li>
+  <li>each file, class, method and member variable is documented using Doxygen tags</li>
+  <li>braces on their own line
+See also <a href="http://www.appinf.com/download/CppCodingStyleGuide.pdf">http://www.appinf.com/download/CppCodingStyleGuide.pdf</a> for good guidelines</li>
+</ul>
+
+<h2 id="see-also---some-other-simple-c-sqlite-wrappers">See also - Some other simple C++ SQLite wrappers:</h2>
+
+<p>See bellow a short comparison of other wrappers done at the time of writing:</p>
+<ul>
+  <li>
+<a href="http://code.google.com/p/sqdbcpp/">sqdbcpp</a>: RAII design, simple, no dependencies, UTF-8/UTF-16, new BSD license</li>
+  <li>
+<a href="http://ed.am/dev/sqlite3cc">sqlite3cc</a>: uses boost, modern design, LPGPL</li>
+  <li>
+<a href="https://github.com/iwongu/sqlite3pp">sqlite3pp</a>: modern design inspired by boost, MIT License</li>
+  <li>
+<a href="http://sqlitepp.berlios.de/">SQLite++</a>: uses boost build system, Boost License 1.0</li>
+  <li>
+<a href="http://www.codeproject.com/Articles/6343/CppSQLite-C-Wrapper-for-SQLite/">CppSQLite</a>: famous Code Project but old design, BSD License</li>
+  <li>
+<a href="http://code.google.com/p/easysqlite/">easySQLite</a>: manages table as structured objects, complex</li>
+  <li>
+<a href="https://github.com/keramer/sqlite_modern_cpp">sqlite_modern_cpp</a>: modern C++11, all in one file, MIT license</li>
+  <li>
+<a href="https://github.com/fnc12/sqlite_orm">sqlite_orm</a>: modern C++14, header only all in one file, no raw string queries, BSD-3 license</li>
+</ul>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<p>2012 Mar 30</p>
+<ul>
+  <li>Start of a new thin C++ SQLite wrapper</li>
+</ul>
+
+<p>2012 Apr 2</p>
+<ul>
+  <li>The wrapper is functional</li>
+  <li>Added documentation and examples</li>
+  <li>Publication on GitHub</li>
+</ul>
+
+<p>Version 0.1.0 - 2012 Apr 4</p>
+<ul>
+  <li>Added a Database::exec() method to execute simple SQL statement</li>
+  <li>Added a version number like in sqlite3.h, starting with 0.1.0</li>
+</ul>
+
+<p>Version 0.2.0 - 2012 Apr 11</p>
+<ul>
+  <li>Added getLastInsertId() and setBusyTimout()</li>
+  <li>Added bind() by name methods</li>
+</ul>
+
+<p>Version 0.3.0 - 2012 Apr 16</p>
+<ul>
+  <li>Added an easy wrapper Database::execAngGet()</li>
+</ul>
+
+<p>Version 0.4.0 - 2012 Apr 23</p>
+<ul>
+  <li>Added a Database::tableExists() easy to use function</li>
+</ul>
+
+<p>Dec 10 2012</p>
+<ul>
+  <li>Added a Statement::exec() method to execute a one-step query with no expected result</li>
+</ul>
+
+<p>Version 0.5.0 - 2013 March 9</p>
+<ul>
+  <li>Added assert() on errors on destructors</li>
+  <li>Added getBytes()</li>
+  <li>Added getBlob(), getType() and isInteger/isFloat/isText/isBlob/isNull</li>
+  <li>Added bind() for binary blob data</li>
+</ul>
+
+<p>Version 0.5.1 - 2013 April 7</p>
+<ul>
+  <li>Added Column::getName()</li>
+</ul>
+
+<p>Version 0.6.0 - 2013 November 22</p>
+<ul>
+  <li>Renamed Column::getName() to Column::getOriginName()</li>
+  <li>Added Column::getName()</li>
+</ul>
+
+<p>Version 0.7.0 - 2014 January 9</p>
+<ul>
+  <li>Added Database::createFunction()</li>
+  <li>Added std::string version of existing APIs</li>
+  <li>Improved CMake with more build options and Doxygen auto-detection</li>
+</ul>
+
+<p>Version 0.8.0 - 2014 February 26</p>
+<ul>
+  <li>Database constructor support opening a database with a custom VFS (default to NULL)</li>
+  <li>Changed Column::getText() to return empty string “” by default instead of NULL pointer (to handle std::string conversion)</li>
+</ul>
+
+<p>Version 1.0.0 - 2015 May 3</p>
+<ul>
+  <li>Public headers file moved to include/ dir</li>
+  <li>Added support to biicode in CMakeLists.txt</li>
+  <li>Added Unit Tests</li>
+  <li>Added aBusyTimeoutMs parameter to Database() constructors</li>
+  <li>Added Database::getTotalChanges()</li>
+  <li>Added Database::getErrorCode()</li>
+  <li>Added Statement::clearBindings()</li>
+  <li>Added Statement::getColumn(aName)</li>
+  <li>Added Statement::getErrorCode()</li>
+  <li>Added Statement::getColumnName(aIndex)</li>
+  <li>Added Statement::getColumnOriginName(aIndex)</li>
+</ul>
+
+<p>Version 1.1.0 - 2015 May 18</p>
+<ul>
+  <li>Fixed valgrind error on Database destructor</li>
+  <li>Added Database::loadExtension</li>
+</ul>
+
+<p>Version 1.2.0 - 2015 September 9</p>
+<ul>
+  <li>Fixed build with GCC 5.1.0</li>
+  <li>Fixed MSVC release build warning</li>
+  <li>Fixed CppDepends warnings</li>
+  <li>Updated documentation on installation</li>
+  <li>Added Database::getHandle()</li>
+</ul>
+
+<p>Version 1.3.0 - 2015 November 1</p>
+<ul>
+  <li>Fixed build with Visual Studio 2015</li>
+  <li>Further improvements to README</li>
+  <li>Added Backup class</li>
+</ul>
+
+<p>Version 1.3.1 - 2016 February 10</p>
+<ul>
+  <li>Switch Linux/Mac build to the provided SQLite3 C library</li>
+  <li>Update SQLite3 from 3.8.8.3 to latest 3.10.2 (2016-01-20)</li>
+  <li>Remove warnings</li>
+  <li>Remove biicode support (defunct service, servers will shutdown the 16th of February 2016)</li>
+</ul>
+
+<p>Version 2.0.0 - 2016 July 25</p>
+<ul>
+  <li>Update SQLite3 from 3.10.2 to latest 3.13 (2016-05-18)</li>
+  <li>Move #include <sqlite3.h> from headers to .cpp files only using forward declarations</sqlite3.h>
+</li>
+  <li>Add Database::VERSION to reach SQLITE_VERSION without including sqlite3.h in application code</li>
+  <li>Add getLibVersion() and getLibVersionNumber() to get runtime version of the library</li>
+  <li>Better exception messages when Statements fail PR #84</li>
+  <li>Variadic templates for bind() (C++14) PR #85</li>
+  <li>Add Statement::bindNoCopy() methods for strings, using SQLITE_STATIC to avoid internal copy by SQLite3 PR #86</li>
+  <li>Add Statement::bind() overload for uint32_t, and Column::getUint() and cast operator to uint32_t PR #86</li>
+  <li>Use the new SQLITE_DBCONFIG_ENABLE_LOAD_EXTENSION from SQLite 3.13 for security reason</li>
+  <li>Rename Backup::remainingPageCount()/totalPageCount() to Backup::getRemainingPageCount()/getTotalPageCount()</li>
+  <li>Remove Column::errmsg() method : use Database or Statement equivalents</li>
+  <li>More unit tests, with code coverage status on the GitHub page</li>
+  <li>Do not force MSVC to use static runtime if unit-tests are not build</li>
+</ul>
+
+<p>Version 2.1.0 - 2017 July 18</p>
+<ul>
+  <li>Update SQLite3 from 3.13 to latest 3.19.3 (2017-06-08)</li>
+  <li>Fixed Incompatibility in 3.19.0 (to use older SQLite version set the CMake variable SQLITE_USE_LEGACY_STRUCT) #125</li>
+  <li>Fixed link error (inline in cpp) and compiler warnings (unused variable…) #96</li>
+  <li>Added ability to open encrypted databases (using SQLCipher, eg. libsqlcipher-dev) #107</li>
+  <li>Added convenience functions for constructing objects from a row #114</li>
+  <li>Added CMake install step #118</li>
+  <li>Fix warnings #119</li>
+  <li>Make cpplint.py Python-3 compatible #120</li>
+  <li>Link libssp when targeted #100</li>
+  <li>Removed redundant const #102</li>
+</ul>
+
+<p>Version 2.2.0 - 2017 Sept 19</p>
+<ul>
+  <li>Update SQLite3 from 3.19.3 to latest 3.20.1 (2017-08-24) #143</li>
+  <li>Added tryExecuteStep and tryReset #142</li>
+  <li>Removed virtual keywords from destructors #140</li>
+  <li>Removed misplaced noexcept keyword #139</li>
+  <li>Improved Exception class C++ conformance #138</li>
+  <li>Fix warnings #134</li>
+  <li>Deprecated Statement::isOk() to Statement::hasRow()</li>
+</ul>
+
+<p>Version 2.3.0 - 2019 March 3</p>
+<ul>
+  <li>Update SQLite3 from 3.20.1 to latest 3.27.2 (2019-02-25) #183 #187</li>
+  <li>Add Statement binding for long int values #147</li>
+  <li>Allows long int for bind when used with name #148</li>
+  <li>More cmake instructions for Linux #151</li>
+  <li>Add comparison with sqlite_orm #141</li>
+  <li>Fix Statement::bind truncates long integer to 32 bits on x86_64 Linux #155</li>
+  <li>Add a move constructor to Database #157</li>
+  <li>Added tests for all MSVC compilers available on AppVeyor (2013, 2015, 2017) #169</li>
+  <li>Update VariadicBind.h #172</li>
+  <li>Better CMake compatibility #170</li>
+  <li>Add implicit cast operator to char and short types #179 #180</li>
+</ul>
+
+<p>Version 2.4.0 - 2019 August 25</p>
+<ul>
+  <li>Update SQLite3 from 3.27.2 to 3.29.0 (2019-07-10) #217</li>
+  <li>#191 CMake Warning line 299</li>
+  <li>#190 Implement move constructors</li>
+  <li>#192 Add wrapper for bind parameter count</li>
+  <li>#197 Add tuple_bind and execute_many (requested by #24)</li>
+  <li>#199 Fix #156 misleading error message in exception from Statement::exec</li>
+  <li>#201 Add Statement::getExpandedSQL() to get the SQL text of prepared statement with bound parameters expanded</li>
+  <li>#211 Implement Database::backup()</li>
+  <li>#215 Disable implicit fallthrough warning when building internal sqlite3</li>
+  <li>#216 Set PROJECT_VERSION to fix CMP0048 Policy warnings</li>
+</ul>
+
+<p>Version 2.5.0 - 2019 December 31</p>
+<ul>
+  <li>Update SQLite3 from 3.29.0 to 3.30.1 (2019-10-10)</li>
+  <li>100% Unit Test coverage</li>
+  <li>#212 fix sqlite3 compile properties (jzt)</li>
+  <li>#219 Disable cast-function-type warning when building internal sqlite (zxey)</li>
+  <li>#230 Fixed installation on other than Ubuntu GNU/Linux distributions (xvitaly)</li>
+  <li>#228 use transitive compile definitions via cmake (BioDataAnalysis/emmenlau)</li>
+  <li>#232 Added support of packaged GTest for running unit tests (xvitaly)</li>
+  <li>#231 Added SOVERSION field for shared library (xvitaly)</li>
+  <li>#229 Explicitly find and link against system sqlite library (xvitaly)</li>
+  <li>#235 Added support for cmake dependencies and version information (BioDataAnalysis/emmenlau)</li>
+  <li>
+    <p>#249 Added SQLite header parsing functionality and associated tests (patrick–)</p>
+  </li>
+  <li>#251 Added example for getHeaderInfo()</li>
+</ul>
+
+<p>Version 3.0.0 - 2020 January 31</p>
+<ul>
+  <li>C++11 is now required</li>
+  <li>CMake 3.1 minimum</li>
+  <li>Visual Studio 2015 minimum</li>
+  <li>Update Googletest to latest release 1.10</li>
+  <li>Add Github Actions continuous integration solution</li>
+  <li>Add Valgrind memcheck tool to Travis CI</li>
+  <li>Remove Statement::isOk() deprecated in 2.2.0 when renamed to Statement::hasRow()</li>
+  <li>Replace Database::backup() “C” implementation by calling the Backup class</li>
+  <li>#252 Run Valgrind memcheck on Travis CI</li>
+  <li>#253 Keep inline functions for GCov code coverage</li>
+  <li>#254 Re-enable Coverity static analysis</li>
+  <li>#256 Fix linking with system library (libsqlite3)</li>
+  <li>#242 Added a <code class="language-plaintext highlighter-rouge">getIndex</code> method and used it (KOLANICH)</li>
+  <li>#257 Improve Statement unit tests coverage (bind by name with a std::string)</li>
+  <li>#234 support for external sqlite3 (BioDataAnalysis/emmenlau)</li>
+  <li>#243 adding a pure attribute to getIndex() (KOLANICH)</li>
+</ul>
+
+<p>Version 3.1.0 - 2020 August 11</p>
+<ul>
+  <li>Update SQLite3 from 3.30.1 to 3.32.3 (2020-06-18)</li>
+  <li>#274 Install both cmake files into same lib directory from tcraigtyler</li>
+  <li>#275 Add a method on Statement to get the declared type of a column. from daniel-schmidt</li>
+  <li>#284 Add SQLITE_OPEN_FULLMUTEX flag from rwrx</li>
+  <li>#286 Add CMake option to toggle stack protection from chrisdalke</li>
+  <li>#287 Fixed installation on other than Ubuntu distributions from xvitaly</li>
+  <li>#288 Allow building of sqlite JSON1 extension when building internal sqlite library from zxey</li>
+</ul>
+
+<p>Version 3.1.1 - 2020 August 19</p>
+<ul>
+  <li>#292 Fix compilation if using SQLITE_HAS_CODEC from sum01</li>
+  <li>#293 Remove FindSQLiteCpp.cmake from sum01</li>
+</ul>
+
+<p>Version 3.2.0 - 2022 Septembre 18</p>
+<ul>
+  <li>#300 #316 #362 #368 Updated SQLite3 from 3.32.3 to 3.39.3 (2022-09-05)</li>
+  <li>#236 Disable explicit setting of MSVC runtime from BioDataAnalysis/emmenlau</li>
+  <li>#308 Fix build warning due to string truncation from stauffer-garmin</li>
+  <li>#311 Add Database::tryExec() from kcowolf</li>
+  <li>#313 [CMake] Add SQLITECPP_INCLUDE_SCRIPT option from past-due</li>
+  <li>#314 Add Database constructor for filesystem::path (#296) from ptrks</li>
+  <li>#295 Compile internal SQLite library with -ffunction-sections from smichaku</li>
+  <li>#299 Added Savepoint support from catalogm</li>
+  <li>#333 Added Database and Statement getChanges()</li>
+  <li>#305 Add other constants that work with sqlite3_open_v2 from LuAPi/more-flags</li>
+  <li>#333 Added Database and Statement method getChanges() from SRombauts/get-changes</li>
+  <li>#334 fix link for HAS_CODEC from linux-fan-dave/master</li>
+  <li>#338 fix load extension from paulo-coutinho/fix-load-extension</li>
+  <li>#335 from jagerman/older-macos-avoid-std-filesystem</li>
+  <li>#337 Add catkin configuration from ardabbour/master</li>
+  <li>#339 Allow specifying transaction behaviors DEFERRED, IMMEDIATE, and EXCLUSIVE from jjenkins278/transaction_behavior</li>
+  <li>#340 add HTML keywords and properly link up the links in docs/README.md from phoebe-leong/patch-1</li>
+  <li>#341 Install the package.xml file from ardabbour/patch-1</li>
+  <li>#352 add basic meson support from ninjaoflight/meson-support</li>
+  <li>#349 Refactoring of Statement and Column classes from Kacperos155/refactoring-Statement&amp;Column</li>
+  <li>#359 Fix compilation issues earlier than iOS 13</li>
+  <li>#354 Windows improved support (meson) from ninjaoflight/windows-migration</li>
+  <li>#361 Fix Statement unit test using long from SRombauts/fix-statement-unit-tests-long-long-type</li>
+  <li>#346 Add compatible definition for std::experimental::filesystem from guoh27/master</li>
+  <li>#364 Removal of remaining long APIs from SRombauts/convert-remaining-long-types</li>
+  <li>#366 Add vcpkg installation instructions from FrankXie05/vcpkg-instructions</li>
+  <li>#360 Small improvements and code cleaning from Kacperos155/small_improvements</li>
+</ul>
+
+<p>Versions 3.2.1 - 2022 Decembre 12</p>
+<ul>
+  <li>#383 Update SQLite from 3.39.3 to 3.40.0 (2022-11-16) from SRombauts/update-sqlite-340</li>
+  <li>#370 Don’t link anymore with Visual Studio’s static runtime by default from SRombauts/dont-enforce-static-linking</li>
+  <li>#371 from SRombauts/appveyor-vs-2022</li>
+  <li>#277 from cuberite/cmake-scoping</li>
+  <li>#374 Update googletest from vuhailongkl97/master</li>
+  <li>#377 Some documentation fixes from cbielow/fix_doc</li>
+  <li>#380 [Meson] fixes for meson project from ninjaoflight/windows-support</li>
+  <li>#387 Ensure that TEXT column is UTF-8 encoded before using sqlite3_column_blob() from dougnazar</li>
+  <li>#385 disable SQLITECPP_USE_STACK_PROTECTION when on MinGW from SRombauts/mingw-disable-stack-protection</li>
+  <li>#386 [meson] Update SQLite from 3.39.3 to 3.40.0 from ninjaoflight/sqlite-meson-update</li>
+  <li>#389 [meson] add missing compile options from ninjaoflight/meson-fixes</li>
+</ul>
+
+<p>Version 3.3.0 - 2023 May 24</p>
+<ul>
+  <li>#393 Fix preprocessor issues from jowr/fix_preprocessor_issues</li>
+  <li>#394 check if SQLITE_OPEN_NOFOLLOW is defined from ninjaoflight/macos-11-fix</li>
+  <li>#391 meson project changes based on wrap submission review from ninjaoflight/meson-macos-fix</li>
+  <li>#390 fix incorrect work of savepoint from spoyler/save_point	Sébastien Rombauts	12/15/2022 01:12 PM</li>
+  <li>#396 Rename Savepoint RollbackTo() and fix class comments and formatting from SRombauts/rename-savepoint-rollback-to</li>
+  <li>#384 Add Mingw GitHub actions from SRombauts/mingw-github-actions</li>
+  <li>#397 Add a Transaction::rollback() method from SRombauts/add-transaction-rollback</li>
+  <li>#395 add meson usage guide from ninjaoflight/meson-readme-guide</li>
+  <li>#401 Fix meson installation from dougnazar/fix_meson_install</li>
+  <li>#400 CMakr/meson Lint corrections from ninjaoflight/lint-corrections</li>
+  <li>#404 Add documentation for prepared statements in transactions from ewarchul/query_transactions_example</li>
+  <li>#399 add disable option for sqlite3_expanded_sql from ninjaoflight/optional-sqlite3_expanded_sql</li>
+  <li>#408 correct executable name in meson from ninjaoflight/patch-2</li>
+  <li>#407 Create Meson CI from ninjaoflight/patch-1</li>
+  <li>#409 Update package.xml from poshul/patch-1</li>
+  <li>#410 use checkout@v3 in CMake CI from ninjaoflight/fix-nodejs-warnings</li>
+  <li>#406 DLL export/import using BUILD_SHARED_LIBS from pierre-aimi/dllexport_import</li>
+  <li>#415 Remove mismatched else condition in CMakeLists.txt from Timmmm/patch-1</li>
+  <li>#413 Fix compiler warnings from ninjaoflight/fix-visibility-warning</li>
+  <li>#423 Update SQLite from 3.40.0 to 3.42.0 (2023-05-16) from SRombauts/update-sqlite</li>
+</ul>
+
+<p>Version 3.3.1 - 2023 Aug 27</p>
+
+<ul>
+  <li>#428 Add CMake option SQLITE_ENABLE_DBSTAT_VTAB and SQLITE_ENABLE_RTREE from SRombauts/cmake-sqlite-enable-dbstat-vtab</li>
+  <li>#434 Define SQLITECPP_COMPILE_DLL as PUBLIC from calumr/fix-dll-import</li>
+  <li>#439 Update CMake minimum version to 3.5 to get rid of a new deprecation warning with CMake 3.27 from SRombauts/cmake-update-minimum-version</li>
+  <li>#441 Cleanup of the Github “build” workflow from SRombauts/github-actions-improvements</li>
+  <li>Update usage of SQLITECPP_USE_STATIC_RUNTIME (#438)</li>
+  <li>Don’t build the googlemock subproject, only the main googletest library</li>
+  <li>Declare BUILD_SHARED_LIBS option for discoverability (#440)</li>
+  <li>Set -DBUILD_SHARED_LIBS=ON by default on scripts and CI/CD (#442)</li>
+  <li>Update SQLite from 3.42.0 to 3.43.0 (2023-08-24) (#443)</li>
+  <li>Rename the original build.yml to cmake.yml vs meson.yml (#444)</li>
+</ul>
+
+<p>Version 3.3.2 - 2024 Aug 16</p>
+
+<ul>
+  <li>Fix and update Travis CI workflow (#450)</li>
+  <li>Update Googletest to v1.15.2 (#451) and (#478)</li>
+  <li>[Meson] update meson dependencies (#448)</li>
+  <li>Macos ci fix (#476)</li>
+  <li>Update meson dependencies [Meson only] (#475)</li>
+  <li>Update SQLite from 3.43.0 to 3.46.1 (2024-08-13) (#461) and (#477)</li>
+  <li>Explicitly =delete; Statement::bindNoCopy(…, std::string&amp;&amp;) (#469)</li>
+</ul>
+
+</div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/SQLiteCpp/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No dependencies on ROS packages.</em>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th>Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                      <tr>
+                        <td><a href="/d/cmake">cmake</a></td>
+                      </tr>
+                    
+                  
+                    
+                      <tr>
+                        <td><a href="/d/libsqlite3-dev">libsqlite3-dev</a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No known dependants.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No launch files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No message files found.</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No plugins found.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>SQLiteCpp</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/SQLiteCpp+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/srombauts/sqlitecpp.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/SQLiteCpp"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/srombauts/sqlitecpp/tree/master/."
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/SQLiteCpp?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/SQLiteCpp?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=SQLiteCpp&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "SQLiteCpp"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

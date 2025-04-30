@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: armor_processor</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/armor_processor/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">armor_processor</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/armor_processor">armor_processor</a> <small>package from <a style="text-decoration:none" href="/r/tup-vision-2023-based/github-tup-robomaster-tup-vision-2023-based">tup-vision-2023-based</a> repo</small>
+        </h3>
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/camera_driver">
+
+camera_driver
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/global_interface">
+
+global_interface
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/global_user">
+
+global_user
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/serialport">
+
+serialport
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/armor_detector">
+
+armor_detector
+</a>
+            
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+armor_processor
+</span>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/buff_detector">
+
+buff_detector
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/buff_processor">
+
+buff_processor
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/buff">
+
+buff
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/filter">
+
+filter
+</a>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/armor_processor"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/tup-robomaster/tup-vision-2023-based/tree/main/src/vehicle_system/autoaim/armor_processor"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-default">0</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">20</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>0.0.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>TODO: License declaration</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-default">
+                  
+                    AMENT_CMAKE</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default">沈阳航空航天大学TUP战队2023视觉程序</span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/tup-robomaster/tup-vision-2023-based.git">https://github.com/tup-robomaster/tup-vision-2023-based.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2024-05-23
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <em>No category tags.</em>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/tup-vision-2023-based/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/tup-vision-2023-based/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/tup-vision-2023-based/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            TODO: Package description
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional links.</em>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>zhengtu</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional authors.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/tup-robomaster/tup-vision-2023-based/tree/main/src/vehicle_system/autoaim/armor_processor/README.md" title="Open in git repository">src/vehicle_system/autoaim/armor_processor/README.md</a></div>
+              <div class="panel-body">
+                    <div class="rendered-markdown">
+<h1 id="armor_processor">armor_processor</h1>
+
+<h2 id="0自瞄预测逻辑">0.自瞄预测逻辑</h2>
+<blockquote>
+  <p>预测节点接收检测节点发布的目标装甲板信息，根据目标的状态（目标是否丢失/目标是否处于小陀螺/目标是否发生切换）调整预测器状态（追踪/预测/丢失预测/丢失），将目标位姿信息输入预测器，输出目标预测位置后解算出pitch和yaw轴角度并发布消息。</p>
+  <ul>
+    <li>预测器
+      <ul>
+        <li>基于两个模型，分别为singer模型、整车模型（还有IMM模型，当前未使用），各模型详解见下一部分<code class="language-plaintext highlighter-rouge">Update log</code>。</li>
+        <li>预测器分为4个状态，分别为Tracking（追踪）、Predicting（预测）、Losting（丢失预测）、Lost（完全丢失）。预测器4个状态的切换条件为：
+          <ul>
+            <li>目标上帧存在，此帧丢失则进入Losting状态；
+              <ul>
+                <li>此状态下，预测器仅对目标当前位置进行状态估计。</li>
+              </ul>
+            </li>
+            <li>目标上帧不存在且当前帧丢失或预测器处于Losting状态的帧数大于等于5，则切入Lost状态；
+              <ul>
+                <li>此状态直接重置预测器。</li>
+              </ul>
+            </li>
+            <li>车辆发生切换或目标未完成初始化（首次识别到），则切入Tracking状态；
+              <ul>
+                <li>此状态对预测器进行初始化，给状态量赋初值。</li>
+              </ul>
+            </li>
+            <li>目标已完成初始化则进入Predicting状态。
+              <ul>
+                <li>此状态下对目标当前位置进行估计后，对目标在延迟时间后（结合发弹延迟、弹丸飞行时间、串口通信延迟、云台响应延迟等）做超前预测。</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<h2 id="1update-log">1.Update log</h2>
+
+<h3 id="date2023-05-03">Date:2023-05-03</h3>
+<pre><code class="language-整车状态预测思路">
+</code></pre>
+
+<blockquote>
+  <p>从车辆中心的运动状态看，只有各个方向的平动，因此机动模型应用于车辆中心则可规避对小陀螺状态下单个装甲板的预测出现超调的问题，从而提高预测效果的上限。<br>
+整车状态预测思路分为前后两个阶段：车辆中心的位置估计和车辆中心的位置预测。</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>对车辆中心建模</p>
+
+    <p>车辆中心和装甲板的位置关系对应于圆心和圆上的点，而PnP解算出的装甲板的姿态则包含装甲板相对于车辆中心的角度信息。 <br>
+  整车模型如下：
+  \(\begin{cases}
+      x=x_c+r*sin({\omega}t+{\theta}) \\
+      y=y_c-r*cos({\omega}t+{\theta}) \\
+      z=z_c
+  \end{cases}\)</p>
+
+    <p>模型中已知$x，y，z，\theta$，我们需要估计的状态量有车辆中心$(x_c,y_c,z_c)$和车辆半径$r$以及车辆旋转角速度$\omega$。</p>
+  </li>
+  <li>基于扩展卡尔曼滤波的车辆中心状态估计:
+    <ul>
+      <li>滤波的状态量
+  \(X=
+      \begin{bmatrix}
+          x_c    \\ 
+          y_c    \\ 
+          z_c    \\ 
+          r      \\
+          \theta \\
+          \omega \\
+      \end{bmatrix}\)</li>
+      <li>状态转移矩阵
+  \(F=
+      \begin{bmatrix}
+          1 \ \ 0 \ \ 0 \ \ 0 \ \ 0 \ \ 0  \\
+          0 \ \ 1 \ \ 0 \ \ 0 \ \ 0 \ \ 0  \\
+          0 \ \ 0 \ \ 1 \ \ 0 \ \ 0 \ \ 0  \\
+          0 \ \ 0 \ \ 0 \ \ 1 \ \ 0 \ \ 0  \\
+          0 \ \ 0 \ \ 0 \ \ 0 \ \ 1 \ \ dt  \\
+          0 \ \ 0 \ \ 0 \ \ 0 \ \ 0 \ \ 1  \\
+      \end{bmatrix}\)
+        <blockquote>
+          <p>dt为图像两帧之间的时间间隔。</p>
+        </blockquote>
+      </li>
+      <li>滤波的观测量
+  \(Z=
+      \begin{bmatrix}
+          x       \\ 
+          y       \\
+          z       \\
+          \theta  \\
+      \end{bmatrix}\)</li>
+      <li>测量矩阵
+  \(H=
+      \begin{bmatrix}
+          1 \ 0 \ 0 \ \ \ sin\theta \ \ \ 0 \ 0           \\
+          1 \ 0 \ 0 \ -cos\theta \  0 \ 0                 \\
+          0 \ 0 \ 1 \ \ \  \ \ \ 0 \ \ \ \ \ \ 0 \ 0      \\
+          0 \ 0 \ 0 \ \ \  \ \ \ 0 \ \ \ \ \ \ 1 \ 0      \\
+      \end{bmatrix}\)</li>
+      <li>测量矩阵的雅克比形式
+  \(J_H=
+      \begin{bmatrix}
+          1 \ 0 \ 0 \ \ \ sin\theta \ \ \ rcos\theta \ 0           \\
+          1 \ 0 \ 0 \ -cos\theta \  rsin\theta \ 0                 \\
+          0 \ 0 \ 1 \ \ \ \  \  \ \   \ 0 \ \ \ \ \ \ 0 \ \ \ \ \ \ \ 0    \\
+          0 \ 0 \ 0 \ \ \ \  \  \ \   \ 0 \ \ \ \ \ \ 1 \ \ \ \ \ \ \ 0    \\
+      \end{bmatrix}\)
+        <blockquote>
+          <p>首次检测到装甲板目标后会对滤波进行初始化，即对滤波状态量赋初值，此时的圆心直接通过模型计算给出；之后则不断通过滤波的预测+更新步骤迭代收敛中心坐标$(x_c,y_c,z_c)$和车辆半径$r$。<br>
+装甲板发生切换处理：考虑到车辆中心、半径和角速度不变，因此我们只重置滤波状态量中的角度$\theta$，从而使滤波更快收敛。<br>
+车辆发生切换：重置滤波器。</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>基于卡尔曼滤波的车辆中心状态预测:
+    <blockquote>
+      <p>将上一阶段的输出量作为singer模型的输入量，对车辆中心进行预测。（singer模型见下面<code class="language-plaintext highlighter-rouge">基于‘当前’统计模型（CS model）的卡尔曼滤波算法</code>）</p>
+    </blockquote>
+  </li>
+  <li>目标点预测
+  上一阶段的输出量即为目标中心的预测点$(x_c,y_c,z_c)$，结合时间延迟量计算当前装甲板的预测旋转角度，
+      \({\theta}_{prediction}={\theta}+{\omega}*{t_{prediction}}\)
+  代入模型可计算出装甲板预测点，
+      \(\begin{cases}
+              x_{prediction}=x_c+r*sin(\theta_{prediction}) \\
+              y_{prediction}=y_c-r*cos(\theta_{prediction}) \\
+              z_{prediction}=z_c
+          \end{cases}\)
+  车辆相邻装甲板之间旋转角度相对固定$(\frac{\pi}{2})$，因此车辆4块装甲板的预测点为</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        for(int ii = 0; ii &lt; 4; ii++)
+        {
+            x_pred=x_c+r*sin(θ_pred+ii*(PI/2));
+            y_pred=y_c-r*cos(θ_pred+ii*(PI/2));
+            z_pred_z_c;
+        }
+    
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; 至此，我们已经得到了整个车辆的运动轨迹（车辆中心和4个装甲板中心的位置），接下来我们要从4个预测的装甲板位置中心选出最佳的点进行瞄准打击。\
+&gt; 我们相机能看到装甲板的旋转角度范围在0.xrad到2.xrad之间，也是我们打击的有效范围，因此只需加入条件判断出在这个范围内的点即可，然后将坐标转换到相机系下计算出pitch和yaw角度发送给下位机。 * 自动开火逻辑
+考虑到控制上滞后的问题，定点打击更合理，我们只需要发送开火标志位给下位机。\
+我们的滤波输出包含车辆中心点（变化幅度最小），因此我们的定点选择车辆中心点，当预测的装甲板位置在开火的范围内的时候，我们将此点的角度信息和开火标志位发送给下位机，下位机接收到开火标志位后，控制云台摆动到给定角度位置（实际上小于某一阈值）后开火。
+</code></pre></div></div>
+
+<h3 id="date2023-04-02">Date:2023-04-02</h3>
+<pre><code class="language-滤波收敛判据">
+</code></pre>
+<h4 id="传统基于单步量测的新息序列不等式">传统基于单步量测的新息序列不等式</h4>
+<p>\({V_{k}V_{k}^T}{\leqslant}{r{\cdot}{tr(P_{Kzk})}}={r{\cdot}{tr(E[V_{k}{V_{k}^T}])}}\)
+式中r为储备系数（r&gt;=1），tr表示矩阵迹的符号。上式的左端为新息序列的平方，包含实际估计误差信息，右端与新息序列协方差矩阵的迹有关，协方差矩阵的理论值计算如下：
+\(P_{Kzk}=E[V_{k}V_{k}^T]=H_{k}P_{k|k-1}H_{k}^T+R_{k}\)</p>
+
+<h3 id="date2022-12-18">Date:2022-12-18</h3>
+<pre><code class="language-反陀螺算法思路">
+</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1.小陀螺的规律性首先会考虑其运动模型。
+    先考虑原地小陀螺相对简单的情况，单看车辆上一个装甲板的小陀螺轨迹无疑是圆周运动，这时首先想到的是圆的参数方程，但是对于车上的相机而言，其在车辆小陀螺的每个周期内看到的只有四分之一周期内的装甲板信息（而且每个周期还是相同的一段轨迹），这对于考虑整个圆轨迹的运动模型而言势必会造成很大误差，结果不会太理想。
+    所以得重新审视小陀螺运动，小陀螺状态下每隔一定周期会出现两个装甲板同时被检测到的情况，在程序逻辑上，每次出现两个装甲板就会切换至新增的（也就是旋转方向上靠后的），因此我们可以根据两次切换的时间差计算周期（实际上近似等于小陀螺旋转周期的四分之一）。此时我们不单看车辆一个装甲板的运动轨迹了，而是相邻的两个装甲板，显然，两个装甲板的轨迹不再是圆（两个装甲板到车辆轴心的距离不一样），看起来更像是椭圆（把圆轨迹方程中的半径r换成长轴a和短轴b即可），好像合理一点了。。。
+    但是问题依然没有解决，我们还是纠结如何求车辆整个运动周期内的轨迹。
+    我们最终还是把目光聚集到一个装甲板上，并仅考虑一个装甲板在视野内的四分之一周期内的运动轨迹，测试后发现x轴的轨迹近似于一条直线，那么问题就变简单了，我们的模型只是一次函数。
+2.确定小陀螺状态下装甲板切换周期
+    装甲板切换周期也是我们预测的周期。一般小陀螺状态下转速比较稳定，因此我们多次记录装甲板切换周期，同时剔除掉跳变值，然后取其平均值作为预测周期，以降低异常值的影响。实际上根据装甲板切换周期计算预测周期误差有点大，考虑通过前后装甲板正对时的时间差计算预测周期（弃，不合理）。
+3.移动小陀螺
+    x方向依然满足一次函数模型，只是每个周期的起点不同，此种情况稍微有点复杂。我们每次预测至少记录当前跟随装甲板的3帧信息，再少会出问题，因此带来的问题就是前三帧没有预测，这就会浪费掉一部分击打的机会。考虑对前后两个周期内的直线斜率进行继承，改变的是一次函数中的常数项。
+    从小陀螺的轨迹图中可以看出，每个周期的起点之差几乎是恒定的（当目标往某一方向平移+小陀螺），我们可以记录最近两个周期的起点之差，进而估算出当前周期的起点值，上述模型中我们需要估计的状态量有车辆中心$(x_c,y_c,z_c)$和车辆半径$r$，
+2.位置/速度繼承
+    通過繼承上一階段的位置/速度來加快當前時刻曲線的收斂。
+3. 反向速度/位置
+</code></pre></div></div>
+
+<h3 id="date2022-11-27">Date:2022-11-27</h3>
+<pre><code class="language-基于交互式多模型（IMM）的扩展卡尔曼滤波">
+</code></pre>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>说明：此算法是对其他模型（包括CV、CA、CT、CTRV、CTRA等运动模型）的融合，故主要介绍算法融合思路。 假设有n个模型，当前时刻处于各运动模型的概率取决于上一时刻的状态，算法用马尔可夫概率转移矩阵$\Pi$来表示各模型之间的概率转移，即: $$
+\Pi=
+\begin{bmatrix}
+    \pi_{11} &amp; \dots  &amp; \pi_{1n} \\
+    \vdots &amp; \ddots &amp; \vdots \\
+    \pi_{n1} &amp; \dots  &amp; \pi_{nn} 
+\end{bmatrix} \\ $$ 其中$\pi_{ij}$表示模型$i$到模型$j$的转移概率，显然 $$
+\sum_{j=0}^{n}{\pi_{ij}}=1 $$
+</code></pre></div></div>
+
+<p>已知目标上一时刻在第i个模型下的状态后验$\hat{x}<em>{k-1}^i$、协方差后验$P</em>{k-1}^i$、模型概率$\mu_{k-1}^i$和马尔可夫概率转移矩阵$\Pi_{k-1}^i$。</p>
+
+<p>IMM算法步骤：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1）模型交互；
+2）滤波预测更新；
+3）模型概率更新；
+4）模型融合。
+</code></pre></div></div>
+
+<p>各步骤实现细节：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1）输入交互 $$
+C_{k-1}^j=\sum_{i=1}^n{\Pi_{ij}}{\mu_{k-1}^i} \\
+
+\mu_{k-1}^{ij} = \frac{\Pi_{ij}\mu_{k-1}^i}{C_{k-1}^{j}} $$
+</code></pre></div></div>
+
+<p>$$
+    \hat{X}<em>{k-1}^{j} = \sum</em>{i=1}^n{\hat{X}<em>{k-1}^j}\mu</em>{k-1}^{ij} \</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>P_{k-1}^{j}=\sum_{i=1}^n{\mu_{k-1}^{ij}{[P_{k-1}^i+(\hat{X}_{k-1}^i-\hat{X}_{k-1}^j)(\hat{X}_{k-1}^i-\hat{X}_{k-1}^j)^T]}} $$
+2)滤波预测更新 $$
+Predict
+\begin{cases}
+    \hat{x}_{k}^{}=J_{k-1}^{j}\hat{X}_{k-1}^{j} \\
+    P_{k}^{}=J_{k-1}^{j}P_{k-1}^{j}(J_{k-1}^{j})^T+Q_{k-1}^{j}
+\end{cases}  $$
+模型中的状态转移方程进行泰勒展开取一阶项得到雅可比矩阵J。 $$
+Update
+\begin{cases}
+    K_{k}^{}=P_{k}^{j}(H_{k}^{j})^T(H_{k}^jP_{k}^{j}(H_{k}^{j})^T+P_{k}^{j})^{-1} \\
+    \hat{x}_{k}^{}=\hat{x}_{k}^{}+K_{k}^{}(z_{k}-H_{k}^{j}\hat{x}_{k}^{}) \\
+    P_{k}^{}=P_{k}^{}-K_{k}^{}H_{k}^{j}P_{k}^{}
+\end{cases} $$
+3)模型概率更新 计算测量值与预测值之间的残差： $$
+V_{k}^{j}=z_{k}-H\hat{X}_{k|k-1}^{0,j}  $$ 残差的协方差矩阵为： $$
+S_{k}^{j}=HP_{k|k-1}^{j}H^T+R_{k}^{j} $$ 计算各模型的似然值： $$
+\Lambda_{k}^{i}=\frac{e^{-\frac{(V_{k}^{i})^T{(S_{k}^{i})^{-1}V_{k}^{i}}}{2}}}{\sqrt{(2\pi)^{M}\lVert S_{k}^{i} \rVert}} \\ $$
+    其中M为测量模型维数。 更新模型概率 $$
+C_{k}=\sum_{i=1}^{n}{\Lambda_{k}^{i}C_{k}^{i}} \\
+\mu_{k}^{i}=\frac{\Lambda_{k}^{i}C_{k}^{i}}{C_{k}} $$
+
+4)融合各模型的状态`计和协方差 $$
+\hat{x}_{k}=\sum_{i=1}^{n}{\hat{X}_{k}^{i}}\mu_{k}^{i} \\
+P_{k}=\sum_{i=1}^{n}{\mu_{k}^{i}[P_{k}^{i}+(\hat{X}_{k}^{i}-\hat{x}_{k})(\hat{X}_{k}^{i}-\hat{x_{k}})^T]} $$
+TODO:说明：
+目前加入三个模型（CV、CA、CT），CT模型包含左转弯和右转弯两种情况。参数量比较多，调试是个复杂而有趣的事情。
+</code></pre></div></div>
+
+<h3 id="date2022-11-23">Date:2022-11-23</h3>
+<p><code class="language-plaintext highlighter-rouge">基于‘当前’统计模型（CS model）的卡尔曼滤波算法
+</code> 
+    Singer模型
+        机动模型把机动控制项作为相关噪声（有色噪声）进行建模。
+        目标加速度a(t)作为指数自相关的零均值随机过程，即：
+\(R(\tau)=E[a(t)a(t+\tau)]=\sigma_m^2e^{-\alpha\lVert\tau\rVert}\)</p>
+
+<p>$\sigma_m^2$为目标机动加速度的方差，根据目标机动加速度的概率密度函数计算，$\alpha$为目标机动频率。</p>
+
+<p>####
+机动目标加速度分布作如下假定：</p>
+
+<p>1.目标机动加速度处于极大值$a_{M}$的概率为$P_{M}$，处于极小值$-a_{M}$的概率也为$P_{M}$；</p>
+
+<p>2.机动加速度等于0的概率为$P_{0}$(非机动)；</p>
+
+<p>3.机动加速度在区间[$-a_{M}$, $a_{M}$]上近似服从均匀分布。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>由以上假设可推出目标加速度的概率密度函数，并进而计算得到目标机动加速度方差为： $$
+\sigma_m^2=\frac{a_{M}^2}{3}(1+4P_{M}-P_{0}) $$
+
+应用于卡尔曼滤波时要对加速度a(t)“白化”。
+白化后得到如下关系式： $$
+\dot{a_{t}}=-\alpha{a_{t}}+w_{t} $$
+</code></pre></div></div>
+
+<p>其中$a_{t}$输入为白噪声的一阶时间相关模型，$w_{t}$是均值为0、方差为$2\alpha{\sigma_m^2}$的高斯白噪声，即：
+\(E[w(t)w(\tau)]=2\alpha\sigma_m^2\delta(t-\tau)\)</p>
+
+<p>根据以上理论，假设目标的状态向量$\chi=[x,\dot{x},\ddot{x}]$，$\ddot{x}$=$a$，则上述一阶时间相关模型如下：  <br>
+\(\dot{\chi_{t}}=A\chi_t+w_t\)
+其中
+\(A=
+\begin{bmatrix}
+    0 &amp; 1 &amp; 0 \\
+    0 &amp; 0 &amp; 1 \\
+    0 &amp; 0 &amp; -\alpha
+\end{bmatrix}
+，w=[0, 0, v]\)
+将A和$w$代入上式得：
+$\dot\chi_t$=$\begin{bmatrix}0 &amp; 1 &amp; 0 \ 0 &amp; 0 &amp; 1 \ 0 &amp; 0 &amp; -\alpha \end{bmatrix}$ $\begin{bmatrix}\chi_t \ \dot{\chi_t} \ \ddot{\chi_t}\end{bmatrix}$+$\begin{bmatrix}0 \ 0 \ v\end{bmatrix}$</p>
+
+<p>离散状态采样时间间隔T有：
+\(\chi_{k+1}=F_k\chi_{k}+w_k\)</p>
+
+<p>式中：
+\(F_k=e^{AT}=\begin{bmatrix}
+        1 &amp; T &amp; \frac{\alpha{T}-1+e^{-\alpha{T}}}{\alpha^2} \\
+        0 &amp; 1 &amp; \frac{1-e^{-\alpha{T}}}{\alpha} \\
+        0 &amp; 0 &amp; e^{-\alpha{T}}
+    \end{bmatrix},
+    w_k的噪声协方差矩阵Q_k=2\alpha\sigma_m^2\begin{bmatrix}
+        q_{11} &amp; q_{12} &amp; q_{13} \\
+        q_{21} &amp; {q_22} &amp; q_{23} \\
+        q_{31} &amp; q_{32} &amp; q_{33}
+    \end{bmatrix}\)
+其中Q为对称矩阵，且
+\(\begin{cases}
+    q_{11}=(\frac{[1-e^{-2\alpha{T}}+2\alpha{T}+\frac{2\alpha^3T^3}{3}-2\alpha^2T^2-4\alpha{T}e^{-\alpha{T}}]}{2\alpha^{5}}) \\
+    q_{12}=\frac{[e^{-2\alpha{T}}+1-2e^{-\alpha{T}}+2\alpha{T}e^{-\alpha{T}}-2\alpha{T}+\alpha^2{T}^2]}{2\alpha^4} \\
+    q_{13}=\frac{[1-e^{-2\alpha{T}}-2\alpha{T}e^{-\alpha{T}}]}{2\alpha^3} \\
+    q_{22}=\frac{[4e^{-\alpha{T}}-3-e^{-2\alpha{T}}+2\alpha{T}]}{2\alpha^3} \\
+    q_{23}=\frac{[e^{-2\alpha{T}}+1-2e^{-\alpha{T}}]}{2\alpha^2} \\
+    q_{33}=\frac{[1-e^{-2\alpha{T}}]}{2\alpha}
+\end{cases}\)
+若目标机动频率$\alpha\to\infty$时，此时状态转移矩阵为
+\(F=e^{AT}=\begin{bmatrix}
+        1 &amp; T &amp; \frac{T^2}{2} \\
+        0 &amp; 1 &amp; T \\
+        0 &amp; 0 &amp; 1
+    \end{bmatrix}\)
+过程噪声协方差矩阵为
+\(Q=q\begin{bmatrix}
+        \frac{T^5}{20} &amp; \frac{T^4}{8} &amp; \frac{T^3}{6} \\
+        \frac{T^4}{8} &amp; \frac{T^3}{3} &amp; \frac{T^2}{2} \\
+        \frac{T^3}{6} &amp; \frac{T^2}{2} &amp; T
+    \end{bmatrix}\)
+模型此时等效于为匀加速运动模型，q取一个较小值，如q=0.05。</p>
+
+<p>若目标机动频率$\alpha\to0$，此时状态转移矩阵
+\(F=\begin{bmatrix}
+    1 &amp; T &amp; 0 \\
+    0 &amp; 1 &amp; 0 \\
+    0 &amp; 0 &amp; 1  
+\end{bmatrix}\)
+此时模型等效于匀速运动模型。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>以上可以看到匀加速运动模型和匀速运动模型是Singer模型的两个特例，即Singer模型针对的是处于匀加速运动和匀速运动之间的机动目标。但是Singer模型认为目标机动加速度符合零均值的均匀分布并不符合大多数的实际情况。
+</code></pre></div></div>
+
+<p>基于此，出现了对Singer模型的改进算法——“当前”统计模型（CS Model）</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CS模型提出两条新的假设：
+1.加速度非零均值；
+2.加速度的概率密度服从修正的瑞利分布。 类似于Singer模型，CS模型的离散时间状态方程可以表示如下： $\\
+X_{k+1}=F_{k}X_{k}+G_{k}\overset{-}{a_{k}}+W_{k} $
+</code></pre></div></div>
+
+<p>其中，$G_{k}$为加速度输入控制矩阵，$\overset{-}a_{k}$为目标加速度均值。
+\(G_{k}=\begin{bmatrix}
+        \frac{(-T+\frac{\alpha{T^2}}{2}+\frac{1-e^{-\alpha{T}}}{\alpha})}{\alpha} \\
+        T-\frac{(1-e^{-\alpha{T}})}{\alpha} \\
+        1-e^{-\alpha{T}}   
+    \end{bmatrix}\)
+$\overset{-}a_k$可用当前时刻状态估计中的预测加速度代替，即
+$
+    \overset{-}a_k=\hat{\ddot{\chi}}_{k|k-1}
+$</p>
+
+<p>噪声$W_k$的协方差矩阵和Singer模型的$Q$相同，但是机动加速度的方差$\sigma_a^2$计算公式为：
+\(\sigma_a^2=\begin{cases}
+        \frac{4-\Pi}{\Pi}[a_{max}-\overline{a}_{k}]^2，\overline{a}_{k}&gt;0 \\
+        \frac{4-\Pi}{\Pi}[a_{-max}+\overline{a}_{k}]^2，\overline{a}_{k}&lt;0
+    \end{cases}\)
+其中$a_{-max}$为负加速度上限，不必等于$-a_{max}$。</p>
+
+<p>可以看出模型可以利用目标加速度的预测值自适应地调整加速度方差$\sigma^2$，对目标有更快的响应速度。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TODO:预测部分调试说明：
+程序预测部分卡尔曼滤波的状态向量为X=[x,v,a]，输入仅为目标x轴或y轴的位置信息,v和a由卡尔曼滤波预测得出(可能会造成卡尔曼滤波发散，初始化滤波时可以考虑传入目标的速度和加速度信息，但考虑到通过帧差法计算出的速度和加速度误差较大，不可避免地会造成预测抖动，因此并未使用)，Siner模型待调的参数包括目标机动频率α、目标加速度方差σ^2、采样周期T。CS模型待调的参数包括目标机动频率α、采样周期T、机动最大加速度a_max、机动最大负加速度a_-max。
+TODO:调试经验：
+比赛场上目标不会机动过快，可能的就是1s机动一次，可以稍微往高了调，提高响应速度；采样周期T要根据程序帧间运行时间、通信延迟、发弹延迟计算；目标加速度方差σ^2作为噪声协方差矩阵的控制量，较小可以平滑预测点，减小抖动，但是会出现一定程度滞后；较大会出现一定程度抖动，但是可以提高预测效果。
+</code></pre></div></div>
+
+<h3 id="date2022-11-01-预测部分添加小陀螺横移模型">Date:2022-11-01 预测部分添加小陀螺横移模型</h3>
+<p>\(\begin{cases}
+    x=x_0+r\cos(\omega t)+Vt\cos(\theta), &amp;x方向\\
+    y=y_0+r\sin(\omega t)+Vt\sin(\theta), &amp;y方向
+\end{cases}\)
+        方程组中r为小陀螺旋转半径，w为旋转角速度，V为横移速度,θ为目标相对于自己的横移方位角。
+        此运动模型假设目标一边小陀螺转动，一边进行横向移动，用于移动目标的反陀螺。</p>
+
+<h2 id="2debug-log">2.Debug log</h2>
+<p>|      Date      |    Description | 
+|      —       |     —        |
+|2022-11-18      | 预测部分实现动态配置调试，代码略显冗余，但后续方便调试。|
+|2022-11-17| 预测部分加入基于Singer模型的扩展卡尔曼滤波，算法将持续优化，后续会添加CS模型。|
+|2022-11-05| Debug processor node.|
+|2022-11-01| 运动模型待调试。|
+|2022-10-26| Lapack library needs to be linked manually.|</p>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <em>No CHANGELOG found.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/armor_processor/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_cmake#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_cmake#github">ament_cmake  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_lint_auto#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_lint_auto#github">ament_lint_auto  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/ament_lint_common#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/ament_lint_common#github">ament_lint_common  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclcpp#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclcpp#github">rclcpp  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclpy#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclpy#github">rclpy  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rclcpp_components#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rclcpp_components#github">rclcpp_components  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center"></td>
+                        <td>OpenCV</td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/message_filters#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/message_filters#github">message_filters  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center"></td>
+                        <td>Eigen</td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center"></td>
+                        <td>Ceres</td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/global_interface#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/global_interface#github">global_interface  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/global_user#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/global_user#github">global_user  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/image_transport#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/image_transport#github">image_transport  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/sensor_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/sensor_msgs#github">sensor_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/cv_bridge#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/cv_bridge#github">cv_bridge  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/visualization_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/visualization_msgs#github">visualization_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2_ros#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2_ros#github">tf2_ros  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf2_geometry_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf2_geometry_msgs#github">tf2_geometry_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/filter#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/filter#github">filter  </a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th>Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                      <tr>
+                        <td><a href="/d/yaml-cpp">yaml-cpp</a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No known dependants.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No launch files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No message files found.</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No plugins found.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>armor_processor</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/armor_processor+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/tup-robomaster/tup-vision-2023-based.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/armor_processor"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/tup-robomaster/tup-vision-2023-based/tree/main/src/vehicle_system/autoaim/armor_processor"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/armor_processor?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/armor_processor?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=armor_processor&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "armor_processor"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

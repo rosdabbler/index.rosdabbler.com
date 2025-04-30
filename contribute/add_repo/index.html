@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Add Repository</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/contribute/add_repo/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top:20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/contribute">Contribute</a></li>
+        <li class="active">Add Repository</li>
+      </ol>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12"><h2>Add A New Repository for Indexing</h2></div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>1. Create your own copy of rosdistro on GitHub:</h3>
+        <p>
+        First you need a copy (usually called a fork) of the official <a href="https://github.com/ros/rosdistro">rosdistro</a> index, where
+        you can add additional details for your repository. Note that this
+        requires a GitHub account (registration is free). Select one of
+        the buttons below to either create a new fork (left) or designate
+        that you already have a fork (right).
+        </p>
+      <div class="btn-group btn-group-justified">
+        <a id="fork_button" class="btn btn-success" href="https://github.com/ros/rosdistro/fork" target="_blank">Fork rosdistro</a>
+        <a id="already_fork_button" class="btn btn-success">I Already Have a Fork</a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>2. Enter the namespace of your fork:</h3>
+      <p>
+      Enter the namespace where your fork of the rosdistro repository can be
+      found. This is normally your GitHub username, unless you created your
+      fork in another organization.
+      </p>
+      <div style="width: 100%" class="input-group">
+        <input type="text" disabled class="form-control" id="ns_input" placeholder="GitHub Username or Organization">
+        <span  style="width: 50%"class="input-group-btn">
+          <button disabled id="set_ns_button" class="btn btn-default btn-block" type="button">Set Namespace</button>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>3. Make sure your fork of rosdistro is up to date:</h3>
+      <p>
+      If you didn't just create your fork, there might be more recent additions
+      in the official version of rosdistro. This will load a page which will
+      show you all of those differences, and will allow you to synchronize your
+      fork with the official repo.
+      <br><br>
+      <button disabled id="sync_fork_button" class="btn btn-default btn-block" href="" target="_blank">Synchronize Fork</button>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>4. Generate the YAML markup describing your repository</h3>
+      <p>
+      Fill out the fields below to generate the markup which you will add to rosdistro to get your repository indexed.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    &nbsp;
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <form id="yaml_form" class="form-horizontal">
+        <div class="form-group">
+          <label for="repo_name_input" class="col-sm-2 control-label">Name</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" id="repo_name_input" placeholder="Repository Name">
+          </div>
+          <div class="col-sm-4">
+            This is the unique identifier for your repository. It should be
+            lower-case and words should be separated with underscores.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="distro_select" class="col-sm-2 control-label">ROS Distro</label>
+          <div class="col-sm-6">
+            <select id="distro_select" class="form-control">
+              <option value="rolling">Rolling</option>
+              <option value="jazzy">Jazzy</option>
+              <option value="iron">Iron</option>
+              <option value="humble">Humble</option>
+              <option value="noetic">Noetic</option>
+            </select>
+          </div>
+          <div class="col-sm-4">
+            This is the ROS distribution on which the code in your repository runs.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="status_select" class="col-sm-2 control-label">Status</label>
+          <div class="col-sm-6">
+            <select id="status_select" class="form-control">
+              <option value="developed">Developed</option>
+              <option value="maintained">Maintained</option>
+              <option value="unmaintained">Unmaintained</option>
+              <option value="end-of-life">End-of-Life</option>
+            </select>
+          </div>
+          <div class="col-sm-4">
+            This is the maintainance status of the repository.
+            This tells others how much support there is behind
+            this code.
+          </div>
+        </div>
+        <hr>
+        <div class="form-group">
+          <label for="vcs_select" class="col-sm-2 control-label">VCS</label>
+          <div class="col-sm-6">
+            <select id="vcs_select" class="form-control">
+              <option value="git">Git</option>
+              <option value="hg">Mercurial</option>
+              <option value="svn">Subversion</option>
+            </select>
+          </div>
+          <div class="col-sm-4">
+            This is the Version Control System (VCS) used to manage your
+            repository.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="uri_input" class="col-sm-2 control-label">URI</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" id="uri_input" placeholder="Repository URI">
+          </div>
+          <div class="col-sm-4">
+            This is the publically-accessible <em>checkout</em> or
+            <em>clone</em> URI used to access your repository. This should
+            be an <code>http</code> or <code>https</code> URI.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="version_input" class="col-sm-2 control-label">Version</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" id="version_input" placeholder="Branch, Tag, or Revision">
+          </div>
+          <div class="col-sm-4">
+            This is the version identifier for the version of the repository
+            you want to have indexed. It can be a branch
+            or tag name for Git or Mercurial, or a
+            revision number for SVN.
+          </div>
+        </div>
+        <hr>
+        <div class="form-group">
+          <label for="desc_input" class="col-sm-2 control-label">Description</label>
+          <div class="col-sm-6">
+            <textarea class="form-control" id="desc_input" placeholder="Brief Description" rows="3"></textarea>
+          </div>
+          <div class="col-sm-4">
+            Add a brief description of what resources this repository contains,
+            what the code may be used for, or what applications it supports.
+            This will not go into the index, but it will be sent along with the
+            addition request.
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button id="generate_yaml_button" type="submit" class="btn btn-default btn-block">Generate YAML Description</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="row">
+    &nbsp;
+  </div>
+  <div class="row">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="panel panel-default">
+        <div class="panel-heading"><h3 class="panel-title">Repository YAML Description</h3></div>
+        <div class="panel-body">
+            <textarea readonly="true" style="cursor: crosshair;" class="form-control" id="yaml_src" placeholder="CLICK BUTTON ABOVE TO GENERATE" rows="5"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>5. Add the above YAML markup to the distribution file in your fork of rosdistro:</h3>
+      <!-- WITHOUT THIS NBSP THE BUTTON SHIFTS THE REST OF THE PAGE -->
+      <p>
+      This will open the appropriate file in <em>your fork</em> of the
+      rosdistro index. <strong>It needs to be added so that it comes in order
+      alphabetically</strong>. Once you have added the above YAML markup, commit
+      the changes with the button at the bottom of the page. This will only
+      modify your copy of the index.
+      <br><br>
+      <button disabled id="edit_button" class="btn btn-default btn-block">Open Fork of Distribution File For Editing</button>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>6. Create a new pull request to add your repository:</h3>
+      <p>
+      Finally, create a "pull request" which notifies the rosdistro maintainers
+      that you've proposed some additions to the index. Feel free to add
+      any additional comments to the pull request.
+      <br><br>
+      <button disabled id="pr_button" class="btn btn-default btn-block">Create Pull Request</button>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>7. Monitor pull request for approval.</h3>
+      Your repository will appear on rosindex at most one day after the acceptance of the pull request.
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+<script>
+$(function () {
+  $("#yaml_form :input").prop("disabled", true);
+
+  $('#fork_button').on(
+      'click',
+      function(e) {
+        // enable the  set ns button
+        $(this).addClass('btn-default');
+        $(this).removeClass('btn-success');
+        $('#already_fork_button').addClass('btn-default');
+        $('#already_fork_button').removeClass('btn-success');
+        $('#set_ns_button').addClass('btn-success');
+        $('#set_ns_button').removeClass('btn-default');
+        $('#set_ns_button').prop('disabled',false);
+        $('#ns_input').prop('disabled',false);
+      });
+  $('#already_fork_button').on(
+      'click',
+      function(e) {
+        // enable the  set ns button
+        $(this).addClass('btn-default');
+        $(this).removeClass('btn-success');
+        $('#fork_button').addClass('btn-default');
+        $('#fork_button').removeClass('btn-success');
+        $('#set_ns_button').addClass('btn-success');
+        $('#set_ns_button').removeClass('btn-default');
+        $('#set_ns_button').prop('disabled',false);
+        $('#ns_input').prop('disabled',false);
+      });
+  $('#set_ns_button').on(
+      'click',
+      function(e) {
+        // get the namespace
+        // alert if it's empty
+        // update the synchronize fork button url
+        // enable the synchronize fork button
+        $('#set_ns_button').addClass('btn-default');
+        $('#set_ns_button').removeClass('btn-success');
+
+        $('#sync_fork_button').prop('disabled',false);
+        $('#sync_fork_button').addClass('btn-success');
+        $('#sync_fork_button').removeClass('btn-default');
+      });
+  $('#sync_fork_button').on(
+      'click',
+      function(e) {
+        // enable the yaml generation form
+        window.open('https://github.com/ros/rosdistro/compare/'+$('#ns_input').val()+':master...ros:master?title=Synchronize');
+        $('#sync_fork_button').addClass('btn-default');
+        $('#sync_fork_button').removeClass('btn-success');
+        $('#generate_yaml_button').removeClass('btn-default');
+        $('#generate_yaml_button').addClass('btn-success');
+        $("#yaml_form :input").prop("disabled", false);
+      });
+  $('#yaml_form').submit(
+      function(e) {
+        var t1 = "  ";
+        var t2 = t1+t1;
+        var t3 = t1+t1+t1;
+        var nl = "\n";
+        var yaml =
+            t1+$('#repo_name_input').val()+":"+nl+
+            t2+"doc:"+nl+
+            t3+"type: "+$('#vcs_select').val()+nl+
+            t3+"url: "+$('#uri_input').val()+nl+
+            t3+"version: "+$('#version_input').val();
+        $('#yaml_src').val(yaml);
+        // get the namespace
+        // generate the yaml
+        // set the text area yaml
+        // update the open fork button
+        // update the create pr button
+        // enable the edit button
+        $('#generate_yaml_button').addClass('btn-default');
+        $('#generate_yaml_button').removeClass('btn-success');
+        $('#edit_button').addClass('btn-success');
+        $('#edit_button').removeClass('btn-default');
+        $("#edit_button").prop("disabled", false);
+        e.preventDefault();
+      });
+
+  $('#yaml_src').focus(function() {
+      var $this = $(this);
+      $this.select();
+
+      // Work around Chrome's little problem
+      $this.mouseup(function() {
+        // Prevent further mouseup intervention
+        $this.unbind("mouseup");
+        return false;
+      });
+    });
+
+  $('#edit_button').on(
+      'click',
+      function(e) {
+        window.open("https://github.com/"+$('#ns_input').val()+"/rosdistro/edit/master/"+$('#distro_select').val()+"/distribution.yaml?message=Adding%20new%20repository%20for%20indexing%3A%20"+$('#repo_name_input').val());
+        // enable the pr button
+        $('#edit_button').addClass('btn-default');
+        $('#edit_button').removeClass('btn-success');
+        $('#pr_button').addClass('btn-success');
+        $('#pr_button').removeClass('btn-default');
+        $("#pr_button").prop("disabled", false);
+      });
+
+  $('#pr_button').on(
+      'click',
+      function(e) {
+        window.open("https://github.com/"+$('#ns_input').val()+"/rosdistro/compare/ros:master...master?expand=1&title=New%20Repository%20For%20Indexing%3A%20"+$('#repo_name_input').val());
+        // enable the pr button
+        $('#pr_button').addClass('btn-default');
+        $('#pr_button').removeClass('btn-success');
+      });
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

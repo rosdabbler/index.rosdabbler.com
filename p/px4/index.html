@@ -1,0 +1,2508 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ROS Package: px4</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/p/px4/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="http://wiki.ros.org/Support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid" style="margin-top: 20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_packages=true">Packages</a></li>
+        <li class="active">px4</li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+    <label id="noetic-option" class="distro-button btn btn-xs btn-default" href="#noetic" data="noetic">
+      <input type="radio" name="options" id="noetic-radio" autocomplete="off"> noetic
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>jazzy</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>kilted</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>rolling</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+        
+        
+
+        <div class="row">
+          <div class="col-md-10">
+            
+
+<div class="well well-sm">
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px" src="/assets/package.png">
+      </td>
+      <td>
+        <h3 style="margin-top: 5px">
+          <a style="text-decoration:none" href="/p/px4">px4</a> <small>package from <a style="text-decoration:none" href="/r/uavprojectilecatcher/github-arijitnoobstar-uavprojectilecatcher">uavprojectilecatcher</a> repo</small>
+        </h3>
+          
+            
+            
+              <span class="label label-default pkg-label">
+
+px4
+</span>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/catkin_tools_prebuild">
+
+catkin_tools_prebuild
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mavlink">
+
+mavlink
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/drone_ball_catcher">
+
+drone_ball_catcher
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/libmavconn">
+
+libmavconn
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mavros">
+
+mavros
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mavros_extras">
+
+mavros_extras
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/mavros_msgs">
+
+mavros_msgs
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/test_mavros">
+
+test_mavros
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/realsense2_description">
+
+realsense2_description
+</a>
+            
+          
+            
+            
+              <a class="label label-primary pkg-label" href="/p/realsense_gazebo_plugin">
+
+realsense_gazebo_plugin
+</a>
+            
+          
+      </td>
+    </tr>
+  </table>
+</div>
+
+            <div class="visible-xs visible-sm">
+              
+              
+              
+
+
+
+<div class="list-group list-group-sm list-group-horizontal list-group-justified">
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/px4"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       <br>
+       API Docs
+  </a>
+  <a class="list-group-item text-center"
+     target="_blank"
+     href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       <br>
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+            </div>
+            
+
+
+
+<ul class="nav nav-tabs nav-justified" id="github-tabs" style="margin-bottom:20px">
+  <li class="better-tabs active">
+    <a href="#github-overview" data-toggle="tab">Overview</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    
+    <a href="#github-assets" data-toggle="tab"><span class="label label-primary">156</span> Assets</a>
+  </li>
+  <li class="better-tabs">
+    
+    
+    
+    
+    <a href="#github-deps" data-toggle="tab"><span class="label label-primary">10</span> Dependencies</a>
+  </li>
+  <li class="better-tabs">
+    
+    <a href="#github-tutorials" data-toggle="tab"><span class="label label-default">0</span> Tutorials</a>
+  </li>
+  <li class="better-tabs">
+    <a href="#github-questions" data-toggle="tab"><span id="github-questions-count" class="label label-primary">0</span> Q & A</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="github-overview">
+    
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h4 class="panel-title">Package Summary</h4></div>
+          <div class="panel-body">
+            <table class="table table-condensed">
+              <tr>
+                <td style="width:100px;" class="text-right"><strong>Tags</strong></td>
+                <td>
+                  
+                  
+                    <em>No category tags.</em>
+                  
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Version</strong></td>
+                <td>1.0.0</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>License</strong></td>
+                <td>BSD</td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Build type</strong></td>
+                <td>
+                  
+                    <span class="label label-info">
+                  
+                    CATKIN</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-right"><strong>Use</strong></td>
+                <td>
+                
+                  <span class="label label-success">RECOMMENDED</span>
+                
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body">
+            
+            
+            
+  <link rel="stylesheet" href="/css/ci-status.css">
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default">A ROS Workspace for the interception of a ball projectile via a simulated drone</span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/arijitnoobstar/uavprojectilecatcher.git">https://github.com/arijitnoobstar/uavprojectilecatcher.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">master</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2021-05-16
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+              <tr>
+                <td class="text-right"><b>CI status</b></td>
+                <td class="ci-status">
+                  
+                  
+                    <span class="label label-default" title="No CI information available for this package.">No Continuous Integration</span>
+                  
+                </td>
+              </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Tags</b></td>
+      <td>
+        
+        
+          <span class="label label-default">uav</span> <span class="label label-default">mav</span> <span class="label label-default">mavlink</span> <span class="label label-default">plugin</span> <span class="label label-default">apm</span> <span class="label label-default">px4</span> 
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/uavprojectilecatcher/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/uavprojectilecatcher/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">0</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/uavprojectilecatcher/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">0</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Package Description</h3></div>
+          <div class="panel-body">
+            The PX4 Flight Stack package
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Additional Links</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li><a href="http://px4.io/ros">Website</a></li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Maintainers</h4></div>
+          <div class="panel-body">
+            
+            
+              <ul class="list-unstyled">
+                
+                  <li>Lorenz Meier</li>
+                
+              </ul>
+            
+          </div>
+          <div class="panel-heading"><h4 class="panel-title">Authors</h4></div>
+          <div class="panel-body">
+            
+            
+              <em>No additional authors.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading"><span class="glyphicon glyphicon-file"></span><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/README.md" title="Open in git repository">PX4-Autopilot/README.md</a></div>
+              <div class="panel-body">
+                    <div class="rendered-markdown">
+<h1 id="px4-drone-autopilot">PX4 Drone Autopilot</h1>
+
+<p><a href="https://github.com/PX4/PX4-Autopilot/releases"><img src="https://img.shields.io/github/release/PX4/PX4-Autopilot.svg" alt="Releases"></a> <a href="https://zenodo.org/badge/latestdoi/22634/PX4/PX4-Autopilot"><img src="https://zenodo.org/badge/22634/PX4/PX4-Autopilot.svg" alt="DOI"></a></p>
+
+<p><a href="https://github.com/PX4/PX4-Autopilot/actions?query=workflow%3A%22Nuttx+Targets%22?branch=master"><img src="https://github.com/PX4/PX4-Autopilot/workflows/Nuttx%20Targets/badge.svg" alt="Nuttx Targets"></a> <a href="https://github.com/PX4/PX4-Autopilot/actions?query=workflow%3A%22SITL+Tests%22"><img src="https://github.com/PX4/PX4-Autopilot/workflows/SITL%20Tests/badge.svg?branch=master" alt="SITL Tests"></a></p>
+
+<p><a href="http://slack.px4.io"><img src="https://px4-slack.herokuapp.com/badge.svg" alt="Slack"></a></p>
+
+<p>This repository holds the <a href="http://px4.io">PX4</a> flight control solution for drones, with the main applications located in the <a href="https://github.com/PX4/PX4-Autopilot/tree/master/src/modules">src/modules</a> directory. It also contains the PX4 Drone Middleware Platform, which provides drivers and middleware to run drones.</p>
+
+<ul>
+  <li>Official Website: http://px4.io (License: BSD 3-clause, <a href="https://github.com/PX4/PX4-Autopilot/blob/master/LICENSE">LICENSE</a>)</li>
+  <li>
+<a href="https://docs.px4.io/master/en/airframes/airframe_reference.html">Supported airframes</a> (<a href="http://px4.io/#airframes">portfolio</a>):
+    <ul>
+      <li><a href="https://docs.px4.io/master/en/airframes/airframe_reference.html#copter">Multicopters</a></li>
+      <li><a href="https://docs.px4.io/master/en/airframes/airframe_reference.html#plane">Fixed wing</a></li>
+      <li><a href="https://docs.px4.io/master/en/airframes/airframe_reference.html#vtol">VTOL</a></li>
+      <li>many more experimental types (Rovers, Blimps, Boats, Submarines, Autogyros, etc)</li>
+    </ul>
+  </li>
+  <li>Releases: <a href="https://github.com/PX4/PX4-Autopilot/releases">Downloads</a>
+</li>
+</ul>
+
+<h2 id="px4-users">PX4 Users</h2>
+
+<p>The <a href="https://docs.px4.io/master/en/">PX4 User Guide</a> explains how to assemble <a href="https://docs.px4.io/master/en/airframes/airframe_reference.html">supported vehicles</a> and fly drones with PX4.
+See the <a href="https://docs.px4.io/master/en/#support">forum and chat</a> if you need help!</p>
+
+<h2 id="px4-developers">PX4 Developers</h2>
+
+<p>This <a href="https://dev.px4.io/">Developer Guide</a> is for software developers who want to modify the flight stack and middleware (e.g. to add new flight modes), hardware integrators who want to support new flight controller boards and peripherals, and anyone who wants to get PX4 working on a new (unsupported) airframe/vehicle.</p>
+
+<p>Developers should read the <a href="https://dev.px4.io/master/en/contribute/">Guide for Contributions</a>.
+See the <a href="https://dev.px4.io/master/en/#support">forum and chat</a> if you need help!</p>
+
+<h3 id="weekly-dev-call">Weekly Dev Call</h3>
+
+<p>The PX4 Dev Team syncs up on a <a href="https://dev.px4.io/master/en/contribute/#dev_call">weekly dev call</a>.</p>
+
+<blockquote>
+  <p><strong>Note</strong> The dev call is open to all interested developers (not just the core dev team). This is a great opportunity to meet the team and contribute to the ongoing development of the platform. It includes a QA session for newcomers. All regular calls are listed in the <a href="https://www.dronecode.org/calendar/">Dronecode calendar</a>.</p>
+</blockquote>
+
+<h2 id="maintenance-team">Maintenance Team</h2>
+
+<ul>
+  <li>Project: Founder
+    <ul>
+      <li><a href="https://github.com/LorenzMeier">Lorenz Meier</a></li>
+    </ul>
+  </li>
+  <li>Architecture
+    <ul>
+      <li><a href="https://github.com/dagar">Daniel Agar</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="https://github.com/PX4/PX4-Autopilot/labels/devcall">Dev Call</a>
+    <ul>
+      <li><a href="https://github.com/mrpollo">Ramon Roche</a></li>
+    </ul>
+  </li>
+  <li>Communication Architecture
+    <ul>
+      <li><a href="https://github.com/bkueng">Beat Kueng</a></li>
+      <li><a href="https://github.com/JulianOes">Julian Oes</a></li>
+    </ul>
+  </li>
+  <li>UI in QGroundControl
+    <ul>
+      <li><a href="https://github.com/dogmaphobic">Gus Grubba</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="https://github.com/PX4/PX4-Autopilot/labels/multicopter">Multicopter Flight Control</a>
+    <ul>
+      <li><a href="https://github.com/bresch">Mathieu Bresciani</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="https://github.com/PX4/PX4-Autopilot/labels/multicopter">Multicopter Software Architecture</a>
+    <ul>
+      <li><a href="https://github.com/MaEtUgR">Matthias Grob</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="https://github.com/PX4/PX4-Autopilot/labels/vtol">VTOL Flight Control</a>
+    <ul>
+      <li><a href="https://github.com/RomanBapst">Roman Bapst</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="https://github.com/PX4/PX4-Autopilot/labels/fixedwing">Fixed Wing Flight Control</a>
+    <ul>
+      <li><a href="https://github.com/RomanBapst">Roman Bapst</a></li>
+    </ul>
+  </li>
+  <li>OS / NuttX
+    <ul>
+      <li><a href="https://github.com/davids5">David Sidrane</a></li>
+    </ul>
+  </li>
+  <li>Driver Architecture
+    <ul>
+      <li><a href="https://github.com/dagar">Daniel Agar</a></li>
+    </ul>
+  </li>
+  <li>Commander Architecture
+    <ul>
+      <li><a href="https://github.com/julianoes">Julian Oes</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="https://github.com/PX4/PX4-Autopilot/labels/uavcan">UAVCAN</a>
+    <ul>
+      <li><a href="https://github.com/dagar">Daniel Agar</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="https://github.com/PX4/PX4-Autopilot/issues?q=is%3Aopen+is%3Aissue+label%3A%22state+estimation%22">State Estimation</a>
+    <ul>
+      <li><a href="https://github.com/priseborough">Paul Riseborough</a></li>
+    </ul>
+  </li>
+  <li>Vision based navigation
+    <ul>
+      <li><a href="https://github.com/jkflying">Julian Kent</a></li>
+    </ul>
+  </li>
+  <li>Obstacle Avoidance
+    <ul>
+      <li><a href="https://github.com/mrivi">Martina Rivizzigno</a></li>
+    </ul>
+  </li>
+  <li>RTPS/ROS2 Interface
+    <ul>
+      <li><a href="https://github.com/TSC21">Nuno Marques</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>See also <a href="https://px4.io/community/maintainers/">maintainers list</a> (px4.io) and the <a href="https://github.com/PX4/PX4-Autopilot/graphs/contributors">contributors list</a> (Github).</p>
+
+<h2 id="supported-hardware">Supported Hardware</h2>
+
+<p>This repository contains code supporting these boards:</p>
+<ul>
+  <li>FMUv2
+    <ul>
+      <li><a href="https://docs.px4.io/master/en/flight_controller/pixhawk.html">Pixhawk</a></li>
+      <li><a href="https://docs.px4.io/master/en/flight_controller/pixfalcon.html">Pixfalcon</a></li>
+    </ul>
+  </li>
+  <li>FMUv3
+    <ul>
+      <li><a href="https://docs.px4.io/master/en/flight_controller/pixhawk-2.html">Pixhawk 2</a></li>
+      <li><a href="https://docs.px4.io/master/en/flight_controller/pixhawk_mini.html">Pixhawk Mini</a></li>
+      <li><a href="https://docs.px4.io/master/en/flight_controller/pixhack_v3.html">CUAV Pixhack v3</a></li>
+    </ul>
+  </li>
+  <li>FMUv4
+    <ul>
+      <li><a href="https://docs.px4.io/master/en/flight_controller/pixracer.html">Pixracer</a></li>
+      <li><a href="https://docs.px4.io/master/en/flight_controller/pixhawk3_pro.html">Pixhawk 3 Pro</a></li>
+    </ul>
+  </li>
+  <li>FMUv5 (ARM Cortex M7)
+    <ul>
+      <li><a href="https://docs.px4.io/master/en/flight_controller/pixhawk4.html">Pixhawk 4</a></li>
+      <li><a href="https://docs.px4.io/master/en/flight_controller/pixhawk4_mini.html">Pixhawk 4 mini</a></li>
+      <li><a href="https://docs.px4.io/master/en/flight_controller/cuav_v5_plus.html">CUAV V5+</a></li>
+      <li><a href="https://docs.px4.io/master/en/flight_controller/cuav_v5_nano.html">CUAV V5 nano</a></li>
+    </ul>
+  </li>
+  <li><a href="http://www.mindpx.net/assets/accessories/UserGuide_MindPX.pdf">Airmind MindPX V2.8</a></li>
+  <li><a href="http://mindpx.net/assets/accessories/mindracer_user_guide_v1.2.pdf">Airmind MindRacer V1.2</a></li>
+  <li><a href="https://docs.px4.io/master/en/flight_controller/crazyflie2.html">Bitcraze Crazyflie 2.0</a></li>
+  <li><a href="https://docs.px4.io/master/en/flight_controller/omnibus_f4_sd.html">Omnibus F4 SD</a></li>
+  <li><a href="https://docs.px4.io/master/en/flight_controller/durandal.html">Holybro Durandal</a></li>
+  <li><a href="https://docs.px4.io/master/en/flight_controller/kakutef7.html">Holybro Kakute F7</a></li>
+  <li><a href="https://docs.px4.io/master/en/flight_controller/raspberry_pi_navio2.html">Raspberry PI with Navio 2</a></li>
+</ul>
+
+<p>Additional information about supported hardware can be found in <a href="https://docs.px4.io/master/en/flight_controller/">PX4 user Guide &gt; Autopilot Hardware</a>.</p>
+
+<h2 id="project-roadmap">Project Roadmap</h2>
+
+<p>A high level project roadmap is available <a href="https://github.com/orgs/PX4/projects/25">here</a>.</p>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> CHANGELOG</div>
+          <div class="panel-body">
+            
+              <em>No CHANGELOG found.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-tutorials">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Wiki Tutorials</h3>
+      </div>
+      <div class="panel-body">
+        
+        <em>This package does not provide any links to tutorials in it's <a href="https://index.ros.org/contribute/metadata/">rosindex metadata</a>.</em>
+        <em>You can check on the <a href="http://wiki.ros.org/px4/Tutorials" target="_blank">ROS Wiki Tutorials</a> page for the package.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-deps">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Package Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <table class="table table-condensed table-striped">
+                <thead>
+                  <th class="text-center">Deps</th>
+                  <th style="width: 100%">Name</th>
+                </thead>
+                <tbody>
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/message_generation#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/message_generation#github">message_generation  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/roscpp#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/roscpp#github">roscpp  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rospy#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rospy#github">rospy  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/std_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/std_msgs#github">std_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/libmavconn#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/libmavconn#github">libmavconn  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/tf#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/tf#github">tf  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/rostest#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/rostest#github">rostest  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/mav_msgs#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/mav_msgs#github">mav_msgs  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/catkin#github-deps" class="endoftree">
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/catkin#github">catkin  </a></td>
+                      </tr>
+                    
+                  
+                    
+                    
+                      <tr>
+                        <td class="text-center">
+                          
+                          <a href="/p/message_runtime#github-deps" >
+                            <span class="glyphicon glyphicon-arrow-left" title="Package dependencies"></span>
+                          </a>
+                        </td>
+                        <td><a href="/p/message_runtime#github">message_runtime  </a></td>
+                      </tr>
+                    
+                  
+                </tbody>
+              </table>
+            
+          </div>
+          <div class="panel-heading">
+            <h3 class="panel-title">System Dependencies</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No direct system dependencies.</em>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Dependant Packages</h3>
+          </div>
+          <div class="panel-body">
+            
+              <em>No known dependants.</em>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-assets">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Launch files</h3>
+      </div>
+      <div class="panel-body">
+        
+          <ul>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/launch/posix_sitl.launch" target="_blank">launch/posix_sitl.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em>
+export GAZEBO_MODEL_PATH=$PX4-Autopilot/Tools/sitl_gazebo/models:$GAZEBO_MODEL_PATH
+</em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>x</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>y</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>z</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>R</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>P</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>Y</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>est</strong> <em>&#91;default: ekf2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>vehicle</strong> <em>&#91;default: iris&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>vehicle1</strong> <em>&#91;default: iris_depth_camera&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>world</strong> <em>&#91;default: $(find mavlink_sitl_gazebo)/worlds/empty.world&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>sdf</strong> <em>&#91;default: $(find mavlink_sitl_gazebo)/models/$(arg vehicle1)/$(arg vehicle1).sdf&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>verbose</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>paused</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>respawn_gazebo</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>interactive</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/launch/mavros_posix_sitl.launch" target="_blank">launch/mavros_posix_sitl.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>x</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>y</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>z</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>R</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>P</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>Y</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>est</strong> <em>&#91;default: ekf2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>vehicle</strong> <em>&#91;default: iris&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>world</strong> <em>&#91;default: $(find mavlink_sitl_gazebo)/worlds/empty.world&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>sdf</strong> <em>&#91;default: $(find mavlink_sitl_gazebo)/models/$(arg vehicle)/$(arg vehicle).sdf&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>verbose</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>paused</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>respawn_gazebo</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>fcu_url</strong> <em>&#91;default: udp://:14540@localhost:14557&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>respawn_mavros</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>interactive</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/launch/px4.launch" target="_blank">launch/px4.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>est</strong> <em>&#91;default: ekf2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>vehicle</strong> <em>&#91;default: iris&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>ID</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>interactive</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/launch/single_vehicle_spawn.launch" target="_blank">launch/single_vehicle_spawn.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>x</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>y</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>z</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>R</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>P</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>Y</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>est</strong> <em>&#91;default: ekf2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>vehicle</strong> <em>&#91;default: iris&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>ID</strong> <em>&#91;default: 1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mavlink_udp_port</strong> <em>&#91;default: 14560&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mavlink_tcp_port</strong> <em>&#91;default: 4560&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>gst_udp_port</strong> <em>&#91;default: 5600&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>video_uri</strong> <em>&#91;default: 5600&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mavlink_cam_udp_port</strong> <em>&#91;default: 14530&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>interactive</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>cmd</strong> <em>&#91;default: $(find mavlink_sitl_gazebo)/scripts/jinja_gen.py --stdout --mavlink_id=$(arg mavlink_id) --mavlink_udp_port=$(arg mavlink_udp_port) --mavlink_tcp_port=$(arg mavlink_tcp_port) --gst_udp_port=$(arg gst_udp_port) --video_uri=$(arg video_uri) --mavlink_cam_udp_port=$(arg mavlink_cam_udp_port) $(find mavlink_sitl_gazebo)/models/$(arg vehicle)/$(arg vehicle).sdf.jinja $(find mavlink_sitl_gazebo)&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/launch/multi_uav_mavros_sitl_sdf.launch" target="_blank">launch/multi_uav_mavros_sitl_sdf.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> to add more UAVs (up to 10):
+Increase the id
+Change the name space
+Set the FCU to default="udp://:14540+id@localhost:14550+id"
+Set the malink_udp_port to 14560+id) </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>est</strong> <em>&#91;default: ekf2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>vehicle</strong> <em>&#91;default: plane&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>world</strong> <em>&#91;default: $(find mavlink_sitl_gazebo)/worlds/empty.world&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>verbose</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>paused</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>fcu_url</strong> <em>&#91;default: udp://:14540@localhost:14580&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>fcu_url</strong> <em>&#91;default: udp://:14541@localhost:14581&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>fcu_url</strong> <em>&#91;default: udp://:14542@localhost:14582&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/launch/multi_uav_mavros_sitl.launch" target="_blank">launch/multi_uav_mavros_sitl.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em> to add more UAVs (up to 10):
+Increase the id
+Change the name space
+Set the FCU to default="udp://:14540+id@localhost:14550+id"
+Set the malink_udp_port to 14560+id) </em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>est</strong> <em>&#91;default: ekf2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>vehicle</strong> <em>&#91;default: iris&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>world</strong> <em>&#91;default: $(find mavlink_sitl_gazebo)/worlds/empty.world&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>gui</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>debug</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>verbose</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>paused</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>fcu_url</strong> <em>&#91;default: udp://:14540@localhost:14580&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>fcu_url</strong> <em>&#91;default: udp://:14541@localhost:14581&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>fcu_url</strong> <em>&#91;default: udp://:14542@localhost:14582&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/launch/single_vehicle_spawn_sdf.launch" target="_blank">launch/single_vehicle_spawn_sdf.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>x</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>y</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>z</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>R</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>P</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>Y</strong> <em>&#91;default: 0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>est</strong> <em>&#91;default: ekf2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>vehicle</strong> <em>&#91;default: plane&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>ID</strong> <em>&#91;default: 1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mavlink_udp_port</strong> <em>&#91;default: 14560&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>mavlink_tcp_port</strong> <em>&#91;default: 4560&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>interactive</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>cmd</strong> <em>&#91;default: xmlstarlet ed -d '//plugin[@name="mavlink_interface"]/mavlink_tcp_port' -s '//plugin[@name="mavlink_interface"]' -t elem -n mavlink_tcp_port -v $(arg mavlink_tcp_port) $(find px4)/Tools/sitl_gazebo/models/$(arg vehicle)/$(arg vehicle).sdf&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/launch/pub_test.launch" target="_blank">launch/pub_test.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/src/examples/gyro_fft/CMSIS_5/CMSIS/DSP/DSP_Lib_TestSuite/DspLibTest_FVP_A5/DspLibTest_FVP_A5.launch" target="_blank">src/examples/gyro_fft/CMSIS_5/CMSIS/DSP/DSP_Lib_TestSuite/DspLibTest_FVP_A5/DspLibTest_FVP_A5.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/Tools/jsbsim_bridge/launch/px4_jsbsim_bridge.launch" target="_blank">Tools/jsbsim_bridge/launch/px4_jsbsim_bridge.launch</a>
+                <ul class="list-unstyled">
+                  
+                    <li><em></em></li>
+                  
+                  <li>
+                    <ul>
+                      
+                        
+                          <li><strong>est</strong> <em>&#91;default: ekf2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>vehicle</strong> <em>&#91;default: rascal&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>fcu_url</strong> <em>&#91;default: udp://:14540@127.0.0.1:14557&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>gcs_url</strong> <em>&#91;default: &#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>tgt_system</strong> <em>&#91;default: 1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>tgt_component</strong> <em>&#91;default: 1&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>command_input</strong> <em>&#91;default: 2&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>gazebo_simulation</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>visualization</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>log_output</strong> <em>&#91;default: screen&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>fcu_protocol</strong> <em>&#91;default: v2.0&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>respawn_mavros</strong> <em>&#91;default: false&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                          <li><strong>respawn_mavros</strong> <em>&#91;default: $(arg respawn_mavros)&#93; </em></li>
+                        
+                      
+                        
+                          <li><strong>interactive</strong> <em>&#91;default: true&#93; </em></li>
+                        
+                      
+                        
+                      
+                        
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Messages</h3>
+      </div>
+      <div class="panel-body">
+        
+          <ul>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/telemetry_status.msg" target="_blank">msg/telemetry_status.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/yaw_estimator_status.msg" target="_blank">msg/yaw_estimator_status.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/position_controller_status.msg" target="_blank">msg/position_controller_status.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_imu.msg" target="_blank">msg/vehicle_imu.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/sensor_gyro_fft.msg" target="_blank">msg/sensor_gyro_fft.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/gps_dump.msg" target="_blank">msg/gps_dump.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_angular_acceleration.msg" target="_blank">msg/vehicle_angular_acceleration.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/adc_report.msg" target="_blank">msg/adc_report.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/ulog_stream_ack.msg" target="_blank">msg/ulog_stream_ack.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/optical_flow.msg" target="_blank">msg/optical_flow.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/task_stack_info.msg" target="_blank">msg/task_stack_info.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_trajectory_bezier.msg" target="_blank">msg/vehicle_trajectory_bezier.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_attitude.msg" target="_blank">msg/vehicle_attitude.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/sensor_accel_fifo.msg" target="_blank">msg/sensor_accel_fifo.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_control_mode.msg" target="_blank">msg/vehicle_control_mode.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/airspeed_validated.msg" target="_blank">msg/airspeed_validated.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/rc_channels.msg" target="_blank">msg/rc_channels.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/sensor_baro.msg" target="_blank">msg/sensor_baro.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/landing_target_pose.msg" target="_blank">msg/landing_target_pose.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/rpm.msg" target="_blank">msg/rpm.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_angular_velocity.msg" target="_blank">msg/vehicle_angular_velocity.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_global_position.msg" target="_blank">msg/vehicle_global_position.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/mavlink_log.msg" target="_blank">msg/mavlink_log.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_actuator_setpoint.msg" target="_blank">msg/vehicle_actuator_setpoint.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/trajectory_waypoint.msg" target="_blank">msg/trajectory_waypoint.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_torque_setpoint.msg" target="_blank">msg/vehicle_torque_setpoint.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/iridiumsbd_status.msg" target="_blank">msg/iridiumsbd_status.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/radio_status.msg" target="_blank">msg/radio_status.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/actuator_controls.msg" target="_blank">msg/actuator_controls.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/system_power.msg" target="_blank">msg/system_power.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/distance_sensor.msg" target="_blank">msg/distance_sensor.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/irlock_report.msg" target="_blank">msg/irlock_report.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_trajectory_waypoint.msg" target="_blank">msg/vehicle_trajectory_waypoint.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/debug_array.msg" target="_blank">msg/debug_array.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/transponder_report.msg" target="_blank">msg/transponder_report.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/estimator_states.msg" target="_blank">msg/estimator_states.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/landing_target_innovations.msg" target="_blank">msg/landing_target_innovations.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_land_detected.msg" target="_blank">msg/vehicle_land_detected.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/uavcan_parameter_value.msg" target="_blank">msg/uavcan_parameter_value.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/position_setpoint.msg" target="_blank">msg/position_setpoint.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/actuator_armed.msg" target="_blank">msg/actuator_armed.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/mission.msg" target="_blank">msg/mission.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_gps_position.msg" target="_blank">msg/vehicle_gps_position.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/sensor_gyro_fifo.msg" target="_blank">msg/sensor_gyro_fifo.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_acceleration.msg" target="_blank">msg/vehicle_acceleration.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/log_message.msg" target="_blank">msg/log_message.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/test_motor.msg" target="_blank">msg/test_motor.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/estimator_innovations.msg" target="_blank">msg/estimator_innovations.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/esc_report.msg" target="_blank">msg/esc_report.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/orbit_status.msg" target="_blank">msg/orbit_status.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/ulog_stream.msg" target="_blank">msg/ulog_stream.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/commander_state.msg" target="_blank">msg/commander_state.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/rc_parameter_map.msg" target="_blank">msg/rc_parameter_map.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/obstacle_distance.msg" target="_blank">msg/obstacle_distance.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/mag_worker_data.msg" target="_blank">msg/mag_worker_data.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/safety.msg" target="_blank">msg/safety.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_attitude_setpoint.msg" target="_blank">msg/vehicle_attitude_setpoint.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_roi.msg" target="_blank">msg/vehicle_roi.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/sensor_gps.msg" target="_blank">msg/sensor_gps.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/landing_gear.msg" target="_blank">msg/landing_gear.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/trajectory_bezier.msg" target="_blank">msg/trajectory_bezier.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/geofence_result.msg" target="_blank">msg/geofence_result.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/mission_result.msg" target="_blank">msg/mission_result.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/orb_test.msg" target="_blank">msg/orb_test.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/debug_key_value.msg" target="_blank">msg/debug_key_value.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/multirotor_motor_limits.msg" target="_blank">msg/multirotor_motor_limits.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/rtl_flight_time.msg" target="_blank">msg/rtl_flight_time.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/offboard_control_mode.msg" target="_blank">msg/offboard_control_mode.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/airspeed.msg" target="_blank">msg/airspeed.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_command_ack.msg" target="_blank">msg/vehicle_command_ack.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/ekf_gps_drift.msg" target="_blank">msg/ekf_gps_drift.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/sensor_preflight_mag.msg" target="_blank">msg/sensor_preflight_mag.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/camera_capture.msg" target="_blank">msg/camera_capture.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/orb_test_medium.msg" target="_blank">msg/orb_test_medium.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_status_flags.msg" target="_blank">msg/vehicle_status_flags.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/estimator_status_flags.msg" target="_blank">msg/estimator_status_flags.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/onboard_computer_status.msg" target="_blank">msg/onboard_computer_status.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/manual_control_setpoint.msg" target="_blank">msg/manual_control_setpoint.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/uavcan_parameter_request.msg" target="_blank">msg/uavcan_parameter_request.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/tecs_status.msg" target="_blank">msg/tecs_status.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_thrust_setpoint.msg" target="_blank">msg/vehicle_thrust_setpoint.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/mount_orientation.msg" target="_blank">msg/mount_orientation.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/sensor_mag.msg" target="_blank">msg/sensor_mag.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/position_controller_landing_status.msg" target="_blank">msg/position_controller_landing_status.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/differential_pressure.msg" target="_blank">msg/differential_pressure.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/home_position.msg" target="_blank">msg/home_position.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/wheel_encoders.msg" target="_blank">msg/wheel_encoders.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/logger_status.msg" target="_blank">msg/logger_status.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/parameter_update.msg" target="_blank">msg/parameter_update.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_odometry.msg" target="_blank">msg/vehicle_odometry.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_imu_status.msg" target="_blank">msg/vehicle_imu_status.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/satellite_info.msg" target="_blank">msg/satellite_info.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/estimator_status.msg" target="_blank">msg/estimator_status.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/control_allocator_status.msg" target="_blank">msg/control_allocator_status.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_air_data.msg" target="_blank">msg/vehicle_air_data.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/ping.msg" target="_blank">msg/ping.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/sensor_gyro.msg" target="_blank">msg/sensor_gyro.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_local_position_setpoint.msg" target="_blank">msg/vehicle_local_position_setpoint.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/collision_report.msg" target="_blank">msg/collision_report.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/led_control.msg" target="_blank">msg/led_control.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_status.msg" target="_blank">msg/vehicle_status.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/estimator_selector_status.msg" target="_blank">msg/estimator_selector_status.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/px4io_status.msg" target="_blank">msg/px4io_status.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/estimator_optical_flow_vel.msg" target="_blank">msg/estimator_optical_flow_vel.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_rates_setpoint.msg" target="_blank">msg/vehicle_rates_setpoint.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/pwm_input.msg" target="_blank">msg/pwm_input.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/estimator_sensor_bias.msg" target="_blank">msg/estimator_sensor_bias.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/qshell_req.msg" target="_blank">msg/qshell_req.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/camera_trigger.msg" target="_blank">msg/camera_trigger.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/position_setpoint_triplet.msg" target="_blank">msg/position_setpoint_triplet.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_constraints.msg" target="_blank">msg/vehicle_constraints.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/sensors_status_imu.msg" target="_blank">msg/sensors_status_imu.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/wind_estimate.msg" target="_blank">msg/wind_estimate.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/input_rc.msg" target="_blank">msg/input_rc.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/follow_target.msg" target="_blank">msg/follow_target.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/hover_thrust_estimate.msg" target="_blank">msg/hover_thrust_estimate.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/debug_vect.msg" target="_blank">msg/debug_vect.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_command.msg" target="_blank">msg/vehicle_command.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/ekf2_timestamps.msg" target="_blank">msg/ekf2_timestamps.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/rate_ctrl_status.msg" target="_blank">msg/rate_ctrl_status.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_angular_acceleration_setpoint.msg" target="_blank">msg/vehicle_angular_acceleration_setpoint.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vtol_vehicle_status.msg" target="_blank">msg/vtol_vehicle_status.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/tune_control.msg" target="_blank">msg/tune_control.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/debug_value.msg" target="_blank">msg/debug_value.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/qshell_retval.msg" target="_blank">msg/qshell_retval.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_magnetometer.msg" target="_blank">msg/vehicle_magnetometer.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/cellular_status.msg" target="_blank">msg/cellular_status.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/orb_test_large.msg" target="_blank">msg/orb_test_large.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/power_button_state.msg" target="_blank">msg/power_button_state.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/esc_status.msg" target="_blank">msg/esc_status.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/vehicle_local_position.msg" target="_blank">msg/vehicle_local_position.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/navigator_mission_item.msg" target="_blank">msg/navigator_mission_item.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/sensor_correction.msg" target="_blank">msg/sensor_correction.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/cpuload.msg" target="_blank">msg/cpuload.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/generator_status.msg" target="_blank">msg/generator_status.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/collision_constraints.msg" target="_blank">msg/collision_constraints.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/gps_inject_data.msg" target="_blank">msg/gps_inject_data.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/actuator_outputs.msg" target="_blank">msg/actuator_outputs.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/timesync_status.msg" target="_blank">msg/timesync_status.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/battery_status.msg" target="_blank">msg/battery_status.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/sensor_combined.msg" target="_blank">msg/sensor_combined.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/sensor_accel.msg" target="_blank">msg/sensor_accel.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/sensor_selection.msg" target="_blank">msg/sensor_selection.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/power_monitor.msg" target="_blank">msg/power_monitor.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/manual_control_switches.msg" target="_blank">msg/manual_control_switches.msg</a></li>
+            
+              <li><a href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot/msg/timesync.msg" target="_blank">msg/timesync.msg</a></li>
+            
+          </ul>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Services</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No service files found</em>
+        
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Plugins</h3>
+      </div>
+      <div class="panel-body">
+        
+          <em>No plugins found.</em>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane" id="github-questions">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Recent questions tagged <kbd>px4</kbd> at <strong><a href="https://robotics.stackexchange.com/" target="_blank">Robotics Stack Exchange</a></strong></h3>      </div>
+      <div id="github-question-list" class="panel-body" style="display: none;"></div>
+      <div id="github-no-question-list" class="panel-body" style="display: none;">
+        <p>No questions yet, you can ask one <a href="https://robotics.stackexchange.com/questions/tagged/px4+github">here</a>.</p>
+      </div>
+      <div id="github-get-question-fail" class="panel-body alert alert-warning" style="display: none;">
+        <p>Failed to get question list, you can ticket an issue <a href="https://github.com/ros-infrastructure/rosindex/issues/new" target="_blank" class="alert-link">here</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/package_body_tabs.js"></script>
+
+<script src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+jQuery(function() {
+    // Update the count on the links to the contribution suggestions
+    updateContributionSuggestionsCountOnPackage('https://github.com/arijitnoobstar/uavprojectilecatcher.git');
+});
+</script>
+
+          </div>
+          <div class="col-md-2 hidden-xs hidden-sm">
+            
+            
+            
+
+
+
+<div class="list-group list-group-sm ">
+  <a class="list-group-item"
+     target="_blank"
+     href="http://docs.ros.org/en/github/p/px4"
+     title="View API documentation on docs.ros.org"
+     >
+       <span style="margin-right: 5px;" class="glyphicon glyphicon-file"></span>
+       
+       API Docs
+  </a>
+  <a class="list-group-item"
+     target="_blank"
+     href="https://github.com/arijitnoobstar/uavprojectilecatcher/tree/master/PX4-Autopilot"
+     title="View source code on repository">
+       <span class="glyphicon glyphicon-folder-open" style="margin-right:5px;"></span>
+       
+       Browse Code
+  </a>
+  
+  
+  
+  
+  
+  
+</div>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>noetic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>galactic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>iron</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+          <div class="alert alert-warning">No version for distro <strong>melodic</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+    </div>
+  </div>
+
+
+
+<script id="question-list-template" type="text/html">
+  <p>
+    Browse <a href="https://robotics.stackexchange.com/questions/tagged/px4?tab=Newest">recent questions</a>
+    or see the <a href="https://robotics.stackexchange.com/questions/tagged/px4?tab=Votes">highest voted ones</a>.
+  </p>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Answered?</th>
+        <th scope="col">Created</th>
+        <th scope="col">Active</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#questions}}
+      <tr>
+        <th scope="row"><a href="{{link}}">{{title}}</a><br><small>Tags: {{strtags}}</small></th>
+        <th>{{answered}}</th>
+        <th>{{created}}</th>
+        <th>{{active}}</th>
+      </tr>
+      {{/questions}}
+    </tbody>
+  </table>
+  {{#has_more}}
+  <hr>
+  <h4>Additional questions are available at
+    <a href="https://robotics.stackexchange.com/questions/tagged/{{name}}?tab=Newest">Robotics Stack Exchange</a>
+  </h4>
+  {{/has_more}}
+  
+</script>
+
+<script type="text/javascript" src="/js/mustache.js"></script>
+<script type="text/javascript">
+  jQuery(function() {
+    jQuery.getJSON(url="https://api.stackexchange.com/2.3/questions?order=desc&site=robotics" +
+                       "&tagged=px4&pagesize=50&sort=activity")
+    .done(function(feed) {
+      if (feed.items.length > 0) {
+        var question_count_str = (feed.has_more ? '>' : '') + String(feed.items.length)
+        const questions = feed.items.map(
+          function(question) {
+            question.id = Math.round(Math.random() * 99999.0);
+            question.created = (new Date(question.creation_date * 1000)).toDateString()
+            question.active = (new Date(question.last_activity_date * 1000)).toDateString()
+            question.answered = question.is_answered ? "Yes" : "No"
+            question.strtags = question.tags.join(' ')
+            return question;
+          });
+        const template = jQuery("#question-list-template").text();
+        Mustache.parse(template);
+        var rendered = Mustache.render(
+          template, 
+          { questions: questions,
+            has_more: feed.has_more,
+            name: "px4"
+          }
+        );
+      }
+      //   TODO(tfoote) Resolve images
+      //   jQuery("#-question-list img").each(function() {
+      //     if (jQuery(this).attr("src").startsWith("/upfiles")) {
+      //        jQuery(this).attr("src", "https://answers.ros.org" + jQuery(this).attr("src"));
+      //     }
+      //   });
+      
+      if (feed.items.length > 0) {
+        jQuery("#humble-question-list").html(rendered);
+        jQuery("#humble-question-list").show();
+      } else {
+        jQuery("#humble-no-question-list").show();
+      }
+      jQuery("#humble-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#jazzy-question-list").html(rendered);
+        jQuery("#jazzy-question-list").show();
+      } else {
+        jQuery("#jazzy-no-question-list").show();
+      }
+      jQuery("#jazzy-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#kilted-question-list").html(rendered);
+        jQuery("#kilted-question-list").show();
+      } else {
+        jQuery("#kilted-no-question-list").show();
+      }
+      jQuery("#kilted-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#rolling-question-list").html(rendered);
+        jQuery("#rolling-question-list").show();
+      } else {
+        jQuery("#rolling-no-question-list").show();
+      }
+      jQuery("#rolling-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#github-question-list").html(rendered);
+        jQuery("#github-question-list").show();
+      } else {
+        jQuery("#github-no-question-list").show();
+      }
+      jQuery("#github-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#noetic-question-list").html(rendered);
+        jQuery("#noetic-question-list").show();
+      } else {
+        jQuery("#noetic-no-question-list").show();
+      }
+      jQuery("#noetic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#galactic-question-list").html(rendered);
+        jQuery("#galactic-question-list").show();
+      } else {
+        jQuery("#galactic-no-question-list").show();
+      }
+      jQuery("#galactic-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#iron-question-list").html(rendered);
+        jQuery("#iron-question-list").show();
+      } else {
+        jQuery("#iron-no-question-list").show();
+      }
+      jQuery("#iron-questions-count").text(question_count_str);
+      
+      if (feed.items.length > 0) {
+        jQuery("#melodic-question-list").html(rendered);
+        jQuery("#melodic-question-list").show();
+      } else {
+        jQuery("#melodic-no-question-list").show();
+      }
+      jQuery("#melodic-questions-count").text(question_count_str);
+      
+    })
+    .fail(function(jqxhr, textStatus, error) {
+      console.error("Failed to get question data: " + jqxhr.responseText);
+      
+      jQuery("#humble-get-question-fail").show();
+      
+      jQuery("#jazzy-get-question-fail").show();
+      
+      jQuery("#kilted-get-question-fail").show();
+      
+      jQuery("#rolling-get-question-fail").show();
+      
+      jQuery("#github-get-question-fail").show();
+      
+      jQuery("#noetic-get-question-fail").show();
+      
+      jQuery("#galactic-get-question-fail").show();
+      
+      jQuery("#iron-get-question-fail").show();
+      
+      jQuery("#melodic-get-question-fail").show();
+      
+    });
+  });
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2025-05-05</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
