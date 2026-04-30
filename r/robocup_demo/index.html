@@ -1,0 +1,3484 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>robocup_demo - ROS Repository Overview</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+    <meta name="robots" content="noindex">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/r/robocup_demo/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body >
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="https://docs.ros.org/en/rolling/Contact.html#support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="https://docs.ros.org/en/rolling/Contact.html#support"">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content" >
+      <div class="wrapper" >
+        <div class="container-fluid" style="margin-top:20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_repos=true">Repos</a></li>
+        <li class="active"></li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+        <li data="noetic" id="noetic-option" class="disabled older-distro-option"  href="#noetic">
+          <a href="#noetic" data="noetic" id="noetic-button">noetic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>humble</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/robocup_demo/">robocup_demo</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/brain/">brain</a>
+        
+        <a class="label label-primary pkg-label" href="/p/detection_converter/">detection_converter</a>
+        
+        <a class="label label-primary pkg-label" href="/p/game_controller/">game_controller</a>
+        
+        <a class="label label-primary pkg-label" href="/p/booster_msgs/">booster_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/booster_interface/">booster_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/game_controller_interface/">game_controller_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision_interface/">vision_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision/">vision</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/boosterrobotics/robocup_demo.git">https://github.com/boosterrobotics/robocup_demo.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-03-10
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/robocup_demo/#humble-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/robocup_demo/#humble-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/robocup_demo/#humble-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/brain/">brain</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/detection_converter/">detection_converter</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/game_controller/">game_controller</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/booster_msgs/">booster_msgs</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/booster_interface/">booster_interface</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/game_controller_interface/">game_controller_interface</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision_interface/">vision_interface</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision/">vision</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="booster-robocup-demo">Booster RoboCup Demo</h1>
+
+<h2 id="notice">NOTICE</h2>
+<p>The latest RoboCup rules do not allow unicast communication between robots and impose limits on the data size of communication packets during matches. This part of the rules has not yet been addressed in the current open‑source code. If robot communication is required in the competition, the implementation in brain_communication.cpp needs to be modified to comply with the rules.</p>
+
+<h2 id="introduction">introduction</h2>
+<p>The Booster RoboCup demo allows the robot to make autonomous decisions to kick the ball and complete the full RoboCup match. It includes three programs: vision, brain, and game_controller.</p>
+
+<ul>
+  <li>vision
+    <ul>
+      <li>The vision recognition program, based on Yolo-v8, detects objects such as robots, soccer balls, and the field, and calculates their positions in the robot’s coordinate system using geometric relationships.</li>
+    </ul>
+  </li>
+  <li>brain
+    <ul>
+      <li>The decision-making program reads visual data and GameController game control data, integrates all available information, makes judgments, and controls the robot to perform corresponding actions, completing the match process.</li>
+    </ul>
+  </li>
+  <li>game_controller
+    <ul>
+      <li>Reads the game control data packets broadcast by the referee machine on the local area network, converts them into ROS2 topic messages, and makes them available for the brain to use.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="install-extra-dependency">Install extra dependency</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install ros-humble-backward-ros</span>
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-humble-backward-ros
+
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install onnxruntime (If you want to run without cuda)</span>
+
+./third_party_aarch64/install_onnxruntime.sh <span class="c"># if aarch64</span>
+
+./third_party/install_onnxruntime.sh <span class="c"># if x64</span>
+
+</code></pre></div></div>
+
+<h2 id="run-on-booster-k1-or-t1">RUN ON Booster K1 or T1</h2>
+<p>This demo is designed for running on Booster K1, if you’d like to run this demo on Booster T1, few configs need to be updated.</p>
+<h3 id="srcbrainconfigconfigyaml-or-srcbrainconfigconfig_localyaml">src/brain/config/config.yaml or src/brain/config/config_local.yaml</h3>
+<ol>
+  <li>set robot.robot_height to 1.12</li>
+  <li>set robot.odom_factor to 1.2</li>
+  <li>set RLVisionKick.enableAutoVisualKick to false</li>
+  <li>set vision.image_camera_info_topic, vision.depth_image_topic, vision.depth_camera_info_topic to corresponding image topic
+    <h3 id="srcvisionconfigvisionyaml-or-srcvisionconfigvision_localyaml">src/vision/config/vision.yaml or src/vision/config/vision_local.yaml</h3>
+  </li>
+  <li>set camera.color_topic, camera.depth_topic, camera.intrin_topic to corresponding ones</li>
+  <li>set detection_model.model_path to ./src/vision/model/best_1223_10.3.engine</li>
+  <li>set segmentation_model.model_path to ./src/vision/model/best_seg_orin_10.3.engine</li>
+</ol>
+
+<h3 id="about-config-rlvisionkickenableautovisualkick">About config: RLVisionKick.enableAutoVisualKick</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">RLVisionKick</span>
+    <span class="s">enableAutoVisualKick</span><span class="err">:</span> <span class="kc">true</span><span class="s"> // This feature is only supported on the Booster K1, requiring firmware version 1.5.2 or higher.</span>
+
+</code></pre></div></div>
+<p>VisionKick is only support on K1 and requiring firmware version 1.5.2 or higher. See <a href="https://booster.feishu.cn/wiki/E3q5wF5SnitXZgkY18Uc8odBnXb#share-BYaDdL4nAoPfdcx2y3BcwORyndf">Firmware 1.5.2 Install Reference</a> for install instruction.</p>
+
+<p>Please make sure you have installed latest Booster Robotics SDK.</p>
+
+<h2 id="note">Note</h2>
+<p>This repo support jetpack 6.2. Adapted to the default TRT model in src/vision/config/vision.yaml.</p>
+
+<p>vision.yaml for jetpack 6.2 machine</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>detection_model:
+    model_path: ./src/vision/model/best_digua_second_10.3.engine
+    confidence_threshold: 0.2
+</code></pre></div></div>
+
+<h2 id="visualization">Visualization</h2>
+<p>booster_soccer.layout can be imported into Booster Studio for inspect logs</p>
+
+<h2 id="build">Build</h2>
+
+<h3 id="build-the-programs-without-cuda-inference-with-onnx-so-you-need-to-run-install-onnx-in-advance">Build the programs without cuda (inference with onnx, so you need to run install onnx in advance)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/build_no_cuda.sh
+
+</code></pre></div></div>
+<h4 id="build-error">build error</h4>
+<p>if you clone this repo in windows and run in Booster Studio Simulator, you may encounter problems blow</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./build_no_cuda.sh 
+<span class="nt">-bash</span>: ./build_no_cuda.sh: /bin/bash^M: bad interpreter: No such file or directory
+
+</code></pre></div></div>
+<p>This is caused by difference of Windows and Linux/Unix based system.</p>
+
+<p>Run cmd below</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>booster_soccer/scripts
+find <span class="nb">.</span> <span class="nt">-type</span> f <span class="nt">-print0</span> | xargs <span class="nt">-0</span> <span class="nb">sed</span> <span class="nt">-i</span> <span class="s1">'s/\r$//'</span>
+
+</code></pre></div></div>
+<p>Then run build_no_cuda.sh.</p>
+
+<h3 id="build-the-programs-with-cuda-real-robot">Build the programs with cuda (real robot)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/build.sh
+
+</code></pre></div></div>
+
+<h2 id="run">Run</h2>
+<h3 id="run-on-the-virtual-robot">Run on the virtual robot</h3>
+<h4 id="srcbrainconfigconfigyaml-or-srcbrainconfigconfig_localyaml-1">src/brain/config/config.yaml or src/brain/config/config_local.yaml</h4>
+<ol>
+  <li>set vision.image_camera_info_topic, vision.depth_image_topic, vision.depth_camera_info_topic to corresponding image topic
+    <h4 id="update-srcvisionconfigvisionyaml-or-srcvisionconfigvision_localyaml">update src/vision/config/vision.yaml or src/vision/config/vision_local.yaml</h4>
+  </li>
+  <li>set camera.color_topic, camera.depth_topic, camera.intrin_topic to corresponding ones</li>
+  <li>set detection_model.model_path to ./src/vision/model/sim_data_det_0126.onnx</li>
+  <li>set segmentation_model.model_path to ./src/vision/model/sim_data_seg_0126.onnx</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/sim_start.sh
+
+</code></pre></div></div>
+
+<p>File truncated at 100 lines <a href="https://github.com/boosterrobotics/robocup_demo/tree/main/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>jazzy</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/robocup_demo/">robocup_demo</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/brain/">brain</a>
+        
+        <a class="label label-primary pkg-label" href="/p/detection_converter/">detection_converter</a>
+        
+        <a class="label label-primary pkg-label" href="/p/game_controller/">game_controller</a>
+        
+        <a class="label label-primary pkg-label" href="/p/booster_msgs/">booster_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/booster_interface/">booster_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/game_controller_interface/">game_controller_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision_interface/">vision_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision/">vision</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/boosterrobotics/robocup_demo.git">https://github.com/boosterrobotics/robocup_demo.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-03-10
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/robocup_demo/#jazzy-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/robocup_demo/#jazzy-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/robocup_demo/#jazzy-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/brain/">brain</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/detection_converter/">detection_converter</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/game_controller/">game_controller</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/booster_msgs/">booster_msgs</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/booster_interface/">booster_interface</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/game_controller_interface/">game_controller_interface</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision_interface/">vision_interface</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision/">vision</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="booster-robocup-demo">Booster RoboCup Demo</h1>
+
+<h2 id="notice">NOTICE</h2>
+<p>The latest RoboCup rules do not allow unicast communication between robots and impose limits on the data size of communication packets during matches. This part of the rules has not yet been addressed in the current open‑source code. If robot communication is required in the competition, the implementation in brain_communication.cpp needs to be modified to comply with the rules.</p>
+
+<h2 id="introduction">introduction</h2>
+<p>The Booster RoboCup demo allows the robot to make autonomous decisions to kick the ball and complete the full RoboCup match. It includes three programs: vision, brain, and game_controller.</p>
+
+<ul>
+  <li>vision
+    <ul>
+      <li>The vision recognition program, based on Yolo-v8, detects objects such as robots, soccer balls, and the field, and calculates their positions in the robot’s coordinate system using geometric relationships.</li>
+    </ul>
+  </li>
+  <li>brain
+    <ul>
+      <li>The decision-making program reads visual data and GameController game control data, integrates all available information, makes judgments, and controls the robot to perform corresponding actions, completing the match process.</li>
+    </ul>
+  </li>
+  <li>game_controller
+    <ul>
+      <li>Reads the game control data packets broadcast by the referee machine on the local area network, converts them into ROS2 topic messages, and makes them available for the brain to use.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="install-extra-dependency">Install extra dependency</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install ros-humble-backward-ros</span>
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-humble-backward-ros
+
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install onnxruntime (If you want to run without cuda)</span>
+
+./third_party_aarch64/install_onnxruntime.sh <span class="c"># if aarch64</span>
+
+./third_party/install_onnxruntime.sh <span class="c"># if x64</span>
+
+</code></pre></div></div>
+
+<h2 id="run-on-booster-k1-or-t1">RUN ON Booster K1 or T1</h2>
+<p>This demo is designed for running on Booster K1, if you’d like to run this demo on Booster T1, few configs need to be updated.</p>
+<h3 id="srcbrainconfigconfigyaml-or-srcbrainconfigconfig_localyaml">src/brain/config/config.yaml or src/brain/config/config_local.yaml</h3>
+<ol>
+  <li>set robot.robot_height to 1.12</li>
+  <li>set robot.odom_factor to 1.2</li>
+  <li>set RLVisionKick.enableAutoVisualKick to false</li>
+  <li>set vision.image_camera_info_topic, vision.depth_image_topic, vision.depth_camera_info_topic to corresponding image topic
+    <h3 id="srcvisionconfigvisionyaml-or-srcvisionconfigvision_localyaml">src/vision/config/vision.yaml or src/vision/config/vision_local.yaml</h3>
+  </li>
+  <li>set camera.color_topic, camera.depth_topic, camera.intrin_topic to corresponding ones</li>
+  <li>set detection_model.model_path to ./src/vision/model/best_1223_10.3.engine</li>
+  <li>set segmentation_model.model_path to ./src/vision/model/best_seg_orin_10.3.engine</li>
+</ol>
+
+<h3 id="about-config-rlvisionkickenableautovisualkick">About config: RLVisionKick.enableAutoVisualKick</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">RLVisionKick</span>
+    <span class="s">enableAutoVisualKick</span><span class="err">:</span> <span class="kc">true</span><span class="s"> // This feature is only supported on the Booster K1, requiring firmware version 1.5.2 or higher.</span>
+
+</code></pre></div></div>
+<p>VisionKick is only support on K1 and requiring firmware version 1.5.2 or higher. See <a href="https://booster.feishu.cn/wiki/E3q5wF5SnitXZgkY18Uc8odBnXb#share-BYaDdL4nAoPfdcx2y3BcwORyndf">Firmware 1.5.2 Install Reference</a> for install instruction.</p>
+
+<p>Please make sure you have installed latest Booster Robotics SDK.</p>
+
+<h2 id="note">Note</h2>
+<p>This repo support jetpack 6.2. Adapted to the default TRT model in src/vision/config/vision.yaml.</p>
+
+<p>vision.yaml for jetpack 6.2 machine</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>detection_model:
+    model_path: ./src/vision/model/best_digua_second_10.3.engine
+    confidence_threshold: 0.2
+</code></pre></div></div>
+
+<h2 id="visualization">Visualization</h2>
+<p>booster_soccer.layout can be imported into Booster Studio for inspect logs</p>
+
+<h2 id="build">Build</h2>
+
+<h3 id="build-the-programs-without-cuda-inference-with-onnx-so-you-need-to-run-install-onnx-in-advance">Build the programs without cuda (inference with onnx, so you need to run install onnx in advance)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/build_no_cuda.sh
+
+</code></pre></div></div>
+<h4 id="build-error">build error</h4>
+<p>if you clone this repo in windows and run in Booster Studio Simulator, you may encounter problems blow</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./build_no_cuda.sh 
+<span class="nt">-bash</span>: ./build_no_cuda.sh: /bin/bash^M: bad interpreter: No such file or directory
+
+</code></pre></div></div>
+<p>This is caused by difference of Windows and Linux/Unix based system.</p>
+
+<p>Run cmd below</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>booster_soccer/scripts
+find <span class="nb">.</span> <span class="nt">-type</span> f <span class="nt">-print0</span> | xargs <span class="nt">-0</span> <span class="nb">sed</span> <span class="nt">-i</span> <span class="s1">'s/\r$//'</span>
+
+</code></pre></div></div>
+<p>Then run build_no_cuda.sh.</p>
+
+<h3 id="build-the-programs-with-cuda-real-robot">Build the programs with cuda (real robot)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/build.sh
+
+</code></pre></div></div>
+
+<h2 id="run">Run</h2>
+<h3 id="run-on-the-virtual-robot">Run on the virtual robot</h3>
+<h4 id="srcbrainconfigconfigyaml-or-srcbrainconfigconfig_localyaml-1">src/brain/config/config.yaml or src/brain/config/config_local.yaml</h4>
+<ol>
+  <li>set vision.image_camera_info_topic, vision.depth_image_topic, vision.depth_camera_info_topic to corresponding image topic
+    <h4 id="update-srcvisionconfigvisionyaml-or-srcvisionconfigvision_localyaml">update src/vision/config/vision.yaml or src/vision/config/vision_local.yaml</h4>
+  </li>
+  <li>set camera.color_topic, camera.depth_topic, camera.intrin_topic to corresponding ones</li>
+  <li>set detection_model.model_path to ./src/vision/model/sim_data_det_0126.onnx</li>
+  <li>set segmentation_model.model_path to ./src/vision/model/sim_data_seg_0126.onnx</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/sim_start.sh
+
+</code></pre></div></div>
+
+<p>File truncated at 100 lines <a href="https://github.com/boosterrobotics/robocup_demo/tree/main/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>kilted</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/robocup_demo/">robocup_demo</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/brain/">brain</a>
+        
+        <a class="label label-primary pkg-label" href="/p/detection_converter/">detection_converter</a>
+        
+        <a class="label label-primary pkg-label" href="/p/game_controller/">game_controller</a>
+        
+        <a class="label label-primary pkg-label" href="/p/booster_msgs/">booster_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/booster_interface/">booster_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/game_controller_interface/">game_controller_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision_interface/">vision_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision/">vision</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/boosterrobotics/robocup_demo.git">https://github.com/boosterrobotics/robocup_demo.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-03-10
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/robocup_demo/#kilted-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/robocup_demo/#kilted-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/robocup_demo/#kilted-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/brain/">brain</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/detection_converter/">detection_converter</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/game_controller/">game_controller</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/booster_msgs/">booster_msgs</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/booster_interface/">booster_interface</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/game_controller_interface/">game_controller_interface</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision_interface/">vision_interface</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision/">vision</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="booster-robocup-demo">Booster RoboCup Demo</h1>
+
+<h2 id="notice">NOTICE</h2>
+<p>The latest RoboCup rules do not allow unicast communication between robots and impose limits on the data size of communication packets during matches. This part of the rules has not yet been addressed in the current open‑source code. If robot communication is required in the competition, the implementation in brain_communication.cpp needs to be modified to comply with the rules.</p>
+
+<h2 id="introduction">introduction</h2>
+<p>The Booster RoboCup demo allows the robot to make autonomous decisions to kick the ball and complete the full RoboCup match. It includes three programs: vision, brain, and game_controller.</p>
+
+<ul>
+  <li>vision
+    <ul>
+      <li>The vision recognition program, based on Yolo-v8, detects objects such as robots, soccer balls, and the field, and calculates their positions in the robot’s coordinate system using geometric relationships.</li>
+    </ul>
+  </li>
+  <li>brain
+    <ul>
+      <li>The decision-making program reads visual data and GameController game control data, integrates all available information, makes judgments, and controls the robot to perform corresponding actions, completing the match process.</li>
+    </ul>
+  </li>
+  <li>game_controller
+    <ul>
+      <li>Reads the game control data packets broadcast by the referee machine on the local area network, converts them into ROS2 topic messages, and makes them available for the brain to use.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="install-extra-dependency">Install extra dependency</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install ros-humble-backward-ros</span>
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-humble-backward-ros
+
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install onnxruntime (If you want to run without cuda)</span>
+
+./third_party_aarch64/install_onnxruntime.sh <span class="c"># if aarch64</span>
+
+./third_party/install_onnxruntime.sh <span class="c"># if x64</span>
+
+</code></pre></div></div>
+
+<h2 id="run-on-booster-k1-or-t1">RUN ON Booster K1 or T1</h2>
+<p>This demo is designed for running on Booster K1, if you’d like to run this demo on Booster T1, few configs need to be updated.</p>
+<h3 id="srcbrainconfigconfigyaml-or-srcbrainconfigconfig_localyaml">src/brain/config/config.yaml or src/brain/config/config_local.yaml</h3>
+<ol>
+  <li>set robot.robot_height to 1.12</li>
+  <li>set robot.odom_factor to 1.2</li>
+  <li>set RLVisionKick.enableAutoVisualKick to false</li>
+  <li>set vision.image_camera_info_topic, vision.depth_image_topic, vision.depth_camera_info_topic to corresponding image topic
+    <h3 id="srcvisionconfigvisionyaml-or-srcvisionconfigvision_localyaml">src/vision/config/vision.yaml or src/vision/config/vision_local.yaml</h3>
+  </li>
+  <li>set camera.color_topic, camera.depth_topic, camera.intrin_topic to corresponding ones</li>
+  <li>set detection_model.model_path to ./src/vision/model/best_1223_10.3.engine</li>
+  <li>set segmentation_model.model_path to ./src/vision/model/best_seg_orin_10.3.engine</li>
+</ol>
+
+<h3 id="about-config-rlvisionkickenableautovisualkick">About config: RLVisionKick.enableAutoVisualKick</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">RLVisionKick</span>
+    <span class="s">enableAutoVisualKick</span><span class="err">:</span> <span class="kc">true</span><span class="s"> // This feature is only supported on the Booster K1, requiring firmware version 1.5.2 or higher.</span>
+
+</code></pre></div></div>
+<p>VisionKick is only support on K1 and requiring firmware version 1.5.2 or higher. See <a href="https://booster.feishu.cn/wiki/E3q5wF5SnitXZgkY18Uc8odBnXb#share-BYaDdL4nAoPfdcx2y3BcwORyndf">Firmware 1.5.2 Install Reference</a> for install instruction.</p>
+
+<p>Please make sure you have installed latest Booster Robotics SDK.</p>
+
+<h2 id="note">Note</h2>
+<p>This repo support jetpack 6.2. Adapted to the default TRT model in src/vision/config/vision.yaml.</p>
+
+<p>vision.yaml for jetpack 6.2 machine</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>detection_model:
+    model_path: ./src/vision/model/best_digua_second_10.3.engine
+    confidence_threshold: 0.2
+</code></pre></div></div>
+
+<h2 id="visualization">Visualization</h2>
+<p>booster_soccer.layout can be imported into Booster Studio for inspect logs</p>
+
+<h2 id="build">Build</h2>
+
+<h3 id="build-the-programs-without-cuda-inference-with-onnx-so-you-need-to-run-install-onnx-in-advance">Build the programs without cuda (inference with onnx, so you need to run install onnx in advance)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/build_no_cuda.sh
+
+</code></pre></div></div>
+<h4 id="build-error">build error</h4>
+<p>if you clone this repo in windows and run in Booster Studio Simulator, you may encounter problems blow</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./build_no_cuda.sh 
+<span class="nt">-bash</span>: ./build_no_cuda.sh: /bin/bash^M: bad interpreter: No such file or directory
+
+</code></pre></div></div>
+<p>This is caused by difference of Windows and Linux/Unix based system.</p>
+
+<p>Run cmd below</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>booster_soccer/scripts
+find <span class="nb">.</span> <span class="nt">-type</span> f <span class="nt">-print0</span> | xargs <span class="nt">-0</span> <span class="nb">sed</span> <span class="nt">-i</span> <span class="s1">'s/\r$//'</span>
+
+</code></pre></div></div>
+<p>Then run build_no_cuda.sh.</p>
+
+<h3 id="build-the-programs-with-cuda-real-robot">Build the programs with cuda (real robot)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/build.sh
+
+</code></pre></div></div>
+
+<h2 id="run">Run</h2>
+<h3 id="run-on-the-virtual-robot">Run on the virtual robot</h3>
+<h4 id="srcbrainconfigconfigyaml-or-srcbrainconfigconfig_localyaml-1">src/brain/config/config.yaml or src/brain/config/config_local.yaml</h4>
+<ol>
+  <li>set vision.image_camera_info_topic, vision.depth_image_topic, vision.depth_camera_info_topic to corresponding image topic
+    <h4 id="update-srcvisionconfigvisionyaml-or-srcvisionconfigvision_localyaml">update src/vision/config/vision.yaml or src/vision/config/vision_local.yaml</h4>
+  </li>
+  <li>set camera.color_topic, camera.depth_topic, camera.intrin_topic to corresponding ones</li>
+  <li>set detection_model.model_path to ./src/vision/model/sim_data_det_0126.onnx</li>
+  <li>set segmentation_model.model_path to ./src/vision/model/sim_data_seg_0126.onnx</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/sim_start.sh
+
+</code></pre></div></div>
+
+<p>File truncated at 100 lines <a href="https://github.com/boosterrobotics/robocup_demo/tree/main/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>rolling</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/robocup_demo/">robocup_demo</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/brain/">brain</a>
+        
+        <a class="label label-primary pkg-label" href="/p/detection_converter/">detection_converter</a>
+        
+        <a class="label label-primary pkg-label" href="/p/game_controller/">game_controller</a>
+        
+        <a class="label label-primary pkg-label" href="/p/booster_msgs/">booster_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/booster_interface/">booster_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/game_controller_interface/">game_controller_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision_interface/">vision_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision/">vision</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/boosterrobotics/robocup_demo.git">https://github.com/boosterrobotics/robocup_demo.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-03-10
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/robocup_demo/#rolling-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/robocup_demo/#rolling-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/robocup_demo/#rolling-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/brain/">brain</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/detection_converter/">detection_converter</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/game_controller/">game_controller</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/booster_msgs/">booster_msgs</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/booster_interface/">booster_interface</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/game_controller_interface/">game_controller_interface</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision_interface/">vision_interface</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision/">vision</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="booster-robocup-demo">Booster RoboCup Demo</h1>
+
+<h2 id="notice">NOTICE</h2>
+<p>The latest RoboCup rules do not allow unicast communication between robots and impose limits on the data size of communication packets during matches. This part of the rules has not yet been addressed in the current open‑source code. If robot communication is required in the competition, the implementation in brain_communication.cpp needs to be modified to comply with the rules.</p>
+
+<h2 id="introduction">introduction</h2>
+<p>The Booster RoboCup demo allows the robot to make autonomous decisions to kick the ball and complete the full RoboCup match. It includes three programs: vision, brain, and game_controller.</p>
+
+<ul>
+  <li>vision
+    <ul>
+      <li>The vision recognition program, based on Yolo-v8, detects objects such as robots, soccer balls, and the field, and calculates their positions in the robot’s coordinate system using geometric relationships.</li>
+    </ul>
+  </li>
+  <li>brain
+    <ul>
+      <li>The decision-making program reads visual data and GameController game control data, integrates all available information, makes judgments, and controls the robot to perform corresponding actions, completing the match process.</li>
+    </ul>
+  </li>
+  <li>game_controller
+    <ul>
+      <li>Reads the game control data packets broadcast by the referee machine on the local area network, converts them into ROS2 topic messages, and makes them available for the brain to use.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="install-extra-dependency">Install extra dependency</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install ros-humble-backward-ros</span>
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-humble-backward-ros
+
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install onnxruntime (If you want to run without cuda)</span>
+
+./third_party_aarch64/install_onnxruntime.sh <span class="c"># if aarch64</span>
+
+./third_party/install_onnxruntime.sh <span class="c"># if x64</span>
+
+</code></pre></div></div>
+
+<h2 id="run-on-booster-k1-or-t1">RUN ON Booster K1 or T1</h2>
+<p>This demo is designed for running on Booster K1, if you’d like to run this demo on Booster T1, few configs need to be updated.</p>
+<h3 id="srcbrainconfigconfigyaml-or-srcbrainconfigconfig_localyaml">src/brain/config/config.yaml or src/brain/config/config_local.yaml</h3>
+<ol>
+  <li>set robot.robot_height to 1.12</li>
+  <li>set robot.odom_factor to 1.2</li>
+  <li>set RLVisionKick.enableAutoVisualKick to false</li>
+  <li>set vision.image_camera_info_topic, vision.depth_image_topic, vision.depth_camera_info_topic to corresponding image topic
+    <h3 id="srcvisionconfigvisionyaml-or-srcvisionconfigvision_localyaml">src/vision/config/vision.yaml or src/vision/config/vision_local.yaml</h3>
+  </li>
+  <li>set camera.color_topic, camera.depth_topic, camera.intrin_topic to corresponding ones</li>
+  <li>set detection_model.model_path to ./src/vision/model/best_1223_10.3.engine</li>
+  <li>set segmentation_model.model_path to ./src/vision/model/best_seg_orin_10.3.engine</li>
+</ol>
+
+<h3 id="about-config-rlvisionkickenableautovisualkick">About config: RLVisionKick.enableAutoVisualKick</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">RLVisionKick</span>
+    <span class="s">enableAutoVisualKick</span><span class="err">:</span> <span class="kc">true</span><span class="s"> // This feature is only supported on the Booster K1, requiring firmware version 1.5.2 or higher.</span>
+
+</code></pre></div></div>
+<p>VisionKick is only support on K1 and requiring firmware version 1.5.2 or higher. See <a href="https://booster.feishu.cn/wiki/E3q5wF5SnitXZgkY18Uc8odBnXb#share-BYaDdL4nAoPfdcx2y3BcwORyndf">Firmware 1.5.2 Install Reference</a> for install instruction.</p>
+
+<p>Please make sure you have installed latest Booster Robotics SDK.</p>
+
+<h2 id="note">Note</h2>
+<p>This repo support jetpack 6.2. Adapted to the default TRT model in src/vision/config/vision.yaml.</p>
+
+<p>vision.yaml for jetpack 6.2 machine</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>detection_model:
+    model_path: ./src/vision/model/best_digua_second_10.3.engine
+    confidence_threshold: 0.2
+</code></pre></div></div>
+
+<h2 id="visualization">Visualization</h2>
+<p>booster_soccer.layout can be imported into Booster Studio for inspect logs</p>
+
+<h2 id="build">Build</h2>
+
+<h3 id="build-the-programs-without-cuda-inference-with-onnx-so-you-need-to-run-install-onnx-in-advance">Build the programs without cuda (inference with onnx, so you need to run install onnx in advance)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/build_no_cuda.sh
+
+</code></pre></div></div>
+<h4 id="build-error">build error</h4>
+<p>if you clone this repo in windows and run in Booster Studio Simulator, you may encounter problems blow</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./build_no_cuda.sh 
+<span class="nt">-bash</span>: ./build_no_cuda.sh: /bin/bash^M: bad interpreter: No such file or directory
+
+</code></pre></div></div>
+<p>This is caused by difference of Windows and Linux/Unix based system.</p>
+
+<p>Run cmd below</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>booster_soccer/scripts
+find <span class="nb">.</span> <span class="nt">-type</span> f <span class="nt">-print0</span> | xargs <span class="nt">-0</span> <span class="nb">sed</span> <span class="nt">-i</span> <span class="s1">'s/\r$//'</span>
+
+</code></pre></div></div>
+<p>Then run build_no_cuda.sh.</p>
+
+<h3 id="build-the-programs-with-cuda-real-robot">Build the programs with cuda (real robot)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/build.sh
+
+</code></pre></div></div>
+
+<h2 id="run">Run</h2>
+<h3 id="run-on-the-virtual-robot">Run on the virtual robot</h3>
+<h4 id="srcbrainconfigconfigyaml-or-srcbrainconfigconfig_localyaml-1">src/brain/config/config.yaml or src/brain/config/config_local.yaml</h4>
+<ol>
+  <li>set vision.image_camera_info_topic, vision.depth_image_topic, vision.depth_camera_info_topic to corresponding image topic
+    <h4 id="update-srcvisionconfigvisionyaml-or-srcvisionconfigvision_localyaml">update src/vision/config/vision.yaml or src/vision/config/vision_local.yaml</h4>
+  </li>
+  <li>set camera.color_topic, camera.depth_topic, camera.intrin_topic to corresponding ones</li>
+  <li>set detection_model.model_path to ./src/vision/model/sim_data_det_0126.onnx</li>
+  <li>set segmentation_model.model_path to ./src/vision/model/sim_data_seg_0126.onnx</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/sim_start.sh
+
+</code></pre></div></div>
+
+<p>File truncated at 100 lines <a href="https://github.com/boosterrobotics/robocup_demo/tree/main/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/robocup_demo/">robocup_demo</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/brain/">brain</a>
+        
+        <a class="label label-primary pkg-label" href="/p/detection_converter/">detection_converter</a>
+        
+        <a class="label label-primary pkg-label" href="/p/game_controller/">game_controller</a>
+        
+        <a class="label label-primary pkg-label" href="/p/booster_msgs/">booster_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/booster_interface/">booster_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/game_controller_interface/">game_controller_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision_interface/">vision_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision/">vision</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/boosterrobotics/robocup_demo.git">https://github.com/boosterrobotics/robocup_demo.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-03-10
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/robocup_demo/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/robocup_demo/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/robocup_demo/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/brain/">brain</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/detection_converter/">detection_converter</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/game_controller/">game_controller</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/booster_msgs/">booster_msgs</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/booster_interface/">booster_interface</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/game_controller_interface/">game_controller_interface</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision_interface/">vision_interface</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision/">vision</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="booster-robocup-demo">Booster RoboCup Demo</h1>
+
+<h2 id="notice">NOTICE</h2>
+<p>The latest RoboCup rules do not allow unicast communication between robots and impose limits on the data size of communication packets during matches. This part of the rules has not yet been addressed in the current open‑source code. If robot communication is required in the competition, the implementation in brain_communication.cpp needs to be modified to comply with the rules.</p>
+
+<h2 id="introduction">introduction</h2>
+<p>The Booster RoboCup demo allows the robot to make autonomous decisions to kick the ball and complete the full RoboCup match. It includes three programs: vision, brain, and game_controller.</p>
+
+<ul>
+  <li>vision
+    <ul>
+      <li>The vision recognition program, based on Yolo-v8, detects objects such as robots, soccer balls, and the field, and calculates their positions in the robot’s coordinate system using geometric relationships.</li>
+    </ul>
+  </li>
+  <li>brain
+    <ul>
+      <li>The decision-making program reads visual data and GameController game control data, integrates all available information, makes judgments, and controls the robot to perform corresponding actions, completing the match process.</li>
+    </ul>
+  </li>
+  <li>game_controller
+    <ul>
+      <li>Reads the game control data packets broadcast by the referee machine on the local area network, converts them into ROS2 topic messages, and makes them available for the brain to use.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="install-extra-dependency">Install extra dependency</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install ros-humble-backward-ros</span>
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-humble-backward-ros
+
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install onnxruntime (If you want to run without cuda)</span>
+
+./third_party_aarch64/install_onnxruntime.sh <span class="c"># if aarch64</span>
+
+./third_party/install_onnxruntime.sh <span class="c"># if x64</span>
+
+</code></pre></div></div>
+
+<h2 id="run-on-booster-k1-or-t1">RUN ON Booster K1 or T1</h2>
+<p>This demo is designed for running on Booster K1, if you’d like to run this demo on Booster T1, few configs need to be updated.</p>
+<h3 id="srcbrainconfigconfigyaml-or-srcbrainconfigconfig_localyaml">src/brain/config/config.yaml or src/brain/config/config_local.yaml</h3>
+<ol>
+  <li>set robot.robot_height to 1.12</li>
+  <li>set robot.odom_factor to 1.2</li>
+  <li>set RLVisionKick.enableAutoVisualKick to false</li>
+  <li>set vision.image_camera_info_topic, vision.depth_image_topic, vision.depth_camera_info_topic to corresponding image topic
+    <h3 id="srcvisionconfigvisionyaml-or-srcvisionconfigvision_localyaml">src/vision/config/vision.yaml or src/vision/config/vision_local.yaml</h3>
+  </li>
+  <li>set camera.color_topic, camera.depth_topic, camera.intrin_topic to corresponding ones</li>
+  <li>set detection_model.model_path to ./src/vision/model/best_1223_10.3.engine</li>
+  <li>set segmentation_model.model_path to ./src/vision/model/best_seg_orin_10.3.engine</li>
+</ol>
+
+<h3 id="about-config-rlvisionkickenableautovisualkick">About config: RLVisionKick.enableAutoVisualKick</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">RLVisionKick</span>
+    <span class="s">enableAutoVisualKick</span><span class="err">:</span> <span class="kc">true</span><span class="s"> // This feature is only supported on the Booster K1, requiring firmware version 1.5.2 or higher.</span>
+
+</code></pre></div></div>
+<p>VisionKick is only support on K1 and requiring firmware version 1.5.2 or higher. See <a href="https://booster.feishu.cn/wiki/E3q5wF5SnitXZgkY18Uc8odBnXb#share-BYaDdL4nAoPfdcx2y3BcwORyndf">Firmware 1.5.2 Install Reference</a> for install instruction.</p>
+
+<p>Please make sure you have installed latest Booster Robotics SDK.</p>
+
+<h2 id="note">Note</h2>
+<p>This repo support jetpack 6.2. Adapted to the default TRT model in src/vision/config/vision.yaml.</p>
+
+<p>vision.yaml for jetpack 6.2 machine</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>detection_model:
+    model_path: ./src/vision/model/best_digua_second_10.3.engine
+    confidence_threshold: 0.2
+</code></pre></div></div>
+
+<h2 id="visualization">Visualization</h2>
+<p>booster_soccer.layout can be imported into Booster Studio for inspect logs</p>
+
+<h2 id="build">Build</h2>
+
+<h3 id="build-the-programs-without-cuda-inference-with-onnx-so-you-need-to-run-install-onnx-in-advance">Build the programs without cuda (inference with onnx, so you need to run install onnx in advance)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/build_no_cuda.sh
+
+</code></pre></div></div>
+<h4 id="build-error">build error</h4>
+<p>if you clone this repo in windows and run in Booster Studio Simulator, you may encounter problems blow</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./build_no_cuda.sh 
+<span class="nt">-bash</span>: ./build_no_cuda.sh: /bin/bash^M: bad interpreter: No such file or directory
+
+</code></pre></div></div>
+<p>This is caused by difference of Windows and Linux/Unix based system.</p>
+
+<p>Run cmd below</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>booster_soccer/scripts
+find <span class="nb">.</span> <span class="nt">-type</span> f <span class="nt">-print0</span> | xargs <span class="nt">-0</span> <span class="nb">sed</span> <span class="nt">-i</span> <span class="s1">'s/\r$//'</span>
+
+</code></pre></div></div>
+<p>Then run build_no_cuda.sh.</p>
+
+<h3 id="build-the-programs-with-cuda-real-robot">Build the programs with cuda (real robot)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/build.sh
+
+</code></pre></div></div>
+
+<h2 id="run">Run</h2>
+<h3 id="run-on-the-virtual-robot">Run on the virtual robot</h3>
+<h4 id="srcbrainconfigconfigyaml-or-srcbrainconfigconfig_localyaml-1">src/brain/config/config.yaml or src/brain/config/config_local.yaml</h4>
+<ol>
+  <li>set vision.image_camera_info_topic, vision.depth_image_topic, vision.depth_camera_info_topic to corresponding image topic
+    <h4 id="update-srcvisionconfigvisionyaml-or-srcvisionconfigvision_localyaml">update src/vision/config/vision.yaml or src/vision/config/vision_local.yaml</h4>
+  </li>
+  <li>set camera.color_topic, camera.depth_topic, camera.intrin_topic to corresponding ones</li>
+  <li>set detection_model.model_path to ./src/vision/model/sim_data_det_0126.onnx</li>
+  <li>set segmentation_model.model_path to ./src/vision/model/sim_data_seg_0126.onnx</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/sim_start.sh
+
+</code></pre></div></div>
+
+<p>File truncated at 100 lines <a href="https://github.com/boosterrobotics/robocup_demo/tree/main/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>galactic</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/robocup_demo/">robocup_demo</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/brain/">brain</a>
+        
+        <a class="label label-primary pkg-label" href="/p/detection_converter/">detection_converter</a>
+        
+        <a class="label label-primary pkg-label" href="/p/game_controller/">game_controller</a>
+        
+        <a class="label label-primary pkg-label" href="/p/booster_msgs/">booster_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/booster_interface/">booster_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/game_controller_interface/">game_controller_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision_interface/">vision_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision/">vision</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/boosterrobotics/robocup_demo.git">https://github.com/boosterrobotics/robocup_demo.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-03-10
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/robocup_demo/#galactic-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/robocup_demo/#galactic-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/robocup_demo/#galactic-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/brain/">brain</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/detection_converter/">detection_converter</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/game_controller/">game_controller</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/booster_msgs/">booster_msgs</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/booster_interface/">booster_interface</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/game_controller_interface/">game_controller_interface</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision_interface/">vision_interface</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision/">vision</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="booster-robocup-demo">Booster RoboCup Demo</h1>
+
+<h2 id="notice">NOTICE</h2>
+<p>The latest RoboCup rules do not allow unicast communication between robots and impose limits on the data size of communication packets during matches. This part of the rules has not yet been addressed in the current open‑source code. If robot communication is required in the competition, the implementation in brain_communication.cpp needs to be modified to comply with the rules.</p>
+
+<h2 id="introduction">introduction</h2>
+<p>The Booster RoboCup demo allows the robot to make autonomous decisions to kick the ball and complete the full RoboCup match. It includes three programs: vision, brain, and game_controller.</p>
+
+<ul>
+  <li>vision
+    <ul>
+      <li>The vision recognition program, based on Yolo-v8, detects objects such as robots, soccer balls, and the field, and calculates their positions in the robot’s coordinate system using geometric relationships.</li>
+    </ul>
+  </li>
+  <li>brain
+    <ul>
+      <li>The decision-making program reads visual data and GameController game control data, integrates all available information, makes judgments, and controls the robot to perform corresponding actions, completing the match process.</li>
+    </ul>
+  </li>
+  <li>game_controller
+    <ul>
+      <li>Reads the game control data packets broadcast by the referee machine on the local area network, converts them into ROS2 topic messages, and makes them available for the brain to use.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="install-extra-dependency">Install extra dependency</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install ros-humble-backward-ros</span>
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-humble-backward-ros
+
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install onnxruntime (If you want to run without cuda)</span>
+
+./third_party_aarch64/install_onnxruntime.sh <span class="c"># if aarch64</span>
+
+./third_party/install_onnxruntime.sh <span class="c"># if x64</span>
+
+</code></pre></div></div>
+
+<h2 id="run-on-booster-k1-or-t1">RUN ON Booster K1 or T1</h2>
+<p>This demo is designed for running on Booster K1, if you’d like to run this demo on Booster T1, few configs need to be updated.</p>
+<h3 id="srcbrainconfigconfigyaml-or-srcbrainconfigconfig_localyaml">src/brain/config/config.yaml or src/brain/config/config_local.yaml</h3>
+<ol>
+  <li>set robot.robot_height to 1.12</li>
+  <li>set robot.odom_factor to 1.2</li>
+  <li>set RLVisionKick.enableAutoVisualKick to false</li>
+  <li>set vision.image_camera_info_topic, vision.depth_image_topic, vision.depth_camera_info_topic to corresponding image topic
+    <h3 id="srcvisionconfigvisionyaml-or-srcvisionconfigvision_localyaml">src/vision/config/vision.yaml or src/vision/config/vision_local.yaml</h3>
+  </li>
+  <li>set camera.color_topic, camera.depth_topic, camera.intrin_topic to corresponding ones</li>
+  <li>set detection_model.model_path to ./src/vision/model/best_1223_10.3.engine</li>
+  <li>set segmentation_model.model_path to ./src/vision/model/best_seg_orin_10.3.engine</li>
+</ol>
+
+<h3 id="about-config-rlvisionkickenableautovisualkick">About config: RLVisionKick.enableAutoVisualKick</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">RLVisionKick</span>
+    <span class="s">enableAutoVisualKick</span><span class="err">:</span> <span class="kc">true</span><span class="s"> // This feature is only supported on the Booster K1, requiring firmware version 1.5.2 or higher.</span>
+
+</code></pre></div></div>
+<p>VisionKick is only support on K1 and requiring firmware version 1.5.2 or higher. See <a href="https://booster.feishu.cn/wiki/E3q5wF5SnitXZgkY18Uc8odBnXb#share-BYaDdL4nAoPfdcx2y3BcwORyndf">Firmware 1.5.2 Install Reference</a> for install instruction.</p>
+
+<p>Please make sure you have installed latest Booster Robotics SDK.</p>
+
+<h2 id="note">Note</h2>
+<p>This repo support jetpack 6.2. Adapted to the default TRT model in src/vision/config/vision.yaml.</p>
+
+<p>vision.yaml for jetpack 6.2 machine</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>detection_model:
+    model_path: ./src/vision/model/best_digua_second_10.3.engine
+    confidence_threshold: 0.2
+</code></pre></div></div>
+
+<h2 id="visualization">Visualization</h2>
+<p>booster_soccer.layout can be imported into Booster Studio for inspect logs</p>
+
+<h2 id="build">Build</h2>
+
+<h3 id="build-the-programs-without-cuda-inference-with-onnx-so-you-need-to-run-install-onnx-in-advance">Build the programs without cuda (inference with onnx, so you need to run install onnx in advance)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/build_no_cuda.sh
+
+</code></pre></div></div>
+<h4 id="build-error">build error</h4>
+<p>if you clone this repo in windows and run in Booster Studio Simulator, you may encounter problems blow</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./build_no_cuda.sh 
+<span class="nt">-bash</span>: ./build_no_cuda.sh: /bin/bash^M: bad interpreter: No such file or directory
+
+</code></pre></div></div>
+<p>This is caused by difference of Windows and Linux/Unix based system.</p>
+
+<p>Run cmd below</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>booster_soccer/scripts
+find <span class="nb">.</span> <span class="nt">-type</span> f <span class="nt">-print0</span> | xargs <span class="nt">-0</span> <span class="nb">sed</span> <span class="nt">-i</span> <span class="s1">'s/\r$//'</span>
+
+</code></pre></div></div>
+<p>Then run build_no_cuda.sh.</p>
+
+<h3 id="build-the-programs-with-cuda-real-robot">Build the programs with cuda (real robot)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/build.sh
+
+</code></pre></div></div>
+
+<h2 id="run">Run</h2>
+<h3 id="run-on-the-virtual-robot">Run on the virtual robot</h3>
+<h4 id="srcbrainconfigconfigyaml-or-srcbrainconfigconfig_localyaml-1">src/brain/config/config.yaml or src/brain/config/config_local.yaml</h4>
+<ol>
+  <li>set vision.image_camera_info_topic, vision.depth_image_topic, vision.depth_camera_info_topic to corresponding image topic
+    <h4 id="update-srcvisionconfigvisionyaml-or-srcvisionconfigvision_localyaml">update src/vision/config/vision.yaml or src/vision/config/vision_local.yaml</h4>
+  </li>
+  <li>set camera.color_topic, camera.depth_topic, camera.intrin_topic to corresponding ones</li>
+  <li>set detection_model.model_path to ./src/vision/model/sim_data_det_0126.onnx</li>
+  <li>set segmentation_model.model_path to ./src/vision/model/sim_data_seg_0126.onnx</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/sim_start.sh
+
+</code></pre></div></div>
+
+<p>File truncated at 100 lines <a href="https://github.com/boosterrobotics/robocup_demo/tree/main/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>iron</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/robocup_demo/">robocup_demo</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/brain/">brain</a>
+        
+        <a class="label label-primary pkg-label" href="/p/detection_converter/">detection_converter</a>
+        
+        <a class="label label-primary pkg-label" href="/p/game_controller/">game_controller</a>
+        
+        <a class="label label-primary pkg-label" href="/p/booster_msgs/">booster_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/booster_interface/">booster_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/game_controller_interface/">game_controller_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision_interface/">vision_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision/">vision</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/boosterrobotics/robocup_demo.git">https://github.com/boosterrobotics/robocup_demo.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-03-10
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/robocup_demo/#iron-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/robocup_demo/#iron-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/robocup_demo/#iron-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/brain/">brain</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/detection_converter/">detection_converter</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/game_controller/">game_controller</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/booster_msgs/">booster_msgs</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/booster_interface/">booster_interface</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/game_controller_interface/">game_controller_interface</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision_interface/">vision_interface</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision/">vision</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="booster-robocup-demo">Booster RoboCup Demo</h1>
+
+<h2 id="notice">NOTICE</h2>
+<p>The latest RoboCup rules do not allow unicast communication between robots and impose limits on the data size of communication packets during matches. This part of the rules has not yet been addressed in the current open‑source code. If robot communication is required in the competition, the implementation in brain_communication.cpp needs to be modified to comply with the rules.</p>
+
+<h2 id="introduction">introduction</h2>
+<p>The Booster RoboCup demo allows the robot to make autonomous decisions to kick the ball and complete the full RoboCup match. It includes three programs: vision, brain, and game_controller.</p>
+
+<ul>
+  <li>vision
+    <ul>
+      <li>The vision recognition program, based on Yolo-v8, detects objects such as robots, soccer balls, and the field, and calculates their positions in the robot’s coordinate system using geometric relationships.</li>
+    </ul>
+  </li>
+  <li>brain
+    <ul>
+      <li>The decision-making program reads visual data and GameController game control data, integrates all available information, makes judgments, and controls the robot to perform corresponding actions, completing the match process.</li>
+    </ul>
+  </li>
+  <li>game_controller
+    <ul>
+      <li>Reads the game control data packets broadcast by the referee machine on the local area network, converts them into ROS2 topic messages, and makes them available for the brain to use.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="install-extra-dependency">Install extra dependency</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install ros-humble-backward-ros</span>
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-humble-backward-ros
+
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install onnxruntime (If you want to run without cuda)</span>
+
+./third_party_aarch64/install_onnxruntime.sh <span class="c"># if aarch64</span>
+
+./third_party/install_onnxruntime.sh <span class="c"># if x64</span>
+
+</code></pre></div></div>
+
+<h2 id="run-on-booster-k1-or-t1">RUN ON Booster K1 or T1</h2>
+<p>This demo is designed for running on Booster K1, if you’d like to run this demo on Booster T1, few configs need to be updated.</p>
+<h3 id="srcbrainconfigconfigyaml-or-srcbrainconfigconfig_localyaml">src/brain/config/config.yaml or src/brain/config/config_local.yaml</h3>
+<ol>
+  <li>set robot.robot_height to 1.12</li>
+  <li>set robot.odom_factor to 1.2</li>
+  <li>set RLVisionKick.enableAutoVisualKick to false</li>
+  <li>set vision.image_camera_info_topic, vision.depth_image_topic, vision.depth_camera_info_topic to corresponding image topic
+    <h3 id="srcvisionconfigvisionyaml-or-srcvisionconfigvision_localyaml">src/vision/config/vision.yaml or src/vision/config/vision_local.yaml</h3>
+  </li>
+  <li>set camera.color_topic, camera.depth_topic, camera.intrin_topic to corresponding ones</li>
+  <li>set detection_model.model_path to ./src/vision/model/best_1223_10.3.engine</li>
+  <li>set segmentation_model.model_path to ./src/vision/model/best_seg_orin_10.3.engine</li>
+</ol>
+
+<h3 id="about-config-rlvisionkickenableautovisualkick">About config: RLVisionKick.enableAutoVisualKick</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">RLVisionKick</span>
+    <span class="s">enableAutoVisualKick</span><span class="err">:</span> <span class="kc">true</span><span class="s"> // This feature is only supported on the Booster K1, requiring firmware version 1.5.2 or higher.</span>
+
+</code></pre></div></div>
+<p>VisionKick is only support on K1 and requiring firmware version 1.5.2 or higher. See <a href="https://booster.feishu.cn/wiki/E3q5wF5SnitXZgkY18Uc8odBnXb#share-BYaDdL4nAoPfdcx2y3BcwORyndf">Firmware 1.5.2 Install Reference</a> for install instruction.</p>
+
+<p>Please make sure you have installed latest Booster Robotics SDK.</p>
+
+<h2 id="note">Note</h2>
+<p>This repo support jetpack 6.2. Adapted to the default TRT model in src/vision/config/vision.yaml.</p>
+
+<p>vision.yaml for jetpack 6.2 machine</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>detection_model:
+    model_path: ./src/vision/model/best_digua_second_10.3.engine
+    confidence_threshold: 0.2
+</code></pre></div></div>
+
+<h2 id="visualization">Visualization</h2>
+<p>booster_soccer.layout can be imported into Booster Studio for inspect logs</p>
+
+<h2 id="build">Build</h2>
+
+<h3 id="build-the-programs-without-cuda-inference-with-onnx-so-you-need-to-run-install-onnx-in-advance">Build the programs without cuda (inference with onnx, so you need to run install onnx in advance)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/build_no_cuda.sh
+
+</code></pre></div></div>
+<h4 id="build-error">build error</h4>
+<p>if you clone this repo in windows and run in Booster Studio Simulator, you may encounter problems blow</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./build_no_cuda.sh 
+<span class="nt">-bash</span>: ./build_no_cuda.sh: /bin/bash^M: bad interpreter: No such file or directory
+
+</code></pre></div></div>
+<p>This is caused by difference of Windows and Linux/Unix based system.</p>
+
+<p>Run cmd below</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>booster_soccer/scripts
+find <span class="nb">.</span> <span class="nt">-type</span> f <span class="nt">-print0</span> | xargs <span class="nt">-0</span> <span class="nb">sed</span> <span class="nt">-i</span> <span class="s1">'s/\r$//'</span>
+
+</code></pre></div></div>
+<p>Then run build_no_cuda.sh.</p>
+
+<h3 id="build-the-programs-with-cuda-real-robot">Build the programs with cuda (real robot)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/build.sh
+
+</code></pre></div></div>
+
+<h2 id="run">Run</h2>
+<h3 id="run-on-the-virtual-robot">Run on the virtual robot</h3>
+<h4 id="srcbrainconfigconfigyaml-or-srcbrainconfigconfig_localyaml-1">src/brain/config/config.yaml or src/brain/config/config_local.yaml</h4>
+<ol>
+  <li>set vision.image_camera_info_topic, vision.depth_image_topic, vision.depth_camera_info_topic to corresponding image topic
+    <h4 id="update-srcvisionconfigvisionyaml-or-srcvisionconfigvision_localyaml">update src/vision/config/vision.yaml or src/vision/config/vision_local.yaml</h4>
+  </li>
+  <li>set camera.color_topic, camera.depth_topic, camera.intrin_topic to corresponding ones</li>
+  <li>set detection_model.model_path to ./src/vision/model/sim_data_det_0126.onnx</li>
+  <li>set segmentation_model.model_path to ./src/vision/model/sim_data_seg_0126.onnx</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/sim_start.sh
+
+</code></pre></div></div>
+
+<p>File truncated at 100 lines <a href="https://github.com/boosterrobotics/robocup_demo/tree/main/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>melodic</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/robocup_demo/">robocup_demo</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/brain/">brain</a>
+        
+        <a class="label label-primary pkg-label" href="/p/detection_converter/">detection_converter</a>
+        
+        <a class="label label-primary pkg-label" href="/p/game_controller/">game_controller</a>
+        
+        <a class="label label-primary pkg-label" href="/p/booster_msgs/">booster_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/booster_interface/">booster_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/game_controller_interface/">game_controller_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision_interface/">vision_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision/">vision</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/boosterrobotics/robocup_demo.git">https://github.com/boosterrobotics/robocup_demo.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-03-10
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/robocup_demo/#melodic-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/robocup_demo/#melodic-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/robocup_demo/#melodic-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/brain/">brain</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/detection_converter/">detection_converter</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/game_controller/">game_controller</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/booster_msgs/">booster_msgs</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/booster_interface/">booster_interface</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/game_controller_interface/">game_controller_interface</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision_interface/">vision_interface</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision/">vision</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="booster-robocup-demo">Booster RoboCup Demo</h1>
+
+<h2 id="notice">NOTICE</h2>
+<p>The latest RoboCup rules do not allow unicast communication between robots and impose limits on the data size of communication packets during matches. This part of the rules has not yet been addressed in the current open‑source code. If robot communication is required in the competition, the implementation in brain_communication.cpp needs to be modified to comply with the rules.</p>
+
+<h2 id="introduction">introduction</h2>
+<p>The Booster RoboCup demo allows the robot to make autonomous decisions to kick the ball and complete the full RoboCup match. It includes three programs: vision, brain, and game_controller.</p>
+
+<ul>
+  <li>vision
+    <ul>
+      <li>The vision recognition program, based on Yolo-v8, detects objects such as robots, soccer balls, and the field, and calculates their positions in the robot’s coordinate system using geometric relationships.</li>
+    </ul>
+  </li>
+  <li>brain
+    <ul>
+      <li>The decision-making program reads visual data and GameController game control data, integrates all available information, makes judgments, and controls the robot to perform corresponding actions, completing the match process.</li>
+    </ul>
+  </li>
+  <li>game_controller
+    <ul>
+      <li>Reads the game control data packets broadcast by the referee machine on the local area network, converts them into ROS2 topic messages, and makes them available for the brain to use.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="install-extra-dependency">Install extra dependency</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install ros-humble-backward-ros</span>
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-humble-backward-ros
+
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install onnxruntime (If you want to run without cuda)</span>
+
+./third_party_aarch64/install_onnxruntime.sh <span class="c"># if aarch64</span>
+
+./third_party/install_onnxruntime.sh <span class="c"># if x64</span>
+
+</code></pre></div></div>
+
+<h2 id="run-on-booster-k1-or-t1">RUN ON Booster K1 or T1</h2>
+<p>This demo is designed for running on Booster K1, if you’d like to run this demo on Booster T1, few configs need to be updated.</p>
+<h3 id="srcbrainconfigconfigyaml-or-srcbrainconfigconfig_localyaml">src/brain/config/config.yaml or src/brain/config/config_local.yaml</h3>
+<ol>
+  <li>set robot.robot_height to 1.12</li>
+  <li>set robot.odom_factor to 1.2</li>
+  <li>set RLVisionKick.enableAutoVisualKick to false</li>
+  <li>set vision.image_camera_info_topic, vision.depth_image_topic, vision.depth_camera_info_topic to corresponding image topic
+    <h3 id="srcvisionconfigvisionyaml-or-srcvisionconfigvision_localyaml">src/vision/config/vision.yaml or src/vision/config/vision_local.yaml</h3>
+  </li>
+  <li>set camera.color_topic, camera.depth_topic, camera.intrin_topic to corresponding ones</li>
+  <li>set detection_model.model_path to ./src/vision/model/best_1223_10.3.engine</li>
+  <li>set segmentation_model.model_path to ./src/vision/model/best_seg_orin_10.3.engine</li>
+</ol>
+
+<h3 id="about-config-rlvisionkickenableautovisualkick">About config: RLVisionKick.enableAutoVisualKick</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">RLVisionKick</span>
+    <span class="s">enableAutoVisualKick</span><span class="err">:</span> <span class="kc">true</span><span class="s"> // This feature is only supported on the Booster K1, requiring firmware version 1.5.2 or higher.</span>
+
+</code></pre></div></div>
+<p>VisionKick is only support on K1 and requiring firmware version 1.5.2 or higher. See <a href="https://booster.feishu.cn/wiki/E3q5wF5SnitXZgkY18Uc8odBnXb#share-BYaDdL4nAoPfdcx2y3BcwORyndf">Firmware 1.5.2 Install Reference</a> for install instruction.</p>
+
+<p>Please make sure you have installed latest Booster Robotics SDK.</p>
+
+<h2 id="note">Note</h2>
+<p>This repo support jetpack 6.2. Adapted to the default TRT model in src/vision/config/vision.yaml.</p>
+
+<p>vision.yaml for jetpack 6.2 machine</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>detection_model:
+    model_path: ./src/vision/model/best_digua_second_10.3.engine
+    confidence_threshold: 0.2
+</code></pre></div></div>
+
+<h2 id="visualization">Visualization</h2>
+<p>booster_soccer.layout can be imported into Booster Studio for inspect logs</p>
+
+<h2 id="build">Build</h2>
+
+<h3 id="build-the-programs-without-cuda-inference-with-onnx-so-you-need-to-run-install-onnx-in-advance">Build the programs without cuda (inference with onnx, so you need to run install onnx in advance)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/build_no_cuda.sh
+
+</code></pre></div></div>
+<h4 id="build-error">build error</h4>
+<p>if you clone this repo in windows and run in Booster Studio Simulator, you may encounter problems blow</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./build_no_cuda.sh 
+<span class="nt">-bash</span>: ./build_no_cuda.sh: /bin/bash^M: bad interpreter: No such file or directory
+
+</code></pre></div></div>
+<p>This is caused by difference of Windows and Linux/Unix based system.</p>
+
+<p>Run cmd below</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>booster_soccer/scripts
+find <span class="nb">.</span> <span class="nt">-type</span> f <span class="nt">-print0</span> | xargs <span class="nt">-0</span> <span class="nb">sed</span> <span class="nt">-i</span> <span class="s1">'s/\r$//'</span>
+
+</code></pre></div></div>
+<p>Then run build_no_cuda.sh.</p>
+
+<h3 id="build-the-programs-with-cuda-real-robot">Build the programs with cuda (real robot)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/build.sh
+
+</code></pre></div></div>
+
+<h2 id="run">Run</h2>
+<h3 id="run-on-the-virtual-robot">Run on the virtual robot</h3>
+<h4 id="srcbrainconfigconfigyaml-or-srcbrainconfigconfig_localyaml-1">src/brain/config/config.yaml or src/brain/config/config_local.yaml</h4>
+<ol>
+  <li>set vision.image_camera_info_topic, vision.depth_image_topic, vision.depth_camera_info_topic to corresponding image topic
+    <h4 id="update-srcvisionconfigvisionyaml-or-srcvisionconfigvision_localyaml">update src/vision/config/vision.yaml or src/vision/config/vision_local.yaml</h4>
+  </li>
+  <li>set camera.color_topic, camera.depth_topic, camera.intrin_topic to corresponding ones</li>
+  <li>set detection_model.model_path to ./src/vision/model/sim_data_det_0126.onnx</li>
+  <li>set segmentation_model.model_path to ./src/vision/model/sim_data_seg_0126.onnx</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/sim_start.sh
+
+</code></pre></div></div>
+
+<p>File truncated at 100 lines <a href="https://github.com/boosterrobotics/robocup_demo/tree/main/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>noetic</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/robocup_demo/">robocup_demo</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/brain/">brain</a>
+        
+        <a class="label label-primary pkg-label" href="/p/detection_converter/">detection_converter</a>
+        
+        <a class="label label-primary pkg-label" href="/p/game_controller/">game_controller</a>
+        
+        <a class="label label-primary pkg-label" href="/p/booster_msgs/">booster_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/booster_interface/">booster_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/game_controller_interface/">game_controller_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision_interface/">vision_interface</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision/">vision</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/boosterrobotics/robocup_demo.git">https://github.com/boosterrobotics/robocup_demo.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-03-10
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/robocup_demo/#noetic-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/robocup_demo/#noetic-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/robocup_demo/#noetic-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/brain/">brain</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/detection_converter/">detection_converter</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/game_controller/">game_controller</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/booster_msgs/">booster_msgs</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/booster_interface/">booster_interface</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/game_controller_interface/">game_controller_interface</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision_interface/">vision_interface</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision/">vision</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="booster-robocup-demo">Booster RoboCup Demo</h1>
+
+<h2 id="notice">NOTICE</h2>
+<p>The latest RoboCup rules do not allow unicast communication between robots and impose limits on the data size of communication packets during matches. This part of the rules has not yet been addressed in the current open‑source code. If robot communication is required in the competition, the implementation in brain_communication.cpp needs to be modified to comply with the rules.</p>
+
+<h2 id="introduction">introduction</h2>
+<p>The Booster RoboCup demo allows the robot to make autonomous decisions to kick the ball and complete the full RoboCup match. It includes three programs: vision, brain, and game_controller.</p>
+
+<ul>
+  <li>vision
+    <ul>
+      <li>The vision recognition program, based on Yolo-v8, detects objects such as robots, soccer balls, and the field, and calculates their positions in the robot’s coordinate system using geometric relationships.</li>
+    </ul>
+  </li>
+  <li>brain
+    <ul>
+      <li>The decision-making program reads visual data and GameController game control data, integrates all available information, makes judgments, and controls the robot to perform corresponding actions, completing the match process.</li>
+    </ul>
+  </li>
+  <li>game_controller
+    <ul>
+      <li>Reads the game control data packets broadcast by the referee machine on the local area network, converts them into ROS2 topic messages, and makes them available for the brain to use.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="install-extra-dependency">Install extra dependency</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install ros-humble-backward-ros</span>
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-humble-backward-ros
+
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install onnxruntime (If you want to run without cuda)</span>
+
+./third_party_aarch64/install_onnxruntime.sh <span class="c"># if aarch64</span>
+
+./third_party/install_onnxruntime.sh <span class="c"># if x64</span>
+
+</code></pre></div></div>
+
+<h2 id="run-on-booster-k1-or-t1">RUN ON Booster K1 or T1</h2>
+<p>This demo is designed for running on Booster K1, if you’d like to run this demo on Booster T1, few configs need to be updated.</p>
+<h3 id="srcbrainconfigconfigyaml-or-srcbrainconfigconfig_localyaml">src/brain/config/config.yaml or src/brain/config/config_local.yaml</h3>
+<ol>
+  <li>set robot.robot_height to 1.12</li>
+  <li>set robot.odom_factor to 1.2</li>
+  <li>set RLVisionKick.enableAutoVisualKick to false</li>
+  <li>set vision.image_camera_info_topic, vision.depth_image_topic, vision.depth_camera_info_topic to corresponding image topic
+    <h3 id="srcvisionconfigvisionyaml-or-srcvisionconfigvision_localyaml">src/vision/config/vision.yaml or src/vision/config/vision_local.yaml</h3>
+  </li>
+  <li>set camera.color_topic, camera.depth_topic, camera.intrin_topic to corresponding ones</li>
+  <li>set detection_model.model_path to ./src/vision/model/best_1223_10.3.engine</li>
+  <li>set segmentation_model.model_path to ./src/vision/model/best_seg_orin_10.3.engine</li>
+</ol>
+
+<h3 id="about-config-rlvisionkickenableautovisualkick">About config: RLVisionKick.enableAutoVisualKick</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">RLVisionKick</span>
+    <span class="s">enableAutoVisualKick</span><span class="err">:</span> <span class="kc">true</span><span class="s"> // This feature is only supported on the Booster K1, requiring firmware version 1.5.2 or higher.</span>
+
+</code></pre></div></div>
+<p>VisionKick is only support on K1 and requiring firmware version 1.5.2 or higher. See <a href="https://booster.feishu.cn/wiki/E3q5wF5SnitXZgkY18Uc8odBnXb#share-BYaDdL4nAoPfdcx2y3BcwORyndf">Firmware 1.5.2 Install Reference</a> for install instruction.</p>
+
+<p>Please make sure you have installed latest Booster Robotics SDK.</p>
+
+<h2 id="note">Note</h2>
+<p>This repo support jetpack 6.2. Adapted to the default TRT model in src/vision/config/vision.yaml.</p>
+
+<p>vision.yaml for jetpack 6.2 machine</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>detection_model:
+    model_path: ./src/vision/model/best_digua_second_10.3.engine
+    confidence_threshold: 0.2
+</code></pre></div></div>
+
+<h2 id="visualization">Visualization</h2>
+<p>booster_soccer.layout can be imported into Booster Studio for inspect logs</p>
+
+<h2 id="build">Build</h2>
+
+<h3 id="build-the-programs-without-cuda-inference-with-onnx-so-you-need-to-run-install-onnx-in-advance">Build the programs without cuda (inference with onnx, so you need to run install onnx in advance)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/build_no_cuda.sh
+
+</code></pre></div></div>
+<h4 id="build-error">build error</h4>
+<p>if you clone this repo in windows and run in Booster Studio Simulator, you may encounter problems blow</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./build_no_cuda.sh 
+<span class="nt">-bash</span>: ./build_no_cuda.sh: /bin/bash^M: bad interpreter: No such file or directory
+
+</code></pre></div></div>
+<p>This is caused by difference of Windows and Linux/Unix based system.</p>
+
+<p>Run cmd below</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>booster_soccer/scripts
+find <span class="nb">.</span> <span class="nt">-type</span> f <span class="nt">-print0</span> | xargs <span class="nt">-0</span> <span class="nb">sed</span> <span class="nt">-i</span> <span class="s1">'s/\r$//'</span>
+
+</code></pre></div></div>
+<p>Then run build_no_cuda.sh.</p>
+
+<h3 id="build-the-programs-with-cuda-real-robot">Build the programs with cuda (real robot)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/build.sh
+
+</code></pre></div></div>
+
+<h2 id="run">Run</h2>
+<h3 id="run-on-the-virtual-robot">Run on the virtual robot</h3>
+<h4 id="srcbrainconfigconfigyaml-or-srcbrainconfigconfig_localyaml-1">src/brain/config/config.yaml or src/brain/config/config_local.yaml</h4>
+<ol>
+  <li>set vision.image_camera_info_topic, vision.depth_image_topic, vision.depth_camera_info_topic to corresponding image topic
+    <h4 id="update-srcvisionconfigvisionyaml-or-srcvisionconfigvision_localyaml">update src/vision/config/vision.yaml or src/vision/config/vision_local.yaml</h4>
+  </li>
+  <li>set camera.color_topic, camera.depth_topic, camera.intrin_topic to corresponding ones</li>
+  <li>set detection_model.model_path to ./src/vision/model/sim_data_det_0126.onnx</li>
+  <li>set segmentation_model.model_path to ./src/vision/model/sim_data_seg_0126.onnx</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./scripts/sim_start.sh
+
+</code></pre></div></div>
+
+<p>File truncated at 100 lines <a href="https://github.com/boosterrobotics/robocup_demo/tree/main/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+
+<script type="text/javascript" src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+  $(function() {
+    setupContributeListTabLinks();
+  });
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+    setupContributeLists("https://github.com/boosterrobotics/robocup_demo.git");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2026-04-30</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,4465 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>motoman_robotiq_grasping - ROS Repository Overview</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+    <meta name="robots" content="noindex">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/r/motoman_robotiq_grasping/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body >
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="https://docs.ros.org/en/rolling/Contact.html#support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="https://docs.ros.org/en/rolling/Contact.html#support"">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content" >
+      <div class="wrapper" >
+        <div class="container-fluid" style="margin-top:20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_repos=true">Repos</a></li>
+        <li class="active"></li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+        <li data="noetic" id="noetic-option" class="disabled older-distro-option"  href="#noetic">
+          <a href="#noetic" data="noetic" id="noetic-button">noetic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>humble</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/motoman_robotiq_grasping/">motoman_robotiq_grasping</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/coordinator/">coordinator</a>
+        
+        <a class="label label-primary pkg-label" href="/p/detection/">detection</a>
+        
+        <a class="label label-primary pkg-label" href="/p/ma2010_robotiq_moveit_config/">ma2010_robotiq_moveit_config</a>
+        
+        <a class="label label-primary pkg-label" href="/p/ma2010_server/">ma2010_server</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman/">motoman</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_driver/">motoman_driver</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_ma2010_moveit_config/">motoman_ma2010_moveit_config</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_ma2010_support/">motoman_ma2010_support</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_msgs/">motoman_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_resources/">motoman_resources</a>
+        
+        <a class="label label-primary pkg-label" href="/p/gripper_server/">gripper_server</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_140_gripper_visualization/">robotiq_2f_140_gripper_visualization</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_85_gripper_visualization/">robotiq_2f_85_gripper_visualization</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_gripper_control/">robotiq_2f_gripper_control</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_gripper_msgs/">robotiq_2f_gripper_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_modbus_rtu/">robotiq_modbus_rtu</a>
+        
+        <a class="label label-primary pkg-label" href="/p/cv_bridge/">cv_bridge</a>
+        
+        <a class="label label-primary pkg-label" href="/p/image_geometry/">image_geometry</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision_opencv/">vision_opencv</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/ryanreadbooks/motoman_robotiq_grasping.git">https://github.com/ryanreadbooks/motoman_robotiq_grasping.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">master</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2023-06-05
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#humble-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#humble-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#humble-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/coordinator/">coordinator</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/detection/">detection</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/ma2010_robotiq_moveit_config/">ma2010_robotiq_moveit_config</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/ma2010_server/">ma2010_server</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman/">motoman</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_driver/">motoman_driver</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_ma2010_moveit_config/">motoman_ma2010_moveit_config</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_ma2010_support/">motoman_ma2010_support</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_msgs/">motoman_msgs</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_resources/">motoman_resources</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/gripper_server/">gripper_server</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_140_gripper_visualization/">robotiq_2f_140_gripper_visualization</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_85_gripper_visualization/">robotiq_2f_85_gripper_visualization</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_gripper_control/">robotiq_2f_gripper_control</a></td>
+                    <td>0.0.3</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_gripper_msgs/">robotiq_2f_gripper_msgs</a></td>
+                    <td>0.0.2</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_modbus_rtu/">robotiq_modbus_rtu</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/cv_bridge/">cv_bridge</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/image_geometry/">image_geometry</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision_opencv/">vision_opencv</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="安川ma2010机械臂--robotiq-2f-140--realsense-视觉抓取">安川MA2010机械臂 + Robotiq 2F-140 + RealSense 视觉抓取</h1>
+
+<p><strong>功能：在ROS平台上，使用realsense相机引导安川MA2010机械臂用Robotiq 2F-140夹爪进行抓取</strong></p>
+
+<ul>
+  <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%AE%89%E5%B7%9Dma2010%E6%9C%BA%E6%A2%B0%E8%87%82--robotiq-2f-140--realsense-%E8%A7%86%E8%A7%89%E6%8A%93%E5%8F%96">安川MA2010机械臂 + Robotiq 2F-140 + RealSense 视觉抓取</a>
+    <ul>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#0-%E6%93%8D%E4%BD%9C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">0. 操作注意事项</a></li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#1-%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">1. 前提条件</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#11-%E8%BD%AF%E4%BB%B6%E6%9D%A1%E4%BB%B6">1.1. 软件条件</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#12-%E7%A1%AC%E4%BB%B6%E6%9D%A1%E4%BB%B6">1.2. 硬件条件</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#2-%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85">2. 软件安装</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#21-%E5%89%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6%E6%9D%A1%E4%BB%B6">2.1. 前置软件条件</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#22-%E7%A1%AC%E4%BB%B6%E9%A9%B1%E5%8A%A8">2.2. 硬件驱动</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#23-%E5%AE%89%E8%A3%85%E6%9C%AC%E4%BB%93%E5%BA%93">2.3. 安装本仓库</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#3-%E5%AE%89%E5%B7%9D%E9%A9%B1%E5%8A%A8%E6%B5%8B%E8%AF%95">3. 安川驱动测试</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#31-%E5%AE%98%E6%96%B9%E7%9A%84%E5%8A%9F%E8%83%BD%E5%8C%85%E6%B5%8B%E8%AF%95">3.1. 官方的功能包测试</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#32-%E7%94%A8%E5%B8%A6%E6%9C%89robotiq%E5%A4%B9%E7%88%AA%E7%9A%84%E6%9C%BA%E6%A2%B0%E8%87%82%E6%B5%8B%E8%AF%95">3.2. 用带有robotiq夹爪的机械臂测试</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4-%E5%90%84%E8%8A%82%E7%82%B9%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D">4. 各节点功能介绍</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#41-robotiq%E5%A4%B9%E7%88%AA%E5%8A%9F%E8%83%BD">4.1. Robotiq夹爪功能</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#42-ma2010-server%E5%8A%9F%E8%83%BD">4.2. MA2010 Server功能</a></li>
+          <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#43-coordinator%E5%8A%9F%E8%83%BD">4.3. Coordinator功能</a>
+            <ul>
+              <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#431-debug%E6%A8%A1%E5%BC%8F">4.3.1. debug模式</a>
+                <ul>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4311-%E6%89%A7%E8%A1%8C%E4%B8%80%E6%AC%A1%E6%8A%93%E5%8F%96">4.3.1.1. 执行一次抓取</a></li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4312-%E6%8E%A7%E5%88%B6%E6%9C%BA%E6%A2%B0%E8%87%82%E5%8F%AA%E5%89%8D%E5%BE%80%E7%9B%AE%E6%A0%87%E6%8A%93%E5%8F%96%E7%82%B9%E8%80%8C%E4%B8%8D%E6%89%A7%E8%A1%8C%E6%8A%93%E5%8F%96%E6%93%8D%E4%BD%9C">4.3.1.2. 控制机械臂只前往目标抓取点而不执行抓取操作</a></li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4313-%E8%8E%B7%E5%8F%96%E6%8A%93%E5%8F%96%E4%BD%8D%E5%A7%BF%E7%9A%84%E5%BF%AB%E7%85%A7">4.3.1.3. 获取抓取位姿的快照</a></li>
+                </ul>
+              </li>
+              <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#432-auto%E6%A8%A1%E5%BC%8F">4.3.2. auto模式</a>
+                <ul>
+                  <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4321-%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">4.3.2.1. 自动抓取</a>
+                    <ul>
+                      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%BC%80%E5%A7%8B%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">开始自动抓取</a></li>
+                      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%81%9C%E6%AD%A2%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">停止自动抓取</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4322-%E9%A2%84%E5%AE%9A%E4%B9%89%E5%8A%A8%E4%BD%9C">4.3.2.2. 预定义动作</a></li>
+                </ul>
+              </li>
+              <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#433-%E7%8A%B6%E6%80%81%E8%AE%B0%E5%BD%95">4.3.3. 状态记录</a></li>
+            </ul>
+          </li>
+          <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#44-%E6%A3%80%E6%B5%8B%E5%8A%9F%E8%83%BD">4.4. 检测功能</a>
+            <ul>
+              <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%90%AF%E5%8A%A8%E6%A3%80%E6%B5%8B%E8%8A%82%E7%82%B9">启动检测节点</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#5-%E7%9C%BC%E5%9C%A8%E6%89%8B%E4%B8%8A%E6%A0%87%E5%AE%9A">5. 眼在手上标定</a></li>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E8%87%B4%E8%B0%A2%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99">致谢/参考资料</a></li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<p><img src="https://raw.githubusercontent.com/ryanreadbooks/motoman_robotiq_grasping/master/images/demo.png" alt="ma2010" style="zoom:50%;"></p>
+
+<h2 id="0-操作注意事项">0. 操作注意事项</h2>
+
+<p>本仓库实现的所有系统功能仅为实验性质，并未考虑机械臂运动的安全性问题，因此操作的时候必须十分注意机械臂的动作情况，以免与人或物发生碰撞。</p>
+
+<p><strong>因此建议操作过程中要护住示教器上的急停按钮，以免发生意外。</strong></p>
+
+<h2 id="1-前提条件">1. 前提条件</h2>
+
+<h3 id="11-软件条件">1.1. 软件条件</h3>
+
+<p>系统：Ubuntu16.04 + ROS kinetic</p>
+
+<p>语言：Python3.7 + CPP</p>
+
+<h3 id="12-硬件条件">1.2. 硬件条件</h3>
+
+<p>机械臂：安川MA2010机械臂</p>
+
+<p>相机：Intel RealSense D435i</p>
+
+<p>二指夹持器：Robotiq 2F-140</p>
+
+<p>其它：双绞线、USB线、万用表等</p>
+
+<h2 id="2-软件安装">2. 软件安装</h2>
+
+<h3 id="21-前置软件条件">2.1. 前置软件条件</h3>
+
+<ol>
+  <li>安装<a href="https://wiki.ros.org/kinetic/Installation/Ubuntu">ROS</a>
+</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="c"># 包括ros-controller</span>
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-ros-control
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-ros-controllers
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-moveit
+   
+</code></pre></div></div>
+<ol>
+  <li>
+    <p>安装<a href="https://github.com/IntelRealSense/realsense-ros">realsense-ros</a>（使用的是ROS1）</p>
+
+    <ul>
+      <li>realsense2_camera（相机发布图像话题）</li>
+      <li>realsense2-description（包含相机urdf模型）</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="22-硬件驱动">2.2. 硬件驱动</h3>
+
+<ul>
+  <li>安川机械臂机械臂驱动使用<a href="https://github.com/ros-industrial/motoman">ros-industrial/motoman</a>，本仓库删除了一些无关的内容，仅保留ma2010_support；
+    <ul>
+      <li>机械臂的下位程序需提前下载到控制柜，参考<a href="http://wiki.ros.org/motoman">官方文档</a>。</li>
+    </ul>
+  </li>
+  <li>Robotiq 2F-140使用<a href="https://github.com/Danfoa/robotiq_2finger_grippers">Danfoa/robotiq_2finger_grippers</a>的代码进行驱动，对某些部分进行修改并集成在本仓库中。</li>
+</ul>
+
+<h3 id="23-安装本仓库">2.3. 安装本仓库</h3>
+
+<ol>
+  <li>创建工作空间</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">mkdir </span>demo_ws
+   
+</code></pre></div></div>
+<ol>
+  <li>将项目clone下来并初始化工作空间</li>
+</ol>
+
+<p>```bash</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>jazzy</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/motoman_robotiq_grasping/">motoman_robotiq_grasping</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/coordinator/">coordinator</a>
+        
+        <a class="label label-primary pkg-label" href="/p/detection/">detection</a>
+        
+        <a class="label label-primary pkg-label" href="/p/ma2010_robotiq_moveit_config/">ma2010_robotiq_moveit_config</a>
+        
+        <a class="label label-primary pkg-label" href="/p/ma2010_server/">ma2010_server</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman/">motoman</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_driver/">motoman_driver</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_ma2010_moveit_config/">motoman_ma2010_moveit_config</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_ma2010_support/">motoman_ma2010_support</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_msgs/">motoman_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_resources/">motoman_resources</a>
+        
+        <a class="label label-primary pkg-label" href="/p/gripper_server/">gripper_server</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_140_gripper_visualization/">robotiq_2f_140_gripper_visualization</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_85_gripper_visualization/">robotiq_2f_85_gripper_visualization</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_gripper_control/">robotiq_2f_gripper_control</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_gripper_msgs/">robotiq_2f_gripper_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_modbus_rtu/">robotiq_modbus_rtu</a>
+        
+        <a class="label label-primary pkg-label" href="/p/cv_bridge/">cv_bridge</a>
+        
+        <a class="label label-primary pkg-label" href="/p/image_geometry/">image_geometry</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision_opencv/">vision_opencv</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/ryanreadbooks/motoman_robotiq_grasping.git">https://github.com/ryanreadbooks/motoman_robotiq_grasping.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">master</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2023-06-05
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#jazzy-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#jazzy-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#jazzy-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/coordinator/">coordinator</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/detection/">detection</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/ma2010_robotiq_moveit_config/">ma2010_robotiq_moveit_config</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/ma2010_server/">ma2010_server</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman/">motoman</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_driver/">motoman_driver</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_ma2010_moveit_config/">motoman_ma2010_moveit_config</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_ma2010_support/">motoman_ma2010_support</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_msgs/">motoman_msgs</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_resources/">motoman_resources</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/gripper_server/">gripper_server</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_140_gripper_visualization/">robotiq_2f_140_gripper_visualization</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_85_gripper_visualization/">robotiq_2f_85_gripper_visualization</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_gripper_control/">robotiq_2f_gripper_control</a></td>
+                    <td>0.0.3</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_gripper_msgs/">robotiq_2f_gripper_msgs</a></td>
+                    <td>0.0.2</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_modbus_rtu/">robotiq_modbus_rtu</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/cv_bridge/">cv_bridge</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/image_geometry/">image_geometry</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision_opencv/">vision_opencv</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="安川ma2010机械臂--robotiq-2f-140--realsense-视觉抓取">安川MA2010机械臂 + Robotiq 2F-140 + RealSense 视觉抓取</h1>
+
+<p><strong>功能：在ROS平台上，使用realsense相机引导安川MA2010机械臂用Robotiq 2F-140夹爪进行抓取</strong></p>
+
+<ul>
+  <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%AE%89%E5%B7%9Dma2010%E6%9C%BA%E6%A2%B0%E8%87%82--robotiq-2f-140--realsense-%E8%A7%86%E8%A7%89%E6%8A%93%E5%8F%96">安川MA2010机械臂 + Robotiq 2F-140 + RealSense 视觉抓取</a>
+    <ul>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#0-%E6%93%8D%E4%BD%9C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">0. 操作注意事项</a></li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#1-%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">1. 前提条件</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#11-%E8%BD%AF%E4%BB%B6%E6%9D%A1%E4%BB%B6">1.1. 软件条件</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#12-%E7%A1%AC%E4%BB%B6%E6%9D%A1%E4%BB%B6">1.2. 硬件条件</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#2-%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85">2. 软件安装</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#21-%E5%89%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6%E6%9D%A1%E4%BB%B6">2.1. 前置软件条件</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#22-%E7%A1%AC%E4%BB%B6%E9%A9%B1%E5%8A%A8">2.2. 硬件驱动</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#23-%E5%AE%89%E8%A3%85%E6%9C%AC%E4%BB%93%E5%BA%93">2.3. 安装本仓库</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#3-%E5%AE%89%E5%B7%9D%E9%A9%B1%E5%8A%A8%E6%B5%8B%E8%AF%95">3. 安川驱动测试</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#31-%E5%AE%98%E6%96%B9%E7%9A%84%E5%8A%9F%E8%83%BD%E5%8C%85%E6%B5%8B%E8%AF%95">3.1. 官方的功能包测试</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#32-%E7%94%A8%E5%B8%A6%E6%9C%89robotiq%E5%A4%B9%E7%88%AA%E7%9A%84%E6%9C%BA%E6%A2%B0%E8%87%82%E6%B5%8B%E8%AF%95">3.2. 用带有robotiq夹爪的机械臂测试</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4-%E5%90%84%E8%8A%82%E7%82%B9%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D">4. 各节点功能介绍</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#41-robotiq%E5%A4%B9%E7%88%AA%E5%8A%9F%E8%83%BD">4.1. Robotiq夹爪功能</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#42-ma2010-server%E5%8A%9F%E8%83%BD">4.2. MA2010 Server功能</a></li>
+          <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#43-coordinator%E5%8A%9F%E8%83%BD">4.3. Coordinator功能</a>
+            <ul>
+              <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#431-debug%E6%A8%A1%E5%BC%8F">4.3.1. debug模式</a>
+                <ul>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4311-%E6%89%A7%E8%A1%8C%E4%B8%80%E6%AC%A1%E6%8A%93%E5%8F%96">4.3.1.1. 执行一次抓取</a></li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4312-%E6%8E%A7%E5%88%B6%E6%9C%BA%E6%A2%B0%E8%87%82%E5%8F%AA%E5%89%8D%E5%BE%80%E7%9B%AE%E6%A0%87%E6%8A%93%E5%8F%96%E7%82%B9%E8%80%8C%E4%B8%8D%E6%89%A7%E8%A1%8C%E6%8A%93%E5%8F%96%E6%93%8D%E4%BD%9C">4.3.1.2. 控制机械臂只前往目标抓取点而不执行抓取操作</a></li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4313-%E8%8E%B7%E5%8F%96%E6%8A%93%E5%8F%96%E4%BD%8D%E5%A7%BF%E7%9A%84%E5%BF%AB%E7%85%A7">4.3.1.3. 获取抓取位姿的快照</a></li>
+                </ul>
+              </li>
+              <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#432-auto%E6%A8%A1%E5%BC%8F">4.3.2. auto模式</a>
+                <ul>
+                  <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4321-%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">4.3.2.1. 自动抓取</a>
+                    <ul>
+                      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%BC%80%E5%A7%8B%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">开始自动抓取</a></li>
+                      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%81%9C%E6%AD%A2%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">停止自动抓取</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4322-%E9%A2%84%E5%AE%9A%E4%B9%89%E5%8A%A8%E4%BD%9C">4.3.2.2. 预定义动作</a></li>
+                </ul>
+              </li>
+              <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#433-%E7%8A%B6%E6%80%81%E8%AE%B0%E5%BD%95">4.3.3. 状态记录</a></li>
+            </ul>
+          </li>
+          <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#44-%E6%A3%80%E6%B5%8B%E5%8A%9F%E8%83%BD">4.4. 检测功能</a>
+            <ul>
+              <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%90%AF%E5%8A%A8%E6%A3%80%E6%B5%8B%E8%8A%82%E7%82%B9">启动检测节点</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#5-%E7%9C%BC%E5%9C%A8%E6%89%8B%E4%B8%8A%E6%A0%87%E5%AE%9A">5. 眼在手上标定</a></li>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E8%87%B4%E8%B0%A2%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99">致谢/参考资料</a></li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<p><img src="https://raw.githubusercontent.com/ryanreadbooks/motoman_robotiq_grasping/master/images/demo.png" alt="ma2010" style="zoom:50%;"></p>
+
+<h2 id="0-操作注意事项">0. 操作注意事项</h2>
+
+<p>本仓库实现的所有系统功能仅为实验性质，并未考虑机械臂运动的安全性问题，因此操作的时候必须十分注意机械臂的动作情况，以免与人或物发生碰撞。</p>
+
+<p><strong>因此建议操作过程中要护住示教器上的急停按钮，以免发生意外。</strong></p>
+
+<h2 id="1-前提条件">1. 前提条件</h2>
+
+<h3 id="11-软件条件">1.1. 软件条件</h3>
+
+<p>系统：Ubuntu16.04 + ROS kinetic</p>
+
+<p>语言：Python3.7 + CPP</p>
+
+<h3 id="12-硬件条件">1.2. 硬件条件</h3>
+
+<p>机械臂：安川MA2010机械臂</p>
+
+<p>相机：Intel RealSense D435i</p>
+
+<p>二指夹持器：Robotiq 2F-140</p>
+
+<p>其它：双绞线、USB线、万用表等</p>
+
+<h2 id="2-软件安装">2. 软件安装</h2>
+
+<h3 id="21-前置软件条件">2.1. 前置软件条件</h3>
+
+<ol>
+  <li>安装<a href="https://wiki.ros.org/kinetic/Installation/Ubuntu">ROS</a>
+</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="c"># 包括ros-controller</span>
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-ros-control
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-ros-controllers
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-moveit
+   
+</code></pre></div></div>
+<ol>
+  <li>
+    <p>安装<a href="https://github.com/IntelRealSense/realsense-ros">realsense-ros</a>（使用的是ROS1）</p>
+
+    <ul>
+      <li>realsense2_camera（相机发布图像话题）</li>
+      <li>realsense2-description（包含相机urdf模型）</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="22-硬件驱动">2.2. 硬件驱动</h3>
+
+<ul>
+  <li>安川机械臂机械臂驱动使用<a href="https://github.com/ros-industrial/motoman">ros-industrial/motoman</a>，本仓库删除了一些无关的内容，仅保留ma2010_support；
+    <ul>
+      <li>机械臂的下位程序需提前下载到控制柜，参考<a href="http://wiki.ros.org/motoman">官方文档</a>。</li>
+    </ul>
+  </li>
+  <li>Robotiq 2F-140使用<a href="https://github.com/Danfoa/robotiq_2finger_grippers">Danfoa/robotiq_2finger_grippers</a>的代码进行驱动，对某些部分进行修改并集成在本仓库中。</li>
+</ul>
+
+<h3 id="23-安装本仓库">2.3. 安装本仓库</h3>
+
+<ol>
+  <li>创建工作空间</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">mkdir </span>demo_ws
+   
+</code></pre></div></div>
+<ol>
+  <li>将项目clone下来并初始化工作空间</li>
+</ol>
+
+<p>```bash</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>kilted</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/motoman_robotiq_grasping/">motoman_robotiq_grasping</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/coordinator/">coordinator</a>
+        
+        <a class="label label-primary pkg-label" href="/p/detection/">detection</a>
+        
+        <a class="label label-primary pkg-label" href="/p/ma2010_robotiq_moveit_config/">ma2010_robotiq_moveit_config</a>
+        
+        <a class="label label-primary pkg-label" href="/p/ma2010_server/">ma2010_server</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman/">motoman</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_driver/">motoman_driver</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_ma2010_moveit_config/">motoman_ma2010_moveit_config</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_ma2010_support/">motoman_ma2010_support</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_msgs/">motoman_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_resources/">motoman_resources</a>
+        
+        <a class="label label-primary pkg-label" href="/p/gripper_server/">gripper_server</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_140_gripper_visualization/">robotiq_2f_140_gripper_visualization</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_85_gripper_visualization/">robotiq_2f_85_gripper_visualization</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_gripper_control/">robotiq_2f_gripper_control</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_gripper_msgs/">robotiq_2f_gripper_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_modbus_rtu/">robotiq_modbus_rtu</a>
+        
+        <a class="label label-primary pkg-label" href="/p/cv_bridge/">cv_bridge</a>
+        
+        <a class="label label-primary pkg-label" href="/p/image_geometry/">image_geometry</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision_opencv/">vision_opencv</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/ryanreadbooks/motoman_robotiq_grasping.git">https://github.com/ryanreadbooks/motoman_robotiq_grasping.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">master</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2023-06-05
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#kilted-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#kilted-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#kilted-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/coordinator/">coordinator</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/detection/">detection</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/ma2010_robotiq_moveit_config/">ma2010_robotiq_moveit_config</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/ma2010_server/">ma2010_server</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman/">motoman</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_driver/">motoman_driver</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_ma2010_moveit_config/">motoman_ma2010_moveit_config</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_ma2010_support/">motoman_ma2010_support</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_msgs/">motoman_msgs</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_resources/">motoman_resources</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/gripper_server/">gripper_server</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_140_gripper_visualization/">robotiq_2f_140_gripper_visualization</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_85_gripper_visualization/">robotiq_2f_85_gripper_visualization</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_gripper_control/">robotiq_2f_gripper_control</a></td>
+                    <td>0.0.3</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_gripper_msgs/">robotiq_2f_gripper_msgs</a></td>
+                    <td>0.0.2</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_modbus_rtu/">robotiq_modbus_rtu</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/cv_bridge/">cv_bridge</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/image_geometry/">image_geometry</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision_opencv/">vision_opencv</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="安川ma2010机械臂--robotiq-2f-140--realsense-视觉抓取">安川MA2010机械臂 + Robotiq 2F-140 + RealSense 视觉抓取</h1>
+
+<p><strong>功能：在ROS平台上，使用realsense相机引导安川MA2010机械臂用Robotiq 2F-140夹爪进行抓取</strong></p>
+
+<ul>
+  <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%AE%89%E5%B7%9Dma2010%E6%9C%BA%E6%A2%B0%E8%87%82--robotiq-2f-140--realsense-%E8%A7%86%E8%A7%89%E6%8A%93%E5%8F%96">安川MA2010机械臂 + Robotiq 2F-140 + RealSense 视觉抓取</a>
+    <ul>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#0-%E6%93%8D%E4%BD%9C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">0. 操作注意事项</a></li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#1-%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">1. 前提条件</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#11-%E8%BD%AF%E4%BB%B6%E6%9D%A1%E4%BB%B6">1.1. 软件条件</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#12-%E7%A1%AC%E4%BB%B6%E6%9D%A1%E4%BB%B6">1.2. 硬件条件</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#2-%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85">2. 软件安装</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#21-%E5%89%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6%E6%9D%A1%E4%BB%B6">2.1. 前置软件条件</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#22-%E7%A1%AC%E4%BB%B6%E9%A9%B1%E5%8A%A8">2.2. 硬件驱动</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#23-%E5%AE%89%E8%A3%85%E6%9C%AC%E4%BB%93%E5%BA%93">2.3. 安装本仓库</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#3-%E5%AE%89%E5%B7%9D%E9%A9%B1%E5%8A%A8%E6%B5%8B%E8%AF%95">3. 安川驱动测试</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#31-%E5%AE%98%E6%96%B9%E7%9A%84%E5%8A%9F%E8%83%BD%E5%8C%85%E6%B5%8B%E8%AF%95">3.1. 官方的功能包测试</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#32-%E7%94%A8%E5%B8%A6%E6%9C%89robotiq%E5%A4%B9%E7%88%AA%E7%9A%84%E6%9C%BA%E6%A2%B0%E8%87%82%E6%B5%8B%E8%AF%95">3.2. 用带有robotiq夹爪的机械臂测试</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4-%E5%90%84%E8%8A%82%E7%82%B9%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D">4. 各节点功能介绍</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#41-robotiq%E5%A4%B9%E7%88%AA%E5%8A%9F%E8%83%BD">4.1. Robotiq夹爪功能</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#42-ma2010-server%E5%8A%9F%E8%83%BD">4.2. MA2010 Server功能</a></li>
+          <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#43-coordinator%E5%8A%9F%E8%83%BD">4.3. Coordinator功能</a>
+            <ul>
+              <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#431-debug%E6%A8%A1%E5%BC%8F">4.3.1. debug模式</a>
+                <ul>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4311-%E6%89%A7%E8%A1%8C%E4%B8%80%E6%AC%A1%E6%8A%93%E5%8F%96">4.3.1.1. 执行一次抓取</a></li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4312-%E6%8E%A7%E5%88%B6%E6%9C%BA%E6%A2%B0%E8%87%82%E5%8F%AA%E5%89%8D%E5%BE%80%E7%9B%AE%E6%A0%87%E6%8A%93%E5%8F%96%E7%82%B9%E8%80%8C%E4%B8%8D%E6%89%A7%E8%A1%8C%E6%8A%93%E5%8F%96%E6%93%8D%E4%BD%9C">4.3.1.2. 控制机械臂只前往目标抓取点而不执行抓取操作</a></li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4313-%E8%8E%B7%E5%8F%96%E6%8A%93%E5%8F%96%E4%BD%8D%E5%A7%BF%E7%9A%84%E5%BF%AB%E7%85%A7">4.3.1.3. 获取抓取位姿的快照</a></li>
+                </ul>
+              </li>
+              <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#432-auto%E6%A8%A1%E5%BC%8F">4.3.2. auto模式</a>
+                <ul>
+                  <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4321-%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">4.3.2.1. 自动抓取</a>
+                    <ul>
+                      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%BC%80%E5%A7%8B%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">开始自动抓取</a></li>
+                      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%81%9C%E6%AD%A2%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">停止自动抓取</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4322-%E9%A2%84%E5%AE%9A%E4%B9%89%E5%8A%A8%E4%BD%9C">4.3.2.2. 预定义动作</a></li>
+                </ul>
+              </li>
+              <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#433-%E7%8A%B6%E6%80%81%E8%AE%B0%E5%BD%95">4.3.3. 状态记录</a></li>
+            </ul>
+          </li>
+          <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#44-%E6%A3%80%E6%B5%8B%E5%8A%9F%E8%83%BD">4.4. 检测功能</a>
+            <ul>
+              <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%90%AF%E5%8A%A8%E6%A3%80%E6%B5%8B%E8%8A%82%E7%82%B9">启动检测节点</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#5-%E7%9C%BC%E5%9C%A8%E6%89%8B%E4%B8%8A%E6%A0%87%E5%AE%9A">5. 眼在手上标定</a></li>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E8%87%B4%E8%B0%A2%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99">致谢/参考资料</a></li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<p><img src="https://raw.githubusercontent.com/ryanreadbooks/motoman_robotiq_grasping/master/images/demo.png" alt="ma2010" style="zoom:50%;"></p>
+
+<h2 id="0-操作注意事项">0. 操作注意事项</h2>
+
+<p>本仓库实现的所有系统功能仅为实验性质，并未考虑机械臂运动的安全性问题，因此操作的时候必须十分注意机械臂的动作情况，以免与人或物发生碰撞。</p>
+
+<p><strong>因此建议操作过程中要护住示教器上的急停按钮，以免发生意外。</strong></p>
+
+<h2 id="1-前提条件">1. 前提条件</h2>
+
+<h3 id="11-软件条件">1.1. 软件条件</h3>
+
+<p>系统：Ubuntu16.04 + ROS kinetic</p>
+
+<p>语言：Python3.7 + CPP</p>
+
+<h3 id="12-硬件条件">1.2. 硬件条件</h3>
+
+<p>机械臂：安川MA2010机械臂</p>
+
+<p>相机：Intel RealSense D435i</p>
+
+<p>二指夹持器：Robotiq 2F-140</p>
+
+<p>其它：双绞线、USB线、万用表等</p>
+
+<h2 id="2-软件安装">2. 软件安装</h2>
+
+<h3 id="21-前置软件条件">2.1. 前置软件条件</h3>
+
+<ol>
+  <li>安装<a href="https://wiki.ros.org/kinetic/Installation/Ubuntu">ROS</a>
+</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="c"># 包括ros-controller</span>
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-ros-control
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-ros-controllers
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-moveit
+   
+</code></pre></div></div>
+<ol>
+  <li>
+    <p>安装<a href="https://github.com/IntelRealSense/realsense-ros">realsense-ros</a>（使用的是ROS1）</p>
+
+    <ul>
+      <li>realsense2_camera（相机发布图像话题）</li>
+      <li>realsense2-description（包含相机urdf模型）</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="22-硬件驱动">2.2. 硬件驱动</h3>
+
+<ul>
+  <li>安川机械臂机械臂驱动使用<a href="https://github.com/ros-industrial/motoman">ros-industrial/motoman</a>，本仓库删除了一些无关的内容，仅保留ma2010_support；
+    <ul>
+      <li>机械臂的下位程序需提前下载到控制柜，参考<a href="http://wiki.ros.org/motoman">官方文档</a>。</li>
+    </ul>
+  </li>
+  <li>Robotiq 2F-140使用<a href="https://github.com/Danfoa/robotiq_2finger_grippers">Danfoa/robotiq_2finger_grippers</a>的代码进行驱动，对某些部分进行修改并集成在本仓库中。</li>
+</ul>
+
+<h3 id="23-安装本仓库">2.3. 安装本仓库</h3>
+
+<ol>
+  <li>创建工作空间</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">mkdir </span>demo_ws
+   
+</code></pre></div></div>
+<ol>
+  <li>将项目clone下来并初始化工作空间</li>
+</ol>
+
+<p>```bash</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>rolling</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/motoman_robotiq_grasping/">motoman_robotiq_grasping</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/coordinator/">coordinator</a>
+        
+        <a class="label label-primary pkg-label" href="/p/detection/">detection</a>
+        
+        <a class="label label-primary pkg-label" href="/p/ma2010_robotiq_moveit_config/">ma2010_robotiq_moveit_config</a>
+        
+        <a class="label label-primary pkg-label" href="/p/ma2010_server/">ma2010_server</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman/">motoman</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_driver/">motoman_driver</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_ma2010_moveit_config/">motoman_ma2010_moveit_config</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_ma2010_support/">motoman_ma2010_support</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_msgs/">motoman_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_resources/">motoman_resources</a>
+        
+        <a class="label label-primary pkg-label" href="/p/gripper_server/">gripper_server</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_140_gripper_visualization/">robotiq_2f_140_gripper_visualization</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_85_gripper_visualization/">robotiq_2f_85_gripper_visualization</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_gripper_control/">robotiq_2f_gripper_control</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_gripper_msgs/">robotiq_2f_gripper_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_modbus_rtu/">robotiq_modbus_rtu</a>
+        
+        <a class="label label-primary pkg-label" href="/p/cv_bridge/">cv_bridge</a>
+        
+        <a class="label label-primary pkg-label" href="/p/image_geometry/">image_geometry</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision_opencv/">vision_opencv</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/ryanreadbooks/motoman_robotiq_grasping.git">https://github.com/ryanreadbooks/motoman_robotiq_grasping.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">master</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2023-06-05
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#rolling-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#rolling-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#rolling-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/coordinator/">coordinator</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/detection/">detection</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/ma2010_robotiq_moveit_config/">ma2010_robotiq_moveit_config</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/ma2010_server/">ma2010_server</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman/">motoman</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_driver/">motoman_driver</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_ma2010_moveit_config/">motoman_ma2010_moveit_config</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_ma2010_support/">motoman_ma2010_support</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_msgs/">motoman_msgs</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_resources/">motoman_resources</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/gripper_server/">gripper_server</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_140_gripper_visualization/">robotiq_2f_140_gripper_visualization</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_85_gripper_visualization/">robotiq_2f_85_gripper_visualization</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_gripper_control/">robotiq_2f_gripper_control</a></td>
+                    <td>0.0.3</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_gripper_msgs/">robotiq_2f_gripper_msgs</a></td>
+                    <td>0.0.2</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_modbus_rtu/">robotiq_modbus_rtu</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/cv_bridge/">cv_bridge</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/image_geometry/">image_geometry</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision_opencv/">vision_opencv</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="安川ma2010机械臂--robotiq-2f-140--realsense-视觉抓取">安川MA2010机械臂 + Robotiq 2F-140 + RealSense 视觉抓取</h1>
+
+<p><strong>功能：在ROS平台上，使用realsense相机引导安川MA2010机械臂用Robotiq 2F-140夹爪进行抓取</strong></p>
+
+<ul>
+  <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%AE%89%E5%B7%9Dma2010%E6%9C%BA%E6%A2%B0%E8%87%82--robotiq-2f-140--realsense-%E8%A7%86%E8%A7%89%E6%8A%93%E5%8F%96">安川MA2010机械臂 + Robotiq 2F-140 + RealSense 视觉抓取</a>
+    <ul>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#0-%E6%93%8D%E4%BD%9C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">0. 操作注意事项</a></li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#1-%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">1. 前提条件</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#11-%E8%BD%AF%E4%BB%B6%E6%9D%A1%E4%BB%B6">1.1. 软件条件</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#12-%E7%A1%AC%E4%BB%B6%E6%9D%A1%E4%BB%B6">1.2. 硬件条件</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#2-%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85">2. 软件安装</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#21-%E5%89%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6%E6%9D%A1%E4%BB%B6">2.1. 前置软件条件</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#22-%E7%A1%AC%E4%BB%B6%E9%A9%B1%E5%8A%A8">2.2. 硬件驱动</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#23-%E5%AE%89%E8%A3%85%E6%9C%AC%E4%BB%93%E5%BA%93">2.3. 安装本仓库</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#3-%E5%AE%89%E5%B7%9D%E9%A9%B1%E5%8A%A8%E6%B5%8B%E8%AF%95">3. 安川驱动测试</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#31-%E5%AE%98%E6%96%B9%E7%9A%84%E5%8A%9F%E8%83%BD%E5%8C%85%E6%B5%8B%E8%AF%95">3.1. 官方的功能包测试</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#32-%E7%94%A8%E5%B8%A6%E6%9C%89robotiq%E5%A4%B9%E7%88%AA%E7%9A%84%E6%9C%BA%E6%A2%B0%E8%87%82%E6%B5%8B%E8%AF%95">3.2. 用带有robotiq夹爪的机械臂测试</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4-%E5%90%84%E8%8A%82%E7%82%B9%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D">4. 各节点功能介绍</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#41-robotiq%E5%A4%B9%E7%88%AA%E5%8A%9F%E8%83%BD">4.1. Robotiq夹爪功能</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#42-ma2010-server%E5%8A%9F%E8%83%BD">4.2. MA2010 Server功能</a></li>
+          <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#43-coordinator%E5%8A%9F%E8%83%BD">4.3. Coordinator功能</a>
+            <ul>
+              <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#431-debug%E6%A8%A1%E5%BC%8F">4.3.1. debug模式</a>
+                <ul>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4311-%E6%89%A7%E8%A1%8C%E4%B8%80%E6%AC%A1%E6%8A%93%E5%8F%96">4.3.1.1. 执行一次抓取</a></li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4312-%E6%8E%A7%E5%88%B6%E6%9C%BA%E6%A2%B0%E8%87%82%E5%8F%AA%E5%89%8D%E5%BE%80%E7%9B%AE%E6%A0%87%E6%8A%93%E5%8F%96%E7%82%B9%E8%80%8C%E4%B8%8D%E6%89%A7%E8%A1%8C%E6%8A%93%E5%8F%96%E6%93%8D%E4%BD%9C">4.3.1.2. 控制机械臂只前往目标抓取点而不执行抓取操作</a></li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4313-%E8%8E%B7%E5%8F%96%E6%8A%93%E5%8F%96%E4%BD%8D%E5%A7%BF%E7%9A%84%E5%BF%AB%E7%85%A7">4.3.1.3. 获取抓取位姿的快照</a></li>
+                </ul>
+              </li>
+              <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#432-auto%E6%A8%A1%E5%BC%8F">4.3.2. auto模式</a>
+                <ul>
+                  <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4321-%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">4.3.2.1. 自动抓取</a>
+                    <ul>
+                      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%BC%80%E5%A7%8B%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">开始自动抓取</a></li>
+                      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%81%9C%E6%AD%A2%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">停止自动抓取</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4322-%E9%A2%84%E5%AE%9A%E4%B9%89%E5%8A%A8%E4%BD%9C">4.3.2.2. 预定义动作</a></li>
+                </ul>
+              </li>
+              <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#433-%E7%8A%B6%E6%80%81%E8%AE%B0%E5%BD%95">4.3.3. 状态记录</a></li>
+            </ul>
+          </li>
+          <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#44-%E6%A3%80%E6%B5%8B%E5%8A%9F%E8%83%BD">4.4. 检测功能</a>
+            <ul>
+              <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%90%AF%E5%8A%A8%E6%A3%80%E6%B5%8B%E8%8A%82%E7%82%B9">启动检测节点</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#5-%E7%9C%BC%E5%9C%A8%E6%89%8B%E4%B8%8A%E6%A0%87%E5%AE%9A">5. 眼在手上标定</a></li>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E8%87%B4%E8%B0%A2%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99">致谢/参考资料</a></li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<p><img src="https://raw.githubusercontent.com/ryanreadbooks/motoman_robotiq_grasping/master/images/demo.png" alt="ma2010" style="zoom:50%;"></p>
+
+<h2 id="0-操作注意事项">0. 操作注意事项</h2>
+
+<p>本仓库实现的所有系统功能仅为实验性质，并未考虑机械臂运动的安全性问题，因此操作的时候必须十分注意机械臂的动作情况，以免与人或物发生碰撞。</p>
+
+<p><strong>因此建议操作过程中要护住示教器上的急停按钮，以免发生意外。</strong></p>
+
+<h2 id="1-前提条件">1. 前提条件</h2>
+
+<h3 id="11-软件条件">1.1. 软件条件</h3>
+
+<p>系统：Ubuntu16.04 + ROS kinetic</p>
+
+<p>语言：Python3.7 + CPP</p>
+
+<h3 id="12-硬件条件">1.2. 硬件条件</h3>
+
+<p>机械臂：安川MA2010机械臂</p>
+
+<p>相机：Intel RealSense D435i</p>
+
+<p>二指夹持器：Robotiq 2F-140</p>
+
+<p>其它：双绞线、USB线、万用表等</p>
+
+<h2 id="2-软件安装">2. 软件安装</h2>
+
+<h3 id="21-前置软件条件">2.1. 前置软件条件</h3>
+
+<ol>
+  <li>安装<a href="https://wiki.ros.org/kinetic/Installation/Ubuntu">ROS</a>
+</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="c"># 包括ros-controller</span>
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-ros-control
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-ros-controllers
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-moveit
+   
+</code></pre></div></div>
+<ol>
+  <li>
+    <p>安装<a href="https://github.com/IntelRealSense/realsense-ros">realsense-ros</a>（使用的是ROS1）</p>
+
+    <ul>
+      <li>realsense2_camera（相机发布图像话题）</li>
+      <li>realsense2-description（包含相机urdf模型）</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="22-硬件驱动">2.2. 硬件驱动</h3>
+
+<ul>
+  <li>安川机械臂机械臂驱动使用<a href="https://github.com/ros-industrial/motoman">ros-industrial/motoman</a>，本仓库删除了一些无关的内容，仅保留ma2010_support；
+    <ul>
+      <li>机械臂的下位程序需提前下载到控制柜，参考<a href="http://wiki.ros.org/motoman">官方文档</a>。</li>
+    </ul>
+  </li>
+  <li>Robotiq 2F-140使用<a href="https://github.com/Danfoa/robotiq_2finger_grippers">Danfoa/robotiq_2finger_grippers</a>的代码进行驱动，对某些部分进行修改并集成在本仓库中。</li>
+</ul>
+
+<h3 id="23-安装本仓库">2.3. 安装本仓库</h3>
+
+<ol>
+  <li>创建工作空间</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">mkdir </span>demo_ws
+   
+</code></pre></div></div>
+<ol>
+  <li>将项目clone下来并初始化工作空间</li>
+</ol>
+
+<p>```bash</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/motoman_robotiq_grasping/">motoman_robotiq_grasping</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/coordinator/">coordinator</a>
+        
+        <a class="label label-primary pkg-label" href="/p/detection/">detection</a>
+        
+        <a class="label label-primary pkg-label" href="/p/ma2010_robotiq_moveit_config/">ma2010_robotiq_moveit_config</a>
+        
+        <a class="label label-primary pkg-label" href="/p/ma2010_server/">ma2010_server</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman/">motoman</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_driver/">motoman_driver</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_ma2010_moveit_config/">motoman_ma2010_moveit_config</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_ma2010_support/">motoman_ma2010_support</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_msgs/">motoman_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_resources/">motoman_resources</a>
+        
+        <a class="label label-primary pkg-label" href="/p/gripper_server/">gripper_server</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_140_gripper_visualization/">robotiq_2f_140_gripper_visualization</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_85_gripper_visualization/">robotiq_2f_85_gripper_visualization</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_gripper_control/">robotiq_2f_gripper_control</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_gripper_msgs/">robotiq_2f_gripper_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_modbus_rtu/">robotiq_modbus_rtu</a>
+        
+        <a class="label label-primary pkg-label" href="/p/cv_bridge/">cv_bridge</a>
+        
+        <a class="label label-primary pkg-label" href="/p/image_geometry/">image_geometry</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision_opencv/">vision_opencv</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/ryanreadbooks/motoman_robotiq_grasping.git">https://github.com/ryanreadbooks/motoman_robotiq_grasping.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">master</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2023-06-05
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/coordinator/">coordinator</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/detection/">detection</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/ma2010_robotiq_moveit_config/">ma2010_robotiq_moveit_config</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/ma2010_server/">ma2010_server</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman/">motoman</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_driver/">motoman_driver</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_ma2010_moveit_config/">motoman_ma2010_moveit_config</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_ma2010_support/">motoman_ma2010_support</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_msgs/">motoman_msgs</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_resources/">motoman_resources</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/gripper_server/">gripper_server</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_140_gripper_visualization/">robotiq_2f_140_gripper_visualization</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_85_gripper_visualization/">robotiq_2f_85_gripper_visualization</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_gripper_control/">robotiq_2f_gripper_control</a></td>
+                    <td>0.0.3</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_gripper_msgs/">robotiq_2f_gripper_msgs</a></td>
+                    <td>0.0.2</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_modbus_rtu/">robotiq_modbus_rtu</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/cv_bridge/">cv_bridge</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/image_geometry/">image_geometry</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision_opencv/">vision_opencv</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="安川ma2010机械臂--robotiq-2f-140--realsense-视觉抓取">安川MA2010机械臂 + Robotiq 2F-140 + RealSense 视觉抓取</h1>
+
+<p><strong>功能：在ROS平台上，使用realsense相机引导安川MA2010机械臂用Robotiq 2F-140夹爪进行抓取</strong></p>
+
+<ul>
+  <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%AE%89%E5%B7%9Dma2010%E6%9C%BA%E6%A2%B0%E8%87%82--robotiq-2f-140--realsense-%E8%A7%86%E8%A7%89%E6%8A%93%E5%8F%96">安川MA2010机械臂 + Robotiq 2F-140 + RealSense 视觉抓取</a>
+    <ul>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#0-%E6%93%8D%E4%BD%9C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">0. 操作注意事项</a></li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#1-%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">1. 前提条件</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#11-%E8%BD%AF%E4%BB%B6%E6%9D%A1%E4%BB%B6">1.1. 软件条件</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#12-%E7%A1%AC%E4%BB%B6%E6%9D%A1%E4%BB%B6">1.2. 硬件条件</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#2-%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85">2. 软件安装</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#21-%E5%89%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6%E6%9D%A1%E4%BB%B6">2.1. 前置软件条件</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#22-%E7%A1%AC%E4%BB%B6%E9%A9%B1%E5%8A%A8">2.2. 硬件驱动</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#23-%E5%AE%89%E8%A3%85%E6%9C%AC%E4%BB%93%E5%BA%93">2.3. 安装本仓库</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#3-%E5%AE%89%E5%B7%9D%E9%A9%B1%E5%8A%A8%E6%B5%8B%E8%AF%95">3. 安川驱动测试</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#31-%E5%AE%98%E6%96%B9%E7%9A%84%E5%8A%9F%E8%83%BD%E5%8C%85%E6%B5%8B%E8%AF%95">3.1. 官方的功能包测试</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#32-%E7%94%A8%E5%B8%A6%E6%9C%89robotiq%E5%A4%B9%E7%88%AA%E7%9A%84%E6%9C%BA%E6%A2%B0%E8%87%82%E6%B5%8B%E8%AF%95">3.2. 用带有robotiq夹爪的机械臂测试</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4-%E5%90%84%E8%8A%82%E7%82%B9%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D">4. 各节点功能介绍</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#41-robotiq%E5%A4%B9%E7%88%AA%E5%8A%9F%E8%83%BD">4.1. Robotiq夹爪功能</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#42-ma2010-server%E5%8A%9F%E8%83%BD">4.2. MA2010 Server功能</a></li>
+          <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#43-coordinator%E5%8A%9F%E8%83%BD">4.3. Coordinator功能</a>
+            <ul>
+              <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#431-debug%E6%A8%A1%E5%BC%8F">4.3.1. debug模式</a>
+                <ul>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4311-%E6%89%A7%E8%A1%8C%E4%B8%80%E6%AC%A1%E6%8A%93%E5%8F%96">4.3.1.1. 执行一次抓取</a></li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4312-%E6%8E%A7%E5%88%B6%E6%9C%BA%E6%A2%B0%E8%87%82%E5%8F%AA%E5%89%8D%E5%BE%80%E7%9B%AE%E6%A0%87%E6%8A%93%E5%8F%96%E7%82%B9%E8%80%8C%E4%B8%8D%E6%89%A7%E8%A1%8C%E6%8A%93%E5%8F%96%E6%93%8D%E4%BD%9C">4.3.1.2. 控制机械臂只前往目标抓取点而不执行抓取操作</a></li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4313-%E8%8E%B7%E5%8F%96%E6%8A%93%E5%8F%96%E4%BD%8D%E5%A7%BF%E7%9A%84%E5%BF%AB%E7%85%A7">4.3.1.3. 获取抓取位姿的快照</a></li>
+                </ul>
+              </li>
+              <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#432-auto%E6%A8%A1%E5%BC%8F">4.3.2. auto模式</a>
+                <ul>
+                  <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4321-%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">4.3.2.1. 自动抓取</a>
+                    <ul>
+                      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%BC%80%E5%A7%8B%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">开始自动抓取</a></li>
+                      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%81%9C%E6%AD%A2%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">停止自动抓取</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4322-%E9%A2%84%E5%AE%9A%E4%B9%89%E5%8A%A8%E4%BD%9C">4.3.2.2. 预定义动作</a></li>
+                </ul>
+              </li>
+              <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#433-%E7%8A%B6%E6%80%81%E8%AE%B0%E5%BD%95">4.3.3. 状态记录</a></li>
+            </ul>
+          </li>
+          <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#44-%E6%A3%80%E6%B5%8B%E5%8A%9F%E8%83%BD">4.4. 检测功能</a>
+            <ul>
+              <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%90%AF%E5%8A%A8%E6%A3%80%E6%B5%8B%E8%8A%82%E7%82%B9">启动检测节点</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#5-%E7%9C%BC%E5%9C%A8%E6%89%8B%E4%B8%8A%E6%A0%87%E5%AE%9A">5. 眼在手上标定</a></li>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E8%87%B4%E8%B0%A2%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99">致谢/参考资料</a></li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<p><img src="https://raw.githubusercontent.com/ryanreadbooks/motoman_robotiq_grasping/master/images/demo.png" alt="ma2010" style="zoom:50%;"></p>
+
+<h2 id="0-操作注意事项">0. 操作注意事项</h2>
+
+<p>本仓库实现的所有系统功能仅为实验性质，并未考虑机械臂运动的安全性问题，因此操作的时候必须十分注意机械臂的动作情况，以免与人或物发生碰撞。</p>
+
+<p><strong>因此建议操作过程中要护住示教器上的急停按钮，以免发生意外。</strong></p>
+
+<h2 id="1-前提条件">1. 前提条件</h2>
+
+<h3 id="11-软件条件">1.1. 软件条件</h3>
+
+<p>系统：Ubuntu16.04 + ROS kinetic</p>
+
+<p>语言：Python3.7 + CPP</p>
+
+<h3 id="12-硬件条件">1.2. 硬件条件</h3>
+
+<p>机械臂：安川MA2010机械臂</p>
+
+<p>相机：Intel RealSense D435i</p>
+
+<p>二指夹持器：Robotiq 2F-140</p>
+
+<p>其它：双绞线、USB线、万用表等</p>
+
+<h2 id="2-软件安装">2. 软件安装</h2>
+
+<h3 id="21-前置软件条件">2.1. 前置软件条件</h3>
+
+<ol>
+  <li>安装<a href="https://wiki.ros.org/kinetic/Installation/Ubuntu">ROS</a>
+</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="c"># 包括ros-controller</span>
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-ros-control
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-ros-controllers
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-moveit
+   
+</code></pre></div></div>
+<ol>
+  <li>
+    <p>安装<a href="https://github.com/IntelRealSense/realsense-ros">realsense-ros</a>（使用的是ROS1）</p>
+
+    <ul>
+      <li>realsense2_camera（相机发布图像话题）</li>
+      <li>realsense2-description（包含相机urdf模型）</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="22-硬件驱动">2.2. 硬件驱动</h3>
+
+<ul>
+  <li>安川机械臂机械臂驱动使用<a href="https://github.com/ros-industrial/motoman">ros-industrial/motoman</a>，本仓库删除了一些无关的内容，仅保留ma2010_support；
+    <ul>
+      <li>机械臂的下位程序需提前下载到控制柜，参考<a href="http://wiki.ros.org/motoman">官方文档</a>。</li>
+    </ul>
+  </li>
+  <li>Robotiq 2F-140使用<a href="https://github.com/Danfoa/robotiq_2finger_grippers">Danfoa/robotiq_2finger_grippers</a>的代码进行驱动，对某些部分进行修改并集成在本仓库中。</li>
+</ul>
+
+<h3 id="23-安装本仓库">2.3. 安装本仓库</h3>
+
+<ol>
+  <li>创建工作空间</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">mkdir </span>demo_ws
+   
+</code></pre></div></div>
+<ol>
+  <li>将项目clone下来并初始化工作空间</li>
+</ol>
+
+<p>```bash</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>galactic</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/motoman_robotiq_grasping/">motoman_robotiq_grasping</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/coordinator/">coordinator</a>
+        
+        <a class="label label-primary pkg-label" href="/p/detection/">detection</a>
+        
+        <a class="label label-primary pkg-label" href="/p/ma2010_robotiq_moveit_config/">ma2010_robotiq_moveit_config</a>
+        
+        <a class="label label-primary pkg-label" href="/p/ma2010_server/">ma2010_server</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman/">motoman</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_driver/">motoman_driver</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_ma2010_moveit_config/">motoman_ma2010_moveit_config</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_ma2010_support/">motoman_ma2010_support</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_msgs/">motoman_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_resources/">motoman_resources</a>
+        
+        <a class="label label-primary pkg-label" href="/p/gripper_server/">gripper_server</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_140_gripper_visualization/">robotiq_2f_140_gripper_visualization</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_85_gripper_visualization/">robotiq_2f_85_gripper_visualization</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_gripper_control/">robotiq_2f_gripper_control</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_gripper_msgs/">robotiq_2f_gripper_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_modbus_rtu/">robotiq_modbus_rtu</a>
+        
+        <a class="label label-primary pkg-label" href="/p/cv_bridge/">cv_bridge</a>
+        
+        <a class="label label-primary pkg-label" href="/p/image_geometry/">image_geometry</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision_opencv/">vision_opencv</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/ryanreadbooks/motoman_robotiq_grasping.git">https://github.com/ryanreadbooks/motoman_robotiq_grasping.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">master</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2023-06-05
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#galactic-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#galactic-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#galactic-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/coordinator/">coordinator</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/detection/">detection</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/ma2010_robotiq_moveit_config/">ma2010_robotiq_moveit_config</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/ma2010_server/">ma2010_server</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman/">motoman</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_driver/">motoman_driver</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_ma2010_moveit_config/">motoman_ma2010_moveit_config</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_ma2010_support/">motoman_ma2010_support</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_msgs/">motoman_msgs</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_resources/">motoman_resources</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/gripper_server/">gripper_server</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_140_gripper_visualization/">robotiq_2f_140_gripper_visualization</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_85_gripper_visualization/">robotiq_2f_85_gripper_visualization</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_gripper_control/">robotiq_2f_gripper_control</a></td>
+                    <td>0.0.3</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_gripper_msgs/">robotiq_2f_gripper_msgs</a></td>
+                    <td>0.0.2</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_modbus_rtu/">robotiq_modbus_rtu</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/cv_bridge/">cv_bridge</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/image_geometry/">image_geometry</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision_opencv/">vision_opencv</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="安川ma2010机械臂--robotiq-2f-140--realsense-视觉抓取">安川MA2010机械臂 + Robotiq 2F-140 + RealSense 视觉抓取</h1>
+
+<p><strong>功能：在ROS平台上，使用realsense相机引导安川MA2010机械臂用Robotiq 2F-140夹爪进行抓取</strong></p>
+
+<ul>
+  <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%AE%89%E5%B7%9Dma2010%E6%9C%BA%E6%A2%B0%E8%87%82--robotiq-2f-140--realsense-%E8%A7%86%E8%A7%89%E6%8A%93%E5%8F%96">安川MA2010机械臂 + Robotiq 2F-140 + RealSense 视觉抓取</a>
+    <ul>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#0-%E6%93%8D%E4%BD%9C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">0. 操作注意事项</a></li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#1-%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">1. 前提条件</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#11-%E8%BD%AF%E4%BB%B6%E6%9D%A1%E4%BB%B6">1.1. 软件条件</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#12-%E7%A1%AC%E4%BB%B6%E6%9D%A1%E4%BB%B6">1.2. 硬件条件</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#2-%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85">2. 软件安装</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#21-%E5%89%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6%E6%9D%A1%E4%BB%B6">2.1. 前置软件条件</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#22-%E7%A1%AC%E4%BB%B6%E9%A9%B1%E5%8A%A8">2.2. 硬件驱动</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#23-%E5%AE%89%E8%A3%85%E6%9C%AC%E4%BB%93%E5%BA%93">2.3. 安装本仓库</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#3-%E5%AE%89%E5%B7%9D%E9%A9%B1%E5%8A%A8%E6%B5%8B%E8%AF%95">3. 安川驱动测试</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#31-%E5%AE%98%E6%96%B9%E7%9A%84%E5%8A%9F%E8%83%BD%E5%8C%85%E6%B5%8B%E8%AF%95">3.1. 官方的功能包测试</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#32-%E7%94%A8%E5%B8%A6%E6%9C%89robotiq%E5%A4%B9%E7%88%AA%E7%9A%84%E6%9C%BA%E6%A2%B0%E8%87%82%E6%B5%8B%E8%AF%95">3.2. 用带有robotiq夹爪的机械臂测试</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4-%E5%90%84%E8%8A%82%E7%82%B9%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D">4. 各节点功能介绍</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#41-robotiq%E5%A4%B9%E7%88%AA%E5%8A%9F%E8%83%BD">4.1. Robotiq夹爪功能</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#42-ma2010-server%E5%8A%9F%E8%83%BD">4.2. MA2010 Server功能</a></li>
+          <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#43-coordinator%E5%8A%9F%E8%83%BD">4.3. Coordinator功能</a>
+            <ul>
+              <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#431-debug%E6%A8%A1%E5%BC%8F">4.3.1. debug模式</a>
+                <ul>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4311-%E6%89%A7%E8%A1%8C%E4%B8%80%E6%AC%A1%E6%8A%93%E5%8F%96">4.3.1.1. 执行一次抓取</a></li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4312-%E6%8E%A7%E5%88%B6%E6%9C%BA%E6%A2%B0%E8%87%82%E5%8F%AA%E5%89%8D%E5%BE%80%E7%9B%AE%E6%A0%87%E6%8A%93%E5%8F%96%E7%82%B9%E8%80%8C%E4%B8%8D%E6%89%A7%E8%A1%8C%E6%8A%93%E5%8F%96%E6%93%8D%E4%BD%9C">4.3.1.2. 控制机械臂只前往目标抓取点而不执行抓取操作</a></li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4313-%E8%8E%B7%E5%8F%96%E6%8A%93%E5%8F%96%E4%BD%8D%E5%A7%BF%E7%9A%84%E5%BF%AB%E7%85%A7">4.3.1.3. 获取抓取位姿的快照</a></li>
+                </ul>
+              </li>
+              <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#432-auto%E6%A8%A1%E5%BC%8F">4.3.2. auto模式</a>
+                <ul>
+                  <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4321-%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">4.3.2.1. 自动抓取</a>
+                    <ul>
+                      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%BC%80%E5%A7%8B%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">开始自动抓取</a></li>
+                      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%81%9C%E6%AD%A2%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">停止自动抓取</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4322-%E9%A2%84%E5%AE%9A%E4%B9%89%E5%8A%A8%E4%BD%9C">4.3.2.2. 预定义动作</a></li>
+                </ul>
+              </li>
+              <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#433-%E7%8A%B6%E6%80%81%E8%AE%B0%E5%BD%95">4.3.3. 状态记录</a></li>
+            </ul>
+          </li>
+          <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#44-%E6%A3%80%E6%B5%8B%E5%8A%9F%E8%83%BD">4.4. 检测功能</a>
+            <ul>
+              <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%90%AF%E5%8A%A8%E6%A3%80%E6%B5%8B%E8%8A%82%E7%82%B9">启动检测节点</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#5-%E7%9C%BC%E5%9C%A8%E6%89%8B%E4%B8%8A%E6%A0%87%E5%AE%9A">5. 眼在手上标定</a></li>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E8%87%B4%E8%B0%A2%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99">致谢/参考资料</a></li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<p><img src="https://raw.githubusercontent.com/ryanreadbooks/motoman_robotiq_grasping/master/images/demo.png" alt="ma2010" style="zoom:50%;"></p>
+
+<h2 id="0-操作注意事项">0. 操作注意事项</h2>
+
+<p>本仓库实现的所有系统功能仅为实验性质，并未考虑机械臂运动的安全性问题，因此操作的时候必须十分注意机械臂的动作情况，以免与人或物发生碰撞。</p>
+
+<p><strong>因此建议操作过程中要护住示教器上的急停按钮，以免发生意外。</strong></p>
+
+<h2 id="1-前提条件">1. 前提条件</h2>
+
+<h3 id="11-软件条件">1.1. 软件条件</h3>
+
+<p>系统：Ubuntu16.04 + ROS kinetic</p>
+
+<p>语言：Python3.7 + CPP</p>
+
+<h3 id="12-硬件条件">1.2. 硬件条件</h3>
+
+<p>机械臂：安川MA2010机械臂</p>
+
+<p>相机：Intel RealSense D435i</p>
+
+<p>二指夹持器：Robotiq 2F-140</p>
+
+<p>其它：双绞线、USB线、万用表等</p>
+
+<h2 id="2-软件安装">2. 软件安装</h2>
+
+<h3 id="21-前置软件条件">2.1. 前置软件条件</h3>
+
+<ol>
+  <li>安装<a href="https://wiki.ros.org/kinetic/Installation/Ubuntu">ROS</a>
+</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="c"># 包括ros-controller</span>
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-ros-control
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-ros-controllers
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-moveit
+   
+</code></pre></div></div>
+<ol>
+  <li>
+    <p>安装<a href="https://github.com/IntelRealSense/realsense-ros">realsense-ros</a>（使用的是ROS1）</p>
+
+    <ul>
+      <li>realsense2_camera（相机发布图像话题）</li>
+      <li>realsense2-description（包含相机urdf模型）</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="22-硬件驱动">2.2. 硬件驱动</h3>
+
+<ul>
+  <li>安川机械臂机械臂驱动使用<a href="https://github.com/ros-industrial/motoman">ros-industrial/motoman</a>，本仓库删除了一些无关的内容，仅保留ma2010_support；
+    <ul>
+      <li>机械臂的下位程序需提前下载到控制柜，参考<a href="http://wiki.ros.org/motoman">官方文档</a>。</li>
+    </ul>
+  </li>
+  <li>Robotiq 2F-140使用<a href="https://github.com/Danfoa/robotiq_2finger_grippers">Danfoa/robotiq_2finger_grippers</a>的代码进行驱动，对某些部分进行修改并集成在本仓库中。</li>
+</ul>
+
+<h3 id="23-安装本仓库">2.3. 安装本仓库</h3>
+
+<ol>
+  <li>创建工作空间</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">mkdir </span>demo_ws
+   
+</code></pre></div></div>
+<ol>
+  <li>将项目clone下来并初始化工作空间</li>
+</ol>
+
+<p>```bash</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>iron</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/motoman_robotiq_grasping/">motoman_robotiq_grasping</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/coordinator/">coordinator</a>
+        
+        <a class="label label-primary pkg-label" href="/p/detection/">detection</a>
+        
+        <a class="label label-primary pkg-label" href="/p/ma2010_robotiq_moveit_config/">ma2010_robotiq_moveit_config</a>
+        
+        <a class="label label-primary pkg-label" href="/p/ma2010_server/">ma2010_server</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman/">motoman</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_driver/">motoman_driver</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_ma2010_moveit_config/">motoman_ma2010_moveit_config</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_ma2010_support/">motoman_ma2010_support</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_msgs/">motoman_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_resources/">motoman_resources</a>
+        
+        <a class="label label-primary pkg-label" href="/p/gripper_server/">gripper_server</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_140_gripper_visualization/">robotiq_2f_140_gripper_visualization</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_85_gripper_visualization/">robotiq_2f_85_gripper_visualization</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_gripper_control/">robotiq_2f_gripper_control</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_gripper_msgs/">robotiq_2f_gripper_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_modbus_rtu/">robotiq_modbus_rtu</a>
+        
+        <a class="label label-primary pkg-label" href="/p/cv_bridge/">cv_bridge</a>
+        
+        <a class="label label-primary pkg-label" href="/p/image_geometry/">image_geometry</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision_opencv/">vision_opencv</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/ryanreadbooks/motoman_robotiq_grasping.git">https://github.com/ryanreadbooks/motoman_robotiq_grasping.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">master</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2023-06-05
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#iron-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#iron-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#iron-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/coordinator/">coordinator</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/detection/">detection</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/ma2010_robotiq_moveit_config/">ma2010_robotiq_moveit_config</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/ma2010_server/">ma2010_server</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman/">motoman</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_driver/">motoman_driver</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_ma2010_moveit_config/">motoman_ma2010_moveit_config</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_ma2010_support/">motoman_ma2010_support</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_msgs/">motoman_msgs</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_resources/">motoman_resources</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/gripper_server/">gripper_server</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_140_gripper_visualization/">robotiq_2f_140_gripper_visualization</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_85_gripper_visualization/">robotiq_2f_85_gripper_visualization</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_gripper_control/">robotiq_2f_gripper_control</a></td>
+                    <td>0.0.3</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_gripper_msgs/">robotiq_2f_gripper_msgs</a></td>
+                    <td>0.0.2</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_modbus_rtu/">robotiq_modbus_rtu</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/cv_bridge/">cv_bridge</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/image_geometry/">image_geometry</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision_opencv/">vision_opencv</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="安川ma2010机械臂--robotiq-2f-140--realsense-视觉抓取">安川MA2010机械臂 + Robotiq 2F-140 + RealSense 视觉抓取</h1>
+
+<p><strong>功能：在ROS平台上，使用realsense相机引导安川MA2010机械臂用Robotiq 2F-140夹爪进行抓取</strong></p>
+
+<ul>
+  <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%AE%89%E5%B7%9Dma2010%E6%9C%BA%E6%A2%B0%E8%87%82--robotiq-2f-140--realsense-%E8%A7%86%E8%A7%89%E6%8A%93%E5%8F%96">安川MA2010机械臂 + Robotiq 2F-140 + RealSense 视觉抓取</a>
+    <ul>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#0-%E6%93%8D%E4%BD%9C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">0. 操作注意事项</a></li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#1-%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">1. 前提条件</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#11-%E8%BD%AF%E4%BB%B6%E6%9D%A1%E4%BB%B6">1.1. 软件条件</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#12-%E7%A1%AC%E4%BB%B6%E6%9D%A1%E4%BB%B6">1.2. 硬件条件</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#2-%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85">2. 软件安装</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#21-%E5%89%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6%E6%9D%A1%E4%BB%B6">2.1. 前置软件条件</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#22-%E7%A1%AC%E4%BB%B6%E9%A9%B1%E5%8A%A8">2.2. 硬件驱动</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#23-%E5%AE%89%E8%A3%85%E6%9C%AC%E4%BB%93%E5%BA%93">2.3. 安装本仓库</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#3-%E5%AE%89%E5%B7%9D%E9%A9%B1%E5%8A%A8%E6%B5%8B%E8%AF%95">3. 安川驱动测试</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#31-%E5%AE%98%E6%96%B9%E7%9A%84%E5%8A%9F%E8%83%BD%E5%8C%85%E6%B5%8B%E8%AF%95">3.1. 官方的功能包测试</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#32-%E7%94%A8%E5%B8%A6%E6%9C%89robotiq%E5%A4%B9%E7%88%AA%E7%9A%84%E6%9C%BA%E6%A2%B0%E8%87%82%E6%B5%8B%E8%AF%95">3.2. 用带有robotiq夹爪的机械臂测试</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4-%E5%90%84%E8%8A%82%E7%82%B9%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D">4. 各节点功能介绍</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#41-robotiq%E5%A4%B9%E7%88%AA%E5%8A%9F%E8%83%BD">4.1. Robotiq夹爪功能</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#42-ma2010-server%E5%8A%9F%E8%83%BD">4.2. MA2010 Server功能</a></li>
+          <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#43-coordinator%E5%8A%9F%E8%83%BD">4.3. Coordinator功能</a>
+            <ul>
+              <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#431-debug%E6%A8%A1%E5%BC%8F">4.3.1. debug模式</a>
+                <ul>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4311-%E6%89%A7%E8%A1%8C%E4%B8%80%E6%AC%A1%E6%8A%93%E5%8F%96">4.3.1.1. 执行一次抓取</a></li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4312-%E6%8E%A7%E5%88%B6%E6%9C%BA%E6%A2%B0%E8%87%82%E5%8F%AA%E5%89%8D%E5%BE%80%E7%9B%AE%E6%A0%87%E6%8A%93%E5%8F%96%E7%82%B9%E8%80%8C%E4%B8%8D%E6%89%A7%E8%A1%8C%E6%8A%93%E5%8F%96%E6%93%8D%E4%BD%9C">4.3.1.2. 控制机械臂只前往目标抓取点而不执行抓取操作</a></li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4313-%E8%8E%B7%E5%8F%96%E6%8A%93%E5%8F%96%E4%BD%8D%E5%A7%BF%E7%9A%84%E5%BF%AB%E7%85%A7">4.3.1.3. 获取抓取位姿的快照</a></li>
+                </ul>
+              </li>
+              <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#432-auto%E6%A8%A1%E5%BC%8F">4.3.2. auto模式</a>
+                <ul>
+                  <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4321-%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">4.3.2.1. 自动抓取</a>
+                    <ul>
+                      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%BC%80%E5%A7%8B%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">开始自动抓取</a></li>
+                      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%81%9C%E6%AD%A2%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">停止自动抓取</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4322-%E9%A2%84%E5%AE%9A%E4%B9%89%E5%8A%A8%E4%BD%9C">4.3.2.2. 预定义动作</a></li>
+                </ul>
+              </li>
+              <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#433-%E7%8A%B6%E6%80%81%E8%AE%B0%E5%BD%95">4.3.3. 状态记录</a></li>
+            </ul>
+          </li>
+          <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#44-%E6%A3%80%E6%B5%8B%E5%8A%9F%E8%83%BD">4.4. 检测功能</a>
+            <ul>
+              <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%90%AF%E5%8A%A8%E6%A3%80%E6%B5%8B%E8%8A%82%E7%82%B9">启动检测节点</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#5-%E7%9C%BC%E5%9C%A8%E6%89%8B%E4%B8%8A%E6%A0%87%E5%AE%9A">5. 眼在手上标定</a></li>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E8%87%B4%E8%B0%A2%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99">致谢/参考资料</a></li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<p><img src="https://raw.githubusercontent.com/ryanreadbooks/motoman_robotiq_grasping/master/images/demo.png" alt="ma2010" style="zoom:50%;"></p>
+
+<h2 id="0-操作注意事项">0. 操作注意事项</h2>
+
+<p>本仓库实现的所有系统功能仅为实验性质，并未考虑机械臂运动的安全性问题，因此操作的时候必须十分注意机械臂的动作情况，以免与人或物发生碰撞。</p>
+
+<p><strong>因此建议操作过程中要护住示教器上的急停按钮，以免发生意外。</strong></p>
+
+<h2 id="1-前提条件">1. 前提条件</h2>
+
+<h3 id="11-软件条件">1.1. 软件条件</h3>
+
+<p>系统：Ubuntu16.04 + ROS kinetic</p>
+
+<p>语言：Python3.7 + CPP</p>
+
+<h3 id="12-硬件条件">1.2. 硬件条件</h3>
+
+<p>机械臂：安川MA2010机械臂</p>
+
+<p>相机：Intel RealSense D435i</p>
+
+<p>二指夹持器：Robotiq 2F-140</p>
+
+<p>其它：双绞线、USB线、万用表等</p>
+
+<h2 id="2-软件安装">2. 软件安装</h2>
+
+<h3 id="21-前置软件条件">2.1. 前置软件条件</h3>
+
+<ol>
+  <li>安装<a href="https://wiki.ros.org/kinetic/Installation/Ubuntu">ROS</a>
+</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="c"># 包括ros-controller</span>
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-ros-control
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-ros-controllers
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-moveit
+   
+</code></pre></div></div>
+<ol>
+  <li>
+    <p>安装<a href="https://github.com/IntelRealSense/realsense-ros">realsense-ros</a>（使用的是ROS1）</p>
+
+    <ul>
+      <li>realsense2_camera（相机发布图像话题）</li>
+      <li>realsense2-description（包含相机urdf模型）</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="22-硬件驱动">2.2. 硬件驱动</h3>
+
+<ul>
+  <li>安川机械臂机械臂驱动使用<a href="https://github.com/ros-industrial/motoman">ros-industrial/motoman</a>，本仓库删除了一些无关的内容，仅保留ma2010_support；
+    <ul>
+      <li>机械臂的下位程序需提前下载到控制柜，参考<a href="http://wiki.ros.org/motoman">官方文档</a>。</li>
+    </ul>
+  </li>
+  <li>Robotiq 2F-140使用<a href="https://github.com/Danfoa/robotiq_2finger_grippers">Danfoa/robotiq_2finger_grippers</a>的代码进行驱动，对某些部分进行修改并集成在本仓库中。</li>
+</ul>
+
+<h3 id="23-安装本仓库">2.3. 安装本仓库</h3>
+
+<ol>
+  <li>创建工作空间</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">mkdir </span>demo_ws
+   
+</code></pre></div></div>
+<ol>
+  <li>将项目clone下来并初始化工作空间</li>
+</ol>
+
+<p>```bash</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>melodic</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/motoman_robotiq_grasping/">motoman_robotiq_grasping</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/coordinator/">coordinator</a>
+        
+        <a class="label label-primary pkg-label" href="/p/detection/">detection</a>
+        
+        <a class="label label-primary pkg-label" href="/p/ma2010_robotiq_moveit_config/">ma2010_robotiq_moveit_config</a>
+        
+        <a class="label label-primary pkg-label" href="/p/ma2010_server/">ma2010_server</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman/">motoman</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_driver/">motoman_driver</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_ma2010_moveit_config/">motoman_ma2010_moveit_config</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_ma2010_support/">motoman_ma2010_support</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_msgs/">motoman_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_resources/">motoman_resources</a>
+        
+        <a class="label label-primary pkg-label" href="/p/gripper_server/">gripper_server</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_140_gripper_visualization/">robotiq_2f_140_gripper_visualization</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_85_gripper_visualization/">robotiq_2f_85_gripper_visualization</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_gripper_control/">robotiq_2f_gripper_control</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_gripper_msgs/">robotiq_2f_gripper_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_modbus_rtu/">robotiq_modbus_rtu</a>
+        
+        <a class="label label-primary pkg-label" href="/p/cv_bridge/">cv_bridge</a>
+        
+        <a class="label label-primary pkg-label" href="/p/image_geometry/">image_geometry</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision_opencv/">vision_opencv</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/ryanreadbooks/motoman_robotiq_grasping.git">https://github.com/ryanreadbooks/motoman_robotiq_grasping.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">master</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2023-06-05
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#melodic-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#melodic-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#melodic-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/coordinator/">coordinator</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/detection/">detection</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/ma2010_robotiq_moveit_config/">ma2010_robotiq_moveit_config</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/ma2010_server/">ma2010_server</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman/">motoman</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_driver/">motoman_driver</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_ma2010_moveit_config/">motoman_ma2010_moveit_config</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_ma2010_support/">motoman_ma2010_support</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_msgs/">motoman_msgs</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_resources/">motoman_resources</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/gripper_server/">gripper_server</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_140_gripper_visualization/">robotiq_2f_140_gripper_visualization</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_85_gripper_visualization/">robotiq_2f_85_gripper_visualization</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_gripper_control/">robotiq_2f_gripper_control</a></td>
+                    <td>0.0.3</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_gripper_msgs/">robotiq_2f_gripper_msgs</a></td>
+                    <td>0.0.2</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_modbus_rtu/">robotiq_modbus_rtu</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/cv_bridge/">cv_bridge</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/image_geometry/">image_geometry</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision_opencv/">vision_opencv</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="安川ma2010机械臂--robotiq-2f-140--realsense-视觉抓取">安川MA2010机械臂 + Robotiq 2F-140 + RealSense 视觉抓取</h1>
+
+<p><strong>功能：在ROS平台上，使用realsense相机引导安川MA2010机械臂用Robotiq 2F-140夹爪进行抓取</strong></p>
+
+<ul>
+  <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%AE%89%E5%B7%9Dma2010%E6%9C%BA%E6%A2%B0%E8%87%82--robotiq-2f-140--realsense-%E8%A7%86%E8%A7%89%E6%8A%93%E5%8F%96">安川MA2010机械臂 + Robotiq 2F-140 + RealSense 视觉抓取</a>
+    <ul>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#0-%E6%93%8D%E4%BD%9C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">0. 操作注意事项</a></li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#1-%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">1. 前提条件</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#11-%E8%BD%AF%E4%BB%B6%E6%9D%A1%E4%BB%B6">1.1. 软件条件</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#12-%E7%A1%AC%E4%BB%B6%E6%9D%A1%E4%BB%B6">1.2. 硬件条件</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#2-%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85">2. 软件安装</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#21-%E5%89%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6%E6%9D%A1%E4%BB%B6">2.1. 前置软件条件</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#22-%E7%A1%AC%E4%BB%B6%E9%A9%B1%E5%8A%A8">2.2. 硬件驱动</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#23-%E5%AE%89%E8%A3%85%E6%9C%AC%E4%BB%93%E5%BA%93">2.3. 安装本仓库</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#3-%E5%AE%89%E5%B7%9D%E9%A9%B1%E5%8A%A8%E6%B5%8B%E8%AF%95">3. 安川驱动测试</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#31-%E5%AE%98%E6%96%B9%E7%9A%84%E5%8A%9F%E8%83%BD%E5%8C%85%E6%B5%8B%E8%AF%95">3.1. 官方的功能包测试</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#32-%E7%94%A8%E5%B8%A6%E6%9C%89robotiq%E5%A4%B9%E7%88%AA%E7%9A%84%E6%9C%BA%E6%A2%B0%E8%87%82%E6%B5%8B%E8%AF%95">3.2. 用带有robotiq夹爪的机械臂测试</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4-%E5%90%84%E8%8A%82%E7%82%B9%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D">4. 各节点功能介绍</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#41-robotiq%E5%A4%B9%E7%88%AA%E5%8A%9F%E8%83%BD">4.1. Robotiq夹爪功能</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#42-ma2010-server%E5%8A%9F%E8%83%BD">4.2. MA2010 Server功能</a></li>
+          <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#43-coordinator%E5%8A%9F%E8%83%BD">4.3. Coordinator功能</a>
+            <ul>
+              <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#431-debug%E6%A8%A1%E5%BC%8F">4.3.1. debug模式</a>
+                <ul>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4311-%E6%89%A7%E8%A1%8C%E4%B8%80%E6%AC%A1%E6%8A%93%E5%8F%96">4.3.1.1. 执行一次抓取</a></li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4312-%E6%8E%A7%E5%88%B6%E6%9C%BA%E6%A2%B0%E8%87%82%E5%8F%AA%E5%89%8D%E5%BE%80%E7%9B%AE%E6%A0%87%E6%8A%93%E5%8F%96%E7%82%B9%E8%80%8C%E4%B8%8D%E6%89%A7%E8%A1%8C%E6%8A%93%E5%8F%96%E6%93%8D%E4%BD%9C">4.3.1.2. 控制机械臂只前往目标抓取点而不执行抓取操作</a></li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4313-%E8%8E%B7%E5%8F%96%E6%8A%93%E5%8F%96%E4%BD%8D%E5%A7%BF%E7%9A%84%E5%BF%AB%E7%85%A7">4.3.1.3. 获取抓取位姿的快照</a></li>
+                </ul>
+              </li>
+              <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#432-auto%E6%A8%A1%E5%BC%8F">4.3.2. auto模式</a>
+                <ul>
+                  <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4321-%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">4.3.2.1. 自动抓取</a>
+                    <ul>
+                      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%BC%80%E5%A7%8B%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">开始自动抓取</a></li>
+                      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%81%9C%E6%AD%A2%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">停止自动抓取</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4322-%E9%A2%84%E5%AE%9A%E4%B9%89%E5%8A%A8%E4%BD%9C">4.3.2.2. 预定义动作</a></li>
+                </ul>
+              </li>
+              <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#433-%E7%8A%B6%E6%80%81%E8%AE%B0%E5%BD%95">4.3.3. 状态记录</a></li>
+            </ul>
+          </li>
+          <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#44-%E6%A3%80%E6%B5%8B%E5%8A%9F%E8%83%BD">4.4. 检测功能</a>
+            <ul>
+              <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%90%AF%E5%8A%A8%E6%A3%80%E6%B5%8B%E8%8A%82%E7%82%B9">启动检测节点</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#5-%E7%9C%BC%E5%9C%A8%E6%89%8B%E4%B8%8A%E6%A0%87%E5%AE%9A">5. 眼在手上标定</a></li>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E8%87%B4%E8%B0%A2%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99">致谢/参考资料</a></li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<p><img src="https://raw.githubusercontent.com/ryanreadbooks/motoman_robotiq_grasping/master/images/demo.png" alt="ma2010" style="zoom:50%;"></p>
+
+<h2 id="0-操作注意事项">0. 操作注意事项</h2>
+
+<p>本仓库实现的所有系统功能仅为实验性质，并未考虑机械臂运动的安全性问题，因此操作的时候必须十分注意机械臂的动作情况，以免与人或物发生碰撞。</p>
+
+<p><strong>因此建议操作过程中要护住示教器上的急停按钮，以免发生意外。</strong></p>
+
+<h2 id="1-前提条件">1. 前提条件</h2>
+
+<h3 id="11-软件条件">1.1. 软件条件</h3>
+
+<p>系统：Ubuntu16.04 + ROS kinetic</p>
+
+<p>语言：Python3.7 + CPP</p>
+
+<h3 id="12-硬件条件">1.2. 硬件条件</h3>
+
+<p>机械臂：安川MA2010机械臂</p>
+
+<p>相机：Intel RealSense D435i</p>
+
+<p>二指夹持器：Robotiq 2F-140</p>
+
+<p>其它：双绞线、USB线、万用表等</p>
+
+<h2 id="2-软件安装">2. 软件安装</h2>
+
+<h3 id="21-前置软件条件">2.1. 前置软件条件</h3>
+
+<ol>
+  <li>安装<a href="https://wiki.ros.org/kinetic/Installation/Ubuntu">ROS</a>
+</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="c"># 包括ros-controller</span>
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-ros-control
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-ros-controllers
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-moveit
+   
+</code></pre></div></div>
+<ol>
+  <li>
+    <p>安装<a href="https://github.com/IntelRealSense/realsense-ros">realsense-ros</a>（使用的是ROS1）</p>
+
+    <ul>
+      <li>realsense2_camera（相机发布图像话题）</li>
+      <li>realsense2-description（包含相机urdf模型）</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="22-硬件驱动">2.2. 硬件驱动</h3>
+
+<ul>
+  <li>安川机械臂机械臂驱动使用<a href="https://github.com/ros-industrial/motoman">ros-industrial/motoman</a>，本仓库删除了一些无关的内容，仅保留ma2010_support；
+    <ul>
+      <li>机械臂的下位程序需提前下载到控制柜，参考<a href="http://wiki.ros.org/motoman">官方文档</a>。</li>
+    </ul>
+  </li>
+  <li>Robotiq 2F-140使用<a href="https://github.com/Danfoa/robotiq_2finger_grippers">Danfoa/robotiq_2finger_grippers</a>的代码进行驱动，对某些部分进行修改并集成在本仓库中。</li>
+</ul>
+
+<h3 id="23-安装本仓库">2.3. 安装本仓库</h3>
+
+<ol>
+  <li>创建工作空间</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">mkdir </span>demo_ws
+   
+</code></pre></div></div>
+<ol>
+  <li>将项目clone下来并初始化工作空间</li>
+</ol>
+
+<p>```bash</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>noetic</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/motoman_robotiq_grasping/">motoman_robotiq_grasping</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/coordinator/">coordinator</a>
+        
+        <a class="label label-primary pkg-label" href="/p/detection/">detection</a>
+        
+        <a class="label label-primary pkg-label" href="/p/ma2010_robotiq_moveit_config/">ma2010_robotiq_moveit_config</a>
+        
+        <a class="label label-primary pkg-label" href="/p/ma2010_server/">ma2010_server</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman/">motoman</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_driver/">motoman_driver</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_ma2010_moveit_config/">motoman_ma2010_moveit_config</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_ma2010_support/">motoman_ma2010_support</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_msgs/">motoman_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/motoman_resources/">motoman_resources</a>
+        
+        <a class="label label-primary pkg-label" href="/p/gripper_server/">gripper_server</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_140_gripper_visualization/">robotiq_2f_140_gripper_visualization</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_85_gripper_visualization/">robotiq_2f_85_gripper_visualization</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_gripper_control/">robotiq_2f_gripper_control</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_2f_gripper_msgs/">robotiq_2f_gripper_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/robotiq_modbus_rtu/">robotiq_modbus_rtu</a>
+        
+        <a class="label label-primary pkg-label" href="/p/cv_bridge/">cv_bridge</a>
+        
+        <a class="label label-primary pkg-label" href="/p/image_geometry/">image_geometry</a>
+        
+        <a class="label label-primary pkg-label" href="/p/vision_opencv/">vision_opencv</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/ryanreadbooks/motoman_robotiq_grasping.git">https://github.com/ryanreadbooks/motoman_robotiq_grasping.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">master</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2023-06-05
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#noetic-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#noetic-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/motoman_robotiq_grasping/#noetic-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/coordinator/">coordinator</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/detection/">detection</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/ma2010_robotiq_moveit_config/">ma2010_robotiq_moveit_config</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/ma2010_server/">ma2010_server</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman/">motoman</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_driver/">motoman_driver</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_ma2010_moveit_config/">motoman_ma2010_moveit_config</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_ma2010_support/">motoman_ma2010_support</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_msgs/">motoman_msgs</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/motoman_resources/">motoman_resources</a></td>
+                    <td>0.3.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/gripper_server/">gripper_server</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_140_gripper_visualization/">robotiq_2f_140_gripper_visualization</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_85_gripper_visualization/">robotiq_2f_85_gripper_visualization</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_gripper_control/">robotiq_2f_gripper_control</a></td>
+                    <td>0.0.3</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_2f_gripper_msgs/">robotiq_2f_gripper_msgs</a></td>
+                    <td>0.0.2</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/robotiq_modbus_rtu/">robotiq_modbus_rtu</a></td>
+                    <td>1.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/cv_bridge/">cv_bridge</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/image_geometry/">image_geometry</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/vision_opencv/">vision_opencv</a></td>
+                    <td>1.12.8</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="安川ma2010机械臂--robotiq-2f-140--realsense-视觉抓取">安川MA2010机械臂 + Robotiq 2F-140 + RealSense 视觉抓取</h1>
+
+<p><strong>功能：在ROS平台上，使用realsense相机引导安川MA2010机械臂用Robotiq 2F-140夹爪进行抓取</strong></p>
+
+<ul>
+  <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%AE%89%E5%B7%9Dma2010%E6%9C%BA%E6%A2%B0%E8%87%82--robotiq-2f-140--realsense-%E8%A7%86%E8%A7%89%E6%8A%93%E5%8F%96">安川MA2010机械臂 + Robotiq 2F-140 + RealSense 视觉抓取</a>
+    <ul>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#0-%E6%93%8D%E4%BD%9C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">0. 操作注意事项</a></li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#1-%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6">1. 前提条件</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#11-%E8%BD%AF%E4%BB%B6%E6%9D%A1%E4%BB%B6">1.1. 软件条件</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#12-%E7%A1%AC%E4%BB%B6%E6%9D%A1%E4%BB%B6">1.2. 硬件条件</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#2-%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85">2. 软件安装</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#21-%E5%89%8D%E7%BD%AE%E8%BD%AF%E4%BB%B6%E6%9D%A1%E4%BB%B6">2.1. 前置软件条件</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#22-%E7%A1%AC%E4%BB%B6%E9%A9%B1%E5%8A%A8">2.2. 硬件驱动</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#23-%E5%AE%89%E8%A3%85%E6%9C%AC%E4%BB%93%E5%BA%93">2.3. 安装本仓库</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#3-%E5%AE%89%E5%B7%9D%E9%A9%B1%E5%8A%A8%E6%B5%8B%E8%AF%95">3. 安川驱动测试</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#31-%E5%AE%98%E6%96%B9%E7%9A%84%E5%8A%9F%E8%83%BD%E5%8C%85%E6%B5%8B%E8%AF%95">3.1. 官方的功能包测试</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#32-%E7%94%A8%E5%B8%A6%E6%9C%89robotiq%E5%A4%B9%E7%88%AA%E7%9A%84%E6%9C%BA%E6%A2%B0%E8%87%82%E6%B5%8B%E8%AF%95">3.2. 用带有robotiq夹爪的机械臂测试</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4-%E5%90%84%E8%8A%82%E7%82%B9%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D">4. 各节点功能介绍</a>
+        <ul>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#41-robotiq%E5%A4%B9%E7%88%AA%E5%8A%9F%E8%83%BD">4.1. Robotiq夹爪功能</a></li>
+          <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#42-ma2010-server%E5%8A%9F%E8%83%BD">4.2. MA2010 Server功能</a></li>
+          <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#43-coordinator%E5%8A%9F%E8%83%BD">4.3. Coordinator功能</a>
+            <ul>
+              <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#431-debug%E6%A8%A1%E5%BC%8F">4.3.1. debug模式</a>
+                <ul>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4311-%E6%89%A7%E8%A1%8C%E4%B8%80%E6%AC%A1%E6%8A%93%E5%8F%96">4.3.1.1. 执行一次抓取</a></li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4312-%E6%8E%A7%E5%88%B6%E6%9C%BA%E6%A2%B0%E8%87%82%E5%8F%AA%E5%89%8D%E5%BE%80%E7%9B%AE%E6%A0%87%E6%8A%93%E5%8F%96%E7%82%B9%E8%80%8C%E4%B8%8D%E6%89%A7%E8%A1%8C%E6%8A%93%E5%8F%96%E6%93%8D%E4%BD%9C">4.3.1.2. 控制机械臂只前往目标抓取点而不执行抓取操作</a></li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4313-%E8%8E%B7%E5%8F%96%E6%8A%93%E5%8F%96%E4%BD%8D%E5%A7%BF%E7%9A%84%E5%BF%AB%E7%85%A7">4.3.1.3. 获取抓取位姿的快照</a></li>
+                </ul>
+              </li>
+              <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#432-auto%E6%A8%A1%E5%BC%8F">4.3.2. auto模式</a>
+                <ul>
+                  <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4321-%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">4.3.2.1. 自动抓取</a>
+                    <ul>
+                      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%BC%80%E5%A7%8B%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">开始自动抓取</a></li>
+                      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%81%9C%E6%AD%A2%E8%87%AA%E5%8A%A8%E6%8A%93%E5%8F%96">停止自动抓取</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#4322-%E9%A2%84%E5%AE%9A%E4%B9%89%E5%8A%A8%E4%BD%9C">4.3.2.2. 预定义动作</a></li>
+                </ul>
+              </li>
+              <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#433-%E7%8A%B6%E6%80%81%E8%AE%B0%E5%BD%95">4.3.3. 状态记录</a></li>
+            </ul>
+          </li>
+          <li>
+<a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#44-%E6%A3%80%E6%B5%8B%E5%8A%9F%E8%83%BD">4.4. 检测功能</a>
+            <ul>
+              <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E5%90%AF%E5%8A%A8%E6%A3%80%E6%B5%8B%E8%8A%82%E7%82%B9">启动检测节点</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#5-%E7%9C%BC%E5%9C%A8%E6%89%8B%E4%B8%8A%E6%A0%87%E5%AE%9A">5. 眼在手上标定</a></li>
+      <li><a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/#%E8%87%B4%E8%B0%A2%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99">致谢/参考资料</a></li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<p><img src="https://raw.githubusercontent.com/ryanreadbooks/motoman_robotiq_grasping/master/images/demo.png" alt="ma2010" style="zoom:50%;"></p>
+
+<h2 id="0-操作注意事项">0. 操作注意事项</h2>
+
+<p>本仓库实现的所有系统功能仅为实验性质，并未考虑机械臂运动的安全性问题，因此操作的时候必须十分注意机械臂的动作情况，以免与人或物发生碰撞。</p>
+
+<p><strong>因此建议操作过程中要护住示教器上的急停按钮，以免发生意外。</strong></p>
+
+<h2 id="1-前提条件">1. 前提条件</h2>
+
+<h3 id="11-软件条件">1.1. 软件条件</h3>
+
+<p>系统：Ubuntu16.04 + ROS kinetic</p>
+
+<p>语言：Python3.7 + CPP</p>
+
+<h3 id="12-硬件条件">1.2. 硬件条件</h3>
+
+<p>机械臂：安川MA2010机械臂</p>
+
+<p>相机：Intel RealSense D435i</p>
+
+<p>二指夹持器：Robotiq 2F-140</p>
+
+<p>其它：双绞线、USB线、万用表等</p>
+
+<h2 id="2-软件安装">2. 软件安装</h2>
+
+<h3 id="21-前置软件条件">2.1. 前置软件条件</h3>
+
+<ol>
+  <li>安装<a href="https://wiki.ros.org/kinetic/Installation/Ubuntu">ROS</a>
+</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="c"># 包括ros-controller</span>
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-ros-control
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-ros-controllers
+   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-kinetic-moveit
+   
+</code></pre></div></div>
+<ol>
+  <li>
+    <p>安装<a href="https://github.com/IntelRealSense/realsense-ros">realsense-ros</a>（使用的是ROS1）</p>
+
+    <ul>
+      <li>realsense2_camera（相机发布图像话题）</li>
+      <li>realsense2-description（包含相机urdf模型）</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="22-硬件驱动">2.2. 硬件驱动</h3>
+
+<ul>
+  <li>安川机械臂机械臂驱动使用<a href="https://github.com/ros-industrial/motoman">ros-industrial/motoman</a>，本仓库删除了一些无关的内容，仅保留ma2010_support；
+    <ul>
+      <li>机械臂的下位程序需提前下载到控制柜，参考<a href="http://wiki.ros.org/motoman">官方文档</a>。</li>
+    </ul>
+  </li>
+  <li>Robotiq 2F-140使用<a href="https://github.com/Danfoa/robotiq_2finger_grippers">Danfoa/robotiq_2finger_grippers</a>的代码进行驱动，对某些部分进行修改并集成在本仓库中。</li>
+</ul>
+
+<h3 id="23-安装本仓库">2.3. 安装本仓库</h3>
+
+<ol>
+  <li>创建工作空间</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">mkdir </span>demo_ws
+   
+</code></pre></div></div>
+<ol>
+  <li>将项目clone下来并初始化工作空间</li>
+</ol>
+
+<p>```bash</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/ryanreadbooks/motoman_robotiq_grasping/tree/master/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+
+<script type="text/javascript" src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+  $(function() {
+    setupContributeListTabLinks();
+  });
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+    setupContributeLists("https://github.com/ryanreadbooks/motoman_robotiq_grasping.git");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2026-04-30</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

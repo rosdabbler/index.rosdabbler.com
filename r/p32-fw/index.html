@@ -1,0 +1,3061 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>p32-fw - ROS Repository Overview</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+    <meta name="robots" content="noindex">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/r/p32-fw/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body >
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="https://docs.ros.org/en/rolling/Contact.html#support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="https://docs.ros.org/en/rolling/Contact.html#support"">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content" >
+      <div class="wrapper" >
+        <div class="container-fluid" style="margin-top:20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_repos=true">Repos</a></li>
+        <li class="active"></li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+        <li data="noetic" id="noetic-option" class="disabled older-distro-option"  href="#noetic">
+          <a href="#noetic" data="noetic" id="noetic-button">noetic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>humble</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/p32-fw/">p32-fw</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/magic_enum/">magic_enum</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/snake-edition/p32-fw.git">https://github.com/snake-edition/p32-fw.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-01-11
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/p32-fw/#humble-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/p32-fw/#humble-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/p32-fw/#humble-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/magic_enum/">magic_enum</a></td>
+                    <td>0.9.5</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="snake-mini">Snake Mini</h1>
+
+<p><a href="https://github.com/snake-edition/p32-fw/tree/main/"><img src="https://img.shields.io/github/v/release/Snake-FW/P32-FW?style=plastic" alt="Version"></a></p>
+
+<h2 id="wanted">Wanted</h2>
+<p>FW developer, testers, and graphic designers are welcome.</p>
+
+<h2 id="unofficial-firmware-for-the-prusa-mini-and-mini">Unofficial Firmware for the Prusa Mini and Mini+</h2>
+
+<p>Alternative FW for the Prusa Mini. There’s quite few improvements:</p>
+
+<ol>
+  <li>
+<del><strong>Hotend fan speed</strong>: Adds a menu option to unlock the hotend fan speed</del>
+  <del>and increase it from the Prusa Firmware’s default 38% to anywhere from 50-100%.</del>
+</li>
+  <li>
+<strong>Skew compensation</strong>: Turns on skew compensation in Marlin and allows it to be configured with <code class="language-plaintext highlighter-rouge">M852</code>.</li>
+  <li>
+<del><strong>OctoPrint screen</strong>: Adds support for <code class="language-plaintext highlighter-rouge">M73</code> (print progress) and <code class="language-plaintext highlighter-rouge">M117</code></del>
+  <del>(LCD messages).</del>
+</li>
+  <li>
+<strong>PID tuning</strong>: Read nozzle and bed PID parameters and tune them automatically.</li>
+  <li>
+<del><strong>Max Temps</strong>: Raises the maximum bed temperature from 100C to 110C</del>
+  <del>and nozzle temperature from 275C to 285C (use with caution!).</del>
+</li>
+  <li>
+<strong>Settings during print</strong>: You can change Snake settings, Control and Settings during printing.</li>
+  <li>
+<strong>Faster nozzle cooling</strong>: If you wait for nozzle cooling before MBL, you can call <code class="language-plaintext highlighter-rouge">M109 R170 C</code>
+  <del>which uses print fan to speed up cooling.</del>
+</li>
+  <li>
+<strong>Game</strong>: Instead of printing you can enjoy simple game.</li>
+  <li><del><strong>Bigger time</strong>: Printing and remaining time is now bigger.</del></li>
+  <li>
+<del><strong>Selftest check</strong>: Now you can select <code class="language-plaintext highlighter-rouge">Ignore</code> to immediately pass all selftests.</del>
+11.</li>
+  <li>
+<del><strong>Total time</strong>: Elapsed, Remaining and Total or End time are shown during printing.</del>
+13.</li>
+  <li>
+<strong>Adjust brightness</strong>: You can change brightness of the display. It does not dim the light but draws darker colors.</li>
+  <li>
+<strong>Cold mode (min.temp.)</strong>: If you enable Cold Mode, temperatures (once set) won’t drop below 30°C. For safety reasons cold mode must be enabled after every start of the printer.</li>
+  <li>
+<strong>Show MBL and tilt</strong>: After mesh bed leveling (G29) you can go to <code class="language-plaintext highlighter-rouge">Snake Settings</code> and see the MBL Z levels at the measured points and check the tilt of the axes. Levels are shifted to avoid negative numbers.</li>
+  <li><del><strong>Speed up</strong>: Parking, unparking and other moves are done faster.</del></li>
+  <li>
+<strong>Different printers</strong>: Next to a standard version, other versions are released:
+    <ol>
+      <li>coreXY</li>
+      <li>i3 MK3.3 (i3 MK3 with MINI board, MINI display, Z motor split, and mosfet on heating)</li>
+      <li>i3 MK3.5 coreXY</li>
+    </ol>
+  </li>
+  <li><strong>Different languages</strong></li>
+  <li><del><strong>Avoid display flashing</strong>: Some displays flash with original FW.</del></li>
+  <li><del><strong>High geared extruder</strong>: Allow up to 2000 steps/mm for extruder.</del></li>
+  <li>
+<del><strong>Adjustable axes</strong>:</del>
+    <ol>
+      <li><del>length (includes <a href="https://www.aliexpress.com/item/1005001632020501.html">long bed HW</a>)</del></li>
+      <li><del>steps/mm</del></li>
+      <li><del>direction</del></li>
+      <li><del>current</del></li>
+      <li><del>max. feedrate (for X and Y only)</del></li>
+    </ol>
+  </li>
+  <li><del><strong>Adjustable filament load length</strong>: Different extruders need different load length.</del></li>
+  <li><del><strong>Adjustable homing sensitivity</strong>: X and Y homing sensitivity can be changed in menu and saved.</del></li>
+</ol>
+
+<h2 id="feed-the-snake">Feed the Snake</h2>
+
+<p>This FW is developed in spare time. If you like it, please
+consider supporting further development and updates by becoming a patron.</p>
+
+<p><a href="https://patreon.com/espr14"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Despr14%26type%3Dpatrons&amp;style=plastic" alt="Feed the Snake on Patreon"></a></p>
+
+<hr>
+
+<h2 id="installing">Installing</h2>
+
+<h3 id="jailbreak-your-mini">Jailbreak your Mini</h3>
+
+<p>You will need to cut out Prusa’s appendix to install custom firmware.
+Follow the instructions <a href="https://help.prusa3d.com/en/article/flashing-custom-firmware-mini_14/">here</a>.
+This is irreversible and voids the warranty, although in the US
+you are protected by the <a href="https://www.ftc.gov/news-events/press-releases/2018/04/ftc-staff-warns-companies-it-illegal-condition-warranty-coverage">Magnuson-Moss Warranty Act</a>.</p>
+
+<p>Of course you could always buy a second Buddy board and run it on that one.</p>
+
+<p>Alternatively, if you are good at very fine pitch soldering, you could
+lift the BOOT0 pin off the board entirely and make your own jumpers
+to connect it directly to 3.3V or GND as you need (the appendix merely
+<a href="https://hackaday.com/2019/12/16/prusa-dares-you-to-break-their-latest-printer/">shorts BOOT0 directly to GND</a>).</p>
+
+<p>Once you have done that, you can live and let live-stock.</p>
+
+<h3 id="flashing">Flashing</h3>
+
+<p>Whenever you install new firmware, it’s good practice to make a note of your
+settings first, particularly your Live Z Offset and your skew coefficients. Not all
+FW changes keep settings saved.</p>
+
+<p>Download <a href="https://github.com/Snake-FW/P32-FW/releases">the latest release here</a>.
+Copy the <code class="language-plaintext highlighter-rouge">.bbf</code> file to the root of your USB flash drive.
+Follow <a href="https://help.prusa3d.com/en/guide/how-to-update-firmware-mini-mini_128421/">the instructions here</a>
+to install the firmware. The bootloader will warn you the signature is
+incorrect - select “Ignore”.</p>
+
+<h3 id="first-run">First Run</h3>
+
+<p>If you lose your Prusa EEPROM settings during the upgrade process,
+when you first run the firmware, Prusa will send you to the initial
+calibration wizard. This can be a problem if you need to set custom e-steps
+before printing anything. Just skip the initial setup wizard,
+use the Snake Settings menu to configure your e-steps, and
+then rerun the setup wizard manually.</p>
+
+<h3 id="livestock-to-stock">Livestock to Stock</h3>
+
+<p>Download Prusa’s stock firmware <a href="https://www.prusa3d.com/drivers/">here</a>.</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/snake-edition/p32-fw/tree/main/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>jazzy</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/p32-fw/">p32-fw</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/magic_enum/">magic_enum</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/snake-edition/p32-fw.git">https://github.com/snake-edition/p32-fw.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-01-11
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/p32-fw/#jazzy-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/p32-fw/#jazzy-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/p32-fw/#jazzy-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/magic_enum/">magic_enum</a></td>
+                    <td>0.9.5</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="snake-mini">Snake Mini</h1>
+
+<p><a href="https://github.com/snake-edition/p32-fw/tree/main/"><img src="https://img.shields.io/github/v/release/Snake-FW/P32-FW?style=plastic" alt="Version"></a></p>
+
+<h2 id="wanted">Wanted</h2>
+<p>FW developer, testers, and graphic designers are welcome.</p>
+
+<h2 id="unofficial-firmware-for-the-prusa-mini-and-mini">Unofficial Firmware for the Prusa Mini and Mini+</h2>
+
+<p>Alternative FW for the Prusa Mini. There’s quite few improvements:</p>
+
+<ol>
+  <li>
+<del><strong>Hotend fan speed</strong>: Adds a menu option to unlock the hotend fan speed</del>
+  <del>and increase it from the Prusa Firmware’s default 38% to anywhere from 50-100%.</del>
+</li>
+  <li>
+<strong>Skew compensation</strong>: Turns on skew compensation in Marlin and allows it to be configured with <code class="language-plaintext highlighter-rouge">M852</code>.</li>
+  <li>
+<del><strong>OctoPrint screen</strong>: Adds support for <code class="language-plaintext highlighter-rouge">M73</code> (print progress) and <code class="language-plaintext highlighter-rouge">M117</code></del>
+  <del>(LCD messages).</del>
+</li>
+  <li>
+<strong>PID tuning</strong>: Read nozzle and bed PID parameters and tune them automatically.</li>
+  <li>
+<del><strong>Max Temps</strong>: Raises the maximum bed temperature from 100C to 110C</del>
+  <del>and nozzle temperature from 275C to 285C (use with caution!).</del>
+</li>
+  <li>
+<strong>Settings during print</strong>: You can change Snake settings, Control and Settings during printing.</li>
+  <li>
+<strong>Faster nozzle cooling</strong>: If you wait for nozzle cooling before MBL, you can call <code class="language-plaintext highlighter-rouge">M109 R170 C</code>
+  <del>which uses print fan to speed up cooling.</del>
+</li>
+  <li>
+<strong>Game</strong>: Instead of printing you can enjoy simple game.</li>
+  <li><del><strong>Bigger time</strong>: Printing and remaining time is now bigger.</del></li>
+  <li>
+<del><strong>Selftest check</strong>: Now you can select <code class="language-plaintext highlighter-rouge">Ignore</code> to immediately pass all selftests.</del>
+11.</li>
+  <li>
+<del><strong>Total time</strong>: Elapsed, Remaining and Total or End time are shown during printing.</del>
+13.</li>
+  <li>
+<strong>Adjust brightness</strong>: You can change brightness of the display. It does not dim the light but draws darker colors.</li>
+  <li>
+<strong>Cold mode (min.temp.)</strong>: If you enable Cold Mode, temperatures (once set) won’t drop below 30°C. For safety reasons cold mode must be enabled after every start of the printer.</li>
+  <li>
+<strong>Show MBL and tilt</strong>: After mesh bed leveling (G29) you can go to <code class="language-plaintext highlighter-rouge">Snake Settings</code> and see the MBL Z levels at the measured points and check the tilt of the axes. Levels are shifted to avoid negative numbers.</li>
+  <li><del><strong>Speed up</strong>: Parking, unparking and other moves are done faster.</del></li>
+  <li>
+<strong>Different printers</strong>: Next to a standard version, other versions are released:
+    <ol>
+      <li>coreXY</li>
+      <li>i3 MK3.3 (i3 MK3 with MINI board, MINI display, Z motor split, and mosfet on heating)</li>
+      <li>i3 MK3.5 coreXY</li>
+    </ol>
+  </li>
+  <li><strong>Different languages</strong></li>
+  <li><del><strong>Avoid display flashing</strong>: Some displays flash with original FW.</del></li>
+  <li><del><strong>High geared extruder</strong>: Allow up to 2000 steps/mm for extruder.</del></li>
+  <li>
+<del><strong>Adjustable axes</strong>:</del>
+    <ol>
+      <li><del>length (includes <a href="https://www.aliexpress.com/item/1005001632020501.html">long bed HW</a>)</del></li>
+      <li><del>steps/mm</del></li>
+      <li><del>direction</del></li>
+      <li><del>current</del></li>
+      <li><del>max. feedrate (for X and Y only)</del></li>
+    </ol>
+  </li>
+  <li><del><strong>Adjustable filament load length</strong>: Different extruders need different load length.</del></li>
+  <li><del><strong>Adjustable homing sensitivity</strong>: X and Y homing sensitivity can be changed in menu and saved.</del></li>
+</ol>
+
+<h2 id="feed-the-snake">Feed the Snake</h2>
+
+<p>This FW is developed in spare time. If you like it, please
+consider supporting further development and updates by becoming a patron.</p>
+
+<p><a href="https://patreon.com/espr14"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Despr14%26type%3Dpatrons&amp;style=plastic" alt="Feed the Snake on Patreon"></a></p>
+
+<hr>
+
+<h2 id="installing">Installing</h2>
+
+<h3 id="jailbreak-your-mini">Jailbreak your Mini</h3>
+
+<p>You will need to cut out Prusa’s appendix to install custom firmware.
+Follow the instructions <a href="https://help.prusa3d.com/en/article/flashing-custom-firmware-mini_14/">here</a>.
+This is irreversible and voids the warranty, although in the US
+you are protected by the <a href="https://www.ftc.gov/news-events/press-releases/2018/04/ftc-staff-warns-companies-it-illegal-condition-warranty-coverage">Magnuson-Moss Warranty Act</a>.</p>
+
+<p>Of course you could always buy a second Buddy board and run it on that one.</p>
+
+<p>Alternatively, if you are good at very fine pitch soldering, you could
+lift the BOOT0 pin off the board entirely and make your own jumpers
+to connect it directly to 3.3V or GND as you need (the appendix merely
+<a href="https://hackaday.com/2019/12/16/prusa-dares-you-to-break-their-latest-printer/">shorts BOOT0 directly to GND</a>).</p>
+
+<p>Once you have done that, you can live and let live-stock.</p>
+
+<h3 id="flashing">Flashing</h3>
+
+<p>Whenever you install new firmware, it’s good practice to make a note of your
+settings first, particularly your Live Z Offset and your skew coefficients. Not all
+FW changes keep settings saved.</p>
+
+<p>Download <a href="https://github.com/Snake-FW/P32-FW/releases">the latest release here</a>.
+Copy the <code class="language-plaintext highlighter-rouge">.bbf</code> file to the root of your USB flash drive.
+Follow <a href="https://help.prusa3d.com/en/guide/how-to-update-firmware-mini-mini_128421/">the instructions here</a>
+to install the firmware. The bootloader will warn you the signature is
+incorrect - select “Ignore”.</p>
+
+<h3 id="first-run">First Run</h3>
+
+<p>If you lose your Prusa EEPROM settings during the upgrade process,
+when you first run the firmware, Prusa will send you to the initial
+calibration wizard. This can be a problem if you need to set custom e-steps
+before printing anything. Just skip the initial setup wizard,
+use the Snake Settings menu to configure your e-steps, and
+then rerun the setup wizard manually.</p>
+
+<h3 id="livestock-to-stock">Livestock to Stock</h3>
+
+<p>Download Prusa’s stock firmware <a href="https://www.prusa3d.com/drivers/">here</a>.</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/snake-edition/p32-fw/tree/main/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>kilted</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/p32-fw/">p32-fw</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/magic_enum/">magic_enum</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/snake-edition/p32-fw.git">https://github.com/snake-edition/p32-fw.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-01-11
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/p32-fw/#kilted-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/p32-fw/#kilted-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/p32-fw/#kilted-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/magic_enum/">magic_enum</a></td>
+                    <td>0.9.5</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="snake-mini">Snake Mini</h1>
+
+<p><a href="https://github.com/snake-edition/p32-fw/tree/main/"><img src="https://img.shields.io/github/v/release/Snake-FW/P32-FW?style=plastic" alt="Version"></a></p>
+
+<h2 id="wanted">Wanted</h2>
+<p>FW developer, testers, and graphic designers are welcome.</p>
+
+<h2 id="unofficial-firmware-for-the-prusa-mini-and-mini">Unofficial Firmware for the Prusa Mini and Mini+</h2>
+
+<p>Alternative FW for the Prusa Mini. There’s quite few improvements:</p>
+
+<ol>
+  <li>
+<del><strong>Hotend fan speed</strong>: Adds a menu option to unlock the hotend fan speed</del>
+  <del>and increase it from the Prusa Firmware’s default 38% to anywhere from 50-100%.</del>
+</li>
+  <li>
+<strong>Skew compensation</strong>: Turns on skew compensation in Marlin and allows it to be configured with <code class="language-plaintext highlighter-rouge">M852</code>.</li>
+  <li>
+<del><strong>OctoPrint screen</strong>: Adds support for <code class="language-plaintext highlighter-rouge">M73</code> (print progress) and <code class="language-plaintext highlighter-rouge">M117</code></del>
+  <del>(LCD messages).</del>
+</li>
+  <li>
+<strong>PID tuning</strong>: Read nozzle and bed PID parameters and tune them automatically.</li>
+  <li>
+<del><strong>Max Temps</strong>: Raises the maximum bed temperature from 100C to 110C</del>
+  <del>and nozzle temperature from 275C to 285C (use with caution!).</del>
+</li>
+  <li>
+<strong>Settings during print</strong>: You can change Snake settings, Control and Settings during printing.</li>
+  <li>
+<strong>Faster nozzle cooling</strong>: If you wait for nozzle cooling before MBL, you can call <code class="language-plaintext highlighter-rouge">M109 R170 C</code>
+  <del>which uses print fan to speed up cooling.</del>
+</li>
+  <li>
+<strong>Game</strong>: Instead of printing you can enjoy simple game.</li>
+  <li><del><strong>Bigger time</strong>: Printing and remaining time is now bigger.</del></li>
+  <li>
+<del><strong>Selftest check</strong>: Now you can select <code class="language-plaintext highlighter-rouge">Ignore</code> to immediately pass all selftests.</del>
+11.</li>
+  <li>
+<del><strong>Total time</strong>: Elapsed, Remaining and Total or End time are shown during printing.</del>
+13.</li>
+  <li>
+<strong>Adjust brightness</strong>: You can change brightness of the display. It does not dim the light but draws darker colors.</li>
+  <li>
+<strong>Cold mode (min.temp.)</strong>: If you enable Cold Mode, temperatures (once set) won’t drop below 30°C. For safety reasons cold mode must be enabled after every start of the printer.</li>
+  <li>
+<strong>Show MBL and tilt</strong>: After mesh bed leveling (G29) you can go to <code class="language-plaintext highlighter-rouge">Snake Settings</code> and see the MBL Z levels at the measured points and check the tilt of the axes. Levels are shifted to avoid negative numbers.</li>
+  <li><del><strong>Speed up</strong>: Parking, unparking and other moves are done faster.</del></li>
+  <li>
+<strong>Different printers</strong>: Next to a standard version, other versions are released:
+    <ol>
+      <li>coreXY</li>
+      <li>i3 MK3.3 (i3 MK3 with MINI board, MINI display, Z motor split, and mosfet on heating)</li>
+      <li>i3 MK3.5 coreXY</li>
+    </ol>
+  </li>
+  <li><strong>Different languages</strong></li>
+  <li><del><strong>Avoid display flashing</strong>: Some displays flash with original FW.</del></li>
+  <li><del><strong>High geared extruder</strong>: Allow up to 2000 steps/mm for extruder.</del></li>
+  <li>
+<del><strong>Adjustable axes</strong>:</del>
+    <ol>
+      <li><del>length (includes <a href="https://www.aliexpress.com/item/1005001632020501.html">long bed HW</a>)</del></li>
+      <li><del>steps/mm</del></li>
+      <li><del>direction</del></li>
+      <li><del>current</del></li>
+      <li><del>max. feedrate (for X and Y only)</del></li>
+    </ol>
+  </li>
+  <li><del><strong>Adjustable filament load length</strong>: Different extruders need different load length.</del></li>
+  <li><del><strong>Adjustable homing sensitivity</strong>: X and Y homing sensitivity can be changed in menu and saved.</del></li>
+</ol>
+
+<h2 id="feed-the-snake">Feed the Snake</h2>
+
+<p>This FW is developed in spare time. If you like it, please
+consider supporting further development and updates by becoming a patron.</p>
+
+<p><a href="https://patreon.com/espr14"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Despr14%26type%3Dpatrons&amp;style=plastic" alt="Feed the Snake on Patreon"></a></p>
+
+<hr>
+
+<h2 id="installing">Installing</h2>
+
+<h3 id="jailbreak-your-mini">Jailbreak your Mini</h3>
+
+<p>You will need to cut out Prusa’s appendix to install custom firmware.
+Follow the instructions <a href="https://help.prusa3d.com/en/article/flashing-custom-firmware-mini_14/">here</a>.
+This is irreversible and voids the warranty, although in the US
+you are protected by the <a href="https://www.ftc.gov/news-events/press-releases/2018/04/ftc-staff-warns-companies-it-illegal-condition-warranty-coverage">Magnuson-Moss Warranty Act</a>.</p>
+
+<p>Of course you could always buy a second Buddy board and run it on that one.</p>
+
+<p>Alternatively, if you are good at very fine pitch soldering, you could
+lift the BOOT0 pin off the board entirely and make your own jumpers
+to connect it directly to 3.3V or GND as you need (the appendix merely
+<a href="https://hackaday.com/2019/12/16/prusa-dares-you-to-break-their-latest-printer/">shorts BOOT0 directly to GND</a>).</p>
+
+<p>Once you have done that, you can live and let live-stock.</p>
+
+<h3 id="flashing">Flashing</h3>
+
+<p>Whenever you install new firmware, it’s good practice to make a note of your
+settings first, particularly your Live Z Offset and your skew coefficients. Not all
+FW changes keep settings saved.</p>
+
+<p>Download <a href="https://github.com/Snake-FW/P32-FW/releases">the latest release here</a>.
+Copy the <code class="language-plaintext highlighter-rouge">.bbf</code> file to the root of your USB flash drive.
+Follow <a href="https://help.prusa3d.com/en/guide/how-to-update-firmware-mini-mini_128421/">the instructions here</a>
+to install the firmware. The bootloader will warn you the signature is
+incorrect - select “Ignore”.</p>
+
+<h3 id="first-run">First Run</h3>
+
+<p>If you lose your Prusa EEPROM settings during the upgrade process,
+when you first run the firmware, Prusa will send you to the initial
+calibration wizard. This can be a problem if you need to set custom e-steps
+before printing anything. Just skip the initial setup wizard,
+use the Snake Settings menu to configure your e-steps, and
+then rerun the setup wizard manually.</p>
+
+<h3 id="livestock-to-stock">Livestock to Stock</h3>
+
+<p>Download Prusa’s stock firmware <a href="https://www.prusa3d.com/drivers/">here</a>.</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/snake-edition/p32-fw/tree/main/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>rolling</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/p32-fw/">p32-fw</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/magic_enum/">magic_enum</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/snake-edition/p32-fw.git">https://github.com/snake-edition/p32-fw.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-01-11
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/p32-fw/#rolling-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/p32-fw/#rolling-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/p32-fw/#rolling-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/magic_enum/">magic_enum</a></td>
+                    <td>0.9.5</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="snake-mini">Snake Mini</h1>
+
+<p><a href="https://github.com/snake-edition/p32-fw/tree/main/"><img src="https://img.shields.io/github/v/release/Snake-FW/P32-FW?style=plastic" alt="Version"></a></p>
+
+<h2 id="wanted">Wanted</h2>
+<p>FW developer, testers, and graphic designers are welcome.</p>
+
+<h2 id="unofficial-firmware-for-the-prusa-mini-and-mini">Unofficial Firmware for the Prusa Mini and Mini+</h2>
+
+<p>Alternative FW for the Prusa Mini. There’s quite few improvements:</p>
+
+<ol>
+  <li>
+<del><strong>Hotend fan speed</strong>: Adds a menu option to unlock the hotend fan speed</del>
+  <del>and increase it from the Prusa Firmware’s default 38% to anywhere from 50-100%.</del>
+</li>
+  <li>
+<strong>Skew compensation</strong>: Turns on skew compensation in Marlin and allows it to be configured with <code class="language-plaintext highlighter-rouge">M852</code>.</li>
+  <li>
+<del><strong>OctoPrint screen</strong>: Adds support for <code class="language-plaintext highlighter-rouge">M73</code> (print progress) and <code class="language-plaintext highlighter-rouge">M117</code></del>
+  <del>(LCD messages).</del>
+</li>
+  <li>
+<strong>PID tuning</strong>: Read nozzle and bed PID parameters and tune them automatically.</li>
+  <li>
+<del><strong>Max Temps</strong>: Raises the maximum bed temperature from 100C to 110C</del>
+  <del>and nozzle temperature from 275C to 285C (use with caution!).</del>
+</li>
+  <li>
+<strong>Settings during print</strong>: You can change Snake settings, Control and Settings during printing.</li>
+  <li>
+<strong>Faster nozzle cooling</strong>: If you wait for nozzle cooling before MBL, you can call <code class="language-plaintext highlighter-rouge">M109 R170 C</code>
+  <del>which uses print fan to speed up cooling.</del>
+</li>
+  <li>
+<strong>Game</strong>: Instead of printing you can enjoy simple game.</li>
+  <li><del><strong>Bigger time</strong>: Printing and remaining time is now bigger.</del></li>
+  <li>
+<del><strong>Selftest check</strong>: Now you can select <code class="language-plaintext highlighter-rouge">Ignore</code> to immediately pass all selftests.</del>
+11.</li>
+  <li>
+<del><strong>Total time</strong>: Elapsed, Remaining and Total or End time are shown during printing.</del>
+13.</li>
+  <li>
+<strong>Adjust brightness</strong>: You can change brightness of the display. It does not dim the light but draws darker colors.</li>
+  <li>
+<strong>Cold mode (min.temp.)</strong>: If you enable Cold Mode, temperatures (once set) won’t drop below 30°C. For safety reasons cold mode must be enabled after every start of the printer.</li>
+  <li>
+<strong>Show MBL and tilt</strong>: After mesh bed leveling (G29) you can go to <code class="language-plaintext highlighter-rouge">Snake Settings</code> and see the MBL Z levels at the measured points and check the tilt of the axes. Levels are shifted to avoid negative numbers.</li>
+  <li><del><strong>Speed up</strong>: Parking, unparking and other moves are done faster.</del></li>
+  <li>
+<strong>Different printers</strong>: Next to a standard version, other versions are released:
+    <ol>
+      <li>coreXY</li>
+      <li>i3 MK3.3 (i3 MK3 with MINI board, MINI display, Z motor split, and mosfet on heating)</li>
+      <li>i3 MK3.5 coreXY</li>
+    </ol>
+  </li>
+  <li><strong>Different languages</strong></li>
+  <li><del><strong>Avoid display flashing</strong>: Some displays flash with original FW.</del></li>
+  <li><del><strong>High geared extruder</strong>: Allow up to 2000 steps/mm for extruder.</del></li>
+  <li>
+<del><strong>Adjustable axes</strong>:</del>
+    <ol>
+      <li><del>length (includes <a href="https://www.aliexpress.com/item/1005001632020501.html">long bed HW</a>)</del></li>
+      <li><del>steps/mm</del></li>
+      <li><del>direction</del></li>
+      <li><del>current</del></li>
+      <li><del>max. feedrate (for X and Y only)</del></li>
+    </ol>
+  </li>
+  <li><del><strong>Adjustable filament load length</strong>: Different extruders need different load length.</del></li>
+  <li><del><strong>Adjustable homing sensitivity</strong>: X and Y homing sensitivity can be changed in menu and saved.</del></li>
+</ol>
+
+<h2 id="feed-the-snake">Feed the Snake</h2>
+
+<p>This FW is developed in spare time. If you like it, please
+consider supporting further development and updates by becoming a patron.</p>
+
+<p><a href="https://patreon.com/espr14"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Despr14%26type%3Dpatrons&amp;style=plastic" alt="Feed the Snake on Patreon"></a></p>
+
+<hr>
+
+<h2 id="installing">Installing</h2>
+
+<h3 id="jailbreak-your-mini">Jailbreak your Mini</h3>
+
+<p>You will need to cut out Prusa’s appendix to install custom firmware.
+Follow the instructions <a href="https://help.prusa3d.com/en/article/flashing-custom-firmware-mini_14/">here</a>.
+This is irreversible and voids the warranty, although in the US
+you are protected by the <a href="https://www.ftc.gov/news-events/press-releases/2018/04/ftc-staff-warns-companies-it-illegal-condition-warranty-coverage">Magnuson-Moss Warranty Act</a>.</p>
+
+<p>Of course you could always buy a second Buddy board and run it on that one.</p>
+
+<p>Alternatively, if you are good at very fine pitch soldering, you could
+lift the BOOT0 pin off the board entirely and make your own jumpers
+to connect it directly to 3.3V or GND as you need (the appendix merely
+<a href="https://hackaday.com/2019/12/16/prusa-dares-you-to-break-their-latest-printer/">shorts BOOT0 directly to GND</a>).</p>
+
+<p>Once you have done that, you can live and let live-stock.</p>
+
+<h3 id="flashing">Flashing</h3>
+
+<p>Whenever you install new firmware, it’s good practice to make a note of your
+settings first, particularly your Live Z Offset and your skew coefficients. Not all
+FW changes keep settings saved.</p>
+
+<p>Download <a href="https://github.com/Snake-FW/P32-FW/releases">the latest release here</a>.
+Copy the <code class="language-plaintext highlighter-rouge">.bbf</code> file to the root of your USB flash drive.
+Follow <a href="https://help.prusa3d.com/en/guide/how-to-update-firmware-mini-mini_128421/">the instructions here</a>
+to install the firmware. The bootloader will warn you the signature is
+incorrect - select “Ignore”.</p>
+
+<h3 id="first-run">First Run</h3>
+
+<p>If you lose your Prusa EEPROM settings during the upgrade process,
+when you first run the firmware, Prusa will send you to the initial
+calibration wizard. This can be a problem if you need to set custom e-steps
+before printing anything. Just skip the initial setup wizard,
+use the Snake Settings menu to configure your e-steps, and
+then rerun the setup wizard manually.</p>
+
+<h3 id="livestock-to-stock">Livestock to Stock</h3>
+
+<p>Download Prusa’s stock firmware <a href="https://www.prusa3d.com/drivers/">here</a>.</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/snake-edition/p32-fw/tree/main/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/p32-fw/">p32-fw</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/magic_enum/">magic_enum</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/snake-edition/p32-fw.git">https://github.com/snake-edition/p32-fw.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-01-11
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/p32-fw/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/p32-fw/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/p32-fw/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/magic_enum/">magic_enum</a></td>
+                    <td>0.9.5</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="snake-mini">Snake Mini</h1>
+
+<p><a href="https://github.com/snake-edition/p32-fw/tree/main/"><img src="https://img.shields.io/github/v/release/Snake-FW/P32-FW?style=plastic" alt="Version"></a></p>
+
+<h2 id="wanted">Wanted</h2>
+<p>FW developer, testers, and graphic designers are welcome.</p>
+
+<h2 id="unofficial-firmware-for-the-prusa-mini-and-mini">Unofficial Firmware for the Prusa Mini and Mini+</h2>
+
+<p>Alternative FW for the Prusa Mini. There’s quite few improvements:</p>
+
+<ol>
+  <li>
+<del><strong>Hotend fan speed</strong>: Adds a menu option to unlock the hotend fan speed</del>
+  <del>and increase it from the Prusa Firmware’s default 38% to anywhere from 50-100%.</del>
+</li>
+  <li>
+<strong>Skew compensation</strong>: Turns on skew compensation in Marlin and allows it to be configured with <code class="language-plaintext highlighter-rouge">M852</code>.</li>
+  <li>
+<del><strong>OctoPrint screen</strong>: Adds support for <code class="language-plaintext highlighter-rouge">M73</code> (print progress) and <code class="language-plaintext highlighter-rouge">M117</code></del>
+  <del>(LCD messages).</del>
+</li>
+  <li>
+<strong>PID tuning</strong>: Read nozzle and bed PID parameters and tune them automatically.</li>
+  <li>
+<del><strong>Max Temps</strong>: Raises the maximum bed temperature from 100C to 110C</del>
+  <del>and nozzle temperature from 275C to 285C (use with caution!).</del>
+</li>
+  <li>
+<strong>Settings during print</strong>: You can change Snake settings, Control and Settings during printing.</li>
+  <li>
+<strong>Faster nozzle cooling</strong>: If you wait for nozzle cooling before MBL, you can call <code class="language-plaintext highlighter-rouge">M109 R170 C</code>
+  <del>which uses print fan to speed up cooling.</del>
+</li>
+  <li>
+<strong>Game</strong>: Instead of printing you can enjoy simple game.</li>
+  <li><del><strong>Bigger time</strong>: Printing and remaining time is now bigger.</del></li>
+  <li>
+<del><strong>Selftest check</strong>: Now you can select <code class="language-plaintext highlighter-rouge">Ignore</code> to immediately pass all selftests.</del>
+11.</li>
+  <li>
+<del><strong>Total time</strong>: Elapsed, Remaining and Total or End time are shown during printing.</del>
+13.</li>
+  <li>
+<strong>Adjust brightness</strong>: You can change brightness of the display. It does not dim the light but draws darker colors.</li>
+  <li>
+<strong>Cold mode (min.temp.)</strong>: If you enable Cold Mode, temperatures (once set) won’t drop below 30°C. For safety reasons cold mode must be enabled after every start of the printer.</li>
+  <li>
+<strong>Show MBL and tilt</strong>: After mesh bed leveling (G29) you can go to <code class="language-plaintext highlighter-rouge">Snake Settings</code> and see the MBL Z levels at the measured points and check the tilt of the axes. Levels are shifted to avoid negative numbers.</li>
+  <li><del><strong>Speed up</strong>: Parking, unparking and other moves are done faster.</del></li>
+  <li>
+<strong>Different printers</strong>: Next to a standard version, other versions are released:
+    <ol>
+      <li>coreXY</li>
+      <li>i3 MK3.3 (i3 MK3 with MINI board, MINI display, Z motor split, and mosfet on heating)</li>
+      <li>i3 MK3.5 coreXY</li>
+    </ol>
+  </li>
+  <li><strong>Different languages</strong></li>
+  <li><del><strong>Avoid display flashing</strong>: Some displays flash with original FW.</del></li>
+  <li><del><strong>High geared extruder</strong>: Allow up to 2000 steps/mm for extruder.</del></li>
+  <li>
+<del><strong>Adjustable axes</strong>:</del>
+    <ol>
+      <li><del>length (includes <a href="https://www.aliexpress.com/item/1005001632020501.html">long bed HW</a>)</del></li>
+      <li><del>steps/mm</del></li>
+      <li><del>direction</del></li>
+      <li><del>current</del></li>
+      <li><del>max. feedrate (for X and Y only)</del></li>
+    </ol>
+  </li>
+  <li><del><strong>Adjustable filament load length</strong>: Different extruders need different load length.</del></li>
+  <li><del><strong>Adjustable homing sensitivity</strong>: X and Y homing sensitivity can be changed in menu and saved.</del></li>
+</ol>
+
+<h2 id="feed-the-snake">Feed the Snake</h2>
+
+<p>This FW is developed in spare time. If you like it, please
+consider supporting further development and updates by becoming a patron.</p>
+
+<p><a href="https://patreon.com/espr14"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Despr14%26type%3Dpatrons&amp;style=plastic" alt="Feed the Snake on Patreon"></a></p>
+
+<hr>
+
+<h2 id="installing">Installing</h2>
+
+<h3 id="jailbreak-your-mini">Jailbreak your Mini</h3>
+
+<p>You will need to cut out Prusa’s appendix to install custom firmware.
+Follow the instructions <a href="https://help.prusa3d.com/en/article/flashing-custom-firmware-mini_14/">here</a>.
+This is irreversible and voids the warranty, although in the US
+you are protected by the <a href="https://www.ftc.gov/news-events/press-releases/2018/04/ftc-staff-warns-companies-it-illegal-condition-warranty-coverage">Magnuson-Moss Warranty Act</a>.</p>
+
+<p>Of course you could always buy a second Buddy board and run it on that one.</p>
+
+<p>Alternatively, if you are good at very fine pitch soldering, you could
+lift the BOOT0 pin off the board entirely and make your own jumpers
+to connect it directly to 3.3V or GND as you need (the appendix merely
+<a href="https://hackaday.com/2019/12/16/prusa-dares-you-to-break-their-latest-printer/">shorts BOOT0 directly to GND</a>).</p>
+
+<p>Once you have done that, you can live and let live-stock.</p>
+
+<h3 id="flashing">Flashing</h3>
+
+<p>Whenever you install new firmware, it’s good practice to make a note of your
+settings first, particularly your Live Z Offset and your skew coefficients. Not all
+FW changes keep settings saved.</p>
+
+<p>Download <a href="https://github.com/Snake-FW/P32-FW/releases">the latest release here</a>.
+Copy the <code class="language-plaintext highlighter-rouge">.bbf</code> file to the root of your USB flash drive.
+Follow <a href="https://help.prusa3d.com/en/guide/how-to-update-firmware-mini-mini_128421/">the instructions here</a>
+to install the firmware. The bootloader will warn you the signature is
+incorrect - select “Ignore”.</p>
+
+<h3 id="first-run">First Run</h3>
+
+<p>If you lose your Prusa EEPROM settings during the upgrade process,
+when you first run the firmware, Prusa will send you to the initial
+calibration wizard. This can be a problem if you need to set custom e-steps
+before printing anything. Just skip the initial setup wizard,
+use the Snake Settings menu to configure your e-steps, and
+then rerun the setup wizard manually.</p>
+
+<h3 id="livestock-to-stock">Livestock to Stock</h3>
+
+<p>Download Prusa’s stock firmware <a href="https://www.prusa3d.com/drivers/">here</a>.</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/snake-edition/p32-fw/tree/main/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>galactic</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/p32-fw/">p32-fw</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/magic_enum/">magic_enum</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/snake-edition/p32-fw.git">https://github.com/snake-edition/p32-fw.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-01-11
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/p32-fw/#galactic-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/p32-fw/#galactic-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/p32-fw/#galactic-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/magic_enum/">magic_enum</a></td>
+                    <td>0.9.5</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="snake-mini">Snake Mini</h1>
+
+<p><a href="https://github.com/snake-edition/p32-fw/tree/main/"><img src="https://img.shields.io/github/v/release/Snake-FW/P32-FW?style=plastic" alt="Version"></a></p>
+
+<h2 id="wanted">Wanted</h2>
+<p>FW developer, testers, and graphic designers are welcome.</p>
+
+<h2 id="unofficial-firmware-for-the-prusa-mini-and-mini">Unofficial Firmware for the Prusa Mini and Mini+</h2>
+
+<p>Alternative FW for the Prusa Mini. There’s quite few improvements:</p>
+
+<ol>
+  <li>
+<del><strong>Hotend fan speed</strong>: Adds a menu option to unlock the hotend fan speed</del>
+  <del>and increase it from the Prusa Firmware’s default 38% to anywhere from 50-100%.</del>
+</li>
+  <li>
+<strong>Skew compensation</strong>: Turns on skew compensation in Marlin and allows it to be configured with <code class="language-plaintext highlighter-rouge">M852</code>.</li>
+  <li>
+<del><strong>OctoPrint screen</strong>: Adds support for <code class="language-plaintext highlighter-rouge">M73</code> (print progress) and <code class="language-plaintext highlighter-rouge">M117</code></del>
+  <del>(LCD messages).</del>
+</li>
+  <li>
+<strong>PID tuning</strong>: Read nozzle and bed PID parameters and tune them automatically.</li>
+  <li>
+<del><strong>Max Temps</strong>: Raises the maximum bed temperature from 100C to 110C</del>
+  <del>and nozzle temperature from 275C to 285C (use with caution!).</del>
+</li>
+  <li>
+<strong>Settings during print</strong>: You can change Snake settings, Control and Settings during printing.</li>
+  <li>
+<strong>Faster nozzle cooling</strong>: If you wait for nozzle cooling before MBL, you can call <code class="language-plaintext highlighter-rouge">M109 R170 C</code>
+  <del>which uses print fan to speed up cooling.</del>
+</li>
+  <li>
+<strong>Game</strong>: Instead of printing you can enjoy simple game.</li>
+  <li><del><strong>Bigger time</strong>: Printing and remaining time is now bigger.</del></li>
+  <li>
+<del><strong>Selftest check</strong>: Now you can select <code class="language-plaintext highlighter-rouge">Ignore</code> to immediately pass all selftests.</del>
+11.</li>
+  <li>
+<del><strong>Total time</strong>: Elapsed, Remaining and Total or End time are shown during printing.</del>
+13.</li>
+  <li>
+<strong>Adjust brightness</strong>: You can change brightness of the display. It does not dim the light but draws darker colors.</li>
+  <li>
+<strong>Cold mode (min.temp.)</strong>: If you enable Cold Mode, temperatures (once set) won’t drop below 30°C. For safety reasons cold mode must be enabled after every start of the printer.</li>
+  <li>
+<strong>Show MBL and tilt</strong>: After mesh bed leveling (G29) you can go to <code class="language-plaintext highlighter-rouge">Snake Settings</code> and see the MBL Z levels at the measured points and check the tilt of the axes. Levels are shifted to avoid negative numbers.</li>
+  <li><del><strong>Speed up</strong>: Parking, unparking and other moves are done faster.</del></li>
+  <li>
+<strong>Different printers</strong>: Next to a standard version, other versions are released:
+    <ol>
+      <li>coreXY</li>
+      <li>i3 MK3.3 (i3 MK3 with MINI board, MINI display, Z motor split, and mosfet on heating)</li>
+      <li>i3 MK3.5 coreXY</li>
+    </ol>
+  </li>
+  <li><strong>Different languages</strong></li>
+  <li><del><strong>Avoid display flashing</strong>: Some displays flash with original FW.</del></li>
+  <li><del><strong>High geared extruder</strong>: Allow up to 2000 steps/mm for extruder.</del></li>
+  <li>
+<del><strong>Adjustable axes</strong>:</del>
+    <ol>
+      <li><del>length (includes <a href="https://www.aliexpress.com/item/1005001632020501.html">long bed HW</a>)</del></li>
+      <li><del>steps/mm</del></li>
+      <li><del>direction</del></li>
+      <li><del>current</del></li>
+      <li><del>max. feedrate (for X and Y only)</del></li>
+    </ol>
+  </li>
+  <li><del><strong>Adjustable filament load length</strong>: Different extruders need different load length.</del></li>
+  <li><del><strong>Adjustable homing sensitivity</strong>: X and Y homing sensitivity can be changed in menu and saved.</del></li>
+</ol>
+
+<h2 id="feed-the-snake">Feed the Snake</h2>
+
+<p>This FW is developed in spare time. If you like it, please
+consider supporting further development and updates by becoming a patron.</p>
+
+<p><a href="https://patreon.com/espr14"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Despr14%26type%3Dpatrons&amp;style=plastic" alt="Feed the Snake on Patreon"></a></p>
+
+<hr>
+
+<h2 id="installing">Installing</h2>
+
+<h3 id="jailbreak-your-mini">Jailbreak your Mini</h3>
+
+<p>You will need to cut out Prusa’s appendix to install custom firmware.
+Follow the instructions <a href="https://help.prusa3d.com/en/article/flashing-custom-firmware-mini_14/">here</a>.
+This is irreversible and voids the warranty, although in the US
+you are protected by the <a href="https://www.ftc.gov/news-events/press-releases/2018/04/ftc-staff-warns-companies-it-illegal-condition-warranty-coverage">Magnuson-Moss Warranty Act</a>.</p>
+
+<p>Of course you could always buy a second Buddy board and run it on that one.</p>
+
+<p>Alternatively, if you are good at very fine pitch soldering, you could
+lift the BOOT0 pin off the board entirely and make your own jumpers
+to connect it directly to 3.3V or GND as you need (the appendix merely
+<a href="https://hackaday.com/2019/12/16/prusa-dares-you-to-break-their-latest-printer/">shorts BOOT0 directly to GND</a>).</p>
+
+<p>Once you have done that, you can live and let live-stock.</p>
+
+<h3 id="flashing">Flashing</h3>
+
+<p>Whenever you install new firmware, it’s good practice to make a note of your
+settings first, particularly your Live Z Offset and your skew coefficients. Not all
+FW changes keep settings saved.</p>
+
+<p>Download <a href="https://github.com/Snake-FW/P32-FW/releases">the latest release here</a>.
+Copy the <code class="language-plaintext highlighter-rouge">.bbf</code> file to the root of your USB flash drive.
+Follow <a href="https://help.prusa3d.com/en/guide/how-to-update-firmware-mini-mini_128421/">the instructions here</a>
+to install the firmware. The bootloader will warn you the signature is
+incorrect - select “Ignore”.</p>
+
+<h3 id="first-run">First Run</h3>
+
+<p>If you lose your Prusa EEPROM settings during the upgrade process,
+when you first run the firmware, Prusa will send you to the initial
+calibration wizard. This can be a problem if you need to set custom e-steps
+before printing anything. Just skip the initial setup wizard,
+use the Snake Settings menu to configure your e-steps, and
+then rerun the setup wizard manually.</p>
+
+<h3 id="livestock-to-stock">Livestock to Stock</h3>
+
+<p>Download Prusa’s stock firmware <a href="https://www.prusa3d.com/drivers/">here</a>.</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/snake-edition/p32-fw/tree/main/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>iron</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/p32-fw/">p32-fw</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/magic_enum/">magic_enum</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/snake-edition/p32-fw.git">https://github.com/snake-edition/p32-fw.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-01-11
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/p32-fw/#iron-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/p32-fw/#iron-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/p32-fw/#iron-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/magic_enum/">magic_enum</a></td>
+                    <td>0.9.5</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="snake-mini">Snake Mini</h1>
+
+<p><a href="https://github.com/snake-edition/p32-fw/tree/main/"><img src="https://img.shields.io/github/v/release/Snake-FW/P32-FW?style=plastic" alt="Version"></a></p>
+
+<h2 id="wanted">Wanted</h2>
+<p>FW developer, testers, and graphic designers are welcome.</p>
+
+<h2 id="unofficial-firmware-for-the-prusa-mini-and-mini">Unofficial Firmware for the Prusa Mini and Mini+</h2>
+
+<p>Alternative FW for the Prusa Mini. There’s quite few improvements:</p>
+
+<ol>
+  <li>
+<del><strong>Hotend fan speed</strong>: Adds a menu option to unlock the hotend fan speed</del>
+  <del>and increase it from the Prusa Firmware’s default 38% to anywhere from 50-100%.</del>
+</li>
+  <li>
+<strong>Skew compensation</strong>: Turns on skew compensation in Marlin and allows it to be configured with <code class="language-plaintext highlighter-rouge">M852</code>.</li>
+  <li>
+<del><strong>OctoPrint screen</strong>: Adds support for <code class="language-plaintext highlighter-rouge">M73</code> (print progress) and <code class="language-plaintext highlighter-rouge">M117</code></del>
+  <del>(LCD messages).</del>
+</li>
+  <li>
+<strong>PID tuning</strong>: Read nozzle and bed PID parameters and tune them automatically.</li>
+  <li>
+<del><strong>Max Temps</strong>: Raises the maximum bed temperature from 100C to 110C</del>
+  <del>and nozzle temperature from 275C to 285C (use with caution!).</del>
+</li>
+  <li>
+<strong>Settings during print</strong>: You can change Snake settings, Control and Settings during printing.</li>
+  <li>
+<strong>Faster nozzle cooling</strong>: If you wait for nozzle cooling before MBL, you can call <code class="language-plaintext highlighter-rouge">M109 R170 C</code>
+  <del>which uses print fan to speed up cooling.</del>
+</li>
+  <li>
+<strong>Game</strong>: Instead of printing you can enjoy simple game.</li>
+  <li><del><strong>Bigger time</strong>: Printing and remaining time is now bigger.</del></li>
+  <li>
+<del><strong>Selftest check</strong>: Now you can select <code class="language-plaintext highlighter-rouge">Ignore</code> to immediately pass all selftests.</del>
+11.</li>
+  <li>
+<del><strong>Total time</strong>: Elapsed, Remaining and Total or End time are shown during printing.</del>
+13.</li>
+  <li>
+<strong>Adjust brightness</strong>: You can change brightness of the display. It does not dim the light but draws darker colors.</li>
+  <li>
+<strong>Cold mode (min.temp.)</strong>: If you enable Cold Mode, temperatures (once set) won’t drop below 30°C. For safety reasons cold mode must be enabled after every start of the printer.</li>
+  <li>
+<strong>Show MBL and tilt</strong>: After mesh bed leveling (G29) you can go to <code class="language-plaintext highlighter-rouge">Snake Settings</code> and see the MBL Z levels at the measured points and check the tilt of the axes. Levels are shifted to avoid negative numbers.</li>
+  <li><del><strong>Speed up</strong>: Parking, unparking and other moves are done faster.</del></li>
+  <li>
+<strong>Different printers</strong>: Next to a standard version, other versions are released:
+    <ol>
+      <li>coreXY</li>
+      <li>i3 MK3.3 (i3 MK3 with MINI board, MINI display, Z motor split, and mosfet on heating)</li>
+      <li>i3 MK3.5 coreXY</li>
+    </ol>
+  </li>
+  <li><strong>Different languages</strong></li>
+  <li><del><strong>Avoid display flashing</strong>: Some displays flash with original FW.</del></li>
+  <li><del><strong>High geared extruder</strong>: Allow up to 2000 steps/mm for extruder.</del></li>
+  <li>
+<del><strong>Adjustable axes</strong>:</del>
+    <ol>
+      <li><del>length (includes <a href="https://www.aliexpress.com/item/1005001632020501.html">long bed HW</a>)</del></li>
+      <li><del>steps/mm</del></li>
+      <li><del>direction</del></li>
+      <li><del>current</del></li>
+      <li><del>max. feedrate (for X and Y only)</del></li>
+    </ol>
+  </li>
+  <li><del><strong>Adjustable filament load length</strong>: Different extruders need different load length.</del></li>
+  <li><del><strong>Adjustable homing sensitivity</strong>: X and Y homing sensitivity can be changed in menu and saved.</del></li>
+</ol>
+
+<h2 id="feed-the-snake">Feed the Snake</h2>
+
+<p>This FW is developed in spare time. If you like it, please
+consider supporting further development and updates by becoming a patron.</p>
+
+<p><a href="https://patreon.com/espr14"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Despr14%26type%3Dpatrons&amp;style=plastic" alt="Feed the Snake on Patreon"></a></p>
+
+<hr>
+
+<h2 id="installing">Installing</h2>
+
+<h3 id="jailbreak-your-mini">Jailbreak your Mini</h3>
+
+<p>You will need to cut out Prusa’s appendix to install custom firmware.
+Follow the instructions <a href="https://help.prusa3d.com/en/article/flashing-custom-firmware-mini_14/">here</a>.
+This is irreversible and voids the warranty, although in the US
+you are protected by the <a href="https://www.ftc.gov/news-events/press-releases/2018/04/ftc-staff-warns-companies-it-illegal-condition-warranty-coverage">Magnuson-Moss Warranty Act</a>.</p>
+
+<p>Of course you could always buy a second Buddy board and run it on that one.</p>
+
+<p>Alternatively, if you are good at very fine pitch soldering, you could
+lift the BOOT0 pin off the board entirely and make your own jumpers
+to connect it directly to 3.3V or GND as you need (the appendix merely
+<a href="https://hackaday.com/2019/12/16/prusa-dares-you-to-break-their-latest-printer/">shorts BOOT0 directly to GND</a>).</p>
+
+<p>Once you have done that, you can live and let live-stock.</p>
+
+<h3 id="flashing">Flashing</h3>
+
+<p>Whenever you install new firmware, it’s good practice to make a note of your
+settings first, particularly your Live Z Offset and your skew coefficients. Not all
+FW changes keep settings saved.</p>
+
+<p>Download <a href="https://github.com/Snake-FW/P32-FW/releases">the latest release here</a>.
+Copy the <code class="language-plaintext highlighter-rouge">.bbf</code> file to the root of your USB flash drive.
+Follow <a href="https://help.prusa3d.com/en/guide/how-to-update-firmware-mini-mini_128421/">the instructions here</a>
+to install the firmware. The bootloader will warn you the signature is
+incorrect - select “Ignore”.</p>
+
+<h3 id="first-run">First Run</h3>
+
+<p>If you lose your Prusa EEPROM settings during the upgrade process,
+when you first run the firmware, Prusa will send you to the initial
+calibration wizard. This can be a problem if you need to set custom e-steps
+before printing anything. Just skip the initial setup wizard,
+use the Snake Settings menu to configure your e-steps, and
+then rerun the setup wizard manually.</p>
+
+<h3 id="livestock-to-stock">Livestock to Stock</h3>
+
+<p>Download Prusa’s stock firmware <a href="https://www.prusa3d.com/drivers/">here</a>.</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/snake-edition/p32-fw/tree/main/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>melodic</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/p32-fw/">p32-fw</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/magic_enum/">magic_enum</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/snake-edition/p32-fw.git">https://github.com/snake-edition/p32-fw.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-01-11
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/p32-fw/#melodic-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/p32-fw/#melodic-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/p32-fw/#melodic-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/magic_enum/">magic_enum</a></td>
+                    <td>0.9.5</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="snake-mini">Snake Mini</h1>
+
+<p><a href="https://github.com/snake-edition/p32-fw/tree/main/"><img src="https://img.shields.io/github/v/release/Snake-FW/P32-FW?style=plastic" alt="Version"></a></p>
+
+<h2 id="wanted">Wanted</h2>
+<p>FW developer, testers, and graphic designers are welcome.</p>
+
+<h2 id="unofficial-firmware-for-the-prusa-mini-and-mini">Unofficial Firmware for the Prusa Mini and Mini+</h2>
+
+<p>Alternative FW for the Prusa Mini. There’s quite few improvements:</p>
+
+<ol>
+  <li>
+<del><strong>Hotend fan speed</strong>: Adds a menu option to unlock the hotend fan speed</del>
+  <del>and increase it from the Prusa Firmware’s default 38% to anywhere from 50-100%.</del>
+</li>
+  <li>
+<strong>Skew compensation</strong>: Turns on skew compensation in Marlin and allows it to be configured with <code class="language-plaintext highlighter-rouge">M852</code>.</li>
+  <li>
+<del><strong>OctoPrint screen</strong>: Adds support for <code class="language-plaintext highlighter-rouge">M73</code> (print progress) and <code class="language-plaintext highlighter-rouge">M117</code></del>
+  <del>(LCD messages).</del>
+</li>
+  <li>
+<strong>PID tuning</strong>: Read nozzle and bed PID parameters and tune them automatically.</li>
+  <li>
+<del><strong>Max Temps</strong>: Raises the maximum bed temperature from 100C to 110C</del>
+  <del>and nozzle temperature from 275C to 285C (use with caution!).</del>
+</li>
+  <li>
+<strong>Settings during print</strong>: You can change Snake settings, Control and Settings during printing.</li>
+  <li>
+<strong>Faster nozzle cooling</strong>: If you wait for nozzle cooling before MBL, you can call <code class="language-plaintext highlighter-rouge">M109 R170 C</code>
+  <del>which uses print fan to speed up cooling.</del>
+</li>
+  <li>
+<strong>Game</strong>: Instead of printing you can enjoy simple game.</li>
+  <li><del><strong>Bigger time</strong>: Printing and remaining time is now bigger.</del></li>
+  <li>
+<del><strong>Selftest check</strong>: Now you can select <code class="language-plaintext highlighter-rouge">Ignore</code> to immediately pass all selftests.</del>
+11.</li>
+  <li>
+<del><strong>Total time</strong>: Elapsed, Remaining and Total or End time are shown during printing.</del>
+13.</li>
+  <li>
+<strong>Adjust brightness</strong>: You can change brightness of the display. It does not dim the light but draws darker colors.</li>
+  <li>
+<strong>Cold mode (min.temp.)</strong>: If you enable Cold Mode, temperatures (once set) won’t drop below 30°C. For safety reasons cold mode must be enabled after every start of the printer.</li>
+  <li>
+<strong>Show MBL and tilt</strong>: After mesh bed leveling (G29) you can go to <code class="language-plaintext highlighter-rouge">Snake Settings</code> and see the MBL Z levels at the measured points and check the tilt of the axes. Levels are shifted to avoid negative numbers.</li>
+  <li><del><strong>Speed up</strong>: Parking, unparking and other moves are done faster.</del></li>
+  <li>
+<strong>Different printers</strong>: Next to a standard version, other versions are released:
+    <ol>
+      <li>coreXY</li>
+      <li>i3 MK3.3 (i3 MK3 with MINI board, MINI display, Z motor split, and mosfet on heating)</li>
+      <li>i3 MK3.5 coreXY</li>
+    </ol>
+  </li>
+  <li><strong>Different languages</strong></li>
+  <li><del><strong>Avoid display flashing</strong>: Some displays flash with original FW.</del></li>
+  <li><del><strong>High geared extruder</strong>: Allow up to 2000 steps/mm for extruder.</del></li>
+  <li>
+<del><strong>Adjustable axes</strong>:</del>
+    <ol>
+      <li><del>length (includes <a href="https://www.aliexpress.com/item/1005001632020501.html">long bed HW</a>)</del></li>
+      <li><del>steps/mm</del></li>
+      <li><del>direction</del></li>
+      <li><del>current</del></li>
+      <li><del>max. feedrate (for X and Y only)</del></li>
+    </ol>
+  </li>
+  <li><del><strong>Adjustable filament load length</strong>: Different extruders need different load length.</del></li>
+  <li><del><strong>Adjustable homing sensitivity</strong>: X and Y homing sensitivity can be changed in menu and saved.</del></li>
+</ol>
+
+<h2 id="feed-the-snake">Feed the Snake</h2>
+
+<p>This FW is developed in spare time. If you like it, please
+consider supporting further development and updates by becoming a patron.</p>
+
+<p><a href="https://patreon.com/espr14"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Despr14%26type%3Dpatrons&amp;style=plastic" alt="Feed the Snake on Patreon"></a></p>
+
+<hr>
+
+<h2 id="installing">Installing</h2>
+
+<h3 id="jailbreak-your-mini">Jailbreak your Mini</h3>
+
+<p>You will need to cut out Prusa’s appendix to install custom firmware.
+Follow the instructions <a href="https://help.prusa3d.com/en/article/flashing-custom-firmware-mini_14/">here</a>.
+This is irreversible and voids the warranty, although in the US
+you are protected by the <a href="https://www.ftc.gov/news-events/press-releases/2018/04/ftc-staff-warns-companies-it-illegal-condition-warranty-coverage">Magnuson-Moss Warranty Act</a>.</p>
+
+<p>Of course you could always buy a second Buddy board and run it on that one.</p>
+
+<p>Alternatively, if you are good at very fine pitch soldering, you could
+lift the BOOT0 pin off the board entirely and make your own jumpers
+to connect it directly to 3.3V or GND as you need (the appendix merely
+<a href="https://hackaday.com/2019/12/16/prusa-dares-you-to-break-their-latest-printer/">shorts BOOT0 directly to GND</a>).</p>
+
+<p>Once you have done that, you can live and let live-stock.</p>
+
+<h3 id="flashing">Flashing</h3>
+
+<p>Whenever you install new firmware, it’s good practice to make a note of your
+settings first, particularly your Live Z Offset and your skew coefficients. Not all
+FW changes keep settings saved.</p>
+
+<p>Download <a href="https://github.com/Snake-FW/P32-FW/releases">the latest release here</a>.
+Copy the <code class="language-plaintext highlighter-rouge">.bbf</code> file to the root of your USB flash drive.
+Follow <a href="https://help.prusa3d.com/en/guide/how-to-update-firmware-mini-mini_128421/">the instructions here</a>
+to install the firmware. The bootloader will warn you the signature is
+incorrect - select “Ignore”.</p>
+
+<h3 id="first-run">First Run</h3>
+
+<p>If you lose your Prusa EEPROM settings during the upgrade process,
+when you first run the firmware, Prusa will send you to the initial
+calibration wizard. This can be a problem if you need to set custom e-steps
+before printing anything. Just skip the initial setup wizard,
+use the Snake Settings menu to configure your e-steps, and
+then rerun the setup wizard manually.</p>
+
+<h3 id="livestock-to-stock">Livestock to Stock</h3>
+
+<p>Download Prusa’s stock firmware <a href="https://www.prusa3d.com/drivers/">here</a>.</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/snake-edition/p32-fw/tree/main/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>noetic</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/p32-fw/">p32-fw</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/magic_enum/">magic_enum</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/snake-edition/p32-fw.git">https://github.com/snake-edition/p32-fw.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-01-11
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/p32-fw/#noetic-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/p32-fw/#noetic-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/p32-fw/#noetic-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/magic_enum/">magic_enum</a></td>
+                    <td>0.9.5</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="snake-mini">Snake Mini</h1>
+
+<p><a href="https://github.com/snake-edition/p32-fw/tree/main/"><img src="https://img.shields.io/github/v/release/Snake-FW/P32-FW?style=plastic" alt="Version"></a></p>
+
+<h2 id="wanted">Wanted</h2>
+<p>FW developer, testers, and graphic designers are welcome.</p>
+
+<h2 id="unofficial-firmware-for-the-prusa-mini-and-mini">Unofficial Firmware for the Prusa Mini and Mini+</h2>
+
+<p>Alternative FW for the Prusa Mini. There’s quite few improvements:</p>
+
+<ol>
+  <li>
+<del><strong>Hotend fan speed</strong>: Adds a menu option to unlock the hotend fan speed</del>
+  <del>and increase it from the Prusa Firmware’s default 38% to anywhere from 50-100%.</del>
+</li>
+  <li>
+<strong>Skew compensation</strong>: Turns on skew compensation in Marlin and allows it to be configured with <code class="language-plaintext highlighter-rouge">M852</code>.</li>
+  <li>
+<del><strong>OctoPrint screen</strong>: Adds support for <code class="language-plaintext highlighter-rouge">M73</code> (print progress) and <code class="language-plaintext highlighter-rouge">M117</code></del>
+  <del>(LCD messages).</del>
+</li>
+  <li>
+<strong>PID tuning</strong>: Read nozzle and bed PID parameters and tune them automatically.</li>
+  <li>
+<del><strong>Max Temps</strong>: Raises the maximum bed temperature from 100C to 110C</del>
+  <del>and nozzle temperature from 275C to 285C (use with caution!).</del>
+</li>
+  <li>
+<strong>Settings during print</strong>: You can change Snake settings, Control and Settings during printing.</li>
+  <li>
+<strong>Faster nozzle cooling</strong>: If you wait for nozzle cooling before MBL, you can call <code class="language-plaintext highlighter-rouge">M109 R170 C</code>
+  <del>which uses print fan to speed up cooling.</del>
+</li>
+  <li>
+<strong>Game</strong>: Instead of printing you can enjoy simple game.</li>
+  <li><del><strong>Bigger time</strong>: Printing and remaining time is now bigger.</del></li>
+  <li>
+<del><strong>Selftest check</strong>: Now you can select <code class="language-plaintext highlighter-rouge">Ignore</code> to immediately pass all selftests.</del>
+11.</li>
+  <li>
+<del><strong>Total time</strong>: Elapsed, Remaining and Total or End time are shown during printing.</del>
+13.</li>
+  <li>
+<strong>Adjust brightness</strong>: You can change brightness of the display. It does not dim the light but draws darker colors.</li>
+  <li>
+<strong>Cold mode (min.temp.)</strong>: If you enable Cold Mode, temperatures (once set) won’t drop below 30°C. For safety reasons cold mode must be enabled after every start of the printer.</li>
+  <li>
+<strong>Show MBL and tilt</strong>: After mesh bed leveling (G29) you can go to <code class="language-plaintext highlighter-rouge">Snake Settings</code> and see the MBL Z levels at the measured points and check the tilt of the axes. Levels are shifted to avoid negative numbers.</li>
+  <li><del><strong>Speed up</strong>: Parking, unparking and other moves are done faster.</del></li>
+  <li>
+<strong>Different printers</strong>: Next to a standard version, other versions are released:
+    <ol>
+      <li>coreXY</li>
+      <li>i3 MK3.3 (i3 MK3 with MINI board, MINI display, Z motor split, and mosfet on heating)</li>
+      <li>i3 MK3.5 coreXY</li>
+    </ol>
+  </li>
+  <li><strong>Different languages</strong></li>
+  <li><del><strong>Avoid display flashing</strong>: Some displays flash with original FW.</del></li>
+  <li><del><strong>High geared extruder</strong>: Allow up to 2000 steps/mm for extruder.</del></li>
+  <li>
+<del><strong>Adjustable axes</strong>:</del>
+    <ol>
+      <li><del>length (includes <a href="https://www.aliexpress.com/item/1005001632020501.html">long bed HW</a>)</del></li>
+      <li><del>steps/mm</del></li>
+      <li><del>direction</del></li>
+      <li><del>current</del></li>
+      <li><del>max. feedrate (for X and Y only)</del></li>
+    </ol>
+  </li>
+  <li><del><strong>Adjustable filament load length</strong>: Different extruders need different load length.</del></li>
+  <li><del><strong>Adjustable homing sensitivity</strong>: X and Y homing sensitivity can be changed in menu and saved.</del></li>
+</ol>
+
+<h2 id="feed-the-snake">Feed the Snake</h2>
+
+<p>This FW is developed in spare time. If you like it, please
+consider supporting further development and updates by becoming a patron.</p>
+
+<p><a href="https://patreon.com/espr14"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3Despr14%26type%3Dpatrons&amp;style=plastic" alt="Feed the Snake on Patreon"></a></p>
+
+<hr>
+
+<h2 id="installing">Installing</h2>
+
+<h3 id="jailbreak-your-mini">Jailbreak your Mini</h3>
+
+<p>You will need to cut out Prusa’s appendix to install custom firmware.
+Follow the instructions <a href="https://help.prusa3d.com/en/article/flashing-custom-firmware-mini_14/">here</a>.
+This is irreversible and voids the warranty, although in the US
+you are protected by the <a href="https://www.ftc.gov/news-events/press-releases/2018/04/ftc-staff-warns-companies-it-illegal-condition-warranty-coverage">Magnuson-Moss Warranty Act</a>.</p>
+
+<p>Of course you could always buy a second Buddy board and run it on that one.</p>
+
+<p>Alternatively, if you are good at very fine pitch soldering, you could
+lift the BOOT0 pin off the board entirely and make your own jumpers
+to connect it directly to 3.3V or GND as you need (the appendix merely
+<a href="https://hackaday.com/2019/12/16/prusa-dares-you-to-break-their-latest-printer/">shorts BOOT0 directly to GND</a>).</p>
+
+<p>Once you have done that, you can live and let live-stock.</p>
+
+<h3 id="flashing">Flashing</h3>
+
+<p>Whenever you install new firmware, it’s good practice to make a note of your
+settings first, particularly your Live Z Offset and your skew coefficients. Not all
+FW changes keep settings saved.</p>
+
+<p>Download <a href="https://github.com/Snake-FW/P32-FW/releases">the latest release here</a>.
+Copy the <code class="language-plaintext highlighter-rouge">.bbf</code> file to the root of your USB flash drive.
+Follow <a href="https://help.prusa3d.com/en/guide/how-to-update-firmware-mini-mini_128421/">the instructions here</a>
+to install the firmware. The bootloader will warn you the signature is
+incorrect - select “Ignore”.</p>
+
+<h3 id="first-run">First Run</h3>
+
+<p>If you lose your Prusa EEPROM settings during the upgrade process,
+when you first run the firmware, Prusa will send you to the initial
+calibration wizard. This can be a problem if you need to set custom e-steps
+before printing anything. Just skip the initial setup wizard,
+use the Snake Settings menu to configure your e-steps, and
+then rerun the setup wizard manually.</p>
+
+<h3 id="livestock-to-stock">Livestock to Stock</h3>
+
+<p>Download Prusa’s stock firmware <a href="https://www.prusa3d.com/drivers/">here</a>.</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/snake-edition/p32-fw/tree/main/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+
+<script type="text/javascript" src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+  $(function() {
+    setupContributeListTabLinks();
+  });
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+    setupContributeLists("https://github.com/snake-edition/p32-fw.git");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2026-04-30</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,2980 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>sjtu_drone - ROS Repository Overview</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+    <meta name="robots" content="noindex">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/r/sjtu_drone/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body >
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="https://docs.ros.org/en/rolling/Contact.html#support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="https://docs.ros.org/en/rolling/Contact.html#support"">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content" >
+      <div class="wrapper" >
+        <div class="container-fluid" style="margin-top:20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_repos=true">Repos</a></li>
+        <li class="active"></li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+        <li data="noetic" id="noetic-option" class="disabled older-distro-option"  href="#noetic">
+          <a href="#noetic" data="noetic" id="noetic-button">noetic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>humble</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/sjtu_drone/">sjtu_drone</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_bringup/">sjtu_drone_bringup</a>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_control/">sjtu_drone_control</a>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_description/">sjtu_drone_description</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/novog93/sjtu_drone.git">https://github.com/novog93/sjtu_drone.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">ros2</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-02-07
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/sjtu_drone/#humble-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/sjtu_drone/#humble-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/sjtu_drone/#humble-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_bringup/">sjtu_drone_bringup</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_control/">sjtu_drone_control</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_description/">sjtu_drone_description</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="sjtu_drone">sjtu_drone</h1>
+
+<p><a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_iron_build.json" alt="Iron"></a> <a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_humble_build.json" alt="Humble"></a> <a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_rolling_build.json" alt="Rolling"></a></p>
+
+<p>sjtu_drone is a quadrotor simulation program forked from <a href="http://wiki.ros.org/tum_simulator">tum_simulator</a>, developed using ROS + Gazebo.</p>
+
+<p>The acronym ‘sjtu’ stands for Shanghai Jiao Tong University. This package has been used in the past for testing algorithms for the <a href="http://mediasoc.sjtu.edu.cn/wordpress">UAV contest at SJTU</a></p>
+
+<h1 id="requirements">Requirements</h1>
+
+<p>This package is tested with ROS 2 (Ubuntu 22.04) and Gazebo 11.</p>
+
+<h1 id="downloading-and-building">Downloading and building</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/git &amp;&amp; git clone git@github.com:NovoG93/sjtu_drone.git -b ros2
+cd ~/ros2_ws/src &amp;&amp; ln -s ~/git/sjtu_drone
+cd .. &amp;&amp; rosdep install -r -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO &amp;&amp; colcon build --packages-select-regex sjtu*
+
+</code></pre></div></div>
+
+<p>To use the playground.world file (as depicted below) make sure to install the common gazebo models, for more see the <a href="https://github.com/novog93/sjtu_drone/tree/ros2/./sjtu_drone_description/README.md">Readme in sjtu_drone_description</a>.</p>
+
+<h2 id="drone-topics">Drone Topics</h2>
+
+<h3 id="sensors">Sensors</h3>
+<p>The folowing sensors are currently implemented:</p>
+<ul>
+  <li>~/front/image_raw [<strong>sensor_msgs/msg/Image</strong>]</li>
+  <li>~/bottom/image_raw [<strong>sensor_msgs/msg/Image</strong>]</li>
+  <li>~/sonar/out [<strong>sensor_msgs/msg/Range</strong>]</li>
+  <li>~/imu/out [<strong>sensor_msgs/msg/Imu</strong>]</li>
+  <li>~/gps/nav [<strong>sensor_msgs/msg/NavSatFix</strong>]</li>
+  <li>~/gps/vel [<strong>geometry_msgs/msg/TwistStamped</strong>]</li>
+  <li>~/joint_states [<strong>sensor_msgs/msg/JointState</strong>]</li>
+</ul>
+
+<h3 id="control">Control</h3>
+<p>The following control topics are currently subscribed to:</p>
+<ul>
+  <li>~/cmd_vel [<strong>geometry_msgs/msg/Twist</strong>]: Steers the drone</li>
+  <li>~/land [<strong>std_msgs/msg/Empty</strong>]: Lands the drone</li>
+  <li>~/takeoff [<strong>std_msgs/msg/Empty</strong>]: Starts the drone</li>
+  <li>~/posctrl [<strong>std_msgs/msg/Bool</strong>]: Toggling between position control (give drone a pose via cmd_vel) and normal control (only use cmd_vel)</li>
+  <li>~/dronevel_mode [<strong>std_msgs/msg/Bool</strong>]: Toggeling between velocity and tilt control in normal control mode.</li>
+  <li>~/cmd_mode [<strong>std_msgs/msg/Bool</strong>]: Publishes the current control mode (position or normal control)</li>
+  <li>~/state [<strong>std_msgs/msg/Int8</strong>]: Publishes the current state of the drone (0: landed, 1: flying, 2: hovering)</li>
+  <li>~/reset [<strong>std_msgs/msg/Empty</strong>]: Resets the drone</li>
+</ul>
+
+<h3 id="ground-truth">Ground Truth</h3>
+<p>The following ground truth topics are currently published:</p>
+<ul>
+  <li>~/gt_acc [<strong>geometry_msgs/msg/Twist</strong>]: ground truth acceleration</li>
+  <li>~/gt_pose [<strong>geometry_msgs/msg/Pose</strong>]: ground truth pose</li>
+  <li>~/gt_vel [<strong>geometry_msgs/msg/Twist</strong>]: ground truth velocity</li>
+</ul>
+
+<h2 id="configure-plugin">Configure Plugin</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">plugin_drone</code> plugin is used to control the drone. It can be configured using the following parameters:</p>
+
+<p>```yaml</p>
+<h1 id="ros-namespace-for-the-drone-all-topics-and-tf-frames-will-be-prefixed-with-this-namespace">ROS namespace for the drone. All topics and tf frames will be prefixed with this namespace.</h1>
+<p>namespace: /simple_drone</p>
+
+<h1 id="proportional-gain-for-roll-and-pitch-pid-controllers-controls-the-drones-response-to-roll-and-pitch-errors">Proportional gain for roll and pitch PID controllers. Controls the drone’s response to roll and pitch errors.</h1>
+<p>rollpitchProportionalGain: 10.0</p>
+<h1 id="differential-gain-for-roll-and-pitch-pid-controllers-helps-to-reduce-overshoot-and-improve-stability">Differential gain for roll and pitch PID controllers. Helps to reduce overshoot and improve stability.</h1>
+<p>rollpitchDifferentialGain: 5.0</p>
+<h1 id="maximum-absolute-value-for-roll-and-pitch-control-outputs-limiting-maximum-tilt-angle">Maximum absolute value for roll and pitch control outputs, limiting maximum tilt angle.</h1>
+<p>rollpitchLimit: 0.5</p>
+
+<h1 id="proportional-gain-for-yaw-pid-controller-determines-how-strongly-the-drone-responds-to-yaw-position-errors">Proportional gain for yaw PID controller. Determines how strongly the drone responds to yaw position errors.</h1>
+<p>yawProportionalGain: 2.0</p>
+<h1 id="differential-gain-for-yaw-pid-controller-dampens-the-rate-of-change-of-yaw-error-for-smoother-rotation">Differential gain for yaw PID controller. Dampens the rate of change of yaw error for smoother rotation.</h1>
+<p>yawDifferentialGain: 1.0</p>
+<h1 id="maximum-absolute-value-for-yaw-control-output-limiting-rotational-rate">Maximum absolute value for yaw control output, limiting rotational rate.</h1>
+<p>yawLimit: 1.5</p>
+
+<h1 id="proportional-gain-for-horizontal-velocity-pid-controllers-controls-response-to-changes-in-horizontal-velocity">Proportional gain for horizontal velocity PID controllers. Controls response to changes in horizontal velocity.</h1>
+<p>velocityXYProportionalGain: 5.0</p>
+<h1 id="differential-gain-for-horizontal-velocity-pid-controllers-controls-accelerationdeceleration-in-horizontal-plane">Differential gain for horizontal velocity PID controllers. Controls acceleration/deceleration in horizontal plane.</h1>
+<p>velocityXYDifferentialGain: 2.3</p>
+<h1 id="maximum-limit-for-horizontal-velocity-control-output-restricting-maximum-horizontal-speed">Maximum limit for horizontal velocity control output, restricting maximum horizontal speed.</h1>
+<p>velocityXYLimit: 2</p>
+
+<h1 id="proportional-gain-for-vertical-velocity-pid-controller-influences-response-to-altitude-changes">Proportional gain for vertical velocity PID controller. Influences response to altitude changes.</h1>
+<p>velocityZProportionalGain: 5.0</p>
+<h1 id="integral-gain-for-vertical-velocity-pid-controller-set-to-zero-indicating-no-error-integration-over-time">Integral gain for vertical velocity PID controller. Set to zero, indicating no error integration over time.</h1>
+<p>velocityZIntegralGain: 0.0</p>
+<h1 id="differential-gain-for-vertical-velocity-pid-controller-helps-control-vertical-acceleration-and-deceleration">Differential gain for vertical velocity PID controller. Helps control vertical acceleration and deceleration.</h1>
+<p>velocityZDifferentialGain: 1.0</p>
+<h1 id="maximum-limit-for-vertical-velocity-control-output-negative-value-may-indicate-special-control-scenario-or-error">Maximum limit for vertical velocity control output. Negative value may indicate special control scenario or error.</h1>
+<p>velocityZLimit: -1</p>
+
+<h1 id="proportional-gain-for-horizontal-position-pid-controllers-controls-response-to-horizontal-displacement-errors">Proportional gain for horizontal position PID controllers. Controls response to horizontal displacement errors.</h1>
+<p>positionXYProportionalGain: 1.1</p>
+<h1 id="differential-gain-for-horizontal-position-pid-controllers-set-to-zero-meaning-no-rate-of-change-consideration">Differential gain for horizontal position PID controllers. Set to zero, meaning no rate of change consideration.</h1>
+<p>positionXYDifferentialGain: 0.0</p>
+<h1 id="integral-gain-for-horizontal-position-pid-controllers-set-to-zero-indicating-no-cumulative-error-correction">Integral gain for horizontal position PID controllers. Set to zero, indicating no cumulative error correction.</h1>
+<p>positionXYIntegralGain: 0.0</p>
+<h1 id="maximum-limit-for-horizontal-position-control-output-restricting-maximum-correctional-force-for-horizontal-errors">Maximum limit for horizontal position control output, restricting maximum correctional force for horizontal errors.</h1>
+<p>positionXYLimit: 5</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/novog93/sjtu_drone/tree/ros2/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>jazzy</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/sjtu_drone/">sjtu_drone</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_bringup/">sjtu_drone_bringup</a>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_control/">sjtu_drone_control</a>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_description/">sjtu_drone_description</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/novog93/sjtu_drone.git">https://github.com/novog93/sjtu_drone.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">ros2</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-02-07
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/sjtu_drone/#jazzy-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/sjtu_drone/#jazzy-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/sjtu_drone/#jazzy-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_bringup/">sjtu_drone_bringup</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_control/">sjtu_drone_control</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_description/">sjtu_drone_description</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="sjtu_drone">sjtu_drone</h1>
+
+<p><a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_iron_build.json" alt="Iron"></a> <a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_humble_build.json" alt="Humble"></a> <a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_rolling_build.json" alt="Rolling"></a></p>
+
+<p>sjtu_drone is a quadrotor simulation program forked from <a href="http://wiki.ros.org/tum_simulator">tum_simulator</a>, developed using ROS + Gazebo.</p>
+
+<p>The acronym ‘sjtu’ stands for Shanghai Jiao Tong University. This package has been used in the past for testing algorithms for the <a href="http://mediasoc.sjtu.edu.cn/wordpress">UAV contest at SJTU</a></p>
+
+<h1 id="requirements">Requirements</h1>
+
+<p>This package is tested with ROS 2 (Ubuntu 22.04) and Gazebo 11.</p>
+
+<h1 id="downloading-and-building">Downloading and building</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/git &amp;&amp; git clone git@github.com:NovoG93/sjtu_drone.git -b ros2
+cd ~/ros2_ws/src &amp;&amp; ln -s ~/git/sjtu_drone
+cd .. &amp;&amp; rosdep install -r -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO &amp;&amp; colcon build --packages-select-regex sjtu*
+
+</code></pre></div></div>
+
+<p>To use the playground.world file (as depicted below) make sure to install the common gazebo models, for more see the <a href="https://github.com/novog93/sjtu_drone/tree/ros2/./sjtu_drone_description/README.md">Readme in sjtu_drone_description</a>.</p>
+
+<h2 id="drone-topics">Drone Topics</h2>
+
+<h3 id="sensors">Sensors</h3>
+<p>The folowing sensors are currently implemented:</p>
+<ul>
+  <li>~/front/image_raw [<strong>sensor_msgs/msg/Image</strong>]</li>
+  <li>~/bottom/image_raw [<strong>sensor_msgs/msg/Image</strong>]</li>
+  <li>~/sonar/out [<strong>sensor_msgs/msg/Range</strong>]</li>
+  <li>~/imu/out [<strong>sensor_msgs/msg/Imu</strong>]</li>
+  <li>~/gps/nav [<strong>sensor_msgs/msg/NavSatFix</strong>]</li>
+  <li>~/gps/vel [<strong>geometry_msgs/msg/TwistStamped</strong>]</li>
+  <li>~/joint_states [<strong>sensor_msgs/msg/JointState</strong>]</li>
+</ul>
+
+<h3 id="control">Control</h3>
+<p>The following control topics are currently subscribed to:</p>
+<ul>
+  <li>~/cmd_vel [<strong>geometry_msgs/msg/Twist</strong>]: Steers the drone</li>
+  <li>~/land [<strong>std_msgs/msg/Empty</strong>]: Lands the drone</li>
+  <li>~/takeoff [<strong>std_msgs/msg/Empty</strong>]: Starts the drone</li>
+  <li>~/posctrl [<strong>std_msgs/msg/Bool</strong>]: Toggling between position control (give drone a pose via cmd_vel) and normal control (only use cmd_vel)</li>
+  <li>~/dronevel_mode [<strong>std_msgs/msg/Bool</strong>]: Toggeling between velocity and tilt control in normal control mode.</li>
+  <li>~/cmd_mode [<strong>std_msgs/msg/Bool</strong>]: Publishes the current control mode (position or normal control)</li>
+  <li>~/state [<strong>std_msgs/msg/Int8</strong>]: Publishes the current state of the drone (0: landed, 1: flying, 2: hovering)</li>
+  <li>~/reset [<strong>std_msgs/msg/Empty</strong>]: Resets the drone</li>
+</ul>
+
+<h3 id="ground-truth">Ground Truth</h3>
+<p>The following ground truth topics are currently published:</p>
+<ul>
+  <li>~/gt_acc [<strong>geometry_msgs/msg/Twist</strong>]: ground truth acceleration</li>
+  <li>~/gt_pose [<strong>geometry_msgs/msg/Pose</strong>]: ground truth pose</li>
+  <li>~/gt_vel [<strong>geometry_msgs/msg/Twist</strong>]: ground truth velocity</li>
+</ul>
+
+<h2 id="configure-plugin">Configure Plugin</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">plugin_drone</code> plugin is used to control the drone. It can be configured using the following parameters:</p>
+
+<p>```yaml</p>
+<h1 id="ros-namespace-for-the-drone-all-topics-and-tf-frames-will-be-prefixed-with-this-namespace">ROS namespace for the drone. All topics and tf frames will be prefixed with this namespace.</h1>
+<p>namespace: /simple_drone</p>
+
+<h1 id="proportional-gain-for-roll-and-pitch-pid-controllers-controls-the-drones-response-to-roll-and-pitch-errors">Proportional gain for roll and pitch PID controllers. Controls the drone’s response to roll and pitch errors.</h1>
+<p>rollpitchProportionalGain: 10.0</p>
+<h1 id="differential-gain-for-roll-and-pitch-pid-controllers-helps-to-reduce-overshoot-and-improve-stability">Differential gain for roll and pitch PID controllers. Helps to reduce overshoot and improve stability.</h1>
+<p>rollpitchDifferentialGain: 5.0</p>
+<h1 id="maximum-absolute-value-for-roll-and-pitch-control-outputs-limiting-maximum-tilt-angle">Maximum absolute value for roll and pitch control outputs, limiting maximum tilt angle.</h1>
+<p>rollpitchLimit: 0.5</p>
+
+<h1 id="proportional-gain-for-yaw-pid-controller-determines-how-strongly-the-drone-responds-to-yaw-position-errors">Proportional gain for yaw PID controller. Determines how strongly the drone responds to yaw position errors.</h1>
+<p>yawProportionalGain: 2.0</p>
+<h1 id="differential-gain-for-yaw-pid-controller-dampens-the-rate-of-change-of-yaw-error-for-smoother-rotation">Differential gain for yaw PID controller. Dampens the rate of change of yaw error for smoother rotation.</h1>
+<p>yawDifferentialGain: 1.0</p>
+<h1 id="maximum-absolute-value-for-yaw-control-output-limiting-rotational-rate">Maximum absolute value for yaw control output, limiting rotational rate.</h1>
+<p>yawLimit: 1.5</p>
+
+<h1 id="proportional-gain-for-horizontal-velocity-pid-controllers-controls-response-to-changes-in-horizontal-velocity">Proportional gain for horizontal velocity PID controllers. Controls response to changes in horizontal velocity.</h1>
+<p>velocityXYProportionalGain: 5.0</p>
+<h1 id="differential-gain-for-horizontal-velocity-pid-controllers-controls-accelerationdeceleration-in-horizontal-plane">Differential gain for horizontal velocity PID controllers. Controls acceleration/deceleration in horizontal plane.</h1>
+<p>velocityXYDifferentialGain: 2.3</p>
+<h1 id="maximum-limit-for-horizontal-velocity-control-output-restricting-maximum-horizontal-speed">Maximum limit for horizontal velocity control output, restricting maximum horizontal speed.</h1>
+<p>velocityXYLimit: 2</p>
+
+<h1 id="proportional-gain-for-vertical-velocity-pid-controller-influences-response-to-altitude-changes">Proportional gain for vertical velocity PID controller. Influences response to altitude changes.</h1>
+<p>velocityZProportionalGain: 5.0</p>
+<h1 id="integral-gain-for-vertical-velocity-pid-controller-set-to-zero-indicating-no-error-integration-over-time">Integral gain for vertical velocity PID controller. Set to zero, indicating no error integration over time.</h1>
+<p>velocityZIntegralGain: 0.0</p>
+<h1 id="differential-gain-for-vertical-velocity-pid-controller-helps-control-vertical-acceleration-and-deceleration">Differential gain for vertical velocity PID controller. Helps control vertical acceleration and deceleration.</h1>
+<p>velocityZDifferentialGain: 1.0</p>
+<h1 id="maximum-limit-for-vertical-velocity-control-output-negative-value-may-indicate-special-control-scenario-or-error">Maximum limit for vertical velocity control output. Negative value may indicate special control scenario or error.</h1>
+<p>velocityZLimit: -1</p>
+
+<h1 id="proportional-gain-for-horizontal-position-pid-controllers-controls-response-to-horizontal-displacement-errors">Proportional gain for horizontal position PID controllers. Controls response to horizontal displacement errors.</h1>
+<p>positionXYProportionalGain: 1.1</p>
+<h1 id="differential-gain-for-horizontal-position-pid-controllers-set-to-zero-meaning-no-rate-of-change-consideration">Differential gain for horizontal position PID controllers. Set to zero, meaning no rate of change consideration.</h1>
+<p>positionXYDifferentialGain: 0.0</p>
+<h1 id="integral-gain-for-horizontal-position-pid-controllers-set-to-zero-indicating-no-cumulative-error-correction">Integral gain for horizontal position PID controllers. Set to zero, indicating no cumulative error correction.</h1>
+<p>positionXYIntegralGain: 0.0</p>
+<h1 id="maximum-limit-for-horizontal-position-control-output-restricting-maximum-correctional-force-for-horizontal-errors">Maximum limit for horizontal position control output, restricting maximum correctional force for horizontal errors.</h1>
+<p>positionXYLimit: 5</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/novog93/sjtu_drone/tree/ros2/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>kilted</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/sjtu_drone/">sjtu_drone</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_bringup/">sjtu_drone_bringup</a>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_control/">sjtu_drone_control</a>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_description/">sjtu_drone_description</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/novog93/sjtu_drone.git">https://github.com/novog93/sjtu_drone.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">ros2</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-02-07
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/sjtu_drone/#kilted-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/sjtu_drone/#kilted-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/sjtu_drone/#kilted-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_bringup/">sjtu_drone_bringup</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_control/">sjtu_drone_control</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_description/">sjtu_drone_description</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="sjtu_drone">sjtu_drone</h1>
+
+<p><a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_iron_build.json" alt="Iron"></a> <a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_humble_build.json" alt="Humble"></a> <a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_rolling_build.json" alt="Rolling"></a></p>
+
+<p>sjtu_drone is a quadrotor simulation program forked from <a href="http://wiki.ros.org/tum_simulator">tum_simulator</a>, developed using ROS + Gazebo.</p>
+
+<p>The acronym ‘sjtu’ stands for Shanghai Jiao Tong University. This package has been used in the past for testing algorithms for the <a href="http://mediasoc.sjtu.edu.cn/wordpress">UAV contest at SJTU</a></p>
+
+<h1 id="requirements">Requirements</h1>
+
+<p>This package is tested with ROS 2 (Ubuntu 22.04) and Gazebo 11.</p>
+
+<h1 id="downloading-and-building">Downloading and building</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/git &amp;&amp; git clone git@github.com:NovoG93/sjtu_drone.git -b ros2
+cd ~/ros2_ws/src &amp;&amp; ln -s ~/git/sjtu_drone
+cd .. &amp;&amp; rosdep install -r -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO &amp;&amp; colcon build --packages-select-regex sjtu*
+
+</code></pre></div></div>
+
+<p>To use the playground.world file (as depicted below) make sure to install the common gazebo models, for more see the <a href="https://github.com/novog93/sjtu_drone/tree/ros2/./sjtu_drone_description/README.md">Readme in sjtu_drone_description</a>.</p>
+
+<h2 id="drone-topics">Drone Topics</h2>
+
+<h3 id="sensors">Sensors</h3>
+<p>The folowing sensors are currently implemented:</p>
+<ul>
+  <li>~/front/image_raw [<strong>sensor_msgs/msg/Image</strong>]</li>
+  <li>~/bottom/image_raw [<strong>sensor_msgs/msg/Image</strong>]</li>
+  <li>~/sonar/out [<strong>sensor_msgs/msg/Range</strong>]</li>
+  <li>~/imu/out [<strong>sensor_msgs/msg/Imu</strong>]</li>
+  <li>~/gps/nav [<strong>sensor_msgs/msg/NavSatFix</strong>]</li>
+  <li>~/gps/vel [<strong>geometry_msgs/msg/TwistStamped</strong>]</li>
+  <li>~/joint_states [<strong>sensor_msgs/msg/JointState</strong>]</li>
+</ul>
+
+<h3 id="control">Control</h3>
+<p>The following control topics are currently subscribed to:</p>
+<ul>
+  <li>~/cmd_vel [<strong>geometry_msgs/msg/Twist</strong>]: Steers the drone</li>
+  <li>~/land [<strong>std_msgs/msg/Empty</strong>]: Lands the drone</li>
+  <li>~/takeoff [<strong>std_msgs/msg/Empty</strong>]: Starts the drone</li>
+  <li>~/posctrl [<strong>std_msgs/msg/Bool</strong>]: Toggling between position control (give drone a pose via cmd_vel) and normal control (only use cmd_vel)</li>
+  <li>~/dronevel_mode [<strong>std_msgs/msg/Bool</strong>]: Toggeling between velocity and tilt control in normal control mode.</li>
+  <li>~/cmd_mode [<strong>std_msgs/msg/Bool</strong>]: Publishes the current control mode (position or normal control)</li>
+  <li>~/state [<strong>std_msgs/msg/Int8</strong>]: Publishes the current state of the drone (0: landed, 1: flying, 2: hovering)</li>
+  <li>~/reset [<strong>std_msgs/msg/Empty</strong>]: Resets the drone</li>
+</ul>
+
+<h3 id="ground-truth">Ground Truth</h3>
+<p>The following ground truth topics are currently published:</p>
+<ul>
+  <li>~/gt_acc [<strong>geometry_msgs/msg/Twist</strong>]: ground truth acceleration</li>
+  <li>~/gt_pose [<strong>geometry_msgs/msg/Pose</strong>]: ground truth pose</li>
+  <li>~/gt_vel [<strong>geometry_msgs/msg/Twist</strong>]: ground truth velocity</li>
+</ul>
+
+<h2 id="configure-plugin">Configure Plugin</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">plugin_drone</code> plugin is used to control the drone. It can be configured using the following parameters:</p>
+
+<p>```yaml</p>
+<h1 id="ros-namespace-for-the-drone-all-topics-and-tf-frames-will-be-prefixed-with-this-namespace">ROS namespace for the drone. All topics and tf frames will be prefixed with this namespace.</h1>
+<p>namespace: /simple_drone</p>
+
+<h1 id="proportional-gain-for-roll-and-pitch-pid-controllers-controls-the-drones-response-to-roll-and-pitch-errors">Proportional gain for roll and pitch PID controllers. Controls the drone’s response to roll and pitch errors.</h1>
+<p>rollpitchProportionalGain: 10.0</p>
+<h1 id="differential-gain-for-roll-and-pitch-pid-controllers-helps-to-reduce-overshoot-and-improve-stability">Differential gain for roll and pitch PID controllers. Helps to reduce overshoot and improve stability.</h1>
+<p>rollpitchDifferentialGain: 5.0</p>
+<h1 id="maximum-absolute-value-for-roll-and-pitch-control-outputs-limiting-maximum-tilt-angle">Maximum absolute value for roll and pitch control outputs, limiting maximum tilt angle.</h1>
+<p>rollpitchLimit: 0.5</p>
+
+<h1 id="proportional-gain-for-yaw-pid-controller-determines-how-strongly-the-drone-responds-to-yaw-position-errors">Proportional gain for yaw PID controller. Determines how strongly the drone responds to yaw position errors.</h1>
+<p>yawProportionalGain: 2.0</p>
+<h1 id="differential-gain-for-yaw-pid-controller-dampens-the-rate-of-change-of-yaw-error-for-smoother-rotation">Differential gain for yaw PID controller. Dampens the rate of change of yaw error for smoother rotation.</h1>
+<p>yawDifferentialGain: 1.0</p>
+<h1 id="maximum-absolute-value-for-yaw-control-output-limiting-rotational-rate">Maximum absolute value for yaw control output, limiting rotational rate.</h1>
+<p>yawLimit: 1.5</p>
+
+<h1 id="proportional-gain-for-horizontal-velocity-pid-controllers-controls-response-to-changes-in-horizontal-velocity">Proportional gain for horizontal velocity PID controllers. Controls response to changes in horizontal velocity.</h1>
+<p>velocityXYProportionalGain: 5.0</p>
+<h1 id="differential-gain-for-horizontal-velocity-pid-controllers-controls-accelerationdeceleration-in-horizontal-plane">Differential gain for horizontal velocity PID controllers. Controls acceleration/deceleration in horizontal plane.</h1>
+<p>velocityXYDifferentialGain: 2.3</p>
+<h1 id="maximum-limit-for-horizontal-velocity-control-output-restricting-maximum-horizontal-speed">Maximum limit for horizontal velocity control output, restricting maximum horizontal speed.</h1>
+<p>velocityXYLimit: 2</p>
+
+<h1 id="proportional-gain-for-vertical-velocity-pid-controller-influences-response-to-altitude-changes">Proportional gain for vertical velocity PID controller. Influences response to altitude changes.</h1>
+<p>velocityZProportionalGain: 5.0</p>
+<h1 id="integral-gain-for-vertical-velocity-pid-controller-set-to-zero-indicating-no-error-integration-over-time">Integral gain for vertical velocity PID controller. Set to zero, indicating no error integration over time.</h1>
+<p>velocityZIntegralGain: 0.0</p>
+<h1 id="differential-gain-for-vertical-velocity-pid-controller-helps-control-vertical-acceleration-and-deceleration">Differential gain for vertical velocity PID controller. Helps control vertical acceleration and deceleration.</h1>
+<p>velocityZDifferentialGain: 1.0</p>
+<h1 id="maximum-limit-for-vertical-velocity-control-output-negative-value-may-indicate-special-control-scenario-or-error">Maximum limit for vertical velocity control output. Negative value may indicate special control scenario or error.</h1>
+<p>velocityZLimit: -1</p>
+
+<h1 id="proportional-gain-for-horizontal-position-pid-controllers-controls-response-to-horizontal-displacement-errors">Proportional gain for horizontal position PID controllers. Controls response to horizontal displacement errors.</h1>
+<p>positionXYProportionalGain: 1.1</p>
+<h1 id="differential-gain-for-horizontal-position-pid-controllers-set-to-zero-meaning-no-rate-of-change-consideration">Differential gain for horizontal position PID controllers. Set to zero, meaning no rate of change consideration.</h1>
+<p>positionXYDifferentialGain: 0.0</p>
+<h1 id="integral-gain-for-horizontal-position-pid-controllers-set-to-zero-indicating-no-cumulative-error-correction">Integral gain for horizontal position PID controllers. Set to zero, indicating no cumulative error correction.</h1>
+<p>positionXYIntegralGain: 0.0</p>
+<h1 id="maximum-limit-for-horizontal-position-control-output-restricting-maximum-correctional-force-for-horizontal-errors">Maximum limit for horizontal position control output, restricting maximum correctional force for horizontal errors.</h1>
+<p>positionXYLimit: 5</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/novog93/sjtu_drone/tree/ros2/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>rolling</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/sjtu_drone/">sjtu_drone</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_bringup/">sjtu_drone_bringup</a>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_control/">sjtu_drone_control</a>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_description/">sjtu_drone_description</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/novog93/sjtu_drone.git">https://github.com/novog93/sjtu_drone.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">ros2</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-02-07
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/sjtu_drone/#rolling-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/sjtu_drone/#rolling-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/sjtu_drone/#rolling-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_bringup/">sjtu_drone_bringup</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_control/">sjtu_drone_control</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_description/">sjtu_drone_description</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="sjtu_drone">sjtu_drone</h1>
+
+<p><a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_iron_build.json" alt="Iron"></a> <a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_humble_build.json" alt="Humble"></a> <a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_rolling_build.json" alt="Rolling"></a></p>
+
+<p>sjtu_drone is a quadrotor simulation program forked from <a href="http://wiki.ros.org/tum_simulator">tum_simulator</a>, developed using ROS + Gazebo.</p>
+
+<p>The acronym ‘sjtu’ stands for Shanghai Jiao Tong University. This package has been used in the past for testing algorithms for the <a href="http://mediasoc.sjtu.edu.cn/wordpress">UAV contest at SJTU</a></p>
+
+<h1 id="requirements">Requirements</h1>
+
+<p>This package is tested with ROS 2 (Ubuntu 22.04) and Gazebo 11.</p>
+
+<h1 id="downloading-and-building">Downloading and building</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/git &amp;&amp; git clone git@github.com:NovoG93/sjtu_drone.git -b ros2
+cd ~/ros2_ws/src &amp;&amp; ln -s ~/git/sjtu_drone
+cd .. &amp;&amp; rosdep install -r -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO &amp;&amp; colcon build --packages-select-regex sjtu*
+
+</code></pre></div></div>
+
+<p>To use the playground.world file (as depicted below) make sure to install the common gazebo models, for more see the <a href="https://github.com/novog93/sjtu_drone/tree/ros2/./sjtu_drone_description/README.md">Readme in sjtu_drone_description</a>.</p>
+
+<h2 id="drone-topics">Drone Topics</h2>
+
+<h3 id="sensors">Sensors</h3>
+<p>The folowing sensors are currently implemented:</p>
+<ul>
+  <li>~/front/image_raw [<strong>sensor_msgs/msg/Image</strong>]</li>
+  <li>~/bottom/image_raw [<strong>sensor_msgs/msg/Image</strong>]</li>
+  <li>~/sonar/out [<strong>sensor_msgs/msg/Range</strong>]</li>
+  <li>~/imu/out [<strong>sensor_msgs/msg/Imu</strong>]</li>
+  <li>~/gps/nav [<strong>sensor_msgs/msg/NavSatFix</strong>]</li>
+  <li>~/gps/vel [<strong>geometry_msgs/msg/TwistStamped</strong>]</li>
+  <li>~/joint_states [<strong>sensor_msgs/msg/JointState</strong>]</li>
+</ul>
+
+<h3 id="control">Control</h3>
+<p>The following control topics are currently subscribed to:</p>
+<ul>
+  <li>~/cmd_vel [<strong>geometry_msgs/msg/Twist</strong>]: Steers the drone</li>
+  <li>~/land [<strong>std_msgs/msg/Empty</strong>]: Lands the drone</li>
+  <li>~/takeoff [<strong>std_msgs/msg/Empty</strong>]: Starts the drone</li>
+  <li>~/posctrl [<strong>std_msgs/msg/Bool</strong>]: Toggling between position control (give drone a pose via cmd_vel) and normal control (only use cmd_vel)</li>
+  <li>~/dronevel_mode [<strong>std_msgs/msg/Bool</strong>]: Toggeling between velocity and tilt control in normal control mode.</li>
+  <li>~/cmd_mode [<strong>std_msgs/msg/Bool</strong>]: Publishes the current control mode (position or normal control)</li>
+  <li>~/state [<strong>std_msgs/msg/Int8</strong>]: Publishes the current state of the drone (0: landed, 1: flying, 2: hovering)</li>
+  <li>~/reset [<strong>std_msgs/msg/Empty</strong>]: Resets the drone</li>
+</ul>
+
+<h3 id="ground-truth">Ground Truth</h3>
+<p>The following ground truth topics are currently published:</p>
+<ul>
+  <li>~/gt_acc [<strong>geometry_msgs/msg/Twist</strong>]: ground truth acceleration</li>
+  <li>~/gt_pose [<strong>geometry_msgs/msg/Pose</strong>]: ground truth pose</li>
+  <li>~/gt_vel [<strong>geometry_msgs/msg/Twist</strong>]: ground truth velocity</li>
+</ul>
+
+<h2 id="configure-plugin">Configure Plugin</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">plugin_drone</code> plugin is used to control the drone. It can be configured using the following parameters:</p>
+
+<p>```yaml</p>
+<h1 id="ros-namespace-for-the-drone-all-topics-and-tf-frames-will-be-prefixed-with-this-namespace">ROS namespace for the drone. All topics and tf frames will be prefixed with this namespace.</h1>
+<p>namespace: /simple_drone</p>
+
+<h1 id="proportional-gain-for-roll-and-pitch-pid-controllers-controls-the-drones-response-to-roll-and-pitch-errors">Proportional gain for roll and pitch PID controllers. Controls the drone’s response to roll and pitch errors.</h1>
+<p>rollpitchProportionalGain: 10.0</p>
+<h1 id="differential-gain-for-roll-and-pitch-pid-controllers-helps-to-reduce-overshoot-and-improve-stability">Differential gain for roll and pitch PID controllers. Helps to reduce overshoot and improve stability.</h1>
+<p>rollpitchDifferentialGain: 5.0</p>
+<h1 id="maximum-absolute-value-for-roll-and-pitch-control-outputs-limiting-maximum-tilt-angle">Maximum absolute value for roll and pitch control outputs, limiting maximum tilt angle.</h1>
+<p>rollpitchLimit: 0.5</p>
+
+<h1 id="proportional-gain-for-yaw-pid-controller-determines-how-strongly-the-drone-responds-to-yaw-position-errors">Proportional gain for yaw PID controller. Determines how strongly the drone responds to yaw position errors.</h1>
+<p>yawProportionalGain: 2.0</p>
+<h1 id="differential-gain-for-yaw-pid-controller-dampens-the-rate-of-change-of-yaw-error-for-smoother-rotation">Differential gain for yaw PID controller. Dampens the rate of change of yaw error for smoother rotation.</h1>
+<p>yawDifferentialGain: 1.0</p>
+<h1 id="maximum-absolute-value-for-yaw-control-output-limiting-rotational-rate">Maximum absolute value for yaw control output, limiting rotational rate.</h1>
+<p>yawLimit: 1.5</p>
+
+<h1 id="proportional-gain-for-horizontal-velocity-pid-controllers-controls-response-to-changes-in-horizontal-velocity">Proportional gain for horizontal velocity PID controllers. Controls response to changes in horizontal velocity.</h1>
+<p>velocityXYProportionalGain: 5.0</p>
+<h1 id="differential-gain-for-horizontal-velocity-pid-controllers-controls-accelerationdeceleration-in-horizontal-plane">Differential gain for horizontal velocity PID controllers. Controls acceleration/deceleration in horizontal plane.</h1>
+<p>velocityXYDifferentialGain: 2.3</p>
+<h1 id="maximum-limit-for-horizontal-velocity-control-output-restricting-maximum-horizontal-speed">Maximum limit for horizontal velocity control output, restricting maximum horizontal speed.</h1>
+<p>velocityXYLimit: 2</p>
+
+<h1 id="proportional-gain-for-vertical-velocity-pid-controller-influences-response-to-altitude-changes">Proportional gain for vertical velocity PID controller. Influences response to altitude changes.</h1>
+<p>velocityZProportionalGain: 5.0</p>
+<h1 id="integral-gain-for-vertical-velocity-pid-controller-set-to-zero-indicating-no-error-integration-over-time">Integral gain for vertical velocity PID controller. Set to zero, indicating no error integration over time.</h1>
+<p>velocityZIntegralGain: 0.0</p>
+<h1 id="differential-gain-for-vertical-velocity-pid-controller-helps-control-vertical-acceleration-and-deceleration">Differential gain for vertical velocity PID controller. Helps control vertical acceleration and deceleration.</h1>
+<p>velocityZDifferentialGain: 1.0</p>
+<h1 id="maximum-limit-for-vertical-velocity-control-output-negative-value-may-indicate-special-control-scenario-or-error">Maximum limit for vertical velocity control output. Negative value may indicate special control scenario or error.</h1>
+<p>velocityZLimit: -1</p>
+
+<h1 id="proportional-gain-for-horizontal-position-pid-controllers-controls-response-to-horizontal-displacement-errors">Proportional gain for horizontal position PID controllers. Controls response to horizontal displacement errors.</h1>
+<p>positionXYProportionalGain: 1.1</p>
+<h1 id="differential-gain-for-horizontal-position-pid-controllers-set-to-zero-meaning-no-rate-of-change-consideration">Differential gain for horizontal position PID controllers. Set to zero, meaning no rate of change consideration.</h1>
+<p>positionXYDifferentialGain: 0.0</p>
+<h1 id="integral-gain-for-horizontal-position-pid-controllers-set-to-zero-indicating-no-cumulative-error-correction">Integral gain for horizontal position PID controllers. Set to zero, indicating no cumulative error correction.</h1>
+<p>positionXYIntegralGain: 0.0</p>
+<h1 id="maximum-limit-for-horizontal-position-control-output-restricting-maximum-correctional-force-for-horizontal-errors">Maximum limit for horizontal position control output, restricting maximum correctional force for horizontal errors.</h1>
+<p>positionXYLimit: 5</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/novog93/sjtu_drone/tree/ros2/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/sjtu_drone/">sjtu_drone</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_bringup/">sjtu_drone_bringup</a>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_control/">sjtu_drone_control</a>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_description/">sjtu_drone_description</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/novog93/sjtu_drone.git">https://github.com/novog93/sjtu_drone.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">ros2</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-02-07
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/sjtu_drone/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/sjtu_drone/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/sjtu_drone/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_bringup/">sjtu_drone_bringup</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_control/">sjtu_drone_control</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_description/">sjtu_drone_description</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="sjtu_drone">sjtu_drone</h1>
+
+<p><a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_iron_build.json" alt="Iron"></a> <a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_humble_build.json" alt="Humble"></a> <a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_rolling_build.json" alt="Rolling"></a></p>
+
+<p>sjtu_drone is a quadrotor simulation program forked from <a href="http://wiki.ros.org/tum_simulator">tum_simulator</a>, developed using ROS + Gazebo.</p>
+
+<p>The acronym ‘sjtu’ stands for Shanghai Jiao Tong University. This package has been used in the past for testing algorithms for the <a href="http://mediasoc.sjtu.edu.cn/wordpress">UAV contest at SJTU</a></p>
+
+<h1 id="requirements">Requirements</h1>
+
+<p>This package is tested with ROS 2 (Ubuntu 22.04) and Gazebo 11.</p>
+
+<h1 id="downloading-and-building">Downloading and building</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/git &amp;&amp; git clone git@github.com:NovoG93/sjtu_drone.git -b ros2
+cd ~/ros2_ws/src &amp;&amp; ln -s ~/git/sjtu_drone
+cd .. &amp;&amp; rosdep install -r -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO &amp;&amp; colcon build --packages-select-regex sjtu*
+
+</code></pre></div></div>
+
+<p>To use the playground.world file (as depicted below) make sure to install the common gazebo models, for more see the <a href="https://github.com/novog93/sjtu_drone/tree/ros2/./sjtu_drone_description/README.md">Readme in sjtu_drone_description</a>.</p>
+
+<h2 id="drone-topics">Drone Topics</h2>
+
+<h3 id="sensors">Sensors</h3>
+<p>The folowing sensors are currently implemented:</p>
+<ul>
+  <li>~/front/image_raw [<strong>sensor_msgs/msg/Image</strong>]</li>
+  <li>~/bottom/image_raw [<strong>sensor_msgs/msg/Image</strong>]</li>
+  <li>~/sonar/out [<strong>sensor_msgs/msg/Range</strong>]</li>
+  <li>~/imu/out [<strong>sensor_msgs/msg/Imu</strong>]</li>
+  <li>~/gps/nav [<strong>sensor_msgs/msg/NavSatFix</strong>]</li>
+  <li>~/gps/vel [<strong>geometry_msgs/msg/TwistStamped</strong>]</li>
+  <li>~/joint_states [<strong>sensor_msgs/msg/JointState</strong>]</li>
+</ul>
+
+<h3 id="control">Control</h3>
+<p>The following control topics are currently subscribed to:</p>
+<ul>
+  <li>~/cmd_vel [<strong>geometry_msgs/msg/Twist</strong>]: Steers the drone</li>
+  <li>~/land [<strong>std_msgs/msg/Empty</strong>]: Lands the drone</li>
+  <li>~/takeoff [<strong>std_msgs/msg/Empty</strong>]: Starts the drone</li>
+  <li>~/posctrl [<strong>std_msgs/msg/Bool</strong>]: Toggling between position control (give drone a pose via cmd_vel) and normal control (only use cmd_vel)</li>
+  <li>~/dronevel_mode [<strong>std_msgs/msg/Bool</strong>]: Toggeling between velocity and tilt control in normal control mode.</li>
+  <li>~/cmd_mode [<strong>std_msgs/msg/Bool</strong>]: Publishes the current control mode (position or normal control)</li>
+  <li>~/state [<strong>std_msgs/msg/Int8</strong>]: Publishes the current state of the drone (0: landed, 1: flying, 2: hovering)</li>
+  <li>~/reset [<strong>std_msgs/msg/Empty</strong>]: Resets the drone</li>
+</ul>
+
+<h3 id="ground-truth">Ground Truth</h3>
+<p>The following ground truth topics are currently published:</p>
+<ul>
+  <li>~/gt_acc [<strong>geometry_msgs/msg/Twist</strong>]: ground truth acceleration</li>
+  <li>~/gt_pose [<strong>geometry_msgs/msg/Pose</strong>]: ground truth pose</li>
+  <li>~/gt_vel [<strong>geometry_msgs/msg/Twist</strong>]: ground truth velocity</li>
+</ul>
+
+<h2 id="configure-plugin">Configure Plugin</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">plugin_drone</code> plugin is used to control the drone. It can be configured using the following parameters:</p>
+
+<p>```yaml</p>
+<h1 id="ros-namespace-for-the-drone-all-topics-and-tf-frames-will-be-prefixed-with-this-namespace">ROS namespace for the drone. All topics and tf frames will be prefixed with this namespace.</h1>
+<p>namespace: /simple_drone</p>
+
+<h1 id="proportional-gain-for-roll-and-pitch-pid-controllers-controls-the-drones-response-to-roll-and-pitch-errors">Proportional gain for roll and pitch PID controllers. Controls the drone’s response to roll and pitch errors.</h1>
+<p>rollpitchProportionalGain: 10.0</p>
+<h1 id="differential-gain-for-roll-and-pitch-pid-controllers-helps-to-reduce-overshoot-and-improve-stability">Differential gain for roll and pitch PID controllers. Helps to reduce overshoot and improve stability.</h1>
+<p>rollpitchDifferentialGain: 5.0</p>
+<h1 id="maximum-absolute-value-for-roll-and-pitch-control-outputs-limiting-maximum-tilt-angle">Maximum absolute value for roll and pitch control outputs, limiting maximum tilt angle.</h1>
+<p>rollpitchLimit: 0.5</p>
+
+<h1 id="proportional-gain-for-yaw-pid-controller-determines-how-strongly-the-drone-responds-to-yaw-position-errors">Proportional gain for yaw PID controller. Determines how strongly the drone responds to yaw position errors.</h1>
+<p>yawProportionalGain: 2.0</p>
+<h1 id="differential-gain-for-yaw-pid-controller-dampens-the-rate-of-change-of-yaw-error-for-smoother-rotation">Differential gain for yaw PID controller. Dampens the rate of change of yaw error for smoother rotation.</h1>
+<p>yawDifferentialGain: 1.0</p>
+<h1 id="maximum-absolute-value-for-yaw-control-output-limiting-rotational-rate">Maximum absolute value for yaw control output, limiting rotational rate.</h1>
+<p>yawLimit: 1.5</p>
+
+<h1 id="proportional-gain-for-horizontal-velocity-pid-controllers-controls-response-to-changes-in-horizontal-velocity">Proportional gain for horizontal velocity PID controllers. Controls response to changes in horizontal velocity.</h1>
+<p>velocityXYProportionalGain: 5.0</p>
+<h1 id="differential-gain-for-horizontal-velocity-pid-controllers-controls-accelerationdeceleration-in-horizontal-plane">Differential gain for horizontal velocity PID controllers. Controls acceleration/deceleration in horizontal plane.</h1>
+<p>velocityXYDifferentialGain: 2.3</p>
+<h1 id="maximum-limit-for-horizontal-velocity-control-output-restricting-maximum-horizontal-speed">Maximum limit for horizontal velocity control output, restricting maximum horizontal speed.</h1>
+<p>velocityXYLimit: 2</p>
+
+<h1 id="proportional-gain-for-vertical-velocity-pid-controller-influences-response-to-altitude-changes">Proportional gain for vertical velocity PID controller. Influences response to altitude changes.</h1>
+<p>velocityZProportionalGain: 5.0</p>
+<h1 id="integral-gain-for-vertical-velocity-pid-controller-set-to-zero-indicating-no-error-integration-over-time">Integral gain for vertical velocity PID controller. Set to zero, indicating no error integration over time.</h1>
+<p>velocityZIntegralGain: 0.0</p>
+<h1 id="differential-gain-for-vertical-velocity-pid-controller-helps-control-vertical-acceleration-and-deceleration">Differential gain for vertical velocity PID controller. Helps control vertical acceleration and deceleration.</h1>
+<p>velocityZDifferentialGain: 1.0</p>
+<h1 id="maximum-limit-for-vertical-velocity-control-output-negative-value-may-indicate-special-control-scenario-or-error">Maximum limit for vertical velocity control output. Negative value may indicate special control scenario or error.</h1>
+<p>velocityZLimit: -1</p>
+
+<h1 id="proportional-gain-for-horizontal-position-pid-controllers-controls-response-to-horizontal-displacement-errors">Proportional gain for horizontal position PID controllers. Controls response to horizontal displacement errors.</h1>
+<p>positionXYProportionalGain: 1.1</p>
+<h1 id="differential-gain-for-horizontal-position-pid-controllers-set-to-zero-meaning-no-rate-of-change-consideration">Differential gain for horizontal position PID controllers. Set to zero, meaning no rate of change consideration.</h1>
+<p>positionXYDifferentialGain: 0.0</p>
+<h1 id="integral-gain-for-horizontal-position-pid-controllers-set-to-zero-indicating-no-cumulative-error-correction">Integral gain for horizontal position PID controllers. Set to zero, indicating no cumulative error correction.</h1>
+<p>positionXYIntegralGain: 0.0</p>
+<h1 id="maximum-limit-for-horizontal-position-control-output-restricting-maximum-correctional-force-for-horizontal-errors">Maximum limit for horizontal position control output, restricting maximum correctional force for horizontal errors.</h1>
+<p>positionXYLimit: 5</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/novog93/sjtu_drone/tree/ros2/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>galactic</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/sjtu_drone/">sjtu_drone</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_bringup/">sjtu_drone_bringup</a>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_control/">sjtu_drone_control</a>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_description/">sjtu_drone_description</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/novog93/sjtu_drone.git">https://github.com/novog93/sjtu_drone.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">ros2</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-02-07
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/sjtu_drone/#galactic-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/sjtu_drone/#galactic-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/sjtu_drone/#galactic-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_bringup/">sjtu_drone_bringup</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_control/">sjtu_drone_control</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_description/">sjtu_drone_description</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="sjtu_drone">sjtu_drone</h1>
+
+<p><a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_iron_build.json" alt="Iron"></a> <a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_humble_build.json" alt="Humble"></a> <a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_rolling_build.json" alt="Rolling"></a></p>
+
+<p>sjtu_drone is a quadrotor simulation program forked from <a href="http://wiki.ros.org/tum_simulator">tum_simulator</a>, developed using ROS + Gazebo.</p>
+
+<p>The acronym ‘sjtu’ stands for Shanghai Jiao Tong University. This package has been used in the past for testing algorithms for the <a href="http://mediasoc.sjtu.edu.cn/wordpress">UAV contest at SJTU</a></p>
+
+<h1 id="requirements">Requirements</h1>
+
+<p>This package is tested with ROS 2 (Ubuntu 22.04) and Gazebo 11.</p>
+
+<h1 id="downloading-and-building">Downloading and building</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/git &amp;&amp; git clone git@github.com:NovoG93/sjtu_drone.git -b ros2
+cd ~/ros2_ws/src &amp;&amp; ln -s ~/git/sjtu_drone
+cd .. &amp;&amp; rosdep install -r -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO &amp;&amp; colcon build --packages-select-regex sjtu*
+
+</code></pre></div></div>
+
+<p>To use the playground.world file (as depicted below) make sure to install the common gazebo models, for more see the <a href="https://github.com/novog93/sjtu_drone/tree/ros2/./sjtu_drone_description/README.md">Readme in sjtu_drone_description</a>.</p>
+
+<h2 id="drone-topics">Drone Topics</h2>
+
+<h3 id="sensors">Sensors</h3>
+<p>The folowing sensors are currently implemented:</p>
+<ul>
+  <li>~/front/image_raw [<strong>sensor_msgs/msg/Image</strong>]</li>
+  <li>~/bottom/image_raw [<strong>sensor_msgs/msg/Image</strong>]</li>
+  <li>~/sonar/out [<strong>sensor_msgs/msg/Range</strong>]</li>
+  <li>~/imu/out [<strong>sensor_msgs/msg/Imu</strong>]</li>
+  <li>~/gps/nav [<strong>sensor_msgs/msg/NavSatFix</strong>]</li>
+  <li>~/gps/vel [<strong>geometry_msgs/msg/TwistStamped</strong>]</li>
+  <li>~/joint_states [<strong>sensor_msgs/msg/JointState</strong>]</li>
+</ul>
+
+<h3 id="control">Control</h3>
+<p>The following control topics are currently subscribed to:</p>
+<ul>
+  <li>~/cmd_vel [<strong>geometry_msgs/msg/Twist</strong>]: Steers the drone</li>
+  <li>~/land [<strong>std_msgs/msg/Empty</strong>]: Lands the drone</li>
+  <li>~/takeoff [<strong>std_msgs/msg/Empty</strong>]: Starts the drone</li>
+  <li>~/posctrl [<strong>std_msgs/msg/Bool</strong>]: Toggling between position control (give drone a pose via cmd_vel) and normal control (only use cmd_vel)</li>
+  <li>~/dronevel_mode [<strong>std_msgs/msg/Bool</strong>]: Toggeling between velocity and tilt control in normal control mode.</li>
+  <li>~/cmd_mode [<strong>std_msgs/msg/Bool</strong>]: Publishes the current control mode (position or normal control)</li>
+  <li>~/state [<strong>std_msgs/msg/Int8</strong>]: Publishes the current state of the drone (0: landed, 1: flying, 2: hovering)</li>
+  <li>~/reset [<strong>std_msgs/msg/Empty</strong>]: Resets the drone</li>
+</ul>
+
+<h3 id="ground-truth">Ground Truth</h3>
+<p>The following ground truth topics are currently published:</p>
+<ul>
+  <li>~/gt_acc [<strong>geometry_msgs/msg/Twist</strong>]: ground truth acceleration</li>
+  <li>~/gt_pose [<strong>geometry_msgs/msg/Pose</strong>]: ground truth pose</li>
+  <li>~/gt_vel [<strong>geometry_msgs/msg/Twist</strong>]: ground truth velocity</li>
+</ul>
+
+<h2 id="configure-plugin">Configure Plugin</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">plugin_drone</code> plugin is used to control the drone. It can be configured using the following parameters:</p>
+
+<p>```yaml</p>
+<h1 id="ros-namespace-for-the-drone-all-topics-and-tf-frames-will-be-prefixed-with-this-namespace">ROS namespace for the drone. All topics and tf frames will be prefixed with this namespace.</h1>
+<p>namespace: /simple_drone</p>
+
+<h1 id="proportional-gain-for-roll-and-pitch-pid-controllers-controls-the-drones-response-to-roll-and-pitch-errors">Proportional gain for roll and pitch PID controllers. Controls the drone’s response to roll and pitch errors.</h1>
+<p>rollpitchProportionalGain: 10.0</p>
+<h1 id="differential-gain-for-roll-and-pitch-pid-controllers-helps-to-reduce-overshoot-and-improve-stability">Differential gain for roll and pitch PID controllers. Helps to reduce overshoot and improve stability.</h1>
+<p>rollpitchDifferentialGain: 5.0</p>
+<h1 id="maximum-absolute-value-for-roll-and-pitch-control-outputs-limiting-maximum-tilt-angle">Maximum absolute value for roll and pitch control outputs, limiting maximum tilt angle.</h1>
+<p>rollpitchLimit: 0.5</p>
+
+<h1 id="proportional-gain-for-yaw-pid-controller-determines-how-strongly-the-drone-responds-to-yaw-position-errors">Proportional gain for yaw PID controller. Determines how strongly the drone responds to yaw position errors.</h1>
+<p>yawProportionalGain: 2.0</p>
+<h1 id="differential-gain-for-yaw-pid-controller-dampens-the-rate-of-change-of-yaw-error-for-smoother-rotation">Differential gain for yaw PID controller. Dampens the rate of change of yaw error for smoother rotation.</h1>
+<p>yawDifferentialGain: 1.0</p>
+<h1 id="maximum-absolute-value-for-yaw-control-output-limiting-rotational-rate">Maximum absolute value for yaw control output, limiting rotational rate.</h1>
+<p>yawLimit: 1.5</p>
+
+<h1 id="proportional-gain-for-horizontal-velocity-pid-controllers-controls-response-to-changes-in-horizontal-velocity">Proportional gain for horizontal velocity PID controllers. Controls response to changes in horizontal velocity.</h1>
+<p>velocityXYProportionalGain: 5.0</p>
+<h1 id="differential-gain-for-horizontal-velocity-pid-controllers-controls-accelerationdeceleration-in-horizontal-plane">Differential gain for horizontal velocity PID controllers. Controls acceleration/deceleration in horizontal plane.</h1>
+<p>velocityXYDifferentialGain: 2.3</p>
+<h1 id="maximum-limit-for-horizontal-velocity-control-output-restricting-maximum-horizontal-speed">Maximum limit for horizontal velocity control output, restricting maximum horizontal speed.</h1>
+<p>velocityXYLimit: 2</p>
+
+<h1 id="proportional-gain-for-vertical-velocity-pid-controller-influences-response-to-altitude-changes">Proportional gain for vertical velocity PID controller. Influences response to altitude changes.</h1>
+<p>velocityZProportionalGain: 5.0</p>
+<h1 id="integral-gain-for-vertical-velocity-pid-controller-set-to-zero-indicating-no-error-integration-over-time">Integral gain for vertical velocity PID controller. Set to zero, indicating no error integration over time.</h1>
+<p>velocityZIntegralGain: 0.0</p>
+<h1 id="differential-gain-for-vertical-velocity-pid-controller-helps-control-vertical-acceleration-and-deceleration">Differential gain for vertical velocity PID controller. Helps control vertical acceleration and deceleration.</h1>
+<p>velocityZDifferentialGain: 1.0</p>
+<h1 id="maximum-limit-for-vertical-velocity-control-output-negative-value-may-indicate-special-control-scenario-or-error">Maximum limit for vertical velocity control output. Negative value may indicate special control scenario or error.</h1>
+<p>velocityZLimit: -1</p>
+
+<h1 id="proportional-gain-for-horizontal-position-pid-controllers-controls-response-to-horizontal-displacement-errors">Proportional gain for horizontal position PID controllers. Controls response to horizontal displacement errors.</h1>
+<p>positionXYProportionalGain: 1.1</p>
+<h1 id="differential-gain-for-horizontal-position-pid-controllers-set-to-zero-meaning-no-rate-of-change-consideration">Differential gain for horizontal position PID controllers. Set to zero, meaning no rate of change consideration.</h1>
+<p>positionXYDifferentialGain: 0.0</p>
+<h1 id="integral-gain-for-horizontal-position-pid-controllers-set-to-zero-indicating-no-cumulative-error-correction">Integral gain for horizontal position PID controllers. Set to zero, indicating no cumulative error correction.</h1>
+<p>positionXYIntegralGain: 0.0</p>
+<h1 id="maximum-limit-for-horizontal-position-control-output-restricting-maximum-correctional-force-for-horizontal-errors">Maximum limit for horizontal position control output, restricting maximum correctional force for horizontal errors.</h1>
+<p>positionXYLimit: 5</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/novog93/sjtu_drone/tree/ros2/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>iron</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/sjtu_drone/">sjtu_drone</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_bringup/">sjtu_drone_bringup</a>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_control/">sjtu_drone_control</a>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_description/">sjtu_drone_description</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/novog93/sjtu_drone.git">https://github.com/novog93/sjtu_drone.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">ros2</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-02-07
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/sjtu_drone/#iron-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/sjtu_drone/#iron-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/sjtu_drone/#iron-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_bringup/">sjtu_drone_bringup</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_control/">sjtu_drone_control</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_description/">sjtu_drone_description</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="sjtu_drone">sjtu_drone</h1>
+
+<p><a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_iron_build.json" alt="Iron"></a> <a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_humble_build.json" alt="Humble"></a> <a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_rolling_build.json" alt="Rolling"></a></p>
+
+<p>sjtu_drone is a quadrotor simulation program forked from <a href="http://wiki.ros.org/tum_simulator">tum_simulator</a>, developed using ROS + Gazebo.</p>
+
+<p>The acronym ‘sjtu’ stands for Shanghai Jiao Tong University. This package has been used in the past for testing algorithms for the <a href="http://mediasoc.sjtu.edu.cn/wordpress">UAV contest at SJTU</a></p>
+
+<h1 id="requirements">Requirements</h1>
+
+<p>This package is tested with ROS 2 (Ubuntu 22.04) and Gazebo 11.</p>
+
+<h1 id="downloading-and-building">Downloading and building</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/git &amp;&amp; git clone git@github.com:NovoG93/sjtu_drone.git -b ros2
+cd ~/ros2_ws/src &amp;&amp; ln -s ~/git/sjtu_drone
+cd .. &amp;&amp; rosdep install -r -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO &amp;&amp; colcon build --packages-select-regex sjtu*
+
+</code></pre></div></div>
+
+<p>To use the playground.world file (as depicted below) make sure to install the common gazebo models, for more see the <a href="https://github.com/novog93/sjtu_drone/tree/ros2/./sjtu_drone_description/README.md">Readme in sjtu_drone_description</a>.</p>
+
+<h2 id="drone-topics">Drone Topics</h2>
+
+<h3 id="sensors">Sensors</h3>
+<p>The folowing sensors are currently implemented:</p>
+<ul>
+  <li>~/front/image_raw [<strong>sensor_msgs/msg/Image</strong>]</li>
+  <li>~/bottom/image_raw [<strong>sensor_msgs/msg/Image</strong>]</li>
+  <li>~/sonar/out [<strong>sensor_msgs/msg/Range</strong>]</li>
+  <li>~/imu/out [<strong>sensor_msgs/msg/Imu</strong>]</li>
+  <li>~/gps/nav [<strong>sensor_msgs/msg/NavSatFix</strong>]</li>
+  <li>~/gps/vel [<strong>geometry_msgs/msg/TwistStamped</strong>]</li>
+  <li>~/joint_states [<strong>sensor_msgs/msg/JointState</strong>]</li>
+</ul>
+
+<h3 id="control">Control</h3>
+<p>The following control topics are currently subscribed to:</p>
+<ul>
+  <li>~/cmd_vel [<strong>geometry_msgs/msg/Twist</strong>]: Steers the drone</li>
+  <li>~/land [<strong>std_msgs/msg/Empty</strong>]: Lands the drone</li>
+  <li>~/takeoff [<strong>std_msgs/msg/Empty</strong>]: Starts the drone</li>
+  <li>~/posctrl [<strong>std_msgs/msg/Bool</strong>]: Toggling between position control (give drone a pose via cmd_vel) and normal control (only use cmd_vel)</li>
+  <li>~/dronevel_mode [<strong>std_msgs/msg/Bool</strong>]: Toggeling between velocity and tilt control in normal control mode.</li>
+  <li>~/cmd_mode [<strong>std_msgs/msg/Bool</strong>]: Publishes the current control mode (position or normal control)</li>
+  <li>~/state [<strong>std_msgs/msg/Int8</strong>]: Publishes the current state of the drone (0: landed, 1: flying, 2: hovering)</li>
+  <li>~/reset [<strong>std_msgs/msg/Empty</strong>]: Resets the drone</li>
+</ul>
+
+<h3 id="ground-truth">Ground Truth</h3>
+<p>The following ground truth topics are currently published:</p>
+<ul>
+  <li>~/gt_acc [<strong>geometry_msgs/msg/Twist</strong>]: ground truth acceleration</li>
+  <li>~/gt_pose [<strong>geometry_msgs/msg/Pose</strong>]: ground truth pose</li>
+  <li>~/gt_vel [<strong>geometry_msgs/msg/Twist</strong>]: ground truth velocity</li>
+</ul>
+
+<h2 id="configure-plugin">Configure Plugin</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">plugin_drone</code> plugin is used to control the drone. It can be configured using the following parameters:</p>
+
+<p>```yaml</p>
+<h1 id="ros-namespace-for-the-drone-all-topics-and-tf-frames-will-be-prefixed-with-this-namespace">ROS namespace for the drone. All topics and tf frames will be prefixed with this namespace.</h1>
+<p>namespace: /simple_drone</p>
+
+<h1 id="proportional-gain-for-roll-and-pitch-pid-controllers-controls-the-drones-response-to-roll-and-pitch-errors">Proportional gain for roll and pitch PID controllers. Controls the drone’s response to roll and pitch errors.</h1>
+<p>rollpitchProportionalGain: 10.0</p>
+<h1 id="differential-gain-for-roll-and-pitch-pid-controllers-helps-to-reduce-overshoot-and-improve-stability">Differential gain for roll and pitch PID controllers. Helps to reduce overshoot and improve stability.</h1>
+<p>rollpitchDifferentialGain: 5.0</p>
+<h1 id="maximum-absolute-value-for-roll-and-pitch-control-outputs-limiting-maximum-tilt-angle">Maximum absolute value for roll and pitch control outputs, limiting maximum tilt angle.</h1>
+<p>rollpitchLimit: 0.5</p>
+
+<h1 id="proportional-gain-for-yaw-pid-controller-determines-how-strongly-the-drone-responds-to-yaw-position-errors">Proportional gain for yaw PID controller. Determines how strongly the drone responds to yaw position errors.</h1>
+<p>yawProportionalGain: 2.0</p>
+<h1 id="differential-gain-for-yaw-pid-controller-dampens-the-rate-of-change-of-yaw-error-for-smoother-rotation">Differential gain for yaw PID controller. Dampens the rate of change of yaw error for smoother rotation.</h1>
+<p>yawDifferentialGain: 1.0</p>
+<h1 id="maximum-absolute-value-for-yaw-control-output-limiting-rotational-rate">Maximum absolute value for yaw control output, limiting rotational rate.</h1>
+<p>yawLimit: 1.5</p>
+
+<h1 id="proportional-gain-for-horizontal-velocity-pid-controllers-controls-response-to-changes-in-horizontal-velocity">Proportional gain for horizontal velocity PID controllers. Controls response to changes in horizontal velocity.</h1>
+<p>velocityXYProportionalGain: 5.0</p>
+<h1 id="differential-gain-for-horizontal-velocity-pid-controllers-controls-accelerationdeceleration-in-horizontal-plane">Differential gain for horizontal velocity PID controllers. Controls acceleration/deceleration in horizontal plane.</h1>
+<p>velocityXYDifferentialGain: 2.3</p>
+<h1 id="maximum-limit-for-horizontal-velocity-control-output-restricting-maximum-horizontal-speed">Maximum limit for horizontal velocity control output, restricting maximum horizontal speed.</h1>
+<p>velocityXYLimit: 2</p>
+
+<h1 id="proportional-gain-for-vertical-velocity-pid-controller-influences-response-to-altitude-changes">Proportional gain for vertical velocity PID controller. Influences response to altitude changes.</h1>
+<p>velocityZProportionalGain: 5.0</p>
+<h1 id="integral-gain-for-vertical-velocity-pid-controller-set-to-zero-indicating-no-error-integration-over-time">Integral gain for vertical velocity PID controller. Set to zero, indicating no error integration over time.</h1>
+<p>velocityZIntegralGain: 0.0</p>
+<h1 id="differential-gain-for-vertical-velocity-pid-controller-helps-control-vertical-acceleration-and-deceleration">Differential gain for vertical velocity PID controller. Helps control vertical acceleration and deceleration.</h1>
+<p>velocityZDifferentialGain: 1.0</p>
+<h1 id="maximum-limit-for-vertical-velocity-control-output-negative-value-may-indicate-special-control-scenario-or-error">Maximum limit for vertical velocity control output. Negative value may indicate special control scenario or error.</h1>
+<p>velocityZLimit: -1</p>
+
+<h1 id="proportional-gain-for-horizontal-position-pid-controllers-controls-response-to-horizontal-displacement-errors">Proportional gain for horizontal position PID controllers. Controls response to horizontal displacement errors.</h1>
+<p>positionXYProportionalGain: 1.1</p>
+<h1 id="differential-gain-for-horizontal-position-pid-controllers-set-to-zero-meaning-no-rate-of-change-consideration">Differential gain for horizontal position PID controllers. Set to zero, meaning no rate of change consideration.</h1>
+<p>positionXYDifferentialGain: 0.0</p>
+<h1 id="integral-gain-for-horizontal-position-pid-controllers-set-to-zero-indicating-no-cumulative-error-correction">Integral gain for horizontal position PID controllers. Set to zero, indicating no cumulative error correction.</h1>
+<p>positionXYIntegralGain: 0.0</p>
+<h1 id="maximum-limit-for-horizontal-position-control-output-restricting-maximum-correctional-force-for-horizontal-errors">Maximum limit for horizontal position control output, restricting maximum correctional force for horizontal errors.</h1>
+<p>positionXYLimit: 5</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/novog93/sjtu_drone/tree/ros2/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>melodic</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/sjtu_drone/">sjtu_drone</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_bringup/">sjtu_drone_bringup</a>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_control/">sjtu_drone_control</a>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_description/">sjtu_drone_description</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/novog93/sjtu_drone.git">https://github.com/novog93/sjtu_drone.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">ros2</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-02-07
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/sjtu_drone/#melodic-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/sjtu_drone/#melodic-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/sjtu_drone/#melodic-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_bringup/">sjtu_drone_bringup</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_control/">sjtu_drone_control</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_description/">sjtu_drone_description</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="sjtu_drone">sjtu_drone</h1>
+
+<p><a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_iron_build.json" alt="Iron"></a> <a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_humble_build.json" alt="Humble"></a> <a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_rolling_build.json" alt="Rolling"></a></p>
+
+<p>sjtu_drone is a quadrotor simulation program forked from <a href="http://wiki.ros.org/tum_simulator">tum_simulator</a>, developed using ROS + Gazebo.</p>
+
+<p>The acronym ‘sjtu’ stands for Shanghai Jiao Tong University. This package has been used in the past for testing algorithms for the <a href="http://mediasoc.sjtu.edu.cn/wordpress">UAV contest at SJTU</a></p>
+
+<h1 id="requirements">Requirements</h1>
+
+<p>This package is tested with ROS 2 (Ubuntu 22.04) and Gazebo 11.</p>
+
+<h1 id="downloading-and-building">Downloading and building</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/git &amp;&amp; git clone git@github.com:NovoG93/sjtu_drone.git -b ros2
+cd ~/ros2_ws/src &amp;&amp; ln -s ~/git/sjtu_drone
+cd .. &amp;&amp; rosdep install -r -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO &amp;&amp; colcon build --packages-select-regex sjtu*
+
+</code></pre></div></div>
+
+<p>To use the playground.world file (as depicted below) make sure to install the common gazebo models, for more see the <a href="https://github.com/novog93/sjtu_drone/tree/ros2/./sjtu_drone_description/README.md">Readme in sjtu_drone_description</a>.</p>
+
+<h2 id="drone-topics">Drone Topics</h2>
+
+<h3 id="sensors">Sensors</h3>
+<p>The folowing sensors are currently implemented:</p>
+<ul>
+  <li>~/front/image_raw [<strong>sensor_msgs/msg/Image</strong>]</li>
+  <li>~/bottom/image_raw [<strong>sensor_msgs/msg/Image</strong>]</li>
+  <li>~/sonar/out [<strong>sensor_msgs/msg/Range</strong>]</li>
+  <li>~/imu/out [<strong>sensor_msgs/msg/Imu</strong>]</li>
+  <li>~/gps/nav [<strong>sensor_msgs/msg/NavSatFix</strong>]</li>
+  <li>~/gps/vel [<strong>geometry_msgs/msg/TwistStamped</strong>]</li>
+  <li>~/joint_states [<strong>sensor_msgs/msg/JointState</strong>]</li>
+</ul>
+
+<h3 id="control">Control</h3>
+<p>The following control topics are currently subscribed to:</p>
+<ul>
+  <li>~/cmd_vel [<strong>geometry_msgs/msg/Twist</strong>]: Steers the drone</li>
+  <li>~/land [<strong>std_msgs/msg/Empty</strong>]: Lands the drone</li>
+  <li>~/takeoff [<strong>std_msgs/msg/Empty</strong>]: Starts the drone</li>
+  <li>~/posctrl [<strong>std_msgs/msg/Bool</strong>]: Toggling between position control (give drone a pose via cmd_vel) and normal control (only use cmd_vel)</li>
+  <li>~/dronevel_mode [<strong>std_msgs/msg/Bool</strong>]: Toggeling between velocity and tilt control in normal control mode.</li>
+  <li>~/cmd_mode [<strong>std_msgs/msg/Bool</strong>]: Publishes the current control mode (position or normal control)</li>
+  <li>~/state [<strong>std_msgs/msg/Int8</strong>]: Publishes the current state of the drone (0: landed, 1: flying, 2: hovering)</li>
+  <li>~/reset [<strong>std_msgs/msg/Empty</strong>]: Resets the drone</li>
+</ul>
+
+<h3 id="ground-truth">Ground Truth</h3>
+<p>The following ground truth topics are currently published:</p>
+<ul>
+  <li>~/gt_acc [<strong>geometry_msgs/msg/Twist</strong>]: ground truth acceleration</li>
+  <li>~/gt_pose [<strong>geometry_msgs/msg/Pose</strong>]: ground truth pose</li>
+  <li>~/gt_vel [<strong>geometry_msgs/msg/Twist</strong>]: ground truth velocity</li>
+</ul>
+
+<h2 id="configure-plugin">Configure Plugin</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">plugin_drone</code> plugin is used to control the drone. It can be configured using the following parameters:</p>
+
+<p>```yaml</p>
+<h1 id="ros-namespace-for-the-drone-all-topics-and-tf-frames-will-be-prefixed-with-this-namespace">ROS namespace for the drone. All topics and tf frames will be prefixed with this namespace.</h1>
+<p>namespace: /simple_drone</p>
+
+<h1 id="proportional-gain-for-roll-and-pitch-pid-controllers-controls-the-drones-response-to-roll-and-pitch-errors">Proportional gain for roll and pitch PID controllers. Controls the drone’s response to roll and pitch errors.</h1>
+<p>rollpitchProportionalGain: 10.0</p>
+<h1 id="differential-gain-for-roll-and-pitch-pid-controllers-helps-to-reduce-overshoot-and-improve-stability">Differential gain for roll and pitch PID controllers. Helps to reduce overshoot and improve stability.</h1>
+<p>rollpitchDifferentialGain: 5.0</p>
+<h1 id="maximum-absolute-value-for-roll-and-pitch-control-outputs-limiting-maximum-tilt-angle">Maximum absolute value for roll and pitch control outputs, limiting maximum tilt angle.</h1>
+<p>rollpitchLimit: 0.5</p>
+
+<h1 id="proportional-gain-for-yaw-pid-controller-determines-how-strongly-the-drone-responds-to-yaw-position-errors">Proportional gain for yaw PID controller. Determines how strongly the drone responds to yaw position errors.</h1>
+<p>yawProportionalGain: 2.0</p>
+<h1 id="differential-gain-for-yaw-pid-controller-dampens-the-rate-of-change-of-yaw-error-for-smoother-rotation">Differential gain for yaw PID controller. Dampens the rate of change of yaw error for smoother rotation.</h1>
+<p>yawDifferentialGain: 1.0</p>
+<h1 id="maximum-absolute-value-for-yaw-control-output-limiting-rotational-rate">Maximum absolute value for yaw control output, limiting rotational rate.</h1>
+<p>yawLimit: 1.5</p>
+
+<h1 id="proportional-gain-for-horizontal-velocity-pid-controllers-controls-response-to-changes-in-horizontal-velocity">Proportional gain for horizontal velocity PID controllers. Controls response to changes in horizontal velocity.</h1>
+<p>velocityXYProportionalGain: 5.0</p>
+<h1 id="differential-gain-for-horizontal-velocity-pid-controllers-controls-accelerationdeceleration-in-horizontal-plane">Differential gain for horizontal velocity PID controllers. Controls acceleration/deceleration in horizontal plane.</h1>
+<p>velocityXYDifferentialGain: 2.3</p>
+<h1 id="maximum-limit-for-horizontal-velocity-control-output-restricting-maximum-horizontal-speed">Maximum limit for horizontal velocity control output, restricting maximum horizontal speed.</h1>
+<p>velocityXYLimit: 2</p>
+
+<h1 id="proportional-gain-for-vertical-velocity-pid-controller-influences-response-to-altitude-changes">Proportional gain for vertical velocity PID controller. Influences response to altitude changes.</h1>
+<p>velocityZProportionalGain: 5.0</p>
+<h1 id="integral-gain-for-vertical-velocity-pid-controller-set-to-zero-indicating-no-error-integration-over-time">Integral gain for vertical velocity PID controller. Set to zero, indicating no error integration over time.</h1>
+<p>velocityZIntegralGain: 0.0</p>
+<h1 id="differential-gain-for-vertical-velocity-pid-controller-helps-control-vertical-acceleration-and-deceleration">Differential gain for vertical velocity PID controller. Helps control vertical acceleration and deceleration.</h1>
+<p>velocityZDifferentialGain: 1.0</p>
+<h1 id="maximum-limit-for-vertical-velocity-control-output-negative-value-may-indicate-special-control-scenario-or-error">Maximum limit for vertical velocity control output. Negative value may indicate special control scenario or error.</h1>
+<p>velocityZLimit: -1</p>
+
+<h1 id="proportional-gain-for-horizontal-position-pid-controllers-controls-response-to-horizontal-displacement-errors">Proportional gain for horizontal position PID controllers. Controls response to horizontal displacement errors.</h1>
+<p>positionXYProportionalGain: 1.1</p>
+<h1 id="differential-gain-for-horizontal-position-pid-controllers-set-to-zero-meaning-no-rate-of-change-consideration">Differential gain for horizontal position PID controllers. Set to zero, meaning no rate of change consideration.</h1>
+<p>positionXYDifferentialGain: 0.0</p>
+<h1 id="integral-gain-for-horizontal-position-pid-controllers-set-to-zero-indicating-no-cumulative-error-correction">Integral gain for horizontal position PID controllers. Set to zero, indicating no cumulative error correction.</h1>
+<p>positionXYIntegralGain: 0.0</p>
+<h1 id="maximum-limit-for-horizontal-position-control-output-restricting-maximum-correctional-force-for-horizontal-errors">Maximum limit for horizontal position control output, restricting maximum correctional force for horizontal errors.</h1>
+<p>positionXYLimit: 5</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/novog93/sjtu_drone/tree/ros2/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>noetic</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/sjtu_drone/">sjtu_drone</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_bringup/">sjtu_drone_bringup</a>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_control/">sjtu_drone_control</a>
+        
+        <a class="label label-primary pkg-label" href="/p/sjtu_drone_description/">sjtu_drone_description</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/novog93/sjtu_drone.git">https://github.com/novog93/sjtu_drone.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">ros2</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2025-02-07
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/sjtu_drone/#noetic-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/sjtu_drone/#noetic-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/sjtu_drone/#noetic-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_bringup/">sjtu_drone_bringup</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_control/">sjtu_drone_control</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/sjtu_drone_description/">sjtu_drone_description</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="sjtu_drone">sjtu_drone</h1>
+
+<p><a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_iron_build.json" alt="Iron"></a> <a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_humble_build.json" alt="Humble"></a> <a href="https://github.com/NovoG93/sjtu_drone/actions/workflows/CI_CD.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/NovoG93/589e4b4dc8d92861e4b92defff6d56c0/raw/_rolling_build.json" alt="Rolling"></a></p>
+
+<p>sjtu_drone is a quadrotor simulation program forked from <a href="http://wiki.ros.org/tum_simulator">tum_simulator</a>, developed using ROS + Gazebo.</p>
+
+<p>The acronym ‘sjtu’ stands for Shanghai Jiao Tong University. This package has been used in the past for testing algorithms for the <a href="http://mediasoc.sjtu.edu.cn/wordpress">UAV contest at SJTU</a></p>
+
+<h1 id="requirements">Requirements</h1>
+
+<p>This package is tested with ROS 2 (Ubuntu 22.04) and Gazebo 11.</p>
+
+<h1 id="downloading-and-building">Downloading and building</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/git &amp;&amp; git clone git@github.com:NovoG93/sjtu_drone.git -b ros2
+cd ~/ros2_ws/src &amp;&amp; ln -s ~/git/sjtu_drone
+cd .. &amp;&amp; rosdep install -r -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO &amp;&amp; colcon build --packages-select-regex sjtu*
+
+</code></pre></div></div>
+
+<p>To use the playground.world file (as depicted below) make sure to install the common gazebo models, for more see the <a href="https://github.com/novog93/sjtu_drone/tree/ros2/./sjtu_drone_description/README.md">Readme in sjtu_drone_description</a>.</p>
+
+<h2 id="drone-topics">Drone Topics</h2>
+
+<h3 id="sensors">Sensors</h3>
+<p>The folowing sensors are currently implemented:</p>
+<ul>
+  <li>~/front/image_raw [<strong>sensor_msgs/msg/Image</strong>]</li>
+  <li>~/bottom/image_raw [<strong>sensor_msgs/msg/Image</strong>]</li>
+  <li>~/sonar/out [<strong>sensor_msgs/msg/Range</strong>]</li>
+  <li>~/imu/out [<strong>sensor_msgs/msg/Imu</strong>]</li>
+  <li>~/gps/nav [<strong>sensor_msgs/msg/NavSatFix</strong>]</li>
+  <li>~/gps/vel [<strong>geometry_msgs/msg/TwistStamped</strong>]</li>
+  <li>~/joint_states [<strong>sensor_msgs/msg/JointState</strong>]</li>
+</ul>
+
+<h3 id="control">Control</h3>
+<p>The following control topics are currently subscribed to:</p>
+<ul>
+  <li>~/cmd_vel [<strong>geometry_msgs/msg/Twist</strong>]: Steers the drone</li>
+  <li>~/land [<strong>std_msgs/msg/Empty</strong>]: Lands the drone</li>
+  <li>~/takeoff [<strong>std_msgs/msg/Empty</strong>]: Starts the drone</li>
+  <li>~/posctrl [<strong>std_msgs/msg/Bool</strong>]: Toggling between position control (give drone a pose via cmd_vel) and normal control (only use cmd_vel)</li>
+  <li>~/dronevel_mode [<strong>std_msgs/msg/Bool</strong>]: Toggeling between velocity and tilt control in normal control mode.</li>
+  <li>~/cmd_mode [<strong>std_msgs/msg/Bool</strong>]: Publishes the current control mode (position or normal control)</li>
+  <li>~/state [<strong>std_msgs/msg/Int8</strong>]: Publishes the current state of the drone (0: landed, 1: flying, 2: hovering)</li>
+  <li>~/reset [<strong>std_msgs/msg/Empty</strong>]: Resets the drone</li>
+</ul>
+
+<h3 id="ground-truth">Ground Truth</h3>
+<p>The following ground truth topics are currently published:</p>
+<ul>
+  <li>~/gt_acc [<strong>geometry_msgs/msg/Twist</strong>]: ground truth acceleration</li>
+  <li>~/gt_pose [<strong>geometry_msgs/msg/Pose</strong>]: ground truth pose</li>
+  <li>~/gt_vel [<strong>geometry_msgs/msg/Twist</strong>]: ground truth velocity</li>
+</ul>
+
+<h2 id="configure-plugin">Configure Plugin</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">plugin_drone</code> plugin is used to control the drone. It can be configured using the following parameters:</p>
+
+<p>```yaml</p>
+<h1 id="ros-namespace-for-the-drone-all-topics-and-tf-frames-will-be-prefixed-with-this-namespace">ROS namespace for the drone. All topics and tf frames will be prefixed with this namespace.</h1>
+<p>namespace: /simple_drone</p>
+
+<h1 id="proportional-gain-for-roll-and-pitch-pid-controllers-controls-the-drones-response-to-roll-and-pitch-errors">Proportional gain for roll and pitch PID controllers. Controls the drone’s response to roll and pitch errors.</h1>
+<p>rollpitchProportionalGain: 10.0</p>
+<h1 id="differential-gain-for-roll-and-pitch-pid-controllers-helps-to-reduce-overshoot-and-improve-stability">Differential gain for roll and pitch PID controllers. Helps to reduce overshoot and improve stability.</h1>
+<p>rollpitchDifferentialGain: 5.0</p>
+<h1 id="maximum-absolute-value-for-roll-and-pitch-control-outputs-limiting-maximum-tilt-angle">Maximum absolute value for roll and pitch control outputs, limiting maximum tilt angle.</h1>
+<p>rollpitchLimit: 0.5</p>
+
+<h1 id="proportional-gain-for-yaw-pid-controller-determines-how-strongly-the-drone-responds-to-yaw-position-errors">Proportional gain for yaw PID controller. Determines how strongly the drone responds to yaw position errors.</h1>
+<p>yawProportionalGain: 2.0</p>
+<h1 id="differential-gain-for-yaw-pid-controller-dampens-the-rate-of-change-of-yaw-error-for-smoother-rotation">Differential gain for yaw PID controller. Dampens the rate of change of yaw error for smoother rotation.</h1>
+<p>yawDifferentialGain: 1.0</p>
+<h1 id="maximum-absolute-value-for-yaw-control-output-limiting-rotational-rate">Maximum absolute value for yaw control output, limiting rotational rate.</h1>
+<p>yawLimit: 1.5</p>
+
+<h1 id="proportional-gain-for-horizontal-velocity-pid-controllers-controls-response-to-changes-in-horizontal-velocity">Proportional gain for horizontal velocity PID controllers. Controls response to changes in horizontal velocity.</h1>
+<p>velocityXYProportionalGain: 5.0</p>
+<h1 id="differential-gain-for-horizontal-velocity-pid-controllers-controls-accelerationdeceleration-in-horizontal-plane">Differential gain for horizontal velocity PID controllers. Controls acceleration/deceleration in horizontal plane.</h1>
+<p>velocityXYDifferentialGain: 2.3</p>
+<h1 id="maximum-limit-for-horizontal-velocity-control-output-restricting-maximum-horizontal-speed">Maximum limit for horizontal velocity control output, restricting maximum horizontal speed.</h1>
+<p>velocityXYLimit: 2</p>
+
+<h1 id="proportional-gain-for-vertical-velocity-pid-controller-influences-response-to-altitude-changes">Proportional gain for vertical velocity PID controller. Influences response to altitude changes.</h1>
+<p>velocityZProportionalGain: 5.0</p>
+<h1 id="integral-gain-for-vertical-velocity-pid-controller-set-to-zero-indicating-no-error-integration-over-time">Integral gain for vertical velocity PID controller. Set to zero, indicating no error integration over time.</h1>
+<p>velocityZIntegralGain: 0.0</p>
+<h1 id="differential-gain-for-vertical-velocity-pid-controller-helps-control-vertical-acceleration-and-deceleration">Differential gain for vertical velocity PID controller. Helps control vertical acceleration and deceleration.</h1>
+<p>velocityZDifferentialGain: 1.0</p>
+<h1 id="maximum-limit-for-vertical-velocity-control-output-negative-value-may-indicate-special-control-scenario-or-error">Maximum limit for vertical velocity control output. Negative value may indicate special control scenario or error.</h1>
+<p>velocityZLimit: -1</p>
+
+<h1 id="proportional-gain-for-horizontal-position-pid-controllers-controls-response-to-horizontal-displacement-errors">Proportional gain for horizontal position PID controllers. Controls response to horizontal displacement errors.</h1>
+<p>positionXYProportionalGain: 1.1</p>
+<h1 id="differential-gain-for-horizontal-position-pid-controllers-set-to-zero-meaning-no-rate-of-change-consideration">Differential gain for horizontal position PID controllers. Set to zero, meaning no rate of change consideration.</h1>
+<p>positionXYDifferentialGain: 0.0</p>
+<h1 id="integral-gain-for-horizontal-position-pid-controllers-set-to-zero-indicating-no-cumulative-error-correction">Integral gain for horizontal position PID controllers. Set to zero, indicating no cumulative error correction.</h1>
+<p>positionXYIntegralGain: 0.0</p>
+<h1 id="maximum-limit-for-horizontal-position-control-output-restricting-maximum-correctional-force-for-horizontal-errors">Maximum limit for horizontal position control output, restricting maximum correctional force for horizontal errors.</h1>
+<p>positionXYLimit: 5</p>
+
+<p>File truncated at 100 lines <a href="https://github.com/novog93/sjtu_drone/tree/ros2/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+
+<script type="text/javascript" src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+  $(function() {
+    setupContributeListTabLinks();
+  });
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+    setupContributeLists("https://github.com/novog93/sjtu_drone.git");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2026-04-30</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
