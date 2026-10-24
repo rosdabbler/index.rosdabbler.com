@@ -1,0 +1,3542 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>mrpt_path_planning - ROS Repository Overview</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+    <meta name="robots" content="noindex">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/r/mrpt_path_planning/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body >
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="https://docs.ros.org/en/rolling/Contact.html#support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="https://docs.ros.org/en/rolling/Contact.html#support"">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content" >
+      <div class="wrapper" >
+        <div class="container-fluid" style="margin-top:20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_repos=true">Repos</a></li>
+        <li class="active"></li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-primary" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-primary" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-primary" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="lyrical-option" class="distro-button btn btn-xs btn-primary" href="#lyrical" data="lyrical">
+      <input type="radio" name="options" id="lyrical-radio" autocomplete="off"> lyrical
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-primary" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-default" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-primary" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class=" older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+        <li data="noetic" id="noetic-option" class=" older-distro-option"  href="#noetic">
+          <a href="#noetic" data="noetic" id="noetic-button">noetic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+        
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/mrpt_path_planning/">mrpt_path_planning</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning/">mrpt_path_planning</a>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning_apps/">mrpt_path_planning_apps</a>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning_core/">mrpt_path_planning_core</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>humble</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/MRPT/mrpt_path_planning.git">https://github.com/MRPT/mrpt_path_planning.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">develop</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-10-23
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-success">
+          
+          DEVELOPED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#humble-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#humble-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#humble-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning/">mrpt_path_planning</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning_apps/">mrpt_path_planning_apps</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning_core/">mrpt_path_planning_core</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="mrpt_path_planning">mrpt_path_planning</h1>
+
+<p><a href="https://github.com/MRPT/mrpt_path_planning/actions/workflows/build-linux.yml"><img src="https://github.com/MRPT/mrpt_path_planning/actions/workflows/build-linux.yml/badge.svg" alt="CI Linux"></a>
+<a href="https://github.com/MRPT/mrpt_path_planning/tree/develop/LICENSE"><img src="https://img.shields.io/badge/License-BSD_3--Clause-blue.svg" alt="License: BSD-3"></a>
+<a href="https://index.ros.org/?pkgs=mrpt_path_planning&amp;search_packages=true#jazzy"><img src="https://img.shields.io/ros/v/jazzy/mrpt_path_planning" alt="ROS 2 Jazzy"></a></p>
+
+<p><strong>Kinematically-feasible path planning for robots and vehicles on planar
+environments</strong>, for arbitrary robot shapes and realistic kinematics
+(differential-drive, Ackermann, holonomic). Built on
+<a href="https://github.com/MRPT/mrpt/">MRPT</a> <code class="language-plaintext highlighter-rouge">mrpt_nav</code> and the theory of
+<em>Parameterized Trajectory Generators</em> (PTGs), which act as libraries of motion
+primitives.</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/MRPT/mrpt_path_planning/develop/docs/images/demo-holonomic.svg" width="49%" alt="Holonomic robot following a planned path">
+  <img src="https://raw.githubusercontent.com/MRPT/mrpt_path_planning/develop/docs/images/demo-ackermann.svg" width="49%" alt="Ackermann vehicle following a planned path">
+  <br>
+  <em>Planned paths for a holonomic robot (left) and an Ackermann vehicle (right).</em>
+</p>
+
+<!-- Images generated from mrpt_path_planning_apps/share/ with:
+path-planner-cli -s "[0.5 0 0]" -g "[4.2 0.5 80]" \
+  -c ptgs_ackermann_vehicle.ini --obstacles obstacles_01.txt \
+  --planner-parameters mvsim-demo-astar-planner-params-ackermann.yaml \
+  --save-svg demo-ackermann.svg --svg-animate --svg-no-tree --svg-no-bbox \
+  --svg-no-status --svg-width 440 --no-gui
+(and the same with ptgs_holonomic_robot.ini and
+mvsim-demo-astar-planner-params.yaml for demo-holonomic.svg) -->
+
+<h2 id="features">Features</h2>
+
+<ul>
+  <li>
+<strong>Kinematically feasible by construction</strong>: every path is a sequence of PTG
+trajectories the vehicle can actually execute, respecting its turning and
+speed limits. Several PTG families can be mixed in one search, and
+speed-trimmable PTGs make the search velocity-aware.</li>
+  <li>
+<strong>Any-shape vehicles</strong>: circular or arbitrary polygonal footprints, including
+concave ones. The footprint is baked once into per-PTG collision grids, so
+the per-node collision cost does not grow with the footprint complexity: one
+pass over the local obstacles gives the free distance along every candidate
+trajectory.</li>
+  <li>
+<strong>No costmap inflation</strong>: the actual footprint is checked against the raw
+obstacle points, with no inflation radius to tune.</li>
+  <li>
+<strong>Deterministic SE(2) lattice A*</strong> (<code class="language-plaintext highlighter-rouge">mpp::TPS_Astar</code>) and a
+<strong>bidirectional</strong> variant (<code class="language-plaintext highlighter-rouge">mpp::TPS_Astar_Bidir</code>). They optimize SE(2) cost
+(position + heading), not just Euclidean length, with optional
+bounded-suboptimal weighted A* for faster queries.</li>
+  <li>
+<strong>Pose or position goals</strong>: SE(2) goals <code class="language-plaintext highlighter-rouge">[x y phi]</code> or heading-agnostic R(2)
+goals <code class="language-plaintext highlighter-rouge">[x y]</code>.</li>
+  <li>
+<strong>Forward and reverse maneuvers</strong>, with an optional <strong>Reeds-Shepp</strong> heuristic
+and analytic goal expansion for tight maneuvers such as parking.</li>
+  <li>
+<strong>Rotations in place</strong> for differential-drive robots (<code class="language-plaintext highlighter-rouge">DiffDrive_Spin</code> PTG),
+e.g. to turn around in corridors too narrow for arcs.</li>
+  <li>
+<strong>Certified collision checking</strong>: the collision grids are conservative, so a
+path reported as free is free for the continuous swept motion.</li>
+  <li>
+<strong>Pluggable cost layers</strong>: obstacle-proximity cost maps,
+preferred-waypoint attractors, and a penalty for driving in reverse.</li>
+  <li>
+<strong>Navigation building blocks</strong>: <code class="language-plaintext highlighter-rouge">TrajectoryFollower</code> (pure pursuit with predictive
+safety, valid at any speed, rotating in place where the path does), and <code class="language-plaintext highlighter-rouge">CollisionGuard</code> (last-resort velocity
+filter ensuring the robot can always stop before sensed obstacles).</li>
+  <li>
+<strong>Headless core</strong>: the algorithms library has no GUI dependency.</li>
+</ul>
+
+<h2 id="quick-start">Quick start</h2>
+
+<p>Install the binary packages (ROS 2 Humble or newer):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>ros-<span class="nv">$ROS_DISTRO</span><span class="nt">-mrpt-path-planning</span>
+
+</code></pre></div></div>
+
+<p>Plan a path around some obstacles for a holonomic robot, using the example
+configuration files installed with the apps package:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> <span class="si">$(</span>ros2 pkg prefix mrpt_path_planning_apps<span class="si">)</span>/share/mrpt_path_planning_apps
+
+path-planner-cli <span class="se">\</span>
+  <span class="nt">-s</span> <span class="s2">"[0.5 0 0]"</span> <span class="nt">-g</span> <span class="s2">"[4.2 0.5 80]"</span> <span class="se">\</span>
+  <span class="nt">-c</span> ptgs_holonomic_robot.ini <span class="se">\</span>
+  <span class="nt">--obstacles</span> obstacles_01.txt <span class="se">\</span>
+  <span class="nt">--planner-parameters</span> mvsim-demo-astar-planner-params.yaml <span class="se">\</span>
+  <span class="nt">--play-animation</span>
+
+</code></pre></div></div>
+
+<h2 id="packages">Packages</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Package</th>
+      <th>Contents</th>
+      <th>Depend on it when…</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning_core</code></td>
+      <td>C++ library (namespace <code class="language-plaintext highlighter-rouge">mpp</code>): PTGs, planners, cost evaluators, <code class="language-plaintext highlighter-rouge">TrajectoryFollower</code>. Depends only on <code class="language-plaintext highlighter-rouge">mrpt_nav</code>, <code class="language-plaintext highlighter-rouge">mrpt_maps</code>, <code class="language-plaintext highlighter-rouge">mrpt_graphs</code>, <code class="language-plaintext highlighter-rouge">mrpt_containers</code>.</td>
+      <td>You only need the algorithms (most users).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning_apps</code></td>
+      <td>
+<code class="language-plaintext highlighter-rouge">path-planner-cli</code>, <code class="language-plaintext highlighter-rouge">selfdriving-simulator-gui</code>, example config files. Adds <code class="language-plaintext highlighter-rouge">mrpt_gui</code>, <code class="language-plaintext highlighter-rouge">cli11</code>, <code class="language-plaintext highlighter-rouge">mvsim</code>.</td>
+      <td>You want the command-line and GUI tools.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning</code></td>
+      <td>Metapackage depending on the two above.</td>
+      <td>Backward compatibility with existing consumers.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ROS 2 integration (planner and trajectory follower nodes) lives in
+<a href="https://github.com/mrpt-ros-pkg/mrpt_navigation">mrpt_navigation</a>.</p>
+
+<h2 id="using-the-library">Using the library</h2>
+
+<p>In <code class="language-plaintext highlighter-rouge">package.xml</code>:</p>
+
+<p>```xml</p>
+<depend>mrpt_path_planning_core</depend>
+
+<p>File truncated at 100 lines <a href="https://github.com/MRPT/mrpt_path_planning/tree/develop/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="humble-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="humble-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#humble-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="humble-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+        
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/mrpt_path_planning/">mrpt_path_planning</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning/">mrpt_path_planning</a>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning_apps/">mrpt_path_planning_apps</a>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning_core/">mrpt_path_planning_core</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>jazzy</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/MRPT/mrpt_path_planning.git">https://github.com/MRPT/mrpt_path_planning.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">develop</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-10-23
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-success">
+          
+          DEVELOPED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#jazzy-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#jazzy-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#jazzy-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning/">mrpt_path_planning</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning_apps/">mrpt_path_planning_apps</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning_core/">mrpt_path_planning_core</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="mrpt_path_planning">mrpt_path_planning</h1>
+
+<p><a href="https://github.com/MRPT/mrpt_path_planning/actions/workflows/build-linux.yml"><img src="https://github.com/MRPT/mrpt_path_planning/actions/workflows/build-linux.yml/badge.svg" alt="CI Linux"></a>
+<a href="https://github.com/MRPT/mrpt_path_planning/tree/develop/LICENSE"><img src="https://img.shields.io/badge/License-BSD_3--Clause-blue.svg" alt="License: BSD-3"></a>
+<a href="https://index.ros.org/?pkgs=mrpt_path_planning&amp;search_packages=true#jazzy"><img src="https://img.shields.io/ros/v/jazzy/mrpt_path_planning" alt="ROS 2 Jazzy"></a></p>
+
+<p><strong>Kinematically-feasible path planning for robots and vehicles on planar
+environments</strong>, for arbitrary robot shapes and realistic kinematics
+(differential-drive, Ackermann, holonomic). Built on
+<a href="https://github.com/MRPT/mrpt/">MRPT</a> <code class="language-plaintext highlighter-rouge">mrpt_nav</code> and the theory of
+<em>Parameterized Trajectory Generators</em> (PTGs), which act as libraries of motion
+primitives.</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/MRPT/mrpt_path_planning/develop/docs/images/demo-holonomic.svg" width="49%" alt="Holonomic robot following a planned path">
+  <img src="https://raw.githubusercontent.com/MRPT/mrpt_path_planning/develop/docs/images/demo-ackermann.svg" width="49%" alt="Ackermann vehicle following a planned path">
+  <br>
+  <em>Planned paths for a holonomic robot (left) and an Ackermann vehicle (right).</em>
+</p>
+
+<!-- Images generated from mrpt_path_planning_apps/share/ with:
+path-planner-cli -s "[0.5 0 0]" -g "[4.2 0.5 80]" \
+  -c ptgs_ackermann_vehicle.ini --obstacles obstacles_01.txt \
+  --planner-parameters mvsim-demo-astar-planner-params-ackermann.yaml \
+  --save-svg demo-ackermann.svg --svg-animate --svg-no-tree --svg-no-bbox \
+  --svg-no-status --svg-width 440 --no-gui
+(and the same with ptgs_holonomic_robot.ini and
+mvsim-demo-astar-planner-params.yaml for demo-holonomic.svg) -->
+
+<h2 id="features">Features</h2>
+
+<ul>
+  <li>
+<strong>Kinematically feasible by construction</strong>: every path is a sequence of PTG
+trajectories the vehicle can actually execute, respecting its turning and
+speed limits. Several PTG families can be mixed in one search, and
+speed-trimmable PTGs make the search velocity-aware.</li>
+  <li>
+<strong>Any-shape vehicles</strong>: circular or arbitrary polygonal footprints, including
+concave ones. The footprint is baked once into per-PTG collision grids, so
+the per-node collision cost does not grow with the footprint complexity: one
+pass over the local obstacles gives the free distance along every candidate
+trajectory.</li>
+  <li>
+<strong>No costmap inflation</strong>: the actual footprint is checked against the raw
+obstacle points, with no inflation radius to tune.</li>
+  <li>
+<strong>Deterministic SE(2) lattice A*</strong> (<code class="language-plaintext highlighter-rouge">mpp::TPS_Astar</code>) and a
+<strong>bidirectional</strong> variant (<code class="language-plaintext highlighter-rouge">mpp::TPS_Astar_Bidir</code>). They optimize SE(2) cost
+(position + heading), not just Euclidean length, with optional
+bounded-suboptimal weighted A* for faster queries.</li>
+  <li>
+<strong>Pose or position goals</strong>: SE(2) goals <code class="language-plaintext highlighter-rouge">[x y phi]</code> or heading-agnostic R(2)
+goals <code class="language-plaintext highlighter-rouge">[x y]</code>.</li>
+  <li>
+<strong>Forward and reverse maneuvers</strong>, with an optional <strong>Reeds-Shepp</strong> heuristic
+and analytic goal expansion for tight maneuvers such as parking.</li>
+  <li>
+<strong>Rotations in place</strong> for differential-drive robots (<code class="language-plaintext highlighter-rouge">DiffDrive_Spin</code> PTG),
+e.g. to turn around in corridors too narrow for arcs.</li>
+  <li>
+<strong>Certified collision checking</strong>: the collision grids are conservative, so a
+path reported as free is free for the continuous swept motion.</li>
+  <li>
+<strong>Pluggable cost layers</strong>: obstacle-proximity cost maps,
+preferred-waypoint attractors, and a penalty for driving in reverse.</li>
+  <li>
+<strong>Navigation building blocks</strong>: <code class="language-plaintext highlighter-rouge">TrajectoryFollower</code> (pure pursuit with predictive
+safety, valid at any speed, rotating in place where the path does), and <code class="language-plaintext highlighter-rouge">CollisionGuard</code> (last-resort velocity
+filter ensuring the robot can always stop before sensed obstacles).</li>
+  <li>
+<strong>Headless core</strong>: the algorithms library has no GUI dependency.</li>
+</ul>
+
+<h2 id="quick-start">Quick start</h2>
+
+<p>Install the binary packages (ROS 2 Humble or newer):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>ros-<span class="nv">$ROS_DISTRO</span><span class="nt">-mrpt-path-planning</span>
+
+</code></pre></div></div>
+
+<p>Plan a path around some obstacles for a holonomic robot, using the example
+configuration files installed with the apps package:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> <span class="si">$(</span>ros2 pkg prefix mrpt_path_planning_apps<span class="si">)</span>/share/mrpt_path_planning_apps
+
+path-planner-cli <span class="se">\</span>
+  <span class="nt">-s</span> <span class="s2">"[0.5 0 0]"</span> <span class="nt">-g</span> <span class="s2">"[4.2 0.5 80]"</span> <span class="se">\</span>
+  <span class="nt">-c</span> ptgs_holonomic_robot.ini <span class="se">\</span>
+  <span class="nt">--obstacles</span> obstacles_01.txt <span class="se">\</span>
+  <span class="nt">--planner-parameters</span> mvsim-demo-astar-planner-params.yaml <span class="se">\</span>
+  <span class="nt">--play-animation</span>
+
+</code></pre></div></div>
+
+<h2 id="packages">Packages</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Package</th>
+      <th>Contents</th>
+      <th>Depend on it when…</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning_core</code></td>
+      <td>C++ library (namespace <code class="language-plaintext highlighter-rouge">mpp</code>): PTGs, planners, cost evaluators, <code class="language-plaintext highlighter-rouge">TrajectoryFollower</code>. Depends only on <code class="language-plaintext highlighter-rouge">mrpt_nav</code>, <code class="language-plaintext highlighter-rouge">mrpt_maps</code>, <code class="language-plaintext highlighter-rouge">mrpt_graphs</code>, <code class="language-plaintext highlighter-rouge">mrpt_containers</code>.</td>
+      <td>You only need the algorithms (most users).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning_apps</code></td>
+      <td>
+<code class="language-plaintext highlighter-rouge">path-planner-cli</code>, <code class="language-plaintext highlighter-rouge">selfdriving-simulator-gui</code>, example config files. Adds <code class="language-plaintext highlighter-rouge">mrpt_gui</code>, <code class="language-plaintext highlighter-rouge">cli11</code>, <code class="language-plaintext highlighter-rouge">mvsim</code>.</td>
+      <td>You want the command-line and GUI tools.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning</code></td>
+      <td>Metapackage depending on the two above.</td>
+      <td>Backward compatibility with existing consumers.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ROS 2 integration (planner and trajectory follower nodes) lives in
+<a href="https://github.com/mrpt-ros-pkg/mrpt_navigation">mrpt_navigation</a>.</p>
+
+<h2 id="using-the-library">Using the library</h2>
+
+<p>In <code class="language-plaintext highlighter-rouge">package.xml</code>:</p>
+
+<p>```xml</p>
+<depend>mrpt_path_planning_core</depend>
+
+<p>File truncated at 100 lines <a href="https://github.com/MRPT/mrpt_path_planning/tree/develop/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="jazzy-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="jazzy-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#jazzy-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#jazzy-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#jazzy-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="jazzy-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="jazzy-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="jazzy-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+        
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/mrpt_path_planning/">mrpt_path_planning</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning/">mrpt_path_planning</a>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning_apps/">mrpt_path_planning_apps</a>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning_core/">mrpt_path_planning_core</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>kilted</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/MRPT/mrpt_path_planning.git">https://github.com/MRPT/mrpt_path_planning.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">develop</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-10-23
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-success">
+          
+          DEVELOPED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#kilted-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#kilted-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#kilted-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning/">mrpt_path_planning</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning_apps/">mrpt_path_planning_apps</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning_core/">mrpt_path_planning_core</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="mrpt_path_planning">mrpt_path_planning</h1>
+
+<p><a href="https://github.com/MRPT/mrpt_path_planning/actions/workflows/build-linux.yml"><img src="https://github.com/MRPT/mrpt_path_planning/actions/workflows/build-linux.yml/badge.svg" alt="CI Linux"></a>
+<a href="https://github.com/MRPT/mrpt_path_planning/tree/develop/LICENSE"><img src="https://img.shields.io/badge/License-BSD_3--Clause-blue.svg" alt="License: BSD-3"></a>
+<a href="https://index.ros.org/?pkgs=mrpt_path_planning&amp;search_packages=true#jazzy"><img src="https://img.shields.io/ros/v/jazzy/mrpt_path_planning" alt="ROS 2 Jazzy"></a></p>
+
+<p><strong>Kinematically-feasible path planning for robots and vehicles on planar
+environments</strong>, for arbitrary robot shapes and realistic kinematics
+(differential-drive, Ackermann, holonomic). Built on
+<a href="https://github.com/MRPT/mrpt/">MRPT</a> <code class="language-plaintext highlighter-rouge">mrpt_nav</code> and the theory of
+<em>Parameterized Trajectory Generators</em> (PTGs), which act as libraries of motion
+primitives.</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/MRPT/mrpt_path_planning/develop/docs/images/demo-holonomic.svg" width="49%" alt="Holonomic robot following a planned path">
+  <img src="https://raw.githubusercontent.com/MRPT/mrpt_path_planning/develop/docs/images/demo-ackermann.svg" width="49%" alt="Ackermann vehicle following a planned path">
+  <br>
+  <em>Planned paths for a holonomic robot (left) and an Ackermann vehicle (right).</em>
+</p>
+
+<!-- Images generated from mrpt_path_planning_apps/share/ with:
+path-planner-cli -s "[0.5 0 0]" -g "[4.2 0.5 80]" \
+  -c ptgs_ackermann_vehicle.ini --obstacles obstacles_01.txt \
+  --planner-parameters mvsim-demo-astar-planner-params-ackermann.yaml \
+  --save-svg demo-ackermann.svg --svg-animate --svg-no-tree --svg-no-bbox \
+  --svg-no-status --svg-width 440 --no-gui
+(and the same with ptgs_holonomic_robot.ini and
+mvsim-demo-astar-planner-params.yaml for demo-holonomic.svg) -->
+
+<h2 id="features">Features</h2>
+
+<ul>
+  <li>
+<strong>Kinematically feasible by construction</strong>: every path is a sequence of PTG
+trajectories the vehicle can actually execute, respecting its turning and
+speed limits. Several PTG families can be mixed in one search, and
+speed-trimmable PTGs make the search velocity-aware.</li>
+  <li>
+<strong>Any-shape vehicles</strong>: circular or arbitrary polygonal footprints, including
+concave ones. The footprint is baked once into per-PTG collision grids, so
+the per-node collision cost does not grow with the footprint complexity: one
+pass over the local obstacles gives the free distance along every candidate
+trajectory.</li>
+  <li>
+<strong>No costmap inflation</strong>: the actual footprint is checked against the raw
+obstacle points, with no inflation radius to tune.</li>
+  <li>
+<strong>Deterministic SE(2) lattice A*</strong> (<code class="language-plaintext highlighter-rouge">mpp::TPS_Astar</code>) and a
+<strong>bidirectional</strong> variant (<code class="language-plaintext highlighter-rouge">mpp::TPS_Astar_Bidir</code>). They optimize SE(2) cost
+(position + heading), not just Euclidean length, with optional
+bounded-suboptimal weighted A* for faster queries.</li>
+  <li>
+<strong>Pose or position goals</strong>: SE(2) goals <code class="language-plaintext highlighter-rouge">[x y phi]</code> or heading-agnostic R(2)
+goals <code class="language-plaintext highlighter-rouge">[x y]</code>.</li>
+  <li>
+<strong>Forward and reverse maneuvers</strong>, with an optional <strong>Reeds-Shepp</strong> heuristic
+and analytic goal expansion for tight maneuvers such as parking.</li>
+  <li>
+<strong>Rotations in place</strong> for differential-drive robots (<code class="language-plaintext highlighter-rouge">DiffDrive_Spin</code> PTG),
+e.g. to turn around in corridors too narrow for arcs.</li>
+  <li>
+<strong>Certified collision checking</strong>: the collision grids are conservative, so a
+path reported as free is free for the continuous swept motion.</li>
+  <li>
+<strong>Pluggable cost layers</strong>: obstacle-proximity cost maps,
+preferred-waypoint attractors, and a penalty for driving in reverse.</li>
+  <li>
+<strong>Navigation building blocks</strong>: <code class="language-plaintext highlighter-rouge">TrajectoryFollower</code> (pure pursuit with predictive
+safety, valid at any speed, rotating in place where the path does), and <code class="language-plaintext highlighter-rouge">CollisionGuard</code> (last-resort velocity
+filter ensuring the robot can always stop before sensed obstacles).</li>
+  <li>
+<strong>Headless core</strong>: the algorithms library has no GUI dependency.</li>
+</ul>
+
+<h2 id="quick-start">Quick start</h2>
+
+<p>Install the binary packages (ROS 2 Humble or newer):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>ros-<span class="nv">$ROS_DISTRO</span><span class="nt">-mrpt-path-planning</span>
+
+</code></pre></div></div>
+
+<p>Plan a path around some obstacles for a holonomic robot, using the example
+configuration files installed with the apps package:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> <span class="si">$(</span>ros2 pkg prefix mrpt_path_planning_apps<span class="si">)</span>/share/mrpt_path_planning_apps
+
+path-planner-cli <span class="se">\</span>
+  <span class="nt">-s</span> <span class="s2">"[0.5 0 0]"</span> <span class="nt">-g</span> <span class="s2">"[4.2 0.5 80]"</span> <span class="se">\</span>
+  <span class="nt">-c</span> ptgs_holonomic_robot.ini <span class="se">\</span>
+  <span class="nt">--obstacles</span> obstacles_01.txt <span class="se">\</span>
+  <span class="nt">--planner-parameters</span> mvsim-demo-astar-planner-params.yaml <span class="se">\</span>
+  <span class="nt">--play-animation</span>
+
+</code></pre></div></div>
+
+<h2 id="packages">Packages</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Package</th>
+      <th>Contents</th>
+      <th>Depend on it when…</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning_core</code></td>
+      <td>C++ library (namespace <code class="language-plaintext highlighter-rouge">mpp</code>): PTGs, planners, cost evaluators, <code class="language-plaintext highlighter-rouge">TrajectoryFollower</code>. Depends only on <code class="language-plaintext highlighter-rouge">mrpt_nav</code>, <code class="language-plaintext highlighter-rouge">mrpt_maps</code>, <code class="language-plaintext highlighter-rouge">mrpt_graphs</code>, <code class="language-plaintext highlighter-rouge">mrpt_containers</code>.</td>
+      <td>You only need the algorithms (most users).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning_apps</code></td>
+      <td>
+<code class="language-plaintext highlighter-rouge">path-planner-cli</code>, <code class="language-plaintext highlighter-rouge">selfdriving-simulator-gui</code>, example config files. Adds <code class="language-plaintext highlighter-rouge">mrpt_gui</code>, <code class="language-plaintext highlighter-rouge">cli11</code>, <code class="language-plaintext highlighter-rouge">mvsim</code>.</td>
+      <td>You want the command-line and GUI tools.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning</code></td>
+      <td>Metapackage depending on the two above.</td>
+      <td>Backward compatibility with existing consumers.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ROS 2 integration (planner and trajectory follower nodes) lives in
+<a href="https://github.com/mrpt-ros-pkg/mrpt_navigation">mrpt_navigation</a>.</p>
+
+<h2 id="using-the-library">Using the library</h2>
+
+<p>In <code class="language-plaintext highlighter-rouge">package.xml</code>:</p>
+
+<p>```xml</p>
+<depend>mrpt_path_planning_core</depend>
+
+<p>File truncated at 100 lines <a href="https://github.com/MRPT/mrpt_path_planning/tree/develop/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="kilted-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="kilted-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#kilted-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#kilted-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#kilted-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="kilted-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="kilted-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="kilted-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-lyrical">
+    <div class="container-fluid">
+      
+        
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/mrpt_path_planning/">mrpt_path_planning</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning/">mrpt_path_planning</a>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning_apps/">mrpt_path_planning_apps</a>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning_core/">mrpt_path_planning_core</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>lyrical</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/MRPT/mrpt_path_planning.git">https://github.com/MRPT/mrpt_path_planning.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">develop</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-10-23
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-success">
+          
+          DEVELOPED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#lyrical-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#lyrical-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#lyrical-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning/">mrpt_path_planning</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning_apps/">mrpt_path_planning_apps</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning_core/">mrpt_path_planning_core</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="mrpt_path_planning">mrpt_path_planning</h1>
+
+<p><a href="https://github.com/MRPT/mrpt_path_planning/actions/workflows/build-linux.yml"><img src="https://github.com/MRPT/mrpt_path_planning/actions/workflows/build-linux.yml/badge.svg" alt="CI Linux"></a>
+<a href="https://github.com/MRPT/mrpt_path_planning/tree/develop/LICENSE"><img src="https://img.shields.io/badge/License-BSD_3--Clause-blue.svg" alt="License: BSD-3"></a>
+<a href="https://index.ros.org/?pkgs=mrpt_path_planning&amp;search_packages=true#jazzy"><img src="https://img.shields.io/ros/v/jazzy/mrpt_path_planning" alt="ROS 2 Jazzy"></a></p>
+
+<p><strong>Kinematically-feasible path planning for robots and vehicles on planar
+environments</strong>, for arbitrary robot shapes and realistic kinematics
+(differential-drive, Ackermann, holonomic). Built on
+<a href="https://github.com/MRPT/mrpt/">MRPT</a> <code class="language-plaintext highlighter-rouge">mrpt_nav</code> and the theory of
+<em>Parameterized Trajectory Generators</em> (PTGs), which act as libraries of motion
+primitives.</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/MRPT/mrpt_path_planning/develop/docs/images/demo-holonomic.svg" width="49%" alt="Holonomic robot following a planned path">
+  <img src="https://raw.githubusercontent.com/MRPT/mrpt_path_planning/develop/docs/images/demo-ackermann.svg" width="49%" alt="Ackermann vehicle following a planned path">
+  <br>
+  <em>Planned paths for a holonomic robot (left) and an Ackermann vehicle (right).</em>
+</p>
+
+<!-- Images generated from mrpt_path_planning_apps/share/ with:
+path-planner-cli -s "[0.5 0 0]" -g "[4.2 0.5 80]" \
+  -c ptgs_ackermann_vehicle.ini --obstacles obstacles_01.txt \
+  --planner-parameters mvsim-demo-astar-planner-params-ackermann.yaml \
+  --save-svg demo-ackermann.svg --svg-animate --svg-no-tree --svg-no-bbox \
+  --svg-no-status --svg-width 440 --no-gui
+(and the same with ptgs_holonomic_robot.ini and
+mvsim-demo-astar-planner-params.yaml for demo-holonomic.svg) -->
+
+<h2 id="features">Features</h2>
+
+<ul>
+  <li>
+<strong>Kinematically feasible by construction</strong>: every path is a sequence of PTG
+trajectories the vehicle can actually execute, respecting its turning and
+speed limits. Several PTG families can be mixed in one search, and
+speed-trimmable PTGs make the search velocity-aware.</li>
+  <li>
+<strong>Any-shape vehicles</strong>: circular or arbitrary polygonal footprints, including
+concave ones. The footprint is baked once into per-PTG collision grids, so
+the per-node collision cost does not grow with the footprint complexity: one
+pass over the local obstacles gives the free distance along every candidate
+trajectory.</li>
+  <li>
+<strong>No costmap inflation</strong>: the actual footprint is checked against the raw
+obstacle points, with no inflation radius to tune.</li>
+  <li>
+<strong>Deterministic SE(2) lattice A*</strong> (<code class="language-plaintext highlighter-rouge">mpp::TPS_Astar</code>) and a
+<strong>bidirectional</strong> variant (<code class="language-plaintext highlighter-rouge">mpp::TPS_Astar_Bidir</code>). They optimize SE(2) cost
+(position + heading), not just Euclidean length, with optional
+bounded-suboptimal weighted A* for faster queries.</li>
+  <li>
+<strong>Pose or position goals</strong>: SE(2) goals <code class="language-plaintext highlighter-rouge">[x y phi]</code> or heading-agnostic R(2)
+goals <code class="language-plaintext highlighter-rouge">[x y]</code>.</li>
+  <li>
+<strong>Forward and reverse maneuvers</strong>, with an optional <strong>Reeds-Shepp</strong> heuristic
+and analytic goal expansion for tight maneuvers such as parking.</li>
+  <li>
+<strong>Rotations in place</strong> for differential-drive robots (<code class="language-plaintext highlighter-rouge">DiffDrive_Spin</code> PTG),
+e.g. to turn around in corridors too narrow for arcs.</li>
+  <li>
+<strong>Certified collision checking</strong>: the collision grids are conservative, so a
+path reported as free is free for the continuous swept motion.</li>
+  <li>
+<strong>Pluggable cost layers</strong>: obstacle-proximity cost maps,
+preferred-waypoint attractors, and a penalty for driving in reverse.</li>
+  <li>
+<strong>Navigation building blocks</strong>: <code class="language-plaintext highlighter-rouge">TrajectoryFollower</code> (pure pursuit with predictive
+safety, valid at any speed, rotating in place where the path does), and <code class="language-plaintext highlighter-rouge">CollisionGuard</code> (last-resort velocity
+filter ensuring the robot can always stop before sensed obstacles).</li>
+  <li>
+<strong>Headless core</strong>: the algorithms library has no GUI dependency.</li>
+</ul>
+
+<h2 id="quick-start">Quick start</h2>
+
+<p>Install the binary packages (ROS 2 Humble or newer):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>ros-<span class="nv">$ROS_DISTRO</span><span class="nt">-mrpt-path-planning</span>
+
+</code></pre></div></div>
+
+<p>Plan a path around some obstacles for a holonomic robot, using the example
+configuration files installed with the apps package:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> <span class="si">$(</span>ros2 pkg prefix mrpt_path_planning_apps<span class="si">)</span>/share/mrpt_path_planning_apps
+
+path-planner-cli <span class="se">\</span>
+  <span class="nt">-s</span> <span class="s2">"[0.5 0 0]"</span> <span class="nt">-g</span> <span class="s2">"[4.2 0.5 80]"</span> <span class="se">\</span>
+  <span class="nt">-c</span> ptgs_holonomic_robot.ini <span class="se">\</span>
+  <span class="nt">--obstacles</span> obstacles_01.txt <span class="se">\</span>
+  <span class="nt">--planner-parameters</span> mvsim-demo-astar-planner-params.yaml <span class="se">\</span>
+  <span class="nt">--play-animation</span>
+
+</code></pre></div></div>
+
+<h2 id="packages">Packages</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Package</th>
+      <th>Contents</th>
+      <th>Depend on it when…</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning_core</code></td>
+      <td>C++ library (namespace <code class="language-plaintext highlighter-rouge">mpp</code>): PTGs, planners, cost evaluators, <code class="language-plaintext highlighter-rouge">TrajectoryFollower</code>. Depends only on <code class="language-plaintext highlighter-rouge">mrpt_nav</code>, <code class="language-plaintext highlighter-rouge">mrpt_maps</code>, <code class="language-plaintext highlighter-rouge">mrpt_graphs</code>, <code class="language-plaintext highlighter-rouge">mrpt_containers</code>.</td>
+      <td>You only need the algorithms (most users).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning_apps</code></td>
+      <td>
+<code class="language-plaintext highlighter-rouge">path-planner-cli</code>, <code class="language-plaintext highlighter-rouge">selfdriving-simulator-gui</code>, example config files. Adds <code class="language-plaintext highlighter-rouge">mrpt_gui</code>, <code class="language-plaintext highlighter-rouge">cli11</code>, <code class="language-plaintext highlighter-rouge">mvsim</code>.</td>
+      <td>You want the command-line and GUI tools.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning</code></td>
+      <td>Metapackage depending on the two above.</td>
+      <td>Backward compatibility with existing consumers.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ROS 2 integration (planner and trajectory follower nodes) lives in
+<a href="https://github.com/mrpt-ros-pkg/mrpt_navigation">mrpt_navigation</a>.</p>
+
+<h2 id="using-the-library">Using the library</h2>
+
+<p>In <code class="language-plaintext highlighter-rouge">package.xml</code>:</p>
+
+<p>```xml</p>
+<depend>mrpt_path_planning_core</depend>
+
+<p>File truncated at 100 lines <a href="https://github.com/MRPT/mrpt_path_planning/tree/develop/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="lyrical-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="lyrical-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#lyrical-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#lyrical-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#lyrical-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="lyrical-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="lyrical-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="lyrical-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+        
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/mrpt_path_planning/">mrpt_path_planning</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning/">mrpt_path_planning</a>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning_apps/">mrpt_path_planning_apps</a>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning_core/">mrpt_path_planning_core</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>rolling</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/MRPT/mrpt_path_planning.git">https://github.com/MRPT/mrpt_path_planning.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">develop</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-10-23
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-success">
+          
+          DEVELOPED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#rolling-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#rolling-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#rolling-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning/">mrpt_path_planning</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning_apps/">mrpt_path_planning_apps</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning_core/">mrpt_path_planning_core</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="mrpt_path_planning">mrpt_path_planning</h1>
+
+<p><a href="https://github.com/MRPT/mrpt_path_planning/actions/workflows/build-linux.yml"><img src="https://github.com/MRPT/mrpt_path_planning/actions/workflows/build-linux.yml/badge.svg" alt="CI Linux"></a>
+<a href="https://github.com/MRPT/mrpt_path_planning/tree/develop/LICENSE"><img src="https://img.shields.io/badge/License-BSD_3--Clause-blue.svg" alt="License: BSD-3"></a>
+<a href="https://index.ros.org/?pkgs=mrpt_path_planning&amp;search_packages=true#jazzy"><img src="https://img.shields.io/ros/v/jazzy/mrpt_path_planning" alt="ROS 2 Jazzy"></a></p>
+
+<p><strong>Kinematically-feasible path planning for robots and vehicles on planar
+environments</strong>, for arbitrary robot shapes and realistic kinematics
+(differential-drive, Ackermann, holonomic). Built on
+<a href="https://github.com/MRPT/mrpt/">MRPT</a> <code class="language-plaintext highlighter-rouge">mrpt_nav</code> and the theory of
+<em>Parameterized Trajectory Generators</em> (PTGs), which act as libraries of motion
+primitives.</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/MRPT/mrpt_path_planning/develop/docs/images/demo-holonomic.svg" width="49%" alt="Holonomic robot following a planned path">
+  <img src="https://raw.githubusercontent.com/MRPT/mrpt_path_planning/develop/docs/images/demo-ackermann.svg" width="49%" alt="Ackermann vehicle following a planned path">
+  <br>
+  <em>Planned paths for a holonomic robot (left) and an Ackermann vehicle (right).</em>
+</p>
+
+<!-- Images generated from mrpt_path_planning_apps/share/ with:
+path-planner-cli -s "[0.5 0 0]" -g "[4.2 0.5 80]" \
+  -c ptgs_ackermann_vehicle.ini --obstacles obstacles_01.txt \
+  --planner-parameters mvsim-demo-astar-planner-params-ackermann.yaml \
+  --save-svg demo-ackermann.svg --svg-animate --svg-no-tree --svg-no-bbox \
+  --svg-no-status --svg-width 440 --no-gui
+(and the same with ptgs_holonomic_robot.ini and
+mvsim-demo-astar-planner-params.yaml for demo-holonomic.svg) -->
+
+<h2 id="features">Features</h2>
+
+<ul>
+  <li>
+<strong>Kinematically feasible by construction</strong>: every path is a sequence of PTG
+trajectories the vehicle can actually execute, respecting its turning and
+speed limits. Several PTG families can be mixed in one search, and
+speed-trimmable PTGs make the search velocity-aware.</li>
+  <li>
+<strong>Any-shape vehicles</strong>: circular or arbitrary polygonal footprints, including
+concave ones. The footprint is baked once into per-PTG collision grids, so
+the per-node collision cost does not grow with the footprint complexity: one
+pass over the local obstacles gives the free distance along every candidate
+trajectory.</li>
+  <li>
+<strong>No costmap inflation</strong>: the actual footprint is checked against the raw
+obstacle points, with no inflation radius to tune.</li>
+  <li>
+<strong>Deterministic SE(2) lattice A*</strong> (<code class="language-plaintext highlighter-rouge">mpp::TPS_Astar</code>) and a
+<strong>bidirectional</strong> variant (<code class="language-plaintext highlighter-rouge">mpp::TPS_Astar_Bidir</code>). They optimize SE(2) cost
+(position + heading), not just Euclidean length, with optional
+bounded-suboptimal weighted A* for faster queries.</li>
+  <li>
+<strong>Pose or position goals</strong>: SE(2) goals <code class="language-plaintext highlighter-rouge">[x y phi]</code> or heading-agnostic R(2)
+goals <code class="language-plaintext highlighter-rouge">[x y]</code>.</li>
+  <li>
+<strong>Forward and reverse maneuvers</strong>, with an optional <strong>Reeds-Shepp</strong> heuristic
+and analytic goal expansion for tight maneuvers such as parking.</li>
+  <li>
+<strong>Rotations in place</strong> for differential-drive robots (<code class="language-plaintext highlighter-rouge">DiffDrive_Spin</code> PTG),
+e.g. to turn around in corridors too narrow for arcs.</li>
+  <li>
+<strong>Certified collision checking</strong>: the collision grids are conservative, so a
+path reported as free is free for the continuous swept motion.</li>
+  <li>
+<strong>Pluggable cost layers</strong>: obstacle-proximity cost maps,
+preferred-waypoint attractors, and a penalty for driving in reverse.</li>
+  <li>
+<strong>Navigation building blocks</strong>: <code class="language-plaintext highlighter-rouge">TrajectoryFollower</code> (pure pursuit with predictive
+safety, valid at any speed, rotating in place where the path does), and <code class="language-plaintext highlighter-rouge">CollisionGuard</code> (last-resort velocity
+filter ensuring the robot can always stop before sensed obstacles).</li>
+  <li>
+<strong>Headless core</strong>: the algorithms library has no GUI dependency.</li>
+</ul>
+
+<h2 id="quick-start">Quick start</h2>
+
+<p>Install the binary packages (ROS 2 Humble or newer):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>ros-<span class="nv">$ROS_DISTRO</span><span class="nt">-mrpt-path-planning</span>
+
+</code></pre></div></div>
+
+<p>Plan a path around some obstacles for a holonomic robot, using the example
+configuration files installed with the apps package:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> <span class="si">$(</span>ros2 pkg prefix mrpt_path_planning_apps<span class="si">)</span>/share/mrpt_path_planning_apps
+
+path-planner-cli <span class="se">\</span>
+  <span class="nt">-s</span> <span class="s2">"[0.5 0 0]"</span> <span class="nt">-g</span> <span class="s2">"[4.2 0.5 80]"</span> <span class="se">\</span>
+  <span class="nt">-c</span> ptgs_holonomic_robot.ini <span class="se">\</span>
+  <span class="nt">--obstacles</span> obstacles_01.txt <span class="se">\</span>
+  <span class="nt">--planner-parameters</span> mvsim-demo-astar-planner-params.yaml <span class="se">\</span>
+  <span class="nt">--play-animation</span>
+
+</code></pre></div></div>
+
+<h2 id="packages">Packages</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Package</th>
+      <th>Contents</th>
+      <th>Depend on it when…</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning_core</code></td>
+      <td>C++ library (namespace <code class="language-plaintext highlighter-rouge">mpp</code>): PTGs, planners, cost evaluators, <code class="language-plaintext highlighter-rouge">TrajectoryFollower</code>. Depends only on <code class="language-plaintext highlighter-rouge">mrpt_nav</code>, <code class="language-plaintext highlighter-rouge">mrpt_maps</code>, <code class="language-plaintext highlighter-rouge">mrpt_graphs</code>, <code class="language-plaintext highlighter-rouge">mrpt_containers</code>.</td>
+      <td>You only need the algorithms (most users).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning_apps</code></td>
+      <td>
+<code class="language-plaintext highlighter-rouge">path-planner-cli</code>, <code class="language-plaintext highlighter-rouge">selfdriving-simulator-gui</code>, example config files. Adds <code class="language-plaintext highlighter-rouge">mrpt_gui</code>, <code class="language-plaintext highlighter-rouge">cli11</code>, <code class="language-plaintext highlighter-rouge">mvsim</code>.</td>
+      <td>You want the command-line and GUI tools.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning</code></td>
+      <td>Metapackage depending on the two above.</td>
+      <td>Backward compatibility with existing consumers.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ROS 2 integration (planner and trajectory follower nodes) lives in
+<a href="https://github.com/mrpt-ros-pkg/mrpt_navigation">mrpt_navigation</a>.</p>
+
+<h2 id="using-the-library">Using the library</h2>
+
+<p>In <code class="language-plaintext highlighter-rouge">package.xml</code>:</p>
+
+<p>```xml</p>
+<depend>mrpt_path_planning_core</depend>
+
+<p>File truncated at 100 lines <a href="https://github.com/MRPT/mrpt_path_planning/tree/develop/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="rolling-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="rolling-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#rolling-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#rolling-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#rolling-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="rolling-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="rolling-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="rolling-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>github</strong> showing <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/mrpt_path_planning/">mrpt_path_planning</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning/">mrpt_path_planning</a>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning_apps/">mrpt_path_planning_apps</a>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning_core/">mrpt_path_planning_core</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>humble</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/MRPT/mrpt_path_planning.git">https://github.com/MRPT/mrpt_path_planning.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">develop</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-10-23
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-success">
+          
+          DEVELOPED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning/">mrpt_path_planning</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning_apps/">mrpt_path_planning_apps</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning_core/">mrpt_path_planning_core</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="mrpt_path_planning">mrpt_path_planning</h1>
+
+<p><a href="https://github.com/MRPT/mrpt_path_planning/actions/workflows/build-linux.yml"><img src="https://github.com/MRPT/mrpt_path_planning/actions/workflows/build-linux.yml/badge.svg" alt="CI Linux"></a>
+<a href="https://github.com/MRPT/mrpt_path_planning/tree/develop/LICENSE"><img src="https://img.shields.io/badge/License-BSD_3--Clause-blue.svg" alt="License: BSD-3"></a>
+<a href="https://index.ros.org/?pkgs=mrpt_path_planning&amp;search_packages=true#jazzy"><img src="https://img.shields.io/ros/v/jazzy/mrpt_path_planning" alt="ROS 2 Jazzy"></a></p>
+
+<p><strong>Kinematically-feasible path planning for robots and vehicles on planar
+environments</strong>, for arbitrary robot shapes and realistic kinematics
+(differential-drive, Ackermann, holonomic). Built on
+<a href="https://github.com/MRPT/mrpt/">MRPT</a> <code class="language-plaintext highlighter-rouge">mrpt_nav</code> and the theory of
+<em>Parameterized Trajectory Generators</em> (PTGs), which act as libraries of motion
+primitives.</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/MRPT/mrpt_path_planning/develop/docs/images/demo-holonomic.svg" width="49%" alt="Holonomic robot following a planned path">
+  <img src="https://raw.githubusercontent.com/MRPT/mrpt_path_planning/develop/docs/images/demo-ackermann.svg" width="49%" alt="Ackermann vehicle following a planned path">
+  <br>
+  <em>Planned paths for a holonomic robot (left) and an Ackermann vehicle (right).</em>
+</p>
+
+<!-- Images generated from mrpt_path_planning_apps/share/ with:
+path-planner-cli -s "[0.5 0 0]" -g "[4.2 0.5 80]" \
+  -c ptgs_ackermann_vehicle.ini --obstacles obstacles_01.txt \
+  --planner-parameters mvsim-demo-astar-planner-params-ackermann.yaml \
+  --save-svg demo-ackermann.svg --svg-animate --svg-no-tree --svg-no-bbox \
+  --svg-no-status --svg-width 440 --no-gui
+(and the same with ptgs_holonomic_robot.ini and
+mvsim-demo-astar-planner-params.yaml for demo-holonomic.svg) -->
+
+<h2 id="features">Features</h2>
+
+<ul>
+  <li>
+<strong>Kinematically feasible by construction</strong>: every path is a sequence of PTG
+trajectories the vehicle can actually execute, respecting its turning and
+speed limits. Several PTG families can be mixed in one search, and
+speed-trimmable PTGs make the search velocity-aware.</li>
+  <li>
+<strong>Any-shape vehicles</strong>: circular or arbitrary polygonal footprints, including
+concave ones. The footprint is baked once into per-PTG collision grids, so
+the per-node collision cost does not grow with the footprint complexity: one
+pass over the local obstacles gives the free distance along every candidate
+trajectory.</li>
+  <li>
+<strong>No costmap inflation</strong>: the actual footprint is checked against the raw
+obstacle points, with no inflation radius to tune.</li>
+  <li>
+<strong>Deterministic SE(2) lattice A*</strong> (<code class="language-plaintext highlighter-rouge">mpp::TPS_Astar</code>) and a
+<strong>bidirectional</strong> variant (<code class="language-plaintext highlighter-rouge">mpp::TPS_Astar_Bidir</code>). They optimize SE(2) cost
+(position + heading), not just Euclidean length, with optional
+bounded-suboptimal weighted A* for faster queries.</li>
+  <li>
+<strong>Pose or position goals</strong>: SE(2) goals <code class="language-plaintext highlighter-rouge">[x y phi]</code> or heading-agnostic R(2)
+goals <code class="language-plaintext highlighter-rouge">[x y]</code>.</li>
+  <li>
+<strong>Forward and reverse maneuvers</strong>, with an optional <strong>Reeds-Shepp</strong> heuristic
+and analytic goal expansion for tight maneuvers such as parking.</li>
+  <li>
+<strong>Rotations in place</strong> for differential-drive robots (<code class="language-plaintext highlighter-rouge">DiffDrive_Spin</code> PTG),
+e.g. to turn around in corridors too narrow for arcs.</li>
+  <li>
+<strong>Certified collision checking</strong>: the collision grids are conservative, so a
+path reported as free is free for the continuous swept motion.</li>
+  <li>
+<strong>Pluggable cost layers</strong>: obstacle-proximity cost maps,
+preferred-waypoint attractors, and a penalty for driving in reverse.</li>
+  <li>
+<strong>Navigation building blocks</strong>: <code class="language-plaintext highlighter-rouge">TrajectoryFollower</code> (pure pursuit with predictive
+safety, valid at any speed, rotating in place where the path does), and <code class="language-plaintext highlighter-rouge">CollisionGuard</code> (last-resort velocity
+filter ensuring the robot can always stop before sensed obstacles).</li>
+  <li>
+<strong>Headless core</strong>: the algorithms library has no GUI dependency.</li>
+</ul>
+
+<h2 id="quick-start">Quick start</h2>
+
+<p>Install the binary packages (ROS 2 Humble or newer):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>ros-<span class="nv">$ROS_DISTRO</span><span class="nt">-mrpt-path-planning</span>
+
+</code></pre></div></div>
+
+<p>Plan a path around some obstacles for a holonomic robot, using the example
+configuration files installed with the apps package:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> <span class="si">$(</span>ros2 pkg prefix mrpt_path_planning_apps<span class="si">)</span>/share/mrpt_path_planning_apps
+
+path-planner-cli <span class="se">\</span>
+  <span class="nt">-s</span> <span class="s2">"[0.5 0 0]"</span> <span class="nt">-g</span> <span class="s2">"[4.2 0.5 80]"</span> <span class="se">\</span>
+  <span class="nt">-c</span> ptgs_holonomic_robot.ini <span class="se">\</span>
+  <span class="nt">--obstacles</span> obstacles_01.txt <span class="se">\</span>
+  <span class="nt">--planner-parameters</span> mvsim-demo-astar-planner-params.yaml <span class="se">\</span>
+  <span class="nt">--play-animation</span>
+
+</code></pre></div></div>
+
+<h2 id="packages">Packages</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Package</th>
+      <th>Contents</th>
+      <th>Depend on it when…</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning_core</code></td>
+      <td>C++ library (namespace <code class="language-plaintext highlighter-rouge">mpp</code>): PTGs, planners, cost evaluators, <code class="language-plaintext highlighter-rouge">TrajectoryFollower</code>. Depends only on <code class="language-plaintext highlighter-rouge">mrpt_nav</code>, <code class="language-plaintext highlighter-rouge">mrpt_maps</code>, <code class="language-plaintext highlighter-rouge">mrpt_graphs</code>, <code class="language-plaintext highlighter-rouge">mrpt_containers</code>.</td>
+      <td>You only need the algorithms (most users).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning_apps</code></td>
+      <td>
+<code class="language-plaintext highlighter-rouge">path-planner-cli</code>, <code class="language-plaintext highlighter-rouge">selfdriving-simulator-gui</code>, example config files. Adds <code class="language-plaintext highlighter-rouge">mrpt_gui</code>, <code class="language-plaintext highlighter-rouge">cli11</code>, <code class="language-plaintext highlighter-rouge">mvsim</code>.</td>
+      <td>You want the command-line and GUI tools.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning</code></td>
+      <td>Metapackage depending on the two above.</td>
+      <td>Backward compatibility with existing consumers.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ROS 2 integration (planner and trajectory follower nodes) lives in
+<a href="https://github.com/mrpt-ros-pkg/mrpt_navigation">mrpt_navigation</a>.</p>
+
+<h2 id="using-the-library">Using the library</h2>
+
+<p>In <code class="language-plaintext highlighter-rouge">package.xml</code>:</p>
+
+<p>```xml</p>
+<depend>mrpt_path_planning_core</depend>
+
+<p>File truncated at 100 lines <a href="https://github.com/MRPT/mrpt_path_planning/tree/develop/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="humble-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="humble-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#humble-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="humble-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>galactic</strong> showing <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/mrpt_path_planning/">mrpt_path_planning</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning/">mrpt_path_planning</a>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning_apps/">mrpt_path_planning_apps</a>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning_core/">mrpt_path_planning_core</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>humble</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/MRPT/mrpt_path_planning.git">https://github.com/MRPT/mrpt_path_planning.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">develop</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-10-23
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-success">
+          
+          DEVELOPED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#galactic-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#galactic-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#galactic-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning/">mrpt_path_planning</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning_apps/">mrpt_path_planning_apps</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning_core/">mrpt_path_planning_core</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="mrpt_path_planning">mrpt_path_planning</h1>
+
+<p><a href="https://github.com/MRPT/mrpt_path_planning/actions/workflows/build-linux.yml"><img src="https://github.com/MRPT/mrpt_path_planning/actions/workflows/build-linux.yml/badge.svg" alt="CI Linux"></a>
+<a href="https://github.com/MRPT/mrpt_path_planning/tree/develop/LICENSE"><img src="https://img.shields.io/badge/License-BSD_3--Clause-blue.svg" alt="License: BSD-3"></a>
+<a href="https://index.ros.org/?pkgs=mrpt_path_planning&amp;search_packages=true#jazzy"><img src="https://img.shields.io/ros/v/jazzy/mrpt_path_planning" alt="ROS 2 Jazzy"></a></p>
+
+<p><strong>Kinematically-feasible path planning for robots and vehicles on planar
+environments</strong>, for arbitrary robot shapes and realistic kinematics
+(differential-drive, Ackermann, holonomic). Built on
+<a href="https://github.com/MRPT/mrpt/">MRPT</a> <code class="language-plaintext highlighter-rouge">mrpt_nav</code> and the theory of
+<em>Parameterized Trajectory Generators</em> (PTGs), which act as libraries of motion
+primitives.</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/MRPT/mrpt_path_planning/develop/docs/images/demo-holonomic.svg" width="49%" alt="Holonomic robot following a planned path">
+  <img src="https://raw.githubusercontent.com/MRPT/mrpt_path_planning/develop/docs/images/demo-ackermann.svg" width="49%" alt="Ackermann vehicle following a planned path">
+  <br>
+  <em>Planned paths for a holonomic robot (left) and an Ackermann vehicle (right).</em>
+</p>
+
+<!-- Images generated from mrpt_path_planning_apps/share/ with:
+path-planner-cli -s "[0.5 0 0]" -g "[4.2 0.5 80]" \
+  -c ptgs_ackermann_vehicle.ini --obstacles obstacles_01.txt \
+  --planner-parameters mvsim-demo-astar-planner-params-ackermann.yaml \
+  --save-svg demo-ackermann.svg --svg-animate --svg-no-tree --svg-no-bbox \
+  --svg-no-status --svg-width 440 --no-gui
+(and the same with ptgs_holonomic_robot.ini and
+mvsim-demo-astar-planner-params.yaml for demo-holonomic.svg) -->
+
+<h2 id="features">Features</h2>
+
+<ul>
+  <li>
+<strong>Kinematically feasible by construction</strong>: every path is a sequence of PTG
+trajectories the vehicle can actually execute, respecting its turning and
+speed limits. Several PTG families can be mixed in one search, and
+speed-trimmable PTGs make the search velocity-aware.</li>
+  <li>
+<strong>Any-shape vehicles</strong>: circular or arbitrary polygonal footprints, including
+concave ones. The footprint is baked once into per-PTG collision grids, so
+the per-node collision cost does not grow with the footprint complexity: one
+pass over the local obstacles gives the free distance along every candidate
+trajectory.</li>
+  <li>
+<strong>No costmap inflation</strong>: the actual footprint is checked against the raw
+obstacle points, with no inflation radius to tune.</li>
+  <li>
+<strong>Deterministic SE(2) lattice A*</strong> (<code class="language-plaintext highlighter-rouge">mpp::TPS_Astar</code>) and a
+<strong>bidirectional</strong> variant (<code class="language-plaintext highlighter-rouge">mpp::TPS_Astar_Bidir</code>). They optimize SE(2) cost
+(position + heading), not just Euclidean length, with optional
+bounded-suboptimal weighted A* for faster queries.</li>
+  <li>
+<strong>Pose or position goals</strong>: SE(2) goals <code class="language-plaintext highlighter-rouge">[x y phi]</code> or heading-agnostic R(2)
+goals <code class="language-plaintext highlighter-rouge">[x y]</code>.</li>
+  <li>
+<strong>Forward and reverse maneuvers</strong>, with an optional <strong>Reeds-Shepp</strong> heuristic
+and analytic goal expansion for tight maneuvers such as parking.</li>
+  <li>
+<strong>Rotations in place</strong> for differential-drive robots (<code class="language-plaintext highlighter-rouge">DiffDrive_Spin</code> PTG),
+e.g. to turn around in corridors too narrow for arcs.</li>
+  <li>
+<strong>Certified collision checking</strong>: the collision grids are conservative, so a
+path reported as free is free for the continuous swept motion.</li>
+  <li>
+<strong>Pluggable cost layers</strong>: obstacle-proximity cost maps,
+preferred-waypoint attractors, and a penalty for driving in reverse.</li>
+  <li>
+<strong>Navigation building blocks</strong>: <code class="language-plaintext highlighter-rouge">TrajectoryFollower</code> (pure pursuit with predictive
+safety, valid at any speed, rotating in place where the path does), and <code class="language-plaintext highlighter-rouge">CollisionGuard</code> (last-resort velocity
+filter ensuring the robot can always stop before sensed obstacles).</li>
+  <li>
+<strong>Headless core</strong>: the algorithms library has no GUI dependency.</li>
+</ul>
+
+<h2 id="quick-start">Quick start</h2>
+
+<p>Install the binary packages (ROS 2 Humble or newer):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>ros-<span class="nv">$ROS_DISTRO</span><span class="nt">-mrpt-path-planning</span>
+
+</code></pre></div></div>
+
+<p>Plan a path around some obstacles for a holonomic robot, using the example
+configuration files installed with the apps package:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> <span class="si">$(</span>ros2 pkg prefix mrpt_path_planning_apps<span class="si">)</span>/share/mrpt_path_planning_apps
+
+path-planner-cli <span class="se">\</span>
+  <span class="nt">-s</span> <span class="s2">"[0.5 0 0]"</span> <span class="nt">-g</span> <span class="s2">"[4.2 0.5 80]"</span> <span class="se">\</span>
+  <span class="nt">-c</span> ptgs_holonomic_robot.ini <span class="se">\</span>
+  <span class="nt">--obstacles</span> obstacles_01.txt <span class="se">\</span>
+  <span class="nt">--planner-parameters</span> mvsim-demo-astar-planner-params.yaml <span class="se">\</span>
+  <span class="nt">--play-animation</span>
+
+</code></pre></div></div>
+
+<h2 id="packages">Packages</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Package</th>
+      <th>Contents</th>
+      <th>Depend on it when…</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning_core</code></td>
+      <td>C++ library (namespace <code class="language-plaintext highlighter-rouge">mpp</code>): PTGs, planners, cost evaluators, <code class="language-plaintext highlighter-rouge">TrajectoryFollower</code>. Depends only on <code class="language-plaintext highlighter-rouge">mrpt_nav</code>, <code class="language-plaintext highlighter-rouge">mrpt_maps</code>, <code class="language-plaintext highlighter-rouge">mrpt_graphs</code>, <code class="language-plaintext highlighter-rouge">mrpt_containers</code>.</td>
+      <td>You only need the algorithms (most users).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning_apps</code></td>
+      <td>
+<code class="language-plaintext highlighter-rouge">path-planner-cli</code>, <code class="language-plaintext highlighter-rouge">selfdriving-simulator-gui</code>, example config files. Adds <code class="language-plaintext highlighter-rouge">mrpt_gui</code>, <code class="language-plaintext highlighter-rouge">cli11</code>, <code class="language-plaintext highlighter-rouge">mvsim</code>.</td>
+      <td>You want the command-line and GUI tools.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning</code></td>
+      <td>Metapackage depending on the two above.</td>
+      <td>Backward compatibility with existing consumers.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ROS 2 integration (planner and trajectory follower nodes) lives in
+<a href="https://github.com/mrpt-ros-pkg/mrpt_navigation">mrpt_navigation</a>.</p>
+
+<h2 id="using-the-library">Using the library</h2>
+
+<p>In <code class="language-plaintext highlighter-rouge">package.xml</code>:</p>
+
+<p>```xml</p>
+<depend>mrpt_path_planning_core</depend>
+
+<p>File truncated at 100 lines <a href="https://github.com/MRPT/mrpt_path_planning/tree/develop/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="humble-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="humble-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#humble-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="humble-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+        
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/mrpt_path_planning/">mrpt_path_planning</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning/">mrpt_path_planning</a>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning_apps/">mrpt_path_planning_apps</a>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning_core/">mrpt_path_planning_core</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>iron</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/MRPT/mrpt_path_planning.git">https://github.com/MRPT/mrpt_path_planning.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">develop</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-10-23
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-success">
+          
+          DEVELOPED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#iron-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#iron-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#iron-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning/">mrpt_path_planning</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning_apps/">mrpt_path_planning_apps</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning_core/">mrpt_path_planning_core</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="mrpt_path_planning">mrpt_path_planning</h1>
+
+<p><a href="https://github.com/MRPT/mrpt_path_planning/actions/workflows/build-linux.yml"><img src="https://github.com/MRPT/mrpt_path_planning/actions/workflows/build-linux.yml/badge.svg" alt="CI Linux"></a>
+<a href="https://github.com/MRPT/mrpt_path_planning/tree/develop/LICENSE"><img src="https://img.shields.io/badge/License-BSD_3--Clause-blue.svg" alt="License: BSD-3"></a>
+<a href="https://index.ros.org/?pkgs=mrpt_path_planning&amp;search_packages=true#jazzy"><img src="https://img.shields.io/ros/v/jazzy/mrpt_path_planning" alt="ROS 2 Jazzy"></a></p>
+
+<p><strong>Kinematically-feasible path planning for robots and vehicles on planar
+environments</strong>, for arbitrary robot shapes and realistic kinematics
+(differential-drive, Ackermann, holonomic). Built on
+<a href="https://github.com/MRPT/mrpt/">MRPT</a> <code class="language-plaintext highlighter-rouge">mrpt_nav</code> and the theory of
+<em>Parameterized Trajectory Generators</em> (PTGs), which act as libraries of motion
+primitives.</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/MRPT/mrpt_path_planning/develop/docs/images/demo-holonomic.svg" width="49%" alt="Holonomic robot following a planned path">
+  <img src="https://raw.githubusercontent.com/MRPT/mrpt_path_planning/develop/docs/images/demo-ackermann.svg" width="49%" alt="Ackermann vehicle following a planned path">
+  <br>
+  <em>Planned paths for a holonomic robot (left) and an Ackermann vehicle (right).</em>
+</p>
+
+<!-- Images generated from mrpt_path_planning_apps/share/ with:
+path-planner-cli -s "[0.5 0 0]" -g "[4.2 0.5 80]" \
+  -c ptgs_ackermann_vehicle.ini --obstacles obstacles_01.txt \
+  --planner-parameters mvsim-demo-astar-planner-params-ackermann.yaml \
+  --save-svg demo-ackermann.svg --svg-animate --svg-no-tree --svg-no-bbox \
+  --svg-no-status --svg-width 440 --no-gui
+(and the same with ptgs_holonomic_robot.ini and
+mvsim-demo-astar-planner-params.yaml for demo-holonomic.svg) -->
+
+<h2 id="features">Features</h2>
+
+<ul>
+  <li>
+<strong>Kinematically feasible by construction</strong>: every path is a sequence of PTG
+trajectories the vehicle can actually execute, respecting its turning and
+speed limits. Several PTG families can be mixed in one search, and
+speed-trimmable PTGs make the search velocity-aware.</li>
+  <li>
+<strong>Any-shape vehicles</strong>: circular or arbitrary polygonal footprints, including
+concave ones. The footprint is baked once into per-PTG collision grids, so
+the per-node collision cost does not grow with the footprint complexity: one
+pass over the local obstacles gives the free distance along every candidate
+trajectory.</li>
+  <li>
+<strong>No costmap inflation</strong>: the actual footprint is checked against the raw
+obstacle points, with no inflation radius to tune.</li>
+  <li>
+<strong>Deterministic SE(2) lattice A*</strong> (<code class="language-plaintext highlighter-rouge">mpp::TPS_Astar</code>) and a
+<strong>bidirectional</strong> variant (<code class="language-plaintext highlighter-rouge">mpp::TPS_Astar_Bidir</code>). They optimize SE(2) cost
+(position + heading), not just Euclidean length, with optional
+bounded-suboptimal weighted A* for faster queries.</li>
+  <li>
+<strong>Pose or position goals</strong>: SE(2) goals <code class="language-plaintext highlighter-rouge">[x y phi]</code> or heading-agnostic R(2)
+goals <code class="language-plaintext highlighter-rouge">[x y]</code>.</li>
+  <li>
+<strong>Forward and reverse maneuvers</strong>, with an optional <strong>Reeds-Shepp</strong> heuristic
+and analytic goal expansion for tight maneuvers such as parking.</li>
+  <li>
+<strong>Rotations in place</strong> for differential-drive robots (<code class="language-plaintext highlighter-rouge">DiffDrive_Spin</code> PTG),
+e.g. to turn around in corridors too narrow for arcs.</li>
+  <li>
+<strong>Certified collision checking</strong>: the collision grids are conservative, so a
+path reported as free is free for the continuous swept motion.</li>
+  <li>
+<strong>Pluggable cost layers</strong>: obstacle-proximity cost maps,
+preferred-waypoint attractors, and a penalty for driving in reverse.</li>
+  <li>
+<strong>Navigation building blocks</strong>: <code class="language-plaintext highlighter-rouge">TrajectoryFollower</code> (pure pursuit with predictive
+safety, valid at any speed, rotating in place where the path does), and <code class="language-plaintext highlighter-rouge">CollisionGuard</code> (last-resort velocity
+filter ensuring the robot can always stop before sensed obstacles).</li>
+  <li>
+<strong>Headless core</strong>: the algorithms library has no GUI dependency.</li>
+</ul>
+
+<h2 id="quick-start">Quick start</h2>
+
+<p>Install the binary packages (ROS 2 Humble or newer):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>ros-<span class="nv">$ROS_DISTRO</span><span class="nt">-mrpt-path-planning</span>
+
+</code></pre></div></div>
+
+<p>Plan a path around some obstacles for a holonomic robot, using the example
+configuration files installed with the apps package:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> <span class="si">$(</span>ros2 pkg prefix mrpt_path_planning_apps<span class="si">)</span>/share/mrpt_path_planning_apps
+
+path-planner-cli <span class="se">\</span>
+  <span class="nt">-s</span> <span class="s2">"[0.5 0 0]"</span> <span class="nt">-g</span> <span class="s2">"[4.2 0.5 80]"</span> <span class="se">\</span>
+  <span class="nt">-c</span> ptgs_holonomic_robot.ini <span class="se">\</span>
+  <span class="nt">--obstacles</span> obstacles_01.txt <span class="se">\</span>
+  <span class="nt">--planner-parameters</span> mvsim-demo-astar-planner-params.yaml <span class="se">\</span>
+  <span class="nt">--play-animation</span>
+
+</code></pre></div></div>
+
+<h2 id="packages">Packages</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Package</th>
+      <th>Contents</th>
+      <th>Depend on it when…</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning_core</code></td>
+      <td>C++ library (namespace <code class="language-plaintext highlighter-rouge">mpp</code>): PTGs, planners, cost evaluators, <code class="language-plaintext highlighter-rouge">TrajectoryFollower</code>. Depends only on <code class="language-plaintext highlighter-rouge">mrpt_nav</code>, <code class="language-plaintext highlighter-rouge">mrpt_maps</code>, <code class="language-plaintext highlighter-rouge">mrpt_graphs</code>, <code class="language-plaintext highlighter-rouge">mrpt_containers</code>.</td>
+      <td>You only need the algorithms (most users).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning_apps</code></td>
+      <td>
+<code class="language-plaintext highlighter-rouge">path-planner-cli</code>, <code class="language-plaintext highlighter-rouge">selfdriving-simulator-gui</code>, example config files. Adds <code class="language-plaintext highlighter-rouge">mrpt_gui</code>, <code class="language-plaintext highlighter-rouge">cli11</code>, <code class="language-plaintext highlighter-rouge">mvsim</code>.</td>
+      <td>You want the command-line and GUI tools.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning</code></td>
+      <td>Metapackage depending on the two above.</td>
+      <td>Backward compatibility with existing consumers.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ROS 2 integration (planner and trajectory follower nodes) lives in
+<a href="https://github.com/mrpt-ros-pkg/mrpt_navigation">mrpt_navigation</a>.</p>
+
+<h2 id="using-the-library">Using the library</h2>
+
+<p>In <code class="language-plaintext highlighter-rouge">package.xml</code>:</p>
+
+<p>```xml</p>
+<depend>mrpt_path_planning_core</depend>
+
+<p>File truncated at 100 lines <a href="https://github.com/MRPT/mrpt_path_planning/tree/develop/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="iron-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="iron-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#iron-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#iron-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#iron-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="iron-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="iron-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="iron-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>melodic</strong> showing <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/mrpt_path_planning/">mrpt_path_planning</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning/">mrpt_path_planning</a>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning_apps/">mrpt_path_planning_apps</a>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning_core/">mrpt_path_planning_core</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>humble</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/MRPT/mrpt_path_planning.git">https://github.com/MRPT/mrpt_path_planning.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">develop</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-10-23
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-success">
+          
+          DEVELOPED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#melodic-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#melodic-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#melodic-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning/">mrpt_path_planning</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning_apps/">mrpt_path_planning_apps</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning_core/">mrpt_path_planning_core</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="mrpt_path_planning">mrpt_path_planning</h1>
+
+<p><a href="https://github.com/MRPT/mrpt_path_planning/actions/workflows/build-linux.yml"><img src="https://github.com/MRPT/mrpt_path_planning/actions/workflows/build-linux.yml/badge.svg" alt="CI Linux"></a>
+<a href="https://github.com/MRPT/mrpt_path_planning/tree/develop/LICENSE"><img src="https://img.shields.io/badge/License-BSD_3--Clause-blue.svg" alt="License: BSD-3"></a>
+<a href="https://index.ros.org/?pkgs=mrpt_path_planning&amp;search_packages=true#jazzy"><img src="https://img.shields.io/ros/v/jazzy/mrpt_path_planning" alt="ROS 2 Jazzy"></a></p>
+
+<p><strong>Kinematically-feasible path planning for robots and vehicles on planar
+environments</strong>, for arbitrary robot shapes and realistic kinematics
+(differential-drive, Ackermann, holonomic). Built on
+<a href="https://github.com/MRPT/mrpt/">MRPT</a> <code class="language-plaintext highlighter-rouge">mrpt_nav</code> and the theory of
+<em>Parameterized Trajectory Generators</em> (PTGs), which act as libraries of motion
+primitives.</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/MRPT/mrpt_path_planning/develop/docs/images/demo-holonomic.svg" width="49%" alt="Holonomic robot following a planned path">
+  <img src="https://raw.githubusercontent.com/MRPT/mrpt_path_planning/develop/docs/images/demo-ackermann.svg" width="49%" alt="Ackermann vehicle following a planned path">
+  <br>
+  <em>Planned paths for a holonomic robot (left) and an Ackermann vehicle (right).</em>
+</p>
+
+<!-- Images generated from mrpt_path_planning_apps/share/ with:
+path-planner-cli -s "[0.5 0 0]" -g "[4.2 0.5 80]" \
+  -c ptgs_ackermann_vehicle.ini --obstacles obstacles_01.txt \
+  --planner-parameters mvsim-demo-astar-planner-params-ackermann.yaml \
+  --save-svg demo-ackermann.svg --svg-animate --svg-no-tree --svg-no-bbox \
+  --svg-no-status --svg-width 440 --no-gui
+(and the same with ptgs_holonomic_robot.ini and
+mvsim-demo-astar-planner-params.yaml for demo-holonomic.svg) -->
+
+<h2 id="features">Features</h2>
+
+<ul>
+  <li>
+<strong>Kinematically feasible by construction</strong>: every path is a sequence of PTG
+trajectories the vehicle can actually execute, respecting its turning and
+speed limits. Several PTG families can be mixed in one search, and
+speed-trimmable PTGs make the search velocity-aware.</li>
+  <li>
+<strong>Any-shape vehicles</strong>: circular or arbitrary polygonal footprints, including
+concave ones. The footprint is baked once into per-PTG collision grids, so
+the per-node collision cost does not grow with the footprint complexity: one
+pass over the local obstacles gives the free distance along every candidate
+trajectory.</li>
+  <li>
+<strong>No costmap inflation</strong>: the actual footprint is checked against the raw
+obstacle points, with no inflation radius to tune.</li>
+  <li>
+<strong>Deterministic SE(2) lattice A*</strong> (<code class="language-plaintext highlighter-rouge">mpp::TPS_Astar</code>) and a
+<strong>bidirectional</strong> variant (<code class="language-plaintext highlighter-rouge">mpp::TPS_Astar_Bidir</code>). They optimize SE(2) cost
+(position + heading), not just Euclidean length, with optional
+bounded-suboptimal weighted A* for faster queries.</li>
+  <li>
+<strong>Pose or position goals</strong>: SE(2) goals <code class="language-plaintext highlighter-rouge">[x y phi]</code> or heading-agnostic R(2)
+goals <code class="language-plaintext highlighter-rouge">[x y]</code>.</li>
+  <li>
+<strong>Forward and reverse maneuvers</strong>, with an optional <strong>Reeds-Shepp</strong> heuristic
+and analytic goal expansion for tight maneuvers such as parking.</li>
+  <li>
+<strong>Rotations in place</strong> for differential-drive robots (<code class="language-plaintext highlighter-rouge">DiffDrive_Spin</code> PTG),
+e.g. to turn around in corridors too narrow for arcs.</li>
+  <li>
+<strong>Certified collision checking</strong>: the collision grids are conservative, so a
+path reported as free is free for the continuous swept motion.</li>
+  <li>
+<strong>Pluggable cost layers</strong>: obstacle-proximity cost maps,
+preferred-waypoint attractors, and a penalty for driving in reverse.</li>
+  <li>
+<strong>Navigation building blocks</strong>: <code class="language-plaintext highlighter-rouge">TrajectoryFollower</code> (pure pursuit with predictive
+safety, valid at any speed, rotating in place where the path does), and <code class="language-plaintext highlighter-rouge">CollisionGuard</code> (last-resort velocity
+filter ensuring the robot can always stop before sensed obstacles).</li>
+  <li>
+<strong>Headless core</strong>: the algorithms library has no GUI dependency.</li>
+</ul>
+
+<h2 id="quick-start">Quick start</h2>
+
+<p>Install the binary packages (ROS 2 Humble or newer):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>ros-<span class="nv">$ROS_DISTRO</span><span class="nt">-mrpt-path-planning</span>
+
+</code></pre></div></div>
+
+<p>Plan a path around some obstacles for a holonomic robot, using the example
+configuration files installed with the apps package:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> <span class="si">$(</span>ros2 pkg prefix mrpt_path_planning_apps<span class="si">)</span>/share/mrpt_path_planning_apps
+
+path-planner-cli <span class="se">\</span>
+  <span class="nt">-s</span> <span class="s2">"[0.5 0 0]"</span> <span class="nt">-g</span> <span class="s2">"[4.2 0.5 80]"</span> <span class="se">\</span>
+  <span class="nt">-c</span> ptgs_holonomic_robot.ini <span class="se">\</span>
+  <span class="nt">--obstacles</span> obstacles_01.txt <span class="se">\</span>
+  <span class="nt">--planner-parameters</span> mvsim-demo-astar-planner-params.yaml <span class="se">\</span>
+  <span class="nt">--play-animation</span>
+
+</code></pre></div></div>
+
+<h2 id="packages">Packages</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Package</th>
+      <th>Contents</th>
+      <th>Depend on it when…</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning_core</code></td>
+      <td>C++ library (namespace <code class="language-plaintext highlighter-rouge">mpp</code>): PTGs, planners, cost evaluators, <code class="language-plaintext highlighter-rouge">TrajectoryFollower</code>. Depends only on <code class="language-plaintext highlighter-rouge">mrpt_nav</code>, <code class="language-plaintext highlighter-rouge">mrpt_maps</code>, <code class="language-plaintext highlighter-rouge">mrpt_graphs</code>, <code class="language-plaintext highlighter-rouge">mrpt_containers</code>.</td>
+      <td>You only need the algorithms (most users).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning_apps</code></td>
+      <td>
+<code class="language-plaintext highlighter-rouge">path-planner-cli</code>, <code class="language-plaintext highlighter-rouge">selfdriving-simulator-gui</code>, example config files. Adds <code class="language-plaintext highlighter-rouge">mrpt_gui</code>, <code class="language-plaintext highlighter-rouge">cli11</code>, <code class="language-plaintext highlighter-rouge">mvsim</code>.</td>
+      <td>You want the command-line and GUI tools.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning</code></td>
+      <td>Metapackage depending on the two above.</td>
+      <td>Backward compatibility with existing consumers.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ROS 2 integration (planner and trajectory follower nodes) lives in
+<a href="https://github.com/mrpt-ros-pkg/mrpt_navigation">mrpt_navigation</a>.</p>
+
+<h2 id="using-the-library">Using the library</h2>
+
+<p>In <code class="language-plaintext highlighter-rouge">package.xml</code>:</p>
+
+<p>```xml</p>
+<depend>mrpt_path_planning_core</depend>
+
+<p>File truncated at 100 lines <a href="https://github.com/MRPT/mrpt_path_planning/tree/develop/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="humble-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="humble-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#humble-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="humble-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+        
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/mrpt_path_planning/">mrpt_path_planning</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning/">mrpt_path_planning</a>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning_apps/">mrpt_path_planning_apps</a>
+        
+        <a class="label label-primary pkg-label" href="/p/mrpt_path_planning_core/">mrpt_path_planning_core</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>noetic</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/MRPT/mrpt_path_planning.git">https://github.com/MRPT/mrpt_path_planning.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">develop</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-10-23
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-success">
+          
+          DEVELOPED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#noetic-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#noetic-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/mrpt_path_planning/#noetic-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning/">mrpt_path_planning</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning_apps/">mrpt_path_planning_apps</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/mrpt_path_planning_core/">mrpt_path_planning_core</a></td>
+                    <td>2.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="mrpt_path_planning">mrpt_path_planning</h1>
+
+<p><a href="https://github.com/MRPT/mrpt_path_planning/actions/workflows/build-linux.yml"><img src="https://github.com/MRPT/mrpt_path_planning/actions/workflows/build-linux.yml/badge.svg" alt="CI Linux"></a>
+<a href="https://github.com/MRPT/mrpt_path_planning/tree/develop/LICENSE"><img src="https://img.shields.io/badge/License-BSD_3--Clause-blue.svg" alt="License: BSD-3"></a>
+<a href="https://index.ros.org/?pkgs=mrpt_path_planning&amp;search_packages=true#jazzy"><img src="https://img.shields.io/ros/v/jazzy/mrpt_path_planning" alt="ROS 2 Jazzy"></a></p>
+
+<p><strong>Kinematically-feasible path planning for robots and vehicles on planar
+environments</strong>, for arbitrary robot shapes and realistic kinematics
+(differential-drive, Ackermann, holonomic). Built on
+<a href="https://github.com/MRPT/mrpt/">MRPT</a> <code class="language-plaintext highlighter-rouge">mrpt_nav</code> and the theory of
+<em>Parameterized Trajectory Generators</em> (PTGs), which act as libraries of motion
+primitives.</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/MRPT/mrpt_path_planning/develop/docs/images/demo-holonomic.svg" width="49%" alt="Holonomic robot following a planned path">
+  <img src="https://raw.githubusercontent.com/MRPT/mrpt_path_planning/develop/docs/images/demo-ackermann.svg" width="49%" alt="Ackermann vehicle following a planned path">
+  <br>
+  <em>Planned paths for a holonomic robot (left) and an Ackermann vehicle (right).</em>
+</p>
+
+<!-- Images generated from mrpt_path_planning_apps/share/ with:
+path-planner-cli -s "[0.5 0 0]" -g "[4.2 0.5 80]" \
+  -c ptgs_ackermann_vehicle.ini --obstacles obstacles_01.txt \
+  --planner-parameters mvsim-demo-astar-planner-params-ackermann.yaml \
+  --save-svg demo-ackermann.svg --svg-animate --svg-no-tree --svg-no-bbox \
+  --svg-no-status --svg-width 440 --no-gui
+(and the same with ptgs_holonomic_robot.ini and
+mvsim-demo-astar-planner-params.yaml for demo-holonomic.svg) -->
+
+<h2 id="features">Features</h2>
+
+<ul>
+  <li>
+<strong>Kinematically feasible by construction</strong>: every path is a sequence of PTG
+trajectories the vehicle can actually execute, respecting its turning and
+speed limits. Several PTG families can be mixed in one search, and
+speed-trimmable PTGs make the search velocity-aware.</li>
+  <li>
+<strong>Any-shape vehicles</strong>: circular or arbitrary polygonal footprints, including
+concave ones. The footprint is baked once into per-PTG collision grids, so
+the per-node collision cost does not grow with the footprint complexity: one
+pass over the local obstacles gives the free distance along every candidate
+trajectory.</li>
+  <li>
+<strong>No costmap inflation</strong>: the actual footprint is checked against the raw
+obstacle points, with no inflation radius to tune.</li>
+  <li>
+<strong>Deterministic SE(2) lattice A*</strong> (<code class="language-plaintext highlighter-rouge">mpp::TPS_Astar</code>) and a
+<strong>bidirectional</strong> variant (<code class="language-plaintext highlighter-rouge">mpp::TPS_Astar_Bidir</code>). They optimize SE(2) cost
+(position + heading), not just Euclidean length, with optional
+bounded-suboptimal weighted A* for faster queries.</li>
+  <li>
+<strong>Pose or position goals</strong>: SE(2) goals <code class="language-plaintext highlighter-rouge">[x y phi]</code> or heading-agnostic R(2)
+goals <code class="language-plaintext highlighter-rouge">[x y]</code>.</li>
+  <li>
+<strong>Forward and reverse maneuvers</strong>, with an optional <strong>Reeds-Shepp</strong> heuristic
+and analytic goal expansion for tight maneuvers such as parking.</li>
+  <li>
+<strong>Rotations in place</strong> for differential-drive robots (<code class="language-plaintext highlighter-rouge">DiffDrive_Spin</code> PTG),
+e.g. to turn around in corridors too narrow for arcs.</li>
+  <li>
+<strong>Certified collision checking</strong>: the collision grids are conservative, so a
+path reported as free is free for the continuous swept motion.</li>
+  <li>
+<strong>Pluggable cost layers</strong>: obstacle-proximity cost maps,
+preferred-waypoint attractors, and a penalty for driving in reverse.</li>
+  <li>
+<strong>Navigation building blocks</strong>: <code class="language-plaintext highlighter-rouge">TrajectoryFollower</code> (pure pursuit with predictive
+safety, valid at any speed, rotating in place where the path does), and <code class="language-plaintext highlighter-rouge">CollisionGuard</code> (last-resort velocity
+filter ensuring the robot can always stop before sensed obstacles).</li>
+  <li>
+<strong>Headless core</strong>: the algorithms library has no GUI dependency.</li>
+</ul>
+
+<h2 id="quick-start">Quick start</h2>
+
+<p>Install the binary packages (ROS 2 Humble or newer):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>ros-<span class="nv">$ROS_DISTRO</span><span class="nt">-mrpt-path-planning</span>
+
+</code></pre></div></div>
+
+<p>Plan a path around some obstacles for a holonomic robot, using the example
+configuration files installed with the apps package:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> <span class="si">$(</span>ros2 pkg prefix mrpt_path_planning_apps<span class="si">)</span>/share/mrpt_path_planning_apps
+
+path-planner-cli <span class="se">\</span>
+  <span class="nt">-s</span> <span class="s2">"[0.5 0 0]"</span> <span class="nt">-g</span> <span class="s2">"[4.2 0.5 80]"</span> <span class="se">\</span>
+  <span class="nt">-c</span> ptgs_holonomic_robot.ini <span class="se">\</span>
+  <span class="nt">--obstacles</span> obstacles_01.txt <span class="se">\</span>
+  <span class="nt">--planner-parameters</span> mvsim-demo-astar-planner-params.yaml <span class="se">\</span>
+  <span class="nt">--play-animation</span>
+
+</code></pre></div></div>
+
+<h2 id="packages">Packages</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Package</th>
+      <th>Contents</th>
+      <th>Depend on it when…</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning_core</code></td>
+      <td>C++ library (namespace <code class="language-plaintext highlighter-rouge">mpp</code>): PTGs, planners, cost evaluators, <code class="language-plaintext highlighter-rouge">TrajectoryFollower</code>. Depends only on <code class="language-plaintext highlighter-rouge">mrpt_nav</code>, <code class="language-plaintext highlighter-rouge">mrpt_maps</code>, <code class="language-plaintext highlighter-rouge">mrpt_graphs</code>, <code class="language-plaintext highlighter-rouge">mrpt_containers</code>.</td>
+      <td>You only need the algorithms (most users).</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning_apps</code></td>
+      <td>
+<code class="language-plaintext highlighter-rouge">path-planner-cli</code>, <code class="language-plaintext highlighter-rouge">selfdriving-simulator-gui</code>, example config files. Adds <code class="language-plaintext highlighter-rouge">mrpt_gui</code>, <code class="language-plaintext highlighter-rouge">cli11</code>, <code class="language-plaintext highlighter-rouge">mvsim</code>.</td>
+      <td>You want the command-line and GUI tools.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mrpt_path_planning</code></td>
+      <td>Metapackage depending on the two above.</td>
+      <td>Backward compatibility with existing consumers.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>ROS 2 integration (planner and trajectory follower nodes) lives in
+<a href="https://github.com/mrpt-ros-pkg/mrpt_navigation">mrpt_navigation</a>.</p>
+
+<h2 id="using-the-library">Using the library</h2>
+
+<p>In <code class="language-plaintext highlighter-rouge">package.xml</code>:</p>
+
+<p>```xml</p>
+<depend>mrpt_path_planning_core</depend>
+
+<p>File truncated at 100 lines <a href="https://github.com/MRPT/mrpt_path_planning/tree/develop/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="noetic-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="noetic-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#noetic-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#noetic-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#noetic-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="noetic-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="noetic-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="noetic-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+
+<script type="text/javascript" src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+  $(function() {
+    setupContributeListTabLinks();
+  });
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+    setupContributeLists("https://github.com/MRPT/mrpt_path_planning.git");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2026-10-24</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
