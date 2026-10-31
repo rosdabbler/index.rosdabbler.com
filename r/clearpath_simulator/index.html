@@ -1,0 +1,2984 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>clearpath_simulator - ROS Repository Overview</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+    <meta name="robots" content="noindex">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/r/clearpath_simulator/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body >
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="https://docs.ros.org/en/rolling/Contact.html#support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="https://docs.ros.org/en/rolling/Contact.html#support"">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content" >
+      <div class="wrapper" >
+        <div class="container-fluid" style="margin-top:20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_repos=true">Repos</a></li>
+        <li class="active"></li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-primary" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-primary" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="lyrical-option" class="distro-button btn btn-xs btn-default" href="#lyrical" data="lyrical">
+      <input type="radio" name="options" id="lyrical-radio" autocomplete="off"> lyrical
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-default" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+        <li data="noetic" id="noetic-option" class="disabled older-distro-option"  href="#noetic">
+          <a href="#noetic" data="noetic" id="noetic-button">noetic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+        
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/clearpath_simulator/">clearpath_simulator</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_generator_gz/">clearpath_generator_gz</a>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_gz/">clearpath_gz</a>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_simulator/">clearpath_simulator</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>humble</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/clearpathrobotics/clearpath_simulator.git">https://github.com/clearpathrobotics/clearpath_simulator.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2024-09-19
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-success">
+          
+          DEVELOPED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/clearpath_simulator/#humble-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/clearpath_simulator/#humble-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/clearpath_simulator/#humble-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_generator_gz/">clearpath_generator_gz</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_gz/">clearpath_gz</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_simulator/">clearpath_simulator</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="clearpath_simulator">clearpath_simulator</h1>
+
+<h2 id="setup">Setup</h2>
+
+<p>Prerequisites:</p>
+<ul>
+  <li>Install <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html">ROS 2 Humble</a>
+</li>
+</ul>
+
+<h3 id="ignition-fortress">Ignition Fortress</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get update &amp;&amp; sudo apt-get install wget
+sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" &gt; /etc/apt/sources.list.d/gazebo-stable.list'
+wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
+sudo apt-get update &amp;&amp; sudo apt-get install ignition-fortress
+
+</code></pre></div></div>
+
+<h3 id="workspace">Workspace</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/clearpath_ws/src -p
+cd ~/clearpath_ws/src
+git clone https://github.com/clearpathrobotics/clearpath_simulator.git
+cd ~/clearpath_ws
+rosdep install -r --from-paths src -i -y
+colcon build --symlink-install
+
+</code></pre></div></div>
+
+<h3 id="setup-path">Setup path</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/clearpath
+
+</code></pre></div></div>
+
+<p>Copy your <code class="language-plaintext highlighter-rouge">robot.yaml</code> into <code class="language-plaintext highlighter-rouge">~/clearpath</code></p>
+
+<h2 id="launch">Launch</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 launch clearpath_gz simulation.launch.py
+
+</code></pre></div></div>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="humble-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="humble-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#humble-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="humble-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+        
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/clearpath_simulator/">clearpath_simulator</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_generator_gz/">clearpath_generator_gz</a>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_gz/">clearpath_gz</a>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_simulator/">clearpath_simulator</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>jazzy</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/clearpathrobotics/clearpath_simulator.git">https://github.com/clearpathrobotics/clearpath_simulator.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">jazzy</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-10-29
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-success">
+          
+          DEVELOPED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/clearpath_simulator/#jazzy-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/clearpath_simulator/#jazzy-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/clearpath_simulator/#jazzy-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_generator_gz/">clearpath_generator_gz</a></td>
+                    <td>2.9.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_gz/">clearpath_gz</a></td>
+                    <td>2.9.5</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_simulator/">clearpath_simulator</a></td>
+                    <td>2.9.5</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="clearpath_simulator">clearpath_simulator</h1>
+
+<p><code class="language-plaintext highlighter-rouge">clearpath_simulator</code> is the <strong>simulation</strong> half of the stack. It mirrors <code class="language-plaintext highlighter-rouge">clearpath_robot</code> but
+targets <a href="https://gazebosim.org">Gazebo</a> instead of real hardware, reusing the same <code class="language-plaintext highlighter-rouge">robot.yaml</code>,
+<code class="language-plaintext highlighter-rouge">clearpath_config</code> parser, and <code class="language-plaintext highlighter-rouge">clearpath_common</code> descriptions so a robot behaves the same in sim
+and on hardware.</p>
+
+<pre><code class="language-mermaid">flowchart LR
+    yaml["robot.yaml"] --&gt; config["clearpath_config"]
+    config --&gt; geng["clearpath_generator_gz&lt;br/&gt;(this repo)"]
+    geng --&gt; out["~/clearpath&lt;br/&gt;generated launch / params"]
+    common["clearpath_common&lt;br/&gt;description + control"] --&gt; gz
+    out --&gt; gz["clearpath_gz&lt;br/&gt;(this repo)"]
+    gz --&gt; sim["Gazebo simulation"]
+
+</code></pre>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">clearpath_generator_gz</code> — generates the Gazebo launch and parameter files from the parsed config.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">clearpath_gz</code> — simulation bringup, worlds, and assets (launched via <code class="language-plaintext highlighter-rouge">simulation.launch.py</code>).</li>
+</ul>
+
+<h2 id="documentation">Documentation</h2>
+
+<ul>
+  <li>
+<a href="https://docs.clearpathrobotics.com/docs/ros/tutorials/simulator/install">Install the simulator</a> and <a href="https://docs.clearpathrobotics.com/docs/ros/tutorials/simulator/simulate">run a simulation</a>.</li>
+  <li>
+<a href="https://docs.clearpathrobotics.com/docs/ros/tutorials/navigation_demos/overview">Navigation demos</a> — Nav2 / SLAM on top of the simulated robot.</li>
+  <li>
+<a href="https://docs.clearpathrobotics.com/docs/ros/config/generators">Generators</a> — how the simulation launch/param files are produced.</li>
+</ul>
+
+<h2 id="setup">Setup</h2>
+
+<p>Prerequisites:</p>
+
+<ul>
+  <li>Install <a href="https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debians.html">ROS 2 Jazzy</a>
+</li>
+</ul>
+
+<h3 id="gazebo-harmonic">Gazebo Harmonic</h3>
+
+<p>See <a href="https://gazebosim.org/docs/latest/ros_installation/">Gazebo Installation</a> for more information
+on installing Gazebo.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-<span class="k">${</span><span class="nv">ROS_DISTRO</span><span class="k">}</span><span class="nt">-ros-gz</span>
+
+</code></pre></div></div>
+
+<h3 id="workspace">Workspace</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> ~/clearpath_ws/src <span class="nt">-p</span>
+<span class="nb">cd</span> ~/clearpath_ws/src
+git clone https://github.com/clearpathrobotics/clearpath_simulator.git
+<span class="nb">cd</span> ~/clearpath_ws
+rosdep <span class="nb">install</span> <span class="nt">-r</span> <span class="nt">--from-paths</span> src <span class="nt">-i</span> <span class="nt">-y</span>
+colcon build <span class="nt">--symlink-install</span>
+
+</code></pre></div></div>
+
+<h3 id="setup-path">Setup path</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> ~/clearpath
+
+</code></pre></div></div>
+
+<p>Copy your <code class="language-plaintext highlighter-rouge">robot.yaml</code> into <code class="language-plaintext highlighter-rouge">~/clearpath</code></p>
+
+<h2 id="launch">Launch</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 launch clearpath_gz simulation.launch.py
+
+</code></pre></div></div>
+
+<h3 id="headless">Headless</h3>
+
+<p>To run Gazebo without the GUI (e.g. on a server or in CI), set <code class="language-plaintext highlighter-rouge">headless:=true</code>. This starts the
+Gazebo server only, with headless rendering so sensors still work without a display.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 launch clearpath_gz simulation.launch.py headless:<span class="o">=</span><span class="nb">true</span>
+
+</code></pre></div></div>
+
+<h2 id="worlds">Worlds</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">clearpath_gz</code> package includes several simulation worlds. To select a specific world, use the
+<code class="language-plaintext highlighter-rouge">world</code> launch parameter, e.g.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 launch clearpath_gz simulation.launch.py world:<span class="o">=</span>pipeline
+
+</code></pre></div></div>
+
+<p>Available worlds are:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>World</th>
+      <th>Description</th>
+      <th>Screenshots</th>
+      <th>Geographic Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">construction</code></td>
+      <td>The same floorplan as the <code class="language-plaintext highlighter-rouge">office</code> world, but under construction. Features non-solid walls and debris piles.</td>
+      <td><a href="https://github.com/clearpathrobotics/clearpath_simulator/tree/jazzy/docs/construction.md">construction screenshots</a></td>
+      <td>Waterloo ON, Canada</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">office</code></td>
+      <td>The same floorplan as the <code class="language-plaintext highlighter-rouge">construction</code> world. Features narrow hallways, doorways, meeting rooms, and loading docks.</td>
+      <td><a href="https://github.com/clearpathrobotics/clearpath_simulator/tree/jazzy/docs/office.md">office screenshots</a></td>
+      <td>Waterloo ON, Canada</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">orchard</code></td>
+      <td>An outdoor, agricultural environment featuring rows of trees. The terrain has small slopes, but is mostly flat.</td>
+      <td><a href="https://github.com/clearpathrobotics/clearpath_simulator/tree/jazzy/docs/orchard.md">orchard screenshots</a></td>
+      <td>Nikea, Greece</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">pipeline</code></td>
+      <td>A rugged, outdoor environment featuring steeper hills, a river and bridge, a small cave, solar panels, and a pipeline.</td>
+      <td><a href="https://github.com/clearpathrobotics/clearpath_simulator/tree/jazzy/docs/pipeline.md">pipeline screenshots</a></td>
+      <td>Northern Alberta, Canada</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">solar_farm</code></td>
+      <td>An outdoor, agricultural environment featuring gentle hills, a barn, rows of solar panels, and fences.</td>
+      <td><a href="https://github.com/clearpathrobotics/clearpath_simulator/tree/jazzy/docs/solar_farm.md">solar farm screenshots</a></td>
+      <td>Stonewall MB, Canada</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">warehouse</code> (default)</td>
+      <td>A flat, indoor warehouse environment. Features shelves and people.</td>
+      <td><a href="https://github.com/clearpathrobotics/clearpath_simulator/tree/jazzy/docs/warehouse.md">warehouse screenshots</a></td>
+      <td>Rio de Janeiro, Brazil</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="generator-tests">Generator Tests</h2>
+
+<p>Changes to the generators in this repository (<code class="language-plaintext highlighter-rouge">clearpath_generator_gz</code>) may affect the
+generated output for launch files and parameter files. The
+<a href="https://github.com/clearpathrobotics/clearpath_generator_tests">clearpath_generator_tests</a></p>
+
+<p>File truncated at 100 lines <a href="https://github.com/clearpathrobotics/clearpath_simulator/tree/jazzy/README.md">see the full file</a></p>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="contributing-to-clearpath_simulator">Contributing to clearpath_simulator</h1>
+
+<p>Thanks for your interest in improving <code class="language-plaintext highlighter-rouge">clearpath_simulator</code>! This is the <strong>simulation</strong> half of the
+stack: it mirrors <code class="language-plaintext highlighter-rouge">clearpath_robot</code> but targets <a href="https://gazebosim.org">Gazebo</a> instead of real
+hardware, reusing the same <code class="language-plaintext highlighter-rouge">robot.yaml</code>, <code class="language-plaintext highlighter-rouge">clearpath_config</code> parser, and <code class="language-plaintext highlighter-rouge">clearpath_common</code>
+descriptions so a robot behaves the same in sim and on hardware. Please read the notes below before
+opening a pull request.</p>
+
+<h2 id="getting-started">Getting started</h2>
+
+<ol>
+  <li>Fork the repository and clone your fork.</li>
+  <li>Create a feature branch off <code class="language-plaintext highlighter-rouge">jazzy</code>:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   git checkout <span class="nt">-b</span> my-feature jazzy
+   
+</code></pre></div></div>
+
+<ol>
+  <li>Install <a href="https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debians.html">ROS 2 Jazzy</a>
+and Gazebo, then build the workspace:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-<span class="k">${</span><span class="nv">ROS_DISTRO</span><span class="k">}</span><span class="nt">-ros-gz</span>
+   rosdep <span class="nb">install</span> <span class="nt">--from-paths</span> src <span class="nt">--ignore-src</span> <span class="nt">-r</span> <span class="nt">-y</span>
+   colcon build <span class="nt">--symlink-install</span>
+   <span class="nb">source install</span>/setup.bash
+   
+</code></pre></div></div>
+
+<ol>
+  <li>Install the pre-commit hooks (one-time setup):</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   pip <span class="nb">install </span>pre-commit
+   pre-commit <span class="nb">install</span>
+   
+</code></pre></div></div>
+
+<h2 id="linting">Linting</h2>
+
+<p>This repository uses <a href="https://pre-commit.com/">pre-commit</a> to run linting and formatting checks
+(trailing whitespace, end-of-file, YAML/JSON checks, <code class="language-plaintext highlighter-rouge">markdownlint</code>, and <code class="language-plaintext highlighter-rouge">flake8</code>) before each
+commit. Run them against the whole tree before pushing:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pre-commit run <span class="nt">--all-files</span>
+
+</code></pre></div></div>
+
+<h2 id="where-things-live">Where things live</h2>
+
+<ul>
+  <li>
+<a href="https://github.com/clearpathrobotics/clearpath_simulator/tree/jazzy/clearpath_generator_gz"><code class="language-plaintext highlighter-rouge">clearpath_generator_gz</code></a> — generates the Gazebo launch and parameter
+files from the parsed config.</li>
+  <li>
+<a href="https://github.com/clearpathrobotics/clearpath_simulator/tree/jazzy/clearpath_gz"><code class="language-plaintext highlighter-rouge">clearpath_gz</code></a> — simulation bringup, worlds, and assets (launched via
+<code class="language-plaintext highlighter-rouge">simulation.launch.py</code>).</li>
+</ul>
+
+<h2 id="testing-your-changes">Testing your changes</h2>
+
+<p>Launch a simulation and confirm your change behaves as expected:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 launch clearpath_gz simulation.launch.py
+
+</code></pre></div></div>
+
+<p>To test a specific world, use the <code class="language-plaintext highlighter-rouge">world</code> launch argument (see the <a href="https://github.com/clearpathrobotics/clearpath_simulator/tree/jazzy/README.md#worlds">Worlds section of the
+README</a> for the full list):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 launch clearpath_gz simulation.launch.py world:<span class="o">=</span>pipeline
+
+</code></pre></div></div>
+
+<p>Build and run any package tests through <code class="language-plaintext highlighter-rouge">colcon</code>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>colcon <span class="nb">test</span> <span class="nt">--packages-select</span> &lt;package_name&gt;
+colcon test-result <span class="nt">--verbose</span>
+
+</code></pre></div></div>
+
+<h2 id="generator-tests">Generator tests</h2>
+
+<p>Changes to the generators in this repository (<code class="language-plaintext highlighter-rouge">clearpath_generator_gz</code>) may affect the generated
+output for launch and parameter files. The
+<a href="https://github.com/clearpathrobotics/clearpath_generator_tests">clearpath_generator_tests</a>
+repository versions the expected output and validates it through CI.</p>
+
+<p>Before merging, ensure a corresponding branch with the <strong>same name</strong> exists in
+<code class="language-plaintext highlighter-rouge">clearpath_generator_tests</code> with regenerated samples. See the
+<a href="https://github.com/clearpathrobotics/clearpath_generator_tests#development-workflow">Development Workflow</a>
+section of that repository for the full process.</p>
+
+<h2 id="continuous-integration">Continuous integration</h2>
+
+<p>Every pull request runs <a href="https://github.com/clearpathrobotics/clearpath_simulator/tree/jazzy/.github/workflows/ci.yml"><code class="language-plaintext highlighter-rouge">clearpath_simulator_ci</code></a>. The jobs differ in
+whether or not they pick up <strong>upstream changes</strong> — commits on a branch with the <strong>same name</strong> as your
+branch in one of the repositories listed in <a href="https://github.com/clearpathrobotics/clearpath_simulator/tree/jazzy/dependencies.repos"><code class="language-plaintext highlighter-rouge">dependencies.repos</code></a> (for example
+<code class="language-plaintext highlighter-rouge">clearpath_common</code> or <code class="language-plaintext highlighter-rouge">clearpath_config</code>). The
+<a href="https://github.com/clearpathrobotics/repos-dep-update-action">repos-dep-update-action</a> swaps those
+matching branches in for the “Head Branch” jobs, so those are the jobs that reflect your upstream
+work.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Job</th>
+      <th>Sees your upstream branches?</th>
+      <th>Expected result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+<strong>jazzy</strong> (<code class="language-plaintext highlighter-rouge">testing</code>/<code class="language-plaintext highlighter-rouge">main</code>)</td>
+      <td>Not your feature branches, but builds against the live <code class="language-plaintext highlighter-rouge">testing</code>/<code class="language-plaintext highlighter-rouge">main</code> binaries</td>
+      <td>Can fail when upstream packages change/regress in the <code class="language-plaintext highlighter-rouge">testing</code>/<code class="language-plaintext highlighter-rouge">main</code> ROS repos or changes to Clearpath packages this depends on</td>
+    </tr>
+    <tr>
+      <td><strong>Jazzy Clearpath Source</strong></td>
+      <td>No — default <code class="language-plaintext highlighter-rouge">dependencies.repos</code> branches</td>
+      <td>Should pass; unaffected by unmerged upstream branches</td>
+    </tr>
+    <tr>
+      <td><strong>Jazzy Clearpath Source with Head Branch</strong></td>
+      <td>Yes — your matching upstream branches</td>
+      <td>Must pass; a failure means your upstream changes broke the build</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>File truncated at 100 lines <a href="https://github.com/clearpathrobotics/clearpath_simulator/tree/jazzy/CONTRIBUTING.md">see the full file</a></p>
+</div># Contributing to clearpath_simulator
+
+Thanks for your interest in improving `clearpath_simulator`! This is the **simulation** half of the
+stack: it mirrors `clearpath_robot` but targets [Gazebo](https://gazebosim.org) instead of real
+hardware, reusing the same `robot.yaml`, `clearpath_config` parser, and `clearpath_common`
+descriptions so a robot behaves the same in sim and on hardware. Please read the notes below before
+opening a pull request.
+
+## Getting started
+
+1. Fork the repository and clone your fork.
+2. Create a feature branch off `jazzy`:
+
+   
+```bash
+   git checkout -b my-feature jazzy
+   
+```
+
+3. Install [ROS 2 Jazzy](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debians.html)
+   and Gazebo, then build the workspace:
+
+   
+```bash
+   sudo apt-get install ros-${ROS_DISTRO}-ros-gz
+   rosdep install --from-paths src --ignore-src -r -y
+   colcon build --symlink-install
+   source install/setup.bash
+   
+```
+
+4. Install the pre-commit hooks (one-time setup):
+
+   
+```bash
+   pip install pre-commit
+   pre-commit install
+   
+```
+
+## Linting
+
+This repository uses [pre-commit](https://pre-commit.com/) to run linting and formatting checks
+(trailing whitespace, end-of-file, YAML/JSON checks, `markdownlint`, and `flake8`) before each
+commit. Run them against the whole tree before pushing:
+
+
+```bash
+pre-commit run --all-files
+
+```
+
+## Where things live
+
+- [`clearpath_generator_gz`](clearpath_generator_gz) — generates the Gazebo launch and parameter
+  files from the parsed config.
+- [`clearpath_gz`](clearpath_gz) — simulation bringup, worlds, and assets (launched via
+  `simulation.launch.py`).
+
+## Testing your changes
+
+Launch a simulation and confirm your change behaves as expected:
+
+
+```bash
+ros2 launch clearpath_gz simulation.launch.py
+
+```
+
+To test a specific world, use the `world` launch argument (see the [Worlds section of the
+README](README.md#worlds) for the full list):
+
+
+```bash
+ros2 launch clearpath_gz simulation.launch.py world:=pipeline
+
+```
+
+Build and run any package tests through `colcon`:
+
+
+```bash
+colcon test --packages-select <package_name>
+colcon test-result --verbose
+
+```
+
+## Generator tests
+
+Changes to the generators in this repository (`clearpath_generator_gz`) may affect the generated
+output for launch and parameter files. The
+[clearpath_generator_tests](https://github.com/clearpathrobotics/clearpath_generator_tests)
+repository versions the expected output and validates it through CI.
+
+Before merging, ensure a corresponding branch with the **same name** exists in
+`clearpath_generator_tests` with regenerated samples. See the
+[Development Workflow](https://github.com/clearpathrobotics/clearpath_generator_tests#development-workflow)
+section of that repository for the full process.
+
+## Continuous integration
+
+Every pull request runs [`clearpath_simulator_ci`](.github/workflows/ci.yml). The jobs differ in
+whether or not they pick up **upstream changes** — commits on a branch with the **same name** as your
+branch in one of the repositories listed in [`dependencies.repos`](dependencies.repos) (for example
+`clearpath_common` or `clearpath_config`). The
+[repos-dep-update-action](https://github.com/clearpathrobotics/repos-dep-update-action) swaps those
+matching branches in for the "Head Branch" jobs, so those are the jobs that reflect your upstream
+work.
+
+| Job | Sees your upstream branches? | Expected result |
+| --- | --- | --- |
+| **jazzy** (`testing`/`main`) | Not your feature branches, but builds against the live `testing`/`main` binaries | Can fail when upstream packages change/regress in the `testing`/`main` ROS repos or changes to Clearpath packages this depends on |
+| **Jazzy Clearpath Source** | No — default `dependencies.repos` branches | Should pass; unaffected by unmerged upstream branches |
+| **Jazzy Clearpath Source with Head Branch** | Yes — your matching upstream branches | Must pass; a failure means your upstream changes broke the build |
+
+File truncated at 100 lines [see the full file](https://github.com/clearpathrobotics/clearpath_simulator/tree/jazzy/CONTRIBUTING.md)
+            
+            <hr id="jazzy-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="jazzy-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#jazzy-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#jazzy-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#jazzy-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="jazzy-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="jazzy-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="jazzy-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>kilted</strong> showing <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/clearpath_simulator/">clearpath_simulator</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_generator_gz/">clearpath_generator_gz</a>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_gz/">clearpath_gz</a>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_simulator/">clearpath_simulator</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>humble</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/clearpathrobotics/clearpath_simulator.git">https://github.com/clearpathrobotics/clearpath_simulator.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2024-09-19
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-success">
+          
+          DEVELOPED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/clearpath_simulator/#kilted-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/clearpath_simulator/#kilted-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/clearpath_simulator/#kilted-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_generator_gz/">clearpath_generator_gz</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_gz/">clearpath_gz</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_simulator/">clearpath_simulator</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="clearpath_simulator">clearpath_simulator</h1>
+
+<h2 id="setup">Setup</h2>
+
+<p>Prerequisites:</p>
+<ul>
+  <li>Install <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html">ROS 2 Humble</a>
+</li>
+</ul>
+
+<h3 id="ignition-fortress">Ignition Fortress</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get update &amp;&amp; sudo apt-get install wget
+sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" &gt; /etc/apt/sources.list.d/gazebo-stable.list'
+wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
+sudo apt-get update &amp;&amp; sudo apt-get install ignition-fortress
+
+</code></pre></div></div>
+
+<h3 id="workspace">Workspace</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/clearpath_ws/src -p
+cd ~/clearpath_ws/src
+git clone https://github.com/clearpathrobotics/clearpath_simulator.git
+cd ~/clearpath_ws
+rosdep install -r --from-paths src -i -y
+colcon build --symlink-install
+
+</code></pre></div></div>
+
+<h3 id="setup-path">Setup path</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/clearpath
+
+</code></pre></div></div>
+
+<p>Copy your <code class="language-plaintext highlighter-rouge">robot.yaml</code> into <code class="language-plaintext highlighter-rouge">~/clearpath</code></p>
+
+<h2 id="launch">Launch</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 launch clearpath_gz simulation.launch.py
+
+</code></pre></div></div>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="humble-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="humble-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#humble-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="humble-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-lyrical">
+    <div class="container-fluid">
+      
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>lyrical</strong> showing <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/clearpath_simulator/">clearpath_simulator</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_generator_gz/">clearpath_generator_gz</a>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_gz/">clearpath_gz</a>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_simulator/">clearpath_simulator</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>humble</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/clearpathrobotics/clearpath_simulator.git">https://github.com/clearpathrobotics/clearpath_simulator.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2024-09-19
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-success">
+          
+          DEVELOPED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/clearpath_simulator/#lyrical-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/clearpath_simulator/#lyrical-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/clearpath_simulator/#lyrical-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_generator_gz/">clearpath_generator_gz</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_gz/">clearpath_gz</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_simulator/">clearpath_simulator</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="clearpath_simulator">clearpath_simulator</h1>
+
+<h2 id="setup">Setup</h2>
+
+<p>Prerequisites:</p>
+<ul>
+  <li>Install <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html">ROS 2 Humble</a>
+</li>
+</ul>
+
+<h3 id="ignition-fortress">Ignition Fortress</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get update &amp;&amp; sudo apt-get install wget
+sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" &gt; /etc/apt/sources.list.d/gazebo-stable.list'
+wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
+sudo apt-get update &amp;&amp; sudo apt-get install ignition-fortress
+
+</code></pre></div></div>
+
+<h3 id="workspace">Workspace</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/clearpath_ws/src -p
+cd ~/clearpath_ws/src
+git clone https://github.com/clearpathrobotics/clearpath_simulator.git
+cd ~/clearpath_ws
+rosdep install -r --from-paths src -i -y
+colcon build --symlink-install
+
+</code></pre></div></div>
+
+<h3 id="setup-path">Setup path</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/clearpath
+
+</code></pre></div></div>
+
+<p>Copy your <code class="language-plaintext highlighter-rouge">robot.yaml</code> into <code class="language-plaintext highlighter-rouge">~/clearpath</code></p>
+
+<h2 id="launch">Launch</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 launch clearpath_gz simulation.launch.py
+
+</code></pre></div></div>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="humble-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="humble-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#humble-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="humble-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>rolling</strong> showing <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/clearpath_simulator/">clearpath_simulator</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_generator_gz/">clearpath_generator_gz</a>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_gz/">clearpath_gz</a>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_simulator/">clearpath_simulator</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>humble</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/clearpathrobotics/clearpath_simulator.git">https://github.com/clearpathrobotics/clearpath_simulator.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2024-09-19
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-success">
+          
+          DEVELOPED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/clearpath_simulator/#rolling-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/clearpath_simulator/#rolling-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/clearpath_simulator/#rolling-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_generator_gz/">clearpath_generator_gz</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_gz/">clearpath_gz</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_simulator/">clearpath_simulator</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="clearpath_simulator">clearpath_simulator</h1>
+
+<h2 id="setup">Setup</h2>
+
+<p>Prerequisites:</p>
+<ul>
+  <li>Install <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html">ROS 2 Humble</a>
+</li>
+</ul>
+
+<h3 id="ignition-fortress">Ignition Fortress</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get update &amp;&amp; sudo apt-get install wget
+sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" &gt; /etc/apt/sources.list.d/gazebo-stable.list'
+wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
+sudo apt-get update &amp;&amp; sudo apt-get install ignition-fortress
+
+</code></pre></div></div>
+
+<h3 id="workspace">Workspace</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/clearpath_ws/src -p
+cd ~/clearpath_ws/src
+git clone https://github.com/clearpathrobotics/clearpath_simulator.git
+cd ~/clearpath_ws
+rosdep install -r --from-paths src -i -y
+colcon build --symlink-install
+
+</code></pre></div></div>
+
+<h3 id="setup-path">Setup path</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/clearpath
+
+</code></pre></div></div>
+
+<p>Copy your <code class="language-plaintext highlighter-rouge">robot.yaml</code> into <code class="language-plaintext highlighter-rouge">~/clearpath</code></p>
+
+<h2 id="launch">Launch</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 launch clearpath_gz simulation.launch.py
+
+</code></pre></div></div>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="humble-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="humble-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#humble-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="humble-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>github</strong> showing <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/clearpath_simulator/">clearpath_simulator</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_generator_gz/">clearpath_generator_gz</a>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_gz/">clearpath_gz</a>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_simulator/">clearpath_simulator</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>humble</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/clearpathrobotics/clearpath_simulator.git">https://github.com/clearpathrobotics/clearpath_simulator.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2024-09-19
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-success">
+          
+          DEVELOPED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/clearpath_simulator/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/clearpath_simulator/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/clearpath_simulator/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_generator_gz/">clearpath_generator_gz</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_gz/">clearpath_gz</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_simulator/">clearpath_simulator</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="clearpath_simulator">clearpath_simulator</h1>
+
+<h2 id="setup">Setup</h2>
+
+<p>Prerequisites:</p>
+<ul>
+  <li>Install <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html">ROS 2 Humble</a>
+</li>
+</ul>
+
+<h3 id="ignition-fortress">Ignition Fortress</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get update &amp;&amp; sudo apt-get install wget
+sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" &gt; /etc/apt/sources.list.d/gazebo-stable.list'
+wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
+sudo apt-get update &amp;&amp; sudo apt-get install ignition-fortress
+
+</code></pre></div></div>
+
+<h3 id="workspace">Workspace</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/clearpath_ws/src -p
+cd ~/clearpath_ws/src
+git clone https://github.com/clearpathrobotics/clearpath_simulator.git
+cd ~/clearpath_ws
+rosdep install -r --from-paths src -i -y
+colcon build --symlink-install
+
+</code></pre></div></div>
+
+<h3 id="setup-path">Setup path</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/clearpath
+
+</code></pre></div></div>
+
+<p>Copy your <code class="language-plaintext highlighter-rouge">robot.yaml</code> into <code class="language-plaintext highlighter-rouge">~/clearpath</code></p>
+
+<h2 id="launch">Launch</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 launch clearpath_gz simulation.launch.py
+
+</code></pre></div></div>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="humble-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="humble-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#humble-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="humble-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>galactic</strong> showing <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/clearpath_simulator/">clearpath_simulator</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_generator_gz/">clearpath_generator_gz</a>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_gz/">clearpath_gz</a>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_simulator/">clearpath_simulator</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>humble</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/clearpathrobotics/clearpath_simulator.git">https://github.com/clearpathrobotics/clearpath_simulator.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2024-09-19
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-success">
+          
+          DEVELOPED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/clearpath_simulator/#galactic-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/clearpath_simulator/#galactic-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/clearpath_simulator/#galactic-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_generator_gz/">clearpath_generator_gz</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_gz/">clearpath_gz</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_simulator/">clearpath_simulator</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="clearpath_simulator">clearpath_simulator</h1>
+
+<h2 id="setup">Setup</h2>
+
+<p>Prerequisites:</p>
+<ul>
+  <li>Install <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html">ROS 2 Humble</a>
+</li>
+</ul>
+
+<h3 id="ignition-fortress">Ignition Fortress</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get update &amp;&amp; sudo apt-get install wget
+sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" &gt; /etc/apt/sources.list.d/gazebo-stable.list'
+wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
+sudo apt-get update &amp;&amp; sudo apt-get install ignition-fortress
+
+</code></pre></div></div>
+
+<h3 id="workspace">Workspace</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/clearpath_ws/src -p
+cd ~/clearpath_ws/src
+git clone https://github.com/clearpathrobotics/clearpath_simulator.git
+cd ~/clearpath_ws
+rosdep install -r --from-paths src -i -y
+colcon build --symlink-install
+
+</code></pre></div></div>
+
+<h3 id="setup-path">Setup path</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/clearpath
+
+</code></pre></div></div>
+
+<p>Copy your <code class="language-plaintext highlighter-rouge">robot.yaml</code> into <code class="language-plaintext highlighter-rouge">~/clearpath</code></p>
+
+<h2 id="launch">Launch</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 launch clearpath_gz simulation.launch.py
+
+</code></pre></div></div>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="humble-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="humble-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#humble-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="humble-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>iron</strong> showing <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/clearpath_simulator/">clearpath_simulator</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_generator_gz/">clearpath_generator_gz</a>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_gz/">clearpath_gz</a>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_simulator/">clearpath_simulator</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>humble</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/clearpathrobotics/clearpath_simulator.git">https://github.com/clearpathrobotics/clearpath_simulator.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2024-09-19
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-success">
+          
+          DEVELOPED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/clearpath_simulator/#iron-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/clearpath_simulator/#iron-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/clearpath_simulator/#iron-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_generator_gz/">clearpath_generator_gz</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_gz/">clearpath_gz</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_simulator/">clearpath_simulator</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="clearpath_simulator">clearpath_simulator</h1>
+
+<h2 id="setup">Setup</h2>
+
+<p>Prerequisites:</p>
+<ul>
+  <li>Install <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html">ROS 2 Humble</a>
+</li>
+</ul>
+
+<h3 id="ignition-fortress">Ignition Fortress</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get update &amp;&amp; sudo apt-get install wget
+sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" &gt; /etc/apt/sources.list.d/gazebo-stable.list'
+wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
+sudo apt-get update &amp;&amp; sudo apt-get install ignition-fortress
+
+</code></pre></div></div>
+
+<h3 id="workspace">Workspace</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/clearpath_ws/src -p
+cd ~/clearpath_ws/src
+git clone https://github.com/clearpathrobotics/clearpath_simulator.git
+cd ~/clearpath_ws
+rosdep install -r --from-paths src -i -y
+colcon build --symlink-install
+
+</code></pre></div></div>
+
+<h3 id="setup-path">Setup path</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/clearpath
+
+</code></pre></div></div>
+
+<p>Copy your <code class="language-plaintext highlighter-rouge">robot.yaml</code> into <code class="language-plaintext highlighter-rouge">~/clearpath</code></p>
+
+<h2 id="launch">Launch</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 launch clearpath_gz simulation.launch.py
+
+</code></pre></div></div>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="humble-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="humble-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#humble-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="humble-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>melodic</strong> showing <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/clearpath_simulator/">clearpath_simulator</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_generator_gz/">clearpath_generator_gz</a>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_gz/">clearpath_gz</a>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_simulator/">clearpath_simulator</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>humble</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/clearpathrobotics/clearpath_simulator.git">https://github.com/clearpathrobotics/clearpath_simulator.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2024-09-19
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-success">
+          
+          DEVELOPED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/clearpath_simulator/#melodic-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/clearpath_simulator/#melodic-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/clearpath_simulator/#melodic-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_generator_gz/">clearpath_generator_gz</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_gz/">clearpath_gz</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_simulator/">clearpath_simulator</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="clearpath_simulator">clearpath_simulator</h1>
+
+<h2 id="setup">Setup</h2>
+
+<p>Prerequisites:</p>
+<ul>
+  <li>Install <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html">ROS 2 Humble</a>
+</li>
+</ul>
+
+<h3 id="ignition-fortress">Ignition Fortress</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get update &amp;&amp; sudo apt-get install wget
+sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" &gt; /etc/apt/sources.list.d/gazebo-stable.list'
+wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
+sudo apt-get update &amp;&amp; sudo apt-get install ignition-fortress
+
+</code></pre></div></div>
+
+<h3 id="workspace">Workspace</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/clearpath_ws/src -p
+cd ~/clearpath_ws/src
+git clone https://github.com/clearpathrobotics/clearpath_simulator.git
+cd ~/clearpath_ws
+rosdep install -r --from-paths src -i -y
+colcon build --symlink-install
+
+</code></pre></div></div>
+
+<h3 id="setup-path">Setup path</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/clearpath
+
+</code></pre></div></div>
+
+<p>Copy your <code class="language-plaintext highlighter-rouge">robot.yaml</code> into <code class="language-plaintext highlighter-rouge">~/clearpath</code></p>
+
+<h2 id="launch">Launch</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 launch clearpath_gz simulation.launch.py
+
+</code></pre></div></div>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="humble-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="humble-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#humble-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="humble-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>noetic</strong> showing <strong>humble</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/clearpath_simulator/">clearpath_simulator</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_generator_gz/">clearpath_generator_gz</a>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_gz/">clearpath_gz</a>
+        
+        <a class="label label-primary pkg-label" href="/p/clearpath_simulator/">clearpath_simulator</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>humble</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/clearpathrobotics/clearpath_simulator.git">https://github.com/clearpathrobotics/clearpath_simulator.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">main</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2024-09-19
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          
+            <span class="label label-success">
+          
+          DEVELOPED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-primary"><span class="glyphicon glyphicon-flash"></span> RELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/clearpath_simulator/#noetic-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/clearpath_simulator/#noetic-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/clearpath_simulator/#noetic-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_generator_gz/">clearpath_generator_gz</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_gz/">clearpath_gz</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/clearpath_simulator/">clearpath_simulator</a></td>
+                    <td>0.3.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="clearpath_simulator">clearpath_simulator</h1>
+
+<h2 id="setup">Setup</h2>
+
+<p>Prerequisites:</p>
+<ul>
+  <li>Install <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html">ROS 2 Humble</a>
+</li>
+</ul>
+
+<h3 id="ignition-fortress">Ignition Fortress</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get update &amp;&amp; sudo apt-get install wget
+sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" &gt; /etc/apt/sources.list.d/gazebo-stable.list'
+wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
+sudo apt-get update &amp;&amp; sudo apt-get install ignition-fortress
+
+</code></pre></div></div>
+
+<h3 id="workspace">Workspace</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/clearpath_ws/src -p
+cd ~/clearpath_ws/src
+git clone https://github.com/clearpathrobotics/clearpath_simulator.git
+cd ~/clearpath_ws
+rosdep install -r --from-paths src -i -y
+colcon build --symlink-install
+
+</code></pre></div></div>
+
+<h3 id="setup-path">Setup path</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/clearpath
+
+</code></pre></div></div>
+
+<p>Copy your <code class="language-plaintext highlighter-rouge">robot.yaml</code> into <code class="language-plaintext highlighter-rouge">~/clearpath</code></p>
+
+<h2 id="launch">Launch</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ros2 launch clearpath_gz simulation.launch.py
+
+</code></pre></div></div>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="humble-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="humble-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#humble-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#humble-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="humble-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="humble-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+
+<script type="text/javascript" src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+  $(function() {
+    setupContributeListTabLinks();
+  });
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+    setupContributeLists("https://github.com/clearpathrobotics/clearpath_simulator.git");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2026-10-31</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,3326 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>px4-mpc - ROS Repository Overview</title>
+    <meta name="description" content="a community-maintained index of robotics software
+">
+    <meta name="robots" content="noindex">
+
+    
+    <link rel="canonical" href="http://index.rosdabbler.com/r/px4-mpc/">
+    
+    
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/rosindex_logo.svg">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    
+
+    
+
+    <script type="text/javascript" src=/js/jquery.js></script>
+    <script src=/bootstrap/js/bootstrap.min.js type="text/javascript"></script>
+    <script src=/js/jquery-cookie.js type="text/javascript"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVD5Z6G6NH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EVD5Z6G6NH');
+</script>
+
+    <script type="text/javascript" src=/js/toc.js></script>
+    <script src=/js/distro_switch.js></script>
+  </head>
+
+  <body >
+
+    <header class="site-header">
+
+  <div class="wrapper">
+    <div class="container-fluid" style="margin-bottom: 10px">
+      <div class="row">
+        <!-- title -->
+        <div class="col-xs-3" style="white-space:nowrap">
+          <a class="site-title" href="/">
+            <img src="/assets/rosindex_logo.svg" width="26" height="26" alt="ROS index logo" style="padding-bottom: 3px"/>
+            ROS Index</a>
+        </div>
+        <!-- main internal links -->
+        <div class="col-xs-6 text-center" style="padding:0px">
+          <div class="btn-group hidden-xs" role="group" aria-label="..." style="padding: 6px">
+            <div class="btn-group" role="group">
+              <a href="/?search_packages=true" class="btn btn-default" role="button">Package List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/?search_repos=true" class="btn btn-default" role="button">Repository List</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="/search_deps" class="btn btn-default" role="button">System Dependencies</a>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md hidden-sm">
+            <button id="hLabel" class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Lists <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="hLabel">
+              <li><a href="/?search_packages=true">Package List</a></li>
+              <li><a href="/?search_repos=true">Repository List</a></li>
+              <li><a href="/search_deps">System Dependencies</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- additional links -->
+        <div class="col-xs-3 text-right" style="white-space:nowrap; padding:0px">
+          <ul class="list-inline" style="margin-bottom:0px;">
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="rLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ROS Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="rLabel">
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="https://docs.ros.org/en/rolling/Contact.html#support">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-xs hidden-sm">
+              <button id="aLabel" class="btn btn-link" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="aLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+              </ul>
+            </li>
+            <li class="dropdown hidden-md hidden-lg">
+              <button id="qLabel" class="btn btn-link" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="qLabel">
+                <li><a href="/about">About </a></li>
+                <li><a href="/contribute">Contribute</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/stats">Stats</a></li>
+                <hr style="margin:7px" />
+                <li><a href="http://docs.ros.org/">Documentation</a></li>
+                <li><a href="https://docs.ros.org/en/rolling/Contact.html#support"">Support</a></li>
+                <li><a href="http://discourse.ros.org/">Discussion Forum</a></li>
+                <li><a href="http://status.ros.org/">Service Status</a></li>
+                <li><a href="https://robotics.stackexchange.com/questions/tagged/ros">ros @ Robotics Stack Exchange</a></li>
+                <li><a href="https://docs.ros.org/en/ros2_packages/">Package API</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="page-content" >
+      <div class="wrapper" >
+        <div class="container-fluid" style="margin-top:20px">
+  <div class="container-fluid">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><a href="/?search_repos=true">Repos</a></li>
+        <li class="active"></li>
+      </ol>
+    </div>
+    <div class="row">
+      
+
+<div id="distro-switch" class="btn-group btn-group-justified" data-toggle="buttons">
+  
+    <label id="humble-option" class="distro-button btn btn-xs btn-default" href="#humble" data="humble">
+      <input type="radio" name="options" id="humble-radio" autocomplete="off"> humble
+    </label>
+  
+    <label id="jazzy-option" class="distro-button btn btn-xs btn-default" href="#jazzy" data="jazzy">
+      <input type="radio" name="options" id="jazzy-radio" autocomplete="off"> jazzy
+    </label>
+  
+    <label id="kilted-option" class="distro-button btn btn-xs btn-default" href="#kilted" data="kilted">
+      <input type="radio" name="options" id="kilted-radio" autocomplete="off"> kilted
+    </label>
+  
+    <label id="lyrical-option" class="distro-button btn btn-xs btn-default" href="#lyrical" data="lyrical">
+      <input type="radio" name="options" id="lyrical-radio" autocomplete="off"> lyrical
+    </label>
+  
+    <label id="rolling-option" class="distro-button btn btn-xs btn-default" href="#rolling" data="rolling">
+      <input type="radio" name="options" id="rolling-radio" autocomplete="off"> rolling
+    </label>
+  
+    <label id="github-option" class="distro-button btn btn-xs btn-primary" href="#github" data="github">
+      <input type="radio" name="options" id="github-radio" autocomplete="off"> github
+    </label>
+  
+
+  <!-- Older distros -->
+  <div class="btn-group dropdown">
+    <label type="button" class="btn btn-xs dropdown-toggle btn-default" data-toggle="dropdown" id="older-distro-button">
+        <input type="radio" name="options" autocomplete="off">
+      <span id="older-label">Older</span>
+      <span class="caret"></span>
+    </label>
+    <ul class="dropdown-menu" role="menu">
+      
+        <li data="galactic" id="galactic-option" class="disabled older-distro-option"  href="#galactic">
+          <a href="#galactic" data="galactic" id="galactic-button">galactic</a>
+        </li>
+      
+        <li data="iron" id="iron-option" class="disabled older-distro-option"  href="#iron">
+          <a href="#iron" data="iron" id="iron-button">iron</a>
+        </li>
+      
+        <li data="melodic" id="melodic-option" class="disabled older-distro-option"  href="#melodic">
+          <a href="#melodic" data="melodic" id="melodic-button">melodic</a>
+        </li>
+      
+        <li data="noetic" id="noetic-option" class="disabled older-distro-option"  href="#noetic">
+          <a href="#noetic" data="noetic" id="noetic-button">noetic</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="row">
+      &nbsp;
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="distro distro-humble">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>humble</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/px4-mpc/">px4-mpc</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/mpc_msgs/">mpc_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/px4_mpc/">px4_mpc</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/discower/px4-mpc.git">https://github.com/discower/px4-mpc.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">master</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-09-27
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/px4-mpc/#humble-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/px4-mpc/#humble-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/px4-mpc/#humble-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/mpc_msgs/">mpc_msgs</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/px4_mpc/">px4_mpc</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="px4-mpc">PX4 MPC</h1>
+
+<p>Model Predictive Control (MPC) for spacecraft and multirotors running on <a href="https://px4.io/">PX4 Autopilot</a>, integrated with <a href="https://ros.org/">ROS 2</a>.</p>
+
+<p><img src="https://github.com/user-attachments/assets/6713b8e6-815f-42fe-b3a0-51708d3416e5" alt="px4-mpc"></p>
+
+<p>This package runs MPC controllers as ROS 2 nodes that talk to PX4 through the uXRCE-DDS bridge. The controllers read vehicle states from PX4 and send setpoints back in offboard mode. The optimal control problems are built and solved with the <a href="https://github.com/acados/acados">acados framework</a>.</p>
+
+<p>The main vehicle is the <a href="https://atmos.discower.io/">ATMOS</a> free-flyer spacecraft. Its controller has several control modes, from body rates and wrench commands down to direct thruster allocation. A quadrotor (<code class="language-plaintext highlighter-rouge">x500</code>) example is also included. Setpoints can be set interactively in RViz or come from a predefined setpoint node.</p>
+
+<h2 id="citation">Citation</h2>
+
+<p>If you find this package useful in academic work, please cite:</p>
+
+<p>P. Roque, S. Phodapol, E. Krantz, J. Lim, J. Verhagen, F. Jiang, D. Dorner, R. Siegwart, I. Stenius, G. Tibert, H. Mao, J. Tumova, C. Fuglesang and D. V. Dimarogonas,
+“Towards Open-Source and Modular Space Systems with ATMOS,”
+<em>arXiv preprint arXiv:2501.16973</em>, 2025.</p>
+
+<p><a href="https://arxiv.org/abs/2501.16973">arXiv</a></p>
+
+<details>
+<summary>BibTeX</summary>
+
+<pre><code>@article{roque2025towards,
+  title={Towards Open-Source and Modular Space Systems with ATMOS},
+  author={Roque, Pedro and Phodapol, Sujet and Krantz, Elias and Lim, Jaeyoung and Verhagen, Joris and Jiang, Frank and Dorner, David and Siegwart, Roland and Stenius, Ivan and Tibert, Gunnar and others},
+  journal={arXiv preprint arXiv:2501.16973},
+  year={2025}
+}
+</code></pre>
+
+</details>
+
+<h2 id="quick-start">Quick Start</h2>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<ul>
+  <li>ROS 2 (e.g. <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html">Humble</a>)</li>
+  <li>
+<a href="https://docs.acados.org/installation/">acados</a> and its <a href="https://docs.acados.org/python_interface/index.html">Python interface</a>
+</li>
+  <li>PX4 SITL with ROS 2 support, set up by following the <a href="https://docs.px4.io/main/en/ros/ros2_comm.html">PX4 ROS 2 guide</a> (this includes the Micro XRCE-DDS Agent)</li>
+  <li>For the spacecraft: the ATMOS simulation, set up by following the <a href="https://atmos.discower.io/pages/Simulation/">ATMOS simulation guide</a>
+</li>
+  <li>(Optional) <a href="https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html">QGroundControl</a>
+</li>
+</ul>
+
+<h3 id="install">Install</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/ros2_ws/src
+<span class="nb">cd</span> ~/ros2_ws/src
+git clone https://github.com/PX4/px4_msgs.git              <span class="c"># PX4 messages for communication with PX4 DDS</span>
+git clone https://github.com/DISCOWER/px4-offboard.git     <span class="c"># RViz interface and setpoint generation</span>
+git clone https://github.com/DISCOWER/px4-mpc.git          <span class="c"># this package</span>
+<span class="nb">cd</span> ..
+
+</code></pre></div></div>
+
+<p>Install the remaining dependencies (ROS 2 packages, NumPy, SciPy, CasADi, python-control, …) with <a href="https://docs.ros.org/en/humble/Tutorials/Intermediate/Rosdep.html">rosdep</a>. If you have never used rosdep before, run <code class="language-plaintext highlighter-rouge">sudo rosdep init</code> first.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rosdep update
+rosdep <span class="nb">install</span> <span class="nt">--from-paths</span> src <span class="nt">--ignore-src</span> <span class="nt">-y</span>
+
+</code></pre></div></div>
+
+<p>Build the workspace:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>colcon build <span class="nt">--packages-up-to</span> px4_mpc
+<span class="nb">source install</span>/setup.bash  <span class="c"># use setup.zsh for zsh users</span>
+
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Note:</strong> rosdep does not install acados. Install it and its Python interface as described in <a href="https://github.com/discower/px4-mpc/tree/master/#prerequisites">Prerequisites</a>.</p>
+</blockquote>
+
+<p>For the <code class="language-plaintext highlighter-rouge">propeller</code> control mode, also clone <a href="https://github.com/DISCOWER/atmos_propeller_plate_interface">atmos_propeller_plate_interface</a> into <code class="language-plaintext highlighter-rouge">~/ros2_ws/src</code>, rerun the <code class="language-plaintext highlighter-rouge">rosdep install</code> command above, and build it:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>colcon build <span class="nt">--packages-up-to</span> px4_mpc propeller_plate_iface
+
+</code></pre></div></div>
+
+<h3 id="px4-setup">PX4 Setup</h3>
+
+<p><strong>DDS topics:</strong> the PX4 topics exposed to ROS 2 are configured in <code class="language-plaintext highlighter-rouge">PX4-Autopilot/src/modules/uxrce_dds_client/dds_topics.yaml</code>. Edit this file if you need additional topics.</p>
+
+<p><strong>Arming and mode switching:</strong> by default, PX4 expects RC inputs and a QGroundControl (QGC) connection before it allows arming and mode switching. These are the recommended settings for real deployments. Set up either QGC or a headless configuration before running the examples. Both options below describe how to switch to offboard mode and arm the vehicle.</p>
+
+<details>
+<summary>With QGC (recommended)</summary>
+
+1. Open QGroundControl.
+2. Click the QGroundControl icon in the top left corner and open "Application Settings".
+3. Under the "Fly View" tab, scroll down to "Virtual Joysticks" and enable them by clicking the slider to the right of "Enabled".
+4. Make sure that auto-center throttle is disabled.
+5. Click "Exit Application Settings" in the top left corner to return to the Fly View screen.
+
+To start the MPC, select "Offboard" in the flight mode menu in the top toolbar, then arm the vehicle.
+
+&gt; **Important:** Before arming the vehicle, make sure that the throttle (left vertical joystick) is at the lowest position.
+
+</details>
+
+<details>
+<summary>Headless (no QGC)</summary>
+
+&gt; **Warning:** Do this at your own risk. We recommend using QGC to keep hardware and software setups consistent.
+
+Disable the RC check and the QGC connection requirement by setting the following parameters in the PX4 SITL terminal:
+
+File truncated at 100 lines [see the full file](https://github.com/discower/px4-mpc/tree/master/README.md)
+</details>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-jazzy">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>jazzy</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/px4-mpc/">px4-mpc</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/mpc_msgs/">mpc_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/px4_mpc/">px4_mpc</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/discower/px4-mpc.git">https://github.com/discower/px4-mpc.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">master</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-09-27
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/px4-mpc/#jazzy-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/px4-mpc/#jazzy-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/px4-mpc/#jazzy-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/mpc_msgs/">mpc_msgs</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/px4_mpc/">px4_mpc</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="px4-mpc">PX4 MPC</h1>
+
+<p>Model Predictive Control (MPC) for spacecraft and multirotors running on <a href="https://px4.io/">PX4 Autopilot</a>, integrated with <a href="https://ros.org/">ROS 2</a>.</p>
+
+<p><img src="https://github.com/user-attachments/assets/6713b8e6-815f-42fe-b3a0-51708d3416e5" alt="px4-mpc"></p>
+
+<p>This package runs MPC controllers as ROS 2 nodes that talk to PX4 through the uXRCE-DDS bridge. The controllers read vehicle states from PX4 and send setpoints back in offboard mode. The optimal control problems are built and solved with the <a href="https://github.com/acados/acados">acados framework</a>.</p>
+
+<p>The main vehicle is the <a href="https://atmos.discower.io/">ATMOS</a> free-flyer spacecraft. Its controller has several control modes, from body rates and wrench commands down to direct thruster allocation. A quadrotor (<code class="language-plaintext highlighter-rouge">x500</code>) example is also included. Setpoints can be set interactively in RViz or come from a predefined setpoint node.</p>
+
+<h2 id="citation">Citation</h2>
+
+<p>If you find this package useful in academic work, please cite:</p>
+
+<p>P. Roque, S. Phodapol, E. Krantz, J. Lim, J. Verhagen, F. Jiang, D. Dorner, R. Siegwart, I. Stenius, G. Tibert, H. Mao, J. Tumova, C. Fuglesang and D. V. Dimarogonas,
+“Towards Open-Source and Modular Space Systems with ATMOS,”
+<em>arXiv preprint arXiv:2501.16973</em>, 2025.</p>
+
+<p><a href="https://arxiv.org/abs/2501.16973">arXiv</a></p>
+
+<details>
+<summary>BibTeX</summary>
+
+<pre><code>@article{roque2025towards,
+  title={Towards Open-Source and Modular Space Systems with ATMOS},
+  author={Roque, Pedro and Phodapol, Sujet and Krantz, Elias and Lim, Jaeyoung and Verhagen, Joris and Jiang, Frank and Dorner, David and Siegwart, Roland and Stenius, Ivan and Tibert, Gunnar and others},
+  journal={arXiv preprint arXiv:2501.16973},
+  year={2025}
+}
+</code></pre>
+
+</details>
+
+<h2 id="quick-start">Quick Start</h2>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<ul>
+  <li>ROS 2 (e.g. <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html">Humble</a>)</li>
+  <li>
+<a href="https://docs.acados.org/installation/">acados</a> and its <a href="https://docs.acados.org/python_interface/index.html">Python interface</a>
+</li>
+  <li>PX4 SITL with ROS 2 support, set up by following the <a href="https://docs.px4.io/main/en/ros/ros2_comm.html">PX4 ROS 2 guide</a> (this includes the Micro XRCE-DDS Agent)</li>
+  <li>For the spacecraft: the ATMOS simulation, set up by following the <a href="https://atmos.discower.io/pages/Simulation/">ATMOS simulation guide</a>
+</li>
+  <li>(Optional) <a href="https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html">QGroundControl</a>
+</li>
+</ul>
+
+<h3 id="install">Install</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/ros2_ws/src
+<span class="nb">cd</span> ~/ros2_ws/src
+git clone https://github.com/PX4/px4_msgs.git              <span class="c"># PX4 messages for communication with PX4 DDS</span>
+git clone https://github.com/DISCOWER/px4-offboard.git     <span class="c"># RViz interface and setpoint generation</span>
+git clone https://github.com/DISCOWER/px4-mpc.git          <span class="c"># this package</span>
+<span class="nb">cd</span> ..
+
+</code></pre></div></div>
+
+<p>Install the remaining dependencies (ROS 2 packages, NumPy, SciPy, CasADi, python-control, …) with <a href="https://docs.ros.org/en/humble/Tutorials/Intermediate/Rosdep.html">rosdep</a>. If you have never used rosdep before, run <code class="language-plaintext highlighter-rouge">sudo rosdep init</code> first.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rosdep update
+rosdep <span class="nb">install</span> <span class="nt">--from-paths</span> src <span class="nt">--ignore-src</span> <span class="nt">-y</span>
+
+</code></pre></div></div>
+
+<p>Build the workspace:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>colcon build <span class="nt">--packages-up-to</span> px4_mpc
+<span class="nb">source install</span>/setup.bash  <span class="c"># use setup.zsh for zsh users</span>
+
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Note:</strong> rosdep does not install acados. Install it and its Python interface as described in <a href="https://github.com/discower/px4-mpc/tree/master/#prerequisites">Prerequisites</a>.</p>
+</blockquote>
+
+<p>For the <code class="language-plaintext highlighter-rouge">propeller</code> control mode, also clone <a href="https://github.com/DISCOWER/atmos_propeller_plate_interface">atmos_propeller_plate_interface</a> into <code class="language-plaintext highlighter-rouge">~/ros2_ws/src</code>, rerun the <code class="language-plaintext highlighter-rouge">rosdep install</code> command above, and build it:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>colcon build <span class="nt">--packages-up-to</span> px4_mpc propeller_plate_iface
+
+</code></pre></div></div>
+
+<h3 id="px4-setup">PX4 Setup</h3>
+
+<p><strong>DDS topics:</strong> the PX4 topics exposed to ROS 2 are configured in <code class="language-plaintext highlighter-rouge">PX4-Autopilot/src/modules/uxrce_dds_client/dds_topics.yaml</code>. Edit this file if you need additional topics.</p>
+
+<p><strong>Arming and mode switching:</strong> by default, PX4 expects RC inputs and a QGroundControl (QGC) connection before it allows arming and mode switching. These are the recommended settings for real deployments. Set up either QGC or a headless configuration before running the examples. Both options below describe how to switch to offboard mode and arm the vehicle.</p>
+
+<details>
+<summary>With QGC (recommended)</summary>
+
+1. Open QGroundControl.
+2. Click the QGroundControl icon in the top left corner and open "Application Settings".
+3. Under the "Fly View" tab, scroll down to "Virtual Joysticks" and enable them by clicking the slider to the right of "Enabled".
+4. Make sure that auto-center throttle is disabled.
+5. Click "Exit Application Settings" in the top left corner to return to the Fly View screen.
+
+To start the MPC, select "Offboard" in the flight mode menu in the top toolbar, then arm the vehicle.
+
+&gt; **Important:** Before arming the vehicle, make sure that the throttle (left vertical joystick) is at the lowest position.
+
+</details>
+
+<details>
+<summary>Headless (no QGC)</summary>
+
+&gt; **Warning:** Do this at your own risk. We recommend using QGC to keep hardware and software setups consistent.
+
+Disable the RC check and the QGC connection requirement by setting the following parameters in the PX4 SITL terminal:
+
+File truncated at 100 lines [see the full file](https://github.com/discower/px4-mpc/tree/master/README.md)
+</details>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-kilted">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>kilted</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/px4-mpc/">px4-mpc</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/mpc_msgs/">mpc_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/px4_mpc/">px4_mpc</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/discower/px4-mpc.git">https://github.com/discower/px4-mpc.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">master</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-09-27
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/px4-mpc/#kilted-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/px4-mpc/#kilted-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/px4-mpc/#kilted-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/mpc_msgs/">mpc_msgs</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/px4_mpc/">px4_mpc</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="px4-mpc">PX4 MPC</h1>
+
+<p>Model Predictive Control (MPC) for spacecraft and multirotors running on <a href="https://px4.io/">PX4 Autopilot</a>, integrated with <a href="https://ros.org/">ROS 2</a>.</p>
+
+<p><img src="https://github.com/user-attachments/assets/6713b8e6-815f-42fe-b3a0-51708d3416e5" alt="px4-mpc"></p>
+
+<p>This package runs MPC controllers as ROS 2 nodes that talk to PX4 through the uXRCE-DDS bridge. The controllers read vehicle states from PX4 and send setpoints back in offboard mode. The optimal control problems are built and solved with the <a href="https://github.com/acados/acados">acados framework</a>.</p>
+
+<p>The main vehicle is the <a href="https://atmos.discower.io/">ATMOS</a> free-flyer spacecraft. Its controller has several control modes, from body rates and wrench commands down to direct thruster allocation. A quadrotor (<code class="language-plaintext highlighter-rouge">x500</code>) example is also included. Setpoints can be set interactively in RViz or come from a predefined setpoint node.</p>
+
+<h2 id="citation">Citation</h2>
+
+<p>If you find this package useful in academic work, please cite:</p>
+
+<p>P. Roque, S. Phodapol, E. Krantz, J. Lim, J. Verhagen, F. Jiang, D. Dorner, R. Siegwart, I. Stenius, G. Tibert, H. Mao, J. Tumova, C. Fuglesang and D. V. Dimarogonas,
+“Towards Open-Source and Modular Space Systems with ATMOS,”
+<em>arXiv preprint arXiv:2501.16973</em>, 2025.</p>
+
+<p><a href="https://arxiv.org/abs/2501.16973">arXiv</a></p>
+
+<details>
+<summary>BibTeX</summary>
+
+<pre><code>@article{roque2025towards,
+  title={Towards Open-Source and Modular Space Systems with ATMOS},
+  author={Roque, Pedro and Phodapol, Sujet and Krantz, Elias and Lim, Jaeyoung and Verhagen, Joris and Jiang, Frank and Dorner, David and Siegwart, Roland and Stenius, Ivan and Tibert, Gunnar and others},
+  journal={arXiv preprint arXiv:2501.16973},
+  year={2025}
+}
+</code></pre>
+
+</details>
+
+<h2 id="quick-start">Quick Start</h2>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<ul>
+  <li>ROS 2 (e.g. <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html">Humble</a>)</li>
+  <li>
+<a href="https://docs.acados.org/installation/">acados</a> and its <a href="https://docs.acados.org/python_interface/index.html">Python interface</a>
+</li>
+  <li>PX4 SITL with ROS 2 support, set up by following the <a href="https://docs.px4.io/main/en/ros/ros2_comm.html">PX4 ROS 2 guide</a> (this includes the Micro XRCE-DDS Agent)</li>
+  <li>For the spacecraft: the ATMOS simulation, set up by following the <a href="https://atmos.discower.io/pages/Simulation/">ATMOS simulation guide</a>
+</li>
+  <li>(Optional) <a href="https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html">QGroundControl</a>
+</li>
+</ul>
+
+<h3 id="install">Install</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/ros2_ws/src
+<span class="nb">cd</span> ~/ros2_ws/src
+git clone https://github.com/PX4/px4_msgs.git              <span class="c"># PX4 messages for communication with PX4 DDS</span>
+git clone https://github.com/DISCOWER/px4-offboard.git     <span class="c"># RViz interface and setpoint generation</span>
+git clone https://github.com/DISCOWER/px4-mpc.git          <span class="c"># this package</span>
+<span class="nb">cd</span> ..
+
+</code></pre></div></div>
+
+<p>Install the remaining dependencies (ROS 2 packages, NumPy, SciPy, CasADi, python-control, …) with <a href="https://docs.ros.org/en/humble/Tutorials/Intermediate/Rosdep.html">rosdep</a>. If you have never used rosdep before, run <code class="language-plaintext highlighter-rouge">sudo rosdep init</code> first.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rosdep update
+rosdep <span class="nb">install</span> <span class="nt">--from-paths</span> src <span class="nt">--ignore-src</span> <span class="nt">-y</span>
+
+</code></pre></div></div>
+
+<p>Build the workspace:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>colcon build <span class="nt">--packages-up-to</span> px4_mpc
+<span class="nb">source install</span>/setup.bash  <span class="c"># use setup.zsh for zsh users</span>
+
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Note:</strong> rosdep does not install acados. Install it and its Python interface as described in <a href="https://github.com/discower/px4-mpc/tree/master/#prerequisites">Prerequisites</a>.</p>
+</blockquote>
+
+<p>For the <code class="language-plaintext highlighter-rouge">propeller</code> control mode, also clone <a href="https://github.com/DISCOWER/atmos_propeller_plate_interface">atmos_propeller_plate_interface</a> into <code class="language-plaintext highlighter-rouge">~/ros2_ws/src</code>, rerun the <code class="language-plaintext highlighter-rouge">rosdep install</code> command above, and build it:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>colcon build <span class="nt">--packages-up-to</span> px4_mpc propeller_plate_iface
+
+</code></pre></div></div>
+
+<h3 id="px4-setup">PX4 Setup</h3>
+
+<p><strong>DDS topics:</strong> the PX4 topics exposed to ROS 2 are configured in <code class="language-plaintext highlighter-rouge">PX4-Autopilot/src/modules/uxrce_dds_client/dds_topics.yaml</code>. Edit this file if you need additional topics.</p>
+
+<p><strong>Arming and mode switching:</strong> by default, PX4 expects RC inputs and a QGroundControl (QGC) connection before it allows arming and mode switching. These are the recommended settings for real deployments. Set up either QGC or a headless configuration before running the examples. Both options below describe how to switch to offboard mode and arm the vehicle.</p>
+
+<details>
+<summary>With QGC (recommended)</summary>
+
+1. Open QGroundControl.
+2. Click the QGroundControl icon in the top left corner and open "Application Settings".
+3. Under the "Fly View" tab, scroll down to "Virtual Joysticks" and enable them by clicking the slider to the right of "Enabled".
+4. Make sure that auto-center throttle is disabled.
+5. Click "Exit Application Settings" in the top left corner to return to the Fly View screen.
+
+To start the MPC, select "Offboard" in the flight mode menu in the top toolbar, then arm the vehicle.
+
+&gt; **Important:** Before arming the vehicle, make sure that the throttle (left vertical joystick) is at the lowest position.
+
+</details>
+
+<details>
+<summary>Headless (no QGC)</summary>
+
+&gt; **Warning:** Do this at your own risk. We recommend using QGC to keep hardware and software setups consistent.
+
+Disable the RC check and the QGC connection requirement by setting the following parameters in the PX4 SITL terminal:
+
+File truncated at 100 lines [see the full file](https://github.com/discower/px4-mpc/tree/master/README.md)
+</details>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-lyrical">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>lyrical</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/px4-mpc/">px4-mpc</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/mpc_msgs/">mpc_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/px4_mpc/">px4_mpc</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/discower/px4-mpc.git">https://github.com/discower/px4-mpc.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">master</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-09-27
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/px4-mpc/#lyrical-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/px4-mpc/#lyrical-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/px4-mpc/#lyrical-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/mpc_msgs/">mpc_msgs</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/px4_mpc/">px4_mpc</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="px4-mpc">PX4 MPC</h1>
+
+<p>Model Predictive Control (MPC) for spacecraft and multirotors running on <a href="https://px4.io/">PX4 Autopilot</a>, integrated with <a href="https://ros.org/">ROS 2</a>.</p>
+
+<p><img src="https://github.com/user-attachments/assets/6713b8e6-815f-42fe-b3a0-51708d3416e5" alt="px4-mpc"></p>
+
+<p>This package runs MPC controllers as ROS 2 nodes that talk to PX4 through the uXRCE-DDS bridge. The controllers read vehicle states from PX4 and send setpoints back in offboard mode. The optimal control problems are built and solved with the <a href="https://github.com/acados/acados">acados framework</a>.</p>
+
+<p>The main vehicle is the <a href="https://atmos.discower.io/">ATMOS</a> free-flyer spacecraft. Its controller has several control modes, from body rates and wrench commands down to direct thruster allocation. A quadrotor (<code class="language-plaintext highlighter-rouge">x500</code>) example is also included. Setpoints can be set interactively in RViz or come from a predefined setpoint node.</p>
+
+<h2 id="citation">Citation</h2>
+
+<p>If you find this package useful in academic work, please cite:</p>
+
+<p>P. Roque, S. Phodapol, E. Krantz, J. Lim, J. Verhagen, F. Jiang, D. Dorner, R. Siegwart, I. Stenius, G. Tibert, H. Mao, J. Tumova, C. Fuglesang and D. V. Dimarogonas,
+“Towards Open-Source and Modular Space Systems with ATMOS,”
+<em>arXiv preprint arXiv:2501.16973</em>, 2025.</p>
+
+<p><a href="https://arxiv.org/abs/2501.16973">arXiv</a></p>
+
+<details>
+<summary>BibTeX</summary>
+
+<pre><code>@article{roque2025towards,
+  title={Towards Open-Source and Modular Space Systems with ATMOS},
+  author={Roque, Pedro and Phodapol, Sujet and Krantz, Elias and Lim, Jaeyoung and Verhagen, Joris and Jiang, Frank and Dorner, David and Siegwart, Roland and Stenius, Ivan and Tibert, Gunnar and others},
+  journal={arXiv preprint arXiv:2501.16973},
+  year={2025}
+}
+</code></pre>
+
+</details>
+
+<h2 id="quick-start">Quick Start</h2>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<ul>
+  <li>ROS 2 (e.g. <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html">Humble</a>)</li>
+  <li>
+<a href="https://docs.acados.org/installation/">acados</a> and its <a href="https://docs.acados.org/python_interface/index.html">Python interface</a>
+</li>
+  <li>PX4 SITL with ROS 2 support, set up by following the <a href="https://docs.px4.io/main/en/ros/ros2_comm.html">PX4 ROS 2 guide</a> (this includes the Micro XRCE-DDS Agent)</li>
+  <li>For the spacecraft: the ATMOS simulation, set up by following the <a href="https://atmos.discower.io/pages/Simulation/">ATMOS simulation guide</a>
+</li>
+  <li>(Optional) <a href="https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html">QGroundControl</a>
+</li>
+</ul>
+
+<h3 id="install">Install</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/ros2_ws/src
+<span class="nb">cd</span> ~/ros2_ws/src
+git clone https://github.com/PX4/px4_msgs.git              <span class="c"># PX4 messages for communication with PX4 DDS</span>
+git clone https://github.com/DISCOWER/px4-offboard.git     <span class="c"># RViz interface and setpoint generation</span>
+git clone https://github.com/DISCOWER/px4-mpc.git          <span class="c"># this package</span>
+<span class="nb">cd</span> ..
+
+</code></pre></div></div>
+
+<p>Install the remaining dependencies (ROS 2 packages, NumPy, SciPy, CasADi, python-control, …) with <a href="https://docs.ros.org/en/humble/Tutorials/Intermediate/Rosdep.html">rosdep</a>. If you have never used rosdep before, run <code class="language-plaintext highlighter-rouge">sudo rosdep init</code> first.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rosdep update
+rosdep <span class="nb">install</span> <span class="nt">--from-paths</span> src <span class="nt">--ignore-src</span> <span class="nt">-y</span>
+
+</code></pre></div></div>
+
+<p>Build the workspace:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>colcon build <span class="nt">--packages-up-to</span> px4_mpc
+<span class="nb">source install</span>/setup.bash  <span class="c"># use setup.zsh for zsh users</span>
+
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Note:</strong> rosdep does not install acados. Install it and its Python interface as described in <a href="https://github.com/discower/px4-mpc/tree/master/#prerequisites">Prerequisites</a>.</p>
+</blockquote>
+
+<p>For the <code class="language-plaintext highlighter-rouge">propeller</code> control mode, also clone <a href="https://github.com/DISCOWER/atmos_propeller_plate_interface">atmos_propeller_plate_interface</a> into <code class="language-plaintext highlighter-rouge">~/ros2_ws/src</code>, rerun the <code class="language-plaintext highlighter-rouge">rosdep install</code> command above, and build it:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>colcon build <span class="nt">--packages-up-to</span> px4_mpc propeller_plate_iface
+
+</code></pre></div></div>
+
+<h3 id="px4-setup">PX4 Setup</h3>
+
+<p><strong>DDS topics:</strong> the PX4 topics exposed to ROS 2 are configured in <code class="language-plaintext highlighter-rouge">PX4-Autopilot/src/modules/uxrce_dds_client/dds_topics.yaml</code>. Edit this file if you need additional topics.</p>
+
+<p><strong>Arming and mode switching:</strong> by default, PX4 expects RC inputs and a QGroundControl (QGC) connection before it allows arming and mode switching. These are the recommended settings for real deployments. Set up either QGC or a headless configuration before running the examples. Both options below describe how to switch to offboard mode and arm the vehicle.</p>
+
+<details>
+<summary>With QGC (recommended)</summary>
+
+1. Open QGroundControl.
+2. Click the QGroundControl icon in the top left corner and open "Application Settings".
+3. Under the "Fly View" tab, scroll down to "Virtual Joysticks" and enable them by clicking the slider to the right of "Enabled".
+4. Make sure that auto-center throttle is disabled.
+5. Click "Exit Application Settings" in the top left corner to return to the Fly View screen.
+
+To start the MPC, select "Offboard" in the flight mode menu in the top toolbar, then arm the vehicle.
+
+&gt; **Important:** Before arming the vehicle, make sure that the throttle (left vertical joystick) is at the lowest position.
+
+</details>
+
+<details>
+<summary>Headless (no QGC)</summary>
+
+&gt; **Warning:** Do this at your own risk. We recommend using QGC to keep hardware and software setups consistent.
+
+Disable the RC check and the QGC connection requirement by setting the following parameters in the PX4 SITL terminal:
+
+File truncated at 100 lines [see the full file](https://github.com/discower/px4-mpc/tree/master/README.md)
+</details>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-rolling">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>rolling</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/px4-mpc/">px4-mpc</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/mpc_msgs/">mpc_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/px4_mpc/">px4_mpc</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/discower/px4-mpc.git">https://github.com/discower/px4-mpc.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">master</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-09-27
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/px4-mpc/#rolling-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/px4-mpc/#rolling-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/px4-mpc/#rolling-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/mpc_msgs/">mpc_msgs</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/px4_mpc/">px4_mpc</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="px4-mpc">PX4 MPC</h1>
+
+<p>Model Predictive Control (MPC) for spacecraft and multirotors running on <a href="https://px4.io/">PX4 Autopilot</a>, integrated with <a href="https://ros.org/">ROS 2</a>.</p>
+
+<p><img src="https://github.com/user-attachments/assets/6713b8e6-815f-42fe-b3a0-51708d3416e5" alt="px4-mpc"></p>
+
+<p>This package runs MPC controllers as ROS 2 nodes that talk to PX4 through the uXRCE-DDS bridge. The controllers read vehicle states from PX4 and send setpoints back in offboard mode. The optimal control problems are built and solved with the <a href="https://github.com/acados/acados">acados framework</a>.</p>
+
+<p>The main vehicle is the <a href="https://atmos.discower.io/">ATMOS</a> free-flyer spacecraft. Its controller has several control modes, from body rates and wrench commands down to direct thruster allocation. A quadrotor (<code class="language-plaintext highlighter-rouge">x500</code>) example is also included. Setpoints can be set interactively in RViz or come from a predefined setpoint node.</p>
+
+<h2 id="citation">Citation</h2>
+
+<p>If you find this package useful in academic work, please cite:</p>
+
+<p>P. Roque, S. Phodapol, E. Krantz, J. Lim, J. Verhagen, F. Jiang, D. Dorner, R. Siegwart, I. Stenius, G. Tibert, H. Mao, J. Tumova, C. Fuglesang and D. V. Dimarogonas,
+“Towards Open-Source and Modular Space Systems with ATMOS,”
+<em>arXiv preprint arXiv:2501.16973</em>, 2025.</p>
+
+<p><a href="https://arxiv.org/abs/2501.16973">arXiv</a></p>
+
+<details>
+<summary>BibTeX</summary>
+
+<pre><code>@article{roque2025towards,
+  title={Towards Open-Source and Modular Space Systems with ATMOS},
+  author={Roque, Pedro and Phodapol, Sujet and Krantz, Elias and Lim, Jaeyoung and Verhagen, Joris and Jiang, Frank and Dorner, David and Siegwart, Roland and Stenius, Ivan and Tibert, Gunnar and others},
+  journal={arXiv preprint arXiv:2501.16973},
+  year={2025}
+}
+</code></pre>
+
+</details>
+
+<h2 id="quick-start">Quick Start</h2>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<ul>
+  <li>ROS 2 (e.g. <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html">Humble</a>)</li>
+  <li>
+<a href="https://docs.acados.org/installation/">acados</a> and its <a href="https://docs.acados.org/python_interface/index.html">Python interface</a>
+</li>
+  <li>PX4 SITL with ROS 2 support, set up by following the <a href="https://docs.px4.io/main/en/ros/ros2_comm.html">PX4 ROS 2 guide</a> (this includes the Micro XRCE-DDS Agent)</li>
+  <li>For the spacecraft: the ATMOS simulation, set up by following the <a href="https://atmos.discower.io/pages/Simulation/">ATMOS simulation guide</a>
+</li>
+  <li>(Optional) <a href="https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html">QGroundControl</a>
+</li>
+</ul>
+
+<h3 id="install">Install</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/ros2_ws/src
+<span class="nb">cd</span> ~/ros2_ws/src
+git clone https://github.com/PX4/px4_msgs.git              <span class="c"># PX4 messages for communication with PX4 DDS</span>
+git clone https://github.com/DISCOWER/px4-offboard.git     <span class="c"># RViz interface and setpoint generation</span>
+git clone https://github.com/DISCOWER/px4-mpc.git          <span class="c"># this package</span>
+<span class="nb">cd</span> ..
+
+</code></pre></div></div>
+
+<p>Install the remaining dependencies (ROS 2 packages, NumPy, SciPy, CasADi, python-control, …) with <a href="https://docs.ros.org/en/humble/Tutorials/Intermediate/Rosdep.html">rosdep</a>. If you have never used rosdep before, run <code class="language-plaintext highlighter-rouge">sudo rosdep init</code> first.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rosdep update
+rosdep <span class="nb">install</span> <span class="nt">--from-paths</span> src <span class="nt">--ignore-src</span> <span class="nt">-y</span>
+
+</code></pre></div></div>
+
+<p>Build the workspace:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>colcon build <span class="nt">--packages-up-to</span> px4_mpc
+<span class="nb">source install</span>/setup.bash  <span class="c"># use setup.zsh for zsh users</span>
+
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Note:</strong> rosdep does not install acados. Install it and its Python interface as described in <a href="https://github.com/discower/px4-mpc/tree/master/#prerequisites">Prerequisites</a>.</p>
+</blockquote>
+
+<p>For the <code class="language-plaintext highlighter-rouge">propeller</code> control mode, also clone <a href="https://github.com/DISCOWER/atmos_propeller_plate_interface">atmos_propeller_plate_interface</a> into <code class="language-plaintext highlighter-rouge">~/ros2_ws/src</code>, rerun the <code class="language-plaintext highlighter-rouge">rosdep install</code> command above, and build it:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>colcon build <span class="nt">--packages-up-to</span> px4_mpc propeller_plate_iface
+
+</code></pre></div></div>
+
+<h3 id="px4-setup">PX4 Setup</h3>
+
+<p><strong>DDS topics:</strong> the PX4 topics exposed to ROS 2 are configured in <code class="language-plaintext highlighter-rouge">PX4-Autopilot/src/modules/uxrce_dds_client/dds_topics.yaml</code>. Edit this file if you need additional topics.</p>
+
+<p><strong>Arming and mode switching:</strong> by default, PX4 expects RC inputs and a QGroundControl (QGC) connection before it allows arming and mode switching. These are the recommended settings for real deployments. Set up either QGC or a headless configuration before running the examples. Both options below describe how to switch to offboard mode and arm the vehicle.</p>
+
+<details>
+<summary>With QGC (recommended)</summary>
+
+1. Open QGroundControl.
+2. Click the QGroundControl icon in the top left corner and open "Application Settings".
+3. Under the "Fly View" tab, scroll down to "Virtual Joysticks" and enable them by clicking the slider to the right of "Enabled".
+4. Make sure that auto-center throttle is disabled.
+5. Click "Exit Application Settings" in the top left corner to return to the Fly View screen.
+
+To start the MPC, select "Offboard" in the flight mode menu in the top toolbar, then arm the vehicle.
+
+&gt; **Important:** Before arming the vehicle, make sure that the throttle (left vertical joystick) is at the lowest position.
+
+</details>
+
+<details>
+<summary>Headless (no QGC)</summary>
+
+&gt; **Warning:** Do this at your own risk. We recommend using QGC to keep hardware and software setups consistent.
+
+Disable the RC check and the QGC connection requirement by setting the following parameters in the PX4 SITL terminal:
+
+File truncated at 100 lines [see the full file](https://github.com/discower/px4-mpc/tree/master/README.md)
+</details>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-github">
+    <div class="container-fluid">
+      
+        
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/px4-mpc/">px4-mpc</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/mpc_msgs/">mpc_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/px4_mpc/">px4_mpc</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/discower/px4-mpc.git">https://github.com/discower/px4-mpc.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">master</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-09-27
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/px4-mpc/#github-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/px4-mpc/#github-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/px4-mpc/#github-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/mpc_msgs/">mpc_msgs</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/px4_mpc/">px4_mpc</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="px4-mpc">PX4 MPC</h1>
+
+<p>Model Predictive Control (MPC) for spacecraft and multirotors running on <a href="https://px4.io/">PX4 Autopilot</a>, integrated with <a href="https://ros.org/">ROS 2</a>.</p>
+
+<p><img src="https://github.com/user-attachments/assets/6713b8e6-815f-42fe-b3a0-51708d3416e5" alt="px4-mpc"></p>
+
+<p>This package runs MPC controllers as ROS 2 nodes that talk to PX4 through the uXRCE-DDS bridge. The controllers read vehicle states from PX4 and send setpoints back in offboard mode. The optimal control problems are built and solved with the <a href="https://github.com/acados/acados">acados framework</a>.</p>
+
+<p>The main vehicle is the <a href="https://atmos.discower.io/">ATMOS</a> free-flyer spacecraft. Its controller has several control modes, from body rates and wrench commands down to direct thruster allocation. A quadrotor (<code class="language-plaintext highlighter-rouge">x500</code>) example is also included. Setpoints can be set interactively in RViz or come from a predefined setpoint node.</p>
+
+<h2 id="citation">Citation</h2>
+
+<p>If you find this package useful in academic work, please cite:</p>
+
+<p>P. Roque, S. Phodapol, E. Krantz, J. Lim, J. Verhagen, F. Jiang, D. Dorner, R. Siegwart, I. Stenius, G. Tibert, H. Mao, J. Tumova, C. Fuglesang and D. V. Dimarogonas,
+“Towards Open-Source and Modular Space Systems with ATMOS,”
+<em>arXiv preprint arXiv:2501.16973</em>, 2025.</p>
+
+<p><a href="https://arxiv.org/abs/2501.16973">arXiv</a></p>
+
+<details>
+<summary>BibTeX</summary>
+
+<pre><code>@article{roque2025towards,
+  title={Towards Open-Source and Modular Space Systems with ATMOS},
+  author={Roque, Pedro and Phodapol, Sujet and Krantz, Elias and Lim, Jaeyoung and Verhagen, Joris and Jiang, Frank and Dorner, David and Siegwart, Roland and Stenius, Ivan and Tibert, Gunnar and others},
+  journal={arXiv preprint arXiv:2501.16973},
+  year={2025}
+}
+</code></pre>
+
+</details>
+
+<h2 id="quick-start">Quick Start</h2>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<ul>
+  <li>ROS 2 (e.g. <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html">Humble</a>)</li>
+  <li>
+<a href="https://docs.acados.org/installation/">acados</a> and its <a href="https://docs.acados.org/python_interface/index.html">Python interface</a>
+</li>
+  <li>PX4 SITL with ROS 2 support, set up by following the <a href="https://docs.px4.io/main/en/ros/ros2_comm.html">PX4 ROS 2 guide</a> (this includes the Micro XRCE-DDS Agent)</li>
+  <li>For the spacecraft: the ATMOS simulation, set up by following the <a href="https://atmos.discower.io/pages/Simulation/">ATMOS simulation guide</a>
+</li>
+  <li>(Optional) <a href="https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html">QGroundControl</a>
+</li>
+</ul>
+
+<h3 id="install">Install</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/ros2_ws/src
+<span class="nb">cd</span> ~/ros2_ws/src
+git clone https://github.com/PX4/px4_msgs.git              <span class="c"># PX4 messages for communication with PX4 DDS</span>
+git clone https://github.com/DISCOWER/px4-offboard.git     <span class="c"># RViz interface and setpoint generation</span>
+git clone https://github.com/DISCOWER/px4-mpc.git          <span class="c"># this package</span>
+<span class="nb">cd</span> ..
+
+</code></pre></div></div>
+
+<p>Install the remaining dependencies (ROS 2 packages, NumPy, SciPy, CasADi, python-control, …) with <a href="https://docs.ros.org/en/humble/Tutorials/Intermediate/Rosdep.html">rosdep</a>. If you have never used rosdep before, run <code class="language-plaintext highlighter-rouge">sudo rosdep init</code> first.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rosdep update
+rosdep <span class="nb">install</span> <span class="nt">--from-paths</span> src <span class="nt">--ignore-src</span> <span class="nt">-y</span>
+
+</code></pre></div></div>
+
+<p>Build the workspace:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>colcon build <span class="nt">--packages-up-to</span> px4_mpc
+<span class="nb">source install</span>/setup.bash  <span class="c"># use setup.zsh for zsh users</span>
+
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Note:</strong> rosdep does not install acados. Install it and its Python interface as described in <a href="https://github.com/discower/px4-mpc/tree/master/#prerequisites">Prerequisites</a>.</p>
+</blockquote>
+
+<p>For the <code class="language-plaintext highlighter-rouge">propeller</code> control mode, also clone <a href="https://github.com/DISCOWER/atmos_propeller_plate_interface">atmos_propeller_plate_interface</a> into <code class="language-plaintext highlighter-rouge">~/ros2_ws/src</code>, rerun the <code class="language-plaintext highlighter-rouge">rosdep install</code> command above, and build it:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>colcon build <span class="nt">--packages-up-to</span> px4_mpc propeller_plate_iface
+
+</code></pre></div></div>
+
+<h3 id="px4-setup">PX4 Setup</h3>
+
+<p><strong>DDS topics:</strong> the PX4 topics exposed to ROS 2 are configured in <code class="language-plaintext highlighter-rouge">PX4-Autopilot/src/modules/uxrce_dds_client/dds_topics.yaml</code>. Edit this file if you need additional topics.</p>
+
+<p><strong>Arming and mode switching:</strong> by default, PX4 expects RC inputs and a QGroundControl (QGC) connection before it allows arming and mode switching. These are the recommended settings for real deployments. Set up either QGC or a headless configuration before running the examples. Both options below describe how to switch to offboard mode and arm the vehicle.</p>
+
+<details>
+<summary>With QGC (recommended)</summary>
+
+1. Open QGroundControl.
+2. Click the QGroundControl icon in the top left corner and open "Application Settings".
+3. Under the "Fly View" tab, scroll down to "Virtual Joysticks" and enable them by clicking the slider to the right of "Enabled".
+4. Make sure that auto-center throttle is disabled.
+5. Click "Exit Application Settings" in the top left corner to return to the Fly View screen.
+
+To start the MPC, select "Offboard" in the flight mode menu in the top toolbar, then arm the vehicle.
+
+&gt; **Important:** Before arming the vehicle, make sure that the throttle (left vertical joystick) is at the lowest position.
+
+</details>
+
+<details>
+<summary>Headless (no QGC)</summary>
+
+&gt; **Warning:** Do this at your own risk. We recommend using QGC to keep hardware and software setups consistent.
+
+Disable the RC check and the QGC connection requirement by setting the following parameters in the PX4 SITL terminal:
+
+File truncated at 100 lines [see the full file](https://github.com/discower/px4-mpc/tree/master/README.md)
+</details>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-galactic">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>galactic</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/px4-mpc/">px4-mpc</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/mpc_msgs/">mpc_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/px4_mpc/">px4_mpc</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/discower/px4-mpc.git">https://github.com/discower/px4-mpc.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">master</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-09-27
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/px4-mpc/#galactic-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/px4-mpc/#galactic-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/px4-mpc/#galactic-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/mpc_msgs/">mpc_msgs</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/px4_mpc/">px4_mpc</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="px4-mpc">PX4 MPC</h1>
+
+<p>Model Predictive Control (MPC) for spacecraft and multirotors running on <a href="https://px4.io/">PX4 Autopilot</a>, integrated with <a href="https://ros.org/">ROS 2</a>.</p>
+
+<p><img src="https://github.com/user-attachments/assets/6713b8e6-815f-42fe-b3a0-51708d3416e5" alt="px4-mpc"></p>
+
+<p>This package runs MPC controllers as ROS 2 nodes that talk to PX4 through the uXRCE-DDS bridge. The controllers read vehicle states from PX4 and send setpoints back in offboard mode. The optimal control problems are built and solved with the <a href="https://github.com/acados/acados">acados framework</a>.</p>
+
+<p>The main vehicle is the <a href="https://atmos.discower.io/">ATMOS</a> free-flyer spacecraft. Its controller has several control modes, from body rates and wrench commands down to direct thruster allocation. A quadrotor (<code class="language-plaintext highlighter-rouge">x500</code>) example is also included. Setpoints can be set interactively in RViz or come from a predefined setpoint node.</p>
+
+<h2 id="citation">Citation</h2>
+
+<p>If you find this package useful in academic work, please cite:</p>
+
+<p>P. Roque, S. Phodapol, E. Krantz, J. Lim, J. Verhagen, F. Jiang, D. Dorner, R. Siegwart, I. Stenius, G. Tibert, H. Mao, J. Tumova, C. Fuglesang and D. V. Dimarogonas,
+“Towards Open-Source and Modular Space Systems with ATMOS,”
+<em>arXiv preprint arXiv:2501.16973</em>, 2025.</p>
+
+<p><a href="https://arxiv.org/abs/2501.16973">arXiv</a></p>
+
+<details>
+<summary>BibTeX</summary>
+
+<pre><code>@article{roque2025towards,
+  title={Towards Open-Source and Modular Space Systems with ATMOS},
+  author={Roque, Pedro and Phodapol, Sujet and Krantz, Elias and Lim, Jaeyoung and Verhagen, Joris and Jiang, Frank and Dorner, David and Siegwart, Roland and Stenius, Ivan and Tibert, Gunnar and others},
+  journal={arXiv preprint arXiv:2501.16973},
+  year={2025}
+}
+</code></pre>
+
+</details>
+
+<h2 id="quick-start">Quick Start</h2>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<ul>
+  <li>ROS 2 (e.g. <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html">Humble</a>)</li>
+  <li>
+<a href="https://docs.acados.org/installation/">acados</a> and its <a href="https://docs.acados.org/python_interface/index.html">Python interface</a>
+</li>
+  <li>PX4 SITL with ROS 2 support, set up by following the <a href="https://docs.px4.io/main/en/ros/ros2_comm.html">PX4 ROS 2 guide</a> (this includes the Micro XRCE-DDS Agent)</li>
+  <li>For the spacecraft: the ATMOS simulation, set up by following the <a href="https://atmos.discower.io/pages/Simulation/">ATMOS simulation guide</a>
+</li>
+  <li>(Optional) <a href="https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html">QGroundControl</a>
+</li>
+</ul>
+
+<h3 id="install">Install</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/ros2_ws/src
+<span class="nb">cd</span> ~/ros2_ws/src
+git clone https://github.com/PX4/px4_msgs.git              <span class="c"># PX4 messages for communication with PX4 DDS</span>
+git clone https://github.com/DISCOWER/px4-offboard.git     <span class="c"># RViz interface and setpoint generation</span>
+git clone https://github.com/DISCOWER/px4-mpc.git          <span class="c"># this package</span>
+<span class="nb">cd</span> ..
+
+</code></pre></div></div>
+
+<p>Install the remaining dependencies (ROS 2 packages, NumPy, SciPy, CasADi, python-control, …) with <a href="https://docs.ros.org/en/humble/Tutorials/Intermediate/Rosdep.html">rosdep</a>. If you have never used rosdep before, run <code class="language-plaintext highlighter-rouge">sudo rosdep init</code> first.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rosdep update
+rosdep <span class="nb">install</span> <span class="nt">--from-paths</span> src <span class="nt">--ignore-src</span> <span class="nt">-y</span>
+
+</code></pre></div></div>
+
+<p>Build the workspace:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>colcon build <span class="nt">--packages-up-to</span> px4_mpc
+<span class="nb">source install</span>/setup.bash  <span class="c"># use setup.zsh for zsh users</span>
+
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Note:</strong> rosdep does not install acados. Install it and its Python interface as described in <a href="https://github.com/discower/px4-mpc/tree/master/#prerequisites">Prerequisites</a>.</p>
+</blockquote>
+
+<p>For the <code class="language-plaintext highlighter-rouge">propeller</code> control mode, also clone <a href="https://github.com/DISCOWER/atmos_propeller_plate_interface">atmos_propeller_plate_interface</a> into <code class="language-plaintext highlighter-rouge">~/ros2_ws/src</code>, rerun the <code class="language-plaintext highlighter-rouge">rosdep install</code> command above, and build it:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>colcon build <span class="nt">--packages-up-to</span> px4_mpc propeller_plate_iface
+
+</code></pre></div></div>
+
+<h3 id="px4-setup">PX4 Setup</h3>
+
+<p><strong>DDS topics:</strong> the PX4 topics exposed to ROS 2 are configured in <code class="language-plaintext highlighter-rouge">PX4-Autopilot/src/modules/uxrce_dds_client/dds_topics.yaml</code>. Edit this file if you need additional topics.</p>
+
+<p><strong>Arming and mode switching:</strong> by default, PX4 expects RC inputs and a QGroundControl (QGC) connection before it allows arming and mode switching. These are the recommended settings for real deployments. Set up either QGC or a headless configuration before running the examples. Both options below describe how to switch to offboard mode and arm the vehicle.</p>
+
+<details>
+<summary>With QGC (recommended)</summary>
+
+1. Open QGroundControl.
+2. Click the QGroundControl icon in the top left corner and open "Application Settings".
+3. Under the "Fly View" tab, scroll down to "Virtual Joysticks" and enable them by clicking the slider to the right of "Enabled".
+4. Make sure that auto-center throttle is disabled.
+5. Click "Exit Application Settings" in the top left corner to return to the Fly View screen.
+
+To start the MPC, select "Offboard" in the flight mode menu in the top toolbar, then arm the vehicle.
+
+&gt; **Important:** Before arming the vehicle, make sure that the throttle (left vertical joystick) is at the lowest position.
+
+</details>
+
+<details>
+<summary>Headless (no QGC)</summary>
+
+&gt; **Warning:** Do this at your own risk. We recommend using QGC to keep hardware and software setups consistent.
+
+Disable the RC check and the QGC connection requirement by setting the following parameters in the PX4 SITL terminal:
+
+File truncated at 100 lines [see the full file](https://github.com/discower/px4-mpc/tree/master/README.md)
+</details>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-iron">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>iron</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/px4-mpc/">px4-mpc</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/mpc_msgs/">mpc_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/px4_mpc/">px4_mpc</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/discower/px4-mpc.git">https://github.com/discower/px4-mpc.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">master</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-09-27
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/px4-mpc/#iron-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/px4-mpc/#iron-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/px4-mpc/#iron-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/mpc_msgs/">mpc_msgs</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/px4_mpc/">px4_mpc</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="px4-mpc">PX4 MPC</h1>
+
+<p>Model Predictive Control (MPC) for spacecraft and multirotors running on <a href="https://px4.io/">PX4 Autopilot</a>, integrated with <a href="https://ros.org/">ROS 2</a>.</p>
+
+<p><img src="https://github.com/user-attachments/assets/6713b8e6-815f-42fe-b3a0-51708d3416e5" alt="px4-mpc"></p>
+
+<p>This package runs MPC controllers as ROS 2 nodes that talk to PX4 through the uXRCE-DDS bridge. The controllers read vehicle states from PX4 and send setpoints back in offboard mode. The optimal control problems are built and solved with the <a href="https://github.com/acados/acados">acados framework</a>.</p>
+
+<p>The main vehicle is the <a href="https://atmos.discower.io/">ATMOS</a> free-flyer spacecraft. Its controller has several control modes, from body rates and wrench commands down to direct thruster allocation. A quadrotor (<code class="language-plaintext highlighter-rouge">x500</code>) example is also included. Setpoints can be set interactively in RViz or come from a predefined setpoint node.</p>
+
+<h2 id="citation">Citation</h2>
+
+<p>If you find this package useful in academic work, please cite:</p>
+
+<p>P. Roque, S. Phodapol, E. Krantz, J. Lim, J. Verhagen, F. Jiang, D. Dorner, R. Siegwart, I. Stenius, G. Tibert, H. Mao, J. Tumova, C. Fuglesang and D. V. Dimarogonas,
+“Towards Open-Source and Modular Space Systems with ATMOS,”
+<em>arXiv preprint arXiv:2501.16973</em>, 2025.</p>
+
+<p><a href="https://arxiv.org/abs/2501.16973">arXiv</a></p>
+
+<details>
+<summary>BibTeX</summary>
+
+<pre><code>@article{roque2025towards,
+  title={Towards Open-Source and Modular Space Systems with ATMOS},
+  author={Roque, Pedro and Phodapol, Sujet and Krantz, Elias and Lim, Jaeyoung and Verhagen, Joris and Jiang, Frank and Dorner, David and Siegwart, Roland and Stenius, Ivan and Tibert, Gunnar and others},
+  journal={arXiv preprint arXiv:2501.16973},
+  year={2025}
+}
+</code></pre>
+
+</details>
+
+<h2 id="quick-start">Quick Start</h2>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<ul>
+  <li>ROS 2 (e.g. <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html">Humble</a>)</li>
+  <li>
+<a href="https://docs.acados.org/installation/">acados</a> and its <a href="https://docs.acados.org/python_interface/index.html">Python interface</a>
+</li>
+  <li>PX4 SITL with ROS 2 support, set up by following the <a href="https://docs.px4.io/main/en/ros/ros2_comm.html">PX4 ROS 2 guide</a> (this includes the Micro XRCE-DDS Agent)</li>
+  <li>For the spacecraft: the ATMOS simulation, set up by following the <a href="https://atmos.discower.io/pages/Simulation/">ATMOS simulation guide</a>
+</li>
+  <li>(Optional) <a href="https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html">QGroundControl</a>
+</li>
+</ul>
+
+<h3 id="install">Install</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/ros2_ws/src
+<span class="nb">cd</span> ~/ros2_ws/src
+git clone https://github.com/PX4/px4_msgs.git              <span class="c"># PX4 messages for communication with PX4 DDS</span>
+git clone https://github.com/DISCOWER/px4-offboard.git     <span class="c"># RViz interface and setpoint generation</span>
+git clone https://github.com/DISCOWER/px4-mpc.git          <span class="c"># this package</span>
+<span class="nb">cd</span> ..
+
+</code></pre></div></div>
+
+<p>Install the remaining dependencies (ROS 2 packages, NumPy, SciPy, CasADi, python-control, …) with <a href="https://docs.ros.org/en/humble/Tutorials/Intermediate/Rosdep.html">rosdep</a>. If you have never used rosdep before, run <code class="language-plaintext highlighter-rouge">sudo rosdep init</code> first.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rosdep update
+rosdep <span class="nb">install</span> <span class="nt">--from-paths</span> src <span class="nt">--ignore-src</span> <span class="nt">-y</span>
+
+</code></pre></div></div>
+
+<p>Build the workspace:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>colcon build <span class="nt">--packages-up-to</span> px4_mpc
+<span class="nb">source install</span>/setup.bash  <span class="c"># use setup.zsh for zsh users</span>
+
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Note:</strong> rosdep does not install acados. Install it and its Python interface as described in <a href="https://github.com/discower/px4-mpc/tree/master/#prerequisites">Prerequisites</a>.</p>
+</blockquote>
+
+<p>For the <code class="language-plaintext highlighter-rouge">propeller</code> control mode, also clone <a href="https://github.com/DISCOWER/atmos_propeller_plate_interface">atmos_propeller_plate_interface</a> into <code class="language-plaintext highlighter-rouge">~/ros2_ws/src</code>, rerun the <code class="language-plaintext highlighter-rouge">rosdep install</code> command above, and build it:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>colcon build <span class="nt">--packages-up-to</span> px4_mpc propeller_plate_iface
+
+</code></pre></div></div>
+
+<h3 id="px4-setup">PX4 Setup</h3>
+
+<p><strong>DDS topics:</strong> the PX4 topics exposed to ROS 2 are configured in <code class="language-plaintext highlighter-rouge">PX4-Autopilot/src/modules/uxrce_dds_client/dds_topics.yaml</code>. Edit this file if you need additional topics.</p>
+
+<p><strong>Arming and mode switching:</strong> by default, PX4 expects RC inputs and a QGroundControl (QGC) connection before it allows arming and mode switching. These are the recommended settings for real deployments. Set up either QGC or a headless configuration before running the examples. Both options below describe how to switch to offboard mode and arm the vehicle.</p>
+
+<details>
+<summary>With QGC (recommended)</summary>
+
+1. Open QGroundControl.
+2. Click the QGroundControl icon in the top left corner and open "Application Settings".
+3. Under the "Fly View" tab, scroll down to "Virtual Joysticks" and enable them by clicking the slider to the right of "Enabled".
+4. Make sure that auto-center throttle is disabled.
+5. Click "Exit Application Settings" in the top left corner to return to the Fly View screen.
+
+To start the MPC, select "Offboard" in the flight mode menu in the top toolbar, then arm the vehicle.
+
+&gt; **Important:** Before arming the vehicle, make sure that the throttle (left vertical joystick) is at the lowest position.
+
+</details>
+
+<details>
+<summary>Headless (no QGC)</summary>
+
+&gt; **Warning:** Do this at your own risk. We recommend using QGC to keep hardware and software setups consistent.
+
+Disable the RC check and the QGC connection requirement by setting the following parameters in the PX4 SITL terminal:
+
+File truncated at 100 lines [see the full file](https://github.com/discower/px4-mpc/tree/master/README.md)
+</details>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-melodic">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>melodic</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/px4-mpc/">px4-mpc</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/mpc_msgs/">mpc_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/px4_mpc/">px4_mpc</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/discower/px4-mpc.git">https://github.com/discower/px4-mpc.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">master</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-09-27
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/px4-mpc/#melodic-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/px4-mpc/#melodic-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/px4-mpc/#melodic-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/mpc_msgs/">mpc_msgs</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/px4_mpc/">px4_mpc</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="px4-mpc">PX4 MPC</h1>
+
+<p>Model Predictive Control (MPC) for spacecraft and multirotors running on <a href="https://px4.io/">PX4 Autopilot</a>, integrated with <a href="https://ros.org/">ROS 2</a>.</p>
+
+<p><img src="https://github.com/user-attachments/assets/6713b8e6-815f-42fe-b3a0-51708d3416e5" alt="px4-mpc"></p>
+
+<p>This package runs MPC controllers as ROS 2 nodes that talk to PX4 through the uXRCE-DDS bridge. The controllers read vehicle states from PX4 and send setpoints back in offboard mode. The optimal control problems are built and solved with the <a href="https://github.com/acados/acados">acados framework</a>.</p>
+
+<p>The main vehicle is the <a href="https://atmos.discower.io/">ATMOS</a> free-flyer spacecraft. Its controller has several control modes, from body rates and wrench commands down to direct thruster allocation. A quadrotor (<code class="language-plaintext highlighter-rouge">x500</code>) example is also included. Setpoints can be set interactively in RViz or come from a predefined setpoint node.</p>
+
+<h2 id="citation">Citation</h2>
+
+<p>If you find this package useful in academic work, please cite:</p>
+
+<p>P. Roque, S. Phodapol, E. Krantz, J. Lim, J. Verhagen, F. Jiang, D. Dorner, R. Siegwart, I. Stenius, G. Tibert, H. Mao, J. Tumova, C. Fuglesang and D. V. Dimarogonas,
+“Towards Open-Source and Modular Space Systems with ATMOS,”
+<em>arXiv preprint arXiv:2501.16973</em>, 2025.</p>
+
+<p><a href="https://arxiv.org/abs/2501.16973">arXiv</a></p>
+
+<details>
+<summary>BibTeX</summary>
+
+<pre><code>@article{roque2025towards,
+  title={Towards Open-Source and Modular Space Systems with ATMOS},
+  author={Roque, Pedro and Phodapol, Sujet and Krantz, Elias and Lim, Jaeyoung and Verhagen, Joris and Jiang, Frank and Dorner, David and Siegwart, Roland and Stenius, Ivan and Tibert, Gunnar and others},
+  journal={arXiv preprint arXiv:2501.16973},
+  year={2025}
+}
+</code></pre>
+
+</details>
+
+<h2 id="quick-start">Quick Start</h2>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<ul>
+  <li>ROS 2 (e.g. <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html">Humble</a>)</li>
+  <li>
+<a href="https://docs.acados.org/installation/">acados</a> and its <a href="https://docs.acados.org/python_interface/index.html">Python interface</a>
+</li>
+  <li>PX4 SITL with ROS 2 support, set up by following the <a href="https://docs.px4.io/main/en/ros/ros2_comm.html">PX4 ROS 2 guide</a> (this includes the Micro XRCE-DDS Agent)</li>
+  <li>For the spacecraft: the ATMOS simulation, set up by following the <a href="https://atmos.discower.io/pages/Simulation/">ATMOS simulation guide</a>
+</li>
+  <li>(Optional) <a href="https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html">QGroundControl</a>
+</li>
+</ul>
+
+<h3 id="install">Install</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/ros2_ws/src
+<span class="nb">cd</span> ~/ros2_ws/src
+git clone https://github.com/PX4/px4_msgs.git              <span class="c"># PX4 messages for communication with PX4 DDS</span>
+git clone https://github.com/DISCOWER/px4-offboard.git     <span class="c"># RViz interface and setpoint generation</span>
+git clone https://github.com/DISCOWER/px4-mpc.git          <span class="c"># this package</span>
+<span class="nb">cd</span> ..
+
+</code></pre></div></div>
+
+<p>Install the remaining dependencies (ROS 2 packages, NumPy, SciPy, CasADi, python-control, …) with <a href="https://docs.ros.org/en/humble/Tutorials/Intermediate/Rosdep.html">rosdep</a>. If you have never used rosdep before, run <code class="language-plaintext highlighter-rouge">sudo rosdep init</code> first.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rosdep update
+rosdep <span class="nb">install</span> <span class="nt">--from-paths</span> src <span class="nt">--ignore-src</span> <span class="nt">-y</span>
+
+</code></pre></div></div>
+
+<p>Build the workspace:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>colcon build <span class="nt">--packages-up-to</span> px4_mpc
+<span class="nb">source install</span>/setup.bash  <span class="c"># use setup.zsh for zsh users</span>
+
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Note:</strong> rosdep does not install acados. Install it and its Python interface as described in <a href="https://github.com/discower/px4-mpc/tree/master/#prerequisites">Prerequisites</a>.</p>
+</blockquote>
+
+<p>For the <code class="language-plaintext highlighter-rouge">propeller</code> control mode, also clone <a href="https://github.com/DISCOWER/atmos_propeller_plate_interface">atmos_propeller_plate_interface</a> into <code class="language-plaintext highlighter-rouge">~/ros2_ws/src</code>, rerun the <code class="language-plaintext highlighter-rouge">rosdep install</code> command above, and build it:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>colcon build <span class="nt">--packages-up-to</span> px4_mpc propeller_plate_iface
+
+</code></pre></div></div>
+
+<h3 id="px4-setup">PX4 Setup</h3>
+
+<p><strong>DDS topics:</strong> the PX4 topics exposed to ROS 2 are configured in <code class="language-plaintext highlighter-rouge">PX4-Autopilot/src/modules/uxrce_dds_client/dds_topics.yaml</code>. Edit this file if you need additional topics.</p>
+
+<p><strong>Arming and mode switching:</strong> by default, PX4 expects RC inputs and a QGroundControl (QGC) connection before it allows arming and mode switching. These are the recommended settings for real deployments. Set up either QGC or a headless configuration before running the examples. Both options below describe how to switch to offboard mode and arm the vehicle.</p>
+
+<details>
+<summary>With QGC (recommended)</summary>
+
+1. Open QGroundControl.
+2. Click the QGroundControl icon in the top left corner and open "Application Settings".
+3. Under the "Fly View" tab, scroll down to "Virtual Joysticks" and enable them by clicking the slider to the right of "Enabled".
+4. Make sure that auto-center throttle is disabled.
+5. Click "Exit Application Settings" in the top left corner to return to the Fly View screen.
+
+To start the MPC, select "Offboard" in the flight mode menu in the top toolbar, then arm the vehicle.
+
+&gt; **Important:** Before arming the vehicle, make sure that the throttle (left vertical joystick) is at the lowest position.
+
+</details>
+
+<details>
+<summary>Headless (no QGC)</summary>
+
+&gt; **Warning:** Do this at your own risk. We recommend using QGC to keep hardware and software setups consistent.
+
+Disable the RC check and the QGC connection requirement by setting the following parameters in the PX4 SITL terminal:
+
+File truncated at 100 lines [see the full file](https://github.com/discower/px4-mpc/tree/master/README.md)
+</details>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+  <div class="distro distro-noetic">
+    <div class="container-fluid">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+        <div class="alert alert-warning">No version for distro <strong>noetic</strong> showing <strong>github</strong>. Known supported distros are highlighted in the buttons above.</div>
+      
+
+      
+        
+        <div class="well well-sm">
+  <div>
+    
+  </div>
+  
+  <table class="table">
+    <tr>
+      <td width="100px" class="text-center">
+        <img style="width: 80px;" src="/assets/repo.png" alt="Repo symbol">
+      </td>
+      <td>
+        <h3><a style="text-decoration:none;" href="/r/px4-mpc/">px4-mpc</a> <small>repository</small></h3>
+        
+        <a class="label label-primary pkg-label" href="/p/mpc_msgs/">mpc_msgs</a>
+        
+        <a class="label label-primary pkg-label" href="/p/px4_mpc/">px4_mpc</a>
+        
+
+      </td>
+      <td width="100px" class="text-center">
+        <h3 style="margin-top: 5px"><small> ROS Distro</small><br>github</h3>
+      </td>
+    </tr>
+  </table>
+  <div class="top-buffer">
+  </div>
+</div>
+
+        <div class="panel panel-default">
+          
+          <div class="panel-heading"><h3 class="panel-title">Repository Summary</h3></div>
+          <div class="panel-body" style="overflow-x: auto">
+            
+  <table class="table table-condensed">
+    <tr>
+      <td class="text-right"><b>Description</b></td>
+      <td><span class="label label-default"></span></td>
+    </tr>
+    <tr>
+      <td style="width:100px;" class="text-right"><b>Checkout URI</b></td>
+      <td><a class="label label-default" href="https://github.com/discower/px4-mpc.git">https://github.com/discower/px4-mpc.git</a></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Type</b></td>
+      <td><span class="label label-default">git</span></td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>VCS Version</b></td>
+      <td><span class="label label-default">master</span></td>
+    </tr>
+    <tr>
+      <td style="white-space: nowrap;" class="text-right"><b>Last Updated</b></div>
+      <td>
+        
+          <span class="label label-default"><span class="glyphicon glyphicon-time"></span> 2026-09-27
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Dev Status</b></td>
+      <td>
+        
+          <span class="label label-warning">UNKNOWN
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Released</b></td>
+      <td>
+        
+          <span class="label label-default">UNRELEASED
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="text-right"><b>Contributing</b></td>
+      <td>
+        <a class="label label-primary" href="/r/px4-mpc/#noetic-contribute-lists-help-wanted">
+          Help Wanted (<span class="contribute-lists-help-wanted-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/px4-mpc/#noetic-contribute-lists-good-first-issue">
+          Good First Issues (<span class="contribute-lists-good-first-issue-count">-</span>)
+        </a>
+        <br>
+        <a class="label label-primary" href="/r/px4-mpc/#noetic-contribute-lists-pull-requests">
+          Pull Requests to Review (<span class="contribute-lists-pull-requests-count">-</span>)
+        </a>
+      </td>
+    </tr>
+  </table>
+
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">Packages</h3></div>
+          <div class="panel-body">
+            
+            
+              <table class="table table-condensed table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Version</th>
+                  </tr>
+                </thead>
+                <tbody>
+                
+                  <tr>
+                    <td><a href="/p/mpc_msgs/">mpc_msgs</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                  <tr>
+                    <td><a href="/p/px4_mpc/">px4_mpc</a></td>
+                    <td>0.0.0</td>
+                  </tr>
+                
+                </tbody>
+              </table>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">README</h3></div>
+          <div class="panel-body">
+            
+              <div class="rendered-markdown">
+<h1 id="px4-mpc">PX4 MPC</h1>
+
+<p>Model Predictive Control (MPC) for spacecraft and multirotors running on <a href="https://px4.io/">PX4 Autopilot</a>, integrated with <a href="https://ros.org/">ROS 2</a>.</p>
+
+<p><img src="https://github.com/user-attachments/assets/6713b8e6-815f-42fe-b3a0-51708d3416e5" alt="px4-mpc"></p>
+
+<p>This package runs MPC controllers as ROS 2 nodes that talk to PX4 through the uXRCE-DDS bridge. The controllers read vehicle states from PX4 and send setpoints back in offboard mode. The optimal control problems are built and solved with the <a href="https://github.com/acados/acados">acados framework</a>.</p>
+
+<p>The main vehicle is the <a href="https://atmos.discower.io/">ATMOS</a> free-flyer spacecraft. Its controller has several control modes, from body rates and wrench commands down to direct thruster allocation. A quadrotor (<code class="language-plaintext highlighter-rouge">x500</code>) example is also included. Setpoints can be set interactively in RViz or come from a predefined setpoint node.</p>
+
+<h2 id="citation">Citation</h2>
+
+<p>If you find this package useful in academic work, please cite:</p>
+
+<p>P. Roque, S. Phodapol, E. Krantz, J. Lim, J. Verhagen, F. Jiang, D. Dorner, R. Siegwart, I. Stenius, G. Tibert, H. Mao, J. Tumova, C. Fuglesang and D. V. Dimarogonas,
+“Towards Open-Source and Modular Space Systems with ATMOS,”
+<em>arXiv preprint arXiv:2501.16973</em>, 2025.</p>
+
+<p><a href="https://arxiv.org/abs/2501.16973">arXiv</a></p>
+
+<details>
+<summary>BibTeX</summary>
+
+<pre><code>@article{roque2025towards,
+  title={Towards Open-Source and Modular Space Systems with ATMOS},
+  author={Roque, Pedro and Phodapol, Sujet and Krantz, Elias and Lim, Jaeyoung and Verhagen, Joris and Jiang, Frank and Dorner, David and Siegwart, Roland and Stenius, Ivan and Tibert, Gunnar and others},
+  journal={arXiv preprint arXiv:2501.16973},
+  year={2025}
+}
+</code></pre>
+
+</details>
+
+<h2 id="quick-start">Quick Start</h2>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<ul>
+  <li>ROS 2 (e.g. <a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html">Humble</a>)</li>
+  <li>
+<a href="https://docs.acados.org/installation/">acados</a> and its <a href="https://docs.acados.org/python_interface/index.html">Python interface</a>
+</li>
+  <li>PX4 SITL with ROS 2 support, set up by following the <a href="https://docs.px4.io/main/en/ros/ros2_comm.html">PX4 ROS 2 guide</a> (this includes the Micro XRCE-DDS Agent)</li>
+  <li>For the spacecraft: the ATMOS simulation, set up by following the <a href="https://atmos.discower.io/pages/Simulation/">ATMOS simulation guide</a>
+</li>
+  <li>(Optional) <a href="https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html">QGroundControl</a>
+</li>
+</ul>
+
+<h3 id="install">Install</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> ~/ros2_ws/src
+<span class="nb">cd</span> ~/ros2_ws/src
+git clone https://github.com/PX4/px4_msgs.git              <span class="c"># PX4 messages for communication with PX4 DDS</span>
+git clone https://github.com/DISCOWER/px4-offboard.git     <span class="c"># RViz interface and setpoint generation</span>
+git clone https://github.com/DISCOWER/px4-mpc.git          <span class="c"># this package</span>
+<span class="nb">cd</span> ..
+
+</code></pre></div></div>
+
+<p>Install the remaining dependencies (ROS 2 packages, NumPy, SciPy, CasADi, python-control, …) with <a href="https://docs.ros.org/en/humble/Tutorials/Intermediate/Rosdep.html">rosdep</a>. If you have never used rosdep before, run <code class="language-plaintext highlighter-rouge">sudo rosdep init</code> first.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rosdep update
+rosdep <span class="nb">install</span> <span class="nt">--from-paths</span> src <span class="nt">--ignore-src</span> <span class="nt">-y</span>
+
+</code></pre></div></div>
+
+<p>Build the workspace:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>colcon build <span class="nt">--packages-up-to</span> px4_mpc
+<span class="nb">source install</span>/setup.bash  <span class="c"># use setup.zsh for zsh users</span>
+
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Note:</strong> rosdep does not install acados. Install it and its Python interface as described in <a href="https://github.com/discower/px4-mpc/tree/master/#prerequisites">Prerequisites</a>.</p>
+</blockquote>
+
+<p>For the <code class="language-plaintext highlighter-rouge">propeller</code> control mode, also clone <a href="https://github.com/DISCOWER/atmos_propeller_plate_interface">atmos_propeller_plate_interface</a> into <code class="language-plaintext highlighter-rouge">~/ros2_ws/src</code>, rerun the <code class="language-plaintext highlighter-rouge">rosdep install</code> command above, and build it:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>colcon build <span class="nt">--packages-up-to</span> px4_mpc propeller_plate_iface
+
+</code></pre></div></div>
+
+<h3 id="px4-setup">PX4 Setup</h3>
+
+<p><strong>DDS topics:</strong> the PX4 topics exposed to ROS 2 are configured in <code class="language-plaintext highlighter-rouge">PX4-Autopilot/src/modules/uxrce_dds_client/dds_topics.yaml</code>. Edit this file if you need additional topics.</p>
+
+<p><strong>Arming and mode switching:</strong> by default, PX4 expects RC inputs and a QGroundControl (QGC) connection before it allows arming and mode switching. These are the recommended settings for real deployments. Set up either QGC or a headless configuration before running the examples. Both options below describe how to switch to offboard mode and arm the vehicle.</p>
+
+<details>
+<summary>With QGC (recommended)</summary>
+
+1. Open QGroundControl.
+2. Click the QGroundControl icon in the top left corner and open "Application Settings".
+3. Under the "Fly View" tab, scroll down to "Virtual Joysticks" and enable them by clicking the slider to the right of "Enabled".
+4. Make sure that auto-center throttle is disabled.
+5. Click "Exit Application Settings" in the top left corner to return to the Fly View screen.
+
+To start the MPC, select "Offboard" in the flight mode menu in the top toolbar, then arm the vehicle.
+
+&gt; **Important:** Before arming the vehicle, make sure that the throttle (left vertical joystick) is at the lowest position.
+
+</details>
+
+<details>
+<summary>Headless (no QGC)</summary>
+
+&gt; **Warning:** Do this at your own risk. We recommend using QGC to keep hardware and software setups consistent.
+
+Disable the RC check and the QGC connection requirement by setting the following parameters in the PX4 SITL terminal:
+
+File truncated at 100 lines [see the full file](https://github.com/discower/px4-mpc/tree/master/README.md)
+</details>
+</div>
+            
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3 class="panel-title">CONTRIBUTING</h3></div>
+          <div class="panel-body">
+            
+              
+            
+            <hr id="github-contribute-lists">
+            <ul class="nav nav-tabs nav-justified" id="github-contribute-lists-tabs">
+              <li class="better-tabs active">
+                <a href="#github-contribute-lists-help-wanted" data-toggle="tab"><span class="contribute-lists-help-wanted-count label label-primary">-</span> Help Wanted</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-good-first-issue" data-toggle="tab"><span class="contribute-lists-good-first-issue-count label label-primary">-</span> Good First Issue</a>
+              </li>
+              <li class="better-tabs">
+                <a href="#github-contribute-lists-pull-requests" data-toggle="tab"><span class="contribute-lists-pull-requests-count label label-primary">-</span> Pull Requests to Review</a>
+              </li>
+            </ul>
+            <div class="tab-content contribute-lists">
+              <div class="tab-pane active" id="github-contribute-lists-help-wanted">
+                <div class="contribute-lists-help-wanted"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-good-first-issue">
+                <div class="contribute-lists-good-first-issue"></div>
+              </div>
+              <div class="tab-pane" id="github-contribute-lists-pull-requests">
+                <div class="contribute-lists-pull-requests"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        
+      
+    </div>
+  </div>
+
+
+<script type="text/javascript" src=/js/contribution_suggestions.js></script>
+<script type="text/javascript">
+  $(function() {
+    setupContributeListTabLinks();
+  });
+  $(document).ready(function() {
+    setupDistroSwitch("humble");
+    setupContributeLists("https://github.com/discower/px4-mpc.git");
+  });
+</script>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div style="float:left;">
+        
+          <a href="https://github.com/rkent/rosindex" title="Find rosindex in Github">
+          <span class="icon  icon--github">
+            <svg viewBox="0 0 16 16">
+              <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+            </svg>
+          </span>
+
+          <span class="username">rkent/rosindex</span>
+        </a>
+        <em class="hidden-xs">| generated on 2026-10-31</em>
+      
+      </div>
+      <div style="float:right;">
+        <p class="text"><span class="hidden-xs">a community-maintained index of robotics software
+ | </span><a href="/privacy.txt">privacy</a></p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
